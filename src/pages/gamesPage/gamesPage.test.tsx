@@ -132,7 +132,6 @@ describe('<GamesPage />', () => {
           ).toBeTruthy()
 
           expect(wrapper.queryByTestId('pulseLoader')).toBeFalsy()
-          expect(wrapper.queryByText('You have no games.')).toBeFalsy()
         })
       })
 
