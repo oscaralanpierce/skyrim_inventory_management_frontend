@@ -1,0 +1,35 @@
+.root {
+  font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
+  background-color: var(--scheme-color);
+  color: var(--text-color-primary);
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.root:hover,
+.root:hover .trigger {
+  background-color: var(--hover-color);
+}
+
+.trigger {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 12px 0 12px 16px;
+}
+
+.details {
+  border: 1px solid var(--border-color);
+}
+
+.emptyList {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: var(--scheme-color-lighter);
+  color: var(--text-color-secondary);
+  padding: 16px;
+}
