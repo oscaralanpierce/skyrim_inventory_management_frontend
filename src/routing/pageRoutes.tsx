@@ -8,8 +8,10 @@ import HomePage from '../pages/homePage/homePage'
 import NotFoundPage from '../pages/notFoundPage/notFoundPage'
 import DashboardPage from '../pages/dashboardPage/dashboardPage'
 import GamesPage from '../pages/gamesPage/gamesPage'
+import ShoppingListsPage from '../pages/shoppingListsPage/shoppingListsPage'
 import paths from './paths'
 import { PageProvider } from '../contexts/pageContext'
+import { ShoppingListsProvider } from '../contexts/shoppingListsContext'
 
 const siteTitle = 'Skyrim Inventory Management |'
 
@@ -62,6 +64,21 @@ const pages: Page[] = [
     ),
     path: paths.dashboard.games,
   },
+  {
+    pageId: 'dashboard-shopping-lists',
+    title: `${siteTitle} Shopping Lists`,
+    description: 'Manage your shopping lists',
+    jsx: (
+      <PageProvider>
+        <GamesProvider>
+          <ShoppingListsProvider>
+            <ShoppingListsPage />
+          </ShoppingListsProvider>
+        </GamesProvider>
+      </PageProvider>
+    ),
+    path: paths.dashboard.shoppingLists,
+  }
 ]
 
 const RouteContent = ({ title, description, jsx }: BasePage) => (

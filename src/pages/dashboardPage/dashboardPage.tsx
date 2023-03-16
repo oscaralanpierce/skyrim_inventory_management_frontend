@@ -19,7 +19,7 @@ const navigationCards = [
   },
   {
     colorScheme: PINK,
-    href: PLACEHOLDER_HREF,
+    href: paths.dashboard.shoppingLists,
     children: 'Your Shopping Lists',
     key: 'shopping-lists',
   },
