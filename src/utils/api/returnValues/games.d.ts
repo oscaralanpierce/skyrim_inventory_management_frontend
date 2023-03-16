@@ -1,5 +1,5 @@
-import { ApiResponse, SuccessStatusCode, HTTPHeaders } from './http'
-import { ErrorObject, ResponseGame } from '../../types/apiData'
+import { ApiResponse, SuccessStatusCode, HTTPHeaders } from '../http'
+import { ErrorObject, ResponseGame } from '../../../types/apiData'
 
 class UnauthorizedResponse extends ApiResponse {
   status: 401

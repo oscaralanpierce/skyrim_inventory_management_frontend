@@ -85,7 +85,7 @@ import { signOutWithGoogle } from '../../firebase'
 import { type ResponseGame as Game } from '../../types/apiData'
 import { type ApiError } from '../../types/errors'
 import { useGoogleLogin, usePageContext } from '../../hooks/contexts'
-import { getGames } from '../../utils/simApi'
+import { getGames } from '../../utils/api/simApi'
 import DashboardLayout from '../../layouts/dashboardLayout/dashboardLayout'
 import styles from './child.module.css'
 
