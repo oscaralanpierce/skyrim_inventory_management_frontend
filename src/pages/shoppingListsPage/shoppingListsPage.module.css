@@ -1,0 +1,7 @@
+.shoppingList {
+  margin-bottom: 32px;
+}
+
+.shoppingList:last-of-type {
+  margin-bottom: 0;
+}

@@ -11,7 +11,7 @@ const BASE_URI = 'http://localhost:3000'
  *
  */
 
-export const getShoppingListsSuccess = rest.post(
+export const getShoppingListsSuccess = rest.get(
   `${BASE_URI}/games/:gameId/shopping_lists`,
   (req, res, ctx) => {
     return res(

@@ -60,12 +60,12 @@ export const shoppingListsContextValueEmpty: ShoppingListsContextType = {
   shoppingListsLoadingState: DONE,
 }
 
-export const shoppingListContextValue: ShoppingListsContextType = {
-  shoppingLists: shoppingListsForGame(51),
+export const shoppingListsContextValue: ShoppingListsContextType = {
+  shoppingLists: shoppingListsForGame(32),
   shoppingListsLoadingState: DONE,
 }
 
-export const shoppingListContextValueLoading: ShoppingListsContextType = {
+export const shoppingListsContextValueLoading: ShoppingListsContextType = {
   shoppingLists: emptyShoppingLists,
   shoppingListsLoadingState: LOADING,
 }
