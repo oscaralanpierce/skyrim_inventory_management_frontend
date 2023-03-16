@@ -21,7 +21,7 @@ import {
   deleteGameSuccess,
   deleteGameNotFound,
   deleteGameServerError,
-} from '../../support/msw/games'
+} from '../../support/msw/handlers'
 import { gamesContextValue } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesContext, GamesProvider } from '../../contexts/gamesContext'

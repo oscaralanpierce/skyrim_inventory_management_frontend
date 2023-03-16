@@ -1,0 +1,272 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<ShoppingListsPage /> > viewing shopping lists for a single game > when loading > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="_root_03d657"
+      >
+        <section
+          class="_container_03d657"
+        >
+          <h2
+            class="_title_03d657"
+          >
+            Your Shopping Lists
+          </h2>
+          <hr
+            class="_hr_03d657"
+          />
+          <div>
+            <span
+              data-testid="pulseLoader"
+              style="display: inherit; text-align: center;"
+            >
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+            </span>
+          </div>
+        </section>
+        <header
+          class="_root_c29812"
+        >
+          <div
+            class="_bar_c29812"
+          >
+            <span
+              class="_headerContainer_c29812"
+            >
+              <h1
+                class="_header_c29812"
+              >
+                <a
+                  class="_headerLinkLarge_c29812"
+                  href="/dashboard"
+                >
+                  Skyrim Inventory
+                  <br
+                    class="_bp_c29812"
+                  />
+                   Management
+                </a>
+                <a
+                  class="_headerLinkSmall_c29812"
+                  href="/dashboard"
+                >
+                  S. I. M.
+                </a>
+              </h1>
+            </span>
+            <div
+              class="_main_d263fb"
+            >
+              <div
+                class="_button_d263fb"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  data-icon="bars"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <img
+                  alt="User profile image"
+                  class="_img_d263fb"
+                  src="/src/components/userInfo/anonymousAvatar.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </header>
+        <div
+          class="_root_91d025 _hidden_91d025"
+          style="--text-color: #4e6d83;"
+        />
+        <div
+          class="_root_753dd0 _hidden_753dd0"
+          data-testid="modal"
+        >
+          <div
+            class="_content_753dd0"
+          />
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="_root_03d657"
+    >
+      <section
+        class="_container_03d657"
+      >
+        <h2
+          class="_title_03d657"
+        >
+          Your Shopping Lists
+        </h2>
+        <hr
+          class="_hr_03d657"
+        />
+        <div>
+          <span
+            data-testid="pulseLoader"
+            style="display: inherit; text-align: center;"
+          >
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+          </span>
+        </div>
+      </section>
+      <header
+        class="_root_c29812"
+      >
+        <div
+          class="_bar_c29812"
+        >
+          <span
+            class="_headerContainer_c29812"
+          >
+            <h1
+              class="_header_c29812"
+            >
+              <a
+                class="_headerLinkLarge_c29812"
+                href="/dashboard"
+              >
+                Skyrim Inventory
+                <br
+                  class="_bp_c29812"
+                />
+                 Management
+              </a>
+              <a
+                class="_headerLinkSmall_c29812"
+                href="/dashboard"
+              >
+                S. I. M.
+              </a>
+            </h1>
+          </span>
+          <div
+            class="_main_d263fb"
+          >
+            <div
+              class="_button_d263fb"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-bars _hamburger_d263fb"
+                data-icon="bars"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                  fill="currentColor"
+                />
+              </svg>
+              <img
+                alt="User profile image"
+                class="_img_d263fb"
+                src="/src/components/userInfo/anonymousAvatar.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        class="_root_91d025 _hidden_91d025"
+        style="--text-color: #4e6d83;"
+      />
+      <div
+        class="_root_753dd0 _hidden_753dd0"
+        data-testid="modal"
+      >
+        <div
+          class="_content_753dd0"
+        />
+      </div>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

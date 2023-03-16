@@ -14,6 +14,7 @@ const paths: Paths = {
   dashboard: {
     main: '/dashboard',
     games: '/games',
+    shoppingLists: '/shopping_lists',
   },
 }
 

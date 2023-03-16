@@ -17,12 +17,12 @@ const NOT_FOUND_MESSAGE =
 const UNEXPECTED_ERROR_MESSAGE =
   "Oops! Something unexpected went wrong. We're sorry! Please try again later."
 
-export interface ShoppingListContextsType {
+export interface ShoppingListsContextType {
   shoppingLists: ShoppingList[]
   shoppingListsLoadingState: LoadingState
 }
 
-export const ShoppingListsContext = createContext<ShoppingListContextsType>({
+export const ShoppingListsContext = createContext<ShoppingListsContextType>({
   shoppingLists: [] as ShoppingList[],
   shoppingListsLoadingState: LOADING,
 })

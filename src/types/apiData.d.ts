@@ -38,12 +38,12 @@ export interface ResponseGame {
 export interface ResponseShoppingList {
   id: number
   game_id: number
+  aggregate_list_id: number | null
   aggregate: boolean
-  aggregate_list_id: number
   title: string
+  list_items: ResponseShoppingListItem[]
   created_at: Date
   updated_at: Date
-  list_items: ResponseShoppingListItem[]
 }
 
 /**
