@@ -83,6 +83,12 @@ const StyledSelect = ({
     return () => document.removeEventListener('focusout', hideDropdown)
   })
 
+  useEffect(() => {
+    if (defaultOption && !activeOption) {
+      setHeaderText(defaultOption.optionName)
+    }
+  }, [defaultOption, activeOption])
+
   return (
     <div
       className={classNames(styles.root, className)}
