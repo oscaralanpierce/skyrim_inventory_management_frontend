@@ -15,6 +15,7 @@ import StyledSelect, {
 import Modal from '../../components/modal/modal'
 import styles from './dashboardLayout.module.css'
 import { DONE } from '../../utils/loadingStates'
+import { useLocation } from 'react-router-dom'
 
 interface DashboardLayoutProps {
   title?: string
@@ -29,6 +30,7 @@ const DashboardLayout = ({
 }: DashboardLayoutProps) => {
   const { flashProps, modalProps, setModalProps } = usePageContext()
   const { games, gamesLoadingState } = useGamesContext()
+  const history = useLocation()
 
   const queryString = useQueryString()
 
@@ -55,9 +57,16 @@ const DashboardLayout = ({
       setSelectOptions(options)
       setSelectPlaceholder(options.length ? '' : 'No games available')
 
-      if (!queryString.get('gameId')) setDefaultOption(options[0])
+      const gameId = Number(queryString.get('gameId'))
+
+      if (gameId) {
+        const defaultOption = options.find(
+          ({ optionValue }) => optionValue === gameId
+        )
+        setDefaultOption(defaultOption || null)
+      }
     }
-  }, [includeGameSelector, gamesLoadingState])
+  }, [includeGameSelector, gamesLoadingState, games, queryString])
 
   return (
     <main className={styles.root} onKeyUp={hideModalIfEsc}>
