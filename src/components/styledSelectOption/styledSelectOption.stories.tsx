@@ -43,6 +43,13 @@ export const WithStyledParent = () => (
   </ul>
 )
 
+/**
+ *
+ * This has no special appearance, but inspecting the element
+ * will reveal that its `aria-selected` attribute is set to "true".
+ *
+ */
+
 export const Selected = () => (
   <StyledSelectOption
     optionName="Option 1"
