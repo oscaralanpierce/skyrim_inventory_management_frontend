@@ -1,4 +1,3 @@
-import { type KeyboardEventHandler, type MouseEventHandler } from 'react'
 import { describe, test, expect } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { render } from '../../support/testUtils'
@@ -13,8 +12,7 @@ describe('StyledSelectOption', () => {
             <StyledSelectOption
               optionName="Option 1"
               optionValue={22}
-              onClick={() => {}}
-              onKeyDown={() => {}}
+              onSelected={() => {}}
               ariaSelected={false}
             />
           )
@@ -32,8 +30,7 @@ describe('StyledSelectOption', () => {
             <StyledSelectOption
               optionName="Option 1"
               optionValue={22}
-              onClick={() => {}}
-              onKeyDown={() => {}}
+              onSelected={() => {}}
               ariaSelected={false}
             />
           )
@@ -48,8 +45,7 @@ describe('StyledSelectOption', () => {
             <StyledSelectOption
               optionName="Neque porro quisquam est quis dolorem ipsum quia dolor sit amet"
               optionValue="De Finibus"
-              onClick={() => {}}
-              onKeyDown={() => {}}
+              onSelected={() => {}}
               ariaSelected={false}
             />
           )
@@ -65,8 +61,7 @@ describe('StyledSelectOption', () => {
             <StyledSelectOption
               optionName="Neque porro quisquam est quis dolorem ipsum quia dolor sit amet"
               optionValue="De Finibus"
-              onClick={() => {}}
-              onKeyDown={() => {}}
+              onSelected={() => {}}
               ariaSelected={false}
             />
           )
@@ -82,8 +77,7 @@ describe('StyledSelectOption', () => {
           <StyledSelectOption
             optionName="Option 1"
             optionValue={1}
-            onClick={() => {}}
-            onKeyDown={() => {}}
+            onSelected={() => {}}
             ariaSelected={true}
           />
         )
@@ -101,8 +95,7 @@ describe('StyledSelectOption', () => {
           <StyledSelectOption
             optionName="Option 1"
             optionValue={1}
-            onClick={() => {}}
-            onKeyDown={() => {}}
+            onSelected={() => {}}
             ariaSelected={true}
           />
         )
@@ -113,15 +106,14 @@ describe('StyledSelectOption', () => {
   })
 
   describe('event handling', () => {
-    test('calls the onClick function when clicked', () => {
-      const onClick = vitest.fn() as MouseEventHandler
+    test('calls the onSelected function when clicked', () => {
+      const onSelected = vitest.fn()
 
       const wrapper = render(
         <StyledSelectOption
           optionName="Option 1"
           optionValue="foo"
-          onClick={onClick}
-          onKeyDown={() => {}}
+          onSelected={onSelected}
           ariaSelected={false}
         />
       )
@@ -130,18 +122,36 @@ describe('StyledSelectOption', () => {
 
       act(() => option.click())
 
-      expect(onClick).toHaveBeenCalledOnce()
+      expect(onSelected).toHaveBeenCalledWith('foo')
     })
 
-    test('calls the onKeyDown function when a key is pressed over it', () => {
-      const onKeyDown = vitest.fn() as KeyboardEventHandler
+    test('calls the onSelected function when the Enter key is pressed', () => {
+      const onSelected = vitest.fn()
 
       const wrapper = render(
         <StyledSelectOption
           optionName="Option 1"
           optionValue={1}
-          onClick={() => {}}
-          onKeyDown={onKeyDown}
+          onSelected={onSelected}
+          ariaSelected={false}
+        />
+      )
+
+      const option = wrapper.getByRole('option')
+
+      act(() => fireEvent.keyDown(option, { key: 'Enter' }))
+
+      expect(onSelected).toHaveBeenCalledWith(1)
+    })
+
+    test("doesn't call the onSelected function when a key other than Enter is pressed", () => {
+      const onSelected = vitest.fn()
+
+      const wrapper = render(
+        <StyledSelectOption
+          optionName="Option 1"
+          optionValue={1}
+          onSelected={onSelected}
           ariaSelected={false}
         />
       )
@@ -150,7 +160,7 @@ describe('StyledSelectOption', () => {
 
       act(() => fireEvent.keyDown(option))
 
-      expect(onKeyDown).toHaveBeenCalledOnce()
+      expect(onSelected).not.toHaveBeenCalled()
     })
   })
 })

@@ -1,16 +1,11 @@
-import {
-  type CSSProperties,
-  type KeyboardEventHandler,
-  type MouseEventHandler,
-} from 'react'
+import { type KeyboardEventHandler, type MouseEventHandler } from 'react'
 import classNames, { type Argument } from 'classnames'
 import styles from './styledSelectOption.module.css'
 
 interface StyledSelectOptionProps {
   optionName: string
   optionValue: string | number
-  onClick: MouseEventHandler
-  onKeyDown: KeyboardEventHandler
+  onSelected: (optionValue: string | number) => void
   ariaSelected: boolean
   className?: Argument
 }
@@ -18,8 +13,7 @@ interface StyledSelectOptionProps {
 const StyledSelectOption = ({
   optionName,
   optionValue,
-  onClick,
-  onKeyDown,
+  onSelected,
   ariaSelected,
   className,
 }: StyledSelectOptionProps) => {
@@ -27,6 +21,19 @@ const StyledSelectOption = ({
     optionName.length > 24
       ? `${optionName.substring(0, 23).trim()}...`
       : optionName
+
+  const onClick: MouseEventHandler = (e) => {
+    e.preventDefault()
+
+    onSelected(optionValue)
+  }
+
+  const onKeyDown: KeyboardEventHandler = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      onSelected(optionValue)
+    }
+  }
 
   return (
     <li
