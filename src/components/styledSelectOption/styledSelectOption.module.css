@@ -6,7 +6,8 @@
   cursor: pointer;
 }
 
-.root:hover, .root:focus {
+.root:hover,
+.root:focus {
   background-color: #f5f5f5;
 }
 

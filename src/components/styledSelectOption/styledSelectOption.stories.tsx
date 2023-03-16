@@ -2,7 +2,6 @@ import StyledSelectOption from './styledSelectOption'
 
 export default { title: 'StyledSelectOption' }
 
-
 /**
  *
  * As a rule, we don't want these options to have bullet points, however,

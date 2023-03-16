@@ -1,4 +1,8 @@
-import { type CSSProperties, type KeyboardEventHandler, type MouseEventHandler } from 'react'
+import {
+  type CSSProperties,
+  type KeyboardEventHandler,
+  type MouseEventHandler,
+} from 'react'
 import classNames, { type Argument } from 'classnames'
 import styles from './styledSelectOption.module.css'
 
@@ -17,9 +21,10 @@ const StyledSelectOption = ({
   ariaSelected,
   className,
 }: StyledSelectOptionProps) => {
-  const displayName = () => (
-    optionName.length > 24 ? `${optionName.substring(0, 23).trim()}...` : optionName
-  )
+  const displayName = () =>
+    optionName.length > 24
+      ? `${optionName.substring(0, 23).trim()}...`
+      : optionName
 
   return (
     <li
@@ -29,7 +34,9 @@ const StyledSelectOption = ({
       role="option"
       tabIndex={0}
       aria-selected={ariaSelected}
-    >{displayName()}</li>
+    >
+      {displayName()}
+    </li>
   )
 }
 
