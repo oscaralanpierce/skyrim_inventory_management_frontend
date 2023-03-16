@@ -19,11 +19,9 @@ import {
 
 /**
  *
- * Game Endpoints
+ * POST /games endpoint
  *
  */
-
-// POST /games
 
 export const postGames = (
   body: RequestGame,
@@ -54,7 +52,11 @@ export const postGames = (
   })
 }
 
-// GET /games
+/**
+ *
+ * GET /games endpoint
+ *
+ */
 
 export const getGames = (
   token: string
@@ -62,7 +64,7 @@ export const getGames = (
   const uri = `${BASE_URI}/games`
   const headers = combinedHeaders(token)
 
-  return fetch(uri, { headers }).then((res: Response) => {
+  return fetch(uri, { headers }).then((res) => {
     const response = res as GetGamesResponse
 
     if (response.status === 401) throw new AuthorizationError()
@@ -78,7 +80,11 @@ export const getGames = (
   })
 }
 
-// PATCH /games
+/**
+ *
+ * PATCH /games/:id endpoint
+ *
+ */
 
 export const patchGame = (
   gameId: number,
@@ -111,7 +117,11 @@ export const patchGame = (
   })
 }
 
-// DELETE /games/:id
+/**
+ *
+ * DELETE /games/:id endpoint
+ *
+ */
 
 export const deleteGame = (
   gameId: number,
@@ -120,7 +130,7 @@ export const deleteGame = (
   const uri = `${BASE_URI}/games/${gameId}`
   const headers = combinedHeaders(token)
 
-  return fetch(uri, { method: 'DELETE', headers }).then((res: Response) => {
+  return fetch(uri, { method: 'DELETE', headers }).then((res) => {
     const response = res as DeleteGameResponse
 
     if (response.status === 401) throw new AuthorizationError()
