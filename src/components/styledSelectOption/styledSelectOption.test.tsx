@@ -1,5 +1,5 @@
 import { type KeyboardEventHandler, type MouseEventHandler } from 'react'
-import { describe, test, expect, beforeEach } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { render } from '../../support/testUtils'
 import StyledSelectOption from './styledSelectOption'
@@ -12,6 +12,7 @@ describe('StyledSelectOption', () => {
           const wrapper = render(
             <StyledSelectOption
               optionName="Option 1"
+              optionValue={22}
               onClick={() => {}}
               onKeyDown={() => {}}
               ariaSelected={false}
@@ -25,6 +26,20 @@ describe('StyledSelectOption', () => {
           expect(option).toBeTruthy()
           expect(option.textContent).toEqual('Option 1')
         })
+
+        test('matches snapshot', () => {
+          const wrapper = render(
+            <StyledSelectOption
+              optionName="Option 1"
+              optionValue={22}
+              onClick={() => {}}
+              onKeyDown={() => {}}
+              ariaSelected={false}
+            />
+          )
+
+          expect(wrapper).toMatchSnapshot()
+        })
       })
 
       describe('when the option name is longer than 24 characters', () => {
@@ -32,6 +47,7 @@ describe('StyledSelectOption', () => {
           const wrapper = render(
             <StyledSelectOption
               optionName="Neque porro quisquam est quis dolorem ipsum quia dolor sit amet"
+              optionValue="De Finibus"
               onClick={() => {}}
               onKeyDown={() => {}}
               ariaSelected={false}
@@ -43,6 +59,20 @@ describe('StyledSelectOption', () => {
           expect(option).toBeTruthy()
           expect(option.textContent).toEqual('Neque porro quisquam es...')
         })
+
+        test('matches snapshot', () => {
+          const wrapper = render(
+            <StyledSelectOption
+              optionName="Neque porro quisquam est quis dolorem ipsum quia dolor sit amet"
+              optionValue="De Finibus"
+              onClick={() => {}}
+              onKeyDown={() => {}}
+              ariaSelected={false}
+            />
+          )
+
+          expect(wrapper).toMatchSnapshot()
+        })
       })
     })
 
@@ -51,6 +81,7 @@ describe('StyledSelectOption', () => {
         const wrapper = render(
           <StyledSelectOption
             optionName="Option 1"
+            optionValue={1}
             onClick={() => {}}
             onKeyDown={() => {}}
             ariaSelected={true}
@@ -64,6 +95,20 @@ describe('StyledSelectOption', () => {
         expect(option).toBeTruthy()
         expect(option.textContent).toEqual('Option 1')
       })
+
+      test('matches snapshot', () => {
+        const wrapper = render(
+          <StyledSelectOption
+            optionName="Option 1"
+            optionValue={1}
+            onClick={() => {}}
+            onKeyDown={() => {}}
+            ariaSelected={true}
+          />
+        )
+
+        expect(wrapper).toMatchSnapshot()
+      })
     })
   })
 
@@ -74,6 +119,7 @@ describe('StyledSelectOption', () => {
       const wrapper = render(
         <StyledSelectOption
           optionName="Option 1"
+          optionValue="foo"
           onClick={onClick}
           onKeyDown={() => {}}
           ariaSelected={false}
@@ -93,6 +139,7 @@ describe('StyledSelectOption', () => {
       const wrapper = render(
         <StyledSelectOption
           optionName="Option 1"
+          optionValue={1}
           onClick={() => {}}
           onKeyDown={onKeyDown}
           ariaSelected={false}

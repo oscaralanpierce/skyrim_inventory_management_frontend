@@ -8,6 +8,7 @@ import styles from './styledSelectOption.module.css'
 
 interface StyledSelectOptionProps {
   optionName: string
+  optionValue: string | number
   onClick: MouseEventHandler
   onKeyDown: KeyboardEventHandler
   ariaSelected: boolean
@@ -16,6 +17,7 @@ interface StyledSelectOptionProps {
 
 const StyledSelectOption = ({
   optionName,
+  optionValue,
   onClick,
   onKeyDown,
   ariaSelected,
@@ -34,6 +36,7 @@ const StyledSelectOption = ({
       role="option"
       tabIndex={0}
       aria-selected={ariaSelected}
+      data-option-value={optionValue}
     >
       {displayName()}
     </li>
