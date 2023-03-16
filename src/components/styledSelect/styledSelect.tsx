@@ -4,9 +4,6 @@ import {
   useRef,
   type MouseEventHandler,
   type CSSProperties,
-  type ReactElement,
-  type KeyboardEventHandler,
-  type KeyboardEvent,
 } from 'react'
 import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
