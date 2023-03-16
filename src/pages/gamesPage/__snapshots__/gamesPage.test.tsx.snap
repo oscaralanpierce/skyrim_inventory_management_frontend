@@ -11,11 +11,15 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
         <section
           class="_container_03d657"
         >
-          <h2
-            class="_title_03d657"
+          <div
+            class="_titleContainer_03d657"
           >
-            Your Games
-          </h2>
+            <h2
+              class="_title_03d657"
+            >
+              Your Games
+            </h2>
+          </div>
           <hr
             class="_hr_03d657"
           />
@@ -118,11 +122,15 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
       <section
         class="_container_03d657"
       >
-        <h2
-          class="_title_03d657"
+        <div
+          class="_titleContainer_03d657"
         >
-          Your Games
-        </h2>
+          <h2
+            class="_title_03d657"
+          >
+            Your Games
+          </h2>
+        </div>
         <hr
           class="_hr_03d657"
         />
@@ -282,11 +290,15 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
         <section
           class="_container_03d657"
         >
-          <h2
-            class="_title_03d657"
+          <div
+            class="_titleContainer_03d657"
           >
-            Your Games
-          </h2>
+            <h2
+              class="_title_03d657"
+            >
+              Your Games
+            </h2>
+          </div>
           <hr
             class="_hr_03d657"
           />
@@ -435,11 +447,15 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
       <section
         class="_container_03d657"
       >
-        <h2
-          class="_title_03d657"
+        <div
+          class="_titleContainer_03d657"
         >
-          Your Games
-        </h2>
+          <h2
+            class="_title_03d657"
+          >
+            Your Games
+          </h2>
+        </div>
         <hr
           class="_hr_03d657"
         />
@@ -645,11 +661,15 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
         <section
           class="_container_03d657"
         >
-          <h2
-            class="_title_03d657"
+          <div
+            class="_titleContainer_03d657"
           >
-            Your Games
-          </h2>
+            <h2
+              class="_title_03d657"
+            >
+              Your Games
+            </h2>
+          </div>
           <hr
             class="_hr_03d657"
           />
@@ -798,11 +818,15 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
       <section
         class="_container_03d657"
       >
-        <h2
-          class="_title_03d657"
+        <div
+          class="_titleContainer_03d657"
         >
-          Your Games
-        </h2>
+          <h2
+            class="_title_03d657"
+          >
+            Your Games
+          </h2>
+        </div>
         <hr
           class="_hr_03d657"
         />
@@ -1008,11 +1032,15 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
         <section
           class="_container_03d657"
         >
-          <h2
-            class="_title_03d657"
+          <div
+            class="_titleContainer_03d657"
           >
-            Your Games
-          </h2>
+            <h2
+              class="_title_03d657"
+            >
+              Your Games
+            </h2>
+          </div>
           <hr
             class="_hr_03d657"
           />
@@ -1161,11 +1189,15 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
       <section
         class="_container_03d657"
       >
-        <h2
-          class="_title_03d657"
+        <div
+          class="_titleContainer_03d657"
         >
-          Your Games
-        </h2>
+          <h2
+            class="_title_03d657"
+          >
+            Your Games
+          </h2>
+        </div>
         <hr
           class="_hr_03d657"
         />

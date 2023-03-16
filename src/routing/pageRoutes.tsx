@@ -2,16 +2,17 @@ import { type ReactElement } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { type RelativePath } from '../types/navigation'
+import { DONE } from '../utils/loadingStates'
 import { LoginProvider } from '../contexts/loginContext'
-import { GamesProvider } from '../contexts/gamesContext'
+import { GamesContext, GamesProvider } from '../contexts/gamesContext'
+import { PageProvider } from '../contexts/pageContext'
+import { ShoppingListsProvider } from '../contexts/shoppingListsContext'
 import HomePage from '../pages/homePage/homePage'
 import NotFoundPage from '../pages/notFoundPage/notFoundPage'
 import DashboardPage from '../pages/dashboardPage/dashboardPage'
 import GamesPage from '../pages/gamesPage/gamesPage'
 import ShoppingListsPage from '../pages/shoppingListsPage/shoppingListsPage'
 import paths from './paths'
-import { PageProvider } from '../contexts/pageContext'
-import { ShoppingListsProvider } from '../contexts/shoppingListsContext'
 
 const siteTitle = 'Skyrim Inventory Management |'
 
@@ -46,7 +47,9 @@ const pages: Page[] = [
     description: 'Skyrim Inventory Management User Dashboard',
     jsx: (
       <PageProvider>
-        <DashboardPage />
+        <GamesProvider>
+          <DashboardPage />
+        </GamesProvider>
       </PageProvider>
     ),
     path: paths.dashboard.main,
@@ -78,7 +81,7 @@ const pages: Page[] = [
       </PageProvider>
     ),
     path: paths.dashboard.shoppingLists,
-  }
+  },
 ]
 
 const RouteContent = ({ title, description, jsx }: BasePage) => (

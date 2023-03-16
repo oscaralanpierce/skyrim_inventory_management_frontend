@@ -1,17 +1,44 @@
-import { type KeyboardEventHandler, type ReactElement } from 'react'
-import { usePageContext } from '../../hooks/contexts'
+import {
+  useState,
+  useEffect,
+  type KeyboardEventHandler,
+  type ReactElement,
+} from 'react'
+import classNames from 'classnames'
+import { usePageContext, useGamesContext } from '../../hooks/contexts'
+import { useQueryString } from '../../hooks/useQueryString'
 import DashboardHeader from '../../components/dashboardHeader/dashboardHeader'
 import FlashMessage from '../../components/flashMessage/flashMessage'
+import StyledSelect, {
+  type SelectOption,
+} from '../../components/styledSelect/styledSelect'
 import Modal from '../../components/modal/modal'
 import styles from './dashboardLayout.module.css'
+import { DONE } from '../../utils/loadingStates'
 
 interface DashboardLayoutProps {
   title?: string
+  includeGameSelector?: boolean
   children: ReactElement | string
 }
 
-const DashboardLayout = ({ title, children }: DashboardLayoutProps) => {
+const DashboardLayout = ({
+  title,
+  includeGameSelector,
+  children,
+}: DashboardLayoutProps) => {
   const { flashProps, modalProps, setModalProps } = usePageContext()
+  const { games, gamesLoadingState } = useGamesContext()
+
+  const queryString = useQueryString()
+
+  const [selectOptions, setSelectOptions] = useState<SelectOption[]>([])
+  const [defaultOption, setDefaultOption] = useState<SelectOption | null>(null)
+  const [selectPlaceholder, setSelectPlaceholder] = useState('Games loading...')
+
+  const onOptionSelected = (optionValue: number | string) => {
+    queryString.set('gameId', String(optionValue))
+  }
 
   const hideModalIfEsc: KeyboardEventHandler = (e) => {
     if (e.key !== 'Escape') return
@@ -19,13 +46,41 @@ const DashboardLayout = ({ title, children }: DashboardLayoutProps) => {
     setModalProps({ hidden: true, children: <></> })
   }
 
+  useEffect(() => {
+    if (includeGameSelector && gamesLoadingState === DONE) {
+      const options: SelectOption[] = games.map(({ name, id }) => ({
+        optionName: name,
+        optionValue: id,
+      }))
+      setSelectOptions(options)
+      setSelectPlaceholder(options.length ? '' : 'No games available')
+
+      if (!queryString.get('gameId')) setDefaultOption(options[0])
+    }
+  }, [includeGameSelector, gamesLoadingState])
+
   return (
     <main className={styles.root} onKeyUp={hideModalIfEsc}>
       <section className={styles.container}>
-        {title ? (
+        {title || includeGameSelector ? (
           <>
-            <h2 className={styles.title}>{title}</h2>
-            <hr className={styles.hr} />
+            <div className={styles.titleContainer}>
+              {title && <h2 className={styles.title}>{title}</h2>}
+              {includeGameSelector && (
+                <StyledSelect
+                  options={selectOptions}
+                  placeholder={selectPlaceholder}
+                  onOptionSelected={onOptionSelected}
+                  defaultOption={defaultOption}
+                  className={styles.select}
+                />
+              )}
+            </div>
+            <hr
+              className={classNames(styles.hr, {
+                [styles.hiddenDivider]: includeGameSelector && !title,
+              })}
+            />
           </>
         ) : null}
         {children}

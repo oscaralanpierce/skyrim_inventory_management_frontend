@@ -1,8 +1,10 @@
 .root {
   font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
+  background-color: #fff;
   font-size: 1rem;
   margin: auto 0;
   width: 228px;
+  position: relative;
 }
 
 .header {
@@ -49,7 +51,7 @@
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   overflow-y: scroll;
-  width: 226px;
+  width: calc(100% - 2px);
 }
 
 .hidden {

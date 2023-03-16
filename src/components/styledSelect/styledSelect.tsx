@@ -12,16 +12,17 @@ import { BLUE } from '../../utils/colorSchemes'
 import StyledSelectOption from '../styledSelectOption/styledSelectOption'
 import styles from './styledSelect.module.css'
 
-interface Option {
+export interface SelectOption {
   optionName: string
   optionValue: string | number
 }
 
 interface StyledSelectProps {
-  options: Option[]
+  options: SelectOption[]
   placeholder: string
   onOptionSelected: (optionValue: string | number) => void
-  defaultOption?: Option
+  defaultOption?: SelectOption | null
+  className?: string
 }
 
 const truncatedText = (text: string) => {
@@ -33,8 +34,9 @@ const StyledSelect = ({
   placeholder,
   onOptionSelected,
   defaultOption,
+  className,
 }: StyledSelectProps) => {
-  const [activeOption, setActiveOption] = useState<Option | null>(
+  const [activeOption, setActiveOption] = useState<SelectOption | null>(
     defaultOption || null
   )
   const [headerText, setHeaderText] = useState(defaultOption?.optionName || '')
@@ -83,7 +85,7 @@ const StyledSelect = ({
 
   return (
     <div
-      className={styles.root}
+      className={classNames(styles.root, className)}
       style={colorVars}
       ref={componentRef}
       data-testid="styledSelect"
