@@ -1,7 +1,7 @@
 import { type ReactElement } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { JSDOM } from 'jsdom'
-import { render } from '@testing-library/react'
+import { render as originalRender } from '@testing-library/react'
 import { LoginContext } from '../contexts/loginContext'
 import {
   loadingLoginContextValue,
@@ -35,14 +35,14 @@ const setDom = () => {
  *
  */
 
-const renderWithJSDOM = (ui: ReactElement) => {
+export const render = (ui: ReactElement) => {
   setDom()
 
-  return render(ui)
+  return originalRender(ui)
 }
 
 export const renderWithRouter = (ui: ReactElement) =>
-  renderWithJSDOM(<BrowserRouter>{ui}</BrowserRouter>)
+  render(<BrowserRouter>{ui}</BrowserRouter>)
 
 export const renderAuthenticated = (ui: ReactElement) =>
   renderWithRouter(
