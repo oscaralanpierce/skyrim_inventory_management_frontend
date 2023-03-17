@@ -1,5 +1,5 @@
 import { type RequestGame } from '../../../types/apiData'
-import { BASE_URI, combinedHeaders } from './shared'
+import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
   type PostGamesResponse,
   type PostGamesReturnValue,
