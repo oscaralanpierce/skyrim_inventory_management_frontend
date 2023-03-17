@@ -2,15 +2,19 @@ import { BrowserRouter } from 'react-router-dom'
 import {
   gamesContextValue,
   shoppingListsContextValueLoading,
-  shoppingListsContextValue,
   loginContextValue,
   shoppingListsContextValueEmpty,
 } from '../../support/data/contextValues'
-import { ShoppingListsContext } from '../../contexts/shoppingListsContext'
+import { shoppingListsForGame } from '../../support/data/shoppingLists'
+import {
+  ShoppingListsContext,
+  ShoppingListsProvider,
+} from '../../contexts/shoppingListsContext'
 import { LoginContext } from '../../contexts/loginContext'
 import { GamesContext } from '../../contexts/gamesContext'
 import { PageProvider } from '../../contexts/pageContext'
 import ShoppingListsPage from './shoppingListsPage'
+import { allGames } from '../../support/data/games'
 
 export default { title: 'ShoppingListsPage' }
 
@@ -31,14 +35,25 @@ export const WithShoppingLists = () => (
     <LoginContext.Provider value={loginContextValue}>
       <PageProvider>
         <GamesContext.Provider value={gamesContextValue}>
-          <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+          <ShoppingListsProvider>
             <ShoppingListsPage />
-          </ShoppingListsContext.Provider>
+          </ShoppingListsProvider>
         </GamesContext.Provider>
       </PageProvider>
     </LoginContext.Provider>
   </BrowserRouter>
 )
+
+WithShoppingLists.parameters = {
+  mockData: [
+    {
+      url: '/api/games/32/shopping_lists',
+      method: 'GET',
+      status: 200,
+      response: shoppingListsForGame(32),
+    },
+  ],
+}
 
 export const NoShoppingLists = () => (
   <BrowserRouter>

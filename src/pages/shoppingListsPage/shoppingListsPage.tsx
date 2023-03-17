@@ -12,7 +12,7 @@ const loaderStyles: CSSProperties = {
 }
 
 const ShoppingListsPage = () => {
-  const { shoppingListsLoadingState, shoppingLists } = useShoppingListsContext()
+  const { shoppingListsLoadingState } = useShoppingListsContext()
 
   return (
     <DashboardLayout title="Your Shopping Lists" includeGameSelector>

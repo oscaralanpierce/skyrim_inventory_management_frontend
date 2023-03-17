@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<ShoppingListsPage /> > viewing shopping lists for a single game > when loading > matches snapshot 1`] = `
+exports[`<ShoppingListsPage /> > viewing shopping lists > when loading > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -371,7 +371,7 @@ exports[`<ShoppingListsPage /> > viewing shopping lists for a single game > when
 }
 `;
 
-exports[`<ShoppingListsPage /> > viewing shopping lists for a single game > when the game is set in the query string > when the game has no shopping lists > matches snapshot 1`] = `
+exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set in the query string > when the game has no shopping lists > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -872,7 +872,7 @@ exports[`<ShoppingListsPage /> > viewing shopping lists for a single game > when
 }
 `;
 
-exports[`<ShoppingListsPage /> > viewing shopping lists for a single game > when the game is set in the query string > when the game has shopping lists > matches snapshot 1`] = `
+exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set in the query string > when the game has shopping lists > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

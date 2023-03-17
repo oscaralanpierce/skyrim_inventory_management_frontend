@@ -61,10 +61,12 @@ const DashboardLayout = ({
       const gameId = Number(queryString.get('gameId'))
 
       if (gameId) {
-        const defaultOption = options.find(
+        const defOption = options.find(
           ({ optionValue }) => optionValue === gameId
         )
-        setDefaultOption(defaultOption || null)
+        setDefaultOption(defOption || null)
+      } else {
+        setDefaultOption(options[0])
       }
     }
   }, [includeGameSelector, gamesLoadingState, games, queryString])

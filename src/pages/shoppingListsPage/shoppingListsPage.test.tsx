@@ -1,5 +1,5 @@
 import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
-import { waitFor } from '@testing-library/react'
+import { waitFor, act } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import { shoppingListsForGame } from '../../support/data/shoppingLists'
@@ -20,7 +20,7 @@ import {
 import ShoppingListsPage from './shoppingListsPage'
 
 describe('<ShoppingListsPage />', () => {
-  describe('viewing shopping lists for a single game', () => {
+  describe('viewing shopping lists', () => {
     describe('when loading', () => {
       test('displays the loading component', () => {
         const wrapper = renderAuthLoading(
@@ -148,6 +148,68 @@ describe('<ShoppingListsPage />', () => {
             expect(wrapper).toMatchSnapshot()
           })
         })
+      })
+    })
+
+    describe('when no game is set in the query string', () => {
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('uses the first game by default', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesProvider>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesProvider>
+          </PageProvider>
+        )
+
+        await waitFor(() => {
+          expect(wrapper.getByText('All Items')).toBeTruthy()
+          expect(wrapper.getByText('My Shopping List 1')).toBeTruthy()
+          expect(wrapper.getByTestId('selectedOption').textContent).toEqual(
+            'My Game 1'
+          )
+        })
+      })
+    })
+  })
+
+  describe('changing games', () => {
+    const mockServer = setupServer(getGamesAllSuccess, getShoppingListsSuccess)
+    beforeAll(() => mockServer.listen())
+    beforeEach(() => mockServer.resetHandlers())
+    afterAll(() => mockServer.close())
+
+    test("displays the new game's shopping lists", async () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesProvider>
+            <ShoppingListsProvider>
+              <ShoppingListsPage />
+            </ShoppingListsProvider>
+          </GamesProvider>
+        </PageProvider>
+      )
+
+      const option = await wrapper.findByText('Game with a really real...')
+
+      act(() => option.click())
+
+      await waitFor(() => {
+        expect(wrapper.getByTestId('selectedOption').textContent).toEqual(
+          'Game with a really real...'
+        )
+        expect(wrapper.getByText('All Items')).toBeTruthy()
+        expect(wrapper.getByText('Honeyside')).toBeTruthy()
+        expect(wrapper.getByText('Breezehome')).toBeTruthy()
       })
     })
   })

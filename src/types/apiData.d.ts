@@ -58,7 +58,7 @@ export interface ResponseShoppingListItem {
   description: string
   quantity: number
   unit_weight: number
-  notes: string
+  notes: string | null
   created_at: Date
   updated_at: Date
 }
