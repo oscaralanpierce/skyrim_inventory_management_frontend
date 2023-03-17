@@ -54,15 +54,15 @@ describe('<ShoppingListsPage />', () => {
     })
 
     describe('when the game is set in the query string', () => {
-      describe('when the game has shopping lists', () => {
-        const mockServer = setupServer(
-          getGamesAllSuccess,
-          getShoppingListsSuccess
-        )
-        beforeAll(() => mockServer.listen())
-        beforeEach(() => mockServer.resetHandlers())
-        afterAll(() => mockServer.close())
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
 
+      describe('when the game has shopping lists', () => {
         test('displays the shopping lists', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
@@ -89,20 +89,62 @@ describe('<ShoppingListsPage />', () => {
           })
         })
 
-        test('matches snapshot', () => {
-          test('displays the shopping lists', async () => {
-            const wrapper = renderAuthenticated(
-              <PageProvider>
-                <GamesContext.Provider value={gamesContextValue}>
-                  <ShoppingListsContext.Provider
-                    value={shoppingListsContextValue}
-                  >
-                    <ShoppingListsPage />
-                  </ShoppingListsContext.Provider>
-                </GamesContext.Provider>
-              </PageProvider>,
-              'http://localhost:5173/shopping_lists?gameId=51'
-            )
+        test('matches snapshot', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>,
+            'http://localhost:5173/shopping_lists?gameId=77'
+          )
+
+          // Wait for games/shopping lists to load
+          await waitFor(() => {
+            expect(wrapper.getByText('Honeyside')).toBeTruthy()
+            expect(wrapper).toMatchSnapshot()
+          })
+        })
+      })
+
+      describe('when the game has no shopping lists', () => {
+        it('renders a message that the game has no shopping lists', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>,
+            'http://localhost:5173/shopping_lists?gameId=51'
+          )
+
+          await waitFor(() => {
+            expect(
+              wrapper.getByText('This game has no shopping lists.')
+            ).toBeTruthy()
+          })
+        })
+
+        it('matches snapshot', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>,
+            'http://localhost:5173/shopping_lists?gameId=51'
+          )
+
+          await waitFor(() => {
+            expect(
+              wrapper.getByText('This game has no shopping lists.')
+            ).toBeTruthy()
             expect(wrapper).toMatchSnapshot()
           })
         })

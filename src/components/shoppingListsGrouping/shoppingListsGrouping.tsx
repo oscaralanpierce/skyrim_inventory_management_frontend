@@ -7,6 +7,9 @@ import styles from './shoppingListsGrouping.module.css'
 const ShoppingListsGrouping = () => {
   const { shoppingLists } = useShoppingListsContext()
 
+  if (!shoppingLists.length)
+    return <p className={styles.noLists}>This game has no shopping lists.</p>
+
   return (
     <div className={styles.root}>
       {shoppingLists.map(({ id, title }, index) => {

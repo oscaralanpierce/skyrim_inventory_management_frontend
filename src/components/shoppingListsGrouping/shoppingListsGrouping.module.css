@@ -2,6 +2,10 @@
   margin: 0 auto;
 }
 
+.noLists {
+  font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
+}
+
 .shoppingList {
   margin-bottom: 24px;
 }

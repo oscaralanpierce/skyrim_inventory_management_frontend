@@ -4,6 +4,7 @@ import {
   shoppingListsContextValueLoading,
   shoppingListsContextValue,
   loginContextValue,
+  shoppingListsContextValueEmpty,
 } from '../../support/data/contextValues'
 import { ShoppingListsContext } from '../../contexts/shoppingListsContext'
 import { LoginContext } from '../../contexts/loginContext'
@@ -31,6 +32,20 @@ export const WithShoppingLists = () => (
       <PageProvider>
         <GamesContext.Provider value={gamesContextValue}>
           <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+            <ShoppingListsPage />
+          </ShoppingListsContext.Provider>
+        </GamesContext.Provider>
+      </PageProvider>
+    </LoginContext.Provider>
+  </BrowserRouter>
+)
+
+export const NoShoppingLists = () => (
+  <BrowserRouter>
+    <LoginContext.Provider value={loginContextValue}>
+      <PageProvider>
+        <GamesContext.Provider value={gamesContextValue}>
+          <ShoppingListsContext.Provider value={shoppingListsContextValueEmpty}>
             <ShoppingListsPage />
           </ShoppingListsContext.Provider>
         </GamesContext.Provider>
