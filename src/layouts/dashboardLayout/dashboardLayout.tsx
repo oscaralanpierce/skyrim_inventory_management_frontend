@@ -4,6 +4,7 @@ import {
   type KeyboardEventHandler,
   type ReactElement,
 } from 'react'
+import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
 import { usePageContext, useGamesContext } from '../../hooks/contexts'
 import { useQueryString } from '../../hooks/useQueryString'
@@ -15,7 +16,6 @@ import StyledSelect, {
 import Modal from '../../components/modal/modal'
 import styles from './dashboardLayout.module.css'
 import { DONE } from '../../utils/loadingStates'
-import { useLocation } from 'react-router-dom'
 
 interface DashboardLayoutProps {
   title?: string
@@ -30,9 +30,9 @@ const DashboardLayout = ({
 }: DashboardLayoutProps) => {
   const { flashProps, modalProps, setModalProps } = usePageContext()
   const { games, gamesLoadingState } = useGamesContext()
-  const history = useLocation()
 
   const queryString = useQueryString()
+  const navigate = useNavigate()
 
   const [selectOptions, setSelectOptions] = useState<SelectOption[]>([])
   const [defaultOption, setDefaultOption] = useState<SelectOption | null>(null)
@@ -40,6 +40,7 @@ const DashboardLayout = ({
 
   const onOptionSelected = (optionValue: number | string) => {
     queryString.set('gameId', String(optionValue))
+    navigate(`?${queryString.toString()}`)
   }
 
   const hideModalIfEsc: KeyboardEventHandler = (e) => {
