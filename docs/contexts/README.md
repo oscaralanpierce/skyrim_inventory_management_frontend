@@ -6,6 +6,7 @@ SIM uses [React contexts](https://reactjs.org/docs/context.html) for state manag
 - [`GamesContext`](/docs/contexts/games-context.md)
 - [`LoginContext`](/docs/contexts/login-context.md)
 - [`PageContext`](/docs/contexts/page-context.md)
+- [`ShoppingListsContext`](/docs/contexts/shopping-lists-context.md)
 
 For each context, there is a [custom hook](/src/hooks/contexts.js) that can be used to invoke it in consumers. The custom hooks, in order of the contexts above, are:
 
@@ -13,5 +14,6 @@ For each context, there is a [custom hook](/src/hooks/contexts.js) that can be u
 - `useGamesContext()`
 - `useGoogleLogin()`
 - `usePageContext()`
+- `useShoppingListsContext()`
 
 You can learn more about these hooks by reading the docs linked above.
