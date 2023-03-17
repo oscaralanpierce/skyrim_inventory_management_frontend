@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ShoppingListsGrouping > when there are no shopping lists > matches snapshot 1`] = `
+exports[`ShoppingListGrouping > when there are no shopping lists > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <p
-        class="_noLists_8168de"
+        class="_noLists_92c834"
       >
         This game has no shopping lists.
       </p>
@@ -14,7 +14,7 @@ exports[`ShoppingListsGrouping > when there are no shopping lists > matches snap
   </body>,
   "container": <div>
     <p
-      class="_noLists_8168de"
+      class="_noLists_92c834"
     >
       This game has no shopping lists.
     </p>
@@ -73,16 +73,16 @@ exports[`ShoppingListsGrouping > when there are no shopping lists > matches snap
 }
 `;
 
-exports[`ShoppingListsGrouping > when there are shopping lists > matches snapshot 1`] = `
+exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="_root_8168de"
+        class="_root_92c834"
       >
         <div
-          class="_shoppingList_8168de"
+          class="_shoppingList_92c834"
         >
           <div
             class="_root_62bc73"
@@ -240,7 +240,7 @@ exports[`ShoppingListsGrouping > when there are shopping lists > matches snapsho
           </div>
         </div>
         <div
-          class="_shoppingList_8168de"
+          class="_shoppingList_92c834"
         >
           <div
             class="_root_62bc73"
@@ -398,7 +398,7 @@ exports[`ShoppingListsGrouping > when there are shopping lists > matches snapsho
           </div>
         </div>
         <div
-          class="_shoppingList_8168de"
+          class="_shoppingList_92c834"
         >
           <div
             class="_root_62bc73"
@@ -499,10 +499,10 @@ exports[`ShoppingListsGrouping > when there are shopping lists > matches snapsho
   </body>,
   "container": <div>
     <div
-      class="_root_8168de"
+      class="_root_92c834"
     >
       <div
-        class="_shoppingList_8168de"
+        class="_shoppingList_92c834"
       >
         <div
           class="_root_62bc73"
@@ -660,7 +660,7 @@ exports[`ShoppingListsGrouping > when there are shopping lists > matches snapsho
         </div>
       </div>
       <div
-        class="_shoppingList_8168de"
+        class="_shoppingList_92c834"
       >
         <div
           class="_root_62bc73"
@@ -818,7 +818,7 @@ exports[`ShoppingListsGrouping > when there are shopping lists > matches snapsho
         </div>
       </div>
       <div
-        class="_shoppingList_8168de"
+        class="_shoppingList_92c834"
       >
         <div
           class="_root_62bc73"

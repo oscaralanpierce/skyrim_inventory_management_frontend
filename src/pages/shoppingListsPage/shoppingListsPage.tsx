@@ -4,7 +4,7 @@ import { DONE, LOADING } from '../../utils/loadingStates'
 import { YELLOW } from '../../utils/colorSchemes'
 import { useShoppingListsContext } from '../../hooks/contexts'
 import DashboardLayout from '../../layouts/dashboardLayout/dashboardLayout'
-import ShoppingListsGrouping from '../../components/shoppingListsGrouping/shoppingListsGrouping'
+import ShoppingListGrouping from '../../components/shoppingListGrouping/shoppingListGrouping'
 import styles from './shoppingListsPage.module.css'
 
 const loaderStyles: CSSProperties = {
@@ -24,7 +24,7 @@ const ShoppingListsPage = () => {
             data-testid="pulseLoader"
           />
         )}
-        {shoppingListsLoadingState === DONE && <ShoppingListsGrouping />}
+        {shoppingListsLoadingState === DONE && <ShoppingListGrouping />}
       </div>
     </DashboardLayout>
   )

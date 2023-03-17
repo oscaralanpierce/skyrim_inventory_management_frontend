@@ -174,8 +174,8 @@ describe('<DashboardLayout>', () => {
         expect(selectedOption.textContent).toEqual('Games loading...')
 
         await waitFor(() => {
-          expect(selectedOption.textContent).toEqual('')
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
+          expect(selectedOption.textContent).toEqual('My Game 1')
+          expect(wrapper.getAllByText('My Game 1').length).toEqual(2)
           expect(wrapper.getByText('My Game 2')).toBeTruthy()
           expect(wrapper.getByText('Game with a really real...')).toBeTruthy()
         })

@@ -470,7 +470,7 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
           />
           <div>
             <p
-              class="_noLists_8168de"
+              class="_noLists_92c834"
             >
               This game has no shopping lists.
             </p>
@@ -692,7 +692,7 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
         />
         <div>
           <p
-            class="_noLists_8168de"
+            class="_noLists_92c834"
           >
             This game has no shopping lists.
           </p>
@@ -943,10 +943,10 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
           />
           <div>
             <div
-              class="_root_8168de"
+              class="_root_92c834"
             >
               <div
-                class="_shoppingList_8168de"
+                class="_shoppingList_92c834"
               >
                 <div
                   class="_root_62bc73"
@@ -1098,7 +1098,7 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
                 </div>
               </div>
               <div
-                class="_shoppingList_8168de"
+                class="_shoppingList_92c834"
               >
                 <div
                   class="_root_62bc73"
@@ -1250,7 +1250,7 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
                 </div>
               </div>
               <div
-                class="_shoppingList_8168de"
+                class="_shoppingList_92c834"
               >
                 <div
                   class="_root_62bc73"
@@ -1533,10 +1533,10 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
         />
         <div>
           <div
-            class="_root_8168de"
+            class="_root_92c834"
           >
             <div
-              class="_shoppingList_8168de"
+              class="_shoppingList_92c834"
             >
               <div
                 class="_root_62bc73"
@@ -1688,7 +1688,7 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
               </div>
             </div>
             <div
-              class="_shoppingList_8168de"
+              class="_shoppingList_92c834"
             >
               <div
                 class="_root_62bc73"
@@ -1840,7 +1840,7 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
               </div>
             </div>
             <div
-              class="_shoppingList_8168de"
+              class="_shoppingList_92c834"
             >
               <div
                 class="_root_62bc73"

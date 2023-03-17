@@ -3,9 +3,9 @@ import { ColorProvider } from '../../contexts/colorContext'
 import { useShoppingListsContext } from '../../hooks/contexts'
 import ShoppingListItem from '../shoppingListItem/shoppingListItem'
 import ShoppingList from '../shoppingList/shoppingList'
-import styles from './shoppingListsGrouping.module.css'
+import styles from './shoppingListGrouping.module.css'
 
-const ShoppingListsGrouping = () => {
+const ShoppingListGrouping = () => {
   const { shoppingLists } = useShoppingListsContext()
 
   if (!shoppingLists.length)
@@ -45,4 +45,4 @@ const ShoppingListsGrouping = () => {
   )
 }
 
-export default ShoppingListsGrouping
+export default ShoppingListGrouping
