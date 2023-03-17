@@ -1,0 +1,50 @@
+.root {
+  font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
+  background-color: var(--main-color);
+  border-bottom: none;
+}
+
+.root.expanded {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.root:hover {
+  background-color: var(--hover-color);
+}
+
+.trigger {
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  padding: 16px 12px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.quantity {
+  color: var(--title-text-color);
+  margin: auto 0;
+}
+
+.description {
+  color: var(--title-text-color);
+  margin: auto 0;
+  line-height: 1.25;
+}
+
+.details {
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+  border-bottom: var(--border-color);
+  padding: 16px;
+}
+
+.label {
+  margin: 0;
+}
+
+.value {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}

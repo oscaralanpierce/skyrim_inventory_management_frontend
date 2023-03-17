@@ -2,6 +2,7 @@ import {
   type ResponseShoppingList as ShoppingList,
   type ResponseShoppingListItem as ListItem,
 } from '../../types/apiData'
+import { shoppingListItemsOnList } from './shoppingListItems'
 
 /**
  *
@@ -23,7 +24,7 @@ export const allShoppingLists: ShoppingList[] = [
     aggregate_list_id: null,
     aggregate: true,
     title: 'All Items',
-    list_items: emptyListItems,
+    list_items: shoppingListItemsOnList(1),
     created_at: new Date('2023-01-02T03:54:02'),
     updated_at: new Date('2023-01-02T03:54:02'),
   },
@@ -33,7 +34,7 @@ export const allShoppingLists: ShoppingList[] = [
     aggregate_list_id: 1,
     aggregate: false,
     title: 'My Shopping List 1',
-    list_items: emptyListItems,
+    list_items: shoppingListItemsOnList(2),
     created_at: new Date('2023-01-02T03:54:02'),
     updated_at: new Date('2023-01-02T03:54:02'),
   },
@@ -43,7 +44,7 @@ export const allShoppingLists: ShoppingList[] = [
     aggregate_list_id: null,
     aggregate: true,
     title: 'All Items',
-    list_items: emptyListItems,
+    list_items: shoppingListItemsOnList(3),
     created_at: new Date('2023-02-12T15:17:33'),
     updated_at: new Date('2023-02-12T15:17:33'),
   },
@@ -53,7 +54,7 @@ export const allShoppingLists: ShoppingList[] = [
     aggregate_list_id: 3,
     aggregate: false,
     title: 'Honeyside',
-    list_items: emptyListItems,
+    list_items: shoppingListItemsOnList(4),
     created_at: new Date('2023-02-21T11:13:27'),
     updated_at: new Date('2023-02-21T11:13:27'),
   },
@@ -63,7 +64,7 @@ export const allShoppingLists: ShoppingList[] = [
     aggregate_list_id: 3,
     aggregate: false,
     title: 'Breezehome',
-    list_items: emptyListItems,
+    list_items: shoppingListItemsOnList(5),
     created_at: new Date('2023-02-12T15:17:33'),
     updated_at: new Date('2023-02-12T15:17:33'),
   },
