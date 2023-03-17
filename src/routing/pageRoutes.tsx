@@ -4,12 +4,14 @@ import { Helmet } from 'react-helmet-async'
 import { type RelativePath } from '../types/navigation'
 import { LoginProvider } from '../contexts/loginContext'
 import { GamesProvider } from '../contexts/gamesContext'
+import { PageProvider } from '../contexts/pageContext'
+import { ShoppingListsProvider } from '../contexts/shoppingListsContext'
 import HomePage from '../pages/homePage/homePage'
 import NotFoundPage from '../pages/notFoundPage/notFoundPage'
 import DashboardPage from '../pages/dashboardPage/dashboardPage'
 import GamesPage from '../pages/gamesPage/gamesPage'
+import ShoppingListsPage from '../pages/shoppingListsPage/shoppingListsPage'
 import paths from './paths'
-import { PageProvider } from '../contexts/pageContext'
 
 const siteTitle = 'Skyrim Inventory Management |'
 
@@ -44,7 +46,9 @@ const pages: Page[] = [
     description: 'Skyrim Inventory Management User Dashboard',
     jsx: (
       <PageProvider>
-        <DashboardPage />
+        <GamesProvider>
+          <DashboardPage />
+        </GamesProvider>
       </PageProvider>
     ),
     path: paths.dashboard.main,
@@ -61,6 +65,21 @@ const pages: Page[] = [
       </PageProvider>
     ),
     path: paths.dashboard.games,
+  },
+  {
+    pageId: 'dashboard-shopping-lists',
+    title: `${siteTitle} Shopping Lists`,
+    description: 'Manage your shopping lists',
+    jsx: (
+      <PageProvider>
+        <GamesProvider>
+          <ShoppingListsProvider>
+            <ShoppingListsPage />
+          </ShoppingListsProvider>
+        </GamesProvider>
+      </PageProvider>
+    ),
+    path: paths.dashboard.shoppingLists,
   },
 ]
 

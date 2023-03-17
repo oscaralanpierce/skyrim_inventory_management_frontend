@@ -1,16 +1,6 @@
-import { ApiResponse, SuccessStatusCode, HTTPHeaders } from './http'
-import { ErrorObject, ResponseGame } from '../../types/apiData'
-
-class UnauthorizedResponse extends ApiResponse {
-  status: 401
-
-  constructor(
-    body,
-    options: { status: 401; statusText?: string; headers?: HTTPHeaders }
-  ) {
-    super(body, options)
-  }
-}
+import { ApiResponse, SuccessStatusCode, HTTPHeaders } from '../http'
+import { ErrorObject, ResponseGame } from '../../../types/apiData'
+import { UnauthorizedResponse } from './shared'
 
 /**
  *

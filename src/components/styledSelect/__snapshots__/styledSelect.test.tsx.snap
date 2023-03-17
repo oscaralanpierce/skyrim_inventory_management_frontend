@@ -1,0 +1,568 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`StyledSelect > when a default option is given > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_0a8ecf"
+        data-testid="styledSelect"
+        style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
+      >
+        <div
+          aria-controls="selectListbox"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-owns="selectListbox"
+          class="_header_0a8ecf"
+          role="combobox"
+        >
+          <p
+            class="_headerText_0a8ecf"
+            data-testid="selectedOption"
+          >
+            My Game 2
+          </p>
+          <button
+            class="_trigger_0a8ecf"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 384 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M169.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 274.7 54.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="_dropdown_0a8ecf _hidden_0a8ecf"
+          id="selectListbox"
+          role="listbox"
+        >
+          <li
+            aria-selected="false"
+            class="_root_b75fe4"
+            data-option-value="32"
+            role="option"
+            tabindex="0"
+          >
+            My Game 1
+          </li>
+          <li
+            aria-selected="true"
+            class="_root_b75fe4"
+            data-option-value="51"
+            role="option"
+            tabindex="0"
+          >
+            My Game 2
+          </li>
+          <li
+            aria-selected="false"
+            class="_root_b75fe4"
+            data-option-value="77"
+            role="option"
+            tabindex="0"
+          >
+            Game with a really real...
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_0a8ecf"
+      data-testid="styledSelect"
+      style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
+    >
+      <div
+        aria-controls="selectListbox"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="selectListbox"
+        class="_header_0a8ecf"
+        role="combobox"
+      >
+        <p
+          class="_headerText_0a8ecf"
+          data-testid="selectedOption"
+        >
+          My Game 2
+        </p>
+        <button
+          class="_trigger_0a8ecf"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M169.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 274.7 54.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="_dropdown_0a8ecf _hidden_0a8ecf"
+        id="selectListbox"
+        role="listbox"
+      >
+        <li
+          aria-selected="false"
+          class="_root_b75fe4"
+          data-option-value="32"
+          role="option"
+          tabindex="0"
+        >
+          My Game 1
+        </li>
+        <li
+          aria-selected="true"
+          class="_root_b75fe4"
+          data-option-value="51"
+          role="option"
+          tabindex="0"
+        >
+          My Game 2
+        </li>
+        <li
+          aria-selected="false"
+          class="_root_b75fe4"
+          data-option-value="77"
+          role="option"
+          tabindex="0"
+        >
+          Game with a really real...
+        </li>
+      </ul>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_0a8ecf"
+        data-testid="styledSelect"
+        style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
+      >
+        <div
+          aria-controls="selectListbox"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-owns="selectListbox"
+          class="_header_0a8ecf"
+          role="combobox"
+        >
+          <p
+            class="_headerText_0a8ecf"
+            data-testid="selectedOption"
+          >
+            No options available
+          </p>
+          <button
+            class="_trigger_0a8ecf"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 384 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M169.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 274.7 54.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="_dropdown_0a8ecf _hidden_0a8ecf"
+          id="selectListbox"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_0a8ecf"
+      data-testid="styledSelect"
+      style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
+    >
+      <div
+        aria-controls="selectListbox"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="selectListbox"
+        class="_header_0a8ecf"
+        role="combobox"
+      >
+        <p
+          class="_headerText_0a8ecf"
+          data-testid="selectedOption"
+        >
+          No options available
+        </p>
+        <button
+          class="_trigger_0a8ecf"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M169.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 274.7 54.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="_dropdown_0a8ecf _hidden_0a8ecf"
+        id="selectListbox"
+        role="listbox"
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`StyledSelect > when there are options > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_0a8ecf"
+        data-testid="styledSelect"
+        style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
+      >
+        <div
+          aria-controls="selectListbox"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-owns="selectListbox"
+          class="_header_0a8ecf"
+          role="combobox"
+        >
+          <p
+            class="_headerText_0a8ecf"
+            data-testid="selectedOption"
+          />
+          <button
+            class="_trigger_0a8ecf"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 384 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M169.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 274.7 54.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="_dropdown_0a8ecf _hidden_0a8ecf"
+          id="selectListbox"
+          role="listbox"
+        >
+          <li
+            aria-selected="false"
+            class="_root_b75fe4"
+            data-option-value="32"
+            role="option"
+            tabindex="0"
+          >
+            My Game 1
+          </li>
+          <li
+            aria-selected="false"
+            class="_root_b75fe4"
+            data-option-value="51"
+            role="option"
+            tabindex="0"
+          >
+            My Game 2
+          </li>
+          <li
+            aria-selected="false"
+            class="_root_b75fe4"
+            data-option-value="77"
+            role="option"
+            tabindex="0"
+          >
+            Game with a really real...
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_0a8ecf"
+      data-testid="styledSelect"
+      style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
+    >
+      <div
+        aria-controls="selectListbox"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="selectListbox"
+        class="_header_0a8ecf"
+        role="combobox"
+      >
+        <p
+          class="_headerText_0a8ecf"
+          data-testid="selectedOption"
+        />
+        <button
+          class="_trigger_0a8ecf"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M169.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 274.7 54.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="_dropdown_0a8ecf _hidden_0a8ecf"
+        id="selectListbox"
+        role="listbox"
+      >
+        <li
+          aria-selected="false"
+          class="_root_b75fe4"
+          data-option-value="32"
+          role="option"
+          tabindex="0"
+        >
+          My Game 1
+        </li>
+        <li
+          aria-selected="false"
+          class="_root_b75fe4"
+          data-option-value="51"
+          role="option"
+          tabindex="0"
+        >
+          My Game 2
+        </li>
+        <li
+          aria-selected="false"
+          class="_root_b75fe4"
+          data-option-value="77"
+          role="option"
+          tabindex="0"
+        >
+          Game with a really real...
+        </li>
+      </ul>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

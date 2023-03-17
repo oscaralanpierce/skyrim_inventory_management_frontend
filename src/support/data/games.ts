@@ -1,5 +1,16 @@
 import { ResponseGame as Game } from '../../types/apiData'
 
+/**
+ *
+ * Games, in Skyrim Inventory Management's data schema, are the objects
+ * under which all other objects are organised. Every resource in the app
+ * corresponds to a specific game, which belongs to a particular user.
+ *
+ * The IDs seen in this file are used in other test data to simulate
+ * relationships between models in the back-end database.
+ *
+ */
+
 export const emptyGames: Game[] = []
 
 export const allGames: Game[] = [

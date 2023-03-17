@@ -1,5 +1,5 @@
 import { rest } from 'msw'
-import { ResponseGame } from '../../types/apiData'
+import { type ResponseGame } from '../../types/apiData'
 import { emptyGames, allGames } from '../data/games'
 
 const BASE_URI = 'http://localhost:3000'

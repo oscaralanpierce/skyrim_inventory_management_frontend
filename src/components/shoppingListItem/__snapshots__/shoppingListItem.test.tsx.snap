@@ -1,0 +1,186 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShoppingListItem > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_fccc8d"
+        style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
+      >
+        <div
+          aria-controls="shoppingListItem2Details"
+          aria-expanded="false"
+          class="_trigger_fccc8d"
+          role="button"
+        >
+          <span
+            class="_descriptionContainer_fccc8d"
+          >
+            <h3
+              class="_description_fccc8d"
+            >
+              Silver Necklace
+            </h3>
+          </span>
+          <span
+            class="_quantity_fccc8d"
+          >
+            2
+          </span>
+        </div>
+        <div
+          aria-hidden="true"
+          class="rah-static rah-static--height-zero "
+          id="shoppingListItem2Details"
+          style="height: 0px; overflow: hidden;"
+        >
+          <div
+            style="display: none;"
+          >
+            <div
+              class="_details_fccc8d"
+            >
+              <h4
+                class="_label_fccc8d"
+              >
+                Unit Weight:
+              </h4>
+              <p
+                class="_value_fccc8d"
+              >
+                0.3
+              </p>
+              <h4
+                class="_label_fccc8d"
+              >
+                Notes:
+              </h4>
+              <p
+                class="_value_fccc8d"
+              >
+                To enchant
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_fccc8d"
+      style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
+    >
+      <div
+        aria-controls="shoppingListItem2Details"
+        aria-expanded="false"
+        class="_trigger_fccc8d"
+        role="button"
+      >
+        <span
+          class="_descriptionContainer_fccc8d"
+        >
+          <h3
+            class="_description_fccc8d"
+          >
+            Silver Necklace
+          </h3>
+        </span>
+        <span
+          class="_quantity_fccc8d"
+        >
+          2
+        </span>
+      </div>
+      <div
+        aria-hidden="true"
+        class="rah-static rah-static--height-zero "
+        id="shoppingListItem2Details"
+        style="height: 0px; overflow: hidden;"
+      >
+        <div
+          style="display: none;"
+        >
+          <div
+            class="_details_fccc8d"
+          >
+            <h4
+              class="_label_fccc8d"
+            >
+              Unit Weight:
+            </h4>
+            <p
+              class="_value_fccc8d"
+            >
+              0.3
+            </p>
+            <h4
+              class="_label_fccc8d"
+            >
+              Notes:
+            </h4>
+            <p
+              class="_value_fccc8d"
+            >
+              To enchant
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

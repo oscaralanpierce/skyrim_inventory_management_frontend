@@ -1,0 +1,971 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShoppingListGrouping > when there are no shopping lists > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <p
+        class="_noLists_92c834"
+      >
+        This game has no shopping lists.
+      </p>
+    </div>
+  </body>,
+  "container": <div>
+    <p
+      class="_noLists_92c834"
+    >
+      This game has no shopping lists.
+    </p>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_92c834"
+      >
+        <div
+          class="_shoppingList_92c834"
+        >
+          <div
+            class="_root_62bc73"
+            style="--scheme-color: #ffbf00; --border-color: #cc9800; --text-color-primary: #4c3900; --text-color-secondary: #4c3900; --hover-color: #e5ab00; --scheme-color-lighter: #ffcb32; --scheme-color-lightest: #fff2cc;"
+          >
+            <div
+              aria-controls="list3Details"
+              aria-expanded="false"
+              class="_trigger_62bc73"
+              role="button"
+            >
+              <h3
+                class="_title_62bc73"
+              >
+                All Items
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero "
+              id="list3Details"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              >
+                <div
+                  class="_details_62bc73"
+                >
+                  <div
+                    class="_root_fccc8d"
+                    style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
+                  >
+                    <div
+                      aria-controls="shoppingListItem6Details"
+                      aria-expanded="false"
+                      class="_trigger_fccc8d"
+                      role="button"
+                    >
+                      <span
+                        class="_descriptionContainer_fccc8d"
+                      >
+                        <h3
+                          class="_description_fccc8d"
+                        >
+                          Dwarven Cog
+                        </h3>
+                      </span>
+                      <span
+                        class="_quantity_fccc8d"
+                      >
+                        11
+                      </span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="rah-static rah-static--height-zero "
+                      id="shoppingListItem6Details"
+                      style="height: 0px; overflow: hidden;"
+                    >
+                      <div
+                        style="display: none;"
+                      >
+                        <div
+                          class="_details_fccc8d"
+                        >
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Unit Weight:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            10
+                          </p>
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Notes:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            For Arniel Gane -- For trophy room
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="_root_fccc8d"
+                    style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
+                  >
+                    <div
+                      aria-controls="shoppingListItem9Details"
+                      aria-expanded="false"
+                      class="_trigger_fccc8d"
+                      role="button"
+                    >
+                      <span
+                        class="_descriptionContainer_fccc8d"
+                      >
+                        <h3
+                          class="_description_fccc8d"
+                        >
+                          This item has a really really really really really long description for testing purposes
+                        </h3>
+                      </span>
+                      <span
+                        class="_quantity_fccc8d"
+                      >
+                        200000000000
+                      </span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="rah-static rah-static--height-zero "
+                      id="shoppingListItem9Details"
+                      style="height: 0px; overflow: hidden;"
+                    >
+                      <div
+                        style="display: none;"
+                      >
+                        <div
+                          class="_details_fccc8d"
+                        >
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Unit Weight:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            400000000000
+                          </p>
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Notes:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            -
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="_shoppingList_92c834"
+        >
+          <div
+            class="_root_62bc73"
+            style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2;"
+          >
+            <div
+              aria-controls="list4Details"
+              aria-expanded="false"
+              class="_trigger_62bc73"
+              role="button"
+            >
+              <h3
+                class="_title_62bc73"
+              >
+                Honeyside
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero "
+              id="list4Details"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              >
+                <div
+                  class="_details_62bc73"
+                >
+                  <div
+                    class="_root_fccc8d"
+                    style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
+                  >
+                    <div
+                      aria-controls="shoppingListItem8Details"
+                      aria-expanded="false"
+                      class="_trigger_fccc8d"
+                      role="button"
+                    >
+                      <span
+                        class="_descriptionContainer_fccc8d"
+                      >
+                        <h3
+                          class="_description_fccc8d"
+                        >
+                          This item has a really really really really really long description for testing purposes
+                        </h3>
+                      </span>
+                      <span
+                        class="_quantity_fccc8d"
+                      >
+                        200000000000
+                      </span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="rah-static rah-static--height-zero "
+                      id="shoppingListItem8Details"
+                      style="height: 0px; overflow: hidden;"
+                    >
+                      <div
+                        style="display: none;"
+                      >
+                        <div
+                          class="_details_fccc8d"
+                        >
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Unit Weight:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            400000000000
+                          </p>
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Notes:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            -
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="_root_fccc8d"
+                    style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
+                  >
+                    <div
+                      aria-controls="shoppingListItem5Details"
+                      aria-expanded="false"
+                      class="_trigger_fccc8d"
+                      role="button"
+                    >
+                      <span
+                        class="_descriptionContainer_fccc8d"
+                      >
+                        <h3
+                          class="_description_fccc8d"
+                        >
+                          Dwarven Cog
+                        </h3>
+                      </span>
+                      <span
+                        class="_quantity_fccc8d"
+                      >
+                        1
+                      </span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="rah-static rah-static--height-zero "
+                      id="shoppingListItem5Details"
+                      style="height: 0px; overflow: hidden;"
+                    >
+                      <div
+                        style="display: none;"
+                      >
+                        <div
+                          class="_details_fccc8d"
+                        >
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Unit Weight:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            10
+                          </p>
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Notes:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            For trophy room
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="_shoppingList_92c834"
+        >
+          <div
+            class="_root_62bc73"
+            style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed;"
+          >
+            <div
+              aria-controls="list5Details"
+              aria-expanded="false"
+              class="_trigger_62bc73"
+              role="button"
+            >
+              <h3
+                class="_title_62bc73"
+              >
+                Breezehome
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero "
+              id="list5Details"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              >
+                <div
+                  class="_details_62bc73"
+                >
+                  <div
+                    class="_root_fccc8d"
+                    style="--main-color: #4e8fb7; --title-text-color: #fff; --border-color: #1b5c84; --body-background-color: #d2e3ed; --body-text-color: #0d2e42; --hover-color: #3881ae;"
+                  >
+                    <div
+                      aria-controls="shoppingListItem7Details"
+                      aria-expanded="false"
+                      class="_trigger_fccc8d"
+                      role="button"
+                    >
+                      <span
+                        class="_descriptionContainer_fccc8d"
+                      >
+                        <h3
+                          class="_description_fccc8d"
+                        >
+                          Dwarven Cog
+                        </h3>
+                      </span>
+                      <span
+                        class="_quantity_fccc8d"
+                      >
+                        10
+                      </span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="rah-static rah-static--height-zero "
+                      id="shoppingListItem7Details"
+                      style="height: 0px; overflow: hidden;"
+                    >
+                      <div
+                        style="display: none;"
+                      >
+                        <div
+                          class="_details_fccc8d"
+                        >
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Unit Weight:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            10
+                          </p>
+                          <h4
+                            class="_label_fccc8d"
+                          >
+                            Notes:
+                          </h4>
+                          <p
+                            class="_value_fccc8d"
+                          >
+                            For Arniel Gane
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_92c834"
+    >
+      <div
+        class="_shoppingList_92c834"
+      >
+        <div
+          class="_root_62bc73"
+          style="--scheme-color: #ffbf00; --border-color: #cc9800; --text-color-primary: #4c3900; --text-color-secondary: #4c3900; --hover-color: #e5ab00; --scheme-color-lighter: #ffcb32; --scheme-color-lightest: #fff2cc;"
+        >
+          <div
+            aria-controls="list3Details"
+            aria-expanded="false"
+            class="_trigger_62bc73"
+            role="button"
+          >
+            <h3
+              class="_title_62bc73"
+            >
+              All Items
+            </h3>
+          </div>
+          <div
+            aria-hidden="true"
+            class="rah-static rah-static--height-zero "
+            id="list3Details"
+            style="height: 0px; overflow: hidden;"
+          >
+            <div
+              style="display: none;"
+            >
+              <div
+                class="_details_62bc73"
+              >
+                <div
+                  class="_root_fccc8d"
+                  style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
+                >
+                  <div
+                    aria-controls="shoppingListItem6Details"
+                    aria-expanded="false"
+                    class="_trigger_fccc8d"
+                    role="button"
+                  >
+                    <span
+                      class="_descriptionContainer_fccc8d"
+                    >
+                      <h3
+                        class="_description_fccc8d"
+                      >
+                        Dwarven Cog
+                      </h3>
+                    </span>
+                    <span
+                      class="_quantity_fccc8d"
+                    >
+                      11
+                    </span>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="rah-static rah-static--height-zero "
+                    id="shoppingListItem6Details"
+                    style="height: 0px; overflow: hidden;"
+                  >
+                    <div
+                      style="display: none;"
+                    >
+                      <div
+                        class="_details_fccc8d"
+                      >
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Unit Weight:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          10
+                        </p>
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Notes:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          For Arniel Gane -- For trophy room
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="_root_fccc8d"
+                  style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
+                >
+                  <div
+                    aria-controls="shoppingListItem9Details"
+                    aria-expanded="false"
+                    class="_trigger_fccc8d"
+                    role="button"
+                  >
+                    <span
+                      class="_descriptionContainer_fccc8d"
+                    >
+                      <h3
+                        class="_description_fccc8d"
+                      >
+                        This item has a really really really really really long description for testing purposes
+                      </h3>
+                    </span>
+                    <span
+                      class="_quantity_fccc8d"
+                    >
+                      200000000000
+                    </span>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="rah-static rah-static--height-zero "
+                    id="shoppingListItem9Details"
+                    style="height: 0px; overflow: hidden;"
+                  >
+                    <div
+                      style="display: none;"
+                    >
+                      <div
+                        class="_details_fccc8d"
+                      >
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Unit Weight:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          400000000000
+                        </p>
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Notes:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          -
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="_shoppingList_92c834"
+      >
+        <div
+          class="_root_62bc73"
+          style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2;"
+        >
+          <div
+            aria-controls="list4Details"
+            aria-expanded="false"
+            class="_trigger_62bc73"
+            role="button"
+          >
+            <h3
+              class="_title_62bc73"
+            >
+              Honeyside
+            </h3>
+          </div>
+          <div
+            aria-hidden="true"
+            class="rah-static rah-static--height-zero "
+            id="list4Details"
+            style="height: 0px; overflow: hidden;"
+          >
+            <div
+              style="display: none;"
+            >
+              <div
+                class="_details_62bc73"
+              >
+                <div
+                  class="_root_fccc8d"
+                  style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
+                >
+                  <div
+                    aria-controls="shoppingListItem8Details"
+                    aria-expanded="false"
+                    class="_trigger_fccc8d"
+                    role="button"
+                  >
+                    <span
+                      class="_descriptionContainer_fccc8d"
+                    >
+                      <h3
+                        class="_description_fccc8d"
+                      >
+                        This item has a really really really really really long description for testing purposes
+                      </h3>
+                    </span>
+                    <span
+                      class="_quantity_fccc8d"
+                    >
+                      200000000000
+                    </span>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="rah-static rah-static--height-zero "
+                    id="shoppingListItem8Details"
+                    style="height: 0px; overflow: hidden;"
+                  >
+                    <div
+                      style="display: none;"
+                    >
+                      <div
+                        class="_details_fccc8d"
+                      >
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Unit Weight:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          400000000000
+                        </p>
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Notes:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          -
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="_root_fccc8d"
+                  style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
+                >
+                  <div
+                    aria-controls="shoppingListItem5Details"
+                    aria-expanded="false"
+                    class="_trigger_fccc8d"
+                    role="button"
+                  >
+                    <span
+                      class="_descriptionContainer_fccc8d"
+                    >
+                      <h3
+                        class="_description_fccc8d"
+                      >
+                        Dwarven Cog
+                      </h3>
+                    </span>
+                    <span
+                      class="_quantity_fccc8d"
+                    >
+                      1
+                    </span>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="rah-static rah-static--height-zero "
+                    id="shoppingListItem5Details"
+                    style="height: 0px; overflow: hidden;"
+                  >
+                    <div
+                      style="display: none;"
+                    >
+                      <div
+                        class="_details_fccc8d"
+                      >
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Unit Weight:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          10
+                        </p>
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Notes:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          For trophy room
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="_shoppingList_92c834"
+      >
+        <div
+          class="_root_62bc73"
+          style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed;"
+        >
+          <div
+            aria-controls="list5Details"
+            aria-expanded="false"
+            class="_trigger_62bc73"
+            role="button"
+          >
+            <h3
+              class="_title_62bc73"
+            >
+              Breezehome
+            </h3>
+          </div>
+          <div
+            aria-hidden="true"
+            class="rah-static rah-static--height-zero "
+            id="list5Details"
+            style="height: 0px; overflow: hidden;"
+          >
+            <div
+              style="display: none;"
+            >
+              <div
+                class="_details_62bc73"
+              >
+                <div
+                  class="_root_fccc8d"
+                  style="--main-color: #4e8fb7; --title-text-color: #fff; --border-color: #1b5c84; --body-background-color: #d2e3ed; --body-text-color: #0d2e42; --hover-color: #3881ae;"
+                >
+                  <div
+                    aria-controls="shoppingListItem7Details"
+                    aria-expanded="false"
+                    class="_trigger_fccc8d"
+                    role="button"
+                  >
+                    <span
+                      class="_descriptionContainer_fccc8d"
+                    >
+                      <h3
+                        class="_description_fccc8d"
+                      >
+                        Dwarven Cog
+                      </h3>
+                    </span>
+                    <span
+                      class="_quantity_fccc8d"
+                    >
+                      10
+                    </span>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="rah-static rah-static--height-zero "
+                    id="shoppingListItem7Details"
+                    style="height: 0px; overflow: hidden;"
+                  >
+                    <div
+                      style="display: none;"
+                    >
+                      <div
+                        class="_details_fccc8d"
+                      >
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Unit Weight:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          10
+                        </p>
+                        <h4
+                          class="_label_fccc8d"
+                        >
+                          Notes:
+                        </h4>
+                        <p
+                          class="_value_fccc8d"
+                        >
+                          For Arniel Gane
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,8 +1,10 @@
-import { GamesContextType } from '../../contexts/gamesContext'
-import { LoginContextType } from '../../contexts/loginContext'
-import { DONE } from '../../utils/loadingStates'
+import { type GamesContextType } from '../../contexts/gamesContext'
+import { type LoginContextType } from '../../contexts/loginContext'
+import { type ShoppingListsContextType } from '../../contexts/shoppingListsContext'
+import { DONE, LOADING } from '../../utils/loadingStates'
 import { testUser } from './users'
 import { allGames } from './games'
+import { emptyShoppingLists, shoppingListsForGame } from './shoppingLists'
 
 const noop = () => {}
 
@@ -45,4 +47,25 @@ export const gamesContextValue: GamesContextType = {
   createGame: noop,
   updateGame: noop,
   destroyGame: noop,
+}
+
+/**
+ *
+ * Default values for Shopping Lists context
+ *
+ */
+
+export const shoppingListsContextValueEmpty: ShoppingListsContextType = {
+  shoppingLists: emptyShoppingLists,
+  shoppingListsLoadingState: DONE,
+}
+
+export const shoppingListsContextValue: ShoppingListsContextType = {
+  shoppingLists: shoppingListsForGame(77),
+  shoppingListsLoadingState: DONE,
+}
+
+export const shoppingListsContextValueLoading: ShoppingListsContextType = {
+  shoppingLists: emptyShoppingLists,
+  shoppingListsLoadingState: LOADING,
 }

@@ -71,10 +71,6 @@
 }
 
 @media (min-width: 1025px) {
-  .root {
-    padding-bottom: 32px;
-  }
-
   .fieldset {
     max-width: 40%;
   }

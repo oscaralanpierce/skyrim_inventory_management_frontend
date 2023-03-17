@@ -68,7 +68,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       setFlashProps({
         hidden: false,
         type: 'error',
-        message: message,
+        message,
       })
     }
   }

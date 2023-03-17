@@ -33,7 +33,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               >
                 <a
                   class="_root_396ea1"
-                  href="/"
+                  href="/shopping_lists"
                   style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
                 >
                   Your Shopping Lists
@@ -225,7 +225,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
             >
               <a
                 class="_root_396ea1"
-                href="/"
+                href="/shopping_lists"
                 style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
               >
                 Your Shopping Lists
