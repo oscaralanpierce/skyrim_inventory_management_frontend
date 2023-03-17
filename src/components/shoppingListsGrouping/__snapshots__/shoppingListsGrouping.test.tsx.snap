@@ -1,0 +1,318 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShoppingListsGrouping > when there are shopping lists > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_8168de"
+      >
+        <div
+          class="_shoppingList_8168de"
+        >
+          <div
+            class="_root_62bc73"
+            style="--scheme-color: #ffbf00; --border-color: #cc9800; --text-color-primary: #4c3900; --text-color-secondary: #4c3900; --hover-color: #e5ab00; --scheme-color-lighter: #ffcb32; --scheme-color-lightest: #fff2cc;"
+          >
+            <div
+              aria-controls="list3Details"
+              aria-expanded="false"
+              class="_trigger_62bc73"
+              role="button"
+            >
+              <h3
+                class="_title_62bc73"
+              >
+                All Items
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero "
+              id="list3Details"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              >
+                <div
+                  class="_details_62bc73"
+                >
+                  <p
+                    class="_emptyList_62bc73"
+                  >
+                    This shopping list has no list items.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="_shoppingList_8168de"
+        >
+          <div
+            class="_root_62bc73"
+            style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2;"
+          >
+            <div
+              aria-controls="list4Details"
+              aria-expanded="false"
+              class="_trigger_62bc73"
+              role="button"
+            >
+              <h3
+                class="_title_62bc73"
+              >
+                Honeyside
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero "
+              id="list4Details"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              >
+                <div
+                  class="_details_62bc73"
+                >
+                  <p
+                    class="_emptyList_62bc73"
+                  >
+                    This shopping list has no list items.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="_shoppingList_8168de"
+        >
+          <div
+            class="_root_62bc73"
+            style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed;"
+          >
+            <div
+              aria-controls="list5Details"
+              aria-expanded="false"
+              class="_trigger_62bc73"
+              role="button"
+            >
+              <h3
+                class="_title_62bc73"
+              >
+                Breezehome
+              </h3>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-static rah-static--height-zero "
+              id="list5Details"
+              style="height: 0px; overflow: hidden;"
+            >
+              <div
+                style="display: none;"
+              >
+                <div
+                  class="_details_62bc73"
+                >
+                  <p
+                    class="_emptyList_62bc73"
+                  >
+                    This shopping list has no list items.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_8168de"
+    >
+      <div
+        class="_shoppingList_8168de"
+      >
+        <div
+          class="_root_62bc73"
+          style="--scheme-color: #ffbf00; --border-color: #cc9800; --text-color-primary: #4c3900; --text-color-secondary: #4c3900; --hover-color: #e5ab00; --scheme-color-lighter: #ffcb32; --scheme-color-lightest: #fff2cc;"
+        >
+          <div
+            aria-controls="list3Details"
+            aria-expanded="false"
+            class="_trigger_62bc73"
+            role="button"
+          >
+            <h3
+              class="_title_62bc73"
+            >
+              All Items
+            </h3>
+          </div>
+          <div
+            aria-hidden="true"
+            class="rah-static rah-static--height-zero "
+            id="list3Details"
+            style="height: 0px; overflow: hidden;"
+          >
+            <div
+              style="display: none;"
+            >
+              <div
+                class="_details_62bc73"
+              >
+                <p
+                  class="_emptyList_62bc73"
+                >
+                  This shopping list has no list items.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="_shoppingList_8168de"
+      >
+        <div
+          class="_root_62bc73"
+          style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2;"
+        >
+          <div
+            aria-controls="list4Details"
+            aria-expanded="false"
+            class="_trigger_62bc73"
+            role="button"
+          >
+            <h3
+              class="_title_62bc73"
+            >
+              Honeyside
+            </h3>
+          </div>
+          <div
+            aria-hidden="true"
+            class="rah-static rah-static--height-zero "
+            id="list4Details"
+            style="height: 0px; overflow: hidden;"
+          >
+            <div
+              style="display: none;"
+            >
+              <div
+                class="_details_62bc73"
+              >
+                <p
+                  class="_emptyList_62bc73"
+                >
+                  This shopping list has no list items.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="_shoppingList_8168de"
+      >
+        <div
+          class="_root_62bc73"
+          style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed;"
+        >
+          <div
+            aria-controls="list5Details"
+            aria-expanded="false"
+            class="_trigger_62bc73"
+            role="button"
+          >
+            <h3
+              class="_title_62bc73"
+            >
+              Breezehome
+            </h3>
+          </div>
+          <div
+            aria-hidden="true"
+            class="rah-static rah-static--height-zero "
+            id="list5Details"
+            style="height: 0px; overflow: hidden;"
+          >
+            <div
+              style="display: none;"
+            >
+              <div
+                class="_details_62bc73"
+              >
+                <p
+                  class="_emptyList_62bc73"
+                >
+                  This shopping list has no list items.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
