@@ -6,6 +6,7 @@ import {
 } from 'react'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
+import { DONE } from '../../utils/loadingStates'
 import { usePageContext, useGamesContext } from '../../hooks/contexts'
 import { useQueryString } from '../../hooks/useQueryString'
 import DashboardHeader from '../../components/dashboardHeader/dashboardHeader'
@@ -15,7 +16,6 @@ import StyledSelect, {
 } from '../../components/styledSelect/styledSelect'
 import Modal from '../../components/modal/modal'
 import styles from './dashboardLayout.module.css'
-import { DONE } from '../../utils/loadingStates'
 
 interface DashboardLayoutProps {
   title?: string

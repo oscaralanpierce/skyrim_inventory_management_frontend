@@ -144,6 +144,25 @@ describe('StyledSelectOption', () => {
       expect(onSelected).toHaveBeenCalledWith(1)
     })
 
+    test('calls the onSelected function when the space bar is pressed', () => {
+      const onSelected = vitest.fn()
+
+      const wrapper = render(
+        <StyledSelectOption
+          optionName="Option 1"
+          optionValue={1}
+          onSelected={onSelected}
+          ariaSelected={false}
+        />
+      )
+
+      const option = wrapper.getByRole('option')
+
+      act(() => fireEvent.keyDown(option, { key: ' ' }))
+
+      expect(onSelected).toHaveBeenCalledWith(1)
+    })
+
     test("doesn't call the onSelected function when a key other than Enter is pressed", () => {
       const onSelected = vitest.fn()
 

@@ -14,7 +14,6 @@ import { LoginContext } from '../../contexts/loginContext'
 import { GamesContext } from '../../contexts/gamesContext'
 import { PageProvider } from '../../contexts/pageContext'
 import ShoppingListsPage from './shoppingListsPage'
-import { allGames } from '../../support/data/games'
 
 export default { title: 'ShoppingListsPage' }
 
