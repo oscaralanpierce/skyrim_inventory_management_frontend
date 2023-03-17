@@ -58,14 +58,17 @@ export const gamesContextValue: GamesContextType = {
 export const shoppingListsContextValueEmpty: ShoppingListsContextType = {
   shoppingLists: emptyShoppingLists,
   shoppingListsLoadingState: DONE,
+  createShoppingList: noop,
 }
 
 export const shoppingListsContextValue: ShoppingListsContextType = {
   shoppingLists: shoppingListsForGame(77),
   shoppingListsLoadingState: DONE,
+  createShoppingList: noop,
 }
 
 export const shoppingListsContextValueLoading: ShoppingListsContextType = {
   shoppingLists: emptyShoppingLists,
   shoppingListsLoadingState: LOADING,
+  createShoppingList: noop,
 }
