@@ -108,7 +108,7 @@ const StyledSelect = ({
         <p className={styles.headerText} data-testid="selectedOption">
           {truncatedText(options.length ? headerText : placeholder)}
         </p>
-        <button className={styles.trigger} data-testid="selectTrigger">
+        <button className={styles.trigger}>
           <FontAwesomeIcon className={styles.fa} icon={faAngleDown} />
         </button>
       </div>

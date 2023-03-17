@@ -26,7 +26,6 @@ exports[`StyledSelect > when a default option is given > matches snapshot 1`] = 
           </p>
           <button
             class="_trigger_0a8ecf"
-            data-testid="selectTrigger"
           >
             <svg
               aria-hidden="true"
@@ -103,7 +102,6 @@ exports[`StyledSelect > when a default option is given > matches snapshot 1`] = 
         </p>
         <button
           class="_trigger_0a8ecf"
-          data-testid="selectTrigger"
         >
           <svg
             aria-hidden="true"
@@ -237,7 +235,6 @@ exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
           </p>
           <button
             class="_trigger_0a8ecf"
-            data-testid="selectTrigger"
           >
             <svg
               aria-hidden="true"
@@ -286,7 +283,6 @@ exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
         </p>
         <button
           class="_trigger_0a8ecf"
-          data-testid="selectTrigger"
         >
           <svg
             aria-hidden="true"
@@ -390,7 +386,6 @@ exports[`StyledSelect > when there are options > matches snapshot 1`] = `
           />
           <button
             class="_trigger_0a8ecf"
-            data-testid="selectTrigger"
           >
             <svg
               aria-hidden="true"
@@ -465,7 +460,6 @@ exports[`StyledSelect > when there are options > matches snapshot 1`] = `
         />
         <button
           class="_trigger_0a8ecf"
-          data-testid="selectTrigger"
         >
           <svg
             aria-hidden="true"

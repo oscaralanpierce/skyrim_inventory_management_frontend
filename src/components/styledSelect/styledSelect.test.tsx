@@ -31,7 +31,7 @@ describe('StyledSelect', () => {
       // Initially, no option is selected
       expect(wrapper.queryByRole('option', { selected: true })).toBeFalsy()
 
-      // All the games should be present in the DOM
+      // All the option names should be present in the DOM
       expect(wrapper.getByText('My Game 1')).toBeTruthy()
       expect(wrapper.getByText('My Game 2')).toBeTruthy()
       expect(wrapper.getByText('Game with a really real...')).toBeTruthy()

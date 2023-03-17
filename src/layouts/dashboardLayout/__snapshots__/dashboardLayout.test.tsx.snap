@@ -376,7 +376,6 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                 </p>
                 <button
                   class="_trigger_0a8ecf"
-                  data-testid="selectTrigger"
                 >
                   <svg
                     aria-hidden="true"
@@ -587,7 +586,6 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
               </p>
               <button
                 class="_trigger_0a8ecf"
-                data-testid="selectTrigger"
               >
                 <svg
                   aria-hidden="true"
@@ -853,7 +851,6 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                 />
                 <button
                   class="_trigger_0a8ecf"
-                  data-testid="selectTrigger"
                 >
                   <svg
                     aria-hidden="true"
@@ -1062,7 +1059,6 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
               />
               <button
                 class="_trigger_0a8ecf"
-                data-testid="selectTrigger"
               >
                 <svg
                   aria-hidden="true"
@@ -1335,7 +1331,6 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
                 </p>
                 <button
                   class="_trigger_0a8ecf"
-                  data-testid="selectTrigger"
                 >
                   <svg
                     aria-hidden="true"
@@ -1523,7 +1518,6 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
               </p>
               <button
                 class="_trigger_0a8ecf"
-                data-testid="selectTrigger"
               >
                 <svg
                   aria-hidden="true"
@@ -1763,7 +1757,6 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
                 </p>
                 <button
                   class="_trigger_0a8ecf"
-                  data-testid="selectTrigger"
                 >
                   <svg
                     aria-hidden="true"
@@ -1946,7 +1939,6 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
               </p>
               <button
                 class="_trigger_0a8ecf"
-                data-testid="selectTrigger"
               >
                 <svg
                   aria-hidden="true"

@@ -26,7 +26,7 @@ const ShoppingListGrouping = () => {
                   ({ id, description, quantity, unit_weight, notes }) => {
                     return (
                       <ShoppingListItem
-                        key={description.toLowerCase().replace(' ', '-')}
+                        key={`${description.toLowerCase().replace(' ', '-')}-${id}`}
                         itemId={id}
                         description={description}
                         quantity={quantity}

@@ -40,7 +40,6 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when loading > matches
                 </p>
                 <button
                   class="_trigger_0a8ecf"
-                  data-testid="selectTrigger"
                 >
                   <svg
                     aria-hidden="true"
@@ -197,7 +196,6 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when loading > matches
               </p>
               <button
                 class="_trigger_0a8ecf"
-                data-testid="selectTrigger"
               >
                 <svg
                   aria-hidden="true"
@@ -411,7 +409,6 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
                 </p>
                 <button
                   class="_trigger_0a8ecf"
-                  data-testid="selectTrigger"
                 >
                   <svg
                     aria-hidden="true"
@@ -633,7 +630,6 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
               </p>
               <button
                 class="_trigger_0a8ecf"
-                data-testid="selectTrigger"
               >
                 <svg
                   aria-hidden="true"
@@ -912,7 +908,6 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
                 </p>
                 <button
                   class="_trigger_0a8ecf"
-                  data-testid="selectTrigger"
                 >
                   <svg
                     aria-hidden="true"
@@ -1502,7 +1497,6 @@ exports[`<ShoppingListsPage /> > viewing shopping lists > when the game is set i
               </p>
               <button
                 class="_trigger_0a8ecf"
-                data-testid="selectTrigger"
               >
                 <svg
                   aria-hidden="true"
