@@ -35,6 +35,10 @@ export interface ResponseGame {
  *
  */
 
+export interface RequestShoppingList {
+  title?: string
+}
+
 export interface ResponseShoppingList {
   id: number
   game_id: number
