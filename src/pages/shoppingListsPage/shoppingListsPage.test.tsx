@@ -105,7 +105,7 @@ describe('<ShoppingListsPage />', () => {
       })
 
       describe('when the game has no shopping lists', () => {
-        it('renders a message that the game has no shopping lists', async () => {
+        test('renders a message that the game has no shopping lists', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
               <GamesProvider>
@@ -124,7 +124,7 @@ describe('<ShoppingListsPage />', () => {
           })
         })
 
-        it('matches snapshot', async () => {
+        test('matches snapshot', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
               <GamesProvider>
