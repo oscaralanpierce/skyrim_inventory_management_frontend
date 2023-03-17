@@ -16,19 +16,24 @@
   width: 100%;
   border-bottom: 1px solid var(--border-color);
   cursor: pointer;
-  padding: 16px 12px;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
 
 .quantity {
   color: var(--title-text-color);
-  margin: auto 0;
+  margin: 16px 12px;
+  text-align: center;
+}
+
+.descriptionContainer {
+  border-right: 1px solid var(--border-color);
 }
 
 .description {
   color: var(--title-text-color);
-  margin: auto 0;
+  font-size: 1rem;
+  margin: 16px 0 16px 12px;
   line-height: 1.25;
 }
 

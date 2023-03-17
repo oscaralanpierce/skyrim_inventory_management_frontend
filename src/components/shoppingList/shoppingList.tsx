@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from 'react'
+import { ReactElement, useState, type CSSProperties } from 'react'
 import AnimateHeight from 'react-animate-height'
 import { useColorScheme } from '../../hooks/contexts'
 import styles from './shoppingList.module.css'
@@ -6,9 +6,10 @@ import styles from './shoppingList.module.css'
 interface ShoppingListProps {
   listId: number
   title: string
+  children?: ReactElement | ReactElement[]
 }
 
-const ShoppingList = ({ listId, title }: ShoppingListProps) => {
+const ShoppingList = ({ listId, title, children }: ShoppingListProps) => {
   const [expanded, setExpanded] = useState(false)
 
   const {
@@ -52,9 +53,11 @@ const ShoppingList = ({ listId, title }: ShoppingListProps) => {
         height={expanded ? 'auto' : 0}
       >
         <div className={styles.details}>
-          <p className={styles.emptyList}>
-            This shopping list has no list items.
-          </p>
+          {children || (
+            <p className={styles.emptyList}>
+              This shopping list has no list items.
+            </p>
+          )}
         </div>
       </AnimateHeight>
     </div>

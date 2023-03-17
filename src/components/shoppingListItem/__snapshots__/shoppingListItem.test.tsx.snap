@@ -15,11 +15,15 @@ exports[`ShoppingListItem > matches snapshot 1`] = `
           class="_trigger_fccc8d"
           role="button"
         >
-          <h3
-            class="_description_fccc8d"
+          <span
+            class="_descriptionContainer_fccc8d"
           >
-            Silver Necklace
-          </h3>
+            <h3
+              class="_description_fccc8d"
+            >
+              Silver Necklace
+            </h3>
+          </span>
           <span
             class="_quantity_fccc8d"
           >
@@ -75,11 +79,15 @@ exports[`ShoppingListItem > matches snapshot 1`] = `
         class="_trigger_fccc8d"
         role="button"
       >
-        <h3
-          class="_description_fccc8d"
+        <span
+          class="_descriptionContainer_fccc8d"
         >
-          Silver Necklace
-        </h3>
+          <h3
+            class="_description_fccc8d"
+          >
+            Silver Necklace
+          </h3>
+        </span>
         <span
           class="_quantity_fccc8d"
         >

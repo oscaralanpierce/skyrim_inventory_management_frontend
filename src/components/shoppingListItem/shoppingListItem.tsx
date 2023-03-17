@@ -69,7 +69,9 @@ const ShoppingListItem = ({
         aria-expanded={expanded}
         aria-controls={`shoppingListItem${itemId}Details`}
       >
-        <h3 className={styles.description}>{description}</h3>
+        <span className={styles.descriptionContainer}>
+          <h3 className={styles.description}>{description}</h3>
+        </span>
         <span className={styles.quantity}>{quantity}</span>
       </div>
       <AnimateHeight
