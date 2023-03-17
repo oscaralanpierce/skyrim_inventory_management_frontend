@@ -70,4 +70,8 @@
   .select {
     margin-bottom: 0.5rem;
   }
+
+  .hr {
+    margin-bottom: 32px;
+  }
 }

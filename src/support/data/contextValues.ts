@@ -61,7 +61,7 @@ export const shoppingListsContextValueEmpty: ShoppingListsContextType = {
 }
 
 export const shoppingListsContextValue: ShoppingListsContextType = {
-  shoppingLists: shoppingListsForGame(32),
+  shoppingLists: shoppingListsForGame(77),
   shoppingListsLoadingState: DONE,
 }
 
