@@ -5,7 +5,6 @@ import { YELLOW } from '../../utils/colorSchemes'
 import { useShoppingListsContext } from '../../hooks/contexts'
 import DashboardLayout from '../../layouts/dashboardLayout/dashboardLayout'
 import ShoppingListGrouping from '../../components/shoppingListGrouping/shoppingListGrouping'
-import styles from './shoppingListsPage.module.css'
 
 const loaderStyles: CSSProperties = {
   textAlign: 'center',
