@@ -22,8 +22,11 @@
 
 .quantity {
   color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 1rem;
   margin: 16px 12px;
   text-align: center;
+  align-self: center;
 }
 
 .descriptionContainer {
@@ -32,8 +35,9 @@
 
 .description {
   color: var(--title-text-color);
+  font-weight: 700;
   font-size: 1rem;
-  margin: 16px 0 16px 12px;
+  margin: 16px 12px;
   line-height: 1.25;
 }
 

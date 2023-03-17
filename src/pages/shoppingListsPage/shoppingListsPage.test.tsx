@@ -2,21 +2,13 @@ import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
 import { waitFor, act } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
-import { shoppingListsForGame } from '../../support/data/shoppingLists'
-import {
-  gamesContextValue,
-  shoppingListsContextValue,
-} from '../../support/data/contextValues'
 import {
   getGamesAllSuccess,
   getShoppingListsSuccess,
 } from '../../support/msw/handlers'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext, GamesProvider } from '../../contexts/gamesContext'
-import {
-  ShoppingListsContext,
-  ShoppingListsProvider,
-} from '../../contexts/shoppingListsContext'
+import { GamesProvider } from '../../contexts/gamesContext'
+import { ShoppingListsProvider } from '../../contexts/shoppingListsContext'
 import ShoppingListsPage from './shoppingListsPage'
 
 describe('<ShoppingListsPage />', () => {
@@ -82,10 +74,13 @@ describe('<ShoppingListsPage />', () => {
             expect(wrapper.getByText('Honeyside')).toBeTruthy()
             expect(wrapper.getByText('Breezehome')).toBeTruthy()
 
+            // The list items should be there too
+            expect(wrapper.getAllByText('Dwarven Cog').length).toEqual(3)
             expect(
-              wrapper.getAllByText('This shopping list has no list items.')
-                .length
-            ).toEqual(3)
+              wrapper.getAllByText(
+                'This item has a really really really really really long description for testing purposes'
+              ).length
+            ).toEqual(2)
           })
         })
 

@@ -28,9 +28,14 @@ describe('ShoppingListsGrouping', () => {
       expect(wrapper.getByText('All Items')).toBeTruthy()
       expect(wrapper.getByText('Honeyside')).toBeTruthy()
       expect(wrapper.getByText('Breezehome')).toBeTruthy()
+
+      // There should be list items on each list
+      expect(wrapper.getAllByText('Dwarven Cog').length).toEqual(3)
       expect(
-        wrapper.getAllByText('This shopping list has no list items.').length
-      ).toEqual(3)
+        wrapper.getAllByText(
+          'This item has a really really really really really long description for testing purposes'
+        ).length
+      ).toEqual(2)
     })
 
     test('matches snapshot', () => {

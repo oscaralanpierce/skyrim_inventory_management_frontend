@@ -136,3 +136,511 @@ exports[`ShoppingList > matches snapshot 1`] = `
   "unmount": [Function],
 }
 `;
+
+exports[`ShoppingList > when there are list items > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_62bc73"
+        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
+      >
+        <div
+          aria-controls="list32Details"
+          aria-expanded="false"
+          class="_trigger_62bc73"
+          role="button"
+        >
+          <h3
+            class="_title_62bc73"
+          >
+            My Shopping List
+          </h3>
+        </div>
+        <div
+          aria-hidden="true"
+          class="rah-static rah-static--height-zero "
+          id="list32Details"
+          style="height: 0px; overflow: hidden;"
+        >
+          <div
+            style="display: none;"
+          >
+            <div
+              class="_details_62bc73"
+            >
+              <div
+                class="_root_fccc8d"
+                style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
+              >
+                <div
+                  aria-controls="shoppingListItem1Details"
+                  aria-expanded="false"
+                  class="_trigger_fccc8d"
+                  role="button"
+                >
+                  <span
+                    class="_descriptionContainer_fccc8d"
+                  >
+                    <h3
+                      class="_description_fccc8d"
+                    >
+                      List Item 1
+                    </h3>
+                  </span>
+                  <span
+                    class="_quantity_fccc8d"
+                  >
+                    4
+                  </span>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="shoppingListItem1Details"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <div
+                      class="_details_fccc8d"
+                    >
+                      <h4
+                        class="_label_fccc8d"
+                      >
+                        Unit Weight:
+                      </h4>
+                      <p
+                        class="_value_fccc8d"
+                      >
+                        -
+                      </p>
+                      <h4
+                        class="_label_fccc8d"
+                      >
+                        Notes:
+                      </h4>
+                      <p
+                        class="_value_fccc8d"
+                      >
+                        -
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="_root_fccc8d"
+                style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
+              >
+                <div
+                  aria-controls="shoppingListItem2Details"
+                  aria-expanded="false"
+                  class="_trigger_fccc8d"
+                  role="button"
+                >
+                  <span
+                    class="_descriptionContainer_fccc8d"
+                  >
+                    <h3
+                      class="_description_fccc8d"
+                    >
+                      List Item 2
+                    </h3>
+                  </span>
+                  <span
+                    class="_quantity_fccc8d"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="shoppingListItem2Details"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <div
+                      class="_details_fccc8d"
+                    >
+                      <h4
+                        class="_label_fccc8d"
+                      >
+                        Unit Weight:
+                      </h4>
+                      <p
+                        class="_value_fccc8d"
+                      >
+                        -
+                      </p>
+                      <h4
+                        class="_label_fccc8d"
+                      >
+                        Notes:
+                      </h4>
+                      <p
+                        class="_value_fccc8d"
+                      >
+                        -
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_62bc73"
+      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
+    >
+      <div
+        aria-controls="list32Details"
+        aria-expanded="false"
+        class="_trigger_62bc73"
+        role="button"
+      >
+        <h3
+          class="_title_62bc73"
+        >
+          My Shopping List
+        </h3>
+      </div>
+      <div
+        aria-hidden="true"
+        class="rah-static rah-static--height-zero "
+        id="list32Details"
+        style="height: 0px; overflow: hidden;"
+      >
+        <div
+          style="display: none;"
+        >
+          <div
+            class="_details_62bc73"
+          >
+            <div
+              class="_root_fccc8d"
+              style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
+            >
+              <div
+                aria-controls="shoppingListItem1Details"
+                aria-expanded="false"
+                class="_trigger_fccc8d"
+                role="button"
+              >
+                <span
+                  class="_descriptionContainer_fccc8d"
+                >
+                  <h3
+                    class="_description_fccc8d"
+                  >
+                    List Item 1
+                  </h3>
+                </span>
+                <span
+                  class="_quantity_fccc8d"
+                >
+                  4
+                </span>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="shoppingListItem1Details"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <div
+                    class="_details_fccc8d"
+                  >
+                    <h4
+                      class="_label_fccc8d"
+                    >
+                      Unit Weight:
+                    </h4>
+                    <p
+                      class="_value_fccc8d"
+                    >
+                      -
+                    </p>
+                    <h4
+                      class="_label_fccc8d"
+                    >
+                      Notes:
+                    </h4>
+                    <p
+                      class="_value_fccc8d"
+                    >
+                      -
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="_root_fccc8d"
+              style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
+            >
+              <div
+                aria-controls="shoppingListItem2Details"
+                aria-expanded="false"
+                class="_trigger_fccc8d"
+                role="button"
+              >
+                <span
+                  class="_descriptionContainer_fccc8d"
+                >
+                  <h3
+                    class="_description_fccc8d"
+                  >
+                    List Item 2
+                  </h3>
+                </span>
+                <span
+                  class="_quantity_fccc8d"
+                >
+                  1
+                </span>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="shoppingListItem2Details"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <div
+                    class="_details_fccc8d"
+                  >
+                    <h4
+                      class="_label_fccc8d"
+                    >
+                      Unit Weight:
+                    </h4>
+                    <p
+                      class="_value_fccc8d"
+                    >
+                      -
+                    </p>
+                    <h4
+                      class="_label_fccc8d"
+                    >
+                      Notes:
+                    </h4>
+                    <p
+                      class="_value_fccc8d"
+                    >
+                      -
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ShoppingList > when there are no list items > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_62bc73"
+        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
+      >
+        <div
+          aria-controls="list32Details"
+          aria-expanded="false"
+          class="_trigger_62bc73"
+          role="button"
+        >
+          <h3
+            class="_title_62bc73"
+          >
+            My Shopping List
+          </h3>
+        </div>
+        <div
+          aria-hidden="true"
+          class="rah-static rah-static--height-zero "
+          id="list32Details"
+          style="height: 0px; overflow: hidden;"
+        >
+          <div
+            style="display: none;"
+          >
+            <div
+              class="_details_62bc73"
+            >
+              <p
+                class="_emptyList_62bc73"
+              >
+                This shopping list has no list items.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_62bc73"
+      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
+    >
+      <div
+        aria-controls="list32Details"
+        aria-expanded="false"
+        class="_trigger_62bc73"
+        role="button"
+      >
+        <h3
+          class="_title_62bc73"
+        >
+          My Shopping List
+        </h3>
+      </div>
+      <div
+        aria-hidden="true"
+        class="rah-static rah-static--height-zero "
+        id="list32Details"
+        style="height: 0px; overflow: hidden;"
+      >
+        <div
+          style="display: none;"
+        >
+          <div
+            class="_details_62bc73"
+          >
+            <p
+              class="_emptyList_62bc73"
+            >
+              This shopping list has no list items.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
