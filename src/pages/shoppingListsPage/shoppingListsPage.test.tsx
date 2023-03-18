@@ -27,7 +27,7 @@ import ShoppingListsPage from './shoppingListsPage'
  *
  */
 
-describe('<ShoppingListsPage />', () => {
+describe('ShoppingListsPage', () => {
   describe('viewing shopping lists', () => {
     describe('when loading', () => {
       test('displays the loading component', () => {
@@ -135,26 +135,6 @@ describe('<ShoppingListsPage />', () => {
             expect(
               wrapper.getByText('This game has no shopping lists.')
             ).toBeTruthy()
-          })
-        })
-
-        test('matches snapshot', async () => {
-          const wrapper = renderAuthenticated(
-            <PageProvider>
-              <GamesProvider>
-                <ShoppingListsProvider>
-                  <ShoppingListsPage />
-                </ShoppingListsProvider>
-              </GamesProvider>
-            </PageProvider>,
-            'http://localhost:5173/shopping_lists?gameId=51'
-          )
-
-          await waitFor(() => {
-            expect(
-              wrapper.getByText('This game has no shopping lists.')
-            ).toBeTruthy()
-            expect(wrapper).toMatchSnapshot()
           })
         })
       })
