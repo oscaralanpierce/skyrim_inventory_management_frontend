@@ -17,10 +17,10 @@ const gameIds = allGames.map(({ id }) => id)
  */
 
 // Handles both 201 and 404 responses
-export const postShoppingList = rest.post(
+export const postShoppingLists = rest.post(
   `${BASE_URI}/games/:gameId/shopping_lists`,
   async (req, res, ctx) => {
-    const gameId = Number(req.params.gameId)
+    const gameId: number = Number(req.params.gameId)
 
     if (gameIds.indexOf(gameId) < 0) return res(ctx.status(404))
 
@@ -36,7 +36,7 @@ export const postShoppingList = rest.post(
 
 // Returns the same validation errors regardless of request body
 // submitted
-export const postShoppingListUnprocessable = rest.post(
+export const postShoppingListsUnprocessable = rest.post(
   `${BASE_URI}/games/:gameId/shopping_lists`,
   (_req, res, ctx) => {
     return res(
@@ -51,7 +51,7 @@ export const postShoppingListUnprocessable = rest.post(
   }
 )
 
-export const postShoppingListServerError = rest.post(
+export const postShoppingListsServerError = rest.post(
   `${BASE_URI}/games/:gameId/shopping_lists`,
   (_req, res, ctx) => {
     return res(

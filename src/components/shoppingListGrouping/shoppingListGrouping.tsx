@@ -22,22 +22,24 @@ const ShoppingListGrouping = () => {
           <ColorProvider key={itemKey} colorScheme={colorSchemes[colorIndex]}>
             <div className={styles.shoppingList}>
               <ShoppingList listId={id} title={title}>
-                {list_items.map(
-                  ({ id, description, quantity, unit_weight, notes }) => {
-                    return (
-                      <ShoppingListItem
-                        key={`${description
-                          .toLowerCase()
-                          .replace(' ', '-')}-${id}`}
-                        itemId={id}
-                        description={description}
-                        quantity={quantity}
-                        unitWeight={unit_weight}
-                        notes={notes}
-                      />
-                    )
-                  }
-                )}
+                {(list_items.length &&
+                  list_items.map(
+                    ({ id, description, quantity, unit_weight, notes }) => {
+                      return (
+                        <ShoppingListItem
+                          key={`${description
+                            .toLowerCase()
+                            .replace(' ', '-')}-${id}`}
+                          itemId={id}
+                          description={description}
+                          quantity={quantity}
+                          unitWeight={unit_weight}
+                          notes={notes}
+                        />
+                      )
+                    }
+                  )) ||
+                  null}
               </ShoppingList>
             </div>
           </ColorProvider>

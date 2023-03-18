@@ -1,10 +1,11 @@
 import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
-import { waitFor, act } from '@testing-library/react'
+import { waitFor, act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
   getGamesAllSuccess,
   getShoppingListsSuccess,
+  postShoppingLists,
 } from '../../support/msw/handlers'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesProvider } from '../../contexts/gamesContext'
@@ -205,6 +206,85 @@ describe('<ShoppingListsPage />', () => {
         expect(wrapper.getByText('All Items')).toBeTruthy()
         expect(wrapper.getByText('Honeyside')).toBeTruthy()
         expect(wrapper.getByText('Breezehome')).toBeTruthy()
+      })
+    })
+  })
+
+  describe('creating a shopping list', () => {
+    describe('when successful', () => {
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess,
+        postShoppingLists
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      describe('when there is an existing aggregate list', () => {
+        test('adds the new list to the page', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>
+          )
+
+          const input = wrapper.getByPlaceholderText('Title')
+          const button = wrapper.getByText('Create')
+
+          await waitFor(() => {
+            expect(input.attributes.getNamedItem('disabled')).toBeFalsy()
+
+            fireEvent.change(input, { target: { value: 'Smithing Materials' } })
+          })
+
+          act(() => fireEvent.click(button))
+
+          await waitFor(() => {
+            expect(wrapper.getByText('Smithing Materials')).toBeTruthy()
+            expect(input.attributes.getNamedItem('value')).toBeFalsy()
+          })
+        })
+      })
+
+      describe('when there is no existing aggregate list', () => {
+        test('adds the new list and aggregate list to the page', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>,
+            'http://localhost:5173/shopping_lists?gameId=51'
+          )
+
+          const input = wrapper.getByPlaceholderText('Title')
+          const button = wrapper.getByText('Create')
+
+          await waitFor(() => {
+            expect(input.attributes.getNamedItem('disabled')).toBeFalsy()
+
+            fireEvent.change(input, { target: { value: 'Smithing Materials' } })
+          })
+
+          act(() => fireEvent.click(button))
+
+          await waitFor(() => {
+            expect(wrapper.getByText('All Items')).toBeTruthy()
+            expect(wrapper.getByText('Smithing Materials')).toBeTruthy()
+            expect(
+              wrapper.queryByText('This game has no shopping lists.')
+            ).toBeFalsy()
+            expect(input.attributes.getNamedItem('value')).toBeFalsy()
+          })
+        })
       })
     })
   })

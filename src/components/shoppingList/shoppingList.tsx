@@ -6,7 +6,7 @@ import styles from './shoppingList.module.css'
 interface ShoppingListProps {
   listId: number
   title: string
-  children?: ReactElement | ReactElement[]
+  children?: ReactElement | ReactElement[] | null
 }
 
 const ShoppingList = ({ listId, title, children }: ShoppingListProps) => {
