@@ -51,6 +51,16 @@
 }
 
 @media (min-width: 481px) {
+  /**
+   *
+   * The button is naturally between 71px and 72px wide at this
+   * viewport width, but we want to make sure it stays exactly
+   * this size so we can ensure the entire form stays the same
+   * width as the StyledSelect above it in the 481px - 600px
+   * range.
+   *
+   */
+
   .root {
     --button-width: 72px;
     margin: unset;
@@ -66,6 +76,7 @@
    * 12px:  right margin on input
    *
    */
+
   .input {
     width: calc(228px - 24px - 12px - var(--button-width));
   }
@@ -78,14 +89,14 @@
 @media (min-width: 601px) {
   .root {
     margin: 0 auto 24px;
-    width: unset;
+    width: 100%;
   }
 
   .fieldset {
-    display: unset;
+    display: contents;
   }
 
   .input {
-    width: unset;
+    width: 175px;
   }
 }

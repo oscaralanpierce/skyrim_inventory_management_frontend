@@ -24,6 +24,8 @@ import ShoppingListsPage from './shoppingListsPage'
  *     conditions are hard to create since there would first be a 404 error when fetching the
  *     shopping lists in the first place.
  * - Whether the create form input is cleared after request completion or not
+ * - Flash warning being shown and no request made if, somehow, the user submits the create form
+ *   before an active game has been set
  *
  */
 
@@ -168,6 +170,35 @@ describe('ShoppingListsPage', () => {
       })
     })
 
+    describe('when an invalid value is set in the query string', () => {
+      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('uses the first game by default', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesProvider>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesProvider>
+          </PageProvider>,
+          'http://localhost:5173/shopping_lists?gameId=uhoh'
+        )
+
+        await waitFor(() => {
+          expect(wrapper.getByText('All Items')).toBeTruthy()
+          expect(wrapper.getByText('My Shopping List 1')).toBeTruthy()
+          expect(wrapper.getByTestId('selectedOption').textContent).toEqual(
+            'My Game 1'
+          )
+        })
+      })
+    })
+
     describe('when the game does not exist', () => {
       const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
 
@@ -200,6 +231,7 @@ describe('ShoppingListsPage', () => {
 
   describe('changing games', () => {
     const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+
     beforeAll(() => mockServer.listen())
     beforeEach(() => mockServer.resetHandlers())
     afterAll(() => mockServer.close())

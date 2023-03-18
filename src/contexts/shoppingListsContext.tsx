@@ -1,12 +1,12 @@
 import { createContext, useEffect, useState, useCallback } from 'react'
 import { signOutWithGoogle } from '../firebase'
-import { CallbackFunction } from '../types/functions'
+import { type CallbackFunction } from '../types/functions'
 import {
   type RequestShoppingList,
   type ResponseShoppingList,
 } from '../types/apiData'
 import { type ProviderProps } from '../types/contexts'
-import { ApiError } from '../types/errors'
+import { type ApiError } from '../types/errors'
 import { LOADING, DONE, ERROR, type LoadingState } from '../utils/loadingStates'
 import { postShoppingLists, getShoppingLists } from '../utils/api/simApi'
 import { useQueryString } from '../hooks/useQueryString'
@@ -56,9 +56,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
   const handleApiError = (e: ApiError) => {
     if (import.meta.env.DEV) console.error(e.message)
 
-    if (e.code === 401) signOutWithGoogle()
-
-    if (Array.isArray(e.message)) {
+    if (e.code === 401) {
+      signOutWithGoogle()
+    } else if (e.code === 422) {
       setFlashProps({
         hidden: false,
         type: 'error',
@@ -89,8 +89,18 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction,
       onError?: CallbackFunction
     ) => {
-      // TODO: Handle case where there is no active game
-      if (user && token && activeGame) {
+      if (!activeGame) {
+        setFlashProps({
+          hidden: false,
+          type: 'warning',
+          message:
+            'You must select a game from the dropdown before creating a shopping list.',
+        })
+
+        return
+      }
+
+      if (user && token) {
         postShoppingLists(activeGame, attributes, token)
           .then(({ json }) => {
             if (Array.isArray(json)) {
@@ -159,19 +169,14 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
    */
 
   useEffect(() => {
-    if (queryString.get('gameId')) {
-      setActiveGame(Number(queryString.get('gameId')))
+    const gameId: number = Number(queryString.get('gameId'))
+
+    if (gameId > 0) {
+      setActiveGame(gameId)
     } else if (gamesLoadingState === DONE && games.length) {
       setActiveGame(games[0].id)
     }
   }, [queryString, gamesLoadingState, games])
-
-  /**
-   *
-   * Set shopping lists loading state to LOADING if active
-   * game changes
-   *
-   */
 
   useEffect(() => {
     if (authLoading) return

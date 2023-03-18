@@ -20,14 +20,13 @@ import {
 } from '../../contexts/shoppingListsContext'
 import ShoppingListCreateForm from './shoppingListCreateForm'
 
-const renderWithContexts = (ui: ReactElement, url?: string) => {
+const renderWithContexts = (ui: ReactElement) => {
   return renderAuthenticated(
     <PageProvider>
       <GamesContext.Provider value={gamesContextValue}>
         <ShoppingListsProvider>{ui}</ShoppingListsProvider>
       </GamesContext.Provider>
-    </PageProvider>,
-    url
+    </PageProvider>
   )
 }
 
