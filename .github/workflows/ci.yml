@@ -2,9 +2,9 @@ name: Skyrim Inventory Management Frontend CI
 
 on:
   push:
-    branches: [ main, shopping-lists-page-rewrite-feature-branch ]
+    branches: [ main, shopping-lists-page-feature-branch ]
   pull_request:
-    branches: [ main, shopping-lists-page-rewrite-feature-branch ]
+    branches: [ main, shopping-lists-page-feature-branch ]
 
 jobs:
   build:
