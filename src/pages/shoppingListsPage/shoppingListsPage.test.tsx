@@ -246,6 +246,9 @@ describe('<ShoppingListsPage />', () => {
           act(() => fireEvent.click(button))
 
           await waitFor(() => {
+            expect(
+              wrapper.getByText('Success! Your shopping list has been created.')
+            ).toBeTruthy()
             expect(wrapper.getByText('Smithing Materials')).toBeTruthy()
             expect(input.attributes.getNamedItem('value')).toBeFalsy()
           })
@@ -277,6 +280,9 @@ describe('<ShoppingListsPage />', () => {
           act(() => fireEvent.click(button))
 
           await waitFor(() => {
+            expect(
+              wrapper.getByText('Success! Your shopping list has been created.')
+            ).toBeTruthy()
             expect(wrapper.getByText('All Items')).toBeTruthy()
             expect(wrapper.getByText('Smithing Materials')).toBeTruthy()
             expect(

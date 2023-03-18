@@ -95,6 +95,11 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
           .then(({ json }) => {
             if (Array.isArray(json)) {
               setShoppingLists(json)
+              setFlashProps({
+                hidden: false,
+                type: 'success',
+                message: 'Success! Your shopping list has been created.',
+              })
               onSuccess && onSuccess()
             }
           })
@@ -117,6 +122,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     if (!activeGame) return
 
     if (user && token && activeGame) {
+      setShoppingListsLoadingState(LOADING)
+
       getShoppingLists(activeGame, token)
         .then(({ json }) => {
           if (Array.isArray(json)) {
@@ -158,6 +165,13 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       setActiveGame(games[0].id)
     }
   }, [queryString, gamesLoadingState, games])
+
+  /**
+   *
+   * Set shopping lists loading state to LOADING if active
+   * game changes
+   *
+   */
 
   useEffect(() => {
     if (authLoading) return
