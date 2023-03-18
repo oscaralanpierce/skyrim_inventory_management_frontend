@@ -50,25 +50,28 @@ const ShoppingListCreateForm = () => {
   }
 
   return (
-    <div className={styles.root} style={colorVars}>
-      <form ref={formRef} onSubmit={createList}>
-        <fieldset className={styles.fieldset}>
-          <input
-            className={styles.input}
-            type="text"
-            name="title"
-            placeholder="Title"
-            aria-label="Title"
-            pattern="\s*[A-Za-z0-9 \-',]*\s*"
-            title="Title can only contain alphanumeric characters, spaces, commas, hyphens, and apostrophes"
-            disabled={disabled}
-          />
-          <button className={styles.button} type="submit" disabled={disabled}>
-            Create
-          </button>
-        </fieldset>
-      </form>
-    </div>
+    <form
+      className={styles.root}
+      style={colorVars}
+      ref={formRef}
+      onSubmit={createList}
+    >
+      <fieldset className={styles.fieldset}>
+        <input
+          className={styles.input}
+          type="text"
+          name="title"
+          placeholder="Title"
+          aria-label="Title"
+          pattern="\s*[A-Za-z0-9 \-',]*\s*"
+          title="Title can only contain alphanumeric characters, spaces, commas, hyphens, and apostrophes"
+          disabled={disabled}
+        />
+        <button className={styles.button} type="submit" disabled={disabled}>
+          Create
+        </button>
+      </fieldset>
+    </form>
   )
 }
 

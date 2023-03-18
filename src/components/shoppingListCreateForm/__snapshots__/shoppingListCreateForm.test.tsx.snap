@@ -5,42 +5,10 @@ exports[`ShoppingListCreateForm > displaying the form > matches snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
+      <form
         class="_root_1118ad"
         style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
       >
-        <form>
-          <fieldset
-            class="_fieldset_1118ad"
-          >
-            <input
-              aria-label="Title"
-              class="_input_1118ad"
-              disabled=""
-              name="title"
-              pattern="\\\\s*[A-Za-z0-9 \\\\-',]*\\\\s*"
-              placeholder="Title"
-              title="Title can only contain alphanumeric characters, spaces, commas, hyphens, and apostrophes"
-              type="text"
-            />
-            <button
-              class="_button_1118ad"
-              disabled=""
-              type="submit"
-            >
-              Create
-            </button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="_root_1118ad"
-      style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
-    >
-      <form>
         <fieldset
           class="_fieldset_1118ad"
         >
@@ -64,6 +32,34 @@ exports[`ShoppingListCreateForm > displaying the form > matches snapshot 1`] = `
         </fieldset>
       </form>
     </div>
+  </body>,
+  "container": <div>
+    <form
+      class="_root_1118ad"
+      style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
+    >
+      <fieldset
+        class="_fieldset_1118ad"
+      >
+        <input
+          aria-label="Title"
+          class="_input_1118ad"
+          disabled=""
+          name="title"
+          pattern="\\\\s*[A-Za-z0-9 \\\\-',]*\\\\s*"
+          placeholder="Title"
+          title="Title can only contain alphanumeric characters, spaces, commas, hyphens, and apostrophes"
+          type="text"
+        />
+        <button
+          class="_button_1118ad"
+          disabled=""
+          type="submit"
+        >
+          Create
+        </button>
+      </fieldset>
+    </form>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
