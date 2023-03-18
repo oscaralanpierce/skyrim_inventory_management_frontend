@@ -3,10 +3,20 @@ import { type ReactElement } from 'react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated } from '../../support/testUtils'
 import { getShoppingListsSuccess } from '../../support/msw/shoppingLists'
-import { gamesContextValue } from '../../support/data/contextValues'
+import {
+  gamesContextValue,
+  gamesContextValueError,
+  gamesContextValueLoading,
+  shoppingListsContextValue,
+  shoppingListsContextValueError,
+  shoppingListsContextValueLoading,
+} from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesContext } from '../../contexts/gamesContext'
-import { ShoppingListsProvider } from '../../contexts/shoppingListsContext'
+import {
+  ShoppingListsContext,
+  ShoppingListsProvider,
+} from '../../contexts/shoppingListsContext'
 import ShoppingListCreateForm from './shoppingListCreateForm'
 
 const renderWithContexts = (ui: ReactElement, url?: string) => {
@@ -45,14 +55,113 @@ describe('ShoppingListCreateForm', () => {
   })
 
   describe('disabling behaviour', () => {
-    test('is disabled when the shopping lists are loading')
+    test('is disabled when the shopping lists are loading', () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesContext.Provider value={gamesContextValue}>
+            <ShoppingListsContext.Provider
+              value={shoppingListsContextValueLoading}
+            >
+              <ShoppingListCreateForm />
+            </ShoppingListsContext.Provider>
+          </GamesContext.Provider>
+        </PageProvider>
+      )
 
-    test('is disabled when there is a shopping list loading error')
+      expect(
+        wrapper
+          .getByPlaceholderText('Title')
+          .attributes.getNamedItem('disabled')
+      ).toBeTruthy()
+      expect(
+        wrapper.getByText('Create').attributes.getNamedItem('disabled')
+      ).toBeTruthy()
+    })
 
-    test('is disabled when games are loading')
+    test('is disabled when there is a shopping list loading error', () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesContext.Provider value={gamesContextValue}>
+            <ShoppingListsContext.Provider
+              value={shoppingListsContextValueError}
+            >
+              <ShoppingListCreateForm />
+            </ShoppingListsContext.Provider>
+          </GamesContext.Provider>
+        </PageProvider>
+      )
 
-    test('is disabled when there is a game loading error')
+      expect(
+        wrapper
+          .getByPlaceholderText('Title')
+          .attributes.getNamedItem('disabled')
+      ).toBeTruthy()
+      expect(
+        wrapper.getByText('Create').attributes.getNamedItem('disabled')
+      ).toBeTruthy()
+    })
 
-    test('is disabled when both games and shopping lists have loaded')
+    test('is disabled when games are loading', () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesContext.Provider value={gamesContextValueLoading}>
+            <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+              <ShoppingListCreateForm />
+            </ShoppingListsContext.Provider>
+          </GamesContext.Provider>
+        </PageProvider>
+      )
+
+      expect(
+        wrapper
+          .getByPlaceholderText('Title')
+          .attributes.getNamedItem('disabled')
+      ).toBeTruthy()
+      expect(
+        wrapper.getByText('Create').attributes.getNamedItem('disabled')
+      ).toBeTruthy()
+    })
+
+    test('is disabled when there is a game loading error', () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesContext.Provider value={gamesContextValueError}>
+            <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+              <ShoppingListCreateForm />
+            </ShoppingListsContext.Provider>
+          </GamesContext.Provider>
+        </PageProvider>
+      )
+
+      expect(
+        wrapper
+          .getByPlaceholderText('Title')
+          .attributes.getNamedItem('disabled')
+      ).toBeTruthy()
+      expect(
+        wrapper.getByText('Create').attributes.getNamedItem('disabled')
+      ).toBeTruthy()
+    })
+
+    test('is enabled when both games and shopping lists have loaded', () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesContext.Provider value={gamesContextValue}>
+            <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+              <ShoppingListCreateForm />
+            </ShoppingListsContext.Provider>
+          </GamesContext.Provider>
+        </PageProvider>
+      )
+
+      expect(
+        wrapper
+          .getByPlaceholderText('Title')
+          .attributes.getNamedItem('disabled')
+      ).toBeFalsy()
+      expect(
+        wrapper.getByText('Create').attributes.getNamedItem('disabled')
+      ).toBeFalsy()
+    })
   })
 })

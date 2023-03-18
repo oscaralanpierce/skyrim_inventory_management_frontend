@@ -1,5 +1,6 @@
 import {
   gamesContextValue,
+  gamesContextValueLoading,
   shoppingListsContextValue,
 } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
@@ -12,6 +13,16 @@ export default { title: 'ShoppingListCreateForm' }
 export const Enabled = () => (
   <PageProvider>
     <GamesContext.Provider value={gamesContextValue}>
+      <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+        <ShoppingListCreateForm />
+      </ShoppingListsContext.Provider>
+    </GamesContext.Provider>
+  </PageProvider>
+)
+
+export const Disabled = () => (
+  <PageProvider>
+    <GamesContext.Provider value={gamesContextValueLoading}>
       <ShoppingListsContext.Provider value={shoppingListsContextValue}>
         <ShoppingListCreateForm />
       </ShoppingListsContext.Provider>

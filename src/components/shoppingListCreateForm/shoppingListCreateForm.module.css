@@ -16,6 +16,11 @@
   border-radius: 3px;
 }
 
+.input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 .button {
   font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -29,6 +34,13 @@
 
 .button:hover {
   background-color: var(--button-hover-color);
+}
+
+.button:disabled,
+.button:disabled:hover {
+  background-color: #7c8388;
+  border-color: #4b5053;
+  cursor: not-allowed;
 }
 
 @media (min-width: 769px) {

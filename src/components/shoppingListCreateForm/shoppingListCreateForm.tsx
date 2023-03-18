@@ -1,8 +1,16 @@
 import { type FormEventHandler, type CSSProperties } from 'react'
 import { BLUE } from '../../utils/colorSchemes'
+import { useGamesContext, useShoppingListsContext } from '../../hooks/contexts'
 import styles from './shoppingListCreateForm.module.css'
+import { DONE } from '../../utils/loadingStates'
 
 const ShoppingListCreateForm = () => {
+  const { gamesLoadingState } = useGamesContext()
+  const { shoppingListsLoadingState } = useShoppingListsContext()
+
+  const disabled =
+    gamesLoadingState !== DONE || shoppingListsLoadingState !== DONE
+
   const colorVars = {
     '--button-color': BLUE.schemeColorDark,
     '--button-text-color': BLUE.textColorPrimary,
@@ -26,8 +34,9 @@ const ShoppingListCreateForm = () => {
             aria-label="Title"
             pattern="\s*[A-Za-z0-9 \-',]*\s*"
             title="Title can only contain alphanumeric characters, spaces, commas, hyphens, and apostrophes"
+            disabled={disabled}
           />
-          <button className={styles.button} type="submit">
+          <button className={styles.button} type="submit" disabled={disabled}>
             Create
           </button>
         </fieldset>
