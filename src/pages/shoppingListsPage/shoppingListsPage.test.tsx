@@ -6,6 +6,7 @@ import {
   getGamesAllSuccess,
   getShoppingLists,
   postShoppingLists,
+  postShoppingListsServerError,
   postShoppingListsUnprocessable,
 } from '../../support/msw/handlers'
 import { PageProvider } from '../../contexts/pageContext'
@@ -378,6 +379,51 @@ describe('<ShoppingListsPage />', () => {
               "Title can only contain alphanumeric characters, spaces, commas (,), hyphens (-), and apostrophes (')"
             )
           ).toBeTruthy()
+          expect(wrapper.queryByText('Smithing Materials')).toBeFalsy()
+        })
+      })
+    })
+
+    describe('when the response is a 500 error', () => {
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingLists,
+        postShoppingListsServerError
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays the validation errors', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesProvider>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesProvider>
+          </PageProvider>
+        )
+
+        const input = wrapper.getByPlaceholderText('Title')
+        const button = wrapper.getByText('Create')
+
+        await waitFor(() => {
+          expect(input.attributes.getNamedItem('disabled')).toBeFalsy()
+
+          fireEvent.change(input, { target: { value: 'Smithing Materials' } })
+        })
+
+        act(() => fireEvent.click(button))
+
+        await waitFor(() => {
+          expect(
+            wrapper.getByText(
+              "Oops! Something unexpected went wrong. We're sorry! Please try again later."
+            )
+          ).toBeTruthy()
+          expect(wrapper.queryByText('Smithing Materials')).toBeFalsy()
         })
       })
     })

@@ -11,6 +11,7 @@ const ShoppingListCreateForm = () => {
     useShoppingListsContext()
 
   const formRef = useRef<HTMLFormElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const disabled =
     gamesLoadingState !== DONE || shoppingListsLoadingState !== DONE
@@ -46,7 +47,11 @@ const ShoppingListCreateForm = () => {
       formRef.current?.reset()
     }
 
-    createShoppingList(attributes, clearForm)
+    const focusInput = () => {
+      inputRef.current?.focus()
+    }
+
+    createShoppingList(attributes, clearForm, focusInput)
   }
 
   return (
@@ -58,6 +63,7 @@ const ShoppingListCreateForm = () => {
     >
       <fieldset className={styles.fieldset}>
         <input
+          ref={inputRef}
           className={styles.input}
           type="text"
           name="title"

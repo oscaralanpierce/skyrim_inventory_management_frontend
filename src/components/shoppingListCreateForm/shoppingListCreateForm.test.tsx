@@ -195,6 +195,7 @@ describe('ShoppingListCreateForm', () => {
 
         expect(createShoppingList).toHaveBeenCalledWith(
           { title: 'New Shopping List' },
+          expect.any(Function),
           expect.any(Function)
         )
       })
