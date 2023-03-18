@@ -4,10 +4,14 @@ The `ShoppingListsContext` keeps track of the active game and its shopping lists
 
 - `shoppingLists`: array of [`ResponseShoppingList`](/src/types/apiData.d.ts), the shopping lists returned from the API for the current active game
 - `shoppingListsLoadingStatus`: string of either `'LOADING'`, `'ERROR'`, or `'DONE'`, indicating whether shopping lists have loaded successfully from the API initialised as `'LOADING'`
+- `createShoppingList`: a function that creates a shopping list for the current active game at the API, taking the following arguments:
+  - `attributes`: an object containing an optional `title` key with a string value, the attributes of the shopping list to create
+  - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
+  - `onError` (optional): a callback called on an unsuccessful response; no arguments are passed in and its return value, if any, is not used
 
 Note that, while the context tracks the active game, this information is internal to the context. The active game is identified using the `gameId` query string parameter, which is typically set using the games dropdown component found on the `DashboardLayout`.
 
-The `ShoppingListContext` is a consumer of the `GamesContext` and, as such, must be nested inside a `GamesProvider` and the other context providers it requires, namely the `LoginProvider` and the `PageProvider`.
+The `ShoppingListsContext` is a consumer of the `GamesContext` and, as such, must be nested inside a `GamesProvider` and the other context providers it requires, namely the `LoginProvider` and the `PageProvider`.
 
 ## Example
 
