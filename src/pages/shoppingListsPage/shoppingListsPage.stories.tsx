@@ -1,9 +1,10 @@
 import { BrowserRouter } from 'react-router-dom'
 import {
   gamesContextValue,
+  gamesContextValueLoading,
   shoppingListsContextValueLoading,
-  loginContextValue,
   shoppingListsContextValueEmpty,
+  loginContextValue,
 } from '../../support/data/contextValues'
 import { shoppingListsForGame } from '../../support/data/shoppingLists'
 import {
@@ -17,7 +18,19 @@ import ShoppingListsPage from './shoppingListsPage'
 
 export default { title: 'ShoppingListsPage' }
 
-export const Loading = () => (
+export const GamesLoading = () => (
+  <BrowserRouter>
+    <PageProvider>
+      <GamesContext.Provider value={gamesContextValueLoading}>
+        <ShoppingListsContext.Provider value={shoppingListsContextValueLoading}>
+          <ShoppingListsPage />
+        </ShoppingListsContext.Provider>
+      </GamesContext.Provider>
+    </PageProvider>
+  </BrowserRouter>
+)
+
+export const ShoppingListsLoading = () => (
   <BrowserRouter>
     <PageProvider>
       <GamesContext.Provider value={gamesContextValue}>
