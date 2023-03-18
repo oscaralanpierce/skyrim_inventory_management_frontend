@@ -3,7 +3,7 @@ import { type LoginContextType } from '../../contexts/loginContext'
 import { type ShoppingListsContextType } from '../../contexts/shoppingListsContext'
 import { DONE, ERROR, LOADING } from '../../utils/loadingStates'
 import { testUser } from './users'
-import { allGames } from './games'
+import { allGames, emptyGames } from './games'
 import { emptyShoppingLists, shoppingListsForGame } from './shoppingLists'
 
 const noop = () => {}
@@ -40,6 +40,14 @@ export const unauthenticatedLoginContextValue: LoginContextType = {
  * Default value for Games context
  *
  */
+
+export const gamesContextValueEmpty: GamesContextType = {
+  games: emptyGames,
+  gamesLoadingState: DONE,
+  createGame: noop,
+  updateGame: noop,
+  destroyGame: noop,
+}
 
 export const gamesContextValue: GamesContextType = {
   games: allGames,

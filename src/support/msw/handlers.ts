@@ -17,7 +17,7 @@ import {
   postShoppingLists,
   postShoppingListsUnprocessable,
   postShoppingListsServerError,
-  getShoppingListsSuccess,
+  getShoppingLists,
 } from './shoppingLists'
 
 export {
@@ -37,5 +37,5 @@ export {
   postShoppingLists,
   postShoppingListsUnprocessable,
   postShoppingListsServerError,
-  getShoppingListsSuccess,
+  getShoppingLists,
 }

@@ -4,13 +4,25 @@ import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
   getGamesAllSuccess,
-  getShoppingListsSuccess,
+  getShoppingLists,
   postShoppingLists,
 } from '../../support/msw/handlers'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesProvider } from '../../contexts/gamesContext'
 import { ShoppingListsProvider } from '../../contexts/shoppingListsContext'
 import ShoppingListsPage from './shoppingListsPage'
+
+/**
+ *
+ * Not able to be tested:
+ * - 404 response when creating a game
+ *   - This would be a difficult state to arrive at. You would have to have multiple tabs open
+ *     and delete a game from the games page in one tab and then create a shopping list in
+ *     another tab while it is set to that game without refreshing. In the test environment, these
+ *     conditions are hard to create since there would first be a 404 error when fetching the
+ *     shopping lists in the first place.
+ *
+ */
 
 describe('<ShoppingListsPage />', () => {
   describe('viewing shopping lists', () => {
@@ -47,10 +59,7 @@ describe('<ShoppingListsPage />', () => {
     })
 
     describe('when the game is set in the query string', () => {
-      const mockServer = setupServer(
-        getGamesAllSuccess,
-        getShoppingListsSuccess
-      )
+      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
@@ -148,10 +157,7 @@ describe('<ShoppingListsPage />', () => {
     })
 
     describe('when no game is set in the query string', () => {
-      const mockServer = setupServer(
-        getGamesAllSuccess,
-        getShoppingListsSuccess
-      )
+      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
@@ -176,10 +182,38 @@ describe('<ShoppingListsPage />', () => {
         })
       })
     })
+
+    describe('when the game does not exist', () => {
+      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays a 404 error', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesProvider>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesProvider>
+          </PageProvider>,
+          'http://localhost:5173/shopping_lists?gameId=23'
+        )
+
+        await waitFor(() => {
+          expect(
+            wrapper.getByText(
+              "The game you've selected doesn't exist, or doesn't belong to you. Please select another game and try again."
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
   })
 
   describe('changing games', () => {
-    const mockServer = setupServer(getGamesAllSuccess, getShoppingListsSuccess)
+    const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
     beforeAll(() => mockServer.listen())
     beforeEach(() => mockServer.resetHandlers())
     afterAll(() => mockServer.close())
@@ -214,7 +248,7 @@ describe('<ShoppingListsPage />', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingListsSuccess,
+        getShoppingLists,
         postShoppingLists
       )
 

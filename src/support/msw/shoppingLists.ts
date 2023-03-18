@@ -69,9 +69,13 @@ export const postShoppingListsServerError = rest.post(
  *
  */
 
-export const getShoppingListsSuccess = rest.get(
+// Covers both success and 404 cases
+export const getShoppingLists = rest.get(
   `${BASE_URI}/games/:gameId/shopping_lists`,
   (req, res, ctx) => {
+    const gameId: number = Number(req.params.gameId)
+    if (gameIds.indexOf(gameId) < 0) return res(ctx.status(404))
+
     return res(
       ctx.status(200),
       ctx.json(shoppingListsForGame(Number(req.params.gameId)))

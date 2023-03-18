@@ -17,7 +17,7 @@ import {
 } from '../hooks/contexts'
 
 const NOT_FOUND_MESSAGE =
-  "You have requested shopping lists for a game that doesn't exist, or doesn't belong to you. Please select another game and try again."
+  "The game you've selected doesn't exist, or doesn't belong to you. Please select another game and try again."
 const UNEXPECTED_ERROR_MESSAGE =
   "Oops! Something unexpected went wrong. We're sorry! Please try again later."
 
