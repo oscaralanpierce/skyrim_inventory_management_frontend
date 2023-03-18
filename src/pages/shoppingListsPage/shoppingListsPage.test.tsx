@@ -23,7 +23,7 @@ import ShoppingListsPage from './shoppingListsPage'
  *     another tab while it is set to that game without refreshing. In the test environment, these
  *     conditions are hard to create since there would first be a 404 error when fetching the
  *     shopping lists in the first place.
- * - Whether the create form input is cleared after request completion or not
+ * - That the create form input is cleared after request completion or not
  * - Flash warning being shown and no request made if, somehow, the user submits the create form
  *   before an active game has been set
  *
