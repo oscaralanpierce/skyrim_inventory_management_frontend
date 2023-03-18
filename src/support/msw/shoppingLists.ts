@@ -43,7 +43,7 @@ export const postShoppingListsUnprocessable = rest.post(
       ctx.status(422),
       ctx.json({
         errors: [
-          'Title must be unique',
+          'Title must be unique per game',
           "Title can only contain alphanumeric characters, spaces, commas (,), hyphens (-), and apostrophes (')",
         ],
       })

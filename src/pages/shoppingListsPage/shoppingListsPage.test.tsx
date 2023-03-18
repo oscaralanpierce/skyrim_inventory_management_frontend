@@ -6,6 +6,7 @@ import {
   getGamesAllSuccess,
   getShoppingLists,
   postShoppingLists,
+  postShoppingListsUnprocessable,
 } from '../../support/msw/handlers'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesProvider } from '../../contexts/gamesContext'
@@ -15,12 +16,13 @@ import ShoppingListsPage from './shoppingListsPage'
 /**
  *
  * Not able to be tested:
- * - 404 response when creating a game
+ * - 404 response when creating a shopping list
  *   - This would be a difficult state to arrive at. You would have to have multiple tabs open
  *     and delete a game from the games page in one tab and then create a shopping list in
  *     another tab while it is set to that game without refreshing. In the test environment, these
  *     conditions are hard to create since there would first be a 404 error when fetching the
  *     shopping lists in the first place.
+ * - Whether the create form input is cleared after request completion or not
  *
  */
 
@@ -60,6 +62,7 @@ describe('<ShoppingListsPage />', () => {
 
     describe('when the game is set in the query string', () => {
       const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
@@ -158,6 +161,7 @@ describe('<ShoppingListsPage />', () => {
 
     describe('when no game is set in the query string', () => {
       const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
@@ -185,6 +189,7 @@ describe('<ShoppingListsPage />', () => {
 
     describe('when the game does not exist', () => {
       const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
@@ -284,7 +289,6 @@ describe('<ShoppingListsPage />', () => {
               wrapper.getByText('Success! Your shopping list has been created.')
             ).toBeTruthy()
             expect(wrapper.getByText('Smithing Materials')).toBeTruthy()
-            expect(input.attributes.getNamedItem('value')).toBeFalsy()
           })
         })
       })
@@ -322,8 +326,58 @@ describe('<ShoppingListsPage />', () => {
             expect(
               wrapper.queryByText('This game has no shopping lists.')
             ).toBeFalsy()
-            expect(input.attributes.getNamedItem('value')).toBeFalsy()
           })
+        })
+      })
+    })
+
+    describe('when the response is a 422', () => {
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingLists,
+        postShoppingListsUnprocessable
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays the validation errors', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesProvider>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesProvider>
+          </PageProvider>
+        )
+
+        const input = wrapper.getByPlaceholderText('Title')
+        const button = wrapper.getByText('Create')
+
+        await waitFor(() => {
+          expect(input.attributes.getNamedItem('disabled')).toBeFalsy()
+
+          fireEvent.change(input, { target: { value: 'Smithing Materials' } })
+        })
+
+        act(() => fireEvent.click(button))
+
+        await waitFor(() => {
+          expect(
+            wrapper.getByText(
+              '2 error(s) prevented your shopping list from being saved:'
+            )
+          ).toBeTruthy()
+          expect(
+            wrapper.getByText('Title must be unique per game')
+          ).toBeTruthy()
+          expect(
+            wrapper.getByText(
+              "Title can only contain alphanumeric characters, spaces, commas (,), hyphens (-), and apostrophes (')"
+            )
+          ).toBeTruthy()
         })
       })
     })
