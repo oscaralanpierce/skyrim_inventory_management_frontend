@@ -1311,7 +1311,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
               Your Games
             </h2>
             <div
-              class="_root_0a8ecf _select_03d657"
+              class="_root_0a8ecf _select_03d657 _disabled_0a8ecf"
               data-testid="styledSelect"
               style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
             >
@@ -1331,6 +1331,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
                 </p>
                 <button
                   class="_trigger_0a8ecf"
+                  disabled=""
                 >
                   <svg
                     aria-hidden="true"
@@ -1498,7 +1499,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
             Your Games
           </h2>
           <div
-            class="_root_0a8ecf _select_03d657"
+            class="_root_0a8ecf _select_03d657 _disabled_0a8ecf"
             data-testid="styledSelect"
             style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
           >
@@ -1518,6 +1519,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
               </p>
               <button
                 class="_trigger_0a8ecf"
+                disabled=""
               >
                 <svg
                   aria-hidden="true"
@@ -1737,7 +1739,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
             class="_titleContainer_03d657"
           >
             <div
-              class="_root_0a8ecf _select_03d657"
+              class="_root_0a8ecf _select_03d657 _disabled_0a8ecf"
               data-testid="styledSelect"
               style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
             >
@@ -1757,6 +1759,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
                 </p>
                 <button
                   class="_trigger_0a8ecf"
+                  disabled=""
                 >
                   <svg
                     aria-hidden="true"
@@ -1919,7 +1922,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
           class="_titleContainer_03d657"
         >
           <div
-            class="_root_0a8ecf _select_03d657"
+            class="_root_0a8ecf _select_03d657 _disabled_0a8ecf"
             data-testid="styledSelect"
             style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
           >
@@ -1939,6 +1942,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
               </p>
               <button
                 class="_trigger_0a8ecf"
+                disabled=""
               >
                 <svg
                   aria-hidden="true"

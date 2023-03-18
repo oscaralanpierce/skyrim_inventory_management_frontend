@@ -57,3 +57,12 @@ export const NoOptionsLongPlaceholder = () => (
     placeholder="This placeholder is way too long."
   />
 )
+
+export const Disabled = () => (
+  <StyledSelect
+    options={options}
+    onOptionSelected={() => {}}
+    placeholder="Doesn't matter"
+    disabled
+  />
+)
