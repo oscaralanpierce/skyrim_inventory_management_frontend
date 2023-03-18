@@ -1,10 +1,15 @@
 .root {
   text-align: center;
-  margin: 0 auto 32px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 
 .input {
@@ -43,9 +48,41 @@
   cursor: not-allowed;
 }
 
-@media (min-width: 769px) {
-  .input,
+@media (min-width: 481px) {
+  .root {
+    --button-width: 72px;
+    margin: unset;
+    width: 228px;
+  }
+
+  /**
+   *
+   * 228px: width of games dropdown - form should be the same width
+   *        on small tablet
+   * 24px:  side padding on input
+   * 12px:  right margin on input
+   *
+   */
+  .input {
+    width: calc(228px - 24px - 12px - var(--button-width));
+  }
+
   .button {
-    font-size: 1.025rem;
+    width: var(--button-width);
+  }
+}
+
+@media (min-width: 601px) {
+  .root {
+    margin: 0 auto 32px;
+    width: unset;
+  }
+
+  .fieldset {
+    display: unset;
+  }
+
+  .input {
+    width: unset;
   }
 }
