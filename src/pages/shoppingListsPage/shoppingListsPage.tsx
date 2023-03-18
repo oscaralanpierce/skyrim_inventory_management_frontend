@@ -5,6 +5,7 @@ import { YELLOW } from '../../utils/colorSchemes'
 import { useShoppingListsContext } from '../../hooks/contexts'
 import DashboardLayout from '../../layouts/dashboardLayout/dashboardLayout'
 import ShoppingListGrouping from '../../components/shoppingListGrouping/shoppingListGrouping'
+import ShoppingListCreateForm from '../../components/shoppingListCreateForm/shoppingListCreateForm'
 
 const loaderStyles: CSSProperties = {
   textAlign: 'center',
@@ -16,6 +17,7 @@ const ShoppingListsPage = () => {
   return (
     <DashboardLayout title="Your Shopping Lists" includeGameSelector>
       <div>
+        <ShoppingListCreateForm />
         {shoppingListsLoadingState === LOADING && (
           <PulseLoader
             color={YELLOW.schemeColorDark}

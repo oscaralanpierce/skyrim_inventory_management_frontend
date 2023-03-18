@@ -13,7 +13,12 @@ import {
   deleteGameNotFound,
   deleteGameServerError,
 } from './games'
-import { getShoppingListsSuccess } from './shoppingLists'
+import {
+  postShoppingLists,
+  postShoppingListsUnprocessable,
+  postShoppingListsServerError,
+  getShoppingLists,
+} from './shoppingLists'
 
 export {
   postGamesSuccess,
@@ -29,5 +34,8 @@ export {
   deleteGameSuccess,
   deleteGameNotFound,
   deleteGameServerError,
-  getShoppingListsSuccess,
+  postShoppingLists,
+  postShoppingListsUnprocessable,
+  postShoppingListsServerError,
+  getShoppingLists,
 }

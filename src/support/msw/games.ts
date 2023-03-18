@@ -29,7 +29,7 @@ export const postGamesSuccess = rest.post(
 
 export const postGamesUnprocessable = rest.post(
   `${BASE_URI}/games`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     const body = {
       errors: [
         "Name can only contain alphanumeric characters, spaces, commas (,), hyphens (-), and apostrophes (')",
@@ -42,7 +42,7 @@ export const postGamesUnprocessable = rest.post(
 
 export const postGamesServerError = rest.post(
   `${BASE_URI}/games`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     const body = { errors: ['oh noes'] }
 
     return res(ctx.status(500), ctx.json(body))
@@ -57,21 +57,21 @@ export const postGamesServerError = rest.post(
 
 export const getGamesEmptySuccess = rest.get(
   `${BASE_URI}/games`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(200), ctx.json(emptyGames))
   }
 )
 
 export const getGamesAllSuccess = rest.get(
   `${BASE_URI}/games`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(200), ctx.json(allGames))
   }
 )
 
 export const getGamesServerError = rest.get(
   `${BASE_URI}/games`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(500), ctx.json({ errors: ['Something went wrong'] }))
   }
 )
@@ -110,21 +110,21 @@ export const patchGameSuccess = rest.patch(
 
 export const patchGameUnprocessableEntity = rest.patch(
   `${BASE_URI}/games/:id`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(422), ctx.json({ errors: ['Name must be unique'] }))
   }
 )
 
 export const patchGameNotFound = rest.patch(
   `${BASE_URI}/games/:id`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(404))
   }
 )
 
 export const patchGameServerError = rest.patch(
   `${BASE_URI}/games/:id`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(500), ctx.json({ errors: ['oh noes'] }))
   }
 )
@@ -137,21 +137,21 @@ export const patchGameServerError = rest.patch(
 
 export const deleteGameSuccess = rest.delete(
   `${BASE_URI}/games/:id`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(204))
   }
 )
 
 export const deleteGameNotFound = rest.delete(
   `${BASE_URI}/games/:id`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(404))
   }
 )
 
 export const deleteGameServerError = rest.delete(
   `${BASE_URI}/games/:id`,
-  (req, res, ctx) => {
+  (_req, res, ctx) => {
     return res(ctx.status(500), ctx.json({ errors: ['oh noes'] }))
   }
 )

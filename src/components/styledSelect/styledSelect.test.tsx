@@ -1,8 +1,13 @@
 import { describe, test, expect } from 'vitest'
-import { act } from '@testing-library/react'
 import { render } from '../../support/testUtils'
 import { allGames } from '../../support/data/games'
 import StyledSelect from './styledSelect'
+
+/**
+ *
+ * Not able to be tested: disabled state
+ *
+ */
 
 describe('StyledSelect', () => {
   describe('when there are options', () => {

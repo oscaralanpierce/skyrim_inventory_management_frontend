@@ -115,6 +115,8 @@ export const GamesProvider = ({ children }: ProviderProps) => {
 
   const fetchGames = useCallback(() => {
     if (user && token) {
+      setGamesLoadingState(LOADING)
+
       getGames(token)
         .then(({ json }) => {
           if (Array.isArray(json)) {

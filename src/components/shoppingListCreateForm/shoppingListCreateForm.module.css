@@ -1,0 +1,102 @@
+.root {
+  text-align: center;
+  margin: 0 auto 16px;
+  width: 100%;
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.input {
+  font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 8px 12px;
+  margin-right: 12px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #5f5f5f;
+  border-radius: 3px;
+}
+
+.input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button {
+  font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 3px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.button:disabled,
+.button:disabled:hover {
+  background-color: #7c8388;
+  border-color: #4b5053;
+  cursor: not-allowed;
+}
+
+@media (min-width: 481px) {
+  /**
+   *
+   * The button is naturally between 71px and 72px wide at this
+   * viewport width, but we want to make sure it stays exactly
+   * this size so we can ensure the entire form stays the same
+   * width as the StyledSelect above it in the 481px - 600px
+   * range.
+   *
+   */
+
+  .root {
+    --button-width: 72px;
+    margin: unset;
+    margin-bottom: 16px;
+    width: 228px;
+  }
+
+  /**
+   *
+   * 228px: width of games dropdown - form should be the same width
+   *        on small tablet
+   * 24px:  side padding on input
+   * 12px:  right margin on input
+   *
+   */
+
+  .input {
+    width: calc(228px - 24px - 12px - var(--button-width));
+  }
+
+  .button {
+    width: var(--button-width);
+  }
+}
+
+@media (min-width: 601px) {
+  .root {
+    margin: 0 auto 24px;
+    width: 100%;
+  }
+
+  .fieldset {
+    display: contents;
+  }
+
+  .input {
+    width: 175px;
+  }
+}

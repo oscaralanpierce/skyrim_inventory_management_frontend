@@ -85,6 +85,7 @@ const DashboardLayout = ({
                   onOptionSelected={onOptionSelected}
                   defaultOption={defaultOption}
                   className={styles.select}
+                  disabled={gamesLoadingState !== DONE}
                 />
               )}
             </div>

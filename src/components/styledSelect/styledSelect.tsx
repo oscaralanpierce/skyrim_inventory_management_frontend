@@ -21,6 +21,7 @@ interface StyledSelectProps {
   options: SelectOption[]
   placeholder: string
   onOptionSelected: (optionValue: string | number) => void
+  disabled?: boolean
   defaultOption?: SelectOption | null
   className?: string
 }
@@ -34,6 +35,7 @@ const StyledSelect = ({
   placeholder,
   onOptionSelected,
   defaultOption,
+  disabled,
   className,
 }: StyledSelectProps) => {
   const [activeOption, setActiveOption] = useState<SelectOption | null>(
@@ -52,6 +54,8 @@ const StyledSelect = ({
 
   const toggleDropdown: MouseEventHandler = (e) => {
     e.preventDefault()
+
+    if (disabled) return
 
     setExpanded(!expanded)
   }
@@ -91,7 +95,9 @@ const StyledSelect = ({
 
   return (
     <div
-      className={classNames(styles.root, className)}
+      className={classNames(styles.root, className, {
+        [styles.disabled]: disabled,
+      })}
       style={colorVars}
       ref={componentRef}
       data-testid="styledSelect"
@@ -108,7 +114,7 @@ const StyledSelect = ({
         <p className={styles.headerText} data-testid="selectedOption">
           {truncatedText(options.length ? headerText : placeholder)}
         </p>
-        <button className={styles.trigger}>
+        <button className={styles.trigger} disabled={disabled}>
           <FontAwesomeIcon className={styles.fa} icon={faAngleDown} />
         </button>
       </div>
