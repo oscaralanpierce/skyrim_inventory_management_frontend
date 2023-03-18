@@ -1,5 +1,6 @@
-import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
 import { type ReactElement } from 'react'
+import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
+import { act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated } from '../../support/testUtils'
 import { getShoppingListsSuccess } from '../../support/msw/shoppingLists'
@@ -162,6 +163,69 @@ describe('ShoppingListCreateForm', () => {
       expect(
         wrapper.getByText('Create').attributes.getNamedItem('disabled')
       ).toBeFalsy()
+    })
+  })
+
+  describe('submitting the form', () => {
+    describe('when the form is enabled', () => {
+      test('calls the createShoppingList function', () => {
+        const createShoppingList = vitest.fn()
+        const contextValue = {
+          ...shoppingListsContextValue,
+          createShoppingList,
+        }
+
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsContext.Provider value={contextValue}>
+                <ShoppingListCreateForm />
+              </ShoppingListsContext.Provider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const input = wrapper.getByPlaceholderText('Title')
+        const button = wrapper.getByText('Create')
+
+        act(() => {
+          fireEvent.change(input, { target: { value: 'New Shopping List' } })
+          fireEvent.click(button)
+        })
+
+        expect(createShoppingList).toHaveBeenCalledWith(
+          { title: 'New Shopping List' },
+          expect.any(Function)
+        )
+      })
+    })
+
+    describe('when the form is disabled', () => {
+      test("doesn't call the createShoppingList function", () => {
+        const createShoppingList = vitest.fn()
+        const contextValue = {
+          ...shoppingListsContextValueLoading,
+          createShoppingList,
+        }
+
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsContext.Provider value={contextValue}>
+                <ShoppingListCreateForm />
+              </ShoppingListsContext.Provider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const button = wrapper.getByText('Create')
+
+        act(() => {
+          fireEvent.click(button)
+        })
+
+        expect(createShoppingList).not.toHaveBeenCalled()
+      })
     })
   })
 })
