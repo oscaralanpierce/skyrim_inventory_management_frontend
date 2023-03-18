@@ -48,6 +48,7 @@ const ShoppingListCreateForm = () => {
     }
 
     const focusInput = () => {
+      formRef.current?.reset()
       inputRef.current?.focus()
     }
 
