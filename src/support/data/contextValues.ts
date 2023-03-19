@@ -83,22 +83,26 @@ export const shoppingListsContextValueEmpty: ShoppingListsContextType = {
   shoppingLists: emptyShoppingLists,
   shoppingListsLoadingState: DONE,
   createShoppingList: noop,
+  destroyShoppingList: noop,
 }
 
 export const shoppingListsContextValue: ShoppingListsContextType = {
   shoppingLists: shoppingListsForGame(77),
   shoppingListsLoadingState: DONE,
   createShoppingList: noop,
+  destroyShoppingList: noop,
 }
 
 export const shoppingListsContextValueLoading: ShoppingListsContextType = {
   shoppingLists: emptyShoppingLists,
   shoppingListsLoadingState: LOADING,
   createShoppingList: noop,
+  destroyShoppingList: noop,
 }
 
 export const shoppingListsContextValueError: ShoppingListsContextType = {
   shoppingLists: emptyShoppingLists,
   shoppingListsLoadingState: ERROR,
   createShoppingList: noop,
+  destroyShoppingList: noop,
 }

@@ -8,7 +8,11 @@ import {
 import { type ProviderProps } from '../types/contexts'
 import { type ApiError } from '../types/errors'
 import { LOADING, DONE, ERROR, type LoadingState } from '../utils/loadingStates'
-import { postShoppingLists, getShoppingLists } from '../utils/api/simApi'
+import {
+  postShoppingLists,
+  getShoppingLists,
+  deleteShoppingList,
+} from '../utils/api/simApi'
 import { useQueryString } from '../hooks/useQueryString'
 import {
   useGoogleLogin,
@@ -16,8 +20,6 @@ import {
   useGamesContext,
 } from '../hooks/contexts'
 
-const NOT_FOUND_MESSAGE =
-  "The game you've selected doesn't exist, or doesn't belong to you. Please select another game and try again."
 const UNEXPECTED_ERROR_MESSAGE =
   "Oops! Something unexpected went wrong. We're sorry! Please try again later."
 
@@ -29,12 +31,18 @@ export interface ShoppingListsContextType {
     onSuccess?: CallbackFunction,
     onError?: CallbackFunction
   ) => void
+  destroyShoppingList: (
+    listId: number,
+    onSuccess?: CallbackFunction,
+    onError?: CallbackFunction
+  ) => void
 }
 
 export const ShoppingListsContext = createContext<ShoppingListsContextType>({
   shoppingLists: [] as ResponseShoppingList[],
   shoppingListsLoadingState: LOADING,
   createShoppingList: () => {},
+  destroyShoppingList: () => {},
 })
 
 export const ShoppingListsProvider = ({ children }: ProviderProps) => {
@@ -67,7 +75,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       })
     } else {
       const message =
-        e.code === 404 ? NOT_FOUND_MESSAGE : UNEXPECTED_ERROR_MESSAGE
+        e.code === 405
+          ? "You can't manually manage an aggregate list."
+          : UNEXPECTED_ERROR_MESSAGE
 
       setFlashProps({
         hidden: false,
@@ -114,7 +124,17 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             }
           })
           .catch((e: ApiError) => {
-            handleApiError(e)
+            if (e.code === 404) {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message:
+                  "The game you've selected doesn't exist, or doesn't belong to you. Please select another game and try again.",
+              })
+            } else {
+              handleApiError(e)
+            }
+
             onError && onError()
           })
       }
@@ -142,12 +162,66 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
           }
         })
         .catch((e: ApiError) => {
-          handleApiError(e)
+          if (e.code === 404) {
+            setFlashProps({
+              hidden: false,
+              type: 'error',
+              message:
+                "The game you've selected doesn't exist, or doesn't belong to you. Please select another game and try again.",
+            })
+          } else {
+            handleApiError(e)
+          }
+
           setShoppingLists([])
           setShoppingListsLoadingState(ERROR)
         })
     }
   }, [user, token, activeGame])
+
+  /**
+   *
+   * Destroy specified shopping list
+   *
+   */
+
+  const destroyShoppingList = useCallback(
+    (
+      listId: number,
+      onSuccess?: CallbackFunction,
+      onError?: CallbackFunction
+    ) => {
+      if (user && token) {
+        deleteShoppingList(listId, token)
+          .then(({ json }) => {
+            if (Array.isArray(json)) {
+              setShoppingLists(json)
+              setFlashProps({
+                hidden: false,
+                type: 'success',
+                message: 'Success! Your shopping list has been deleted.',
+              })
+              onSuccess && onSuccess()
+            }
+          })
+          .catch((e: ApiError) => {
+            if (e.code === 404) {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message:
+                  "The shopping list you tried to delete doesn't exist, or doesn't belong to you. Please refresh and try again.",
+              })
+            } else {
+              handleApiError(e)
+            }
+
+            onError && onError()
+          })
+      }
+    },
+    [user, token]
+  )
 
   /**
    *
@@ -159,6 +233,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     shoppingLists,
     shoppingListsLoadingState,
     createShoppingList,
+    destroyShoppingList,
   }
 
   /**

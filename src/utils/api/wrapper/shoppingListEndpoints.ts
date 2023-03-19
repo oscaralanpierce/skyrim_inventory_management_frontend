@@ -5,12 +5,15 @@ import {
   type PostShoppingListsReturnValue,
   type GetShoppingListsResponse,
   type GetShoppingListsReturnValue,
+  type DeleteShoppingListResponse,
+  type DeleteShoppingListReturnValue,
 } from '../returnValues/shoppingLists'
 import {
   AuthorizationError,
-  InternalServerError,
   NotFoundError,
+  MethodNotAllowedError,
   UnprocessableEntityError,
+  InternalServerError,
 } from '../apiErrors'
 
 /**
@@ -72,6 +75,38 @@ export const getShoppingLists = (
     return response.json().then((json) => {
       const returnValue = { status: response.status, json }
 
+      if (returnValue.status === 500)
+        throw new InternalServerError(json.errors.join(', '))
+
+      return returnValue
+    })
+  })
+}
+
+/**
+ *
+ * DELETE /shopping_lists/:id endpoint
+ *
+ */
+
+export const deleteShoppingList = (
+  listId: number,
+  token: string
+): Promise<DeleteShoppingListReturnValue> | never => {
+  const uri = `${BASE_URI}/shopping_lists/${listId}`
+  const headers = combinedHeaders(token)
+
+  return fetch(uri, { method: 'DELETE', headers }).then((res) => {
+    const response = res as DeleteShoppingListResponse
+
+    if (response.status === 401) throw new AuthorizationError()
+    if (response.status === 404) throw new NotFoundError()
+
+    return response.json().then((json) => {
+      const returnValue = { status: response.status, json }
+
+      if (returnValue.status === 405)
+        throw new MethodNotAllowedError(json.errors.join(', '))
       if (returnValue.status === 500)
         throw new InternalServerError(json.errors.join(', '))
 

@@ -68,6 +68,16 @@ export const allShoppingLists: ShoppingList[] = [
     created_at: new Date('2023-02-12T15:17:33'),
     updated_at: new Date('2023-02-12T15:17:33'),
   },
+  {
+    id: 6,
+    game_id: 77,
+    aggregate_list_id: 3,
+    aggregate: false,
+    title: 'Hjerim',
+    list_items: emptyListItems,
+    created_at: new Date('2023-01-03T12:47:55'),
+    updated_at: new Date('2023-01-03T12:47:55'),
+  },
 ]
 
 export const shoppingListsForGame = (gameId: number) =>

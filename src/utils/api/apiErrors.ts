@@ -28,6 +28,20 @@ export class NotFoundError implements ApiError {
   }
 }
 
+export class MethodNotAllowedError implements ApiError {
+  readonly code: 405
+  readonly message: string
+  readonly name: 'MethodNotAllowedError'
+
+  constructor(message: string = '405 Method Not Allowed') {
+    this.code = 405
+    this.name = 'MethodNotAllowedError'
+    this.message = message
+
+    Object.setPrototypeOf(this, MethodNotAllowedError.prototype)
+  }
+}
+
 export class UnprocessableEntityError implements ApiError {
   readonly code: 422
   readonly message: string | string[]

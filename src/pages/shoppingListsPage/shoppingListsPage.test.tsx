@@ -3,11 +3,12 @@ import { waitFor, act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
-  getGamesAllSuccess,
-  getShoppingLists,
   postShoppingLists,
   postShoppingListsServerError,
   postShoppingListsUnprocessable,
+  getGamesAllSuccess,
+  getShoppingLists,
+  deleteShoppingList,
 } from '../../support/msw/handlers'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesProvider } from '../../contexts/gamesContext'
@@ -436,6 +437,89 @@ describe('ShoppingListsPage', () => {
             )
           ).toBeTruthy()
           expect(wrapper.queryByText('Smithing Materials')).toBeFalsy()
+        })
+      })
+    })
+  })
+
+  describe('destroying a shopping list', () => {
+    const mockServer = setupServer(
+      getGamesAllSuccess,
+      getShoppingLists,
+      deleteShoppingList
+    )
+
+    beforeAll(() => mockServer.listen())
+    beforeEach(() => mockServer.resetHandlers())
+    afterAll(() => mockServer.close())
+
+    describe('when the user confirms deletion', () => {
+      describe('when the game has no other regular shopping lists', () => {
+        test('removes both lists', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>,
+            'http://localhost:5173/shopping_lists?gameId=32'
+          )
+
+          window.confirm = vitest.fn().mockImplementation(() => true)
+
+          const destroyIcon = await wrapper.findByTestId('destroyShoppingList2')
+
+          act(() => {
+            fireEvent.click(destroyIcon)
+          })
+
+          expect(window.confirm).toHaveBeenCalledWith(
+            'Are you sure you want to delete the list "My Shopping List 1"? You will also lose any list items on the list. This action cannot be undone.'
+          )
+
+          await waitFor(() => {
+            expect(wrapper.queryByText('All Items')).toBeFalsy()
+            expect(wrapper.queryByText('My Shopping List 1')).toBeFalsy()
+            expect(
+              wrapper.getByText('This game has no shopping lists.')
+            ).toBeTruthy()
+          })
+        })
+      })
+
+      describe('when the game has other regular shopping lists', () => {
+        test('resets the shoppingLists array to the response value', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>,
+            'http://localhost:5173/shopping_lists?gameId=77'
+          )
+
+          window.confirm = vitest.fn().mockImplementation(() => true)
+
+          const destroyIcon = await wrapper.findByTestId('destroyShoppingList6')
+
+          act(() => {
+            fireEvent.click(destroyIcon)
+          })
+
+          expect(window.confirm).toHaveBeenCalledWith(
+            'Are you sure you want to delete the list "Hjerim"? You will also lose any list items on the list. This action cannot be undone.'
+          )
+
+          await waitFor(() => {
+            expect(wrapper.getByText('All Items')).toBeTruthy()
+            expect(wrapper.getByText('Honeyside')).toBeTruthy()
+            expect(wrapper.getByText('Breezehome')).toBeTruthy()
+            expect(wrapper.queryByText('Hjerim')).toBeFalsy()
+          })
         })
       })
     })
