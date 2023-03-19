@@ -477,7 +477,9 @@ describe('ShoppingListsPage', () => {
 
             window.confirm = vitest.fn().mockImplementation(() => true)
 
-            const destroyIcon = await wrapper.findByTestId('destroyShoppingList2')
+            const destroyIcon = await wrapper.findByTestId(
+              'destroyShoppingList2'
+            )
 
             act(() => {
               fireEvent.click(destroyIcon)
@@ -510,7 +512,9 @@ describe('ShoppingListsPage', () => {
 
             window.confirm = vitest.fn().mockImplementation(() => true)
 
-            const destroyIcon = await wrapper.findByTestId('destroyShoppingList2')
+            const destroyIcon = await wrapper.findByTestId(
+              'destroyShoppingList2'
+            )
 
             act(() => {
               fireEvent.click(destroyIcon)
@@ -522,7 +526,9 @@ describe('ShoppingListsPage', () => {
 
             await waitFor(() => {
               expect(
-                wrapper.getByText('Success! Your shopping list has been deleted.')
+                wrapper.getByText(
+                  'Success! Your shopping list has been deleted.'
+                )
               ).toBeTruthy()
             })
           })
@@ -543,7 +549,9 @@ describe('ShoppingListsPage', () => {
 
             window.confirm = vitest.fn().mockImplementation(() => true)
 
-            const destroyIcon = await wrapper.findByTestId('destroyShoppingList6')
+            const destroyIcon = await wrapper.findByTestId(
+              'destroyShoppingList6'
+            )
 
             act(() => {
               fireEvent.click(destroyIcon)
@@ -575,7 +583,9 @@ describe('ShoppingListsPage', () => {
 
             window.confirm = vitest.fn().mockImplementation(() => true)
 
-            const destroyIcon = await wrapper.findByTestId('destroyShoppingList6')
+            const destroyIcon = await wrapper.findByTestId(
+              'destroyShoppingList6'
+            )
 
             act(() => {
               fireEvent.click(destroyIcon)
@@ -587,7 +597,9 @@ describe('ShoppingListsPage', () => {
 
             await waitFor(() => {
               expect(
-                wrapper.getByText('Success! Your shopping list has been deleted.')
+                wrapper.getByText(
+                  'Success! Your shopping list has been deleted.'
+                )
               ).toBeTruthy()
             })
           })
@@ -662,7 +674,11 @@ describe('ShoppingListsPage', () => {
         await waitFor(() => {
           expect(wrapper.getByText('All Items')).toBeTruthy()
           expect(wrapper.getByText('My Shopping List 1')).toBeTruthy()
-          expect(wrapper.getByText("Oops! Something unexpected went wrong. We're sorry! Please try again later.")).toBeTruthy()
+          expect(
+            wrapper.getByText(
+              "Oops! Something unexpected went wrong. We're sorry! Please try again later."
+            )
+          ).toBeTruthy()
         })
       })
     })
