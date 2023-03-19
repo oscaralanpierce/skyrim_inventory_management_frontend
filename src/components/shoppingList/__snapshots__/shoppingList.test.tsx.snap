@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ShoppingList > when there are list items > matches snapshot 1`] = `
+exports[`ShoppingList > displaying a list > when the list is not editable > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -10,11 +10,35 @@ exports[`ShoppingList > when there are list items > matches snapshot 1`] = `
         style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
       >
         <div
-          aria-controls="list32Details"
+          aria-controls="list3Details"
           aria-expanded="false"
           class="_trigger_62bc73"
           role="button"
         >
+          <span
+            class="_icons_62bc73"
+          >
+            <button
+              class="_icon_62bc73"
+              data-testid="destroyShoppingList3"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-xmark _fa_62bc73"
+                data-icon="xmark"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </span>
           <h3
             class="_title_62bc73"
           >
@@ -24,7 +48,192 @@ exports[`ShoppingList > when there are list items > matches snapshot 1`] = `
         <div
           aria-hidden="true"
           class="rah-static rah-static--height-zero "
-          id="list32Details"
+          id="list3Details"
+          style="height: 0px; overflow: hidden;"
+        >
+          <div
+            style="display: none;"
+          >
+            <div
+              class="_details_62bc73"
+            >
+              <p
+                class="_emptyList_62bc73"
+              >
+                This shopping list has no list items.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_62bc73"
+      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
+    >
+      <div
+        aria-controls="list3Details"
+        aria-expanded="false"
+        class="_trigger_62bc73"
+        role="button"
+      >
+        <span
+          class="_icons_62bc73"
+        >
+          <button
+            class="_icon_62bc73"
+            data-testid="destroyShoppingList3"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-xmark _fa_62bc73"
+              data-icon="xmark"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </span>
+        <h3
+          class="_title_62bc73"
+        >
+          My Shopping List
+        </h3>
+      </div>
+      <div
+        aria-hidden="true"
+        class="rah-static rah-static--height-zero "
+        id="list3Details"
+        style="height: 0px; overflow: hidden;"
+      >
+        <div
+          style="display: none;"
+        >
+          <div
+            class="_details_62bc73"
+          >
+            <p
+              class="_emptyList_62bc73"
+            >
+              This shopping list has no list items.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ShoppingList > displaying a list > when there are list items > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_62bc73"
+        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
+      >
+        <div
+          aria-controls="list4Details"
+          aria-expanded="false"
+          class="_trigger_62bc73"
+          role="button"
+        >
+          <span
+            class="_icons_62bc73"
+          >
+            <button
+              class="_icon_62bc73"
+              data-testid="destroyShoppingList4"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-xmark _fa_62bc73"
+                data-icon="xmark"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </span>
+          <h3
+            class="_title_62bc73"
+          >
+            My Shopping List
+          </h3>
+        </div>
+        <div
+          aria-hidden="true"
+          class="rah-static rah-static--height-zero "
+          id="list4Details"
           style="height: 0px; overflow: hidden;"
         >
           <div
@@ -167,11 +376,35 @@ exports[`ShoppingList > when there are list items > matches snapshot 1`] = `
       style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
     >
       <div
-        aria-controls="list32Details"
+        aria-controls="list4Details"
         aria-expanded="false"
         class="_trigger_62bc73"
         role="button"
       >
+        <span
+          class="_icons_62bc73"
+        >
+          <button
+            class="_icon_62bc73"
+            data-testid="destroyShoppingList4"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-xmark _fa_62bc73"
+              data-icon="xmark"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </span>
         <h3
           class="_title_62bc73"
         >
@@ -181,7 +414,7 @@ exports[`ShoppingList > when there are list items > matches snapshot 1`] = `
       <div
         aria-hidden="true"
         class="rah-static rah-static--height-zero "
-        id="list32Details"
+        id="list4Details"
         style="height: 0px; overflow: hidden;"
       >
         <div
@@ -371,7 +604,7 @@ exports[`ShoppingList > when there are list items > matches snapshot 1`] = `
 }
 `;
 
-exports[`ShoppingList > when there are no list items > matches snapshot 1`] = `
+exports[`ShoppingList > displaying a list > when there are no list items > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -381,11 +614,35 @@ exports[`ShoppingList > when there are no list items > matches snapshot 1`] = `
         style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
       >
         <div
-          aria-controls="list32Details"
+          aria-controls="list4Details"
           aria-expanded="false"
           class="_trigger_62bc73"
           role="button"
         >
+          <span
+            class="_icons_62bc73"
+          >
+            <button
+              class="_icon_62bc73"
+              data-testid="destroyShoppingList4"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-xmark _fa_62bc73"
+                data-icon="xmark"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </span>
           <h3
             class="_title_62bc73"
           >
@@ -395,7 +652,7 @@ exports[`ShoppingList > when there are no list items > matches snapshot 1`] = `
         <div
           aria-hidden="true"
           class="rah-static rah-static--height-zero "
-          id="list32Details"
+          id="list4Details"
           style="height: 0px; overflow: hidden;"
         >
           <div
@@ -421,11 +678,35 @@ exports[`ShoppingList > when there are no list items > matches snapshot 1`] = `
       style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
     >
       <div
-        aria-controls="list32Details"
+        aria-controls="list4Details"
         aria-expanded="false"
         class="_trigger_62bc73"
         role="button"
       >
+        <span
+          class="_icons_62bc73"
+        >
+          <button
+            class="_icon_62bc73"
+            data-testid="destroyShoppingList4"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-xmark _fa_62bc73"
+              data-icon="xmark"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </span>
         <h3
           class="_title_62bc73"
         >
@@ -435,7 +716,7 @@ exports[`ShoppingList > when there are no list items > matches snapshot 1`] = `
       <div
         aria-hidden="true"
         class="rah-static rah-static--height-zero "
-        id="list32Details"
+        id="list4Details"
         style="height: 0px; overflow: hidden;"
       >
         <div
