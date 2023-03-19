@@ -1,5 +1,6 @@
 import {
   useState,
+  useRef,
   type MouseEventHandler,
   type ReactElement,
   type CSSProperties,
@@ -28,6 +29,8 @@ const ShoppingList = ({
   const { destroyShoppingList } = useShoppingListsContext()
   const [expanded, setExpanded] = useState(false)
 
+  const deleteRef = useRef<HTMLButtonElement>(null)
+
   const {
     schemeColorDarkest,
     borderColor,
@@ -48,8 +51,14 @@ const ShoppingList = ({
     '--scheme-color-lightest': schemeColorLightest,
   } as CSSProperties
 
-  const toggleDetails = () => {
-    setExpanded(!expanded)
+  const toggleDetails: MouseEventHandler = (e) => {
+    if (
+      deleteRef.current &&
+      deleteRef.current !== e.target &&
+      !deleteRef.current.contains(e.target as Node)
+    ) {
+      setExpanded(!expanded)
+    }
   }
 
   const destroy: MouseEventHandler = (e) => {
@@ -72,6 +81,7 @@ const ShoppingList = ({
         {canEdit && (
           <span className={styles.icons}>
             <button
+              ref={deleteRef}
               className={styles.icon}
               onClick={destroy}
               data-testid={`destroyShoppingList${listId}`}
