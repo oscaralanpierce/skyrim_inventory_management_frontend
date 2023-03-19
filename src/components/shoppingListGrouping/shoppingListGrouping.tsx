@@ -13,7 +13,7 @@ const ShoppingListGrouping = () => {
 
   return (
     <div className={styles.root}>
-      {shoppingLists.map(({ id, title, list_items }, index) => {
+      {shoppingLists.map(({ id, title, aggregate, list_items }, index) => {
         const colorIndex =
           index < colorSchemes.length ? index : index % colorSchemes.length
         const itemKey = title.toLowerCase().replace(' ', '-')
@@ -21,7 +21,7 @@ const ShoppingListGrouping = () => {
         return (
           <ColorProvider key={itemKey} colorScheme={colorSchemes[colorIndex]}>
             <div className={styles.shoppingList}>
-              <ShoppingList listId={id} title={title}>
+              <ShoppingList listId={id} title={title} canEdit={!aggregate}>
                 {(list_items.length &&
                   list_items.map(
                     ({ id, description, quantity, unit_weight, notes }) => {
