@@ -19,7 +19,6 @@ import {
   postShoppingListsServerError,
   getShoppingLists,
   deleteShoppingList,
-  deleteShoppingListNotAllowed,
   deleteShoppingListServerError,
 } from './shoppingLists'
 
@@ -42,6 +41,5 @@ export {
   postShoppingListsServerError,
   getShoppingLists,
   deleteShoppingList,
-  deleteShoppingListNotAllowed,
   deleteShoppingListServerError,
 }

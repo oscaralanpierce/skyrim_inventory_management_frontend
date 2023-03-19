@@ -110,18 +110,6 @@ export const deleteShoppingList = rest.delete(
   }
 )
 
-export const deleteShoppingListNotAllowed = rest.delete(
-  `${BASE_URI}/shopping_lists/:listId`,
-  (_req, res, ctx) => {
-    return res(
-      ctx.status(405),
-      ctx.json({
-        errors: ['Cannot manually destroy an aggregate list'],
-      })
-    )
-  }
-)
-
 export const deleteShoppingListServerError = rest.delete(
   `${BASE_URI}/shopping_lists/:listId`,
   (_req, res, ctx) => {
