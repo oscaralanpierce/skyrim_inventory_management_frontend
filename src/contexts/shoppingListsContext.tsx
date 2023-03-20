@@ -114,7 +114,14 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
         postShoppingLists(activeGame, attributes, token)
           .then(({ json }) => {
             if (Array.isArray(json)) {
-              setShoppingLists(json)
+              if (json.length == 2) {
+                setShoppingLists(json)
+              } else {
+                const newShoppingLists = shoppingLists
+                newShoppingLists.splice(1, 0, json[0])
+                setShoppingLists(newShoppingLists)
+              }
+
               setFlashProps({
                 hidden: false,
                 type: 'success',
@@ -139,7 +146,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
           })
       }
     },
-    [user, token, activeGame]
+    [user, token, activeGame, shoppingLists]
   )
 
   /**

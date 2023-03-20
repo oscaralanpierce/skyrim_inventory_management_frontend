@@ -29,20 +29,18 @@ export const newShoppingList = (
       'Cannot generate single list for game without existing aggregate'
     )
 
-  const newList = {
-    id: 93,
-    game_id: gameId,
-    aggregate: false,
-    aggregate_list_id: existingLists[0].id,
-    title: attributes.title || 'New Shopping List',
-    list_items: [],
-    created_at: new Date(),
-    updated_at: new Date(),
-  }
-
-  existingLists.splice(1, 0, newList)
-
-  return existingLists
+  return [
+    {
+      id: 93,
+      game_id: gameId,
+      aggregate: false,
+      aggregate_list_id: existingLists[0].id,
+      title: attributes.title || 'New Shopping List',
+      list_items: [],
+      created_at: new Date(),
+      updated_at: new Date(),
+    },
+  ]
 }
 
 export const newShoppingListWithAggregate = (

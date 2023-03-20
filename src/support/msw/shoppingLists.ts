@@ -1,8 +1,4 @@
 import { rest } from 'msw'
-import {
-  type RequestShoppingList,
-  type ResponseShoppingList,
-} from '../../types/apiData'
 import { allGames } from '../data/games'
 import { allShoppingLists } from '../data/shoppingLists'
 import { shoppingListsForGame } from '../data/shoppingLists'
@@ -10,7 +6,6 @@ import { newShoppingList, newShoppingListWithAggregate } from './helpers/data'
 
 const BASE_URI = 'http://localhost:3000'
 const gameIds = allGames.map(({ id }) => id)
-const shoppingListIds = allShoppingLists.map(({ id }) => id)
 
 /**
  *
