@@ -62,7 +62,7 @@ WithShoppingLists.parameters = {
       url: '/api/games/32/shopping_lists',
       method: 'GET',
       status: 200,
-      response: shoppingListsForGame(32),
+      response: shoppingListsForGame(77),
     },
   ],
 }

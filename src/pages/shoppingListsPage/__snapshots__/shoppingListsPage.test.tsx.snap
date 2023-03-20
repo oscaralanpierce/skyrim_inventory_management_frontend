@@ -684,6 +684,30 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                     class="_trigger_62bc73"
                     role="button"
                   >
+                    <span
+                      class="_icons_62bc73"
+                    >
+                      <button
+                        class="_icon_62bc73"
+                        data-testid="destroyShoppingList4"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-xmark _fa_62bc73"
+                          data-icon="xmark"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 320 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    </span>
                     <h3
                       class="_title_62bc73"
                     >
@@ -836,6 +860,30 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                     class="_trigger_62bc73"
                     role="button"
                   >
+                    <span
+                      class="_icons_62bc73"
+                    >
+                      <button
+                        class="_icon_62bc73"
+                        data-testid="destroyShoppingList5"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-xmark _fa_62bc73"
+                          data-icon="xmark"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 320 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    </span>
                     <h3
                       class="_title_62bc73"
                     >
@@ -911,6 +959,69 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="_shoppingList_92c834"
+              >
+                <div
+                  class="_root_62bc73"
+                  style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
+                >
+                  <div
+                    aria-controls="list6Details"
+                    aria-expanded="false"
+                    class="_trigger_62bc73"
+                    role="button"
+                  >
+                    <span
+                      class="_icons_62bc73"
+                    >
+                      <button
+                        class="_icon_62bc73"
+                        data-testid="destroyShoppingList6"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-xmark _fa_62bc73"
+                          data-icon="xmark"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 320 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    </span>
+                    <h3
+                      class="_title_62bc73"
+                    >
+                      Hjerim
+                    </h3>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="rah-static rah-static--height-zero "
+                    id="list6Details"
+                    style="height: 0px; overflow: hidden;"
+                  >
+                    <div>
+                      <div
+                        class="_details_62bc73"
+                      >
+                        <p
+                          class="_emptyList_62bc73"
+                        >
+                          This shopping list has no list items.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -1297,6 +1408,30 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                   class="_trigger_62bc73"
                   role="button"
                 >
+                  <span
+                    class="_icons_62bc73"
+                  >
+                    <button
+                      class="_icon_62bc73"
+                      data-testid="destroyShoppingList4"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-xmark _fa_62bc73"
+                        data-icon="xmark"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        viewBox="0 0 320 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </span>
                   <h3
                     class="_title_62bc73"
                   >
@@ -1449,6 +1584,30 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                   class="_trigger_62bc73"
                   role="button"
                 >
+                  <span
+                    class="_icons_62bc73"
+                  >
+                    <button
+                      class="_icon_62bc73"
+                      data-testid="destroyShoppingList5"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-xmark _fa_62bc73"
+                        data-icon="xmark"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        viewBox="0 0 320 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </span>
                   <h3
                     class="_title_62bc73"
                   >
@@ -1524,6 +1683,69 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="_shoppingList_92c834"
+            >
+              <div
+                class="_root_62bc73"
+                style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3;"
+              >
+                <div
+                  aria-controls="list6Details"
+                  aria-expanded="false"
+                  class="_trigger_62bc73"
+                  role="button"
+                >
+                  <span
+                    class="_icons_62bc73"
+                  >
+                    <button
+                      class="_icon_62bc73"
+                      data-testid="destroyShoppingList6"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-xmark _fa_62bc73"
+                        data-icon="xmark"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        viewBox="0 0 320 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </span>
+                  <h3
+                    class="_title_62bc73"
+                  >
+                    Hjerim
+                  </h3>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="list6Details"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div>
+                    <div
+                      class="_details_62bc73"
+                    >
+                      <p
+                        class="_emptyList_62bc73"
+                      >
+                        This shopping list has no list items.
+                      </p>
                     </div>
                   </div>
                 </div>

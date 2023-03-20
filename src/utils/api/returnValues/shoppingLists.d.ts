@@ -99,3 +99,52 @@ export type GetShoppingListsResponse =
 export type GetShoppingListsReturnValue =
   | { status: 200; json: ResponseShoppingList[] }
   | { status: 500; json: ErrorObject }
+
+/**
+ *
+ * Types used for DELETE /shopping_lists/:id endpoint
+ *
+ */
+
+class DeleteShoppingListSuccessResponse extends ApiResponse {
+  status: 200
+
+  constructor(
+    body,
+    options: { status: 200; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class DeleteShoppingListNotFoundResponse extends ApiResponse {
+  status: 404
+
+  constructor(
+    body?: null,
+    options: { status: 404; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class DeleteShoppingListErrorResponse extends ApiResponse {
+  status: 405 | 500
+
+  constructor(
+    body,
+    options: { status: 405 | 500; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+export type DeleteShoppingListResponse =
+  | UnauthorizedResponse
+  | DeleteShoppingListSuccessResponse
+  | DeleteShoppingListNotFoundResponse
+  | DeleteShoppingListErrorResponse
+
+export type DeleteShoppingListReturnValue =
+  | { status: 200; json: ResponseShoppingList[] }
+  | { status: 405 | 500; json: ErrorObject }

@@ -18,6 +18,8 @@ import {
   postShoppingListsUnprocessable,
   postShoppingListsServerError,
   getShoppingLists,
+  deleteShoppingList,
+  deleteShoppingListServerError,
 } from './shoppingLists'
 
 export {
@@ -38,4 +40,6 @@ export {
   postShoppingListsUnprocessable,
   postShoppingListsServerError,
   getShoppingLists,
+  deleteShoppingList,
+  deleteShoppingListServerError,
 }
