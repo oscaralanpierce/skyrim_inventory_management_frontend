@@ -312,6 +312,37 @@ describe('ShoppingListsPage', () => {
             expect(wrapper.getByText('Smithing Materials')).toBeTruthy()
           })
         })
+
+        test("doesn't remove existing lists", async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>
+          )
+
+          const input = wrapper.getByPlaceholderText('Title')
+          const button = wrapper.getByText('Create')
+
+          await waitFor(() => {
+            expect(input.attributes.getNamedItem('disabled')).toBeFalsy()
+
+            fireEvent.change(input, { target: { value: 'Smithing Materials' } })
+          })
+
+          act(() => fireEvent.click(button))
+
+          await waitFor(() => {
+            expect(
+              wrapper.getByText('Success! Your shopping list has been created.')
+            ).toBeTruthy()
+            expect(wrapper.getByText('All Items')).toBeTruthy()
+            expect(wrapper.getByText('My Shopping List 1')).toBeTruthy()
+          })
+        })
       })
 
       describe('when there is no existing aggregate list', () => {
