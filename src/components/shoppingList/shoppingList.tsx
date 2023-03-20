@@ -8,7 +8,11 @@ import {
 import AnimateHeight from 'react-animate-height'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
-import { useColorScheme, useShoppingListsContext } from '../../hooks/contexts'
+import {
+  useColorScheme,
+  usePageContext,
+  useShoppingListsContext,
+} from '../../hooks/contexts'
 import styles from './shoppingList.module.css'
 
 interface ShoppingListProps {
@@ -27,6 +31,7 @@ const ShoppingList = ({
   const DELETE_CONFIRMATION = `Are you sure you want to delete the list "${title}"? You will also lose any list items on the list. This action cannot be undone.`
 
   const { destroyShoppingList } = useShoppingListsContext()
+  const { setFlashProps } = usePageContext()
   const [expanded, setExpanded] = useState(false)
 
   const deleteRef = useRef<HTMLButtonElement>(null)
@@ -66,7 +71,15 @@ const ShoppingList = ({
 
     const shouldDestroy = window.confirm(DELETE_CONFIRMATION)
 
-    if (shouldDestroy) destroyShoppingList(listId)
+    if (shouldDestroy) {
+      destroyShoppingList(listId)
+    } else {
+      setFlashProps({
+        hidden: false,
+        type: 'info',
+        message: 'OK, your shopping list will not be destroyed.',
+      })
+    }
   }
 
   return (

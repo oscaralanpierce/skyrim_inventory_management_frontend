@@ -633,6 +633,35 @@ describe('ShoppingListsPage', () => {
             expect(wrapper.getByText('My Shopping List 1')).toBeTruthy()
           })
         })
+
+        test('displays a flash info message', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesProvider>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesProvider>
+            </PageProvider>,
+            'http://localhost:5173/shopping_lists?gameId=32'
+          )
+
+          window.confirm = vitest.fn().mockImplementation(() => false)
+
+          const destroyIcon = await wrapper.findByTestId('destroyShoppingList2')
+
+          act(() => {
+            fireEvent.click(destroyIcon)
+          })
+
+          expect(window.confirm).toHaveBeenCalled()
+
+          await waitFor(() => {
+            expect(
+              wrapper.getByText('OK, your shopping list will not be destroyed.')
+            ).toBeTruthy()
+          })
+        })
       })
     })
 
