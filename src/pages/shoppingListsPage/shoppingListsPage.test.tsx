@@ -494,7 +494,7 @@ describe('ShoppingListsPage', () => {
 
       describe('when the user confirms deletion', () => {
         describe('when the game has no other regular shopping lists', () => {
-          test('resets the shoppingLists array to the empty response value', async () => {
+          test('removes the aggregate list too', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
                 <GamesProvider>

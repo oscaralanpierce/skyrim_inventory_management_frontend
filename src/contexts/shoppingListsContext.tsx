@@ -201,13 +201,38 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       if (user && token) {
         deleteShoppingList(listId, token)
           .then(({ json }) => {
-            if (Array.isArray(json)) {
-              setShoppingLists(json)
+            if ('errors' in json) {
+              // This case should never happen because normally an ApiError
+              // will be thrown for any response that includes this key, but
+              // TypeScript doesn't know that.
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message: UNEXPECTED_ERROR_MESSAGE,
+              })
+
+              onError && onError()
+            } else {
+              const newShoppingLists = shoppingLists
+
+              console.warn('NEW SHOPPING LISTS: ', newShoppingLists)
+
+              if (json.aggregate) newShoppingLists[0] = json.aggregate
+
+              for (const deletedId of json.deleted) {
+                const index = newShoppingLists.findIndex(
+                  (list) => list?.id === deletedId
+                )
+                delete newShoppingLists[index]
+              }
+
+              setShoppingLists(newShoppingLists.filter((list) => !!list))
               setFlashProps({
                 hidden: false,
                 type: 'success',
                 message: 'Success! Your shopping list has been deleted.',
               })
+
               onSuccess && onSuccess()
             }
           })
@@ -227,7 +252,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
           })
       }
     },
-    [user, token]
+    [user, token, shoppingLists]
   )
 
   /**
