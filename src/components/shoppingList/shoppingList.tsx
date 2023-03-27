@@ -58,9 +58,9 @@ const ShoppingList = ({
 
   const toggleDetails: MouseEventHandler = (e) => {
     if (
-      deleteRef.current &&
-      deleteRef.current !== e.target &&
-      !deleteRef.current.contains(e.target as Node)
+      !deleteRef.current ||
+      (deleteRef.current !== e.target &&
+        !deleteRef.current.contains(e.target as Node))
     ) {
       setExpanded(!expanded)
     }

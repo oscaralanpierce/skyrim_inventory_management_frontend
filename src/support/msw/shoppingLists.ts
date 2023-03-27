@@ -97,11 +97,19 @@ export const deleteShoppingList = rest.delete(
 
     const lists = shoppingListsForGame(list.game_id)
 
-    if (lists.length === 2) return res(ctx.status(200), ctx.json([]))
+    let json
+    if (lists.length === 2) {
+      json = {
+        deleted: lists.map(({ id }) => id),
+      }
+    } else {
+      json = {
+        deleted: [list.id],
+        aggregate: lists[0],
+      }
+    }
 
-    delete lists[lists.indexOf(list)]
-
-    return res(ctx.status(200), ctx.json(lists.filter((item) => !!item)))
+    return res(ctx.status(200), ctx.json(json))
   }
 )
 

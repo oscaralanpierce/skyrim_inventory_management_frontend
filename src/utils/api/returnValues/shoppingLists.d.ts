@@ -139,6 +139,11 @@ class DeleteShoppingListErrorResponse extends ApiResponse {
   }
 }
 
+interface DeleteShoppingListSuccessResponseBody {
+  deleted: number[]
+  aggregate?: ResponseShoppingList
+}
+
 export type DeleteShoppingListResponse =
   | UnauthorizedResponse
   | DeleteShoppingListSuccessResponse
@@ -146,5 +151,5 @@ export type DeleteShoppingListResponse =
   | DeleteShoppingListErrorResponse
 
 export type DeleteShoppingListReturnValue =
-  | { status: 200; json: ResponseShoppingList[] }
+  | { status: 200; json: DeleteShoppingListSuccessResponseBody }
   | { status: 405 | 500; json: ErrorObject }
