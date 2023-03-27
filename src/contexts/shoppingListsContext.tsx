@@ -215,8 +215,6 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             } else {
               const newShoppingLists = shoppingLists
 
-              console.warn('NEW SHOPPING LISTS: ', newShoppingLists)
-
               if (json.aggregate) newShoppingLists[0] = json.aggregate
 
               for (const deletedId of json.deleted) {
