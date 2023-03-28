@@ -102,6 +102,59 @@ export type GetShoppingListsReturnValue =
 
 /**
  *
+ * Types used for PATCH /shopping_lists/:id endpoint
+ *
+ */
+
+class PatchShoppingListSuccessResponse extends ApiResponse {
+  status: 200
+
+  constructor(
+    body,
+    options: { status: 200; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class PatchShoppingListNotFoundResponse extends ApiResponse {
+  status: 404
+
+  constructor(
+    body?: null,
+    options: { status: 404; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class PatchShoppingListErrorResponse extends ApiResponse {
+  status: 405 | 422 | 500
+
+  constructor(
+    body,
+    options: {
+      status: 405 | 422 | 500
+      statusText?: string
+      headers?: HTTPHeaders
+    }
+  ) {
+    super(body, options)
+  }
+}
+
+export type PatchShoppingListResponse =
+  | UnauthorizedResponse
+  | PatchShoppingListSuccessResponse
+  | PatchShoppingListNotFoundResponse
+  | PatchShoppingListErrorResponse
+
+export type PatchShoppingListReturnValue =
+  | { status: 200; json: ResponseShoppingList }
+  | { status: 405 | 422 | 500; json: ErrorObject }
+
+/**
+ *
  * Types used for DELETE /shopping_lists/:id endpoint
  *
  */
