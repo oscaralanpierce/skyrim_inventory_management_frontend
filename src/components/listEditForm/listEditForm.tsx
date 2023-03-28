@@ -5,7 +5,7 @@ import {
   type FormEventHandler,
   type CSSProperties,
   type ChangeEvent,
-  type LegacyRef,
+  type RefObject,
 } from 'react'
 import classNames from 'classnames'
 import { useColorScheme } from '../../hooks/contexts'
@@ -14,7 +14,7 @@ import { faSquareCheck } from '@fortawesome/free-regular-svg-icons'
 import styles from './listEditForm.module.css'
 
 interface EditFormProps {
-  formRef: LegacyRef<HTMLFormElement>
+  formRef: RefObject<any>
   maxTotalWidth: number
   className?: string
   title: string

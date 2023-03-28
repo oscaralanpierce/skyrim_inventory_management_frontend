@@ -8,7 +8,8 @@
 }
 
 .root:hover,
-.root:hover .trigger {
+.root:hover .trigger,
+.root:hover .form {
   background-color: var(--hover-color);
 }
 
@@ -21,6 +22,7 @@
 .icons {
   margin: 8px 0;
   display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .icon {
@@ -35,6 +37,11 @@
 
 .icon:hover {
   color: var(--scheme-color-lightest);
+}
+
+.form {
+  margin: 8px 0 7px 8px;
+  max-width: var(--max-title-width);
 }
 
 .title {
