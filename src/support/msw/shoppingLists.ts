@@ -6,6 +6,7 @@ import { newShoppingList, newShoppingListWithAggregate } from './helpers/data'
 
 const BASE_URI = 'http://localhost:3000'
 const gameIds = allGames.map(({ id }) => id)
+const listIds = allShoppingLists.map(({ id }) => id)
 
 /**
  *
@@ -76,6 +77,55 @@ export const getShoppingLists = rest.get(
     return res(
       ctx.status(200),
       ctx.json(shoppingListsForGame(Number(req.params.gameId)))
+    )
+  }
+)
+
+/**
+ *
+ * PATCH /shopping_lists/:id
+ *
+ */
+
+// Covers both success and 404 cases
+export const patchShoppingList = rest.patch(
+  `${BASE_URI}/shopping_lists/:id`,
+  async (req, res, ctx) => {
+    const listId: number = Number(req.params.id)
+    if (listIds.indexOf(listId) < 0) return res(ctx.status(404))
+
+    const list = allShoppingLists.find(({ id }) => id === listId)
+    const { title } = await req.json()
+
+    return res(ctx.status(200), ctx.json({ ...list, title }))
+  }
+)
+
+// Returns the same validation errors regardless of request
+// body submitted
+export const patchShoppingListUnprocessable = rest.patch(
+  `${BASE_URI}/shopping_lists/:id`,
+  (_req, res, ctx) => {
+    return res(
+      ctx.status(422),
+      ctx.json({
+        errors: [
+          'Title must be unique per game',
+          "Title can only contain alphanumeric characters, spaces, commas (,), hyphens (-), and apostrophes (')",
+        ],
+      })
+    )
+  }
+)
+
+export const patchShoppingListServerError = rest.patch(
+  `${BASE_URI}/shopping_lists/:id`,
+  (_req, res, ctx) => {
+    return res(
+      ctx.status(500),
+      ctx.json({
+        errors: ['Something went horribly wrong'],
+      })
     )
   }
 )

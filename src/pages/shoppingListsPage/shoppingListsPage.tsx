@@ -16,7 +16,7 @@ const ShoppingListsPage = () => {
 
   return (
     <DashboardLayout title="Your Shopping Lists" includeGameSelector>
-      <div>
+      <>
         <ShoppingListCreateForm />
         {shoppingListsLoadingState === LOADING && (
           <PulseLoader
@@ -26,7 +26,7 @@ const ShoppingListsPage = () => {
           />
         )}
         {shoppingListsLoadingState === DONE && <ShoppingListGrouping />}
-      </div>
+      </>
     </DashboardLayout>
   )
 }

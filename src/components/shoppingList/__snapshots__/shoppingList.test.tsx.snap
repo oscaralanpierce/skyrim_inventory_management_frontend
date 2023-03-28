@@ -976,6 +976,7 @@ exports[`ShoppingList > displaying the edit form > matches snapshot 1`] = `
             <input
               aria-label="title"
               class="_input_8f85e1"
+              data-testid="editListTitle"
               name="title"
               pattern="^\\\\s*[A-Za-z0-9 \\\\-',]*\\\\s*$"
               style="width: 0px;"
@@ -1092,6 +1093,7 @@ exports[`ShoppingList > displaying the edit form > matches snapshot 1`] = `
           <input
             aria-label="title"
             class="_input_8f85e1"
+            data-testid="editListTitle"
             name="title"
             pattern="^\\\\s*[A-Za-z0-9 \\\\-',]*\\\\s*$"
             style="width: 0px;"

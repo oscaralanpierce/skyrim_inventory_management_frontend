@@ -1,14 +1,15 @@
 .root {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: auto min-content;
   width: var(--max-width);
   background-color: var(--scheme-color);
+  align-content: center;
 }
 
 .input {
   font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.25;
   padding: 0;
   padding-right: 8px;
   background-color: inherit;

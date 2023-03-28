@@ -6,6 +6,7 @@ import {
   type CSSProperties,
   type ChangeEvent,
   type RefObject,
+  type KeyboardEventHandler,
 } from 'react'
 import classNames from 'classnames'
 import { useColorScheme } from '../../hooks/contexts'
@@ -107,6 +108,7 @@ const ListEditForm = ({
         defaultValue={inputValue}
         pattern="^\s*[A-Za-z0-9 \-',]*\s*$"
         title="Title can only contain alphanumeric characters, spaces, hyphens, commas, and apostrophes"
+        data-testid="editListTitle"
       />
       <button
         className={styles.submit}

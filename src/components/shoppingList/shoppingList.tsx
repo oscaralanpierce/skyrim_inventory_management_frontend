@@ -3,6 +3,7 @@ import {
   useRef,
   useEffect,
   type MouseEventHandler,
+  type FormEventHandler,
   type ReactElement,
   type CSSProperties,
 } from 'react'
@@ -18,6 +19,7 @@ import useComponentVisible from '../../hooks/useComponentVisible'
 import useSize from '../../hooks/useSize'
 import ListEditForm from '../listEditForm/listEditForm'
 import styles from './shoppingList.module.css'
+import { RequestShoppingList } from '../../types/apiData'
 
 interface ShoppingListProps {
   listId: number
@@ -34,7 +36,7 @@ const ShoppingList = ({
 }: ShoppingListProps) => {
   const DELETE_CONFIRMATION = `Are you sure you want to delete the list "${title}"? You will also lose any list items on the list. This action cannot be undone.`
 
-  const { destroyShoppingList } = useShoppingListsContext()
+  const { updateShoppingList, destroyShoppingList } = useShoppingListsContext()
   const { setFlashProps } = usePageContext()
   const [expanded, setExpanded] = useState(false)
   const [maxEditFormWidth, setMaxEditFormWidth] = useState(0)
@@ -73,12 +75,26 @@ const ShoppingList = ({
     '--max-title-width': `${maxEditFormWidth - 32}px`,
   } as CSSProperties
 
-  const toggleDetails: MouseEventHandler = (e) => {
+  const shouldToggleDetails = (target: Node) => {
     if (
-      !iconsRef.current ||
-      (iconsRef.current !== e.target &&
-        !iconsRef.current.contains(e.target as Node))
-    ) {
+      iconsRef.current &&
+      (iconsRef.current === target || iconsRef.current.contains(target))
+    )
+      return false
+
+    if (
+      componentRef.current &&
+      (componentRef.current === target || componentRef.current.contains(target))
+    )
+      return false
+
+    return true
+  }
+
+  const toggleDetails: MouseEventHandler = (e) => {
+    const target = e.target as Node
+
+    if (shouldToggleDetails(target)) {
       setExpanded(!expanded)
     }
   }
@@ -97,6 +113,27 @@ const ShoppingList = ({
         message: 'OK, your shopping list will not be destroyed.',
       })
     }
+  }
+
+  const extractAttributes = (formData: FormData): RequestShoppingList => {
+    const attributes = ({ title } = Object.fromEntries(
+      Array.from(formData.entries())
+    ) as Record<string, string>)
+
+    return attributes
+  }
+
+  const submitAndHideForm: FormEventHandler = (e) => {
+    e.preventDefault()
+
+    if (!componentRef.current) return
+
+    const formData = new FormData(componentRef.current)
+    const attributes = extractAttributes(formData)
+
+    const onSuccess = () => setIsComponentVisible(false)
+
+    updateShoppingList(listId, attributes, onSuccess)
   }
 
   useEffect(() => {
@@ -140,7 +177,7 @@ const ShoppingList = ({
             className={styles.form}
             title={title}
             maxTotalWidth={maxEditFormWidth}
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={submitAndHideForm}
           />
         ) : (
           <h3 className={styles.title}>{title}</h3>

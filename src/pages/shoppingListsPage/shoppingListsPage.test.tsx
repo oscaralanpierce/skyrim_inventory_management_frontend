@@ -8,6 +8,7 @@ import {
   postShoppingListsUnprocessable,
   getGamesAllSuccess,
   getShoppingLists,
+  patchShoppingList,
   deleteShoppingList,
   deleteShoppingListServerError,
 } from '../../support/msw/handlers'
@@ -25,8 +26,8 @@ import ShoppingListsPage from './shoppingListsPage'
  *     another tab while it is set to that game without refreshing. In the test environment, these
  *     conditions are hard to create since there would first be a 404 error when fetching the
  *     shopping lists in the first place.
- * - 404 response when destroying a shopping list (similar reasons to above)
- * - 405 response when destroying a shopping list
+ * - 404 response when editing or destroying a shopping list (similar reasons to above)
+ * - 405 response when editing destroying a shopping list
  *   - This response from the API occurs when the client makes a PUT, PATCH, or DELETE request
  *     on an aggregate list. In the UI, aggregate lists are always uneditable and won't have a
  *     button, so the only way to get this response would be to intercept the request, change the
@@ -739,6 +740,61 @@ describe('ShoppingListsPage', () => {
               "Oops! Something unexpected went wrong. We're sorry! Please try again later."
             )
           ).toBeTruthy()
+        })
+      })
+    })
+  })
+
+  describe('editing a shopping list', () => {
+    describe('when successful', () => {
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingLists,
+        patchShoppingList
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('updates the title', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesProvider>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesProvider>
+          </PageProvider>,
+          'http://localhost:5173/shopping_lists?gameId=77'
+        )
+
+        const editIcon = await wrapper.findByTestId('editShoppingList6')
+
+        act(() => {
+          fireEvent.click(editIcon)
+        })
+
+        const titleInput = wrapper.getByTestId('editListTitle')
+        const editForm = wrapper.getByLabelText('List title edit form')
+
+        act(() => {
+          fireEvent.change(titleInput, {
+            target: { value: 'Alchemy Ingredients' },
+          })
+          fireEvent.submit(editForm)
+        })
+
+        await waitFor(() => {
+          // Name should be changed and form hidden
+          expect(wrapper.queryByLabelText('List title edit form')).toBeFalsy()
+          expect(wrapper.getByText('Alchemy Ingredients')).toBeTruthy()
+          expect(wrapper.queryByText('Hjerim')).toBeFalsy()
+
+          // The other list titles should be unchanged
+          expect(wrapper.getByText('All Items')).toBeTruthy()
+          expect(wrapper.getByText('Breezehome')).toBeTruthy()
+          expect(wrapper.getByText('Honeyside')).toBeTruthy()
         })
       })
     })
