@@ -1,0 +1,35 @@
+.root {
+  display: inline-flex;
+  width: var(--max-width);
+}
+
+.input {
+  font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 10px 8px 7px 0;
+  background-color: var(--scheme-color);
+  color: var(--text-color);
+  border-style: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.submit {
+  background-color: var(--scheme-color);
+  border-style: none;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  cursor: pointer;
+  flex: 0;
+}
+
+.fa {
+  color: var(--text-color);
+  font-size: 17px;
+  margin-bottom: -2px;
+}
+
+.fa:hover {
+  color: var(--icon-hover-color);
+}
