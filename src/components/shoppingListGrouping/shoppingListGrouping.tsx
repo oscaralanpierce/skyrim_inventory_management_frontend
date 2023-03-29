@@ -4,7 +4,6 @@ import { useShoppingListsContext } from '../../hooks/contexts'
 import ShoppingListItem from '../shoppingListItem/shoppingListItem'
 import ShoppingList from '../shoppingList/shoppingList'
 import styles from './shoppingListGrouping.module.css'
-import { useEffect } from 'react'
 
 const ShoppingListGrouping = () => {
   const { shoppingLists } = useShoppingListsContext()
