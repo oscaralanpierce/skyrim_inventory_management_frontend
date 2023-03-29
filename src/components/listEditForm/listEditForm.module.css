@@ -1,0 +1,39 @@
+.root {
+  display: grid;
+  grid-template-columns: auto min-content;
+  align-content: center;
+  max-width: var(--max-width);
+  background-color: var(--scheme-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.input {
+  font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0;
+  padding-right: 8px;
+  background-color: inherit;
+  color: var(--text-color);
+  border-style: none;
+}
+
+.submit {
+  background-color: inherit;
+  color: var(--text-color);
+  cursor: pointer;
+  flex: 0;
+  padding-right: 0;
+  border-style: none;
+  border-radius: 0;
+}
+
+.fa {
+  color: var(--text-color);
+  font-size: 17px;
+  margin-bottom: -2px;
+}
+
+.fa:hover {
+  color: var(--icon-hover-color);
+}

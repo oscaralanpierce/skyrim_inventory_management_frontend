@@ -7,6 +7,7 @@ import {
 import {
   postShoppingLists,
   getShoppingLists,
+  patchShoppingList,
   deleteShoppingList,
 } from './wrapper/shoppingListEndpoints'
 
@@ -17,5 +18,6 @@ export {
   deleteGame,
   postShoppingLists,
   getShoppingLists,
+  patchShoppingList,
   deleteShoppingList,
 }

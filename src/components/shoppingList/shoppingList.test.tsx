@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 import { describe, test, expect } from 'vitest'
-import { act, fireEvent, waitFor } from '@testing-library/react'
+import { act, fireEvent } from '@testing-library/react'
 import { renderAuthenticated } from '../../support/testUtils'
 import {
   gamesContextValue,
@@ -48,6 +48,14 @@ describe('ShoppingList', () => {
         )
 
         expect(wrapper.getByTestId('destroyShoppingList4')).toBeTruthy()
+      })
+
+      test('has an edit icon', () => {
+        const wrapper = renderWithContexts(
+          <ShoppingList listId={4} title="My Shopping List" canEdit />
+        )
+
+        expect(wrapper.getByTestId('editShoppingList4')).toBeTruthy()
       })
 
       test('matches snapshot', () => {
@@ -103,6 +111,27 @@ describe('ShoppingList', () => {
         expect(wrapper.getByTestId('destroyShoppingList4')).toBeTruthy()
       })
 
+      test('has an edit icon', () => {
+        const wrapper = renderWithContexts(
+          <ShoppingList listId={4} title="My Shopping List" canEdit>
+            <ShoppingListItem
+              key="unique-key-1"
+              itemId={1}
+              description="List Item 1"
+              quantity={4}
+            />
+            <ShoppingListItem
+              key="unique-key-2"
+              itemId={2}
+              description="List Item 2"
+              quantity={1}
+            />
+          </ShoppingList>
+        )
+
+        expect(wrapper.getByTestId('editShoppingList4')).toBeTruthy()
+      })
+
       test('matches snapshot', () => {
         const wrapper = renderWithContexts(
           <ShoppingList listId={4} title="My Shopping List" canEdit>
@@ -132,6 +161,14 @@ describe('ShoppingList', () => {
         )
 
         expect(wrapper.queryByTestId('destroyShoppingList3')).toBeFalsy()
+      })
+
+      test("doesn't have an edit icon", () => {
+        const wrapper = renderWithContexts(
+          <ShoppingList listId={3} title="My Shopping List" />
+        )
+
+        expect(wrapper.queryByTestId('editShoppingList3')).toBeFalsy()
       })
 
       test('matches snapshot', () => {
@@ -187,6 +224,127 @@ describe('ShoppingList', () => {
         )
         expect(destroyShoppingList).not.toHaveBeenCalled()
       })
+    })
+  })
+
+  describe('displaying the edit form', () => {
+    test('displays the form', () => {
+      const wrapper = renderWithContexts(
+        <ShoppingList listId={3} title="My Shopping List" canEdit />
+      )
+
+      const editButton = wrapper.getByTestId('editShoppingList3')
+
+      act(() => {
+        fireEvent.click(editButton)
+      })
+
+      expect(wrapper.queryByText('My Shopping List')).toBeFalsy()
+      expect(wrapper.getByRole('form')).toBeTruthy()
+    })
+
+    test('hides the form when you click the edit button again', () => {
+      const wrapper = renderWithContexts(
+        <ShoppingList listId={3} title="My Shopping List" canEdit />
+      )
+
+      const editButton = wrapper.getByTestId('editShoppingList3')
+
+      act(() => {
+        fireEvent.click(editButton)
+      })
+
+      expect(wrapper.queryByText('My Shopping List')).toBeFalsy()
+      expect(wrapper.getByRole('form')).toBeTruthy()
+
+      act(() => {
+        fireEvent.click(editButton)
+      })
+
+      expect(wrapper.getByText('My Shopping List')).toBeTruthy()
+      expect(wrapper.queryByRole('form')).toBeFalsy()
+    })
+
+    test('hides the form when you click outside the input', () => {
+      const wrapper = renderWithContexts(
+        <ShoppingList listId={3} title="My Shopping List" canEdit />
+      )
+
+      const editButton = wrapper.getByTestId('editShoppingList3')
+
+      act(() => {
+        fireEvent.click(editButton)
+      })
+
+      expect(wrapper.queryByText('My Shopping List')).toBeFalsy()
+      expect(wrapper.getByRole('form')).toBeTruthy()
+
+      act(() => {
+        // Only easily identifiable element outside the edit form, thanks
+        // testing library
+        fireEvent.click(wrapper.getByTestId('destroyShoppingList3'))
+      })
+
+      expect(wrapper.getByText('My Shopping List')).toBeTruthy()
+      expect(wrapper.queryByRole('form')).toBeFalsy()
+    })
+
+    test('hides the form when you press Escape', () => {
+      const wrapper = renderWithContexts(
+        <ShoppingList listId={3} title="My Shopping List" canEdit />
+      )
+
+      const editButton = wrapper.getByTestId('editShoppingList3')
+
+      act(() => {
+        fireEvent.click(editButton)
+      })
+
+      act(() => {
+        fireEvent(
+          document,
+          new KeyboardEvent('keydown', { bubbles: true, key: 'Escape' })
+        )
+      })
+
+      expect(wrapper.getByText('My Shopping List')).toBeTruthy()
+      expect(wrapper.queryByRole('form')).toBeFalsy()
+    })
+
+    test("doesn't hide the form when you press a key other than escape", () => {
+      const wrapper = renderWithContexts(
+        <ShoppingList listId={3} title="My Shopping List" canEdit />
+      )
+
+      const editButton = wrapper.getByTestId('editShoppingList3')
+
+      act(() => {
+        fireEvent.click(editButton)
+      })
+
+      act(() => {
+        fireEvent(
+          document,
+          new KeyboardEvent('keydown', { bubbles: true, key: ' ' })
+        )
+      })
+
+      expect(wrapper.queryByText('My Shopping List')).toBeFalsy()
+      expect(wrapper.getByRole('form')).toBeTruthy()
+    })
+
+    test('matches snapshot', () => {
+      const wrapper = renderWithContexts(
+        <ShoppingList listId={3} title="My Shopping List" canEdit />
+      )
+
+      const editButton = wrapper.getByTestId('editShoppingList3')
+
+      act(() => {
+        fireEvent.click(editButton)
+      })
+
+      expect(wrapper).toMatchSnapshot()
     })
   })
 })

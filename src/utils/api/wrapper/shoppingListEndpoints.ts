@@ -5,6 +5,8 @@ import {
   type PostShoppingListsReturnValue,
   type GetShoppingListsResponse,
   type GetShoppingListsReturnValue,
+  type PatchShoppingListResponse,
+  type PatchShoppingListReturnValue,
   type DeleteShoppingListResponse,
   type DeleteShoppingListReturnValue,
 } from '../returnValues/shoppingLists'
@@ -75,6 +77,45 @@ export const getShoppingLists = (
     return response.json().then((json) => {
       const returnValue = { status: response.status, json }
 
+      if (returnValue.status === 500)
+        throw new InternalServerError(json.errors.join(', '))
+
+      return returnValue
+    })
+  })
+}
+
+/**
+ *
+ * PATCH /shopping_lists/:id endpoint
+ *
+ */
+
+export const patchShoppingList = (
+  listId: number,
+  body: RequestShoppingList,
+  token: string
+): Promise<PatchShoppingListReturnValue> | never => {
+  const uri = `${BASE_URI}/shopping_lists/${listId}`
+  const headers = combinedHeaders(token)
+
+  return fetch(uri, {
+    method: 'PATCH',
+    body: JSON.stringify(body),
+    headers,
+  }).then((res) => {
+    const response = res as PatchShoppingListResponse
+
+    if (response.status === 401) throw new AuthorizationError()
+    if (response.status === 404) throw new NotFoundError()
+
+    return response.json().then((json) => {
+      const returnValue = { status: response.status, json }
+
+      if (returnValue.status === 405)
+        throw new MethodNotAllowedError(json.errors.join(', '))
+      if (returnValue.status === 422)
+        throw new UnprocessableEntityError(json.errors)
       if (returnValue.status === 500)
         throw new InternalServerError(json.errors.join(', '))
 

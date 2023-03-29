@@ -18,6 +18,9 @@ import {
   postShoppingListsUnprocessable,
   postShoppingListsServerError,
   getShoppingLists,
+  patchShoppingList,
+  patchShoppingListUnprocessable,
+  patchShoppingListServerError,
   deleteShoppingList,
   deleteShoppingListServerError,
 } from './shoppingLists'
@@ -40,6 +43,9 @@ export {
   postShoppingListsUnprocessable,
   postShoppingListsServerError,
   getShoppingLists,
+  patchShoppingList,
+  patchShoppingListUnprocessable,
+  patchShoppingListServerError,
   deleteShoppingList,
   deleteShoppingListServerError,
 }

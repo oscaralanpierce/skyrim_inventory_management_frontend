@@ -11,6 +11,7 @@ import { LOADING, DONE, ERROR, type LoadingState } from '../utils/loadingStates'
 import {
   postShoppingLists,
   getShoppingLists,
+  patchShoppingList,
   deleteShoppingList,
 } from '../utils/api/simApi'
 import { useQueryString } from '../hooks/useQueryString'
@@ -31,6 +32,12 @@ export interface ShoppingListsContextType {
     onSuccess?: CallbackFunction,
     onError?: CallbackFunction
   ) => void
+  updateShoppingList: (
+    listId: number,
+    attributes: RequestShoppingList,
+    onSuccess?: CallbackFunction,
+    onError?: CallbackFunction
+  ) => void
   destroyShoppingList: (
     listId: number,
     onSuccess?: CallbackFunction,
@@ -42,6 +49,7 @@ export const ShoppingListsContext = createContext<ShoppingListsContextType>({
   shoppingLists: [] as ResponseShoppingList[],
   shoppingListsLoadingState: LOADING,
   createShoppingList: () => {},
+  updateShoppingList: () => {},
   destroyShoppingList: () => {},
 })
 
@@ -127,6 +135,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
                 type: 'success',
                 message: 'Success! Your shopping list has been created.',
               })
+
               onSuccess && onSuccess()
             }
           })
@@ -185,6 +194,62 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
         })
     }
   }, [user, token, activeGame])
+
+  /**
+   *
+   * Update specified shopping list
+   *
+   */
+
+  const updateShoppingList = useCallback(
+    (
+      listId: number,
+      attributes: RequestShoppingList,
+      onSuccess?: CallbackFunction,
+      onError?: CallbackFunction
+    ) => {
+      if (user && token) {
+        patchShoppingList(listId, attributes, token)
+          .then(({ status, json }) => {
+            if (status === 200) {
+              const newShoppingLists = [...shoppingLists]
+              const index = newShoppingLists.findIndex(
+                ({ id }) => id === listId
+              )
+              newShoppingLists[index] = json
+
+              setShoppingLists(newShoppingLists)
+
+              onSuccess && onSuccess()
+            } else {
+              // This won't happen but TypeScript doesn't know that
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message: UNEXPECTED_ERROR_MESSAGE,
+              })
+
+              onError && onError()
+            }
+          })
+          .catch((e: ApiError) => {
+            if (e.code === 404) {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message:
+                  "The shopping list you tried to update doesn't exist, or doesn't belong to you. Please refresh and try again.",
+              })
+            } else {
+              handleApiError(e)
+            }
+
+            onError && onError()
+          })
+      }
+    },
+    [user, token, shoppingLists]
+  )
 
   /**
    *
@@ -263,6 +328,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     shoppingLists,
     shoppingListsLoadingState,
     createShoppingList,
+    updateShoppingList,
     destroyShoppingList,
   }
 
