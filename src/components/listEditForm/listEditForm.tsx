@@ -6,13 +6,14 @@ import {
   type CSSProperties,
   type ChangeEvent,
   type RefObject,
-  type KeyboardEventHandler,
 } from 'react'
 import classNames from 'classnames'
 import { useColorScheme } from '../../hooks/contexts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareCheck } from '@fortawesome/free-regular-svg-icons'
 import styles from './listEditForm.module.css'
+
+const FIXED_BUTTON_WIDTH = 72 // px
 
 interface EditFormProps {
   formRef: RefObject<any>
@@ -29,7 +30,9 @@ const ListEditForm = ({
   title,
   onSubmit,
 }: EditFormProps) => {
-  const [maxTextWidth, setMaxTextWidth] = useState<number | null>(null)
+  const [maxTextWidth, setMaxTextWidth] = useState<number>(
+    maxTotalWidth - FIXED_BUTTON_WIDTH - 2
+  )
 
   const getInputTextWidth = (text: string) => {
     const canvas = document.createElement('canvas')
@@ -39,11 +42,9 @@ const ListEditForm = ({
 
     context.font = '21px Quattrocento Sans'
 
-    const max = maxTextWidth || maxTotalWidth
-
     const textWidth = context.measureText(text).width
 
-    return Math.min(textWidth, max)
+    return Math.min(textWidth, maxTextWidth)
   }
 
   const [inputValue, setInputValue] = useState(title)
@@ -80,11 +81,7 @@ const ListEditForm = ({
   }, [])
 
   useEffect(() => {
-    setMaxTextWidth(
-      buttonRef.current
-        ? maxTotalWidth - buttonRef.current.offsetWidth
-        : maxTotalWidth
-    )
+    setMaxTextWidth(maxTotalWidth - FIXED_BUTTON_WIDTH - 2)
     setInputWidth(`${getInputTextWidth(inputValue)}px`)
   }, [maxTotalWidth])
 

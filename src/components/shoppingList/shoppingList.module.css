@@ -41,7 +41,8 @@
 
 .form {
   height: 26px;
-  margin: 8px 0 7px 8px;
+  margin-left: 8px;
+  padding: 7px 0;
   max-width: var(--max-title-width);
 }
 

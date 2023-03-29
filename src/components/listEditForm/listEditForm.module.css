@@ -1,9 +1,10 @@
 .root {
   display: grid;
   grid-template-columns: auto min-content;
-  width: var(--max-width);
+  max-width: var(--max-width);
   background-color: var(--scheme-color);
   align-content: center;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .input {
@@ -15,16 +16,15 @@
   background-color: inherit;
   color: var(--text-color);
   border-style: none;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .submit {
   background-color: inherit;
-  border-style: none;
-  border-bottom: 1px solid var(--border-color);
   color: var(--text-color);
   cursor: pointer;
   flex: 0;
+  padding-right: 0;
+  border-style: none;
 }
 
 .fa {

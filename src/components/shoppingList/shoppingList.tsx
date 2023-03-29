@@ -139,7 +139,9 @@ const ShoppingList = ({
   useEffect(() => {
     if (!canEdit || !size || !iconsRef.current) return
 
-    setMaxEditFormWidth(size.width - iconsRef.current.offsetWidth - 16)
+    const width = size.width - iconsRef.current.offsetWidth + 16
+
+    setMaxEditFormWidth(width)
   }, [canEdit, size])
 
   return (

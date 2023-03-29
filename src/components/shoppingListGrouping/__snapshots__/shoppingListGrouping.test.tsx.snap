@@ -244,7 +244,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
         >
           <div
             class="_root_62bc73"
-            style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -48px;"
+            style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -16px;"
           >
             <div
               aria-controls="list4Details"
@@ -446,7 +446,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
         >
           <div
             class="_root_62bc73"
-            style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -48px;"
+            style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -16px;"
           >
             <div
               aria-controls="list5Details"
@@ -587,7 +587,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
         >
           <div
             class="_root_62bc73"
-            style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+            style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
           >
             <div
               aria-controls="list6Details"
@@ -837,7 +837,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
       >
         <div
           class="_root_62bc73"
-          style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -48px;"
+          style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -16px;"
         >
           <div
             aria-controls="list4Details"
@@ -1039,7 +1039,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
       >
         <div
           class="_root_62bc73"
-          style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -48px;"
+          style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -16px;"
         >
           <div
             aria-controls="list5Details"
@@ -1180,7 +1180,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
       >
         <div
           class="_root_62bc73"
-          style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+          style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
         >
           <div
             aria-controls="list6Details"

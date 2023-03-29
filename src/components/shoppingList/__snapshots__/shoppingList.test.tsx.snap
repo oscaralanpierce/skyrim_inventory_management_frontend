@@ -7,7 +7,7 @@ exports[`ShoppingList > displaying a list > when the list is not editable > matc
     <div>
       <div
         class="_root_62bc73"
-        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
       >
         <div
           aria-controls="list3Details"
@@ -91,7 +91,7 @@ exports[`ShoppingList > displaying a list > when the list is not editable > matc
   "container": <div>
     <div
       class="_root_62bc73"
-      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
     >
       <div
         aria-controls="list3Details"
@@ -232,7 +232,7 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
     <div>
       <div
         class="_root_62bc73"
-        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
       >
         <div
           aria-controls="list4Details"
@@ -433,7 +433,7 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
   "container": <div>
     <div
       class="_root_62bc73"
-      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
     >
       <div
         aria-controls="list4Details"
@@ -691,7 +691,7 @@ exports[`ShoppingList > displaying a list > when there are no list items > match
     <div>
       <div
         class="_root_62bc73"
-        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
       >
         <div
           aria-controls="list4Details"
@@ -775,7 +775,7 @@ exports[`ShoppingList > displaying a list > when there are no list items > match
   "container": <div>
     <div
       class="_root_62bc73"
-      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
     >
       <div
         aria-controls="list4Details"
@@ -916,7 +916,7 @@ exports[`ShoppingList > displaying the edit form > matches snapshot 1`] = `
     <div>
       <div
         class="_root_62bc73"
-        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+        style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
       >
         <div
           aria-controls="list3Details"
@@ -971,7 +971,7 @@ exports[`ShoppingList > displaying the edit form > matches snapshot 1`] = `
           <form
             aria-label="List title edit form"
             class="_form_62bc73 _root_8f85e1"
-            style="--scheme-color: #00a323; --text-color: #fff; --border-color: #00821c; --icon-hover-color: #ccecd3; --max-width: -16px;"
+            style="--scheme-color: #00a323; --text-color: #fff; --border-color: #00821c; --icon-hover-color: #ccecd3; --max-width: 16px;"
           >
             <input
               aria-label="title"
@@ -1033,7 +1033,7 @@ exports[`ShoppingList > displaying the edit form > matches snapshot 1`] = `
   "container": <div>
     <div
       class="_root_62bc73"
-      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -48px;"
+      style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
     >
       <div
         aria-controls="list3Details"
@@ -1088,7 +1088,7 @@ exports[`ShoppingList > displaying the edit form > matches snapshot 1`] = `
         <form
           aria-label="List title edit form"
           class="_form_62bc73 _root_8f85e1"
-          style="--scheme-color: #00a323; --text-color: #fff; --border-color: #00821c; --icon-hover-color: #ccecd3; --max-width: -16px;"
+          style="--scheme-color: #00a323; --text-color: #fff; --border-color: #00821c; --icon-hover-color: #ccecd3; --max-width: 16px;"
         >
           <input
             aria-label="title"
