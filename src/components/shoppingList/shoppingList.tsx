@@ -10,6 +10,7 @@ import {
 import AnimateHeight from 'react-animate-height'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import { type RequestShoppingList } from '../../types/apiData'
 import {
   useColorScheme,
   usePageContext,
@@ -19,7 +20,6 @@ import useComponentVisible from '../../hooks/useComponentVisible'
 import useSize from '../../hooks/useSize'
 import ListEditForm from '../listEditForm/listEditForm'
 import styles from './shoppingList.module.css'
-import { RequestShoppingList } from '../../types/apiData'
 
 interface ShoppingListProps {
   listId: number

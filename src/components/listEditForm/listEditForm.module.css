@@ -1,9 +1,9 @@
 .root {
   display: grid;
   grid-template-columns: auto min-content;
+  align-content: center;
   max-width: var(--max-width);
   background-color: var(--scheme-color);
-  align-content: center;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -25,6 +25,7 @@
   flex: 0;
   padding-right: 0;
   border-style: none;
+  border-radius: 0;
 }
 
 .fa {

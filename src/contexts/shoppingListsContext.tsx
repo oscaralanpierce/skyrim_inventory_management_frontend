@@ -135,6 +135,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
                 type: 'success',
                 message: 'Success! Your shopping list has been created.',
               })
+
               onSuccess && onSuccess()
             }
           })
@@ -218,6 +219,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
               newShoppingLists[index] = json
 
               setShoppingLists(newShoppingLists)
+
               onSuccess && onSuccess()
             } else {
               // This won't happen but TypeScript doesn't know that

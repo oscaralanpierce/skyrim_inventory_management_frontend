@@ -10,7 +10,7 @@ const useComponentVisible = () => {
   const triggerRefContains = (element: Node) =>
     triggerRef.current?.contains(element)
 
-  const handleHideDiv = (e: KeyboardEvent) => {
+  const handleHideComponent = (e: KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsComponentVisible(false)
     }
@@ -27,10 +27,10 @@ const useComponentVisible = () => {
   }
 
   useEffect(() => {
-    document.addEventListener('keydown', handleHideDiv, true)
+    document.addEventListener('keydown', handleHideComponent, true)
     document.addEventListener('click', handleClickOutside, true)
     return () => {
-      document.removeEventListener('keydown', handleHideDiv, true)
+      document.removeEventListener('keydown', handleHideComponent, true)
       document.removeEventListener('click', handleClickOutside, true)
     }
   })

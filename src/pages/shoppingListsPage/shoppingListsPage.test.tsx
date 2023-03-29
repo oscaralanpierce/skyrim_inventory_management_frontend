@@ -864,7 +864,7 @@ describe('ShoppingListsPage', () => {
       })
     })
 
-    describe('when there is an Unprocessable Entity response', () => {
+    describe('when there is an internal server error response', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
         getShoppingLists,

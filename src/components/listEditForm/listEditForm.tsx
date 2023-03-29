@@ -18,9 +18,9 @@ const FIXED_BUTTON_WIDTH = 72 // px
 interface EditFormProps {
   formRef: RefObject<any>
   maxTotalWidth: number
-  className?: string
   title: string
   onSubmit: FormEventHandler
+  className?: string
 }
 
 const ListEditForm = ({
@@ -30,9 +30,7 @@ const ListEditForm = ({
   title,
   onSubmit,
 }: EditFormProps) => {
-  const [maxTextWidth, setMaxTextWidth] = useState<number>(
-    maxTotalWidth - FIXED_BUTTON_WIDTH - 2
-  )
+  const MAX_TEXT_WIDTH = maxTotalWidth - FIXED_BUTTON_WIDTH - 2
 
   const getInputTextWidth = (text: string) => {
     const canvas = document.createElement('canvas')
@@ -44,7 +42,7 @@ const ListEditForm = ({
 
     const textWidth = context.measureText(text).width
 
-    return Math.min(textWidth, maxTextWidth)
+    return Math.min(textWidth, MAX_TEXT_WIDTH)
   }
 
   const [inputValue, setInputValue] = useState(title)
@@ -81,7 +79,6 @@ const ListEditForm = ({
   }, [])
 
   useEffect(() => {
-    setMaxTextWidth(maxTotalWidth - FIXED_BUTTON_WIDTH - 2)
     setInputWidth(`${getInputTextWidth(inputValue)}px`)
   }, [maxTotalWidth])
 
