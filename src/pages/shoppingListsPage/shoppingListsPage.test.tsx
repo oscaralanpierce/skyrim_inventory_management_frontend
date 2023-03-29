@@ -9,6 +9,8 @@ import {
   getGamesAllSuccess,
   getShoppingLists,
   patchShoppingList,
+  patchShoppingListUnprocessable,
+  patchShoppingListServerError,
   deleteShoppingList,
   deleteShoppingListServerError,
 } from '../../support/msw/handlers'
@@ -795,6 +797,124 @@ describe('ShoppingListsPage', () => {
           expect(wrapper.getByText('All Items')).toBeTruthy()
           expect(wrapper.getByText('Breezehome')).toBeTruthy()
           expect(wrapper.getByText('Honeyside')).toBeTruthy()
+        })
+      })
+    })
+
+    describe('when there is an Unprocessable Entity response', () => {
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingLists,
+        patchShoppingListUnprocessable
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays the flash message', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesProvider>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesProvider>
+          </PageProvider>,
+          'http://localhost:5173/shopping_lists?gameId=77'
+        )
+
+        const editIcon = await wrapper.findByTestId('editShoppingList6')
+
+        act(() => {
+          fireEvent.click(editIcon)
+        })
+
+        const titleInput = wrapper.getByTestId('editListTitle')
+        const editForm = wrapper.getByLabelText('List title edit form')
+
+        act(() => {
+          fireEvent.change(titleInput, {
+            target: { value: 'Alchemy Ingredients' },
+          })
+          fireEvent.submit(editForm)
+        })
+
+        await waitFor(() => {
+          // The form should not be hidden nor the name changed
+          expect(wrapper.getByLabelText('List title edit form')).toBeTruthy()
+          expect(wrapper.queryByText('Alchemy Ingredients')).toBeFalsy()
+          expect(wrapper.queryByText('Hjerim')).toBeFalsy()
+
+          // The flash component should be shown
+          expect(
+            wrapper.getByText(
+              '2 error(s) prevented your shopping list from being saved:'
+            )
+          ).toBeTruthy()
+          expect(
+            wrapper.getByText('Title must be unique per game')
+          ).toBeTruthy()
+          expect(
+            wrapper.getByText(
+              "Title can only contain alphanumeric characters, spaces, commas (,), hyphens (-), and apostrophes (')"
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
+
+    describe('when there is an Unprocessable Entity response', () => {
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingLists,
+        patchShoppingListServerError
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays the flash message', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesProvider>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesProvider>
+          </PageProvider>,
+          'http://localhost:5173/shopping_lists?gameId=77'
+        )
+
+        const editIcon = await wrapper.findByTestId('editShoppingList6')
+
+        act(() => {
+          fireEvent.click(editIcon)
+        })
+
+        const titleInput = wrapper.getByTestId('editListTitle')
+        const editForm = wrapper.getByLabelText('List title edit form')
+
+        act(() => {
+          fireEvent.change(titleInput, {
+            target: { value: 'Alchemy Ingredients' },
+          })
+          fireEvent.submit(editForm)
+        })
+
+        await waitFor(() => {
+          // The form should not be hidden nor the name changed
+          expect(wrapper.getByLabelText('List title edit form')).toBeTruthy()
+          expect(wrapper.queryByText('Alchemy Ingredients')).toBeFalsy()
+          expect(wrapper.queryByText('Hjerim')).toBeFalsy()
+
+          // The flash component should be shown
+          expect(
+            wrapper.getByText(
+              "Oops! Something unexpected went wrong. We're sorry! Please try again later."
+            )
+          ).toBeTruthy()
         })
       })
     })
