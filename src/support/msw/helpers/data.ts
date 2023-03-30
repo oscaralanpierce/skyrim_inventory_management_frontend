@@ -98,13 +98,14 @@ export const newShoppingListItem = (
   attributes: RequestShoppingListItem,
   listId: number
 ) => {
-  const shoppingList = allShoppingLists.find(({ id }) => id === listId)
+  const list = allShoppingLists.find(({ id }) => id === listId)
 
-  if (!shoppingList)
+  if (!list)
     throw new Error(`No shopping list with ID ${listId} in the test data`)
 
+  const shoppingList = { ...list }
   const allLists = shoppingListsForGame(shoppingList.game_id)
-  const aggregateList = allLists[0]
+  const aggregateList = { ...allLists[0] }
 
   const newItem: ResponseShoppingListItem = {
     id: 42,

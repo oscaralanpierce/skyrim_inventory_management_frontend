@@ -78,7 +78,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
    *
    */
 
-  const handleApiError = (e: ApiError) => {
+  const handleApiError = (e: ApiError, resource?: 'list' | 'list item') => {
     if (import.meta.env.DEV) console.error(e.message)
 
     if (e.code === 401) {
@@ -87,7 +87,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       setFlashProps({
         hidden: false,
         type: 'error',
-        header: `${e.message.length} error(s) prevented your shopping list from being saved:`,
+        header: `${e.message.length} error(s) prevented your shopping ${
+          resource || 'list'
+        } from being saved:`,
         message: e.message,
       })
     } else {
@@ -333,8 +335,59 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
    *
    */
   const createShoppingListItem = useCallback(
-    (listId: number, attributes: RequestShoppingListItem) => {
-      /* noop for now */
+    (
+      listId: number,
+      attributes: RequestShoppingListItem,
+      onSuccess?: CallbackFunction,
+      onError?: CallbackFunction
+    ) => {
+      if (user && token) {
+        postShoppingListItems(listId, attributes, token)
+          .then(({ status, json }) => {
+            if (status === 200 || status === 201) {
+              const newShoppingLists = [...shoppingLists]
+
+              for (let list of json) {
+                const index = newShoppingLists.findIndex(
+                  ({ id }) => id === list.id
+                )
+                newShoppingLists[index] = list
+              }
+
+              setShoppingLists(newShoppingLists)
+
+              setFlashProps({
+                hidden: false,
+                type: 'success',
+                message: 'Success! Your shopping list item has been created.',
+              })
+
+              onSuccess && onSuccess()
+            } else {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message: UNEXPECTED_ERROR_MESSAGE,
+              })
+
+              onError && onError()
+            }
+          })
+          .catch((e: ApiError) => {
+            if (e.code === 404) {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message:
+                  "The shopping list you tried to add an item to doesn't exist, or doesn't belong to you. Please refresh and try again.",
+              })
+            } else {
+              handleApiError(e, 'list item')
+            }
+
+            onError && onError()
+          })
+      }
     },
     [user, token, shoppingLists]
   )

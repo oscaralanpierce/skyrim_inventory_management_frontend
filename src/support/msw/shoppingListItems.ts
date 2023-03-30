@@ -46,7 +46,7 @@ export const postShoppingListItemsUnprocessable = rest.post(
 )
 
 export const postShoppingListItemsServerError = rest.post(
-  `${BASE_URI}/shoppingLists/:listId/list_items`,
+  `${BASE_URI}/shopping_lists/:listId/list_items`,
   (_req, res, ctx) => {
     return res(
       ctx.status(500),

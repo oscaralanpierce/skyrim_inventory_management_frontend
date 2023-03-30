@@ -1,16 +1,11 @@
 import { ReactElement } from 'react'
 import { describe, test, expect } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
-import { setupServer } from 'msw/node'
 import { renderAuthenticated } from '../../support/testUtils'
 import {
   gamesContextValue,
   shoppingListsContextValue,
 } from '../../support/data/contextValues'
-import {
-  postGamesSuccess,
-  postShoppingListsSuccess,
-} from '../../support/msw/handlers'
 import { GREEN } from '../../utils/colorSchemes'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesContext } from '../../contexts/gamesContext'
@@ -363,9 +358,5 @@ describe('ShoppingList', () => {
 
       expect(wrapper).toMatchSnapshot()
     })
-  })
-
-  describe('adding a list item', () => {
-    //
   })
 })
