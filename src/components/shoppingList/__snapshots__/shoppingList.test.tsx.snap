@@ -77,11 +77,95 @@ exports[`ShoppingList > displaying a list > when the list is not editable > matc
             <div
               class="_details_62bc73"
             >
-              <p
-                class="_emptyList_62bc73"
+              <div
+                class="_root_003550 _collapsed_003550"
+                style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
-                This shopping list has no list items.
-              </p>
+                <div
+                  class="_triggerContainer_003550"
+                >
+                  <button
+                    aria-controls="addItemToShoppingList3"
+                    aria-expanded="false"
+                    class="_trigger_003550"
+                  >
+                    Add item to list...
+                  </button>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="addItemToShoppingList3"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <form
+                      aria-label="Shopping list item creation form"
+                      class="_form_003550"
+                    >
+                      <label
+                        class="_label_003550"
+                      >
+                        Description
+                        <input
+                          class="_input_003550"
+                          name="description"
+                          placeholder="Description"
+                          required=""
+                          type="text"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Quantity
+                        <input
+                          class="_input_003550"
+                          inputmode="numeric"
+                          min="1"
+                          name="quantity"
+                          required=""
+                          type="number"
+                          value="1"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Unit Weight
+                        <input
+                          class="_input_003550"
+                          inputmode="numeric"
+                          min="0"
+                          name="unit_weight"
+                          placeholder="Unit Weight"
+                          step="0.1"
+                          type="number"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Notes
+                        <input
+                          class="_input_003550"
+                          name="notes"
+                          placeholder="Notes"
+                          type="text"
+                        />
+                      </label>
+                      <button
+                        class="_submit_003550"
+                        type="submit"
+                      >
+                        Add to List
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -161,11 +245,95 @@ exports[`ShoppingList > displaying a list > when the list is not editable > matc
           <div
             class="_details_62bc73"
           >
-            <p
-              class="_emptyList_62bc73"
+            <div
+              class="_root_003550 _collapsed_003550"
+              style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
-              This shopping list has no list items.
-            </p>
+              <div
+                class="_triggerContainer_003550"
+              >
+                <button
+                  aria-controls="addItemToShoppingList3"
+                  aria-expanded="false"
+                  class="_trigger_003550"
+                >
+                  Add item to list...
+                </button>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="addItemToShoppingList3"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <form
+                    aria-label="Shopping list item creation form"
+                    class="_form_003550"
+                  >
+                    <label
+                      class="_label_003550"
+                    >
+                      Description
+                      <input
+                        class="_input_003550"
+                        name="description"
+                        placeholder="Description"
+                        required=""
+                        type="text"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Quantity
+                      <input
+                        class="_input_003550"
+                        inputmode="numeric"
+                        min="1"
+                        name="quantity"
+                        required=""
+                        type="number"
+                        value="1"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Unit Weight
+                      <input
+                        class="_input_003550"
+                        inputmode="numeric"
+                        min="0"
+                        name="unit_weight"
+                        placeholder="Unit Weight"
+                        step="0.1"
+                        type="number"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Notes
+                      <input
+                        class="_input_003550"
+                        name="notes"
+                        placeholder="Notes"
+                        type="text"
+                      />
+                    </label>
+                    <button
+                      class="_submit_003550"
+                      type="submit"
+                    >
+                      Add to List
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -302,6 +470,95 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
             <div
               class="_details_62bc73"
             >
+              <div
+                class="_root_003550 _collapsed_003550"
+                style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
+              >
+                <div
+                  class="_triggerContainer_003550"
+                >
+                  <button
+                    aria-controls="addItemToShoppingList4"
+                    aria-expanded="false"
+                    class="_trigger_003550"
+                  >
+                    Add item to list...
+                  </button>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="addItemToShoppingList4"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <form
+                      aria-label="Shopping list item creation form"
+                      class="_form_003550"
+                    >
+                      <label
+                        class="_label_003550"
+                      >
+                        Description
+                        <input
+                          class="_input_003550"
+                          name="description"
+                          placeholder="Description"
+                          required=""
+                          type="text"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Quantity
+                        <input
+                          class="_input_003550"
+                          inputmode="numeric"
+                          min="1"
+                          name="quantity"
+                          required=""
+                          type="number"
+                          value="1"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Unit Weight
+                        <input
+                          class="_input_003550"
+                          inputmode="numeric"
+                          min="0"
+                          name="unit_weight"
+                          placeholder="Unit Weight"
+                          step="0.1"
+                          type="number"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Notes
+                        <input
+                          class="_input_003550"
+                          name="notes"
+                          placeholder="Notes"
+                          type="text"
+                        />
+                      </label>
+                      <button
+                        class="_submit_003550"
+                        type="submit"
+                      >
+                        Add to List
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
               <div
                 class="_root_fccc8d"
                 style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
@@ -503,6 +760,95 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
           <div
             class="_details_62bc73"
           >
+            <div
+              class="_root_003550 _collapsed_003550"
+              style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
+            >
+              <div
+                class="_triggerContainer_003550"
+              >
+                <button
+                  aria-controls="addItemToShoppingList4"
+                  aria-expanded="false"
+                  class="_trigger_003550"
+                >
+                  Add item to list...
+                </button>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="addItemToShoppingList4"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <form
+                    aria-label="Shopping list item creation form"
+                    class="_form_003550"
+                  >
+                    <label
+                      class="_label_003550"
+                    >
+                      Description
+                      <input
+                        class="_input_003550"
+                        name="description"
+                        placeholder="Description"
+                        required=""
+                        type="text"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Quantity
+                      <input
+                        class="_input_003550"
+                        inputmode="numeric"
+                        min="1"
+                        name="quantity"
+                        required=""
+                        type="number"
+                        value="1"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Unit Weight
+                      <input
+                        class="_input_003550"
+                        inputmode="numeric"
+                        min="0"
+                        name="unit_weight"
+                        placeholder="Unit Weight"
+                        step="0.1"
+                        type="number"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Notes
+                      <input
+                        class="_input_003550"
+                        name="notes"
+                        placeholder="Notes"
+                        type="text"
+                      />
+                    </label>
+                    <button
+                      class="_submit_003550"
+                      type="submit"
+                    >
+                      Add to List
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
             <div
               class="_root_fccc8d"
               style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
@@ -761,11 +1107,95 @@ exports[`ShoppingList > displaying a list > when there are no list items > match
             <div
               class="_details_62bc73"
             >
-              <p
-                class="_emptyList_62bc73"
+              <div
+                class="_root_003550 _collapsed_003550"
+                style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
-                This shopping list has no list items.
-              </p>
+                <div
+                  class="_triggerContainer_003550"
+                >
+                  <button
+                    aria-controls="addItemToShoppingList4"
+                    aria-expanded="false"
+                    class="_trigger_003550"
+                  >
+                    Add item to list...
+                  </button>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="addItemToShoppingList4"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <form
+                      aria-label="Shopping list item creation form"
+                      class="_form_003550"
+                    >
+                      <label
+                        class="_label_003550"
+                      >
+                        Description
+                        <input
+                          class="_input_003550"
+                          name="description"
+                          placeholder="Description"
+                          required=""
+                          type="text"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Quantity
+                        <input
+                          class="_input_003550"
+                          inputmode="numeric"
+                          min="1"
+                          name="quantity"
+                          required=""
+                          type="number"
+                          value="1"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Unit Weight
+                        <input
+                          class="_input_003550"
+                          inputmode="numeric"
+                          min="0"
+                          name="unit_weight"
+                          placeholder="Unit Weight"
+                          step="0.1"
+                          type="number"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Notes
+                        <input
+                          class="_input_003550"
+                          name="notes"
+                          placeholder="Notes"
+                          type="text"
+                        />
+                      </label>
+                      <button
+                        class="_submit_003550"
+                        type="submit"
+                      >
+                        Add to List
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -845,11 +1275,95 @@ exports[`ShoppingList > displaying a list > when there are no list items > match
           <div
             class="_details_62bc73"
           >
-            <p
-              class="_emptyList_62bc73"
+            <div
+              class="_root_003550 _collapsed_003550"
+              style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
-              This shopping list has no list items.
-            </p>
+              <div
+                class="_triggerContainer_003550"
+              >
+                <button
+                  aria-controls="addItemToShoppingList4"
+                  aria-expanded="false"
+                  class="_trigger_003550"
+                >
+                  Add item to list...
+                </button>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="addItemToShoppingList4"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <form
+                    aria-label="Shopping list item creation form"
+                    class="_form_003550"
+                  >
+                    <label
+                      class="_label_003550"
+                    >
+                      Description
+                      <input
+                        class="_input_003550"
+                        name="description"
+                        placeholder="Description"
+                        required=""
+                        type="text"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Quantity
+                      <input
+                        class="_input_003550"
+                        inputmode="numeric"
+                        min="1"
+                        name="quantity"
+                        required=""
+                        type="number"
+                        value="1"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Unit Weight
+                      <input
+                        class="_input_003550"
+                        inputmode="numeric"
+                        min="0"
+                        name="unit_weight"
+                        placeholder="Unit Weight"
+                        step="0.1"
+                        type="number"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Notes
+                      <input
+                        class="_input_003550"
+                        name="notes"
+                        placeholder="Notes"
+                        type="text"
+                      />
+                    </label>
+                    <button
+                      class="_submit_003550"
+                      type="submit"
+                    >
+                      Add to List
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1019,11 +1533,95 @@ exports[`ShoppingList > displaying the edit form > matches snapshot 1`] = `
             <div
               class="_details_62bc73"
             >
-              <p
-                class="_emptyList_62bc73"
+              <div
+                class="_root_003550 _collapsed_003550"
+                style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
-                This shopping list has no list items.
-              </p>
+                <div
+                  class="_triggerContainer_003550"
+                >
+                  <button
+                    aria-controls="addItemToShoppingList3"
+                    aria-expanded="false"
+                    class="_trigger_003550"
+                  >
+                    Add item to list...
+                  </button>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="addItemToShoppingList3"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <form
+                      aria-label="Shopping list item creation form"
+                      class="_form_003550"
+                    >
+                      <label
+                        class="_label_003550"
+                      >
+                        Description
+                        <input
+                          class="_input_003550"
+                          name="description"
+                          placeholder="Description"
+                          required=""
+                          type="text"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Quantity
+                        <input
+                          class="_input_003550"
+                          inputmode="numeric"
+                          min="1"
+                          name="quantity"
+                          required=""
+                          type="number"
+                          value="1"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Unit Weight
+                        <input
+                          class="_input_003550"
+                          inputmode="numeric"
+                          min="0"
+                          name="unit_weight"
+                          placeholder="Unit Weight"
+                          step="0.1"
+                          type="number"
+                        />
+                      </label>
+                      <label
+                        class="_label_003550"
+                      >
+                        Notes
+                        <input
+                          class="_input_003550"
+                          name="notes"
+                          placeholder="Notes"
+                          type="text"
+                        />
+                      </label>
+                      <button
+                        class="_submit_003550"
+                        type="submit"
+                      >
+                        Add to List
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1136,11 +1734,95 @@ exports[`ShoppingList > displaying the edit form > matches snapshot 1`] = `
           <div
             class="_details_62bc73"
           >
-            <p
-              class="_emptyList_62bc73"
+            <div
+              class="_root_003550 _collapsed_003550"
+              style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
-              This shopping list has no list items.
-            </p>
+              <div
+                class="_triggerContainer_003550"
+              >
+                <button
+                  aria-controls="addItemToShoppingList3"
+                  aria-expanded="false"
+                  class="_trigger_003550"
+                >
+                  Add item to list...
+                </button>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="addItemToShoppingList3"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <form
+                    aria-label="Shopping list item creation form"
+                    class="_form_003550"
+                  >
+                    <label
+                      class="_label_003550"
+                    >
+                      Description
+                      <input
+                        class="_input_003550"
+                        name="description"
+                        placeholder="Description"
+                        required=""
+                        type="text"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Quantity
+                      <input
+                        class="_input_003550"
+                        inputmode="numeric"
+                        min="1"
+                        name="quantity"
+                        required=""
+                        type="number"
+                        value="1"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Unit Weight
+                      <input
+                        class="_input_003550"
+                        inputmode="numeric"
+                        min="0"
+                        name="unit_weight"
+                        placeholder="Unit Weight"
+                        step="0.1"
+                        type="number"
+                      />
+                    </label>
+                    <label
+                      class="_label_003550"
+                    >
+                      Notes
+                      <input
+                        class="_input_003550"
+                        name="notes"
+                        placeholder="Notes"
+                        type="text"
+                      />
+                    </label>
+                    <button
+                      class="_submit_003550"
+                      type="submit"
+                    >
+                      Add to List
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

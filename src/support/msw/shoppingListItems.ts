@@ -12,7 +12,7 @@ const listIds = allShoppingListItems.map(({ id }) => id)
  */
 
 // Handles 201 and 404 responses
-export const postShoppingListItems = rest.post(
+export const postShoppingListItemsSuccess = rest.post(
   `${BASE_URI}/shopping_lists/:listId/list_items`,
   async (req, res, ctx) => {
     const listId: number = Number(req.params.listId)

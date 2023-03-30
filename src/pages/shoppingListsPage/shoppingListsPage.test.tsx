@@ -3,15 +3,15 @@ import { waitFor, act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
-  postShoppingLists,
+  postShoppingListsSuccess,
   postShoppingListsServerError,
   postShoppingListsUnprocessable,
   getGamesAllSuccess,
-  getShoppingLists,
-  patchShoppingList,
+  getShoppingListsSuccess,
+  patchShoppingListSuccess,
   patchShoppingListUnprocessable,
   patchShoppingListServerError,
-  deleteShoppingList,
+  deleteShoppingListSuccess,
   deleteShoppingListServerError,
 } from '../../support/msw/handlers'
 import { PageProvider } from '../../contexts/pageContext'
@@ -75,7 +75,10 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when the game is set in the query string', () => {
-      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -154,7 +157,10 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when no game is set in the query string', () => {
-      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -182,7 +188,10 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when an invalid value is set in the query string', () => {
-      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -211,7 +220,10 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when the game does not exist', () => {
-      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -241,7 +253,7 @@ describe('ShoppingListsPage', () => {
   })
 
   describe('changing games', () => {
-    const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+    const mockServer = setupServer(getGamesAllSuccess, getShoppingListsSuccess)
 
     beforeAll(() => mockServer.listen())
     beforeEach(() => mockServer.resetHandlers())
@@ -277,8 +289,8 @@ describe('ShoppingListsPage', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
-        postShoppingLists
+        getShoppingListsSuccess,
+        postShoppingListsSuccess
       )
 
       beforeAll(() => mockServer.listen())
@@ -389,7 +401,7 @@ describe('ShoppingListsPage', () => {
     describe('when the response is a 422', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         postShoppingListsUnprocessable
       )
 
@@ -441,7 +453,7 @@ describe('ShoppingListsPage', () => {
     describe('when the response is a 500 error', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         postShoppingListsServerError
       )
 
@@ -487,8 +499,8 @@ describe('ShoppingListsPage', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
-        deleteShoppingList
+        getShoppingListsSuccess,
+        deleteShoppingListSuccess
       )
 
       beforeAll(() => mockServer.listen())
@@ -702,7 +714,7 @@ describe('ShoppingListsPage', () => {
     describe('when unsuccessful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         deleteShoppingListServerError
       )
 
@@ -751,8 +763,8 @@ describe('ShoppingListsPage', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
-        patchShoppingList
+        getShoppingListsSuccess,
+        patchShoppingListSuccess
       )
 
       beforeAll(() => mockServer.listen())
@@ -804,7 +816,7 @@ describe('ShoppingListsPage', () => {
     describe('when there is an Unprocessable Entity response', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         patchShoppingListUnprocessable
       )
 
@@ -867,7 +879,7 @@ describe('ShoppingListsPage', () => {
     describe('when there is an internal server error response', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         patchShoppingListServerError
       )
 
