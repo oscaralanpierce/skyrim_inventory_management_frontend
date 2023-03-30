@@ -2,6 +2,7 @@ import { createContext, useEffect, useState, useCallback } from 'react'
 import { signOutWithGoogle } from '../firebase'
 import { type CallbackFunction } from '../types/functions'
 import {
+  type RequestShoppingListItem,
   type RequestShoppingList,
   type ResponseShoppingList,
 } from '../types/apiData'
@@ -13,6 +14,7 @@ import {
   getShoppingLists,
   patchShoppingList,
   deleteShoppingList,
+  postShoppingListItems,
 } from '../utils/api/simApi'
 import { useQueryString } from '../hooks/useQueryString'
 import {
@@ -43,6 +45,12 @@ export interface ShoppingListsContextType {
     onSuccess?: CallbackFunction,
     onError?: CallbackFunction
   ) => void
+  createShoppingListItem: (
+    listId: number,
+    attributes: RequestShoppingListItem,
+    onSuccess?: CallbackFunction,
+    onError?: CallbackFunction
+  ) => void
 }
 
 export const ShoppingListsContext = createContext<ShoppingListsContextType>({
@@ -51,6 +59,7 @@ export const ShoppingListsContext = createContext<ShoppingListsContextType>({
   createShoppingList: () => {},
   updateShoppingList: () => {},
   destroyShoppingList: () => {},
+  createShoppingListItem: () => {},
 })
 
 export const ShoppingListsProvider = ({ children }: ProviderProps) => {
@@ -320,6 +329,18 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
   /**
    *
+   * Create a new shopping list item
+   *
+   */
+  const createShoppingListItem = useCallback(
+    (listId: number, attributes: RequestShoppingListItem) => {
+      /* noop for now */
+    },
+    [user, token, shoppingLists]
+  )
+
+  /**
+   *
    * Set the context provider value
    *
    */
@@ -330,6 +351,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     createShoppingList,
     updateShoppingList,
     destroyShoppingList,
+    createShoppingListItem,
   }
 
   /**

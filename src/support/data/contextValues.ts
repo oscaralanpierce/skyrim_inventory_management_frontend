@@ -85,6 +85,7 @@ export const shoppingListsContextValueEmpty: ShoppingListsContextType = {
   createShoppingList: noop,
   updateShoppingList: noop,
   destroyShoppingList: noop,
+  createShoppingListItem: noop,
 }
 
 export const shoppingListsContextValue: ShoppingListsContextType = {
@@ -93,6 +94,7 @@ export const shoppingListsContextValue: ShoppingListsContextType = {
   createShoppingList: noop,
   updateShoppingList: noop,
   destroyShoppingList: noop,
+  createShoppingListItem: noop,
 }
 
 export const shoppingListsContextValueLoading: ShoppingListsContextType = {
@@ -101,6 +103,7 @@ export const shoppingListsContextValueLoading: ShoppingListsContextType = {
   createShoppingList: noop,
   updateShoppingList: noop,
   destroyShoppingList: noop,
+  createShoppingListItem: noop,
 }
 
 export const shoppingListsContextValueError: ShoppingListsContextType = {
@@ -109,4 +112,5 @@ export const shoppingListsContextValueError: ShoppingListsContextType = {
   createShoppingList: noop,
   updateShoppingList: noop,
   destroyShoppingList: noop,
+  createShoppingListItem: noop,
 }
