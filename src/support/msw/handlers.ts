@@ -24,6 +24,11 @@ import {
   deleteShoppingList,
   deleteShoppingListServerError,
 } from './shoppingLists'
+import {
+  postShoppingListItems,
+  postShoppingListItemsUnprocessable,
+  postShoppingListItemsServerError,
+} from './shoppingListItems'
 
 export {
   postGamesSuccess,
@@ -48,4 +53,7 @@ export {
   patchShoppingListServerError,
   deleteShoppingList,
   deleteShoppingListServerError,
+  postShoppingListItems,
+  postShoppingListItemsUnprocessable,
+  postShoppingListItemsServerError,
 }
