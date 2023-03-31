@@ -51,6 +51,7 @@ export const EditableWithListItems = () => (
           description="Steel Ingot"
           quantity={5}
           unitWeight={1.0}
+          canEdit
         />
         <ShoppingListItem
           itemId={2}
@@ -58,6 +59,7 @@ export const EditableWithListItems = () => (
           quantity={200000000000}
           unitWeight={400000000000}
           notes="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet velit adipsci"
+          canEdit
         />
       </ShoppingList>
     </ColorProvider>
