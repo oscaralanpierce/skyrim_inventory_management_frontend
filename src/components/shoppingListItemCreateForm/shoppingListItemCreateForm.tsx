@@ -1,4 +1,10 @@
-import { FormEventHandler, useRef, useState, type CSSProperties } from 'react'
+import {
+  FormEventHandler,
+  useRef,
+  useState,
+  useEffect,
+  type CSSProperties,
+} from 'react'
 import classNames from 'classnames'
 import AnimateHeight from 'react-animate-height'
 import { RequestShoppingListItem } from '../../types/apiData'
@@ -13,6 +19,7 @@ const ShoppingListItemCreateForm = ({ listId }: CreateFormProps) => {
   const { createShoppingListItem } = useShoppingListsContext()
   const [expanded, setExpanded] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const {
     schemeColorDark,
@@ -63,13 +70,22 @@ const ShoppingListItemCreateForm = ({ listId }: CreateFormProps) => {
       formData
     ) as unknown as RequestShoppingListItem
 
-    const resetForm = () => {
-      formRef.current?.reset()
-      setExpanded(false)
-    }
+    const collapseForm = () => setExpanded(false)
 
-    createShoppingListItem(listId, attributes, resetForm)
+    createShoppingListItem(listId, attributes, collapseForm, collapseForm)
   }
+
+  useEffect(() => {
+    if (inputRef.current) {
+      if (expanded) {
+        inputRef.current.focus()
+      } else {
+        if (formRef.current) formRef.current.reset()
+
+        inputRef.current.blur()
+      }
+    }
+  }, [expanded])
 
   return (
     <div
@@ -101,6 +117,7 @@ const ShoppingListItemCreateForm = ({ listId }: CreateFormProps) => {
             Description
             <input
               className={styles.input}
+              ref={inputRef}
               type="text"
               name="description"
               placeholder="Description"
@@ -116,6 +133,7 @@ const ShoppingListItemCreateForm = ({ listId }: CreateFormProps) => {
               inputMode="numeric"
               min={1}
               name="quantity"
+              placeholder="Quantity"
               defaultValue={1}
               required
             />

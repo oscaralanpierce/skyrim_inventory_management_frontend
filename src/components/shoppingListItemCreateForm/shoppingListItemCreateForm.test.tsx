@@ -84,6 +84,7 @@ describe('ShoppingListItemCreateForm', () => {
           description: 'Iron ingot',
           quantity: 2,
         },
+        expect.any(Function),
         expect.any(Function)
       )
     })
