@@ -23,7 +23,7 @@ export const postShoppingListItems = (
   attributes: RequestShoppingListItem,
   token: string
 ): Promise<PostShoppingListItemsReturnValue> | never => {
-  const uri = `${BASE_URI}/shopping_lists/${listId}/list_items`
+  const uri = `${BASE_URI}/shopping_lists/${listId}/shopping_list_items`
   const headers = combinedHeaders(token)
 
   return fetch(uri, {

@@ -13,7 +13,7 @@ const listIds = allShoppingListItems.map(({ id }) => id)
 
 // Handles 201 and 404 responses
 export const postShoppingListItemsSuccess = rest.post(
-  `${BASE_URI}/shopping_lists/:listId/list_items`,
+  `${BASE_URI}/shopping_lists/:listId/shopping_list_items`,
   async (req, res, ctx) => {
     const listId: number = Number(req.params.listId)
 
@@ -31,7 +31,7 @@ export const postShoppingListItemsSuccess = rest.post(
 // Returns the same validation errors regardless of request body
 // submitted
 export const postShoppingListItemsUnprocessable = rest.post(
-  `${BASE_URI}/shopping_lists/:listId/list_items`,
+  `${BASE_URI}/shopping_lists/:listId/shopping_list_items`,
   (_req, res, ctx) => {
     return res(
       ctx.status(422),
@@ -46,7 +46,7 @@ export const postShoppingListItemsUnprocessable = rest.post(
 )
 
 export const postShoppingListItemsServerError = rest.post(
-  `${BASE_URI}/shopping_lists/:listId/list_items`,
+  `${BASE_URI}/shopping_lists/:listId/shopping_list_items`,
   (_req, res, ctx) => {
     return res(
       ctx.status(500),
