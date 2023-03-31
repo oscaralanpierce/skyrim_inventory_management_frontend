@@ -15,6 +15,7 @@ import {
   patchShoppingList,
   deleteShoppingList,
   postShoppingListItems,
+  deleteShoppingListItem,
 } from '../utils/api/simApi'
 import { useQueryString } from '../hooks/useQueryString'
 import {
@@ -51,6 +52,11 @@ export interface ShoppingListsContextType {
     onSuccess?: CallbackFunction,
     onError?: CallbackFunction
   ) => void
+  destroyShoppingListItem: (
+    itemId: number,
+    onSuccess?: CallbackFunction,
+    onError?: CallbackFunction
+  ) => void
 }
 
 export const ShoppingListsContext = createContext<ShoppingListsContextType>({
@@ -60,6 +66,7 @@ export const ShoppingListsContext = createContext<ShoppingListsContextType>({
   updateShoppingList: () => {},
   destroyShoppingList: () => {},
   createShoppingListItem: () => {},
+  destroyShoppingListItem: () => {},
 })
 
 export const ShoppingListsProvider = ({ children }: ProviderProps) => {
@@ -334,6 +341,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
    * Create a new shopping list item
    *
    */
+
   const createShoppingListItem = useCallback(
     (
       listId: number,
@@ -394,6 +402,68 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
   /**
    *
+   * Destroy a shopping list item
+   *
+   */
+
+  const destroyShoppingListItem = useCallback(
+    (
+      itemId: number,
+      onSuccess?: CallbackFunction,
+      onError?: CallbackFunction
+    ) => {
+      if (user && token) {
+        deleteShoppingListItem(itemId, token)
+          .then(({ status, json }) => {
+            if (status === 200) {
+              const newShoppingLists = [...shoppingLists]
+
+              newShoppingLists[0] = json[0]
+
+              const index = newShoppingLists.findIndex(
+                ({ id }) => id === json[1].id
+              )
+              newShoppingLists[index] = json[1]
+
+              setShoppingLists(newShoppingLists)
+              setFlashProps({
+                hidden: false,
+                type: 'success',
+                message: 'Success! Your shopping list item was deleted.',
+              })
+
+              onSuccess && onSuccess()
+            } else {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message: UNEXPECTED_ERROR_MESSAGE,
+              })
+
+              onError && onError()
+            }
+          })
+          .catch((e: ApiError) => {
+            if (e.code === 404) {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message:
+                  "You have tried to delete a list item that doesn't exist, or doesn't belong to you. Please refresh and try again.",
+              })
+            } else {
+              handleApiError(e, 'list item')
+            }
+
+            onError && onError()
+          })
+      }
+    },
+    [user, token, shoppingLists]
+  )
+
+  /**
+   *
    * Set the context provider value
    *
    */
@@ -405,6 +475,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     updateShoppingList,
     destroyShoppingList,
     createShoppingListItem,
+    destroyShoppingListItem,
   }
 
   /**
