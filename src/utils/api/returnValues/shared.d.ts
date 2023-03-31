@@ -1,4 +1,4 @@
-import { ApiResponse, HTTPHeaders } from '../http'
+import { ApiResponse, type HTTPHeaders } from '../http'
 
 export class UnauthorizedResponse extends ApiResponse {
   status: 401

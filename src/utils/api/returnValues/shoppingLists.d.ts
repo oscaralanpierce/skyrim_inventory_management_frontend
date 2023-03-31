@@ -1,5 +1,8 @@
-import { ApiResponse, HTTPHeaders } from '../http'
-import { ErrorObject, ResponseShoppingList } from '../../../types/apiData'
+import { ApiResponse, type HTTPHeaders } from '../http'
+import {
+  type ErrorObject,
+  type ResponseShoppingList,
+} from '../../../types/apiData'
 import { UnauthorizedResponse } from './shared'
 
 /**

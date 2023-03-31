@@ -1,6 +1,8 @@
 import { type RequestShoppingListItem } from '../../../types/apiData'
 import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
+  type DeleteShoppingListItemResponse,
+  type DeleteShoppingListItemReturnValue,
   type PostShoppingListItemsResponse,
   type PostShoppingListItemsReturnValue,
 } from '../returnValues/shoppingListItems'
@@ -43,6 +45,38 @@ export const postShoppingListItems = (
         throw new MethodNotAllowedError(json.errors.join(', '))
       if (returnValue.status === 422)
         throw new UnprocessableEntityError(json.errors)
+      if (returnValue.status === 500)
+        throw new InternalServerError(json.errors.join(', '))
+
+      return returnValue
+    })
+  })
+}
+
+/**
+ *
+ * DELETE /shopping_list_items/:id endpoint
+ *
+ */
+
+export const deleteShoppingListItem = (
+  itemId: number,
+  token: string
+): Promise<DeleteShoppingListItemReturnValue> | never => {
+  const uri = `${BASE_URI}/shopping_list_items/${itemId}`
+  const headers = combinedHeaders(token)
+
+  return fetch(uri, { method: 'DELETE', headers }).then((res) => {
+    const response = res as DeleteShoppingListItemResponse
+
+    if (response.status === 401) throw new AuthorizationError()
+    if (response.status === 404) throw new NotFoundError()
+
+    return response.json().then((json) => {
+      const returnValue = { status: response.status, json }
+
+      if (returnValue.status === 405)
+        throw new MethodNotAllowedError(json.errors.join(', '))
       if (returnValue.status === 500)
         throw new InternalServerError(json.errors.join(', '))
 

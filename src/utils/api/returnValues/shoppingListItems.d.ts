@@ -1,5 +1,8 @@
-import { ApiResponse, HTTPHeaders } from '../http'
-import { ErrorObject, ResponseShoppingList } from '../../../types/apiData'
+import { ApiResponse, type HTTPHeaders } from '../http'
+import {
+  type ErrorObject,
+  type ResponseShoppingList,
+} from '../../../types/apiData'
 import { UnauthorizedResponse } from './shared'
 
 /**
@@ -54,3 +57,52 @@ export type PostShoppingListItemsResponse =
 export type PostShoppingListItemsReturnValue =
   | { status: 200 | 201; json: ResponseShoppingList[] }
   | { status: 405 | 422 | 500; json: ErrorObject }
+
+/**
+ *
+ * Types used for DELETE /shopping_list_items/:id endpoint
+ *
+ */
+
+class DeleteShoppingListItemSuccessResponse extends ApiResponse {
+  status: 200
+
+  constructor(
+    body,
+    options: { status: 200; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class DeleteShoppingListItemNotFoundResponse extends ApiResponse {
+  status: 404
+
+  constructor(
+    body?: null,
+    options: { status: 404; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class DeleteShoppingListItemErrorResponse extends ApiResponse {
+  status: 405 | 500
+
+  constructor(
+    body,
+    options: { status: 405 | 500; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+export type DeleteShoppingListItemResponse =
+  | UnauthorizedResponse
+  | DeleteShoppingListItemSuccessResponse
+  | DeleteShoppingListItemNotFoundResponse
+  | DeleteShoppingListItemErrorResponse
+
+export type DeleteShoppingListItemReturnValue =
+  | { status: 200; json: ResponseShoppingList[] }
+  | { status: 405 | 500; json: ErrorObject }
