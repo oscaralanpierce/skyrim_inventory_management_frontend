@@ -1,9 +1,10 @@
 import { rest } from 'msw'
+import { allShoppingLists } from '../data/shoppingLists'
 import { allShoppingListItems } from '../data/shoppingListItems'
 import { newShoppingListItem } from './helpers/data'
 
 const BASE_URI = 'http://localhost:3000'
-const listIds = allShoppingListItems.map(({ id }) => id)
+const listIds = allShoppingLists.map(({ id }) => id)
 
 /**
  *
@@ -53,6 +54,57 @@ export const postShoppingListItemsServerError = rest.post(
       ctx.json({
         errors: ['Something went horribly wrong'],
       })
+    )
+  }
+)
+
+/**
+ *
+ * DELETE /shopping_list_items/:id
+ *
+ */
+
+// Note: If the list item, list, and aggregate list are all
+//       found in the test data, this will delete the item
+//       from the regular list AND the aggregate list regardless
+//       of whether there are other matching items. This function
+//       does not match the complexity of back-end behaviour.
+export const deleteShoppingListItemSuccess = rest.delete(
+  `${BASE_URI}/shopping_list_items/:id`,
+  (req, res, ctx) => {
+    const itemId: number = Number(req.params.id)
+    const item = allShoppingListItems.find(({ id }) => id === itemId)
+
+    if (!item) return res(ctx.status(404))
+
+    const listId = item.list_id
+    const regList = allShoppingLists.find(({ id }) => id === listId)
+
+    if (!regList) return res(ctx.status(404))
+
+    const aggListId = regList.aggregate_list_id
+    const aggList = allShoppingLists.find(({ id }) => id === aggListId)
+
+    if (!aggList) return res(ctx.status(404))
+
+    const list = { ...regList }
+    const aggregate = { ...aggList }
+
+    list.list_items = list.list_items.filter(({ id }) => id !== itemId)
+    aggregate.list_items = aggregate.list_items.filter(
+      ({ description }) => description !== item.description
+    )
+
+    return res(ctx.status(200), ctx.json([aggregate, list]))
+  }
+)
+
+export const deleteShoppingListItemServerError = rest.delete(
+  `${BASE_URI}/shopping_list_items/:id`,
+  (_req, res, ctx) => {
+    return res(
+      ctx.status(500),
+      ctx.json({ errors: ['Something went horribly wrong'] })
     )
   }
 )
