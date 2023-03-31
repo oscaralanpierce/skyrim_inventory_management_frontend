@@ -18,6 +18,7 @@ import {
 } from '../../hooks/contexts'
 import useComponentVisible from '../../hooks/useComponentVisible'
 import useSize from '../../hooks/useSize'
+import ShoppingListItemCreateForm from '../shoppingListItemCreateForm/shoppingListItemCreateForm'
 import ListEditForm from '../listEditForm/listEditForm'
 import styles from './shoppingList.module.css'
 
@@ -191,7 +192,12 @@ const ShoppingList = ({
         height={expanded ? 'auto' : 0}
       >
         <div className={styles.details}>
-          {children || (
+          {canEdit && <ShoppingListItemCreateForm listId={listId} />}
+          {/* We only want to display the "This shopping list has no list items"
+          message if there is no list item creation form */}
+          {children || canEdit ? (
+            children
+          ) : (
             <p className={styles.emptyList}>
               This shopping list has no list items.
             </p>

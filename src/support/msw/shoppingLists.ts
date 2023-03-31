@@ -15,7 +15,7 @@ const listIds = allShoppingLists.map(({ id }) => id)
  */
 
 // Handles both 201 and 404 responses
-export const postShoppingLists = rest.post(
+export const postShoppingListsSuccess = rest.post(
   `${BASE_URI}/games/:gameId/shopping_lists`,
   async (req, res, ctx) => {
     const gameId: number = Number(req.params.gameId)
@@ -63,12 +63,12 @@ export const postShoppingListsServerError = rest.post(
 
 /**
  *
- * GET /games/:game_id/shopping_lists
+ * GET /shopping_lists/:id
  *
  */
 
 // Covers both success and 404 cases
-export const getShoppingLists = rest.get(
+export const getShoppingListsSuccess = rest.get(
   `${BASE_URI}/games/:gameId/shopping_lists`,
   (req, res, ctx) => {
     const gameId: number = Number(req.params.gameId)
@@ -88,7 +88,7 @@ export const getShoppingLists = rest.get(
  */
 
 // Covers both success and 404 cases
-export const patchShoppingList = rest.patch(
+export const patchShoppingListSuccess = rest.patch(
   `${BASE_URI}/shopping_lists/:id`,
   async (req, res, ctx) => {
     const listId: number = Number(req.params.id)
@@ -137,7 +137,7 @@ export const patchShoppingListServerError = rest.patch(
  */
 
 // Covers both success and 404 cases
-export const deleteShoppingList = rest.delete(
+export const deleteShoppingListSuccess = rest.delete(
   `${BASE_URI}/shopping_lists/:listId`,
   (req, res, ctx) => {
     const listId = Number(req.params.listId)

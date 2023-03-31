@@ -3,40 +3,49 @@ import { waitFor, act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
-  postShoppingLists,
+  postShoppingListsSuccess,
   postShoppingListsServerError,
   postShoppingListsUnprocessable,
   getGamesAllSuccess,
-  getShoppingLists,
-  patchShoppingList,
+  getShoppingListsSuccess,
+  patchShoppingListSuccess,
   patchShoppingListUnprocessable,
   patchShoppingListServerError,
-  deleteShoppingList,
+  deleteShoppingListSuccess,
   deleteShoppingListServerError,
+  postShoppingListItemsSuccess,
+  postShoppingListItemsUnprocessable,
+  postShoppingListItemsServerError,
 } from '../../support/msw/handlers'
+import {
+  gamesContextValue,
+  shoppingListsContextValue,
+} from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesProvider } from '../../contexts/gamesContext'
+import { GamesProvider, GamesContext } from '../../contexts/gamesContext'
 import { ShoppingListsProvider } from '../../contexts/shoppingListsContext'
 import ShoppingListsPage from './shoppingListsPage'
 
 /**
  *
  * Not able to be tested:
- * - 404 response when creating a shopping list
+ * - 404 responses when creating a shopping list
  *   - This would be a difficult state to arrive at. You would have to have multiple tabs open
  *     and delete a game from the games page in one tab and then create a shopping list in
  *     another tab while it is set to that game without refreshing. In the test environment, these
  *     conditions are hard to create since there would first be a 404 error when fetching the
  *     shopping lists in the first place.
- * - 404 response when editing or destroying a shopping list (similar reasons to above)
- * - 405 response when editing destroying a shopping list
+ * - 404 response when editing/destroying a shopping list or managing its items
+ * - 405 response when editing/destroying a shopping list or managing its items
  *   - This response from the API occurs when the client makes a PUT, PATCH, or DELETE request
  *     on an aggregate list. In the UI, aggregate lists are always uneditable and won't have a
- *     button, so the only way to get this response would be to intercept the request, change the
- *     list ID, and send it on to the server.
+ *     way to update them or manage items, so the only way to get this response would be to
+ *     intercept the request, change the list ID, and send it on to the server.
  * - That the create form input is cleared after request completion or not
  * - Flash warning being shown and no request made if, somehow, the user submits the create form
  *   before an active game has been set
+ * - New list items get added to the correct list
+ * -
  *
  */
 
@@ -75,7 +84,10 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when the game is set in the query string', () => {
-      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -154,7 +166,10 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when no game is set in the query string', () => {
-      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -182,7 +197,10 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when an invalid value is set in the query string', () => {
-      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -211,7 +229,10 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when the game does not exist', () => {
-      const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+      const mockServer = setupServer(
+        getGamesAllSuccess,
+        getShoppingListsSuccess
+      )
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -241,7 +262,7 @@ describe('ShoppingListsPage', () => {
   })
 
   describe('changing games', () => {
-    const mockServer = setupServer(getGamesAllSuccess, getShoppingLists)
+    const mockServer = setupServer(getGamesAllSuccess, getShoppingListsSuccess)
 
     beforeAll(() => mockServer.listen())
     beforeEach(() => mockServer.resetHandlers())
@@ -277,8 +298,8 @@ describe('ShoppingListsPage', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
-        postShoppingLists
+        getShoppingListsSuccess,
+        postShoppingListsSuccess
       )
 
       beforeAll(() => mockServer.listen())
@@ -389,7 +410,7 @@ describe('ShoppingListsPage', () => {
     describe('when the response is a 422', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         postShoppingListsUnprocessable
       )
 
@@ -441,7 +462,7 @@ describe('ShoppingListsPage', () => {
     describe('when the response is a 500 error', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         postShoppingListsServerError
       )
 
@@ -487,8 +508,8 @@ describe('ShoppingListsPage', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
-        deleteShoppingList
+        getShoppingListsSuccess,
+        deleteShoppingListSuccess
       )
 
       beforeAll(() => mockServer.listen())
@@ -702,7 +723,7 @@ describe('ShoppingListsPage', () => {
     describe('when unsuccessful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         deleteShoppingListServerError
       )
 
@@ -751,8 +772,8 @@ describe('ShoppingListsPage', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
-        patchShoppingList
+        getShoppingListsSuccess,
+        patchShoppingListSuccess
       )
 
       beforeAll(() => mockServer.listen())
@@ -804,7 +825,7 @@ describe('ShoppingListsPage', () => {
     describe('when there is an Unprocessable Entity response', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         patchShoppingListUnprocessable
       )
 
@@ -867,7 +888,7 @@ describe('ShoppingListsPage', () => {
     describe('when there is an internal server error response', () => {
       const mockServer = setupServer(
         getGamesAllSuccess,
-        getShoppingLists,
+        getShoppingListsSuccess,
         patchShoppingListServerError
       )
 
@@ -910,6 +931,156 @@ describe('ShoppingListsPage', () => {
           expect(wrapper.queryByText('Hjerim')).toBeFalsy()
 
           // The flash component should be shown
+          expect(
+            wrapper.getByText(
+              "Oops! Something unexpected went wrong. We're sorry! Please try again later."
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
+  })
+
+  describe('adding a list item', () => {
+    describe('when successful', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        postShoppingListItemsSuccess
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('adds the new item to the list and aggregate list', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const form = (
+          await wrapper.findAllByLabelText('Shopping list item creation form')
+        )[0]
+        const descField = (await wrapper.findAllByLabelText('Description'))[0]
+        const quantityField = (await wrapper.findAllByLabelText('Quantity'))[0]
+
+        act(() => {
+          fireEvent.change(descField, {
+            target: { value: 'Dwarven metal ingots' },
+          })
+          fireEvent.change(quantityField, { target: { value: '3' } })
+          fireEvent.submit(form)
+        })
+
+        await waitFor(() => {
+          expect(wrapper.getAllByText('Dwarven metal ingots').length).toEqual(2)
+          expect(
+            wrapper.getByText(
+              'Success! Your shopping list item has been created.'
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
+
+    describe('when there is an unprocessable entity error', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        postShoppingListItemsUnprocessable
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays a flash error message', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const form = (
+          await wrapper.findAllByLabelText('Shopping list item creation form')
+        )[0]
+        const descField = (await wrapper.findAllByLabelText('Description'))[0]
+        const quantityField = (await wrapper.findAllByLabelText('Quantity'))[0]
+
+        act(() => {
+          fireEvent.change(descField, {
+            target: { value: 'Dwarven metal ingots' },
+          })
+          fireEvent.change(quantityField, { target: { value: '3' } })
+          fireEvent.submit(form)
+        })
+
+        await waitFor(() => {
+          expect(
+            wrapper.queryAllByText('Dwarven metal ingots')?.length
+          ).toBeFalsy()
+          expect(
+            wrapper.getByText(
+              '2 error(s) prevented your shopping list item from being saved:'
+            )
+          ).toBeTruthy()
+          expect(
+            wrapper.getByText('Quantity must be greater than 0')
+          ).toBeTruthy()
+          expect(
+            wrapper.getByText('Unit weight must be greater than or equal to 0')
+          ).toBeTruthy()
+        })
+      })
+    })
+
+    describe('when there is an internal server error', async () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        postShoppingListItemsServerError
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays a flash error message', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const form = (
+          await wrapper.findAllByLabelText('Shopping list item creation form')
+        )[0]
+        const descField = (await wrapper.findAllByLabelText('Description'))[0]
+        const quantityField = (await wrapper.findAllByLabelText('Quantity'))[0]
+
+        act(() => {
+          fireEvent.change(descField, {
+            target: { value: 'Dwarven metal ingots' },
+          })
+          fireEvent.change(quantityField, { target: { value: '3' } })
+          fireEvent.submit(form)
+        })
+
+        await waitFor(() => {
+          expect(
+            wrapper.queryAllByText('Dwarven metal ingots')?.length
+          ).toBeFalsy()
           expect(
             wrapper.getByText(
               "Oops! Something unexpected went wrong. We're sorry! Please try again later."

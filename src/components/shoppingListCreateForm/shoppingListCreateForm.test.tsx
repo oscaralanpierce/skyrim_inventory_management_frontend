@@ -3,7 +3,7 @@ import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated } from '../../support/testUtils'
-import { getShoppingLists } from '../../support/msw/shoppingLists'
+import { getShoppingListsSuccess } from '../../support/msw/shoppingLists'
 import {
   gamesContextValue,
   gamesContextValueError,
@@ -32,7 +32,7 @@ const renderWithContexts = (ui: ReactElement) => {
 
 describe('ShoppingListCreateForm', () => {
   describe('displaying the form', () => {
-    const mockServer = setupServer(getShoppingLists)
+    const mockServer = setupServer(getShoppingListsSuccess)
 
     beforeAll(() => mockServer.listen())
     beforeEach(() => mockServer.resetHandlers())

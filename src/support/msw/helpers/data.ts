@@ -1,9 +1,14 @@
 import {
+  type RequestShoppingListItem,
   type RequestShoppingList,
+  type ResponseShoppingListItem,
   type ResponseShoppingList,
 } from '../../../types/apiData'
 import { allGames } from '../../data/games'
-import { shoppingListsForGame } from '../../data/shoppingLists'
+import {
+  allShoppingLists,
+  shoppingListsForGame,
+} from '../../data/shoppingLists'
 
 const gameIds = allGames.map(({ id }) => id)
 
@@ -81,4 +86,45 @@ export const newShoppingListWithAggregate = (
       updated_at: new Date(),
     },
   ]
+}
+
+/**
+ *
+ * Shopping list item creation
+ *
+ */
+
+export const newShoppingListItem = (
+  attributes: RequestShoppingListItem,
+  listId: number
+) => {
+  const list = allShoppingLists.find(({ id }) => id === listId)
+
+  if (!list)
+    throw new Error(`No shopping list with ID ${listId} in the test data`)
+
+  const shoppingList = { ...list }
+  const allLists = shoppingListsForGame(shoppingList.game_id)
+  const aggregateList = { ...allLists[0] }
+
+  const newItem: ResponseShoppingListItem = {
+    id: 42,
+    list_id: listId,
+    unit_weight: null,
+    notes: null,
+    created_at: new Date(),
+    updated_at: new Date(),
+    ...attributes,
+  }
+
+  const newAggregateListItem: ResponseShoppingListItem = {
+    ...newItem,
+    id: 43,
+    list_id: aggregateList.id,
+  }
+
+  aggregateList.list_items = [newAggregateListItem, ...aggregateList.list_items]
+  shoppingList.list_items = [newItem, ...shoppingList.list_items]
+
+  return [aggregateList, shoppingList]
 }

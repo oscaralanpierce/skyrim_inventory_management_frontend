@@ -56,12 +56,19 @@ export interface ResponseShoppingList {
  *
  */
 
+export interface RequestShoppingListItem {
+  description: string
+  quantity: number
+  unit_weight?: number | null
+  notes?: string | null
+}
+
 export interface ResponseShoppingListItem {
   id: number
   list_id: number
   description: string
   quantity: number
-  unit_weight: number
+  unit_weight: number | null
   notes: string | null
   created_at: Date
   updated_at: Date

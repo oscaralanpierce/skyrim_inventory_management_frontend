@@ -35,11 +35,14 @@ describe('ShoppingList', () => {
           <ShoppingList listId={4} title="My Shopping List" canEdit />
         )
 
-        expect(wrapper).toBeTruthy()
         expect(wrapper.getByText('My Shopping List')).toBeTruthy()
+
+        // An editable list should have the list item creation form and
+        // no message that there are no list items.
+        expect(wrapper.getByText('Add item to list...')).toBeTruthy()
         expect(
-          wrapper.getByText('This shopping list has no list items.')
-        ).toBeTruthy()
+          wrapper.queryByText('This shopping list has no list items.')
+        ).toBeFalsy()
       })
 
       test('has a destroy icon', () => {
@@ -85,6 +88,7 @@ describe('ShoppingList', () => {
           </ShoppingList>
         )
 
+        expect(wrapper.getByText('Add item to list...')).toBeTruthy()
         expect(
           wrapper.queryByText('This shopping list has no list items.')
         ).toBeFalsy()
@@ -169,6 +173,14 @@ describe('ShoppingList', () => {
         )
 
         expect(wrapper.queryByTestId('editShoppingList3')).toBeFalsy()
+      })
+
+      test("doesn't have a list item creation form", () => {
+        const wrapper = renderWithContexts(
+          <ShoppingList listId={3} title="My Shopping List" />
+        )
+
+        expect(wrapper.queryByText('Add item to list...')).toBeFalsy()
       })
 
       test('matches snapshot', () => {

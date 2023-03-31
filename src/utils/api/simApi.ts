@@ -10,6 +10,7 @@ import {
   patchShoppingList,
   deleteShoppingList,
 } from './wrapper/shoppingListEndpoints'
+import { postShoppingListItems } from './wrapper/shoppinglistItemEndpoints'
 
 export {
   postGames,
@@ -20,4 +21,5 @@ export {
   getShoppingLists,
   patchShoppingList,
   deleteShoppingList,
+  postShoppingListItems,
 }
