@@ -54,8 +54,10 @@ exports[`ShoppingListItemCreateForm > matches snapshot 1`] = `
                   inputmode="numeric"
                   min="1"
                   name="quantity"
+                  pattern="^[0-9]*$"
                   placeholder="Quantity"
                   required=""
+                  step="1"
                   type="number"
                   value="1"
                 />
@@ -147,8 +149,10 @@ exports[`ShoppingListItemCreateForm > matches snapshot 1`] = `
                 inputmode="numeric"
                 min="1"
                 name="quantity"
+                pattern="^[0-9]*$"
                 placeholder="Quantity"
                 required=""
+                step="1"
                 type="number"
                 value="1"
               />

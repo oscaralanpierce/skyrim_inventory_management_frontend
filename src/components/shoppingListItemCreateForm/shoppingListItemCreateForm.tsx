@@ -66,9 +66,7 @@ const ShoppingListItemCreateForm = ({ listId }: CreateFormProps) => {
     if (!formRef.current) return
 
     const formData = new FormData(formRef.current)
-    const attributes = extractItem(
-      formData
-    ) as unknown as RequestShoppingListItem
+    const attributes = extractItem(formData)
 
     const collapseForm = () => setExpanded(false)
 
@@ -132,6 +130,8 @@ const ShoppingListItemCreateForm = ({ listId }: CreateFormProps) => {
               type="number"
               inputMode="numeric"
               min={1}
+              step={1}
+              pattern="^[0-9]*$"
               name="quantity"
               placeholder="Quantity"
               defaultValue={1}

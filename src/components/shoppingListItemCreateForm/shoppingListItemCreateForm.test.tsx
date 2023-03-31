@@ -1,16 +1,16 @@
 import { describe, test, expect, vitest } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { renderAuthenticated } from '../../support/testUtils'
+import {
+  gamesContextValue,
+  shoppingListsContextValue,
+} from '../../support/data/contextValues'
 import { YELLOW } from '../../utils/colorSchemes'
 import { ColorProvider } from '../../contexts/colorContext'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesContext } from '../../contexts/gamesContext'
 import { ShoppingListsContext } from '../../contexts/shoppingListsContext'
 import ShoppingListItemCreateForm from './shoppingListItemCreateForm'
-import {
-  gamesContextValue,
-  shoppingListsContextValue,
-} from '../../support/data/contextValues'
 
 describe('ShoppingListItemCreateForm', () => {
   test('displays correct fields', () => {
