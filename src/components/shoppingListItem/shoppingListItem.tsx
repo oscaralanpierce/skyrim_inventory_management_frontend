@@ -23,6 +23,7 @@ interface ShoppingListItemProps {
 const formatWeight = (weight?: number | null) => {
   if (!weight) return '-'
 
+  weight = Number(weight)
   return weight % 1 === 0 ? weight.toFixed(0) : weight.toFixed(1)
 }
 
