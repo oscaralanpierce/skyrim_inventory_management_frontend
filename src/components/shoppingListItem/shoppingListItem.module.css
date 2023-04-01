@@ -27,6 +27,11 @@
   margin: 16px 12px;
   text-align: center;
   align-self: center;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.quantityContent {
   overflow-wrap: break-word;
 }
 

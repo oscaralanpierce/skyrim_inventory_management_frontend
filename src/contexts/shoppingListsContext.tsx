@@ -427,7 +427,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             if (status === 200) {
               const newShoppingLists = [...shoppingLists]
 
-              json.forEach((item) => {
+              for (let item of json) {
                 const list = newShoppingLists.find(
                   ({ id }) => id === item.list_id
                 )
@@ -435,8 +435,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
                   ({ id }) => id === item.id
                 )
 
-                if (list && index) list.list_items[index] = item
-              })
+                if (list && typeof index === 'number')
+                  list.list_items[index] = item
+              }
 
               setShoppingLists(newShoppingLists)
               onSuccess && onSuccess()

@@ -8,7 +8,11 @@ import {
 import classNames from 'classnames'
 import AnimateHeight from 'react-animate-height'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import {
+  faXmark,
+  faChevronUp,
+  faChevronDown,
+} from '@fortawesome/free-solid-svg-icons'
 import {
   useColorScheme,
   usePageContext,
@@ -49,10 +53,15 @@ const ShoppingListItem = ({
   canEdit = false,
 }: ShoppingListItemProps) => {
   const [expanded, setExpanded] = useState(false)
+  const [incrementerDisabled, setIncrementerDisabled] = useState(false)
+
   const iconsRef = useRef<HTMLSpanElement>(null)
+  const incRef = useRef<HTMLButtonElement>(null)
+  const decRef = useRef<HTMLButtonElement>(null)
 
   const { setFlashProps } = usePageContext()
-  const { destroyShoppingListItem } = useShoppingListsContext()
+  const { destroyShoppingListItem, updateShoppingListItem } =
+    useShoppingListsContext()
 
   const {
     schemeColorDark,
@@ -75,10 +84,15 @@ const ShoppingListItem = ({
   const refContains = (ref: RefObject<HTMLElement>, el: Node) =>
     ref.current && (ref.current === el || ref.current.contains(el))
 
+  const iconRefContains = (el: Node) =>
+    refContains(iconsRef, el) ||
+    refContains(incRef, el) ||
+    refContains(decRef, el)
+
   const toggleDetails: MouseEventHandler = (e) => {
     const target = e.target as Node
 
-    if (!refContains(iconsRef, target)) setExpanded(!expanded)
+    if (!iconRefContains(target)) setExpanded(!expanded)
   }
 
   const destroyItem: MouseEventHandler = (e) => {
@@ -96,6 +110,52 @@ const ShoppingListItem = ({
         type: 'info',
         message: 'OK, your shopping list item will not be deleted.',
       })
+    }
+  }
+
+  const incrementQuantity: MouseEventHandler = (e) => {
+    e.preventDefault()
+
+    setIncrementerDisabled(true)
+
+    const onRequestComplete = () => setIncrementerDisabled(false)
+
+    updateShoppingListItem(
+      itemId,
+      { quantity: quantity + 1 },
+      onRequestComplete,
+      onRequestComplete
+    )
+  }
+
+  const decrementQuantity: MouseEventHandler = (e) => {
+    e.preventDefault()
+
+    if (quantity === 1) {
+      const confirmed = window.confirm(
+        "You can't reduce shopping list item quantity below 1. Would you like to delete this item? This cannot be undone."
+      )
+
+      if (confirmed) {
+        setIncrementerDisabled(true)
+        destroyShoppingListItem(itemId)
+      } else {
+        setFlashProps({
+          hidden: false,
+          type: 'info',
+          message: 'OK, your shopping list item will not be deleted.',
+        })
+      }
+    } else {
+      const onRequestComplete = () => setIncrementerDisabled(false)
+
+      setIncrementerDisabled(true)
+      updateShoppingListItem(
+        itemId,
+        { quantity: quantity - 1 },
+        onRequestComplete,
+        onRequestComplete
+      )
     }
   }
 
@@ -129,7 +189,31 @@ const ShoppingListItem = ({
           )}
           <h3 className={styles.description}>{description}</h3>
         </span>
-        <span className={styles.quantity}>{quantity}</span>
+        <span className={styles.quantity}>
+          {canEdit && (
+            <button
+              className={styles.icon}
+              ref={incRef}
+              onClick={incrementQuantity}
+              data-testid={`incrementShoppingListItem${itemId}`}
+              disabled={incrementerDisabled}
+            >
+              <FontAwesomeIcon className={styles.fa} icon={faChevronUp} />
+            </button>
+          )}
+          <span className={styles.quantityContent}>{quantity}</span>
+          {canEdit && (
+            <button
+              className={styles.icon}
+              ref={decRef}
+              onClick={decrementQuantity}
+              data-testid={`decrementShoppingListItem${itemId}`}
+              disabled={incrementerDisabled}
+            >
+              <FontAwesomeIcon className={styles.fa} icon={faChevronDown} />
+            </button>
+          )}
+        </span>
       </div>
       <AnimateHeight
         id={`shoppingListItem${itemId}Details`}
