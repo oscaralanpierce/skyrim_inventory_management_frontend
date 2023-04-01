@@ -58,6 +58,24 @@ describe('ShoppingListGrouping', () => {
       expect(wrapper.queryByTestId('destroyShoppingList3')).toBeFalsy()
     })
 
+    test('displays the destroy icon for editable list items only', () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesContext.Provider value={gamesContextValue}>
+            <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+              <ShoppingListGrouping />
+            </ShoppingListsContext.Provider>
+          </GamesContext.Provider>
+        </PageProvider>
+      )
+
+      expect(wrapper.queryByTestId('destroyShoppingListItem6')).toBeFalsy()
+      expect(wrapper.queryByTestId('destroyShoppingListItem9')).toBeFalsy()
+      expect(wrapper.getByTestId('destroyShoppingListItem7')).toBeTruthy()
+      expect(wrapper.getByTestId('destroyShoppingListItem8')).toBeTruthy()
+      expect(wrapper.getByTestId('destroyShoppingListItem5')).toBeTruthy()
+    })
+
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>

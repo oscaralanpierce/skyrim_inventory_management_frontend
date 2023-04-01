@@ -1,7 +1,19 @@
-import { useState, type CSSProperties } from 'react'
+import {
+  useState,
+  useRef,
+  type CSSProperties,
+  type RefObject,
+  type MouseEventHandler,
+} from 'react'
 import classNames from 'classnames'
 import AnimateHeight from 'react-animate-height'
-import { useColorScheme } from '../../hooks/contexts'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import {
+  useColorScheme,
+  usePageContext,
+  useShoppingListsContext,
+} from '../../hooks/contexts'
 import styles from './shoppingListItem.module.css'
 
 interface ShoppingListItemProps {
@@ -10,6 +22,7 @@ interface ShoppingListItemProps {
   quantity: number
   unitWeight?: number | null
   notes?: string | null
+  canEdit?: boolean
 }
 
 /**
@@ -33,8 +46,13 @@ const ShoppingListItem = ({
   quantity,
   unitWeight,
   notes,
+  canEdit = false,
 }: ShoppingListItemProps) => {
   const [expanded, setExpanded] = useState(false)
+  const iconsRef = useRef<HTMLSpanElement>(null)
+
+  const { setFlashProps } = usePageContext()
+  const { destroyShoppingListItem } = useShoppingListsContext()
 
   const {
     schemeColorDark,
@@ -54,8 +72,31 @@ const ShoppingListItem = ({
     '--hover-color': hoverColorLight,
   } as CSSProperties
 
-  const toggleDetails = () => {
-    setExpanded(!expanded)
+  const refContains = (ref: RefObject<HTMLElement>, el: Node) =>
+    ref.current && (ref.current === el || ref.current.contains(el))
+
+  const toggleDetails: MouseEventHandler = (e) => {
+    const target = e.target as Node
+
+    if (!refContains(iconsRef, target)) setExpanded(!expanded)
+  }
+
+  const destroyItem: MouseEventHandler = (e) => {
+    e.preventDefault()
+
+    const confirmed = window.confirm(
+      'Destroy shopping list item? Your aggregate list will be updated to reflect the change. This action cannot be undone.'
+    )
+
+    if (confirmed) {
+      destroyShoppingListItem(itemId)
+    } else {
+      setFlashProps({
+        hidden: false,
+        type: 'info',
+        message: 'OK, your shopping list item will not be deleted.',
+      })
+    }
   }
 
   return (
@@ -70,7 +111,22 @@ const ShoppingListItem = ({
         aria-expanded={expanded}
         aria-controls={`shoppingListItem${itemId}Details`}
       >
-        <span className={styles.descriptionContainer}>
+        <span
+          className={classNames(styles.descriptionContainer, {
+            [styles.descriptionContainerEditable]: canEdit,
+          })}
+        >
+          {canEdit && (
+            <span className={styles.editIcons} ref={iconsRef}>
+              <button
+                className={styles.icon}
+                onClick={destroyItem}
+                data-testid={`destroyShoppingListItem${itemId}`}
+              >
+                <FontAwesomeIcon className={styles.fa} icon={faXmark} />
+              </button>
+            </span>
+          )}
           <h3 className={styles.description}>{description}</h3>
         </span>
         <span className={styles.quantity}>{quantity}</span>

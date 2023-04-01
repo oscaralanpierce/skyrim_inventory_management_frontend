@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import { describe, test, expect } from 'vitest'
+import { describe, test, expect, vitest } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { renderAuthenticated } from '../../support/testUtils'
 import {
@@ -217,7 +217,7 @@ describe('ShoppingList', () => {
     })
 
     describe('when the user cancels deletion', () => {
-      test("calls the context's destroyShoppingList function with its listId", () => {
+      test("doesn't call the destroyShoppingList function", () => {
         const destroyShoppingList = vitest.fn()
         listContextValue = { ...shoppingListsContextValue, destroyShoppingList }
 

@@ -1,5 +1,5 @@
-import { ApiResponse, SuccessStatusCode, HTTPHeaders } from '../http'
-import { ErrorObject, ResponseGame } from '../../../types/apiData'
+import { ApiResponse, type SuccessStatusCode, type HTTPHeaders } from '../http'
+import { type ErrorObject, type ResponseGame } from '../../../types/apiData'
 import { UnauthorizedResponse } from './shared'
 
 /**

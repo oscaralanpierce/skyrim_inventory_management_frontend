@@ -17,6 +17,15 @@ The `ShoppingListsContext` keeps track of the active game and its shopping lists
   - `listId`: the `id` of the shopping list to be destroyed
   - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
   - `onError` (optional): a callback called on an unsuccessful response; no arguments are passed in and its return value, if any, is not used
+- `createShoppingListItem`: a function that creates a shopping list item on the selected shopping list at the API, taking the following arguments:
+  - `listId`: the `id` of the list on which to create the shopping list item
+  - `attributes`: the attributes of the item to be created (required attributes are `description` (string) and `quantity` (number))
+  - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
+  - `onError` (optional): a callback called on an unsuccessful response; no arguments are passed in and its return value, if any, is not used
+- `destroyShoppingListItem`: a function that destroys the selected shopping list at the API, taking the following arguments:
+  - `itemId`: the `id` of the shopping list item to be destroyed
+  - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
+  - `onError` (optional): a callback called on an unsuccessful response; no arguments are passed in and its return value, if any, is not used
 
 Note that, while the context tracks the active game, this information is internal to the context. The active game is identified using the `gameId` query string parameter, which is typically set using the games dropdown component found on the `DashboardLayout`.
 
