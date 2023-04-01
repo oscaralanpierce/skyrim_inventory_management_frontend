@@ -16,11 +16,10 @@ import {
   postShoppingListItemsSuccess,
   postShoppingListItemsUnprocessable,
   postShoppingListItemsServerError,
+  deleteShoppingListItemSuccess,
+  deleteShoppingListItemServerError,
 } from '../../support/msw/handlers'
-import {
-  gamesContextValue,
-  shoppingListsContextValue,
-} from '../../support/data/contextValues'
+import { gamesContextValue } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesProvider, GamesContext } from '../../contexts/gamesContext'
 import { ShoppingListsProvider } from '../../contexts/shoppingListsContext'
@@ -1081,6 +1080,141 @@ describe('ShoppingListsPage', () => {
           expect(
             wrapper.queryAllByText('Dwarven metal ingots')?.length
           ).toBeFalsy()
+          expect(
+            wrapper.getByText(
+              "Oops! Something unexpected went wrong. We're sorry! Please try again later."
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
+  })
+
+  describe('destroying a list item', () => {
+    describe('when the user cancels', () => {
+      const mockServer = setupServer(getShoppingListsSuccess)
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test("doesn't remove the item", async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        window.confirm = vitest.fn().mockImplementation(() => false)
+
+        wrapper.debug()
+        const destroyIcon = await wrapper.findByTestId(
+          'destroyShoppingListItem3'
+        )
+
+        act(() => {
+          fireEvent.click(destroyIcon)
+        })
+
+        await waitFor(() => {
+          expect(window.confirm).toHaveBeenCalled()
+          expect(wrapper.getAllByText('Iron ingot').length).toEqual(2)
+          expect(
+            wrapper.getByText(
+              'OK, your shopping list item will not be deleted.'
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
+
+    describe('when successful', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        deleteShoppingListItemSuccess
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('removes the item from the regular and aggregate list', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        window.confirm = vitest.fn().mockImplementation(() => true)
+
+        const destroyIcon = await wrapper.findByTestId(
+          'destroyShoppingListItem3'
+        )
+
+        act(() => {
+          fireEvent.click(destroyIcon)
+        })
+
+        await waitFor(() => {
+          expect(window.confirm).toHaveBeenCalled()
+
+          // Should destroy both list items
+          expect(wrapper.queryByText('Iron ingot')).toBeFalsy()
+
+          // Should not remove any other list items
+          expect(wrapper.getAllByText('Necklace').length).toEqual(2)
+
+          // Should show a flash success message
+          expect(
+            wrapper.getByText(
+              'Success! Your shopping list item has been deleted.'
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
+
+    describe('when there is an internal server error', async () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        deleteShoppingListItemServerError
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays a flash error message', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        window.confirm = vitest.fn().mockImplementation(() => true)
+
+        const destroyIcon = await wrapper.findByTestId(
+          'destroyShoppingListItem3'
+        )
+
+        act(() => {
+          fireEvent.click(destroyIcon)
+        })
+
+        await waitFor(() => {
+          expect(wrapper.getAllByText('Necklace').length).toEqual(2)
           expect(
             wrapper.getByText(
               "Oops! Something unexpected went wrong. We're sorry! Please try again later."

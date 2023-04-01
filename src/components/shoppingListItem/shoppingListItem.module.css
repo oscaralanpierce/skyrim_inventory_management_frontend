@@ -17,7 +17,7 @@
   border-bottom: 1px solid var(--border-color);
   cursor: pointer;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 70% 30%;
 }
 
 .quantity {
@@ -32,6 +32,35 @@
 
 .descriptionContainer {
   border-right: 1px solid var(--border-color);
+}
+
+.descriptionContainerEditable {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  align-items: center;
+}
+
+.editIcons {
+  display: flex;
+  flex-direction: row;
+  padding: 4px 8px;
+}
+
+.icon {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.icon:hover .fa {
+  color: var(--body-background-color);
+}
+
+.fa {
+  color: var(--title-text-color);
 }
 
 .description {
@@ -59,8 +88,14 @@
   line-height: 1.25;
 }
 
-@media (min-width: 769px) {
-  .trigger {
-    grid-template-columns: 70% 30%;
+@media (min-width: 481px) {
+  .descriptionContainerEditable {
+    grid-template-columns: 10% 90%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .descriptionContainerEditable {
+    grid-template-columns: 7% 93%;
   }
 }

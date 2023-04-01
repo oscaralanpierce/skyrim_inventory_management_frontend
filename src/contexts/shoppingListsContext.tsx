@@ -429,7 +429,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
               setFlashProps({
                 hidden: false,
                 type: 'success',
-                message: 'Success! Your shopping list item was deleted.',
+                message: 'Success! Your shopping list item has been deleted.',
               })
 
               onSuccess && onSuccess()

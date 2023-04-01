@@ -35,6 +35,7 @@ const ShoppingListGrouping = () => {
                           quantity={quantity}
                           unitWeight={unit_weight}
                           notes={notes}
+                          canEdit={!aggregate}
                         />
                       )
                     }
