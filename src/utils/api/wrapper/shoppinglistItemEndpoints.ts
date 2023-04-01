@@ -1,10 +1,12 @@
 import { type RequestShoppingListItem } from '../../../types/apiData'
 import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
-  type DeleteShoppingListItemResponse,
-  type DeleteShoppingListItemReturnValue,
   type PostShoppingListItemsResponse,
   type PostShoppingListItemsReturnValue,
+  type PatchShoppingListItemResponse,
+  type PatchShoppingListItemReturnValue,
+  type DeleteShoppingListItemResponse,
+  type DeleteShoppingListItemReturnValue,
 } from '../returnValues/shoppingListItems'
 import {
   AuthorizationError,
@@ -34,6 +36,45 @@ export const postShoppingListItems = (
     headers,
   }).then((res) => {
     const response = res as PostShoppingListItemsResponse
+
+    if (response.status === 401) throw new AuthorizationError()
+    if (response.status === 404) throw new NotFoundError()
+
+    return response.json().then((json) => {
+      const returnValue = { status: response.status, json }
+
+      if (returnValue.status === 405)
+        throw new MethodNotAllowedError(json.errors.join(', '))
+      if (returnValue.status === 422)
+        throw new UnprocessableEntityError(json.errors)
+      if (returnValue.status === 500)
+        throw new InternalServerError(json.errors.join(', '))
+
+      return returnValue
+    })
+  })
+}
+
+/**
+ *
+ * PATCH /shopping_list_items/:id endpoint
+ *
+ */
+
+export const patchShoppingListItem = (
+  itemId: number,
+  attributes: RequestShoppingListItem,
+  token: string
+): Promise<PatchShoppingListItemReturnValue> | never => {
+  const uri = `${BASE_URI}/shopping_list_items/${itemId}`
+  const headers = combinedHeaders(token)
+
+  return fetch(uri, {
+    method: 'PATCH',
+    body: JSON.stringify(attributes),
+    headers,
+  }).then((res) => {
+    const response = res as PatchShoppingListItemResponse
 
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()

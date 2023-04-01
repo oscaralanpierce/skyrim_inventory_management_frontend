@@ -12,6 +12,7 @@ import {
 } from './wrapper/shoppingListEndpoints'
 import {
   postShoppingListItems,
+  patchShoppingListItem,
   deleteShoppingListItem,
 } from './wrapper/shoppinglistItemEndpoints'
 
@@ -25,5 +26,6 @@ export {
   patchShoppingList,
   deleteShoppingList,
   postShoppingListItems,
+  patchShoppingListItem,
   deleteShoppingListItem,
 }
