@@ -89,23 +89,27 @@ export const LongValuesNotEditable = () => (
 )
 
 export const EmptyFields = () => (
-  <ColorProvider colorScheme={GREEN}>
-    <ShoppingListItem
-      itemId={1}
-      description="Dwarven metal ingot"
-      quantity={5}
-    />
-  </ColorProvider>
+  <ContextProviders>
+    <ColorProvider colorScheme={GREEN}>
+      <ShoppingListItem
+        itemId={1}
+        description="Dwarven metal ingot"
+        quantity={5}
+      />
+    </ColorProvider>
+  </ContextProviders>
 )
 
 export const UnitWeightWithDecimal = () => (
-  <ColorProvider colorScheme={PINK}>
-    <ShoppingListItem
-      itemId={1}
-      description="Necklace"
-      quantity={1}
-      unitWeight={0.3}
-      notes="To enchant with fire resistance"
-    />
-  </ColorProvider>
+  <ContextProviders>
+    <ColorProvider colorScheme={PINK}>
+      <ShoppingListItem
+        itemId={1}
+        description="Necklace"
+        quantity={1}
+        unitWeight={0.3}
+        notes="To enchant with fire resistance"
+      />
+    </ColorProvider>
+  </ContextProviders>
 )
