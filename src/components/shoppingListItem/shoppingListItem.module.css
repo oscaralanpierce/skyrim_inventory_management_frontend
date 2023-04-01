@@ -52,12 +52,14 @@
 }
 
 .icon {
-  display: inline-block;
+  display: inline-grid;
   background: none;
   border: none;
   padding: 4px;
   cursor: pointer;
   font-size: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon:hover .fa,
