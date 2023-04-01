@@ -60,7 +60,8 @@
   font-size: 1rem;
 }
 
-.icon:hover .fa {
+.icon:hover .fa,
+.icon:disabled .fa {
   color: var(--body-background-color);
 }
 
