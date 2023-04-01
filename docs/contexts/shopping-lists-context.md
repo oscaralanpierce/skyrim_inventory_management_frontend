@@ -22,6 +22,11 @@ The `ShoppingListsContext` keeps track of the active game and its shopping lists
   - `attributes`: the attributes of the item to be created (required attributes are `description` (string) and `quantity` (number))
   - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
   - `onError` (optional): a callback called on an unsuccessful response; no arguments are passed in and its return value, if any, is not used
+- `updateShoppingListItem`: a function that updates a shopping list item at the API, taking the following arguments:
+  - `itemId`: the `id` of the shopping list item to be updated
+  - `attributes`: the attributes of the item to be updated (`description` is not allowed as a value)
+  - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
+  - `onError` (optional): a callback called on an unsuccessful response; no arguments are passed in and its return value, if any, is not used
 - `destroyShoppingListItem`: a function that destroys the selected shopping list at the API, taking the following arguments:
   - `itemId`: the `id` of the shopping list item to be destroyed
   - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
