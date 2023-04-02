@@ -27,6 +27,10 @@
   margin: 16px 12px;
   text-align: center;
   align-self: center;
+}
+
+.quantityEditable {
+  composes: quantity;
   display: grid;
   grid-template-columns: 20% 60% 20%;
 }

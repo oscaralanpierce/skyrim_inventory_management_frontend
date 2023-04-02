@@ -458,7 +458,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                         </h3>
                       </span>
                       <span
-                        class="_quantity_fccc8d"
+                        class="_quantityEditable_fccc8d"
                       >
                         <button
                           class="_icon_fccc8d"
@@ -587,7 +587,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                         </h3>
                       </span>
                       <span
-                        class="_quantity_fccc8d"
+                        class="_quantityEditable_fccc8d"
                       >
                         <button
                           class="_icon_fccc8d"
@@ -888,7 +888,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                         </h3>
                       </span>
                       <span
-                        class="_quantity_fccc8d"
+                        class="_quantityEditable_fccc8d"
                       >
                         <button
                           class="_icon_fccc8d"
@@ -1534,7 +1534,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                       </h3>
                     </span>
                     <span
-                      class="_quantity_fccc8d"
+                      class="_quantityEditable_fccc8d"
                     >
                       <button
                         class="_icon_fccc8d"
@@ -1663,7 +1663,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                       </h3>
                     </span>
                     <span
-                      class="_quantity_fccc8d"
+                      class="_quantityEditable_fccc8d"
                     >
                       <button
                         class="_icon_fccc8d"
@@ -1964,7 +1964,7 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                       </h3>
                     </span>
                     <span
-                      class="_quantity_fccc8d"
+                      class="_quantityEditable_fccc8d"
                     >
                       <button
                         class="_icon_fccc8d"

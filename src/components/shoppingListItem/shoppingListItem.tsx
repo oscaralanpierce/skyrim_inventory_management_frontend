@@ -189,7 +189,7 @@ const ShoppingListItem = ({
           )}
           <h3 className={styles.description}>{description}</h3>
         </span>
-        <span className={styles.quantity}>
+        <span className={canEdit ? styles.quantityEditable : styles.quantity}>
           {canEdit && (
             <button
               className={styles.icon}

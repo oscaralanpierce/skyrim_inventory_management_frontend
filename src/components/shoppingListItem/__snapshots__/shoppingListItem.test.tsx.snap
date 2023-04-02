@@ -49,7 +49,7 @@ exports[`ShoppingListItem > displaying the list item > when the list item is edi
             </h3>
           </span>
           <span
-            class="_quantity_fccc8d"
+            class="_quantityEditable_fccc8d"
           >
             <button
               class="_icon_fccc8d"
@@ -181,7 +181,7 @@ exports[`ShoppingListItem > displaying the list item > when the list item is edi
           </h3>
         </span>
         <span
-          class="_quantity_fccc8d"
+          class="_quantityEditable_fccc8d"
         >
           <button
             class="_icon_fccc8d"
