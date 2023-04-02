@@ -15,6 +15,7 @@ import {
   patchShoppingList,
   deleteShoppingList,
   postShoppingListItems,
+  patchShoppingListItem,
   deleteShoppingListItem,
 } from '../utils/api/simApi'
 import { useQueryString } from '../hooks/useQueryString'
@@ -52,6 +53,12 @@ export interface ShoppingListsContextType {
     onSuccess?: CallbackFunction,
     onError?: CallbackFunction
   ) => void
+  updateShoppingListItem: (
+    itemId: number,
+    attributes: RequestShoppingListItem,
+    onSuccess?: CallbackFunction,
+    onError?: CallbackFunction
+  ) => void
   destroyShoppingListItem: (
     itemId: number,
     onSuccess?: CallbackFunction,
@@ -66,6 +73,7 @@ export const ShoppingListsContext = createContext<ShoppingListsContextType>({
   updateShoppingList: () => {},
   destroyShoppingList: () => {},
   createShoppingListItem: () => {},
+  updateShoppingListItem: () => {},
   destroyShoppingListItem: () => {},
 })
 
@@ -402,6 +410,68 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
   /**
    *
+   * Update a shopping list item
+   *
+   */
+
+  const updateShoppingListItem = useCallback(
+    (
+      itemId: number,
+      attributes: RequestShoppingListItem,
+      onSuccess?: CallbackFunction,
+      onError?: CallbackFunction
+    ) => {
+      if (user && token) {
+        patchShoppingListItem(itemId, attributes, token)
+          .then(({ status, json }) => {
+            if (status === 200) {
+              const newShoppingLists = [...shoppingLists]
+
+              for (let item of json) {
+                const list = newShoppingLists.find(
+                  ({ id }) => id === item.list_id
+                )
+                const index = list?.list_items?.findIndex(
+                  ({ id }) => id === item.id
+                )
+
+                if (list && typeof index === 'number')
+                  list.list_items[index] = item
+              }
+
+              setShoppingLists(newShoppingLists)
+              onSuccess && onSuccess()
+            } else {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message: UNEXPECTED_ERROR_MESSAGE,
+              })
+
+              onError && onError()
+            }
+          })
+          .catch((e: ApiError) => {
+            if (e.code === 404) {
+              setFlashProps({
+                hidden: false,
+                type: 'error',
+                message:
+                  "You have attempted to update a shopping list item that doesn't exist, or doesn't belong to you. Please refresh and try again.",
+              })
+            } else {
+              handleApiError(e, 'list item')
+            }
+
+            onError && onError()
+          })
+      }
+    },
+    [user, token, shoppingLists]
+  )
+
+  /**
+   *
    * Destroy a shopping list item
    *
    */
@@ -475,6 +545,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     updateShoppingList,
     destroyShoppingList,
     createShoppingListItem,
+    updateShoppingListItem,
     destroyShoppingListItem,
   }
 

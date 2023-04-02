@@ -57,8 +57,8 @@ export interface ResponseShoppingList {
  */
 
 export interface RequestShoppingListItem {
-  description: string
-  quantity: number
+  quantity?: number
+  description?: string
   unit_weight?: number | null
   notes?: string | null
 }

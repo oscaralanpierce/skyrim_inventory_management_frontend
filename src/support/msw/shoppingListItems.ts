@@ -1,5 +1,5 @@
 import { rest } from 'msw'
-import { allShoppingLists } from '../data/shoppingLists'
+import { allShoppingLists, shoppingListsForGame } from '../data/shoppingLists'
 import { allShoppingListItems } from '../data/shoppingListItems'
 import { newShoppingListItem } from './helpers/data'
 
@@ -48,6 +48,81 @@ export const postShoppingListItemsUnprocessable = rest.post(
 
 export const postShoppingListItemsServerError = rest.post(
   `${BASE_URI}/shopping_lists/:listId/shopping_list_items`,
+  (_req, res, ctx) => {
+    return res(
+      ctx.status(500),
+      ctx.json({
+        errors: ['Something went horribly wrong'],
+      })
+    )
+  }
+)
+
+/**
+ *
+ * PATCH /shopping_list_items/:id
+ *
+ */
+
+export const incrementShoppingListItemSuccess = rest.patch(
+  `${BASE_URI}/shopping_list_items/:id`,
+  async (req, res, ctx) => {
+    const itemId: number = Number(req.params.id)
+    const item = allShoppingListItems.find(({ id }) => id === itemId)
+    const list = allShoppingLists.find(({ id }) => id === item?.list_id)
+
+    if (!item || !list) return res(ctx.status(404))
+
+    const allItems = shoppingListsForGame(list.game_id).flatMap(
+      ({ list_items }) =>
+        list_items.filter(({ description }) => description === item.description)
+    )
+
+    const aggListItem = { ...allItems[0], quantity: allItems[0].quantity + 1 }
+    const regItem = { ...item, quantity: item.quantity + 1 }
+
+    return res(ctx.status(200), ctx.json([aggListItem, regItem]))
+  }
+)
+
+export const decrementShoppingListItemSuccess = rest.patch(
+  `${BASE_URI}/shopping_list_items/:id`,
+  async (req, res, ctx) => {
+    const itemId: number = Number(req.params.id)
+    const item = allShoppingListItems.find(({ id }) => id === itemId)
+    const list = allShoppingLists.find(({ id }) => id === item?.list_id)
+
+    if (!item || !list) return res(ctx.status(404))
+
+    const allItems = shoppingListsForGame(list.game_id).flatMap(
+      ({ list_items }) =>
+        list_items.filter(({ description }) => description === item.description)
+    )
+    const aggListItem = { ...allItems[0], quantity: allItems[0].quantity - 1 }
+    const regItem = { ...item, quantity: item.quantity - 1 }
+
+    return res(ctx.status(200), ctx.json([aggListItem, regItem]))
+  }
+)
+
+// Returns the same validation errors regardless of request body
+export const updateShoppingListItemUnprocessable = rest.patch(
+  `${BASE_URI}/shopping_list_items/:id`,
+  (_req, res, ctx) => {
+    return res(
+      ctx.status(422),
+      ctx.json({
+        errors: [
+          'Quantity must be greater than 0',
+          'Unit weight must be greater than or equal to 0',
+        ],
+      })
+    )
+  }
+)
+
+export const updateShoppingListItemServerError = rest.patch(
+  `${BASE_URI}/shopping_list_items/:id`,
   (_req, res, ctx) => {
     return res(
       ctx.status(500),

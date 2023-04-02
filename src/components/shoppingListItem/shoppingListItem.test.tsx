@@ -79,6 +79,22 @@ describe('ShoppingListItem', () => {
         expect(wrapper.getByTestId('destroyShoppingListItem20')).toBeTruthy()
       })
 
+      test('has increment and decrement icons', () => {
+        const wrapper = renderInContexts(
+          <ShoppingListItem
+            itemId={20}
+            description="Silver Necklace"
+            quantity={2}
+            unitWeight={1.0}
+            notes="To enchant"
+            canEdit
+          />
+        )
+
+        expect(wrapper.getByTestId('incrementShoppingListItem20')).toBeTruthy()
+        expect(wrapper.getByTestId('decrementShoppingListItem20')).toBeTruthy()
+      })
+
       test('matches snapshot', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
@@ -141,6 +157,21 @@ describe('ShoppingListItem', () => {
         )
 
         expect(wrapper.queryByTestId('destroyShoppingListItem20')).toBeFalsy()
+      })
+
+      test('has no increment or decrement icons', () => {
+        const wrapper = renderInContexts(
+          <ShoppingListItem
+            itemId={20}
+            description="Silver Necklace"
+            quantity={2}
+            unitWeight={1.0}
+            notes="To enchant"
+          />
+        )
+
+        expect(wrapper.queryByTestId('incrementShoppingListItem20')).toBeFalsy()
+        expect(wrapper.queryByTestId('decrementShoppingListItem20')).toBeFalsy()
       })
 
       test('matches snapshot', () => {
@@ -216,6 +247,68 @@ describe('ShoppingListItem', () => {
 
         expect(destroyShoppingListItem).not.toHaveBeenCalled()
       })
+    })
+  })
+
+  describe('incrementing the list item quantity', () => {
+    test('increments the quantity at the API', () => {
+      const updateShoppingListItem = vitest.fn()
+      listsContextValue = { ...listsContextValue, updateShoppingListItem }
+
+      const wrapper = renderInContexts(
+        <ShoppingListItem
+          itemId={33}
+          description="Silver Necklace"
+          quantity={2}
+          unitWeight={0.3}
+          notes="To enchant"
+          canEdit
+        />
+      )
+
+      const incrementIcon = wrapper.getByTestId('incrementShoppingListItem33')
+
+      act(() => {
+        fireEvent.click(incrementIcon)
+      })
+
+      expect(updateShoppingListItem).toHaveBeenCalledWith(
+        33,
+        { quantity: 3 },
+        expect.any(Function),
+        expect.any(Function)
+      )
+    })
+  })
+
+  describe('decrementing the list item quantity', () => {
+    test('decrements the quantity at the API', () => {
+      const updateShoppingListItem = vitest.fn()
+      listsContextValue = { ...listsContextValue, updateShoppingListItem }
+
+      const wrapper = renderInContexts(
+        <ShoppingListItem
+          itemId={33}
+          description="Silver Necklace"
+          quantity={2}
+          unitWeight={0.3}
+          notes="To enchant"
+          canEdit
+        />
+      )
+
+      const decrementIcon = wrapper.getByTestId('decrementShoppingListItem33')
+
+      act(() => {
+        fireEvent.click(decrementIcon)
+      })
+
+      expect(updateShoppingListItem).toHaveBeenCalledWith(
+        33,
+        { quantity: 1 },
+        expect.any(Function),
+        expect.any(Function)
+      )
     })
   })
 })

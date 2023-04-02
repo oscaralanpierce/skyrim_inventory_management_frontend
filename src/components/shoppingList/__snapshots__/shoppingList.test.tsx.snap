@@ -590,7 +590,11 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
                   <span
                     class="_quantity_fccc8d"
                   >
-                    4
+                    <span
+                      class="_quantityContent_fccc8d"
+                    >
+                      4
+                    </span>
                   </span>
                 </div>
                 <div
@@ -651,7 +655,11 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
                   <span
                     class="_quantity_fccc8d"
                   >
-                    1
+                    <span
+                      class="_quantityContent_fccc8d"
+                    >
+                      1
+                    </span>
                   </span>
                 </div>
                 <div
@@ -883,7 +891,11 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
                 <span
                   class="_quantity_fccc8d"
                 >
-                  4
+                  <span
+                    class="_quantityContent_fccc8d"
+                  >
+                    4
+                  </span>
                 </span>
               </div>
               <div
@@ -944,7 +956,11 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
                 <span
                   class="_quantity_fccc8d"
                 >
-                  1
+                  <span
+                    class="_quantityContent_fccc8d"
+                  >
+                    1
+                  </span>
                 </span>
               </div>
               <div

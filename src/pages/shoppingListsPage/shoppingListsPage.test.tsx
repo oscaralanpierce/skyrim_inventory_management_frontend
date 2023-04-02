@@ -13,6 +13,9 @@ import {
   patchShoppingListServerError,
   deleteShoppingListSuccess,
   deleteShoppingListServerError,
+  incrementShoppingListItemSuccess,
+  decrementShoppingListItemSuccess,
+  updateShoppingListItemServerError,
   postShoppingListItemsSuccess,
   postShoppingListItemsUnprocessable,
   postShoppingListItemsServerError,
@@ -1111,7 +1114,6 @@ describe('ShoppingListsPage', () => {
 
         window.confirm = vitest.fn().mockImplementation(() => false)
 
-        wrapper.debug()
         const destroyIcon = await wrapper.findByTestId(
           'destroyShoppingListItem3'
         )
@@ -1215,6 +1217,233 @@ describe('ShoppingListsPage', () => {
 
         await waitFor(() => {
           expect(wrapper.getAllByText('Necklace').length).toEqual(2)
+          expect(
+            wrapper.getByText(
+              "Oops! Something unexpected went wrong. We're sorry! Please try again later."
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
+  })
+
+  describe('incrementing list item quantity', () => {
+    describe('when successful', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        incrementShoppingListItemSuccess
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('increments quantity of affected items', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const incrementIcon = await wrapper.findByTestId(
+          'incrementShoppingListItem3'
+        )
+
+        act(() => fireEvent.click(incrementIcon))
+
+        await waitFor(() => {
+          expect(wrapper.getAllByText('2').length).toEqual(2)
+        })
+      })
+    })
+
+    describe('when there is a server error', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        updateShoppingListItemServerError
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays a flash error', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const incrementIcon = await wrapper.findByTestId(
+          'incrementShoppingListItem3'
+        )
+
+        act(() => fireEvent.click(incrementIcon))
+
+        await waitFor(() => {
+          expect(wrapper.queryAllByText('2').length).toBeFalsy()
+          expect(
+            wrapper.getByText(
+              "Oops! Something unexpected went wrong. We're sorry! Please try again later."
+            )
+          ).toBeTruthy()
+        })
+      })
+    })
+  })
+
+  describe('decrementing list item quantity', () => {
+    describe('when successful', () => {
+      describe('when decrementing a quantity greater than 1', () => {
+        const mockServer = setupServer(
+          getShoppingListsSuccess,
+          decrementShoppingListItemSuccess
+        )
+
+        beforeAll(() => mockServer.listen())
+        beforeEach(() => mockServer.resetHandlers())
+        afterAll(() => mockServer.close())
+
+        test('decrements quantity of affected items', async () => {
+          const wrapper = renderAuthenticated(
+            <PageProvider>
+              <GamesContext.Provider value={gamesContextValue}>
+                <ShoppingListsProvider>
+                  <ShoppingListsPage />
+                </ShoppingListsProvider>
+              </GamesContext.Provider>
+            </PageProvider>
+          )
+
+          const decrementIcon = await wrapper.findByTestId(
+            'decrementShoppingListItem1'
+          )
+
+          act(() => fireEvent.click(decrementIcon))
+
+          await waitFor(() => {
+            expect(wrapper.getAllByText('2').length).toEqual(2)
+          })
+        })
+      })
+
+      describe('when decrementing the quantity to zero', () => {
+        describe('when the user confirms deletion', () => {
+          const mockServer = setupServer(
+            getShoppingListsSuccess,
+            deleteShoppingListItemSuccess
+          )
+
+          beforeAll(() => mockServer.listen())
+          beforeEach(() => mockServer.resetHandlers())
+          afterAll(() => mockServer.close())
+
+          test('deletes the item', async () => {
+            const wrapper = renderAuthenticated(
+              <PageProvider>
+                <GamesContext.Provider value={gamesContextValue}>
+                  <ShoppingListsProvider>
+                    <ShoppingListsPage />
+                  </ShoppingListsProvider>
+                </GamesContext.Provider>
+              </PageProvider>
+            )
+
+            window.confirm = vitest.fn().mockImplementation(() => true)
+            const decrementIcon = await wrapper.findByTestId(
+              'decrementShoppingListItem3'
+            )
+
+            act(() => fireEvent.click(decrementIcon))
+
+            await waitFor(() => {
+              expect(window.confirm).toHaveBeenCalled()
+              expect(wrapper.queryAllByText('Iron ingot').length).toBeFalsy()
+              expect(
+                wrapper.getByText(
+                  'Success! Your shopping list item has been deleted.'
+                )
+              ).toBeTruthy()
+            })
+          })
+        })
+
+        describe('when the user cancels deletion', () => {
+          const mockServer = setupServer(getShoppingListsSuccess)
+
+          beforeAll(() => mockServer.listen())
+          beforeEach(() => mockServer.resetHandlers())
+          afterAll(() => mockServer.close())
+
+          test("doesn't delete the item", async () => {
+            const wrapper = renderAuthenticated(
+              <PageProvider>
+                <GamesContext.Provider value={gamesContextValue}>
+                  <ShoppingListsProvider>
+                    <ShoppingListsPage />
+                  </ShoppingListsProvider>
+                </GamesContext.Provider>
+              </PageProvider>
+            )
+
+            window.confirm = vitest.fn().mockImplementation(() => false)
+            const decrementIcon = await wrapper.findByTestId(
+              'decrementShoppingListItem3'
+            )
+
+            act(() => fireEvent.click(decrementIcon))
+
+            await waitFor(() => {
+              expect(window.confirm).toHaveBeenCalled()
+              expect(wrapper.getAllByText('Iron ingot').length).toEqual(2)
+              expect(
+                wrapper.getByText(
+                  'OK, your shopping list item will not be deleted.'
+                )
+              ).toBeTruthy()
+            })
+          })
+        })
+      })
+    })
+
+    describe('when there is a server error', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        updateShoppingListItemServerError
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('displays a flash error', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const decrementIcon = await wrapper.findByTestId(
+          'decrementShoppingListItem1'
+        )
+
+        act(() => fireEvent.click(decrementIcon))
+
+        await waitFor(() => {
+          expect(wrapper.queryAllByText('2').length).toBeFalsy()
           expect(
             wrapper.getByText(
               "Oops! Something unexpected went wrong. We're sorry! Please try again later."

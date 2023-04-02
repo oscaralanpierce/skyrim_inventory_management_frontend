@@ -28,6 +28,10 @@ import {
   postShoppingListItemsSuccess,
   postShoppingListItemsUnprocessable,
   postShoppingListItemsServerError,
+  incrementShoppingListItemSuccess,
+  decrementShoppingListItemSuccess,
+  updateShoppingListItemUnprocessable,
+  updateShoppingListItemServerError,
   deleteShoppingListItemSuccess,
   deleteShoppingListItemServerError,
 } from './shoppingListItems'
@@ -58,6 +62,10 @@ export {
   postShoppingListItemsSuccess,
   postShoppingListItemsUnprocessable,
   postShoppingListItemsServerError,
+  incrementShoppingListItemSuccess,
+  decrementShoppingListItemSuccess,
+  updateShoppingListItemUnprocessable,
+  updateShoppingListItemServerError,
   deleteShoppingListItemSuccess,
   deleteShoppingListItemServerError,
 }
