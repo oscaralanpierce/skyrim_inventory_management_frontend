@@ -1,0 +1,220 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShoppingListItemEditForm > displaying the form > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_b0e6e0"
+        style="--button-background-color: #2274a5; --button-text-color: #fff; --button-hover-color: #1e6894; --button-border-color: #1b5c84;"
+      >
+        <h3
+          class="_header_b0e6e0"
+        >
+          Health potion ingredients
+        </h3>
+        <p
+          class="_subheader_b0e6e0"
+        >
+          On list "Alchemy Ingredients"
+        </p>
+        <form
+          data-testid="editShoppingListItem6Form"
+        >
+          <fieldset
+            class="_fieldset_b0e6e0"
+          >
+            <label
+              class="_label_b0e6e0"
+            >
+              Quantity
+              <input
+                class="_input_b0e6e0"
+                inputmode="numeric"
+                min="1"
+                pattern="^[0-9]*$"
+                placeholder="Quantity"
+                required=""
+                title="Quantity must be an integer greater than 0"
+                type="number"
+                value="2"
+              />
+            </label>
+          </fieldset>
+          <fieldset
+            class="_fieldset_b0e6e0"
+          >
+            <label
+              class="_label_b0e6e0"
+            >
+              Unit Weight
+              <input
+                class="_input_b0e6e0"
+                inputmode="numeric"
+                min="0"
+                placeholder="Unit Weight"
+                step="0.1"
+                type="number"
+                value="3"
+              />
+            </label>
+          </fieldset>
+          <fieldset
+            class="_fieldset_b0e6e0"
+          >
+            <label
+              class="_label_b0e6e0"
+            >
+              Notes
+              <input
+                class="_input_b0e6e0"
+                placeholder="Notes"
+                type="text"
+                value=""
+              />
+            </label>
+          </fieldset>
+          <button
+            class="_submit_b0e6e0"
+            type="submit"
+          >
+            Update Item
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_b0e6e0"
+      style="--button-background-color: #2274a5; --button-text-color: #fff; --button-hover-color: #1e6894; --button-border-color: #1b5c84;"
+    >
+      <h3
+        class="_header_b0e6e0"
+      >
+        Health potion ingredients
+      </h3>
+      <p
+        class="_subheader_b0e6e0"
+      >
+        On list "Alchemy Ingredients"
+      </p>
+      <form
+        data-testid="editShoppingListItem6Form"
+      >
+        <fieldset
+          class="_fieldset_b0e6e0"
+        >
+          <label
+            class="_label_b0e6e0"
+          >
+            Quantity
+            <input
+              class="_input_b0e6e0"
+              inputmode="numeric"
+              min="1"
+              pattern="^[0-9]*$"
+              placeholder="Quantity"
+              required=""
+              title="Quantity must be an integer greater than 0"
+              type="number"
+              value="2"
+            />
+          </label>
+        </fieldset>
+        <fieldset
+          class="_fieldset_b0e6e0"
+        >
+          <label
+            class="_label_b0e6e0"
+          >
+            Unit Weight
+            <input
+              class="_input_b0e6e0"
+              inputmode="numeric"
+              min="0"
+              placeholder="Unit Weight"
+              step="0.1"
+              type="number"
+              value="3"
+            />
+          </label>
+        </fieldset>
+        <fieldset
+          class="_fieldset_b0e6e0"
+        >
+          <label
+            class="_label_b0e6e0"
+          >
+            Notes
+            <input
+              class="_input_b0e6e0"
+              placeholder="Notes"
+              type="text"
+              value=""
+            />
+          </label>
+        </fieldset>
+        <button
+          class="_submit_b0e6e0"
+          type="submit"
+        >
+          Update Item
+        </button>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
