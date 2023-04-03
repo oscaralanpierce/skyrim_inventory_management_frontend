@@ -40,6 +40,44 @@ const ShoppingListItemEditForm = ({
     '--button-border-color': buttonColor.borderColor,
   } as CSSProperties
 
+  const extractAttributes = (formData: FormData): ListItem => {
+    const values = Object.fromEntries(Array.from(formData.entries())) as Record<
+      string,
+      string
+    >
+    const attributes: ListItem = {}
+
+    const newQty = values.quantity ? Number(values.quantity) : null
+    const newWeight = values.unit_weight ? Number(values.unit_weight) : null
+    const newNotes = values.notes || null
+
+    if (typeof newQty === 'number' && newQty !== quantity)
+      attributes.quantity = newQty
+    if (newWeight !== unitWeight) attributes.unit_weight = newWeight
+    if (newNotes !== notes) attributes.notes = newNotes
+
+    return attributes
+  }
+
+  const onSubmit: FormEventHandler = (e) => {
+    e.preventDefault()
+
+    const onSuccess = () => {
+      setFlashProps({
+        hidden: false,
+        type: 'success',
+        message: 'Success! Your shopping list item has been updated.',
+      })
+    }
+
+    if (!formRef.current) return
+
+    const formData = new FormData(formRef.current)
+    const attributes = extractAttributes(formData)
+
+    updateShoppingListItem(itemId, attributes, onSuccess)
+  }
+
   useEffect(() => {
     inputRef.current?.focus()
   })
@@ -48,12 +86,17 @@ const ShoppingListItemEditForm = ({
     <div className={styles.root} style={colorVars}>
       <h3 className={styles.header}>{description}</h3>
       <p className={styles.subheader}>{`On list "${listTitle}"`}</p>
-      <form ref={formRef} data-testid={`editShoppingListItem${itemId}Form`}>
+      <form
+        ref={formRef}
+        data-testid={`editShoppingListItem${itemId}Form`}
+        onSubmit={onSubmit}
+      >
         <fieldset className={styles.fieldset}>
           <label className={styles.label}>
             Quantity
             <input
               className={styles.input}
+              name="quantity"
               ref={inputRef}
               type="number"
               inputMode="numeric"
@@ -71,6 +114,7 @@ const ShoppingListItemEditForm = ({
             Unit Weight
             <input
               className={styles.input}
+              name="unit_weight"
               type="number"
               inputMode="numeric"
               min={0}
@@ -85,6 +129,7 @@ const ShoppingListItemEditForm = ({
             Notes
             <input
               className={styles.input}
+              name="notes"
               type="text"
               placeholder="Notes"
               defaultValue={notes || undefined}

@@ -33,6 +33,7 @@ exports[`ShoppingListItemEditForm > displaying the form > matches snapshot 1`] =
                 class="_input_b0e6e0"
                 inputmode="numeric"
                 min="1"
+                name="quantity"
                 pattern="^[0-9]*$"
                 placeholder="Quantity"
                 required=""
@@ -53,6 +54,7 @@ exports[`ShoppingListItemEditForm > displaying the form > matches snapshot 1`] =
                 class="_input_b0e6e0"
                 inputmode="numeric"
                 min="0"
+                name="unit_weight"
                 placeholder="Unit Weight"
                 step="0.1"
                 type="number"
@@ -69,6 +71,7 @@ exports[`ShoppingListItemEditForm > displaying the form > matches snapshot 1`] =
               Notes
               <input
                 class="_input_b0e6e0"
+                name="notes"
                 placeholder="Notes"
                 type="text"
                 value=""
@@ -114,6 +117,7 @@ exports[`ShoppingListItemEditForm > displaying the form > matches snapshot 1`] =
               class="_input_b0e6e0"
               inputmode="numeric"
               min="1"
+              name="quantity"
               pattern="^[0-9]*$"
               placeholder="Quantity"
               required=""
@@ -134,6 +138,7 @@ exports[`ShoppingListItemEditForm > displaying the form > matches snapshot 1`] =
               class="_input_b0e6e0"
               inputmode="numeric"
               min="0"
+              name="unit_weight"
               placeholder="Unit Weight"
               step="0.1"
               type="number"
@@ -150,6 +155,7 @@ exports[`ShoppingListItemEditForm > displaying the form > matches snapshot 1`] =
             Notes
             <input
               class="_input_b0e6e0"
+              name="notes"
               placeholder="Notes"
               type="text"
               value=""

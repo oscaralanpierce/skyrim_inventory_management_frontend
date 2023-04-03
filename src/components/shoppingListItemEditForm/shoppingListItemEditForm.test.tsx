@@ -68,4 +68,68 @@ describe('ShoppingListItemEditForm', () => {
       expect(wrapper).toMatchSnapshot()
     })
   })
+
+  describe('submitting the form', () => {
+    describe('with valid attributes', () => {
+      test('updates the shopping list item', () => {
+        const updateShoppingListItem = vitest.fn()
+        contextValue = { ...shoppingListsContextValue, updateShoppingListItem }
+        const wrapper = renderWithContexts(
+          <ShoppingListItemEditForm
+            itemId={6}
+            description="Health potion ingredients"
+            listTitle="Alchemy Ingredients"
+            buttonColor={BLUE}
+            quantity={2}
+            unitWeight={3}
+            notes={null}
+          />
+        )
+
+        const qtyInput = wrapper.getByLabelText('Quantity')
+        const weightInput = wrapper.getByLabelText('Unit Weight')
+        const form = wrapper.getByTestId('editShoppingListItem6Form')
+
+        act(() => {
+          fireEvent.change(qtyInput, { target: { value: '4' } })
+          fireEvent.change(weightInput, { target: { value: '0.1' } })
+          fireEvent.submit(form)
+        })
+
+        expect(updateShoppingListItem).toHaveBeenCalledWith(
+          6,
+          { quantity: 4, unit_weight: 0.1 },
+          expect.any(Function)
+        )
+      })
+    })
+
+    describe('with invalid attributes', () => {
+      test("doesn't update the item", () => {
+        const updateShoppingListItem = vitest.fn()
+        contextValue = { ...shoppingListsContextValue, updateShoppingListItem }
+        const wrapper = renderWithContexts(
+          <ShoppingListItemEditForm
+            itemId={6}
+            description="Health potion ingredients"
+            listTitle="Alchemy Ingredients"
+            buttonColor={BLUE}
+            quantity={2}
+            unitWeight={3}
+            notes={null}
+          />
+        )
+
+        const qtyInput = wrapper.getByLabelText('Quantity')
+        const button = wrapper.getByText('Update Item')
+
+        act(() => {
+          fireEvent.change(qtyInput, { target: { value: '-4' } })
+          fireEvent.click(button)
+        })
+
+        expect(updateShoppingListItem).not.toHaveBeenCalled()
+      })
+    })
+  })
 })
