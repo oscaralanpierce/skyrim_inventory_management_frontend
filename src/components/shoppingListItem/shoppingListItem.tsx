@@ -10,6 +10,7 @@ import AnimateHeight from 'react-animate-height'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faXmark,
+  faPenToSquare,
   faChevronUp,
   faChevronDown,
 } from '@fortawesome/free-solid-svg-icons'
@@ -18,10 +19,12 @@ import {
   usePageContext,
   useShoppingListsContext,
 } from '../../hooks/contexts'
+import ShoppingListItemEditForm from '../shoppingListItemEditForm/shoppingListItemEditForm'
 import styles from './shoppingListItem.module.css'
 
 interface ShoppingListItemProps {
   itemId: number
+  listTitle: string
   description: string
   quantity: number
   unitWeight?: number | null
@@ -46,6 +49,7 @@ const formatWeight = (weight?: number | null) => {
 
 const ShoppingListItem = ({
   itemId,
+  listTitle,
   description,
   quantity,
   unitWeight,
@@ -59,10 +63,11 @@ const ShoppingListItem = ({
   const incRef = useRef<HTMLButtonElement>(null)
   const decRef = useRef<HTMLButtonElement>(null)
 
-  const { setFlashProps } = usePageContext()
+  const { setFlashProps, setModalProps } = usePageContext()
   const { destroyShoppingListItem, updateShoppingListItem } =
     useShoppingListsContext()
 
+  const colorScheme = useColorScheme()
   const {
     schemeColorDark,
     hoverColorLight,
@@ -70,7 +75,7 @@ const ShoppingListItem = ({
     borderColor,
     schemeColorLightest,
     textColorTertiary,
-  } = useColorScheme()
+  } = colorScheme
 
   const styleVars = {
     '--main-color': schemeColorDark,
@@ -93,6 +98,25 @@ const ShoppingListItem = ({
     const target = e.target as Node
 
     if (!iconRefContains(target)) setExpanded(!expanded)
+  }
+
+  const displayEditForm: MouseEventHandler = (e) => {
+    e.preventDefault()
+
+    setModalProps({
+      hidden: false,
+      children: (
+        <ShoppingListItemEditForm
+          itemId={itemId}
+          description={description}
+          listTitle={listTitle}
+          quantity={quantity}
+          unitWeight={unitWeight}
+          notes={notes}
+          buttonColor={colorScheme}
+        />
+      ),
+    })
   }
 
   const destroyItem: MouseEventHandler = (e) => {
@@ -184,6 +208,13 @@ const ShoppingListItem = ({
                 data-testid={`destroyShoppingListItem${itemId}`}
               >
                 <FontAwesomeIcon className={styles.fa} icon={faXmark} />
+              </button>
+              <button
+                className={styles.icon}
+                onClick={displayEditForm}
+                data-testid={`editShoppingListItem${itemId}`}
+              >
+                <FontAwesomeIcon className={styles.fa} icon={faPenToSquare} />
               </button>
             </span>
           )}

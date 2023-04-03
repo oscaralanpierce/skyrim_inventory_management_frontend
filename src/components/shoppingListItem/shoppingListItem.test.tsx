@@ -33,6 +33,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={33}
+            listTitle="Clothing"
             description="Silver Necklace"
             quantity={2}
             unitWeight={0.3}
@@ -50,6 +51,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={20}
+            listTitle="Clothing"
             description="Silver Necklace"
             quantity={2}
             unitWeight={1.0}
@@ -68,6 +70,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={20}
+            listTitle="Clothing"
             description="Silver Necklace"
             quantity={2}
             unitWeight={1.0}
@@ -79,10 +82,27 @@ describe('ShoppingListItem', () => {
         expect(wrapper.getByTestId('destroyShoppingListItem20')).toBeTruthy()
       })
 
+      test('has an edit icon', () => {
+        const wrapper = renderInContexts(
+          <ShoppingListItem
+            itemId={20}
+            listTitle="Clothing"
+            description="Silver Necklace"
+            quantity={2}
+            unitWeight={1.0}
+            notes="To enchant"
+            canEdit
+          />
+        )
+
+        expect(wrapper.getByTestId('editShoppingListItem20')).toBeTruthy()
+      })
+
       test('has increment and decrement icons', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={20}
+            listTitle="Clothing"
             description="Silver Necklace"
             quantity={2}
             unitWeight={1.0}
@@ -99,6 +119,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={2}
+            listTitle="Clothing"
             description="Silver Necklace"
             quantity={2}
             unitWeight={0.3}
@@ -116,6 +137,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={33}
+            listTitle="All Items"
             description="Silver Necklace"
             quantity={2}
             unitWeight={0.3}
@@ -132,6 +154,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={20}
+            listTitle="All Items"
             description="Silver Necklace"
             quantity={2}
             unitWeight={1.0}
@@ -149,6 +172,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={20}
+            listTitle="All Items"
             description="Silver Necklace"
             quantity={2}
             unitWeight={1.0}
@@ -159,10 +183,26 @@ describe('ShoppingListItem', () => {
         expect(wrapper.queryByTestId('destroyShoppingListItem20')).toBeFalsy()
       })
 
+      test('has no edit icon', () => {
+        const wrapper = renderInContexts(
+          <ShoppingListItem
+            itemId={20}
+            listTitle="All Items"
+            description="Silver Necklace"
+            quantity={2}
+            unitWeight={1.0}
+            notes="To enchant"
+          />
+        )
+
+        expect(wrapper.queryByTestId('editShoppingListItem20')).toBeFalsy()
+      })
+
       test('has no increment or decrement icons', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={20}
+            listTitle="All Items"
             description="Silver Necklace"
             quantity={2}
             unitWeight={1.0}
@@ -178,6 +218,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={2}
+            listTitle="All Items"
             description="Silver Necklace"
             quantity={2}
             unitWeight={0.3}
@@ -202,6 +243,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={33}
+            listTitle="Clothing"
             description="Silver Necklace"
             quantity={2}
             unitWeight={0.3}
@@ -231,6 +273,7 @@ describe('ShoppingListItem', () => {
         const wrapper = renderInContexts(
           <ShoppingListItem
             itemId={33}
+            listTitle="Clothing"
             description="Silver Necklace"
             quantity={2}
             unitWeight={0.3}
@@ -258,6 +301,7 @@ describe('ShoppingListItem', () => {
       const wrapper = renderInContexts(
         <ShoppingListItem
           itemId={33}
+          listTitle="Clothing"
           description="Silver Necklace"
           quantity={2}
           unitWeight={0.3}
@@ -289,6 +333,7 @@ describe('ShoppingListItem', () => {
       const wrapper = renderInContexts(
         <ShoppingListItem
           itemId={33}
+          listTitle="Clothing"
           description="Silver Necklace"
           quantity={2}
           unitWeight={0.3}
