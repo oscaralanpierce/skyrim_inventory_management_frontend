@@ -76,14 +76,18 @@ describe('ShoppingList', () => {
             <ShoppingListItem
               key="unique-key-1"
               itemId={1}
+              listTitle="My Shopping List"
               description="List Item 1"
               quantity={4}
+              canEdit
             />
             <ShoppingListItem
               key="unique-key-2"
               itemId={2}
+              listTitle="My Shopping List"
               description="List Item 2"
               quantity={1}
+              canEdit
             />
           </ShoppingList>
         )
@@ -100,14 +104,18 @@ describe('ShoppingList', () => {
             <ShoppingListItem
               key="unique-key-1"
               itemId={1}
+              listTitle="My Shopping List"
               description="List Item 1"
               quantity={4}
+              canEdit
             />
             <ShoppingListItem
               key="unique-key-2"
               itemId={2}
+              listTitle="My Shopping List"
               description="List Item 2"
               quantity={1}
+              canEdit
             />
           </ShoppingList>
         )
@@ -121,14 +129,18 @@ describe('ShoppingList', () => {
             <ShoppingListItem
               key="unique-key-1"
               itemId={1}
+              listTitle="My Shopping List"
               description="List Item 1"
               quantity={4}
+              canEdit
             />
             <ShoppingListItem
               key="unique-key-2"
               itemId={2}
+              listTitle="My Shopping List"
               description="List Item 2"
               quantity={1}
+              canEdit
             />
           </ShoppingList>
         )
@@ -142,14 +154,18 @@ describe('ShoppingList', () => {
             <ShoppingListItem
               key="unique-key-1"
               itemId={1}
+              listTitle="My Shopping List"
               description="List Item 1"
               quantity={4}
+              canEdit
             />
             <ShoppingListItem
               key="unique-key-2"
               itemId={2}
+              listTitle="My Shopping List"
               description="List Item 2"
               quantity={1}
+              canEdit
             />
           </ShoppingList>
         )
@@ -195,6 +211,10 @@ describe('ShoppingList', () => {
 
   describe('destroying the list', () => {
     describe('when the user confirms deletion', () => {
+      afterEach(() => {
+        listContextValue = shoppingListsContextValue
+      })
+
       test("calls the context's destroyShoppingList function with its listId", () => {
         const destroyShoppingList = vitest.fn()
         listContextValue = { ...shoppingListsContextValue, destroyShoppingList }
@@ -217,6 +237,10 @@ describe('ShoppingList', () => {
     })
 
     describe('when the user cancels deletion', () => {
+      afterEach(() => {
+        listContextValue = shoppingListsContextValue
+      })
+
       test("doesn't call the destroyShoppingList function", () => {
         const destroyShoppingList = vitest.fn()
         listContextValue = { ...shoppingListsContextValue, destroyShoppingList }
