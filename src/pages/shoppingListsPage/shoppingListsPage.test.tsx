@@ -1,5 +1,10 @@
 import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
-import { waitFor, act, fireEvent } from '@testing-library/react'
+import {
+  waitFor,
+  act,
+  fireEvent,
+  waitForElementToBeRemoved,
+} from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
@@ -15,6 +20,8 @@ import {
   deleteShoppingListServerError,
   incrementShoppingListItemSuccess,
   decrementShoppingListItemSuccess,
+  updateShoppingListItemSuccess,
+  updateShoppingListItemUnprocessable,
   updateShoppingListItemServerError,
   postShoppingListItemsSuccess,
   postShoppingListItemsUnprocessable,
@@ -1449,6 +1456,154 @@ describe('ShoppingListsPage', () => {
               "Oops! Something unexpected went wrong. We're sorry! Please try again later."
             )
           ).toBeTruthy()
+        })
+      })
+    })
+  })
+
+  describe('editing a list item', () => {
+    describe('when successful', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        updateShoppingListItemSuccess
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('hides the form, shows the flash message and updates the items', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const editIcon = await wrapper.findByTestId('editShoppingListItem3')
+
+        act(() => fireEvent.click(editIcon))
+
+        const notesFields = wrapper.getAllByLabelText('Notes')
+        const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
+        const form = wrapper.getByTestId('editShoppingListItem3Form')
+
+        act(() => {
+          fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
+          fireEvent.submit(form)
+        })
+
+        await waitForElementToBeRemoved(form)
+
+        expect(
+          wrapper.getByText(
+            'Success! Your shopping list item has been updated.'
+          )
+        ).toBeTruthy()
+        expect(wrapper.getAllByText('Hello world').length).toEqual(2)
+        expect(wrapper.queryAllByText(/hinges/).length).toEqual(0)
+      })
+    })
+
+    describe('when there is a 422 response', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        updateShoppingListItemUnprocessable
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test("shows the validation errors and doesn't hide the form", async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const editIcon = await wrapper.findByTestId('editShoppingListItem3')
+
+        act(() => fireEvent.click(editIcon))
+
+        const notesFields = wrapper.getAllByLabelText('Notes')
+        const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
+        const form = wrapper.getByTestId('editShoppingListItem3Form')
+
+        act(() => {
+          fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
+          fireEvent.submit(form)
+        })
+
+        await waitFor(() => {
+          expect(
+            wrapper.getByText(
+              '2 error(s) prevented your shopping list item from being saved:'
+            )
+          ).toBeTruthy()
+          expect(
+            wrapper.getByText('Quantity must be greater than 0')
+          ).toBeTruthy()
+          expect(
+            wrapper.getByText('Unit weight must be greater than or equal to 0')
+          ).toBeTruthy()
+          expect(form).toBeTruthy()
+          expect(wrapper.getAllByText(/hinges/).length).toEqual(2)
+          expect(wrapper.queryAllByText('Hello world').length).toEqual(0)
+        })
+      })
+    })
+
+    describe('when there is a server error', () => {
+      const mockServer = setupServer(
+        getShoppingListsSuccess,
+        updateShoppingListItemServerError
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test("shows an error message and doesn't hide the form", async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <GamesContext.Provider value={gamesContextValue}>
+              <ShoppingListsProvider>
+                <ShoppingListsPage />
+              </ShoppingListsProvider>
+            </GamesContext.Provider>
+          </PageProvider>
+        )
+
+        const editIcon = await wrapper.findByTestId('editShoppingListItem3')
+
+        act(() => fireEvent.click(editIcon))
+
+        const notesFields = wrapper.getAllByLabelText('Notes')
+        const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
+        const form = wrapper.getByTestId('editShoppingListItem3Form')
+
+        act(() => {
+          fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
+          fireEvent.submit(form)
+        })
+
+        await waitFor(() => {
+          expect(
+            wrapper.getByText(
+              "Oops! Something unexpected went wrong. We're sorry! Please try again later."
+            )
+          ).toBeTruthy()
+          expect(form).toBeTruthy()
+          expect(wrapper.getAllByText(/hinges/).length).toEqual(2)
+          expect(wrapper.queryAllByText('Hello world').length).toEqual(0)
         })
       })
     })

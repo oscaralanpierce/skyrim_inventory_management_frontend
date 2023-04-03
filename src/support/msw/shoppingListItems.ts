@@ -2,6 +2,7 @@ import { rest } from 'msw'
 import { allShoppingLists, shoppingListsForGame } from '../data/shoppingLists'
 import { allShoppingListItems } from '../data/shoppingListItems'
 import { newShoppingListItem } from './helpers/data'
+import { RequestShoppingListItem } from '../../types/apiData'
 
 const BASE_URI = 'http://localhost:3000'
 const listIds = allShoppingLists.map(({ id }) => id)
@@ -66,7 +67,7 @@ export const postShoppingListItemsServerError = rest.post(
 
 export const incrementShoppingListItemSuccess = rest.patch(
   `${BASE_URI}/shopping_list_items/:id`,
-  async (req, res, ctx) => {
+  (req, res, ctx) => {
     const itemId: number = Number(req.params.id)
     const item = allShoppingListItems.find(({ id }) => id === itemId)
     const list = allShoppingLists.find(({ id }) => id === item?.list_id)
@@ -87,7 +88,7 @@ export const incrementShoppingListItemSuccess = rest.patch(
 
 export const decrementShoppingListItemSuccess = rest.patch(
   `${BASE_URI}/shopping_list_items/:id`,
-  async (req, res, ctx) => {
+  (req, res, ctx) => {
     const itemId: number = Number(req.params.id)
     const item = allShoppingListItems.find(({ id }) => id === itemId)
     const list = allShoppingLists.find(({ id }) => id === item?.list_id)
@@ -100,6 +101,39 @@ export const decrementShoppingListItemSuccess = rest.patch(
     )
     const aggListItem = { ...allItems[0], quantity: allItems[0].quantity - 1 }
     const regItem = { ...item, quantity: item.quantity - 1 }
+
+    return res(ctx.status(200), ctx.json([aggListItem, regItem]))
+  }
+)
+
+// Logic for updating shopping list items is too complex to model in an
+// MSW handler. This handler is written under the assumption that only
+// the list item's "notes" have been updated in the request. Updates to
+// the other values are not supported by this handler. In particular,
+// updates to unit weight are complex and should not be used in front-end
+// tests if it can be avoided.
+//
+// This handler further assumes that the aggregate list item associated with
+// the list item being updated has no "notes" value other than that of the
+// list item being updated - i.e., none of its other associated list items, if
+// any, have notes. If they did, that, too, would further complicate things.
+export const updateShoppingListItemSuccess = rest.patch(
+  `${BASE_URI}/shopping_list_items/:id`,
+  async (req, res, ctx) => {
+    const itemId: number = Number(req.params.id)
+    const item = allShoppingListItems.find(({ id }) => id === itemId)
+    const list = allShoppingLists.find(({ id }) => id === item?.list_id)
+
+    if (!item || !list) return res(ctx.status(404))
+
+    const json = (await req.json()) as RequestShoppingListItem
+
+    const allItems = shoppingListsForGame(list.game_id).flatMap(
+      ({ list_items }) =>
+        list_items.filter(({ description }) => description === item.description)
+    )
+    const aggListItem = { ...allItems[0], notes: json.notes }
+    const regItem = { ...item, notes: json.notes }
 
     return res(ctx.status(200), ctx.json([aggListItem, regItem]))
   }
