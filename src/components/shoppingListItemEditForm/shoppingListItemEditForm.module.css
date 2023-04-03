@@ -1,6 +1,6 @@
 .root {
   font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
-  padding: 32px;
+  padding: 24px;
   margin: 0 auto;
   width: 80%;
   background-color: #f0f0f0;
@@ -62,6 +62,12 @@
 
 .submit:hover {
   background-color: var(--button-hover-color);
+}
+
+@media (min-width: 481px) {
+  .root {
+    padding: 32px;
+  }
 }
 
 @media (min-width: 601px) {
