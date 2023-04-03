@@ -28,7 +28,7 @@ const ShoppingListItemEditForm = ({
   unitWeight,
   notes,
 }: EditFormProps) => {
-  const { setFlashProps } = usePageContext()
+  const { setFlashProps, setModalProps } = usePageContext()
   const { updateShoppingListItem } = useShoppingListsContext()
   const formRef = useRef<HTMLFormElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -63,6 +63,7 @@ const ShoppingListItemEditForm = ({
     e.preventDefault()
 
     const onSuccess = () => {
+      setModalProps({ hidden: true, children: <></> })
       setFlashProps({
         hidden: false,
         type: 'success',

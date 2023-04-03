@@ -40,7 +40,9 @@
 }
 
 .descriptionContainer {
+  display: grid;
   border-right: 1px solid var(--border-color);
+  align-items: center;
 }
 
 .descriptionContainerEditable {
