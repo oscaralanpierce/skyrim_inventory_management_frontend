@@ -70,7 +70,7 @@ const GameEditForm = ({
 
   return (
     <div className={styles.root}>
-      <h3>Update Game</h3>
+      <h3 className={styles.header}>Update Game</h3>
       <form
         ref={formRef}
         style={colorVars}
@@ -111,7 +111,7 @@ const GameEditForm = ({
           type="submit"
           data-testid="submitGameEditForm"
         >
-          Update
+          Update Game
         </button>
       </form>
     </div>

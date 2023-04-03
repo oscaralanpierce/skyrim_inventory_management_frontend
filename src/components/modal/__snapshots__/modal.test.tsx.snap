@@ -15,7 +15,9 @@ exports[`Modal > matches snapshot 1`] = `
           <div
             class="_root_bc52a1"
           >
-            <h3>
+            <h3
+              class="_header_bc52a1"
+            >
               Update Game
             </h3>
             <form
@@ -65,7 +67,7 @@ exports[`Modal > matches snapshot 1`] = `
                 data-testid="submitGameEditForm"
                 type="submit"
               >
-                Update
+                Update Game
               </button>
             </form>
           </div>
@@ -84,7 +86,9 @@ exports[`Modal > matches snapshot 1`] = `
         <div
           class="_root_bc52a1"
         >
-          <h3>
+          <h3
+            class="_header_bc52a1"
+          >
             Update Game
           </h3>
           <form
@@ -134,7 +138,7 @@ exports[`Modal > matches snapshot 1`] = `
               data-testid="submitGameEditForm"
               type="submit"
             >
-              Update
+              Update Game
             </button>
           </form>
         </div>

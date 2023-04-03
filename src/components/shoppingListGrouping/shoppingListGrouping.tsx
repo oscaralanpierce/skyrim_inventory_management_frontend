@@ -31,6 +31,7 @@ const ShoppingListGrouping = () => {
                             .toLowerCase()
                             .replace(' ', '-')}-${id}`}
                           itemId={id}
+                          listTitle={title}
                           description={description}
                           quantity={quantity}
                           unitWeight={unit_weight}

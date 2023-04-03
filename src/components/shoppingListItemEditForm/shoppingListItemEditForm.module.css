@@ -8,14 +8,19 @@
 
 .header {
   font-size: 1.25rem;
-  margin-top: 0;
+  margin: 0 0 8px;
+}
+
+.subheader {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin: 0;
 }
 
 .fieldset {
   border: none;
+  margin: 0;
   padding: 4px 0;
-  display: grid;
-  margin-bottom: 12px;
 }
 
 .fieldset:first-of-type {
@@ -29,10 +34,7 @@
 .label {
   margin-top: 6px;
   margin-bottom: 6px;
-}
-
-.label:first-of-type {
-  margin-top: 0;
+  display: grid;
 }
 
 .input {
@@ -41,9 +43,10 @@
   background-color: #fff;
   color: #000;
   border: 1px solid #e0e0e0;
-  padding: 8px;
   border-radius: 3px;
+  padding: 8px;
   line-height: 1.25;
+  margin-top: 8px;
 }
 
 .submit {
@@ -71,11 +74,24 @@
   .root {
     width: 70%;
   }
+
+  .label {
+    grid-template-columns: 25% 75%;
+    align-items: center;
+  }
+
+  .input {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 769px) {
   .root {
     width: 60%;
+  }
+
+  .label {
+    grid-template-columns: 20% 80%;
   }
 }
 
@@ -94,5 +110,9 @@
 @media (min-width: 1405px) {
   .root {
     width: calc(0.3 * 1405px);
+  }
+
+  .label {
+    grid-template-columns: 25% 75%;
   }
 }

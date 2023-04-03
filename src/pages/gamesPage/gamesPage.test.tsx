@@ -491,7 +491,7 @@ describe('<GamesPage />', () => {
 
         act(() => editButton.click())
 
-        expect(wrapper.getByText('Update Game')).toBeTruthy()
+        expect(wrapper.getAllByText('Update Game').length).toEqual(2)
       })
 
       test('hides the modal and form when clicking outside the form', async () => {
@@ -509,7 +509,7 @@ describe('<GamesPage />', () => {
 
         act(() => editButton.click())
 
-        const form = wrapper.getByText('Update Game')
+        const form = wrapper.getAllByText('Update Game')[0]
         expect(form).toBeTruthy()
 
         const modal = wrapper.getByTestId('modal') as HTMLDivElement
@@ -536,7 +536,7 @@ describe('<GamesPage />', () => {
 
         act(() => editButton.click())
 
-        expect(wrapper.getByText('Update Game')).toBeTruthy()
+        expect(wrapper.getAllByText('Update Game').length).toEqual(2)
 
         const form = wrapper.getByTestId('editGame32Form') as HTMLFormElement
 
@@ -544,7 +544,7 @@ describe('<GamesPage />', () => {
           fireEvent.mouseDown(form)
         })
 
-        expect(wrapper.getByText('Update Game')).toBeTruthy()
+        expect(wrapper.getAllByText('Update Game').length).toEqual(2)
       })
 
       test('hides the modal and form when pressing the Escape key', async () => {
@@ -562,7 +562,7 @@ describe('<GamesPage />', () => {
 
         act(() => editButton.click())
 
-        expect(wrapper.getByText('Update Game')).toBeTruthy()
+        expect(wrapper.getAllByText('Update Game').length).toEqual(2)
 
         const modal = wrapper.getByTestId('modal') as HTMLDivElement
 

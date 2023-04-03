@@ -16,7 +16,7 @@ export default defineConfig({
           },
           {
             name: 'Quattrocento Sans',
-            styles: 'wght@400;700',
+            styles: 'ital,wght@0,400;0,700;1,400',
           },
         ],
       },
