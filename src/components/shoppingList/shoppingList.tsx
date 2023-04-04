@@ -35,8 +35,6 @@ const ShoppingList = ({
   editable = false,
   children,
 }: ShoppingListProps) => {
-  const DELETE_CONFIRMATION = `Are you sure you want to delete the list "${title}"? You will also lose any list items on the list. This action cannot be undone.`
-
   const { updateShoppingList, destroyShoppingList } = useShoppingListsContext()
   const { setFlashProps } = usePageContext()
   const [expanded, setExpanded] = useState(false)
@@ -103,7 +101,8 @@ const ShoppingList = ({
   const destroy: MouseEventHandler = (e) => {
     e.preventDefault()
 
-    const shouldDestroy = window.confirm(DELETE_CONFIRMATION)
+    const confirmation = `Are you sure you want to delete the list "${title}"? You will also lose any list items on the list. This action cannot be undone.`
+    const shouldDestroy = window.confirm(confirmation)
 
     if (shouldDestroy) {
       destroyShoppingList(listId)
