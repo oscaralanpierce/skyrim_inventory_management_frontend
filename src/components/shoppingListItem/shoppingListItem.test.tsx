@@ -38,7 +38,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={0.3}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -56,7 +56,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={1.0}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -75,7 +75,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={1.0}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -91,7 +91,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={1.0}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -107,7 +107,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={1.0}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -124,7 +124,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={0.3}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -248,7 +248,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={0.3}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -278,7 +278,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={0.3}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -306,7 +306,7 @@ describe('ShoppingListItem', () => {
           quantity={2}
           unitWeight={0.3}
           notes="To enchant"
-          canEdit
+          editable
         />
       )
 
@@ -338,7 +338,7 @@ describe('ShoppingListItem', () => {
           quantity={2}
           unitWeight={0.3}
           notes="To enchant"
-          canEdit
+          editable
         />
       )
 

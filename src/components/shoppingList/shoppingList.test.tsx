@@ -32,7 +32,7 @@ describe('ShoppingList', () => {
     describe('when there are no list items', () => {
       test('displays the name of the shopping list', () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit />
+          <ShoppingList listId={4} title="My Shopping List" editable />
         )
 
         expect(wrapper.getByText('My Shopping List')).toBeTruthy()
@@ -47,7 +47,7 @@ describe('ShoppingList', () => {
 
       test('has a destroy icon', () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit />
+          <ShoppingList listId={4} title="My Shopping List" editable />
         )
 
         expect(wrapper.getByTestId('destroyShoppingList4')).toBeTruthy()
@@ -55,7 +55,7 @@ describe('ShoppingList', () => {
 
       test('has an edit icon', () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit />
+          <ShoppingList listId={4} title="My Shopping List" editable />
         )
 
         expect(wrapper.getByTestId('editShoppingList4')).toBeTruthy()
@@ -63,7 +63,7 @@ describe('ShoppingList', () => {
 
       test('matches snapshot', () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit />
+          <ShoppingList listId={4} title="My Shopping List" editable />
         )
         expect(wrapper).toMatchSnapshot()
       })
@@ -72,14 +72,14 @@ describe('ShoppingList', () => {
     describe('when there are list items', () => {
       test("doesn't display the message about no list items", () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit>
+          <ShoppingList listId={4} title="My Shopping List" editable>
             <ShoppingListItem
               key="unique-key-1"
               itemId={1}
               listTitle="My Shopping List"
               description="List Item 1"
               quantity={4}
-              canEdit
+              editable
             />
             <ShoppingListItem
               key="unique-key-2"
@@ -87,7 +87,7 @@ describe('ShoppingList', () => {
               listTitle="My Shopping List"
               description="List Item 2"
               quantity={1}
-              canEdit
+              editable
             />
           </ShoppingList>
         )
@@ -100,14 +100,14 @@ describe('ShoppingList', () => {
 
       test('has a destroy icon', () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit>
+          <ShoppingList listId={4} title="My Shopping List" editable>
             <ShoppingListItem
               key="unique-key-1"
               itemId={1}
               listTitle="My Shopping List"
               description="List Item 1"
               quantity={4}
-              canEdit
+              editable
             />
             <ShoppingListItem
               key="unique-key-2"
@@ -115,7 +115,7 @@ describe('ShoppingList', () => {
               listTitle="My Shopping List"
               description="List Item 2"
               quantity={1}
-              canEdit
+              editable
             />
           </ShoppingList>
         )
@@ -125,14 +125,14 @@ describe('ShoppingList', () => {
 
       test('has an edit icon', () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit>
+          <ShoppingList listId={4} title="My Shopping List" editable>
             <ShoppingListItem
               key="unique-key-1"
               itemId={1}
               listTitle="My Shopping List"
               description="List Item 1"
               quantity={4}
-              canEdit
+              editable
             />
             <ShoppingListItem
               key="unique-key-2"
@@ -140,7 +140,7 @@ describe('ShoppingList', () => {
               listTitle="My Shopping List"
               description="List Item 2"
               quantity={1}
-              canEdit
+              editable
             />
           </ShoppingList>
         )
@@ -150,14 +150,14 @@ describe('ShoppingList', () => {
 
       test('matches snapshot', () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit>
+          <ShoppingList listId={4} title="My Shopping List" editable>
             <ShoppingListItem
               key="unique-key-1"
               itemId={1}
               listTitle="My Shopping List"
               description="List Item 1"
               quantity={4}
-              canEdit
+              editable
             />
             <ShoppingListItem
               key="unique-key-2"
@@ -165,7 +165,7 @@ describe('ShoppingList', () => {
               listTitle="My Shopping List"
               description="List Item 2"
               quantity={1}
-              canEdit
+              editable
             />
           </ShoppingList>
         )
@@ -201,7 +201,7 @@ describe('ShoppingList', () => {
 
       test('matches snapshot', () => {
         const wrapper = renderWithContexts(
-          <ShoppingList listId={3} title="My Shopping List" canEdit />
+          <ShoppingList listId={3} title="My Shopping List" editable />
         )
 
         expect(wrapper).toMatchSnapshot()
@@ -220,7 +220,7 @@ describe('ShoppingList', () => {
         listContextValue = { ...shoppingListsContextValue, destroyShoppingList }
 
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit />
+          <ShoppingList listId={4} title="My Shopping List" editable />
         )
 
         window.confirm = vitest.fn().mockImplementation(() => true)
@@ -246,7 +246,7 @@ describe('ShoppingList', () => {
         listContextValue = { ...shoppingListsContextValue, destroyShoppingList }
 
         const wrapper = renderWithContexts(
-          <ShoppingList listId={4} title="My Shopping List" canEdit />
+          <ShoppingList listId={4} title="My Shopping List" editable />
         )
 
         window.confirm = vitest.fn().mockImplementation(() => false)
@@ -266,7 +266,7 @@ describe('ShoppingList', () => {
   describe('displaying the edit form', () => {
     test('displays the form', () => {
       const wrapper = renderWithContexts(
-        <ShoppingList listId={3} title="My Shopping List" canEdit />
+        <ShoppingList listId={3} title="My Shopping List" editable />
       )
 
       const editButton = wrapper.getByTestId('editShoppingList3')
@@ -281,7 +281,7 @@ describe('ShoppingList', () => {
 
     test('hides the form when you click the edit button again', () => {
       const wrapper = renderWithContexts(
-        <ShoppingList listId={3} title="My Shopping List" canEdit />
+        <ShoppingList listId={3} title="My Shopping List" editable />
       )
 
       const editButton = wrapper.getByTestId('editShoppingList3')
@@ -303,7 +303,7 @@ describe('ShoppingList', () => {
 
     test('hides the form when you click outside the input', () => {
       const wrapper = renderWithContexts(
-        <ShoppingList listId={3} title="My Shopping List" canEdit />
+        <ShoppingList listId={3} title="My Shopping List" editable />
       )
 
       const editButton = wrapper.getByTestId('editShoppingList3')
@@ -327,7 +327,7 @@ describe('ShoppingList', () => {
 
     test('hides the form when you press Escape', () => {
       const wrapper = renderWithContexts(
-        <ShoppingList listId={3} title="My Shopping List" canEdit />
+        <ShoppingList listId={3} title="My Shopping List" editable />
       )
 
       const editButton = wrapper.getByTestId('editShoppingList3')
@@ -349,7 +349,7 @@ describe('ShoppingList', () => {
 
     test("doesn't hide the form when you press a key other than escape", () => {
       const wrapper = renderWithContexts(
-        <ShoppingList listId={3} title="My Shopping List" canEdit />
+        <ShoppingList listId={3} title="My Shopping List" editable />
       )
 
       const editButton = wrapper.getByTestId('editShoppingList3')
@@ -371,7 +371,7 @@ describe('ShoppingList', () => {
 
     test('matches snapshot', () => {
       const wrapper = renderWithContexts(
-        <ShoppingList listId={3} title="My Shopping List" canEdit />
+        <ShoppingList listId={3} title="My Shopping List" editable />
       )
 
       const editButton = wrapper.getByTestId('editShoppingList3')

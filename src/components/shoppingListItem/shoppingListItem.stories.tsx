@@ -39,7 +39,7 @@ export const Editable = () => (
         quantity={5}
         unitWeight={1.0}
         notes="To make bolts"
-        canEdit
+        editable
       />
     </ColorProvider>
   </ContextProviders>
@@ -68,7 +68,7 @@ export const LongValuesEditable = () => (
         quantity={200000000000000000}
         unitWeight={4000000000000000.0}
         notes="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
-        canEdit
+        editable
       />
     </ColorProvider>
   </ContextProviders>

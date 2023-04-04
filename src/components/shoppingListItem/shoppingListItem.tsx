@@ -29,7 +29,7 @@ interface ShoppingListItemProps {
   quantity: number
   unitWeight?: number | null
   notes?: string | null
-  canEdit?: boolean
+  editable?: boolean
 }
 
 /**
@@ -54,7 +54,7 @@ const ShoppingListItem = ({
   quantity,
   unitWeight,
   notes,
-  canEdit = false,
+  editable = false,
 }: ShoppingListItemProps) => {
   const [expanded, setExpanded] = useState(false)
   const [incrementerDisabled, setIncrementerDisabled] = useState(false)
@@ -197,10 +197,10 @@ const ShoppingListItem = ({
       >
         <span
           className={classNames(styles.descriptionContainer, {
-            [styles.descriptionContainerEditable]: canEdit,
+            [styles.descriptionContainerEditable]: editable,
           })}
         >
-          {canEdit && (
+          {editable && (
             <span className={styles.editIcons} ref={iconsRef}>
               <button
                 className={styles.icon}
@@ -220,8 +220,8 @@ const ShoppingListItem = ({
           )}
           <h3 className={styles.description}>{description}</h3>
         </span>
-        <span className={canEdit ? styles.quantityEditable : styles.quantity}>
-          {canEdit && (
+        <span className={editable ? styles.quantityEditable : styles.quantity}>
+          {editable && (
             <button
               className={styles.icon}
               ref={incRef}
@@ -233,7 +233,7 @@ const ShoppingListItem = ({
             </button>
           )}
           <span className={styles.quantityContent}>{quantity}</span>
-          {canEdit && (
+          {editable && (
             <button
               className={styles.icon}
               ref={decRef}

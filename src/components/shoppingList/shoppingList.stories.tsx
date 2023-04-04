@@ -37,7 +37,7 @@ export default { title: 'ShoppingList' }
 export const EditableNoListItems = () => (
   <Providers>
     <ColorProvider colorScheme={AQUA}>
-      <ShoppingList listId={32} title="Proudspire Manor" canEdit />
+      <ShoppingList listId={32} title="Proudspire Manor" editable />
     </ColorProvider>
   </Providers>
 )
@@ -45,13 +45,13 @@ export const EditableNoListItems = () => (
 export const EditableWithListItems = () => (
   <Providers>
     <ColorProvider colorScheme={GREEN}>
-      <ShoppingList listId={32} title="Proudspire Manor" canEdit>
+      <ShoppingList listId={32} title="Proudspire Manor" editable>
         <ShoppingListItem
           itemId={1}
           description="Steel Ingot"
           quantity={5}
           unitWeight={1.0}
-          canEdit
+          editable
         />
         <ShoppingListItem
           itemId={2}
@@ -59,7 +59,7 @@ export const EditableWithListItems = () => (
           quantity={200000000000}
           unitWeight={400000000000}
           notes="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet velit adipsci"
-          canEdit
+          editable
         />
       </ShoppingList>
     </ColorProvider>
