@@ -35,7 +35,7 @@ const ShoppingListCreateForm = () => {
     return attributes
   }
 
-  const createList: FormEventHandler = (e) => {
+  const create: FormEventHandler = (e) => {
     e.preventDefault()
 
     if (!formRef.current) return
@@ -60,7 +60,7 @@ const ShoppingListCreateForm = () => {
       className={styles.root}
       style={colorVars}
       ref={formRef}
-      onSubmit={createList}
+      onSubmit={create}
     >
       <fieldset className={styles.fieldset}>
         <input
