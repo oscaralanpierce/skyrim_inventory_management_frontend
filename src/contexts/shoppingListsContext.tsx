@@ -151,7 +151,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
               if (json.length == 2) {
                 setShoppingLists(json)
               } else {
-                const newShoppingLists = shoppingLists
+                const newShoppingLists = [...shoppingLists]
                 newShoppingLists.splice(1, 0, json[0])
                 setShoppingLists(newShoppingLists)
               }
@@ -191,8 +191,6 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
    */
 
   const fetchShoppingLists = useCallback(() => {
-    if (!activeGame) return
-
     if (user && token && activeGame) {
       setShoppingListsLoadingState(LOADING)
 
