@@ -576,7 +576,6 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
                   aria-controls="shoppingListItem1Details"
                   aria-expanded="false"
                   class="_trigger_fccc8d"
-                  role="button"
                 >
                   <span
                     class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -725,7 +724,6 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
                   aria-controls="shoppingListItem2Details"
                   aria-expanded="false"
                   class="_trigger_fccc8d"
-                  role="button"
                 >
                   <span
                     class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -1045,7 +1043,6 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
                 aria-controls="shoppingListItem1Details"
                 aria-expanded="false"
                 class="_trigger_fccc8d"
-                role="button"
               >
                 <span
                   class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -1194,7 +1191,6 @@ exports[`ShoppingList > displaying a list > when there are list items > matches 
                 aria-controls="shoppingListItem2Details"
                 aria-expanded="false"
                 class="_trigger_fccc8d"
-                role="button"
               >
                 <span
                   class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"

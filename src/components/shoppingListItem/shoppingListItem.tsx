@@ -189,7 +189,6 @@ const ShoppingListItem = ({
       style={styleVars}
     >
       <div
-        role="button"
         className={styles.trigger}
         onClick={toggleDetails}
         aria-expanded={expanded}

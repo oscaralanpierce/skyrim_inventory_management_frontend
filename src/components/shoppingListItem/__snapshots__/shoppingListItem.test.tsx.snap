@@ -13,7 +13,6 @@ exports[`ShoppingListItem > displaying the list item > when the list item is edi
           aria-controls="shoppingListItem2Details"
           aria-expanded="false"
           class="_trigger_fccc8d"
-          role="button"
         >
           <span
             class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -165,7 +164,6 @@ exports[`ShoppingListItem > displaying the list item > when the list item is edi
         aria-controls="shoppingListItem2Details"
         aria-expanded="false"
         class="_trigger_fccc8d"
-        role="button"
       >
         <span
           class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -374,7 +372,6 @@ exports[`ShoppingListItem > displaying the list item > when the list item is not
           aria-controls="shoppingListItem2Details"
           aria-expanded="false"
           class="_trigger_fccc8d"
-          role="button"
         >
           <span
             class="_descriptionContainer_fccc8d"
@@ -442,7 +439,6 @@ exports[`ShoppingListItem > displaying the list item > when the list item is not
         aria-controls="shoppingListItem2Details"
         aria-expanded="false"
         class="_trigger_fccc8d"
-        role="button"
       >
         <span
           class="_descriptionContainer_fccc8d"
