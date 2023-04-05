@@ -72,6 +72,7 @@ export const getShoppingListsSuccess = rest.get(
   `${BASE_URI}/games/:gameId/shopping_lists`,
   (req, res, ctx) => {
     const gameId: number = Number(req.params.gameId)
+
     if (gameIds.indexOf(gameId) < 0) return res(ctx.status(404))
 
     return res(
@@ -92,6 +93,7 @@ export const patchShoppingListSuccess = rest.patch(
   `${BASE_URI}/shopping_lists/:id`,
   async (req, res, ctx) => {
     const listId: number = Number(req.params.id)
+
     if (listIds.indexOf(listId) < 0) return res(ctx.status(404))
 
     const list = allShoppingLists.find(({ id }) => id === listId)
