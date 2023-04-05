@@ -1,4 +1,12 @@
-import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
+import {
+  describe,
+  test,
+  expect,
+  beforeAll,
+  beforeEach,
+  afterAll,
+  afterEach,
+} from 'vitest'
 import {
   waitFor,
   act,
@@ -72,8 +80,6 @@ describe('ShoppingListsPage', () => {
           </PageProvider>
         )
 
-        expect(wrapper).toBeTruthy()
-
         expect(wrapper.getByTestId('pulseLoader')).toBeTruthy()
       })
 
@@ -114,7 +120,6 @@ describe('ShoppingListsPage', () => {
             </PageProvider>,
             'http://localhost:5173/shopping_lists?gameId=77'
           )
-          expect(wrapper).toBeTruthy()
 
           await waitFor(() => {
             // All the lists should be there
@@ -479,7 +484,7 @@ describe('ShoppingListsPage', () => {
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test('displays the validation errors', async () => {
+      test('displays a user-friendly message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
             <GamesProvider>
@@ -527,6 +532,12 @@ describe('ShoppingListsPage', () => {
 
       describe('when the user confirms deletion', () => {
         describe('when the game has no other regular shopping lists', () => {
+          const ogConfirm = window.confirm
+
+          afterEach(() => {
+            window.confirm = ogConfirm
+          })
+
           test('removes the aggregate list too', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
@@ -599,7 +610,13 @@ describe('ShoppingListsPage', () => {
         })
 
         describe('when the game has other regular shopping lists', () => {
-          test('resets the shoppingLists array to the response value', async () => {
+          const ogConfirm = window.confirm
+
+          afterEach(() => {
+            window.confirm = ogConfirm
+          })
+
+          test('removes the deleted list', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
                 <GamesProvider>
@@ -671,6 +688,12 @@ describe('ShoppingListsPage', () => {
       })
 
       describe('when the user cancels deletion', () => {
+        const ogConfirm = window.confirm
+
+        afterEach(() => {
+          window.confirm = ogConfirm
+        })
+
         test("doesn't remove the lists", async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
@@ -687,9 +710,7 @@ describe('ShoppingListsPage', () => {
 
           const destroyIcon = await wrapper.findByTestId('destroyShoppingList2')
 
-          act(() => {
-            fireEvent.click(destroyIcon)
-          })
+          act(() => fireEvent.click(destroyIcon))
 
           expect(window.confirm).toHaveBeenCalled()
 
@@ -714,9 +735,7 @@ describe('ShoppingListsPage', () => {
 
           const destroyIcon = await wrapper.findByTestId('destroyShoppingList2')
 
-          act(() => {
-            fireEvent.click(destroyIcon)
-          })
+          act(() => fireEvent.click(destroyIcon))
 
           expect(window.confirm).toHaveBeenCalled()
 
@@ -730,6 +749,7 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when unsuccessful', () => {
+      const ogConfirm = window.confirm
       const mockServer = setupServer(
         getGamesAllSuccess,
         getShoppingListsSuccess,
@@ -738,6 +758,11 @@ describe('ShoppingListsPage', () => {
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
+
+      afterEach(() => {
+        window.confirm = ogConfirm
+      })
+
       afterAll(() => mockServer.close())
 
       test("doesn't remove the list and displays a flash error", async () => {
@@ -756,9 +781,7 @@ describe('ShoppingListsPage', () => {
 
         const destroyIcon = await wrapper.findByTestId('destroyShoppingList2')
 
-        act(() => {
-          fireEvent.click(destroyIcon)
-        })
+        act(() => fireEvent.click(destroyIcon))
 
         expect(window.confirm).toHaveBeenCalledWith(
           'Are you sure you want to delete the list "My Shopping List 1"? You will also lose any list items on the list. This action cannot be undone.'
@@ -803,19 +826,16 @@ describe('ShoppingListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editShoppingList6')
 
-        act(() => {
-          fireEvent.click(editIcon)
-        })
+        act(() => fireEvent.click(editIcon))
 
         const titleInput = wrapper.getByTestId('editListTitle')
         const editForm = wrapper.getByLabelText('List title edit form')
 
-        act(() => {
-          fireEvent.change(titleInput, {
-            target: { value: 'Alchemy Ingredients' },
-          })
-          fireEvent.submit(editForm)
+        fireEvent.change(titleInput, {
+          target: { value: 'Alchemy Ingredients' },
         })
+
+        act(() => fireEvent.submit(editForm))
 
         await waitFor(() => {
           // Name should be changed and form hidden
@@ -856,19 +876,16 @@ describe('ShoppingListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editShoppingList6')
 
-        act(() => {
-          fireEvent.click(editIcon)
-        })
+        act(() => fireEvent.click(editIcon))
 
         const titleInput = wrapper.getByTestId('editListTitle')
         const editForm = wrapper.getByLabelText('List title edit form')
 
-        act(() => {
-          fireEvent.change(titleInput, {
-            target: { value: 'Alchemy Ingredients' },
-          })
-          fireEvent.submit(editForm)
+        fireEvent.change(titleInput, {
+          target: { value: 'Alchemy Ingredients' },
         })
+
+        act(() => fireEvent.submit(editForm))
 
         await waitFor(() => {
           // The form should not be hidden nor the name changed
@@ -919,19 +936,16 @@ describe('ShoppingListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editShoppingList6')
 
-        act(() => {
-          fireEvent.click(editIcon)
-        })
+        act(() => fireEvent.click(editIcon))
 
         const titleInput = wrapper.getByTestId('editListTitle')
         const editForm = wrapper.getByLabelText('List title edit form')
 
-        act(() => {
-          fireEvent.change(titleInput, {
-            target: { value: 'Alchemy Ingredients' },
-          })
-          fireEvent.submit(editForm)
+        fireEvent.change(titleInput, {
+          target: { value: 'Alchemy Ingredients' },
         })
+
+        act(() => fireEvent.submit(editForm))
 
         await waitFor(() => {
           // The form should not be hidden nor the name changed
@@ -978,13 +992,12 @@ describe('ShoppingListsPage', () => {
         const descField = (await wrapper.findAllByLabelText('Description'))[0]
         const quantityField = (await wrapper.findAllByLabelText('Quantity'))[0]
 
-        act(() => {
-          fireEvent.change(descField, {
-            target: { value: 'Dwarven metal ingots' },
-          })
-          fireEvent.change(quantityField, { target: { value: '3' } })
-          fireEvent.submit(form)
+        fireEvent.change(descField, {
+          target: { value: 'Dwarven metal ingots' },
         })
+        fireEvent.change(quantityField, { target: { value: '3' } })
+
+        act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(wrapper.getAllByText('Dwarven metal ingots').length).toEqual(2)
@@ -1024,13 +1037,12 @@ describe('ShoppingListsPage', () => {
         const descField = (await wrapper.findAllByLabelText('Description'))[0]
         const quantityField = (await wrapper.findAllByLabelText('Quantity'))[0]
 
-        act(() => {
-          fireEvent.change(descField, {
-            target: { value: 'Dwarven metal ingots' },
-          })
-          fireEvent.change(quantityField, { target: { value: '3' } })
-          fireEvent.submit(form)
+        fireEvent.change(descField, {
+          target: { value: 'Dwarven metal ingots' },
         })
+        fireEvent.change(quantityField, { target: { value: '3' } })
+
+        act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(
@@ -1078,17 +1090,16 @@ describe('ShoppingListsPage', () => {
         const descField = (await wrapper.findAllByLabelText('Description'))[0]
         const quantityField = (await wrapper.findAllByLabelText('Quantity'))[0]
 
-        act(() => {
-          fireEvent.change(descField, {
-            target: { value: 'Dwarven metal ingots' },
-          })
-          fireEvent.change(quantityField, { target: { value: '3' } })
-          fireEvent.submit(form)
+        fireEvent.change(descField, {
+          target: { value: 'Dwarven metal ingots' },
         })
+        fireEvent.change(quantityField, { target: { value: '3' } })
+
+        act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(
-            wrapper.queryAllByText('Dwarven metal ingots')?.length
+            wrapper.queryAllByText('Dwarven metal ingots').length
           ).toBeFalsy()
           expect(
             wrapper.getByText(
@@ -1102,10 +1113,16 @@ describe('ShoppingListsPage', () => {
 
   describe('destroying a list item', () => {
     describe('when the user cancels', () => {
+      const ogConfirm = window.confirm
       const mockServer = setupServer(getShoppingListsSuccess)
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
+
+      afterEach(() => {
+        window.confirm = ogConfirm
+      })
+
       afterAll(() => mockServer.close())
 
       test("doesn't remove the item", async () => {
@@ -1125,9 +1142,7 @@ describe('ShoppingListsPage', () => {
           'destroyShoppingListItem3'
         )
 
-        act(() => {
-          fireEvent.click(destroyIcon)
-        })
+        act(() => fireEvent.click(destroyIcon))
 
         await waitFor(() => {
           expect(window.confirm).toHaveBeenCalled()
@@ -1142,6 +1157,7 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when successful', () => {
+      const ogConfirm = window.confirm
       const mockServer = setupServer(
         getShoppingListsSuccess,
         deleteShoppingListItemSuccess
@@ -1149,6 +1165,11 @@ describe('ShoppingListsPage', () => {
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
+
+      afterEach(() => {
+        window.confirm = ogConfirm
+      })
+
       afterAll(() => mockServer.close())
 
       test('removes the item from the regular and aggregate list', async () => {
@@ -1168,9 +1189,7 @@ describe('ShoppingListsPage', () => {
           'destroyShoppingListItem3'
         )
 
-        act(() => {
-          fireEvent.click(destroyIcon)
-        })
+        act(() => fireEvent.click(destroyIcon))
 
         await waitFor(() => {
           expect(window.confirm).toHaveBeenCalled()
@@ -1192,6 +1211,7 @@ describe('ShoppingListsPage', () => {
     })
 
     describe('when there is an internal server error', async () => {
+      const ogConfirm = window.confirm
       const mockServer = setupServer(
         getShoppingListsSuccess,
         deleteShoppingListItemServerError
@@ -1199,6 +1219,11 @@ describe('ShoppingListsPage', () => {
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
+
+      afterEach(() => {
+        window.confirm = ogConfirm
+      })
+
       afterAll(() => mockServer.close())
 
       test('displays a flash error message', async () => {
@@ -1218,9 +1243,7 @@ describe('ShoppingListsPage', () => {
           'destroyShoppingListItem3'
         )
 
-        act(() => {
-          fireEvent.click(destroyIcon)
-        })
+        act(() => fireEvent.click(destroyIcon))
 
         await waitFor(() => {
           expect(wrapper.getAllByText('Necklace').length).toEqual(2)
@@ -1344,6 +1367,7 @@ describe('ShoppingListsPage', () => {
 
       describe('when decrementing the quantity to zero', () => {
         describe('when the user confirms deletion', () => {
+          const ogConfirm = window.confirm
           const mockServer = setupServer(
             getShoppingListsSuccess,
             deleteShoppingListItemSuccess
@@ -1351,6 +1375,11 @@ describe('ShoppingListsPage', () => {
 
           beforeAll(() => mockServer.listen())
           beforeEach(() => mockServer.resetHandlers())
+
+          afterEach(() => {
+            window.confirm = ogConfirm
+          })
+
           afterAll(() => mockServer.close())
 
           test('deletes the item', async () => {
@@ -1384,10 +1413,16 @@ describe('ShoppingListsPage', () => {
         })
 
         describe('when the user cancels deletion', () => {
+          const ogConfirm = window.confirm
           const mockServer = setupServer(getShoppingListsSuccess)
 
           beforeAll(() => mockServer.listen())
           beforeEach(() => mockServer.resetHandlers())
+
+          afterEach(() => {
+            window.confirm = ogConfirm
+          })
+
           afterAll(() => mockServer.close())
 
           test("doesn't delete the item", async () => {
@@ -1491,10 +1526,9 @@ describe('ShoppingListsPage', () => {
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
         const form = wrapper.getByTestId('editShoppingListItem3Form')
 
-        act(() => {
-          fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
-          fireEvent.submit(form)
-        })
+        fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
+
+        act(() => fireEvent.submit(form))
 
         await waitForElementToBeRemoved(form)
 
@@ -1537,10 +1571,9 @@ describe('ShoppingListsPage', () => {
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
         const form = wrapper.getByTestId('editShoppingListItem3Form')
 
-        act(() => {
-          fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
-          fireEvent.submit(form)
-        })
+        fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
+
+        act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(
@@ -1590,10 +1623,9 @@ describe('ShoppingListsPage', () => {
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
         const form = wrapper.getByTestId('editShoppingListItem3Form')
 
-        act(() => {
-          fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
-          fireEvent.submit(form)
-        })
+        fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
+
+        act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(
