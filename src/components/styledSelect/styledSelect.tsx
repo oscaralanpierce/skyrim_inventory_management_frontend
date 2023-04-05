@@ -134,8 +134,7 @@ const StyledSelect = ({
               key={index}
               onSelected={selectOption}
               ariaSelected={!!activeOption && isEqual(option, activeOption)}
-              optionName={option.optionName}
-              optionValue={option.optionValue}
+              {...option}
             />
           )
         })}
