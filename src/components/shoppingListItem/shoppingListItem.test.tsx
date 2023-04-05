@@ -369,9 +369,7 @@ describe('ShoppingListItem', () => {
 
         const decrementIcon = wrapper.getByTestId('decrementShoppingListItem33')
 
-        act(() => {
-          fireEvent.click(decrementIcon)
-        })
+        act(() =>fireEvent.click(decrementIcon))
 
         expect(updateShoppingListItem).toHaveBeenCalledWith(
           33,
@@ -407,9 +405,7 @@ describe('ShoppingListItem', () => {
 
         const decrementIcon = wrapper.getByTestId('decrementShoppingListItem33')
 
-        act(() => {
-          fireEvent.click(decrementIcon)
-        })
+        act(() => fireEvent.click(decrementIcon))
 
         expect(window.confirm).toHaveBeenCalledOnce()
       })
@@ -437,9 +433,7 @@ describe('ShoppingListItem', () => {
 
         const decrementIcon = wrapper.getByTestId('decrementShoppingListItem33')
 
-        act(() => {
-          fireEvent.click(decrementIcon)
-        })
+        act(() =>fireEvent.click(decrementIcon))
 
         expect(window.confirm).toHaveBeenCalledOnce()
         expect(destroyShoppingListItem).toHaveBeenCalledWith(33)
