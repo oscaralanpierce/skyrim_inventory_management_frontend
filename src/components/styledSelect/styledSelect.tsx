@@ -45,7 +45,12 @@ const StyledSelect = ({
 }: StyledSelectProps) => {
   const [activeOption, setActiveOption] = useState<SelectOption | null>(null)
   const [headerText, setHeaderText] = useState(defaultOption?.optionName || '')
-  const { isComponentVisible, setIsComponentVisible, componentRef, triggerRef } = useComponentVisible()
+  const {
+    isComponentVisible,
+    setIsComponentVisible,
+    componentRef,
+    triggerRef,
+  } = useComponentVisible()
 
   const colorVars = {
     '--button-background-color': BLUE.schemeColorDarkest,
