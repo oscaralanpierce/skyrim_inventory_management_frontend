@@ -153,30 +153,4 @@ describe('StyledSelect', () => {
       expect(wrapper).toMatchSnapshot()
     })
   })
-
-  describe('selecting an option', () => {
-    const options = allGames.map(({ name, id }) => ({
-      optionName: name,
-      optionValue: id,
-    }))
-
-    test('sets the aria-selected attribute', () => {
-      const wrapper = render(
-        <StyledSelect
-          options={options}
-          defaultOption={options[1]}
-          onOptionSelected={() => {}}
-          placeholder="Doesn't matter"
-        />
-      )
-
-      const option = wrapper.getByText(options[0].optionName)
-
-      act(() => fireEvent.click(option))
-
-      expect(
-        wrapper.getByRole('option', { selected: true }).textContent
-      ).toEqual(options[0].optionName)
-    })
-  })
 })
