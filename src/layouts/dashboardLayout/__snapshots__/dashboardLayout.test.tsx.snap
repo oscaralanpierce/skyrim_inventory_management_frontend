@@ -409,7 +409,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                   My Game 1
                 </li>
                 <li
-                  aria-selected="false"
+                  aria-selected="true"
                   class="_root_b75fe4"
                   data-option-value="51"
                   role="option"
@@ -619,7 +619,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                 My Game 1
               </li>
               <li
-                aria-selected="false"
+                aria-selected="true"
                 class="_root_b75fe4"
                 data-option-value="51"
                 role="option"

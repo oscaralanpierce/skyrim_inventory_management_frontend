@@ -38,9 +38,7 @@ const StyledSelect = ({
   disabled,
   className,
 }: StyledSelectProps) => {
-  const [activeOption, setActiveOption] = useState<SelectOption | null>(
-    defaultOption || null
-  )
+  const [activeOption, setActiveOption] = useState<SelectOption | null>(null)
   const [headerText, setHeaderText] = useState(defaultOption?.optionName || '')
   const [expanded, setExpanded] = useState(false)
   const componentRef = useRef<HTMLDivElement>(null)
@@ -90,6 +88,7 @@ const StyledSelect = ({
   useEffect(() => {
     if (defaultOption && !activeOption) {
       setHeaderText(defaultOption.optionName)
+      setActiveOption(defaultOption)
     }
   }, [defaultOption, activeOption])
 

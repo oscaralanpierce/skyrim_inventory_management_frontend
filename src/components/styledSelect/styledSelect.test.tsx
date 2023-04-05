@@ -25,8 +25,6 @@ describe('StyledSelect', () => {
         />
       )
 
-      expect(wrapper).toBeTruthy()
-
       // Doesn't display placeholder text since options exist
       expect(wrapper.queryByText("Doesn't matter")).toBeFalsy()
 
