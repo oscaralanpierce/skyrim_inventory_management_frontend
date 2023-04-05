@@ -1,9 +1,17 @@
 import { type ReactElement } from 'react'
-import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
+import {
+  describe,
+  test,
+  expect,
+  beforeAll,
+  beforeEach,
+  afterAll,
+  vitest,
+} from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated } from '../../support/testUtils'
-import { getShoppingListsSuccess } from '../../support/msw/shoppingLists'
+import { getShoppingListsSuccess } from '../../support/msw/handlers'
 import {
   gamesContextValue,
   gamesContextValueError,
@@ -40,8 +48,6 @@ describe('ShoppingListCreateForm', () => {
 
     test('has the correct form fields', () => {
       const wrapper = renderWithContexts(<ShoppingListCreateForm />)
-
-      expect(wrapper).toBeTruthy()
 
       expect(wrapper.getByPlaceholderText('Title')).toBeTruthy()
       expect(wrapper.getByText('Create')).toBeTruthy()
