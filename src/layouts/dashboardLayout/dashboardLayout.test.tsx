@@ -1,4 +1,4 @@
-import { describe, test, expect } from 'vitest'
+import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
 import { setupServer } from 'msw/node'
 import { waitFor } from '@testing-library/react'
 import { BASE_APP_URI, renderAuthenticated } from '../../support/testUtils'
@@ -22,7 +22,6 @@ describe('<DashboardLayout>', () => {
           </GamesContext.Provider>
         </PageProvider>
       )
-      expect(wrapper).toBeTruthy()
 
       const h2 = wrapper.container.querySelector('h2')
       expect(h2?.textContent).toBe('Page Title')
@@ -81,7 +80,6 @@ describe('<DashboardLayout>', () => {
           </GamesContext.Provider>
         </PageProvider>
       )
-      expect(wrapper).toBeTruthy()
 
       const h2 = wrapper.container.querySelector('h2')
       expect(h2).toBeFalsy()
@@ -153,7 +151,6 @@ describe('<DashboardLayout>', () => {
           </PageProvider>
         )
 
-        expect(wrapper).toBeTruthy()
         expect(wrapper.getByTestId('styledSelect')).toBeTruthy()
       })
 
