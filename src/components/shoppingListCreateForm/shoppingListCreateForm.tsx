@@ -43,9 +43,7 @@ const ShoppingListCreateForm = () => {
     const formData = new FormData(formRef.current)
     const attributes = extractAttributes(formData)
 
-    const clearForm = () => {
-      formRef.current?.reset()
-    }
+    const clearForm = () => formRef.current?.reset()
 
     const focusInput = () => {
       formRef.current?.reset()
