@@ -553,7 +553,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                           aria-controls="shoppingListItem6Details"
                           aria-expanded="false"
                           class="_trigger_fccc8d"
-                          role="button"
                         >
                           <span
                             class="_descriptionContainer_fccc8d"
@@ -618,7 +617,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                           aria-controls="shoppingListItem9Details"
                           aria-expanded="false"
                           class="_trigger_fccc8d"
-                          role="button"
                         >
                           <span
                             class="_descriptionContainer_fccc8d"
@@ -855,7 +853,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                           aria-controls="shoppingListItem8Details"
                           aria-expanded="false"
                           class="_trigger_fccc8d"
-                          role="button"
                         >
                           <span
                             class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -1004,7 +1001,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                           aria-controls="shoppingListItem5Details"
                           aria-expanded="false"
                           class="_trigger_fccc8d"
-                          role="button"
                         >
                           <span
                             class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -1325,7 +1321,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                           aria-controls="shoppingListItem7Details"
                           aria-expanded="false"
                           class="_trigger_fccc8d"
-                          role="button"
                         >
                           <span
                             class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -1896,7 +1891,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                         aria-controls="shoppingListItem6Details"
                         aria-expanded="false"
                         class="_trigger_fccc8d"
-                        role="button"
                       >
                         <span
                           class="_descriptionContainer_fccc8d"
@@ -1961,7 +1955,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                         aria-controls="shoppingListItem9Details"
                         aria-expanded="false"
                         class="_trigger_fccc8d"
-                        role="button"
                       >
                         <span
                           class="_descriptionContainer_fccc8d"
@@ -2198,7 +2191,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                         aria-controls="shoppingListItem8Details"
                         aria-expanded="false"
                         class="_trigger_fccc8d"
-                        role="button"
                       >
                         <span
                           class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -2347,7 +2339,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                         aria-controls="shoppingListItem5Details"
                         aria-expanded="false"
                         class="_trigger_fccc8d"
-                        role="button"
                       >
                         <span
                           class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -2668,7 +2659,6 @@ exports[`ShoppingListsPage > viewing shopping lists > when the game is set in th
                         aria-controls="shoppingListItem7Details"
                         aria-expanded="false"
                         class="_trigger_fccc8d"
-                        role="button"
                       >
                         <span
                           class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"

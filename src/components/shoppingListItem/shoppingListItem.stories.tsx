@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import {
   loginContextValue,
   gamesContextValue,
@@ -6,7 +7,6 @@ import {
 import { AQUA, BLUE, GREEN, PINK, YELLOW } from '../../utils/colorSchemes'
 import { LoginContext } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
-import { ReactElement } from 'react'
 import { GamesContext } from '../../contexts/gamesContext'
 import { ShoppingListsContext } from '../../contexts/shoppingListsContext'
 import { ColorProvider } from '../../contexts/colorContext'
@@ -35,11 +35,12 @@ export const Editable = () => (
     <ColorProvider colorScheme={AQUA}>
       <ShoppingListItem
         itemId={1}
+        listTitle="Lakeview Manor"
         description="Dwarven metal ingot"
         quantity={5}
         unitWeight={1.0}
         notes="To make bolts"
-        canEdit
+        editable
       />
     </ColorProvider>
   </ContextProviders>
@@ -50,6 +51,7 @@ export const NotEditable = () => (
     <ColorProvider colorScheme={YELLOW}>
       <ShoppingListItem
         itemId={1}
+        listTitle="All Items"
         description="Dwarven metal ingot"
         quantity={5}
         unitWeight={1.0}
@@ -64,11 +66,12 @@ export const LongValuesEditable = () => (
     <ColorProvider colorScheme={BLUE}>
       <ShoppingListItem
         itemId={1}
+        listTitle="Building Materials"
         description="This item has a really really really really really long description for testing purposes"
         quantity={200000000000000000}
         unitWeight={4000000000000000.0}
         notes="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
-        canEdit
+        editable
       />
     </ColorProvider>
   </ContextProviders>
@@ -79,6 +82,7 @@ export const LongValuesNotEditable = () => (
     <ColorProvider colorScheme={AQUA}>
       <ShoppingListItem
         itemId={1}
+        listTitle="All Items"
         description="This item has a really really really really really long description for testing purposes"
         quantity={200000000000000000}
         unitWeight={4000000000000000.0}
@@ -93,6 +97,7 @@ export const EmptyFields = () => (
     <ColorProvider colorScheme={GREEN}>
       <ShoppingListItem
         itemId={1}
+        listTitle="All Items"
         description="Dwarven metal ingot"
         quantity={5}
       />
@@ -105,6 +110,7 @@ export const UnitWeightWithDecimal = () => (
     <ColorProvider colorScheme={PINK}>
       <ShoppingListItem
         itemId={1}
+        listTitle="All Items"
         description="Necklace"
         quantity={1}
         unitWeight={0.3}

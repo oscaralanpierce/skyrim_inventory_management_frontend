@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import { describe, test, expect, vitest } from 'vitest'
+import { describe, test, expect, vitest, afterEach } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { renderAuthenticated } from '../../support/testUtils'
 import {
@@ -38,7 +38,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={0.3}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -56,7 +56,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={1.0}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -75,7 +75,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={1.0}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -91,7 +91,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={1.0}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -107,7 +107,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={1.0}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -124,7 +124,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={0.3}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -233,6 +233,13 @@ describe('ShoppingListItem', () => {
 
   describe('destroying the list item', () => {
     describe('when the user confirms deletion', () => {
+      const ogConfirm = window.confirm
+
+      afterEach(() => {
+        listsContextValue = shoppingListsContextValue
+        window.confirm = ogConfirm
+      })
+
       test("calls the context's destroyShoppingListItem function with its itemId", () => {
         const destroyShoppingListItem = vitest.fn()
         listsContextValue = {
@@ -248,7 +255,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={0.3}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -258,11 +265,19 @@ describe('ShoppingListItem', () => {
 
         act(() => fireEvent.click(destroyIcon))
 
+        expect(window.confirm).toHaveBeenCalled
         expect(destroyShoppingListItem).toHaveBeenCalledWith(33)
       })
     })
 
     describe('when the user cancels deletion', () => {
+      const ogConfirm = window.confirm
+
+      afterEach(() => {
+        listsContextValue = shoppingListsContextValue
+        window.confirm = ogConfirm
+      })
+
       test("doesn't call the destroyShoppingListItem function", () => {
         const destroyShoppingListItem = vitest.fn()
         listsContextValue = {
@@ -278,7 +293,7 @@ describe('ShoppingListItem', () => {
             quantity={2}
             unitWeight={0.3}
             notes="To enchant"
-            canEdit
+            editable
           />
         )
 
@@ -288,12 +303,17 @@ describe('ShoppingListItem', () => {
 
         act(() => fireEvent.click(destroyIcon))
 
+        expect(window.confirm).toHaveBeenCalledOnce()
         expect(destroyShoppingListItem).not.toHaveBeenCalled()
       })
     })
   })
 
   describe('incrementing the list item quantity', () => {
+    afterEach(() => {
+      listsContextValue = shoppingListsContextValue
+    })
+
     test('increments the quantity at the API', () => {
       const updateShoppingListItem = vitest.fn()
       listsContextValue = { ...listsContextValue, updateShoppingListItem }
@@ -306,7 +326,7 @@ describe('ShoppingListItem', () => {
           quantity={2}
           unitWeight={0.3}
           notes="To enchant"
-          canEdit
+          editable
         />
       )
 
@@ -326,34 +346,98 @@ describe('ShoppingListItem', () => {
   })
 
   describe('decrementing the list item quantity', () => {
-    test('decrements the quantity at the API', () => {
-      const updateShoppingListItem = vitest.fn()
-      listsContextValue = { ...listsContextValue, updateShoppingListItem }
+    afterEach(() => {
+      listsContextValue = shoppingListsContextValue
+    })
 
-      const wrapper = renderInContexts(
-        <ShoppingListItem
-          itemId={33}
-          listTitle="Clothing"
-          description="Silver Necklace"
-          quantity={2}
-          unitWeight={0.3}
-          notes="To enchant"
-          canEdit
-        />
-      )
+    describe('when the quantity is greater than 1', () => {
+      test('decrements the quantity at the API', () => {
+        const updateShoppingListItem = vitest.fn()
+        listsContextValue = { ...listsContextValue, updateShoppingListItem }
 
-      const decrementIcon = wrapper.getByTestId('decrementShoppingListItem33')
+        const wrapper = renderInContexts(
+          <ShoppingListItem
+            itemId={33}
+            listTitle="Clothing"
+            description="Silver Necklace"
+            quantity={2}
+            unitWeight={0.3}
+            notes="To enchant"
+            editable
+          />
+        )
 
-      act(() => {
-        fireEvent.click(decrementIcon)
+        const decrementIcon = wrapper.getByTestId('decrementShoppingListItem33')
+
+        act(() => fireEvent.click(decrementIcon))
+
+        expect(updateShoppingListItem).toHaveBeenCalledWith(
+          33,
+          { quantity: 1 },
+          expect.any(Function),
+          expect.any(Function)
+        )
+      })
+    })
+
+    describe('when the quantity is 1', () => {
+      const ogConfirm = window.confirm
+
+      afterEach(() => {
+        listsContextValue = shoppingListsContextValue
+        window.confirm = ogConfirm
       })
 
-      expect(updateShoppingListItem).toHaveBeenCalledWith(
-        33,
-        { quantity: 1 },
-        expect.any(Function),
-        expect.any(Function)
-      )
+      test('prompts the user to destroy the item', () => {
+        const wrapper = renderInContexts(
+          <ShoppingListItem
+            itemId={33}
+            listTitle="Clothing"
+            description="Silver Necklace"
+            quantity={1}
+            unitWeight={0.3}
+            notes="To enchant"
+            editable
+          />
+        )
+
+        window.confirm = vitest.fn().mockImplementation(() => false)
+
+        const decrementIcon = wrapper.getByTestId('decrementShoppingListItem33')
+
+        act(() => fireEvent.click(decrementIcon))
+
+        expect(window.confirm).toHaveBeenCalledOnce()
+      })
+
+      test('destroys the item if the user confirms', () => {
+        const destroyShoppingListItem = vitest.fn()
+        listsContextValue = {
+          ...shoppingListsContextValue,
+          destroyShoppingListItem,
+        }
+
+        const wrapper = renderInContexts(
+          <ShoppingListItem
+            itemId={33}
+            listTitle="Clothing"
+            description="Silver Necklace"
+            quantity={1}
+            unitWeight={0.3}
+            notes="To enchant"
+            editable
+          />
+        )
+
+        window.confirm = vitest.fn().mockImplementation(() => true)
+
+        const decrementIcon = wrapper.getByTestId('decrementShoppingListItem33')
+
+        act(() => fireEvent.click(decrementIcon))
+
+        expect(window.confirm).toHaveBeenCalledOnce()
+        expect(destroyShoppingListItem).toHaveBeenCalledWith(33)
+      })
     })
   })
 })

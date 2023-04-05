@@ -93,7 +93,7 @@ export const getShoppingLists = (
 
 export const patchShoppingList = (
   listId: number,
-  body: RequestShoppingList,
+  attributes: RequestShoppingList,
   token: string
 ): Promise<PatchShoppingListReturnValue> | never => {
   const uri = `${BASE_URI}/shopping_lists/${listId}`
@@ -101,7 +101,7 @@ export const patchShoppingList = (
 
   return fetch(uri, {
     method: 'PATCH',
-    body: JSON.stringify(body),
+    body: JSON.stringify(attributes),
     headers,
   }).then((res) => {
     const response = res as PatchShoppingListResponse

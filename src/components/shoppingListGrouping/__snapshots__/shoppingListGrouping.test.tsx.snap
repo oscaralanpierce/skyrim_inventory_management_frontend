@@ -120,7 +120,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                       aria-controls="shoppingListItem6Details"
                       aria-expanded="false"
                       class="_trigger_fccc8d"
-                      role="button"
                     >
                       <span
                         class="_descriptionContainer_fccc8d"
@@ -185,7 +184,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                       aria-controls="shoppingListItem9Details"
                       aria-expanded="false"
                       class="_trigger_fccc8d"
-                      role="button"
                     >
                       <span
                         class="_descriptionContainer_fccc8d"
@@ -422,7 +420,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                       aria-controls="shoppingListItem8Details"
                       aria-expanded="false"
                       class="_trigger_fccc8d"
-                      role="button"
                     >
                       <span
                         class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -571,7 +568,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                       aria-controls="shoppingListItem5Details"
                       aria-expanded="false"
                       class="_trigger_fccc8d"
-                      role="button"
                     >
                       <span
                         class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -892,7 +888,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                       aria-controls="shoppingListItem7Details"
                       aria-expanded="false"
                       class="_trigger_fccc8d"
-                      role="button"
                     >
                       <span
                         class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -1256,7 +1251,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                     aria-controls="shoppingListItem6Details"
                     aria-expanded="false"
                     class="_trigger_fccc8d"
-                    role="button"
                   >
                     <span
                       class="_descriptionContainer_fccc8d"
@@ -1321,7 +1315,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                     aria-controls="shoppingListItem9Details"
                     aria-expanded="false"
                     class="_trigger_fccc8d"
-                    role="button"
                   >
                     <span
                       class="_descriptionContainer_fccc8d"
@@ -1558,7 +1551,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                     aria-controls="shoppingListItem8Details"
                     aria-expanded="false"
                     class="_trigger_fccc8d"
-                    role="button"
                   >
                     <span
                       class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -1707,7 +1699,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                     aria-controls="shoppingListItem5Details"
                     aria-expanded="false"
                     class="_trigger_fccc8d"
-                    role="button"
                   >
                     <span
                       class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"
@@ -2028,7 +2019,6 @@ exports[`ShoppingListGrouping > when there are shopping lists > matches snapshot
                     aria-controls="shoppingListItem7Details"
                     aria-expanded="false"
                     class="_trigger_fccc8d"
-                    role="button"
                   >
                     <span
                       class="_descriptionContainer_fccc8d _descriptionContainerEditable_fccc8d"

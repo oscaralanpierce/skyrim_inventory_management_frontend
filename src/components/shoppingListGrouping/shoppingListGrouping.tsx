@@ -21,7 +21,7 @@ const ShoppingListGrouping = () => {
         return (
           <ColorProvider key={itemKey} colorScheme={colorSchemes[colorIndex]}>
             <div className={styles.shoppingList}>
-              <ShoppingList listId={id} title={title} canEdit={!aggregate}>
+              <ShoppingList listId={id} title={title} editable={!aggregate}>
                 {(list_items.length &&
                   list_items.map(
                     ({ id, description, quantity, unit_weight, notes }) => {
@@ -36,7 +36,7 @@ const ShoppingListGrouping = () => {
                           quantity={quantity}
                           unitWeight={unit_weight}
                           notes={notes}
-                          canEdit={!aggregate}
+                          editable={!aggregate}
                         />
                       )
                     }

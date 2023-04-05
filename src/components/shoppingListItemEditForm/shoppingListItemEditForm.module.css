@@ -8,11 +8,13 @@
 
 .header {
   font-size: 1.25rem;
+  line-height: 1.25;
   margin: 0 0 8px;
 }
 
 .subheader {
   font-size: 1.125rem;
+  line-height: 1.25;
   font-style: italic;
   margin: 0;
 }

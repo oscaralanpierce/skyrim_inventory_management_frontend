@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 const useComponentVisible = () => {
   const [isComponentVisible, setIsComponentVisible] = useState(false)
   const componentRef = useRef<any>(null)
-  const triggerRef = useRef<HTMLButtonElement>(null)
+  const triggerRef = useRef<any>(null)
 
   const componentRefContains = (element: Node) =>
     componentRef.current?.contains(element)

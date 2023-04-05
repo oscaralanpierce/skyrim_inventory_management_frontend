@@ -29,7 +29,7 @@ interface ShoppingListItemProps {
   quantity: number
   unitWeight?: number | null
   notes?: string | null
-  canEdit?: boolean
+  editable?: boolean
 }
 
 /**
@@ -54,7 +54,7 @@ const ShoppingListItem = ({
   quantity,
   unitWeight,
   notes,
-  canEdit = false,
+  editable = false,
 }: ShoppingListItemProps) => {
   const [expanded, setExpanded] = useState(false)
   const [incrementerDisabled, setIncrementerDisabled] = useState(false)
@@ -119,7 +119,7 @@ const ShoppingListItem = ({
     })
   }
 
-  const destroyItem: MouseEventHandler = (e) => {
+  const destroy: MouseEventHandler = (e) => {
     e.preventDefault()
 
     const confirmed = window.confirm(
@@ -189,7 +189,6 @@ const ShoppingListItem = ({
       style={styleVars}
     >
       <div
-        role="button"
         className={styles.trigger}
         onClick={toggleDetails}
         aria-expanded={expanded}
@@ -197,14 +196,14 @@ const ShoppingListItem = ({
       >
         <span
           className={classNames(styles.descriptionContainer, {
-            [styles.descriptionContainerEditable]: canEdit,
+            [styles.descriptionContainerEditable]: editable,
           })}
         >
-          {canEdit && (
+          {editable && (
             <span className={styles.editIcons} ref={iconsRef}>
               <button
                 className={styles.icon}
-                onClick={destroyItem}
+                onClick={destroy}
                 data-testid={`destroyShoppingListItem${itemId}`}
               >
                 <FontAwesomeIcon className={styles.fa} icon={faXmark} />
@@ -220,8 +219,8 @@ const ShoppingListItem = ({
           )}
           <h3 className={styles.description}>{description}</h3>
         </span>
-        <span className={canEdit ? styles.quantityEditable : styles.quantity}>
-          {canEdit && (
+        <span className={editable ? styles.quantityEditable : styles.quantity}>
+          {editable && (
             <button
               className={styles.icon}
               ref={incRef}
@@ -233,7 +232,7 @@ const ShoppingListItem = ({
             </button>
           )}
           <span className={styles.quantityContent}>{quantity}</span>
-          {canEdit && (
+          {editable && (
             <button
               className={styles.icon}
               ref={decRef}

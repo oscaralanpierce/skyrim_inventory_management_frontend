@@ -75,7 +75,7 @@ class GetShoppingListsNotFoundResponse extends ApiResponse {
   status: 404
 
   constructor(
-    body: null,
+    body?: null,
     options: { status: 404; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)

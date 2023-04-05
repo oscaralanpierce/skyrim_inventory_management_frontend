@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import { describe, expect, test, vitest } from 'vitest'
+import { describe, expect, test, afterEach, vitest } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { renderAuthenticated } from '../../support/testUtils'
 import { BLUE } from '../../utils/colorSchemes'
@@ -70,10 +70,15 @@ describe('ShoppingListItemEditForm', () => {
   })
 
   describe('submitting the form', () => {
+    afterEach(() => {
+      contextValue = shoppingListsContextValue
+    })
+
     describe('with valid attributes', () => {
       test('updates the shopping list item', () => {
         const updateShoppingListItem = vitest.fn()
         contextValue = { ...shoppingListsContextValue, updateShoppingListItem }
+
         const wrapper = renderWithContexts(
           <ShoppingListItemEditForm
             itemId={6}
@@ -108,6 +113,7 @@ describe('ShoppingListItemEditForm', () => {
       test("doesn't update the item", () => {
         const updateShoppingListItem = vitest.fn()
         contextValue = { ...shoppingListsContextValue, updateShoppingListItem }
+
         const wrapper = renderWithContexts(
           <ShoppingListItemEditForm
             itemId={6}

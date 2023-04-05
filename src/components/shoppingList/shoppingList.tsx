@@ -25,18 +25,16 @@ import styles from './shoppingList.module.css'
 interface ShoppingListProps {
   listId: number
   title: string
-  canEdit?: boolean
+  editable?: boolean
   children?: ReactElement | ReactElement[] | null
 }
 
 const ShoppingList = ({
   listId,
   title,
-  canEdit = false,
+  editable = false,
   children,
 }: ShoppingListProps) => {
-  const DELETE_CONFIRMATION = `Are you sure you want to delete the list "${title}"? You will also lose any list items on the list. This action cannot be undone.`
-
   const { updateShoppingList, destroyShoppingList } = useShoppingListsContext()
   const { setFlashProps } = usePageContext()
   const [expanded, setExpanded] = useState(false)
@@ -44,7 +42,6 @@ const ShoppingList = ({
 
   const containerRef = useRef<HTMLDivElement>(null)
   const iconsRef = useRef<HTMLSpanElement>(null)
-  const deleteRef = useRef<HTMLButtonElement>(null)
 
   const size = useSize(containerRef)
 
@@ -103,9 +100,10 @@ const ShoppingList = ({
   const destroy: MouseEventHandler = (e) => {
     e.preventDefault()
 
-    const shouldDestroy = window.confirm(DELETE_CONFIRMATION)
+    const confirmation = `Are you sure you want to delete the list "${title}"? You will also lose any list items on the list. This action cannot be undone.`
+    const confirmed = window.confirm(confirmation)
 
-    if (shouldDestroy) {
+    if (confirmed) {
       destroyShoppingList(listId)
     } else {
       setFlashProps({
@@ -138,12 +136,12 @@ const ShoppingList = ({
   }
 
   useEffect(() => {
-    if (!canEdit || !size || !iconsRef.current) return
+    if (!editable || !size || !iconsRef.current) return
 
     const width = size.width - iconsRef.current.offsetWidth + 16
 
     setMaxEditFormWidth(width)
-  }, [canEdit, size])
+  }, [editable, size])
 
   return (
     <div className={styles.root} style={styleVars}>
@@ -155,10 +153,9 @@ const ShoppingList = ({
         aria-expanded={expanded}
         aria-controls={`list${listId}Details`}
       >
-        {canEdit && (
+        {editable && (
           <span className={styles.icons} ref={iconsRef}>
             <button
-              ref={deleteRef}
               className={styles.icon}
               onClick={destroy}
               data-testid={`destroyShoppingList${listId}`}
@@ -174,7 +171,7 @@ const ShoppingList = ({
             </button>
           </span>
         )}
-        {canEdit && isComponentVisible ? (
+        {editable && isComponentVisible ? (
           <ListEditForm
             formRef={componentRef}
             className={styles.form}
@@ -192,10 +189,10 @@ const ShoppingList = ({
         height={expanded ? 'auto' : 0}
       >
         <div className={styles.details}>
-          {canEdit && <ShoppingListItemCreateForm listId={listId} />}
+          {editable && <ShoppingListItemCreateForm listId={listId} />}
           {/* We only want to display the "This shopping list has no list items"
           message if there is no list item creation form */}
-          {children || canEdit ? (
+          {children || editable ? (
             children
           ) : (
             <p className={styles.emptyList}>

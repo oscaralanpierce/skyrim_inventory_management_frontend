@@ -1,8 +1,8 @@
 import {
-  FormEventHandler,
   useRef,
   useState,
   useEffect,
+  type FormEventHandler,
   type CSSProperties,
 } from 'react'
 import classNames from 'classnames'
@@ -74,14 +74,11 @@ const ShoppingListItemCreateForm = ({ listId }: CreateFormProps) => {
   }
 
   useEffect(() => {
-    if (inputRef.current) {
-      if (expanded) {
-        inputRef.current.focus()
-      } else {
-        if (formRef.current) formRef.current.reset()
-
-        inputRef.current.blur()
-      }
+    if (expanded) {
+      inputRef.current?.focus()
+    } else {
+      formRef.current?.reset()
+      inputRef.current?.blur()
     }
   }, [expanded])
 

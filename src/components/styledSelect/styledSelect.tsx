@@ -9,6 +9,7 @@ import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { BLUE } from '../../utils/colorSchemes'
+import useComponentVisible from '../../hooks/useComponentVisible'
 import StyledSelectOption from '../styledSelectOption/styledSelectOption'
 import styles from './styledSelect.module.css'
 
@@ -44,8 +45,12 @@ const StyledSelect = ({
 }: StyledSelectProps) => {
   const [activeOption, setActiveOption] = useState<SelectOption | null>(null)
   const [headerText, setHeaderText] = useState(defaultOption?.optionName || '')
-  const [expanded, setExpanded] = useState(false)
-  const componentRef = useRef<HTMLDivElement>(null)
+  const {
+    isComponentVisible,
+    setIsComponentVisible,
+    componentRef,
+    triggerRef,
+  } = useComponentVisible()
 
   const colorVars = {
     '--button-background-color': BLUE.schemeColorDarkest,
@@ -54,21 +59,13 @@ const StyledSelect = ({
     '--button-border-color': BLUE.borderColor,
   } as CSSProperties
 
-  const toggleDropdown: MouseEventHandler = (e) => {
-    e.preventDefault()
-
-    if (disabled) return
-
-    setExpanded(!expanded)
-  }
-
   const selectOption = (value: string | number) => {
     const opt = options.find(({ optionValue }) => optionValue === value)
 
     if (opt) {
       setActiveOption(opt)
       setHeaderText(opt.optionName)
-      setExpanded(false)
+      setIsComponentVisible(false)
       onOptionSelected(value)
     }
   }
@@ -80,7 +77,7 @@ const StyledSelect = ({
         componentRef.current !== e.relatedTarget &&
         !componentRef.current.contains(e.relatedTarget as Node)
       ) {
-        setExpanded(false)
+        setIsComponentVisible(false)
       }
     }
 
@@ -107,12 +104,12 @@ const StyledSelect = ({
     >
       <div
         className={styles.header}
+        ref={triggerRef}
         role="combobox"
         aria-haspopup="listbox"
         aria-owns="selectListbox"
         aria-controls="selectListbox"
-        aria-expanded={expanded}
-        onClick={toggleDropdown}
+        aria-expanded={isComponentVisible}
       >
         <p className={styles.headerText} data-testid="selectedOption">
           {truncatedText(options.length ? headerText : placeholder)}
@@ -124,7 +121,7 @@ const StyledSelect = ({
       <ul
         id="selectListbox"
         className={classNames(styles.dropdown, {
-          [styles.hidden]: !expanded || !options.length,
+          [styles.hidden]: !isComponentVisible || !options.length,
         })}
         role="listbox"
       >
@@ -134,8 +131,7 @@ const StyledSelect = ({
               key={index}
               onSelected={selectOption}
               ariaSelected={!!activeOption && isEqual(option, activeOption)}
-              optionName={option.optionName}
-              optionValue={option.optionValue}
+              {...option}
             />
           )
         })}
