@@ -17,11 +17,8 @@ describe('StyledSelectOption', () => {
             />
           )
 
-          expect(wrapper).toBeTruthy()
-
           const option = wrapper.getByRole('option', { selected: false })
 
-          expect(option).toBeTruthy()
           expect(option.textContent).toEqual('Option 1')
         })
 
@@ -52,7 +49,6 @@ describe('StyledSelectOption', () => {
 
           const option = wrapper.getByRole('option', { selected: false })
 
-          expect(option).toBeTruthy()
           expect(option.textContent).toEqual('Neque porro quisquam es...')
         })
 
@@ -82,11 +78,8 @@ describe('StyledSelectOption', () => {
           />
         )
 
-        expect(wrapper).toBeTruthy()
-
         const option = wrapper.getByRole('option', { selected: true })
 
-        expect(option).toBeTruthy()
         expect(option.textContent).toEqual('Option 1')
       })
 
@@ -163,7 +156,7 @@ describe('StyledSelectOption', () => {
       expect(onSelected).toHaveBeenCalledWith(1)
     })
 
-    test("doesn't call the onSelected function when a key other than Enter is pressed", () => {
+    test("doesn't call the onSelected function when a key other than Enter or the space bar is pressed", () => {
       const onSelected = vitest.fn()
 
       const wrapper = render(
