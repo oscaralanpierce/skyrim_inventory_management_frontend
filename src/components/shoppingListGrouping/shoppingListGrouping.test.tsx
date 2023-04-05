@@ -2,9 +2,9 @@ import { describe, test, expect } from 'vitest'
 import { renderAuthenticated } from '../../support/testUtils'
 import {
   gamesContextValue,
+  shoppingListsContextValue,
   shoppingListsContextValueEmpty,
 } from '../../support/data/contextValues'
-import { shoppingListsContextValue } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesContext } from '../../contexts/gamesContext'
 import { ShoppingListsContext } from '../../contexts/shoppingListsContext'
@@ -74,6 +74,43 @@ describe('ShoppingListGrouping', () => {
       expect(wrapper.getByTestId('destroyShoppingListItem7')).toBeTruthy()
       expect(wrapper.getByTestId('destroyShoppingListItem8')).toBeTruthy()
       expect(wrapper.getByTestId('destroyShoppingListItem5')).toBeTruthy()
+    })
+
+    test('displays the edit icon for editable lists only', () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesContext.Provider value={gamesContextValue}>
+            <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+              <ShoppingListGrouping />
+            </ShoppingListsContext.Provider>
+          </GamesContext.Provider>
+        </PageProvider>
+      )
+
+      expect(wrapper.getByTestId('editShoppingList4')).toBeTruthy()
+      expect(wrapper.getByTestId('editShoppingList5')).toBeTruthy()
+      expect(wrapper.getByTestId('editShoppingList6')).toBeTruthy()
+
+      // The aggregate list should not be editable
+      expect(wrapper.queryByTestId('editShoppingList3')).toBeFalsy()
+    })
+
+    test('displays the edit icon for editable list items only', () => {
+      const wrapper = renderAuthenticated(
+        <PageProvider>
+          <GamesContext.Provider value={gamesContextValue}>
+            <ShoppingListsContext.Provider value={shoppingListsContextValue}>
+              <ShoppingListGrouping />
+            </ShoppingListsContext.Provider>
+          </GamesContext.Provider>
+        </PageProvider>
+      )
+
+      expect(wrapper.queryByTestId('editShoppingListItem6')).toBeFalsy()
+      expect(wrapper.queryByTestId('editShoppingListItem9')).toBeFalsy()
+      expect(wrapper.getByTestId('editShoppingListItem7')).toBeTruthy()
+      expect(wrapper.getByTestId('editShoppingListItem8')).toBeTruthy()
+      expect(wrapper.getByTestId('editShoppingListItem5')).toBeTruthy()
     })
 
     test('matches snapshot', () => {
