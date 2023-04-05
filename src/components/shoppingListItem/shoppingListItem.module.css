@@ -52,8 +52,8 @@
 }
 
 .editIcons {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 4px 8px;
 }
 
