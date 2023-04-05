@@ -1,4 +1,5 @@
 import { describe, test, expect } from 'vitest'
+import { act, fireEvent } from '@testing-library/react'
 import { render } from '../../support/testUtils'
 import { allGames } from '../../support/data/games'
 import StyledSelect from './styledSelect'
@@ -24,8 +25,6 @@ describe('StyledSelect', () => {
           placeholder="Doesn't matter"
         />
       )
-
-      expect(wrapper).toBeTruthy()
 
       // Doesn't display placeholder text since options exist
       expect(wrapper.queryByText("Doesn't matter")).toBeFalsy()

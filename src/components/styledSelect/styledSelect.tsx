@@ -30,6 +30,10 @@ const truncatedText = (text: string) => {
   return text.length > 24 ? `${text.substring(0, 23).trim()}...` : text
 }
 
+const isEqual = (option1: SelectOption, option2: SelectOption) =>
+  option1.optionName === option2.optionName &&
+  option1.optionValue === option2.optionValue
+
 const StyledSelect = ({
   options,
   placeholder,
@@ -38,9 +42,7 @@ const StyledSelect = ({
   disabled,
   className,
 }: StyledSelectProps) => {
-  const [activeOption, setActiveOption] = useState<SelectOption | null>(
-    defaultOption || null
-  )
+  const [activeOption, setActiveOption] = useState<SelectOption | null>(null)
   const [headerText, setHeaderText] = useState(defaultOption?.optionName || '')
   const [expanded, setExpanded] = useState(false)
   const componentRef = useRef<HTMLDivElement>(null)
@@ -90,6 +92,7 @@ const StyledSelect = ({
   useEffect(() => {
     if (defaultOption && !activeOption) {
       setHeaderText(defaultOption.optionName)
+      setActiveOption(defaultOption)
     }
   }, [defaultOption, activeOption])
 
@@ -130,8 +133,9 @@ const StyledSelect = ({
             <StyledSelectOption
               key={index}
               onSelected={selectOption}
-              ariaSelected={option === activeOption}
-              {...option}
+              ariaSelected={!!activeOption && isEqual(option, activeOption)}
+              optionName={option.optionName}
+              optionValue={option.optionValue}
             />
           )
         })}
