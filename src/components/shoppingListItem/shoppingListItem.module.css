@@ -68,6 +68,10 @@
   align-items: center;
 }
 
+.icon:disabled {
+  cursor: not-allowed;
+}
+
 .icon:hover .fa,
 .icon:disabled .fa {
   color: var(--body-background-color);
