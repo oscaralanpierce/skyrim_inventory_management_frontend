@@ -162,7 +162,9 @@ const ShoppingListItem = ({
 
       if (confirmed) {
         setIncrementerDisabled(true)
-        destroyShoppingListItem(itemId)
+        destroyShoppingListItem(itemId, null, () =>
+          setIncrementerDisabled(false)
+        )
       } else {
         setFlashProps({
           hidden: false,
