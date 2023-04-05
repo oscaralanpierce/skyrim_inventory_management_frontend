@@ -11,8 +11,8 @@ import styles from './shoppingListItemEditForm.module.css'
 
 interface EditFormProps {
   itemId: number
-  description: string
   listTitle: string
+  description: string
   buttonColor: ColorScheme
   quantity: number
   unitWeight?: number | null
@@ -21,8 +21,8 @@ interface EditFormProps {
 
 const ShoppingListItemEditForm = ({
   itemId,
-  description,
   listTitle,
+  description,
   buttonColor,
   quantity,
   unitWeight,
