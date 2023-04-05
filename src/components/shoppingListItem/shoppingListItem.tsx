@@ -119,7 +119,7 @@ const ShoppingListItem = ({
     })
   }
 
-  const destroyItem: MouseEventHandler = (e) => {
+  const destroy: MouseEventHandler = (e) => {
     e.preventDefault()
 
     const confirmed = window.confirm(
@@ -204,7 +204,7 @@ const ShoppingListItem = ({
             <span className={styles.editIcons} ref={iconsRef}>
               <button
                 className={styles.icon}
-                onClick={destroyItem}
+                onClick={destroy}
                 data-testid={`destroyShoppingListItem${itemId}`}
               >
                 <FontAwesomeIcon className={styles.fa} icon={faXmark} />

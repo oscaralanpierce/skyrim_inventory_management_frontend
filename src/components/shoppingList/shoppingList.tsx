@@ -42,7 +42,6 @@ const ShoppingList = ({
 
   const containerRef = useRef<HTMLDivElement>(null)
   const iconsRef = useRef<HTMLSpanElement>(null)
-  const deleteRef = useRef<HTMLButtonElement>(null)
 
   const size = useSize(containerRef)
 
@@ -102,9 +101,9 @@ const ShoppingList = ({
     e.preventDefault()
 
     const confirmation = `Are you sure you want to delete the list "${title}"? You will also lose any list items on the list. This action cannot be undone.`
-    const shouldDestroy = window.confirm(confirmation)
+    const confirmed = window.confirm(confirmation)
 
-    if (shouldDestroy) {
+    if (confirmed) {
       destroyShoppingList(listId)
     } else {
       setFlashProps({
@@ -157,7 +156,6 @@ const ShoppingList = ({
         {editable && (
           <span className={styles.icons} ref={iconsRef}>
             <button
-              ref={deleteRef}
               className={styles.icon}
               onClick={destroy}
               data-testid={`destroyShoppingList${listId}`}
