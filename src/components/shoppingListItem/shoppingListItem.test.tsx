@@ -436,7 +436,11 @@ describe('ShoppingListItem', () => {
         act(() => fireEvent.click(decrementIcon))
 
         expect(window.confirm).toHaveBeenCalledOnce()
-        expect(destroyShoppingListItem).toHaveBeenCalledWith(33)
+        expect(destroyShoppingListItem).toHaveBeenCalledWith(
+          33,
+          null,
+          expect.any(Function)
+        )
       })
     })
   })

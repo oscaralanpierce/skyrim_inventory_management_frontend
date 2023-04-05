@@ -33,36 +33,36 @@ export interface ShoppingListsContextType {
   shoppingListsLoadingState: LoadingState
   createShoppingList: (
     attributes: RequestShoppingList,
-    onSuccess?: CallbackFunction,
-    onError?: CallbackFunction
+    onSuccess?: CallbackFunction | null,
+    onError?: CallbackFunction | null
   ) => void
   updateShoppingList: (
     listId: number,
     attributes: RequestShoppingList,
-    onSuccess?: CallbackFunction,
-    onError?: CallbackFunction
+    onSuccess?: CallbackFunction | null,
+    onError?: CallbackFunction | null
   ) => void
   destroyShoppingList: (
     listId: number,
-    onSuccess?: CallbackFunction,
-    onError?: CallbackFunction
+    onSuccess?: CallbackFunction | null,
+    onError?: CallbackFunction | null
   ) => void
   createShoppingListItem: (
     listId: number,
     attributes: RequestShoppingListItem,
-    onSuccess?: CallbackFunction,
-    onError?: CallbackFunction
+    onSuccess?: CallbackFunction | null,
+    onError?: CallbackFunction | null
   ) => void
   updateShoppingListItem: (
     itemId: number,
     attributes: RequestShoppingListItem,
-    onSuccess?: CallbackFunction,
-    onError?: CallbackFunction
+    onSuccess?: CallbackFunction | null,
+    onError?: CallbackFunction | null
   ) => void
   destroyShoppingListItem: (
     itemId: number,
-    onSuccess?: CallbackFunction,
-    onError?: CallbackFunction
+    onSuccess?: CallbackFunction | null,
+    onError?: CallbackFunction | null
   ) => void
 }
 
@@ -130,8 +130,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
   const createShoppingList = useCallback(
     (
       attributes: RequestShoppingList,
-      onSuccess?: CallbackFunction,
-      onError?: CallbackFunction
+      onSuccess?: CallbackFunction | null,
+      onError?: CallbackFunction | null
     ) => {
       if (!activeGame) {
         setFlashProps({
@@ -229,8 +229,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     (
       listId: number,
       attributes: RequestShoppingList,
-      onSuccess?: CallbackFunction,
-      onError?: CallbackFunction
+      onSuccess?: CallbackFunction | null,
+      onError?: CallbackFunction | null
     ) => {
       if (user && token) {
         patchShoppingList(listId, attributes, token)
@@ -284,8 +284,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
   const destroyShoppingList = useCallback(
     (
       listId: number,
-      onSuccess?: CallbackFunction,
-      onError?: CallbackFunction
+      onSuccess?: CallbackFunction | null,
+      onError?: CallbackFunction | null
     ) => {
       if (user && token) {
         deleteShoppingList(listId, token)
@@ -352,8 +352,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     (
       listId: number,
       attributes: RequestShoppingListItem,
-      onSuccess?: CallbackFunction,
-      onError?: CallbackFunction
+      onSuccess?: CallbackFunction | null,
+      onError?: CallbackFunction | null
     ) => {
       if (user && token) {
         postShoppingListItems(listId, attributes, token)
@@ -416,8 +416,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
     (
       itemId: number,
       attributes: RequestShoppingListItem,
-      onSuccess?: CallbackFunction,
-      onError?: CallbackFunction
+      onSuccess?: CallbackFunction | null,
+      onError?: CallbackFunction | null
     ) => {
       if (user && token) {
         patchShoppingListItem(itemId, attributes, token)
@@ -477,8 +477,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
   const destroyShoppingListItem = useCallback(
     (
       itemId: number,
-      onSuccess?: CallbackFunction,
-      onError?: CallbackFunction
+      onSuccess?: CallbackFunction | null,
+      onError?: CallbackFunction | null
     ) => {
       if (user && token) {
         deleteShoppingListItem(itemId, token)
