@@ -78,7 +78,11 @@ const ShoppingListItemEditForm = ({
     const formData = new FormData(formRef.current)
     const attributes = extractAttributes(formData)
 
-    if (attributes) updateShoppingListItem(itemId, attributes, onSuccess)
+    if (attributes) {
+      updateShoppingListItem(itemId, attributes, onSuccess)
+    } else {
+      setModalProps({ hidden: true, children: <></> })
+    }
   }
 
   useEffect(() => {
