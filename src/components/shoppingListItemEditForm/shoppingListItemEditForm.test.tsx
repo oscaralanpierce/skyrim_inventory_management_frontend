@@ -137,5 +137,31 @@ describe('ShoppingListItemEditForm', () => {
         expect(updateShoppingListItem).not.toHaveBeenCalled()
       })
     })
+
+    describe('with identical attributes', () => {
+      test("doesn't update the item", () => {
+        const updateShoppingListItem = vitest.fn()
+        contextValue = { ...shoppingListsContextValue, updateShoppingListItem }
+
+        const wrapper = renderWithContexts(
+          <ShoppingListItemEditForm
+            itemId={6}
+            description="Health potion ingredients"
+            listTitle="Alchemy Ingredients"
+            buttonColor={BLUE}
+            quantity={2}
+            unitWeight={3}
+            notes={null}
+          />
+        )
+
+        const form = wrapper.getByTestId('editShoppingListItem6Form')
+
+        // Submit the form without updating any fields
+        act(() => fireEvent.submit(form))
+
+        expect(updateShoppingListItem).not.toHaveBeenCalled()
+      })
+    })
   })
 })

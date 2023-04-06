@@ -40,7 +40,7 @@ const ShoppingListItemEditForm = ({
     '--button-border-color': buttonColor.borderColor,
   } as CSSProperties
 
-  const extractAttributes = (formData: FormData): ListItem => {
+  const extractAttributes = (formData: FormData): ListItem | null => {
     const values = Object.fromEntries(Array.from(formData.entries())) as Record<
       string,
       string
@@ -55,6 +55,8 @@ const ShoppingListItemEditForm = ({
       attributes.quantity = newQty
     if (newWeight !== unitWeight) attributes.unit_weight = newWeight
     if (newNotes !== notes) attributes.notes = newNotes
+
+    if (!Object.keys(attributes).length) return null
 
     return attributes
   }
@@ -76,7 +78,7 @@ const ShoppingListItemEditForm = ({
     const formData = new FormData(formRef.current)
     const attributes = extractAttributes(formData)
 
-    updateShoppingListItem(itemId, attributes, onSuccess)
+    if (attributes) updateShoppingListItem(itemId, attributes, onSuccess)
   }
 
   useEffect(() => {
