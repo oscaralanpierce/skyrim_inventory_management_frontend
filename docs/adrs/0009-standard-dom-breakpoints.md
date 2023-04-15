@@ -47,5 +47,3 @@ Our minimum officially supported viewport width is 320px, and our maximum is 140
 - 1024px and 1025px
 - 1200px and 1201px
 - 1404px and 1405px
-
-
