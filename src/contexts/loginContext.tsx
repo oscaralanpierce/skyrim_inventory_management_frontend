@@ -6,10 +6,13 @@ import { auth, signOutWithGoogle } from '../firebase'
 import { ProviderProps } from '../types/contexts'
 import paths from '../routing/paths'
 
+type ApiCall = (idToken: string) => void
+
 export interface LoginContextType {
   authLoading: boolean
   token: string | null
   requireLogin: () => void
+  withTokenRefresh: (fn: ApiCall) => void
   user?: User | null
 }
 
@@ -18,6 +21,7 @@ export const LoginContext = createContext<LoginContextType>({
   token: null,
   authLoading: true,
   requireLogin: () => {}, // noop
+  withTokenRefresh: (_fn: ApiCall) => {}, // noop
 })
 
 export const LoginProvider = ({ children }: ProviderProps) => {
@@ -31,18 +35,50 @@ export const LoginProvider = ({ children }: ProviderProps) => {
     }
   }, [user, authLoading])
 
+  const withTokenRefresh = (fn: ApiCall) => {
+    if (!user || !token) return
+
+    // Set currentToken inside the closure because when this
+    // is called inside a callback, the token won't update while
+    // the function runs.
+    let currentToken = token
+    let retryAttempt = 0
+
+    while (retryAttempt < 2) {
+      retryAttempt += 1
+
+      try {
+        fn(currentToken)
+        break
+      } catch (e: any) {
+        if (retryAttempt < 2) {
+          if (import.meta.env.DEV)
+            console.log('Server returned status 401, retrying...')
+
+          user?.getIdToken(true).then((idToken) => {
+            setToken(idToken)
+            currentToken = idToken
+          })
+        } else {
+          signOutWithGoogle()
+        }
+      }
+    }
+  }
+
   const value = {
     user,
     token,
-    requireLogin,
     authLoading,
+    requireLogin,
+    withTokenRefresh,
   }
 
   useEffect(() => {
     if (authError) signOutWithGoogle()
 
     if (user) {
-      user.getIdToken(true).then((token) => setToken(token))
+      user.getIdToken(true).then((idToken) => setToken(idToken))
     }
   }, [user, authError])
 

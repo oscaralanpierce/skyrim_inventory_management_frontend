@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState, useCallback } from 'react'
-import { signOutWithGoogle } from '../firebase'
 import { type CallbackFunction } from '../types/functions'
 import {
   type RequestShoppingListItem,
@@ -78,7 +77,8 @@ export const ShoppingListsContext = createContext<ShoppingListsContextType>({
 })
 
 export const ShoppingListsProvider = ({ children }: ProviderProps) => {
-  const { user, token, authLoading, requireLogin } = useGoogleLogin()
+  const { token, authLoading, withTokenRefresh, requireLogin } =
+    useGoogleLogin()
   const { setFlashProps } = usePageContext()
   const { gamesLoadingState, games } = useGamesContext()
   const queryString = useQueryString()
@@ -96,9 +96,7 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
   const handleApiError = (e: ApiError, resource?: 'list' | 'list item') => {
     if (import.meta.env.DEV) console.error(e.message)
 
-    if (e.code === 401) {
-      signOutWithGoogle()
-    } else if (e.code === 422) {
+    if (e.code === 422) {
       setFlashProps({
         hidden: false,
         type: 'error',
@@ -144,8 +142,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
         return
       }
 
-      if (user && token) {
-        postShoppingLists(activeGame, attributes, token)
+      withTokenRefresh((idToken) => {
+        postShoppingLists(activeGame, attributes, idToken)
           .then(({ json }) => {
             if (Array.isArray(json)) {
               if (json.length == 2) {
@@ -166,6 +164,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             }
           })
           .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             if (e.code === 404) {
               setFlashProps({
                 hidden: false,
@@ -179,9 +179,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, activeGame, shoppingLists]
+    [activeGame, shoppingLists]
   )
 
   /**
@@ -191,10 +191,12 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
    */
 
   const fetchShoppingLists = useCallback(() => {
-    if (user && token && activeGame) {
+    if (!activeGame) return
+
+    withTokenRefresh((idToken) => {
       setShoppingListsLoadingState(LOADING)
 
-      getShoppingLists(activeGame, token)
+      getShoppingLists(activeGame, idToken)
         .then(({ json }) => {
           if (Array.isArray(json)) {
             setShoppingLists(json)
@@ -202,6 +204,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
           }
         })
         .catch((e: ApiError) => {
+          if (e.code === 401) throw e
+
           if (e.code === 404) {
             setFlashProps({
               hidden: false,
@@ -216,8 +220,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
           setShoppingLists([])
           setShoppingListsLoadingState(ERROR)
         })
-    }
-  }, [user, token, activeGame])
+    })
+  }, [activeGame])
 
   /**
    *
@@ -232,8 +236,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction | null,
       onError?: CallbackFunction | null
     ) => {
-      if (user && token) {
-        patchShoppingList(listId, attributes, token)
+      withTokenRefresh((idToken) => {
+        patchShoppingList(listId, attributes, idToken)
           .then(({ status, json }) => {
             if (status === 200) {
               const newShoppingLists = [...shoppingLists]
@@ -257,6 +261,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             }
           })
           .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             if (e.code === 404) {
               setFlashProps({
                 hidden: false,
@@ -270,9 +276,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, shoppingLists]
+    [shoppingLists]
   )
 
   /**
@@ -287,8 +293,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction | null,
       onError?: CallbackFunction | null
     ) => {
-      if (user && token) {
-        deleteShoppingList(listId, token)
+      withTokenRefresh((idToken) => {
+        deleteShoppingList(listId, idToken)
           .then(({ json }) => {
             if ('errors' in json) {
               // This case should never happen because normally an ApiError
@@ -324,6 +330,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             }
           })
           .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             if (e.code === 404) {
               setFlashProps({
                 hidden: false,
@@ -337,9 +345,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, shoppingLists]
+    [shoppingLists]
   )
 
   /**
@@ -355,8 +363,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction | null,
       onError?: CallbackFunction | null
     ) => {
-      if (user && token) {
-        postShoppingListItems(listId, attributes, token)
+      withTokenRefresh((idToken) => {
+        postShoppingListItems(listId, attributes, idToken)
           .then(({ status, json }) => {
             if (status === 200 || status === 201) {
               const newShoppingLists = [...shoppingLists]
@@ -388,6 +396,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             }
           })
           .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             if (e.code === 404) {
               setFlashProps({
                 hidden: false,
@@ -401,9 +411,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, shoppingLists]
+    [shoppingLists]
   )
 
   /**
@@ -419,8 +429,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction | null,
       onError?: CallbackFunction | null
     ) => {
-      if (user && token) {
-        patchShoppingListItem(itemId, attributes, token)
+      withTokenRefresh((idToken) => {
+        patchShoppingListItem(itemId, attributes, idToken)
           .then(({ status, json }) => {
             if (status === 200) {
               const newShoppingLists = [...shoppingLists]
@@ -450,6 +460,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             }
           })
           .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             if (e.code === 404) {
               setFlashProps({
                 hidden: false,
@@ -463,9 +475,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, shoppingLists]
+    [shoppingLists]
   )
 
   /**
@@ -480,8 +492,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction | null,
       onError?: CallbackFunction | null
     ) => {
-      if (user && token) {
-        deleteShoppingListItem(itemId, token)
+      withTokenRefresh((idToken) => {
+        deleteShoppingListItem(itemId, idToken)
           .then(({ status, json }) => {
             if (status === 200) {
               const newShoppingLists = [...shoppingLists]
@@ -512,6 +524,8 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
             }
           })
           .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             if (e.code === 404) {
               setFlashProps({
                 hidden: false,
@@ -525,9 +539,9 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
 
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, shoppingLists]
+    [shoppingLists]
   )
 
   /**
@@ -565,10 +579,10 @@ export const ShoppingListsProvider = ({ children }: ProviderProps) => {
   }, [queryString, gamesLoadingState, games])
 
   useEffect(() => {
-    if (authLoading) return
+    if (authLoading || !token || !activeGame) return
 
     fetchShoppingLists()
-  }, [authLoading, fetchShoppingLists])
+  }, [authLoading, token, activeGame])
 
   useEffect(() => {
     requireLogin()

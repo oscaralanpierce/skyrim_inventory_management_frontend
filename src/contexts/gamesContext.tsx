@@ -1,5 +1,4 @@
 import { createContext, useCallback, useEffect, useState } from 'react'
-import { signOutWithGoogle } from '../firebase'
 import { type RequestGame, type ResponseGame as Game } from '../types/apiData'
 import { type ProviderProps } from '../types/contexts'
 import { type CallbackFunction } from '../types/functions'
@@ -39,7 +38,8 @@ export const GamesContext = createContext<GamesContextType>({
 })
 
 export const GamesProvider = ({ children }: ProviderProps) => {
-  const { user, token, authLoading, requireLogin } = useGoogleLogin()
+  const { token, authLoading, withTokenRefresh, requireLogin } =
+    useGoogleLogin()
   const [gamesLoadingState, setGamesLoadingState] = useState(LOADING)
   const [games, setGames] = useState<Game[]>([])
   const { setFlashProps, setModalProps } = usePageContext()
@@ -52,8 +52,6 @@ export const GamesProvider = ({ children }: ProviderProps) => {
 
   const handleApiError = (e: ApiError) => {
     if (import.meta.env.DEV) console.error(e.message)
-
-    if (e.code === 401) signOutWithGoogle()
 
     if (Array.isArray(e.message)) {
       setFlashProps({
@@ -85,8 +83,8 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction,
       onError?: CallbackFunction
     ) => {
-      if (user && token) {
-        postGames(body, token)
+      withTokenRefresh((idToken) => {
+        postGames(body, idToken)
           .then(({ json }) => {
             if ('name' in json) {
               setGames([json, ...games])
@@ -99,12 +97,14 @@ export const GamesProvider = ({ children }: ProviderProps) => {
             }
           })
           .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             handleApiError(e)
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, games]
+    [games]
   )
 
   /**
@@ -113,11 +113,11 @@ export const GamesProvider = ({ children }: ProviderProps) => {
    *
    */
 
-  const fetchGames = useCallback(() => {
-    if (user && token) {
+  const fetchGames = () => {
+    withTokenRefresh((idToken) => {
       setGamesLoadingState(LOADING)
 
-      getGames(token)
+      getGames(idToken)
         .then(({ json }) => {
           if (Array.isArray(json)) {
             setGames(json)
@@ -125,12 +125,14 @@ export const GamesProvider = ({ children }: ProviderProps) => {
           }
         })
         .catch((e: ApiError) => {
+          if (e.code === 401) throw e
+
           handleApiError(e)
           setGames([])
           setGamesLoadingState(ERROR)
         })
-    }
-  }, [user, token])
+    })
+  }
 
   /**
    *
@@ -145,8 +147,8 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction,
       onError?: CallbackFunction
     ) => {
-      if (user && token) {
-        patchGame(gameId, attributes, token)
+      withTokenRefresh((idToken) => {
+        patchGame(gameId, attributes, idToken)
           .then(({ status, json }) => {
             if (status === 200) {
               const newGames = games
@@ -165,14 +167,16 @@ export const GamesProvider = ({ children }: ProviderProps) => {
               onSuccess && onSuccess()
             }
           })
-          .catch((e) => {
+          .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             handleApiError(e)
 
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, games]
+    [games]
   )
 
   /**
@@ -187,8 +191,8 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       onSuccess?: CallbackFunction,
       onError?: CallbackFunction
     ) => {
-      if (user && token) {
-        deleteGame(gameId, token)
+      withTokenRefresh((idToken) => {
+        deleteGame(gameId, idToken)
           .then(({ status }) => {
             if (status === 204) {
               const newGames = games.filter(({ id }) => id !== gameId)
@@ -202,14 +206,16 @@ export const GamesProvider = ({ children }: ProviderProps) => {
               onSuccess && onSuccess()
             }
           })
-          .catch((e) => {
+          .catch((e: ApiError) => {
+            if (e.code === 401) throw e
+
             handleApiError(e)
 
             onError && onError()
           })
-      }
+      })
     },
-    [user, token, games]
+    [games]
   )
 
   const value = {
@@ -225,10 +231,10 @@ export const GamesProvider = ({ children }: ProviderProps) => {
   }, [requireLogin])
 
   useEffect(() => {
-    if (authLoading) return
+    if (authLoading || !token) return
 
     fetchGames()
-  }, [authLoading, fetchGames])
+  }, [authLoading, token])
 
   return <GamesContext.Provider value={value}>{children}</GamesContext.Provider>
 }
