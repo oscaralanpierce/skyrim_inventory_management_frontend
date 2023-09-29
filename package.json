@@ -57,7 +57,7 @@
     "jsdom": "^21.1.1",
     "msw": "^1.1.0",
     "prettier": "2.8.4",
-    "storybook": "^7.0.6",
+    "storybook": "^7.4.5",
     "storybook-addon-mock": "^4.0.0",
     "typescript": "^4.9.5",
     "vite": "^4.1.5",
