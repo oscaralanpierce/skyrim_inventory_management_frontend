@@ -59,7 +59,7 @@
     "jsdom": "^22.1.0",
     "msw": "^2.0.0",
     "prettier": "3.0.3",
-    "storybook": "^7.5.1",
+    "storybook": "^7.5.2",
     "storybook-addon-mock": "^4.3.0",
     "typescript": "^5.2.2",
     "unplugin-fonts": "^1.0.3",
