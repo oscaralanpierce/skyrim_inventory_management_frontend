@@ -64,7 +64,7 @@
     "typescript": "^5.2.2",
     "unplugin-fonts": "^1.1.1",
     "vite": "^5.0.5",
-    "vitest": "^0.34.6"
+    "vitest": "^1.0.1"
   },
   "eslintConfig": {
     "root": true,
