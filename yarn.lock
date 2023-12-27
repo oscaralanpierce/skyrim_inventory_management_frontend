@@ -6003,10 +6003,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "classnames@npm:2.3.2"
-  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
+"classnames@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "classnames@npm:2.4.0"
+  checksum: be22a483a5b853895d8b6b44ad78944a3d1aee6181a697dc038e948202023203f0acb6013000b635ce6b491a072d3e76ad16c8586e178c9f5d788f6797a6cdd8
   languageName: node
   linkType: hard
 
@@ -11772,7 +11772,7 @@ __metadata:
     "@typescript-eslint/parser": ^6.15.0
     "@vitejs/plugin-react": ^4.2.1
     babel-loader: ^9.1.3
-    classnames: ^2.3.2
+    classnames: ^2.4.0
     eslint: ^8.56.0
     firebase: ^10.7.1
     jsdom: ^23.0.1
