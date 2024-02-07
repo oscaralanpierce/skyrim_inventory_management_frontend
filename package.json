@@ -41,7 +41,7 @@
     "@storybook/addon-essentials": "^7.6.12",
     "@storybook/addon-interactions": "^7.6.12",
     "@storybook/addon-links": "^7.6.12",
-    "@storybook/addon-mdx-gfm": "^7.6.12",
+    "@storybook/addon-mdx-gfm": "^7.6.13",
     "@storybook/cli": "^7.6.12",
     "@storybook/react": "^7.6.12",
     "@storybook/react-vite": "^7.6.12",
