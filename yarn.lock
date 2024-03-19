@@ -5072,14 +5072,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.2.64":
-  version: 18.2.64
-  resolution: "@types/react@npm:18.2.64"
+"@types/react@npm:^18.2.67":
+  version: 18.2.67
+  resolution: "@types/react@npm:18.2.67"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 1fd28dc5e5d191619e0b001485f428a070bad11f55683a212d3bd937bdc979335913f90f4ca4f0510871e5f35d8f46b169a23276fb048d06584623d3652cc0f3
+  checksum: 9e48122b0e8d0ae20601f613aca32289eeb94d55c58ff03a7dc532d80ed289a1ba9715f14b773bd926ccdd63e503717f14264143ef531dc370063abe09dee0b2
   languageName: node
   linkType: hard
 
@@ -11842,7 +11842,7 @@ __metadata:
     "@testing-library/react": ^14.2.1
     "@types/jsdom": ^21.1.6
     "@types/node": ^20.11.25
-    "@types/react": ^18.2.64
+    "@types/react": ^18.2.67
     "@types/react-dom": ^18.2.22
     "@types/react-router-dom": ^5.3.3
     "@typescript-eslint/parser": ^7.2.0
