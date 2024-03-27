@@ -3065,9 +3065,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mswjs/interceptors@npm:^0.25.16":
-  version: 0.25.16
-  resolution: "@mswjs/interceptors@npm:0.25.16"
+"@mswjs/interceptors@npm:^0.26.12":
+  version: 0.26.13
+  resolution: "@mswjs/interceptors@npm:0.26.13"
   dependencies:
     "@open-draft/deferred-promise": ^2.2.0
     "@open-draft/logger": ^0.3.0
@@ -3075,7 +3075,7 @@ __metadata:
     is-node-process: ^1.2.0
     outvariant: ^1.2.1
     strict-event-emitter: ^0.5.1
-  checksum: 862eb02be5f7606c643793b66b50b75e6a00784c4c6fcca3db7a52391f01a557f404d178493e716b9190412317a5fa7177abb33bfa4be576a08be4ba4e765575
+  checksum: fcf6284a7b5a13cf3d1e078fae5b542690a7a6b2807088f86b5596c7df0ababf517395a56b2ae26e9504e3ad83ee6189a2d522e59b5609e43de9ec8a15cb7e2b
   languageName: node
   linkType: hard
 
@@ -10482,15 +10482,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^2.2.10":
-  version: 2.2.10
-  resolution: "msw@npm:2.2.10"
+"msw@npm:^2.2.12":
+  version: 2.2.12
+  resolution: "msw@npm:2.2.12"
   dependencies:
     "@bundled-es-modules/cookie": ^2.0.0
     "@bundled-es-modules/statuses": ^1.0.1
     "@inquirer/confirm": ^3.0.0
     "@mswjs/cookies": ^1.1.0
-    "@mswjs/interceptors": ^0.25.16
+    "@mswjs/interceptors": ^0.26.12
     "@open-draft/until": ^2.1.0
     "@types/cookie": ^0.6.0
     "@types/statuses": ^2.0.4
@@ -10510,7 +10510,7 @@ __metadata:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: edb7335acb9d856c0af7e53a808bd585377f88bbc1f81d2dd01ef15db67b4bf3e8a96e1dc90c76d626551d86e05a0d465b9c8126a0d39af9df8894b80ea30fc0
+  checksum: 7ea3e3dc344ea748c5b86fcfc359e1bfe7e957576b373628a26c634f6390ff0bc0e0d8a7124b6cb53307d88a84258ba99ba013a8ca5e38f8b08ba2e7c74e82fa
   languageName: node
   linkType: hard
 
@@ -12330,7 +12330,7 @@ __metadata:
     eslint: ^8.57.0
     firebase: ^10.9.0
     jsdom: ^24.0.0
-    msw: ^2.2.10
+    msw: ^2.2.12
     prettier: 3.2.5
     react: ^18.2.0
     react-animate-height: ^3.2.3
