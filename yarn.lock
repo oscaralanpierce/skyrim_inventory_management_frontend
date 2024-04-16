@@ -12342,7 +12342,7 @@ __metadata:
     storybook-addon-mock: ^4.3.0
     typescript: ^5.4.3
     unplugin-fonts: ^1.1.1
-    vite: ^5.2.7
+    vite: ^5.2.9
     vitest: ^1.4.0
   languageName: unknown
   linkType: soft
@@ -13492,9 +13492,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.2.7":
-  version: 5.2.7
-  resolution: "vite@npm:5.2.7"
+"vite@npm:^5.2.9":
+  version: 5.2.9
+  resolution: "vite@npm:5.2.9"
   dependencies:
     esbuild: ^0.20.1
     fsevents: ~2.3.3
@@ -13528,7 +13528,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 66b4243f0ce147a1871e9bea772e5bd4842410ec9f3aa71d21e9427836f79a15b00f5cb7f023003f169249bc6ead20f68ee31ce6a326e091670ffd3b5441d131
+  checksum: 7a97f9547af8550c55bc2529cc6827c1ef0a043a09e9686cf20b615e8d59305cbe917954e806c5fdad6c33bfb883c1ce51325a9c474b5aa5bc13c377a74805fd
   languageName: node
   linkType: hard
 
