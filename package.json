@@ -26,7 +26,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-hook/resize-observer": "^1.2.6",
     "classnames": "^2.5.1",
-    "firebase": "^10.10.0",
+    "firebase": "^10.11.0",
     "react": "^18.2.0",
     "react-animate-height": "^3.2.3",
     "react-dom": "^18.2.0",
