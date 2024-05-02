@@ -4982,17 +4982,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^15.0.4":
-  version: 15.0.4
-  resolution: "@testing-library/react@npm:15.0.4"
+"@testing-library/react@npm:^15.0.6":
+  version: 15.0.6
+  resolution: "@testing-library/react@npm:15.0.6"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^10.0.0
     "@types/react-dom": ^18.0.0
   peerDependencies:
+    "@types/react": ^18.0.0
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 37f30f0fc009429e5a54fef48c2c354840fbaf1c96f7f29c9c0ec71815fe25978e8bde881018d1122186f150902de45aa9706c9e7b77d3e7ac4649e3a82e0454
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: bc9a839b352d748a0d5bcab81621e2e1d09ea58f245c4795cb8e69f97a4f71867a66115c9832f083b62abc357b510be396cd000eb751c85543b974e6a90caf7f
   languageName: node
   linkType: hard
 
@@ -12391,7 +12395,7 @@ __metadata:
     "@storybook/react": ^7.6.17
     "@storybook/react-vite": ^7.6.17
     "@storybook/testing-library": ^0.2.2
-    "@testing-library/react": ^15.0.4
+    "@testing-library/react": ^15.0.6
     "@types/jsdom": ^21.1.6
     "@types/node": ^20.12.7
     "@types/react": ^18.3.1
