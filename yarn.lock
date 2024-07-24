@@ -1740,6 +1740,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bundled-es-modules/tough-cookie@npm:^0.1.6":
+  version: 0.1.6
+  resolution: "@bundled-es-modules/tough-cookie@npm:0.1.6"
+  dependencies:
+    "@types/tough-cookie": ^4.0.5
+    tough-cookie: ^4.1.4
+  checksum: e31c1262cbc044373e757117b1b152acc86ba5d088124153b3d1ae83e0de0a2b4d2362758cec3e1a49cf15c39a4447587cc2672e4f5a961754c91ef9ca3221e1
+  languageName: node
+  linkType: hard
+
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -3202,16 +3212,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mswjs/cookies@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@mswjs/cookies@npm:1.1.0"
-  checksum: 1d9be44548907b92ff6acd46795292968661be19f1c04c43fdb2beb98bc7e58b8ffcef3be19d0f2cb58df07a36a6b53b4bbc0ea34e023b7366dbc28ffee90338
-  languageName: node
-  linkType: hard
-
-"@mswjs/interceptors@npm:^0.26.14":
-  version: 0.26.14
-  resolution: "@mswjs/interceptors@npm:0.26.14"
+"@mswjs/interceptors@npm:^0.29.0":
+  version: 0.29.1
+  resolution: "@mswjs/interceptors@npm:0.29.1"
   dependencies:
     "@open-draft/deferred-promise": ^2.2.0
     "@open-draft/logger": ^0.3.0
@@ -3219,7 +3222,7 @@ __metadata:
     is-node-process: ^1.2.0
     outvariant: ^1.2.1
     strict-event-emitter: ^0.5.1
-  checksum: dab476b6bc037d84947838d28e815810ddc9ac5c3ec26e517b8f18e930f37ff6f9b75ab7e87b970fadfcaa1113e7899f9ed7f16a04c1b30ffd61691914bf4039
+  checksum: c217f922c68024f6a8b526fb7df00bbfccb71e432bfb270322976dd40a9d312698e40bfd105b74df7aeb5a46276531a56ca5b8e3e9b0112f1577eb0d8d289e1f
   languageName: node
   linkType: hard
 
@@ -5625,6 +5628,13 @@ __metadata:
   version: 4.0.2
   resolution: "@types/tough-cookie@npm:4.0.2"
   checksum: e055556ffdaa39ad85ede0af192c93f93f986f4bd9e9426efdc2948e3e2632db3a4a584d4937dbf6d7620527419bc99e6182d3daf2b08685e710f2eda5291905
+  languageName: node
+  linkType: hard
+
+"@types/tough-cookie@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "@types/tough-cookie@npm:4.0.5"
+  checksum: f19409d0190b179331586365912920d192733112a195e870c7f18d20ac8adb7ad0b0ff69dad430dba8bc2be09593453a719cfea92dc3bda19748fd158fe1498d
   languageName: node
   linkType: hard
 
@@ -10673,15 +10683,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^2.2.14":
-  version: 2.2.14
-  resolution: "msw@npm:2.2.14"
+"msw@npm:^2.3.4":
+  version: 2.3.4
+  resolution: "msw@npm:2.3.4"
   dependencies:
     "@bundled-es-modules/cookie": ^2.0.0
     "@bundled-es-modules/statuses": ^1.0.1
+    "@bundled-es-modules/tough-cookie": ^0.1.6
     "@inquirer/confirm": ^3.0.0
-    "@mswjs/cookies": ^1.1.0
-    "@mswjs/interceptors": ^0.26.14
+    "@mswjs/interceptors": ^0.29.0
     "@open-draft/until": ^2.1.0
     "@types/cookie": ^0.6.0
     "@types/statuses": ^2.0.4
@@ -10701,7 +10711,7 @@ __metadata:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: a958b38314f42b733f67ac176e753680f28da862212ab671aa40607b017a577797dcc323e997a3d6c0b2d3f13cc2a3458d4941574e08c916a6b8beeb91d8501a
+  checksum: 94302e45db97d0fd545c77ac6285eae32c440cbb18134be41816ee3dd2b2d649240fd1d5c4cd524d05b54d6db60434cf5a986544e4203d6aa10eb5a57a6e5abc
   languageName: node
   linkType: hard
 
@@ -12538,7 +12548,7 @@ __metadata:
     eslint: ^8.57.0
     firebase: ^10.12.2
     jsdom: ^24.0.0
-    msw: ^2.2.14
+    msw: ^2.3.4
     prettier: 3.2.5
     react: ^18.3.1
     react-animate-height: ^3.2.3
@@ -13095,6 +13105,18 @@ __metadata:
     universalify: ^0.2.0
     url-parse: ^1.5.3
   checksum: c9226afff36492a52118432611af083d1d8493a53ff41ec4ea48e5b583aec744b989e4280bcf476c910ec1525a89a4a0f1cae81c08b18fb2ec3a9b3a72b91dcc
+  languageName: node
+  linkType: hard
+
+"tough-cookie@npm:^4.1.4":
+  version: 4.1.4
+  resolution: "tough-cookie@npm:4.1.4"
+  dependencies:
+    psl: ^1.1.33
+    punycode: ^2.1.1
+    universalify: ^0.2.0
+    url-parse: ^1.5.3
+  checksum: 5815059f014c31179a303c673f753f7899a6fce94ac93712c88ea5f3c26e0c042b5f0c7a599a00f8e0feeca4615dba75c3dffc54f3c1a489978aa8205e09307c
   languageName: node
   linkType: hard
 
