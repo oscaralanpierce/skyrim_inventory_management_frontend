@@ -1288,16 +1288,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chromatic-com/storybook@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "@chromatic-com/storybook@npm:1.9.0"
+"@chromatic-com/storybook@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@chromatic-com/storybook@npm:2.0.2"
   dependencies:
     chromatic: ^11.4.0
     filesize: ^10.0.12
     jsonfile: ^6.1.0
     react-confetti: ^6.1.0
     strip-ansi: ^7.1.0
-  checksum: 12ada9213a48e1145311e43cd2f972e312c77c978e3610eabbd698793011aeafe2a9256dd62c06492cbed7bc2b7c274f3a10887016c3333380b66180e40782cf
+  checksum: 13fb45bc420be543e679d78df122bf4a7028e91559c9798ff31bebfe33e1454736c81560649782cf5ddff7f0a151d69cc4ebcb4f775de4cd3207a77f4a3412a8
   languageName: node
   linkType: hard
 
@@ -9144,7 +9144,7 @@ __metadata:
   resolution: "skyrim_inventory_management_frontend@workspace:."
   dependencies:
     "@babel/core": ^7.25.2
-    "@chromatic-com/storybook": ^1.9.0
+    "@chromatic-com/storybook": ^2.0.2
     "@fortawesome/fontawesome-svg-core": ^6.6.0
     "@fortawesome/free-regular-svg-icons": ^6.6.0
     "@fortawesome/free-solid-svg-icons": ^6.6.0
