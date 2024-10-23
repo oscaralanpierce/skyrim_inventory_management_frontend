@@ -3626,12 +3626,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0, @types/node@npm:^22.0.0, @types/node@npm:^22.5.5, @types/node@npm:^22.7.5":
+"@types/node@npm:*, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0, @types/node@npm:^22.0.0, @types/node@npm:^22.5.5":
   version: 22.7.6
   resolution: "@types/node@npm:22.7.6"
   dependencies:
     undici-types: ~6.19.2
   checksum: 6afe2a1bd70ee0afa76c904ffdb04c634366987103bb2bef2d5b036f3bb49a4e828bb5e9fc64af442a76aaac4896df9277e725c843d85375d135aa71eb2fe3d9
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.7.9":
+  version: 22.7.9
+  resolution: "@types/node@npm:22.7.9"
+  dependencies:
+    undici-types: ~6.19.2
+  checksum: 02671449e61f3f7c9898da44e18af272056fee0afbbc98b11dcff7cd7c4ed6c8a45353cfdde413208d9f597e247ee68d908c83a72cae4cbdd763b0e3a45ac0cd
   languageName: node
   linkType: hard
 
@@ -9161,7 +9170,7 @@ __metadata:
     "@storybook/test": ^8.3.6
     "@testing-library/react": ^16.0.1
     "@types/jsdom": ^21.1.7
-    "@types/node": ^22.7.5
+    "@types/node": ^22.7.9
     "@types/react": ^18.3.11
     "@types/react-dom": ^18.3.0
     "@types/react-router-dom": ^5.3.3
