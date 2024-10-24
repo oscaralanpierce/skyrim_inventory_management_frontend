@@ -1288,16 +1288,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chromatic-com/storybook@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "@chromatic-com/storybook@npm:1.9.0"
+"@chromatic-com/storybook@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@chromatic-com/storybook@npm:3.1.0"
   dependencies:
-    chromatic: ^11.4.0
+    "@storybook/channels": ^8.3.0
+    "@storybook/telemetry": ^8.3.0
+    "@storybook/types": ^8.3.0
+    chromatic: ^11.15.0
     filesize: ^10.0.12
     jsonfile: ^6.1.0
     react-confetti: ^6.1.0
     strip-ansi: ^7.1.0
-  checksum: 12ada9213a48e1145311e43cd2f972e312c77c978e3610eabbd698793011aeafe2a9256dd62c06492cbed7bc2b7c274f3a10887016c3333380b66180e40782cf
+  peerDependencies:
+    storybook: ^8.3.0
+  checksum: 05aea89ea1b7fcdfde049dedf71116db7e28c88f479b3ead3b48b10141c41a4207d3b3da395a00a4e0307b2cc935a581e00b7bc701a6c724da94d9278d702417
   languageName: node
   linkType: hard
 
@@ -3042,7 +3047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/channels@npm:^8.0.8":
+"@storybook/channels@npm:^8.0.8, @storybook/channels@npm:^8.3.0":
   version: 8.3.6
   resolution: "@storybook/channels@npm:8.3.6"
   peerDependencies:
@@ -3283,6 +3288,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/telemetry@npm:^8.3.0":
+  version: 8.3.6
+  resolution: "@storybook/telemetry@npm:8.3.6"
+  peerDependencies:
+    storybook: ^8.3.6
+  checksum: 26876685d5bc9e10c969af3ae7e7938a18ea653bd0a8caf0ff88159ea1f0bb2748f0f1399042a50f2d91dd3dc5ab9e2edac9fb5334bd45836dae35a54a3cff85
+  languageName: node
+  linkType: hard
+
 "@storybook/test@npm:8.3.6, @storybook/test@npm:^8.3.6":
   version: 8.3.6
   resolution: "@storybook/test@npm:8.3.6"
@@ -3308,6 +3322,15 @@ __metadata:
   peerDependencies:
     storybook: ^8.3.6
   checksum: 7b40b35069225d37f71f43e35174717ba6ec8d273eef671a2d37d9745a300c5b3887fa145aee6fdbe4759b2140ddf25e8cbd569074ae1c7d44b0ccc99c1a3451
+  languageName: node
+  linkType: hard
+
+"@storybook/types@npm:^8.3.0":
+  version: 8.3.6
+  resolution: "@storybook/types@npm:8.3.6"
+  peerDependencies:
+    storybook: ^8.3.6
+  checksum: 7122388d848cf1d8b7d95c81b8a601d82a455d764f7a625372f344dc0402bbd398db22e1c6cedd66ca3987d61b0f8204ff757e0ff5fc2a77745094dc7b882a2a
   languageName: node
   linkType: hard
 
@@ -4530,9 +4553,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.4.0":
-  version: 11.12.6
-  resolution: "chromatic@npm:11.12.6"
+"chromatic@npm:^11.15.0":
+  version: 11.15.0
+  resolution: "chromatic@npm:11.15.0"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
@@ -4545,7 +4568,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 020bf394c169719bffb59509388df3677384ec9c29219343778f202ac5f6ef3fc331c73efefdc3c70cda09f9e26e4d4f6e6567a18bff25b74eeea90b9b1e9dee
+  checksum: e0a9522a7fd7faf1624acf23f9470323e3f16b23786b92c9219332079c413010560bfe9abbb98d25383195615f430aa068a65f1bb15ea50a04acaf893f8652a9
   languageName: node
   linkType: hard
 
@@ -9144,7 +9167,7 @@ __metadata:
   resolution: "skyrim_inventory_management_frontend@workspace:."
   dependencies:
     "@babel/core": ^7.25.2
-    "@chromatic-com/storybook": ^1.9.0
+    "@chromatic-com/storybook": ^3.1.0
     "@fortawesome/fontawesome-svg-core": ^6.6.0
     "@fortawesome/free-regular-svg-icons": ^6.6.0
     "@fortawesome/free-solid-svg-icons": ^6.6.0
