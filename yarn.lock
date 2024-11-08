@@ -3180,6 +3180,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/instrumenter@npm:8.4.2":
+  version: 8.4.2
+  resolution: "@storybook/instrumenter@npm:8.4.2"
+  dependencies:
+    "@storybook/global": ^5.0.0
+    "@vitest/utils": ^2.1.1
+  peerDependencies:
+    storybook: ^8.4.2
+  checksum: 9f4a70ecd5b8aa75aa51f88f829a7585831148c3d38db3f954be46c40a01b47135577d38e84ff7298cbad5efa5a2aaa3a57946d2d03edbf64008c6d2250d0d5d
+  languageName: node
+  linkType: hard
+
 "@storybook/manager-api@npm:^8.0.8, @storybook/manager-api@npm:^8.3.6":
   version: 8.3.6
   resolution: "@storybook/manager-api@npm:8.3.6"
@@ -3270,7 +3282,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/test@npm:8.3.6, @storybook/test@npm:^8.3.6":
+"@storybook/test@npm:8.3.6":
   version: 8.3.6
   resolution: "@storybook/test@npm:8.3.6"
   dependencies:
@@ -3286,6 +3298,24 @@ __metadata:
   peerDependencies:
     storybook: ^8.3.6
   checksum: 58900591f2e70deb47581d5784e6f529debac34a0d2264ecd50139f5cf003bedf907499844181a5a947d040dadff7a223efad7b8ed8cb99be07292ec05e67d15
+  languageName: node
+  linkType: hard
+
+"@storybook/test@npm:^8.4.2":
+  version: 8.4.2
+  resolution: "@storybook/test@npm:8.4.2"
+  dependencies:
+    "@storybook/csf": ^0.1.11
+    "@storybook/global": ^5.0.0
+    "@storybook/instrumenter": 8.4.2
+    "@testing-library/dom": 10.4.0
+    "@testing-library/jest-dom": 6.5.0
+    "@testing-library/user-event": 14.5.2
+    "@vitest/expect": 2.0.5
+    "@vitest/spy": 2.0.5
+  peerDependencies:
+    storybook: ^8.4.2
+  checksum: 24dcd0c7bd28b6feb176116ba265c4b68444d479208175edfc2e42a4e0a344788b2c3d07710424e88e51b8ccad9cdc6a6a40f520ddcb43d3d4861149418d4d63
   languageName: node
   linkType: hard
 
@@ -3963,7 +3993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/utils@npm:2.1.4":
+"@vitest/utils@npm:2.1.4, @vitest/utils@npm:^2.1.1":
   version: 2.1.4
   resolution: "@vitest/utils@npm:2.1.4"
   dependencies:
@@ -9207,7 +9237,7 @@ __metadata:
     "@storybook/cli": ^8.3.6
     "@storybook/react": ^8.3.6
     "@storybook/react-vite": ^8.3.6
-    "@storybook/test": ^8.3.6
+    "@storybook/test": ^8.4.2
     "@testing-library/react": ^16.0.1
     "@types/jsdom": ^21.1.7
     "@types/node": ^22.9.0
