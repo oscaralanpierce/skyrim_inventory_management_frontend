@@ -3348,6 +3348,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/instrumenter@npm:8.4.5":
+  version: 8.4.5
+  resolution: "@storybook/instrumenter@npm:8.4.5"
+  dependencies:
+    "@storybook/global": ^5.0.0
+    "@vitest/utils": ^2.1.1
+  peerDependencies:
+    storybook: ^8.4.5
+  checksum: 14093e36b14871e74331074b7261f9103ddfe1233dffa7f722a8e36c955cb5812d7e3a202b8a7673dbdceb10853d0989cef1ff8e928b058635b2032188905842
+  languageName: node
+  linkType: hard
+
 "@storybook/manager-api@npm:^8.0.8, @storybook/manager-api@npm:^8.3.6":
   version: 8.3.6
   resolution: "@storybook/manager-api@npm:8.3.6"
@@ -3438,7 +3450,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/test@npm:8.3.6, @storybook/test@npm:^8.3.6":
+"@storybook/test@npm:8.3.6":
   version: 8.3.6
   resolution: "@storybook/test@npm:8.3.6"
   dependencies:
@@ -3454,6 +3466,24 @@ __metadata:
   peerDependencies:
     storybook: ^8.3.6
   checksum: 58900591f2e70deb47581d5784e6f529debac34a0d2264ecd50139f5cf003bedf907499844181a5a947d040dadff7a223efad7b8ed8cb99be07292ec05e67d15
+  languageName: node
+  linkType: hard
+
+"@storybook/test@npm:^8.4.5":
+  version: 8.4.5
+  resolution: "@storybook/test@npm:8.4.5"
+  dependencies:
+    "@storybook/csf": ^0.1.11
+    "@storybook/global": ^5.0.0
+    "@storybook/instrumenter": 8.4.5
+    "@testing-library/dom": 10.4.0
+    "@testing-library/jest-dom": 6.5.0
+    "@testing-library/user-event": 14.5.2
+    "@vitest/expect": 2.0.5
+    "@vitest/spy": 2.0.5
+  peerDependencies:
+    storybook: ^8.4.5
+  checksum: b04d3ee38cf60557d9ac1fe58f4cdbaee72d3fe2818530fc360fae7edfb18794e2b7be4748d00511c4682727743f8828efefe1bae7fffb28ad05b53f821bb5e9
   languageName: node
   linkType: hard
 
@@ -4080,6 +4110,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vitest/pretty-format@npm:2.1.6":
+  version: 2.1.6
+  resolution: "@vitest/pretty-format@npm:2.1.6"
+  dependencies:
+    tinyrainbow: ^1.2.0
+  checksum: 4cab9152ac97fa190db85bbe7e1ae8f1b5d2312fa3ccf7e813119933b2aaf4c763c6156a6d91cb186d3ed4be81f5bb70da2c731fde2d12457fe0871087d2be74
+  languageName: node
+  linkType: hard
+
 "@vitest/runner@npm:2.1.5":
   version: 2.1.5
   resolution: "@vitest/runner@npm:2.1.5"
@@ -4150,6 +4189,17 @@ __metadata:
     loupe: ^3.1.1
     tinyrainbow: ^1.2.0
   checksum: 0c1e262600bc329fab43bb19d575326a6d38175c2bdc345bc5326b81cf34303f22a1b67a0197dc6a935c3019e2f21c4da52a49c609967bea9cb4790a44a347ce
+  languageName: node
+  linkType: hard
+
+"@vitest/utils@npm:^2.1.1":
+  version: 2.1.6
+  resolution: "@vitest/utils@npm:2.1.6"
+  dependencies:
+    "@vitest/pretty-format": 2.1.6
+    loupe: ^3.1.2
+    tinyrainbow: ^1.2.0
+  checksum: 8b9c994eccb724d76128e875e8438d519bfae0126e7431e8682e7f07d9faeff929db1afa2742b188883e42508d4cdcb2326f9ae27c1b53b5f746d283a9e75462
   languageName: node
   linkType: hard
 
@@ -9375,7 +9425,7 @@ __metadata:
     "@storybook/cli": ^8.3.6
     "@storybook/react": ^8.3.6
     "@storybook/react-vite": ^8.3.6
-    "@storybook/test": ^8.3.6
+    "@storybook/test": ^8.4.5
     "@testing-library/react": ^16.0.1
     "@types/jsdom": ^21.1.7
     "@types/node": ^22.9.0
