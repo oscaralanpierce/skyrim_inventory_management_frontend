@@ -4875,9 +4875,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.18.1":
-  version: 11.18.1
-  resolution: "chromatic@npm:11.18.1"
+"chromatic@npm:^11.20.1":
+  version: 11.20.1
+  resolution: "chromatic@npm:11.20.1"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
@@ -4890,7 +4890,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: c55e34915599acf223bd14b82ce2269adcfe8c4b377ed51ccc0f8cb48290263683617cd15eabb0591d221442cd629ff2326807d294b234e06bcbb8f7f3c158ee
+  checksum: 1bca9b39542382a640f68f7c006582ab04dd3a83c01adfbc348a2e3eb1afbf4789d6e3b04e2b4a99531cf519f48ca408115781179b2ccd3d3393062d4f824dfe
   languageName: node
   linkType: hard
 
@@ -9414,7 +9414,7 @@ __metadata:
     "@typescript-eslint/parser": ^8.13.0
     "@vitejs/plugin-react": ^4.3.3
     babel-loader: ^9.2.1
-    chromatic: ^11.18.1
+    chromatic: ^11.20.1
     classnames: ^2.5.1
     eslint: ^8.57.0
     firebase: ^11.0.2
