@@ -23,7 +23,7 @@ jobs:
     - name: format
       run: yarn format
     - name: build storybook
-      run: yarn build-storybook\
+      run: yarn build-storybook
     - name: Run Chromatic visual tests
       uses: chromaui/action@latest
       env:
