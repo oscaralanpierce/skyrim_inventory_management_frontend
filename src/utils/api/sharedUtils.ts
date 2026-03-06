@@ -1,5 +1,5 @@
 export const BASE_URI = import.meta.env.PROD
-  ? 'https://sim-api.danascheider.com'
+  ? 'https://sim-api.oscaralanpierce.com'
   : import.meta.env.MODE === 'test'
   ? 'http://localhost:3000'
   : '/api'
