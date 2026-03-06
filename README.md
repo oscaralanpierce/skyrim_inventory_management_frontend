@@ -1,6 +1,6 @@
 # Skyrim Inventory Management Frontend
 
-This is the rewritten frontend to Skyrim Inventory Management. The original frontend, which has been decommissioned, can be found at https://github.com/danascheider/sim_legacy_frontend.
+This is the rewritten frontend to Skyrim Inventory Management. The original frontend, which has been decommissioned, can be found at https://github.com/oscaralanpierce/sim_legacy_frontend.
 
 ## Table of Contents
 
@@ -23,11 +23,11 @@ This is the rewritten frontend to Skyrim Inventory Management. The original fron
 
 ## Production Site
 
-https://sim.danascheider.com
+https://sim.oscaralanpierce.com
 
 ## Overview
 
-Skyrim Inventory Management is a split-stack app enabling users to manage inventory and tasks in Skyrim. This app is primarily intended for my personal use and anybody else should use at their own risk. The back end is available in [this repo](https://github.com/danascheider/skyrim_inventory_management) and runs in production at https://sim-api.danascheider.com. The SIM front end is the only authorised client at this time.
+Skyrim Inventory Management is a split-stack app enabling users to manage inventory and tasks in Skyrim. This app is primarily intended for my personal use and anybody else should use at their own risk. The back end is available in [this repo](https://github.com/oscaralanpierce/skyrim_inventory_management) and runs in production at https://sim-api.oscaralanpierce.com. The SIM front end is the only authorised client at this time.
 
 The front-end rewrite uses [Vite](https://vitejs.dev) (replacing the now-defunct `create-react-app`) with [React](https://reactjs.org) and [TypeScript](https://typescriptlang.org).
 
@@ -37,7 +37,7 @@ The front-end rewrite uses [Vite](https://vitejs.dev) (replacing the now-defunct
 
 #### Running the Back End
 
-In order to run the front end locally, you will need to run the backend on `http://localhost:3000`. Additional instructions are available in the README of the [backend repo](https://github.com/danascheider/skyrim_inventory_management).
+In order to run the front end locally, you will need to run the backend on `http://localhost:3000`. Additional instructions are available in the README of the [backend repo](https://github.com/oscaralanpierce/skyrim_inventory_management).
 
 #### Running the Front End
 
@@ -65,7 +65,7 @@ When you have finished the work, push to GitHub and make a pull request. Link th
 - **Summary of Changes:** A bulleted list summarising the changes you have made
 - **Explanation:** A detailed explanation of any technical or design choices you made, tradeoffs you faced, and alternatives you considered, including enough detail to make sense to a reviewer or a future developer investigating Git history
 
-All pull requests are expected to include updates to Storybook stories and developer and/or user documentation as appropriate. Storybook stories should cover any possible component states, such as loading states or states resulting from API error responses. API docs for the SIM API are available [in the docs directory](https://github.com/danascheider/skyrim_inventory_management/blob/main/docs/api/README.md) of that repo.
+All pull requests are expected to include updates to Storybook stories and developer and/or user documentation as appropriate. Storybook stories should cover any possible component states, such as loading states or states resulting from API error responses. API docs for the SIM API are available [in the docs directory](https://github.com/oscaralanpierce/skyrim_inventory_management/blob/main/docs/api/README.md) of that repo.
 
 After creating your pull requests, attach them to the Trello card and move it into the "Reviewing" column. When your PRs have been reviewed, you are free to merge them.
 

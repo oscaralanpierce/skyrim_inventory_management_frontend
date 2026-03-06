@@ -15,7 +15,7 @@ updates:
       include: "scope"
     open-pull-requests-limit: 8
     reviewers:
-      - "danascheider"
+      - "oscaralanpierce"
     versioning-strategy: "increase"
     # All packages published by the Storybook maintainers should be updated
     # together using `npx storybook@latest upgrade && yarn dedupe`. Updates
