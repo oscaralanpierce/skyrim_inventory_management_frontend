@@ -1986,12 +1986,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-svg-core@npm:^6.7.2":
-  version: 6.7.2
-  resolution: "@fortawesome/fontawesome-svg-core@npm:6.7.2"
+"@fortawesome/fontawesome-common-types@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/fontawesome-common-types@npm:7.2.0"
+  checksum: d8886411efb978c5a22374a1076b504b1815641bc4a6dc69b9e630c1e04be2297d8700369f839a95566aad234dd6a5068f9fb84add24122a9314db87073e5a90
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-svg-core@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/fontawesome-svg-core@npm:7.2.0"
   dependencies:
-    "@fortawesome/fontawesome-common-types": 6.7.2
-  checksum: b3c269545d99202111d8334955466a7f050c38cf80c6be5fdd36baae36822421e0806986db8d1670834fab6595ce527e06ea58248e053703722d03f19eccbb82
+    "@fortawesome/fontawesome-common-types": 7.2.0
+  checksum: e07c1d71dfd5206b87bd24576980e7398da745b2a617a390d3a86577b4e84ca628385a85628b8135c9bdefee45f8dac88bda7bccb4e2758b5d97756a4b66a1d9
   languageName: node
   linkType: hard
 
@@ -6955,7 +6962,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.26.0
     "@chromatic-com/storybook": ^5.0.1
-    "@fortawesome/fontawesome-svg-core": ^6.7.2
+    "@fortawesome/fontawesome-svg-core": ^7.2.0
     "@fortawesome/free-regular-svg-icons": ^6.7.2
     "@fortawesome/free-solid-svg-icons": ^6.7.2
     "@fortawesome/react-fontawesome": ^0.2.2
