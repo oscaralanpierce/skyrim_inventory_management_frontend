@@ -29,6 +29,9 @@ dist-ssr
 # Local environment configuration
 .env
 
+# Storybook build files
+storybook-static/
+
 # Yarn cache and binary file
 .yarn/cache
 .yarn/install-state.gz

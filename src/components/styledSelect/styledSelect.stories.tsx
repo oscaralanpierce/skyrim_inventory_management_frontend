@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { allGames } from '../../support/data/games'
 import StyledSelect from './styledSelect'
 

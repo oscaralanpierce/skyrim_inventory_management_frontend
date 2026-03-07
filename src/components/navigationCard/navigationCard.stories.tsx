@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { BrowserRouter } from 'react-router-dom'
 import { GREEN } from '../../utils/colorSchemes'
 import { ColorProvider } from '../../contexts/colorContext'
