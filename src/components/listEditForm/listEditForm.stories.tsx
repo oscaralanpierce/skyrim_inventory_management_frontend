@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { useRef, type FormEvent } from 'react'
 import { PINK } from '../../utils/colorSchemes'
 import { ColorProvider } from '../../contexts/colorContext'

@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import { type Meta, type StoryObj } from '@storybook/react-vite'
 import FlashMessage from './flashMessage'
 
 type Story = StoryObj<typeof FlashMessage>

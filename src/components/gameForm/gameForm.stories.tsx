@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
 import GameForm from './gameForm'
 
 type Story = StoryObj<typeof GameForm>
