@@ -1979,49 +1979,47 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-common-types@npm:6.7.2":
-  version: 6.7.2
-  resolution: "@fortawesome/fontawesome-common-types@npm:6.7.2"
-  checksum: 9c17f03032e56b8e8e996e5b2c15c8b47baf6f8d5c0703025b0b2711907245f94a7032b3da52d2714b5aeff1c14d3535e6869a82086136dcacae9ccd479dc6a2
+"@fortawesome/fontawesome-common-types@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/fontawesome-common-types@npm:7.2.0"
+  checksum: d8886411efb978c5a22374a1076b504b1815641bc4a6dc69b9e630c1e04be2297d8700369f839a95566aad234dd6a5068f9fb84add24122a9314db87073e5a90
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-svg-core@npm:^6.7.2":
-  version: 6.7.2
-  resolution: "@fortawesome/fontawesome-svg-core@npm:6.7.2"
+"@fortawesome/fontawesome-svg-core@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/fontawesome-svg-core@npm:7.2.0"
   dependencies:
-    "@fortawesome/fontawesome-common-types": 6.7.2
-  checksum: b3c269545d99202111d8334955466a7f050c38cf80c6be5fdd36baae36822421e0806986db8d1670834fab6595ce527e06ea58248e053703722d03f19eccbb82
+    "@fortawesome/fontawesome-common-types": 7.2.0
+  checksum: e07c1d71dfd5206b87bd24576980e7398da745b2a617a390d3a86577b4e84ca628385a85628b8135c9bdefee45f8dac88bda7bccb4e2758b5d97756a4b66a1d9
   languageName: node
   linkType: hard
 
-"@fortawesome/free-regular-svg-icons@npm:^6.7.2":
-  version: 6.7.2
-  resolution: "@fortawesome/free-regular-svg-icons@npm:6.7.2"
+"@fortawesome/free-regular-svg-icons@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/free-regular-svg-icons@npm:7.2.0"
   dependencies:
-    "@fortawesome/fontawesome-common-types": 6.7.2
-  checksum: 1a2be177dbb2c0186b3f10157a70c494f9e3c12c022cc8fb926c37b78a61e256a98c2739774671106454cb1a7f2336c6f49443e6bef44f33e67dd4e186f126cc
+    "@fortawesome/fontawesome-common-types": 7.2.0
+  checksum: 4a5668fd0e1f42457f972faafe33b7b7c127c80defe55c5c8073fb78eac6022b675e951b4292a95bf7df6988d4a677d302ce1018b7e5e65e85a85690106a1df0
   languageName: node
   linkType: hard
 
-"@fortawesome/free-solid-svg-icons@npm:^6.7.2":
-  version: 6.7.2
-  resolution: "@fortawesome/free-solid-svg-icons@npm:6.7.2"
+"@fortawesome/free-solid-svg-icons@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/free-solid-svg-icons@npm:7.2.0"
   dependencies:
-    "@fortawesome/fontawesome-common-types": 6.7.2
-  checksum: 457cc180399be57efd1a5908aaa76c8530dec5469fa676904179f73976c10bb030c6de9bf866e2a83e042cfd23856ba5fa1ca5acdb83f4e90c6b4aa9e5412d3c
+    "@fortawesome/fontawesome-common-types": 7.2.0
+  checksum: 5197283bf3a4ec0c5715b6a3c48d4ae5ea57e74449b257af477927f27b5f711bfe3ec3ed81d8d0a60ad21f64becb9a8f2a5b5af94919b695a0443aadd37e0290
   languageName: node
   linkType: hard
 
-"@fortawesome/react-fontawesome@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "@fortawesome/react-fontawesome@npm:0.2.2"
-  dependencies:
-    prop-types: ^15.8.1
+"@fortawesome/react-fontawesome@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@fortawesome/react-fontawesome@npm:3.2.0"
   peerDependencies:
-    "@fortawesome/fontawesome-svg-core": ~1 || ~6
-    react: ">=16.3"
-  checksum: e4bed35bfb7fc88b5bcf2305d08ee1835b82fa7705945c4d310df33bb747b05ef07a33ac9db643c8870ca4f835228978290d84d82f2c6c6a70b9ab4c886731a6
+    "@fortawesome/fontawesome-svg-core": ~6 || ~7
+    react: ^18.0.0 || ^19.0.0
+  checksum: 35b806110644914135177729d72658447e4cd917983d93fecd5e5b0462e7778c27c5e06e6cea3c83ecbb4d48d1b35d6a013e940b5ecb8f913cd2b9f01022112b
   languageName: node
   linkType: hard
 
@@ -6955,10 +6953,10 @@ __metadata:
   dependencies:
     "@babel/core": ^7.26.0
     "@chromatic-com/storybook": ^5.0.1
-    "@fortawesome/fontawesome-svg-core": ^6.7.2
-    "@fortawesome/free-regular-svg-icons": ^6.7.2
-    "@fortawesome/free-solid-svg-icons": ^6.7.2
-    "@fortawesome/react-fontawesome": ^0.2.2
+    "@fortawesome/fontawesome-svg-core": ^7.2.0
+    "@fortawesome/free-regular-svg-icons": ^7.2.0
+    "@fortawesome/free-solid-svg-icons": ^7.2.0
+    "@fortawesome/react-fontawesome": ^3.2.0
     "@react-hook/resize-observer": ^1.2.6
     "@storybook/addon-docs": 10.2.16
     "@storybook/addon-links": 10.2.16
