@@ -1,4 +1,4 @@
-import { ApiResponse, type HTTPHeaders } from '../http'
+import { ApiResponse, type HTTPBody, type HTTPHeaders } from '../http'
 import {
   type ErrorObject,
   type ResponseWishList,
@@ -15,7 +15,7 @@ class PostWishListsSuccessResponse extends ApiResponse {
   status: 201
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 201; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -37,7 +37,7 @@ class PostWishListsErrorResponse extends ApiResponse {
   status: 422 | 500
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 422 | 500; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -64,7 +64,7 @@ class GetWishListsSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 200; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -86,7 +86,7 @@ class GetWishListsServerErrorResponse extends ApiResponse {
   status: 500
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 500; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -113,7 +113,7 @@ class PatchWishListSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 200; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -135,7 +135,7 @@ class PatchWishListErrorResponse extends ApiResponse {
   status: 405 | 422 | 500
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: {
       status: 405 | 422 | 500
       statusText?: string
@@ -166,7 +166,7 @@ class DeleteWishListSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 200; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -188,7 +188,7 @@ class DeleteWishListErrorResponse extends ApiResponse {
   status: 405 | 500
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 405 | 500; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)

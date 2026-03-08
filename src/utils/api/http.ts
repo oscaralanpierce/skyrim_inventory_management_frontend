@@ -38,7 +38,7 @@ type HTTPStatusCode =
   | ClientErrorStatusCode
   | ServerErrorStatusCode
 
-type HTTPBody = BodyInit | null
+export type HTTPBody = BodyInit | null
 
 export type HTTPHeaders = Headers | { [i: string]: string }
 

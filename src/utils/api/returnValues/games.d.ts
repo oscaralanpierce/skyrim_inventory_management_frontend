@@ -1,4 +1,4 @@
-import { ApiResponse, type HTTPHeaders } from '../http'
+import { ApiResponse, type HTTPBody, type HTTPHeaders } from '../http'
 import { type ErrorObject, type ResponseGame } from '../../../types/apiData'
 import { UnauthorizedResponse } from './shared'
 
@@ -12,7 +12,7 @@ class PostGamesSuccessResponse extends ApiResponse {
   status: 201
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 201; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -23,7 +23,7 @@ class PostGamesErrorResponse extends ApiResponse {
   status: 422 | 500
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 422 | 500; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -48,7 +48,7 @@ class GetGamesSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 200; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -59,7 +59,7 @@ class GetGamesErrorResponse extends ApiResponse {
   status: 500
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 500; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -85,7 +85,7 @@ class PatchGameSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 200; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -96,7 +96,7 @@ class PatchGameErrorResponse extends ApiResponse {
   status: 422 | 500
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: {
       status: 422 | 500
       statusText?: string
@@ -138,7 +138,7 @@ class DeleteGameSuccessResponse extends ApiResponse {
   status: 204
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 204; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -149,7 +149,7 @@ class DeleteGameErrorResponse extends ApiResponse {
   status: 404 | 500
 
   constructor(
-    body: BodyInit | null | undefined,
+    body: HTTPBody | undefined,
     options: { status: 404 | 500; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
