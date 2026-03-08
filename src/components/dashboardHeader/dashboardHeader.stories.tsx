@@ -5,7 +5,7 @@ import {
   loadingLoginContextValue,
   loginContextValue,
 } from '../../support/data/contextValues'
-import { LoginContext } from '../../contexts/loginContext'
+import { LoginContext, type LoginContextType } from '../../contexts/loginContext'
 import DashboardHeader from './dashboardHeader'
 
 type HeaderStory = StoryObj<typeof DashboardHeader>
@@ -16,7 +16,7 @@ const meta: Meta<typeof DashboardHeader> = {
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
-        <LoginContext.Provider value={parameters.loginContextValue}>
+        <LoginContext.Provider value={parameters['loginContextValue'] as LoginContextType}>
           <Story />
         </LoginContext.Provider>
       </BrowserRouter>

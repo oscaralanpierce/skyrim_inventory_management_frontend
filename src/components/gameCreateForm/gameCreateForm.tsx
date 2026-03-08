@@ -28,7 +28,11 @@ const GameCreateForm = ({ disabled }: GameCreateFormProps) => {
   } as CSSProperties
 
   const focusInputIfExpanded = () => {
-    formExpanded ? inputRef.current?.focus() : inputRef.current?.blur()
+    if (formExpanded) {
+      inputRef.current?.focus()
+    } else {
+      inputRef.current?.blur()
+    }
   }
 
   const extractGame = (formData: FormData): Game => {

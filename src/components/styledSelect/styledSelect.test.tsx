@@ -59,7 +59,7 @@ describe('StyledSelect', () => {
 
     describe('submitting the input', () => {
       describe('when not pressing enter', () => {
-        test("doesn't call the onSubmitInput function", () => {
+        test("doesn't call the onSubmitInput function", async () => {
           const onSubmitInput = vitest.fn()
 
           const wrapper = render(
@@ -73,14 +73,14 @@ describe('StyledSelect', () => {
 
           const input = wrapper.getByLabelText('Add or Select Option')
 
-          act(() => fireEvent.keyDown(input, { target: { key: ' ' } }))
+          await act(() => fireEvent.keyDown(input, { target: { key: ' ' } }))
 
           expect(onSubmitInput).not.toHaveBeenCalled()
         })
       })
 
       describe('when the input value matches an option name', () => {
-        test.skip('selects the option', () => {
+        test.skip('selects the option', async () => {
           const onOptionSelected = vitest.fn()
           const onSubmitInput = vitest.fn()
 
@@ -97,7 +97,7 @@ describe('StyledSelect', () => {
 
           fireEvent.change(input, { target: { value: 'my game 2' } })
 
-          act(() => fireEvent.keyDown(input, { target: { key: 'Enter' } }))
+          await act(() => fireEvent.keyDown(input, { target: { key: 'Enter' } }))
 
           expect(onOptionSelected).toHaveBeenCalledWith(51)
           expect(onSubmitInput).not.toHaveBeenCalled()
@@ -105,7 +105,7 @@ describe('StyledSelect', () => {
       })
 
       describe('when the input value does not match an option name', () => {
-        test.skip('calls the onSubmitInput function with the input value', () => {
+        test.skip('calls the onSubmitInput function with the input value', async () => {
           const onSubmitInput = vitest.fn()
 
           const wrapper = render(
@@ -121,7 +121,7 @@ describe('StyledSelect', () => {
 
           fireEvent.change(input, { target: { value: 'New Game New Name' } })
 
-          act(() => fireEvent.keyDown(input, { target: { key: 'Enter' } }))
+          await act(() => fireEvent.keyDown(input, { target: { key: 'Enter' } }))
 
           expect(onSubmitInput).toHaveBeenCalledWith('New Game New Name')
         })

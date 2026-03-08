@@ -6,7 +6,7 @@ import {
   loginContextValue,
 } from '../../support/data/contextValues'
 import { internalServerErrorResponse } from '../../support/data/errors'
-import { LoginContext } from '../../contexts/loginContext'
+import { LoginContext, type LoginContextType } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
 import { GamesProvider } from '../../contexts/gamesContext'
 import GamesPage from './gamesPage'
@@ -21,7 +21,7 @@ const meta: Meta<typeof GamesPage> = {
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
-        <LoginContext.Provider value={parameters.loginContextValue}>
+        <LoginContext.Provider value={parameters['loginContextValue'] as LoginContextType}>
           <PageProvider>
             <GamesProvider>
               <Story />

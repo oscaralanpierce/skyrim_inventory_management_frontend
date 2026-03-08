@@ -11,15 +11,6 @@ import {
 
 export const BASE_APP_URI = 'http://localhost:5173'
 
-declare global {
-  namespace NodeJS {
-    interface Global {
-      document: Document
-      window: Window
-    }
-  }
-}
-
 const setDom = (url?: string) => {
   const dom = new JSDOM('<!doctype html><html><body></body></html>', {
     url: url || 'http://localhost:5173',

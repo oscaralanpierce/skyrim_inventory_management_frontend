@@ -6,8 +6,8 @@ import {
   wishListsContextValueEmpty,
 } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
-import { WishListsContext } from '../../contexts/wishListsContext'
+import { GamesContext, type GamesContextType } from '../../contexts/gamesContext'
+import { WishListsContext, type WishListsContextType } from '../../contexts/wishListsContext'
 import WishListGrouping from './wishListGrouping'
 
 type GroupingStory = StoryObj<typeof WishListGrouping>
@@ -18,9 +18,9 @@ const meta: Meta<typeof WishListGrouping> = {
   decorators: [
     (Story, { parameters }) => (
       <PageProvider>
-        <GamesContext.Provider value={parameters.gamesContextValue}>
+        <GamesContext.Provider value={parameters['gamesContextValue'] as GamesContextType}>
           <WishListsContext.Provider
-            value={parameters.wishListsContextValue}
+            value={parameters['wishListsContextValue'] as WishListsContextType}
           >
             <Story />
           </WishListsContext.Provider>

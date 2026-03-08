@@ -36,12 +36,12 @@ export const LoginProvider = ({ children }: ProviderProps) => {
   }, [user, authLoading])
 
   const refreshToken = useCallback(() => {
-    if (user) user.getIdToken(true).then((idToken) => setToken(idToken))
+    if (user) void user.getIdToken(true).then((idToken) => setToken(idToken))
   }, [user])
 
-  const withTokenRefresh = (fn: Function) => {
+  const withTokenRefresh = (fn: (idToken: string) => void) => {
     if (user) {
-      user.getIdToken(true).then((idToken) => {
+      void user.getIdToken(true).then((idToken) => {
         setToken(idToken)
         fn(idToken)
       })
@@ -49,7 +49,7 @@ export const LoginProvider = ({ children }: ProviderProps) => {
   }
 
   const signOut = () => {
-    signOutWithGoogle().then(() => setToken(null))
+    void signOutWithGoogle().then(() => setToken(null))
   }
 
   const value = {

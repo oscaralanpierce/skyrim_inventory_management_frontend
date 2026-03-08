@@ -1,4 +1,9 @@
-import { type RequestWishListItem } from '../../../types/apiData'
+import {
+  type RequestWishListItem,
+  type ResponseWishList,
+  type ResponseWishListItem,
+  type ErrorObject,
+} from '../../../types/apiData'
 import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
   type PostWishListItemsResponse,
@@ -40,15 +45,19 @@ export const postWishListItems = (
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
 
-    return response.json().then((json) => {
+    return response.json().then((json: ResponseWishList[] | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 405)
-        throw new MethodNotAllowedError(json.errors.join(', '))
+        throw new MethodNotAllowedError(
+          (json as ErrorObject).errors.join(', ')
+        )
       if (returnValue.status === 422)
-        throw new UnprocessableEntityError(json.errors)
+        throw new UnprocessableEntityError((json as ErrorObject).errors)
       if (returnValue.status === 500)
-        throw new InternalServerError(json.errors.join(', '))
+        throw new InternalServerError(
+          (json as ErrorObject).errors.join(', ')
+        )
 
       return returnValue
     })
@@ -79,18 +88,24 @@ export const patchWishListItem = (
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
 
-    return response.json().then((json) => {
-      const returnValue = { status: response.status, json }
+    return response
+      .json()
+      .then((json: ResponseWishListItem[] | ErrorObject) => {
+        const returnValue = { status: response.status, json }
 
-      if (returnValue.status === 405)
-        throw new MethodNotAllowedError(json.errors.join(', '))
-      if (returnValue.status === 422)
-        throw new UnprocessableEntityError(json.errors)
-      if (returnValue.status === 500)
-        throw new InternalServerError(json.errors.join(', '))
+        if (returnValue.status === 405)
+          throw new MethodNotAllowedError(
+            (json as ErrorObject).errors.join(', ')
+          )
+        if (returnValue.status === 422)
+          throw new UnprocessableEntityError((json as ErrorObject).errors)
+        if (returnValue.status === 500)
+          throw new InternalServerError(
+            (json as ErrorObject).errors.join(', ')
+          )
 
-      return returnValue
-    })
+        return returnValue
+      })
   })
 }
 
@@ -113,13 +128,17 @@ export const deleteWishListItem = (
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
 
-    return response.json().then((json) => {
+    return response.json().then((json: ResponseWishList[] | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 405)
-        throw new MethodNotAllowedError(json.errors.join(', '))
+        throw new MethodNotAllowedError(
+          (json as ErrorObject).errors.join(', ')
+        )
       if (returnValue.status === 500)
-        throw new InternalServerError(json.errors.join(', '))
+        throw new InternalServerError(
+          (json as ErrorObject).errors.join(', ')
+        )
 
       return returnValue
     })

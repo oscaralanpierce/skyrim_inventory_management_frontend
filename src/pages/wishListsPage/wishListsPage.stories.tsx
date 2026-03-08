@@ -9,9 +9,9 @@ import {
   loginContextValue,
   gamesContextValueEmpty,
 } from '../../support/data/contextValues'
-import { WishListsContext } from '../../contexts/wishListsContext'
+import { WishListsContext, type WishListsContextType } from '../../contexts/wishListsContext'
 import { LoginContext } from '../../contexts/loginContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { GamesContext, type GamesContextType } from '../../contexts/gamesContext'
 import { PageProvider } from '../../contexts/pageContext'
 import WishListsPage from './wishListsPage'
 
@@ -25,9 +25,9 @@ const meta: Meta<typeof WishListsPage> = {
       <BrowserRouter>
         <LoginContext.Provider value={loginContextValue}>
           <PageProvider>
-            <GamesContext.Provider value={parameters.gamesContextValue}>
+            <GamesContext.Provider value={parameters['gamesContextValue'] as GamesContextType}>
               <WishListsContext.Provider
-                value={parameters.wishListsContextValue}
+                value={parameters['wishListsContextValue'] as WishListsContextType}
               >
                 <Story />
               </WishListsContext.Provider>

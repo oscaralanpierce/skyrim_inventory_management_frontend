@@ -118,7 +118,7 @@ describe('StyledSelectOption', () => {
       expect(onSelected).toHaveBeenCalledWith('foo')
     })
 
-    test('calls the onSelected function when the Enter key is pressed', () => {
+    test('calls the onSelected function when the Enter key is pressed', async () => {
       const onSelected = vitest.fn()
 
       const wrapper = render(
@@ -132,12 +132,12 @@ describe('StyledSelectOption', () => {
 
       const option = wrapper.getByRole('option')
 
-      act(() => fireEvent.keyDown(option, { key: 'Enter' }))
+      await act(() => fireEvent.keyDown(option, { key: 'Enter' }))
 
       expect(onSelected).toHaveBeenCalledWith(1)
     })
 
-    test('calls the onSelected function when the space bar is pressed', () => {
+    test('calls the onSelected function when the space bar is pressed', async () => {
       const onSelected = vitest.fn()
 
       const wrapper = render(
@@ -151,12 +151,12 @@ describe('StyledSelectOption', () => {
 
       const option = wrapper.getByRole('option')
 
-      act(() => fireEvent.keyDown(option, { key: ' ' }))
+      await act(() => fireEvent.keyDown(option, { key: ' ' }))
 
       expect(onSelected).toHaveBeenCalledWith(1)
     })
 
-    test("doesn't call the onSelected function when a key other than Enter or the space bar is pressed", () => {
+    test("doesn't call the onSelected function when a key other than Enter or the space bar is pressed", async () => {
       const onSelected = vitest.fn()
 
       const wrapper = render(
@@ -170,7 +170,7 @@ describe('StyledSelectOption', () => {
 
       const option = wrapper.getByRole('option')
 
-      act(() => fireEvent.keyDown(option))
+      await act(() => fireEvent.keyDown(option))
 
       expect(onSelected).not.toHaveBeenCalled()
     })

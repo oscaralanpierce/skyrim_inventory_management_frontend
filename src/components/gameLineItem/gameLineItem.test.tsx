@@ -1,4 +1,4 @@
-import { describe, test, expect, vitest, beforeEach } from 'vitest'
+import { describe, test, expect, vitest } from 'vitest'
 import { act } from '@testing-library/react'
 import { renderAuthenticated } from '../../support/testUtils'
 import { gamesContextValue } from '../../support/data/contextValues'

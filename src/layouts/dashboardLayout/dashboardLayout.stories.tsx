@@ -8,7 +8,7 @@ import {
 } from '../../support/data/contextValues'
 import { LoginContext } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { GamesContext, type GamesContextType } from '../../contexts/gamesContext'
 import DashboardLayout from './dashboardLayout'
 
 type LayoutStory = StoryObj<typeof DashboardLayout>
@@ -21,7 +21,7 @@ const meta: Meta<typeof DashboardLayout> = {
       <BrowserRouter>
         <LoginContext.Provider value={loginContextValue}>
           <PageProvider>
-            <GamesContext.Provider value={parameters.gamesContextValue}>
+            <GamesContext.Provider value={parameters['gamesContextValue'] as GamesContextType}>
               <Story />
             </GamesContext.Provider>
           </PageProvider>

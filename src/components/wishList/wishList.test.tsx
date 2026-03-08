@@ -215,7 +215,7 @@ describe('WishList', () => {
         listContextValue = wishListsContextValue
       })
 
-      test("calls the context's destroyWishList function with its listId", () => {
+      test("calls the context's destroyWishList function with its listId", async () => {
         const destroyWishList = vitest.fn()
         listContextValue = { ...wishListsContextValue, destroyWishList }
 
@@ -227,7 +227,7 @@ describe('WishList', () => {
 
         const destroyIcon = wrapper.getByTestId('destroyWishList4')
 
-        act(() => fireEvent.click(destroyIcon))
+        await act(() => fireEvent.click(destroyIcon))
 
         expect(window.confirm).toHaveBeenCalledWith(
           'Are you sure you want to delete the list "My Wish List"? You will also lose any list items on the list. This action cannot be undone.'
@@ -241,7 +241,7 @@ describe('WishList', () => {
         listContextValue = wishListsContextValue
       })
 
-      test("doesn't call the destroyWishList function", () => {
+      test("doesn't call the destroyWishList function", async () => {
         const destroyWishList = vitest.fn()
         listContextValue = { ...wishListsContextValue, destroyWishList }
 
@@ -253,7 +253,7 @@ describe('WishList', () => {
 
         const destroyIcon = wrapper.getByTestId('destroyWishList4')
 
-        act(() => fireEvent.click(destroyIcon))
+        await act(() => fireEvent.click(destroyIcon))
 
         expect(window.confirm).toHaveBeenCalledWith(
           'Are you sure you want to delete the list "My Wish List"? You will also lose any list items on the list. This action cannot be undone.'

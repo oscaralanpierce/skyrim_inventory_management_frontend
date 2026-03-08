@@ -88,7 +88,7 @@ export const incrementWishListItemSuccess = http.patch(
 
 export const decrementWishListItemSuccess = http.patch(
   `${BASE_URI}/wish_list_items/:id`,
-  ({ request, params }) => {
+  ({ params }) => {
     const itemId: number = Number(params.id)
     const item = allWishListItems.find(({ id }) => id === itemId)
     const list = allWishLists.find(({ id }) => id === item?.list_id)
@@ -180,7 +180,7 @@ export const updateWishListItemServerError = http.patch(
 //       does not match the complexity of back-end behaviour.
 export const deleteWishListItemSuccess = http.delete(
   `${BASE_URI}/wish_list_items/:id`,
-  ({ request, params }) => {
+  ({ params }) => {
     const itemId = Number(params.id)
     const item = allWishListItems.find(({ id }) => id === itemId)
 

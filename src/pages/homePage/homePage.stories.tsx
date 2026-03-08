@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { BrowserRouter } from 'react-router-dom'
-import { LoginContext } from '../../contexts/loginContext'
+import { LoginContext, type LoginContextType } from '../../contexts/loginContext'
 import {
   loadingLoginContextValue,
   unauthenticatedLoginContextValue,
@@ -15,7 +15,7 @@ const meta: Meta<typeof HomePage> = {
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
-        <LoginContext.Provider value={parameters.loginContextValue}>
+        <LoginContext.Provider value={parameters['loginContextValue'] as LoginContextType}>
           <Story />
         </LoginContext.Provider>
       </BrowserRouter>

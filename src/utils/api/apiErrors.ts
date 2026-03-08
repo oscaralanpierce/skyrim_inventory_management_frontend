@@ -1,11 +1,12 @@
 import { type ApiError } from '../../types/errors'
 
-export class AuthorizationError implements ApiError {
+export class AuthorizationError extends Error implements ApiError {
   readonly code: 401
-  readonly message: string
-  readonly name: 'AuthorizationError'
+  override readonly message: string
+  override readonly name: 'AuthorizationError'
 
   constructor(message: string = '401 Unauthorized') {
+    super(message)
     this.code = 401
     this.name = 'AuthorizationError'
     this.message = message
@@ -14,12 +15,13 @@ export class AuthorizationError implements ApiError {
   }
 }
 
-export class NotFoundError implements ApiError {
+export class NotFoundError extends Error implements ApiError {
   readonly code: 404
-  readonly message: string
-  readonly name: 'NotFoundError'
+  override readonly message: string
+  override readonly name: 'NotFoundError'
 
   constructor(message: string = '404 Not Found') {
+    super(message)
     this.code = 404
     this.name = 'NotFoundError'
     this.message = message
@@ -28,12 +30,13 @@ export class NotFoundError implements ApiError {
   }
 }
 
-export class MethodNotAllowedError implements ApiError {
+export class MethodNotAllowedError extends Error implements ApiError {
   readonly code: 405
-  readonly message: string
-  readonly name: 'MethodNotAllowedError'
+  override readonly message: string
+  override readonly name: 'MethodNotAllowedError'
 
   constructor(message: string = '405 Method Not Allowed') {
+    super(message)
     this.code = 405
     this.name = 'MethodNotAllowedError'
     this.message = message
@@ -42,12 +45,13 @@ export class MethodNotAllowedError implements ApiError {
   }
 }
 
-export class UnprocessableEntityError implements ApiError {
+export class UnprocessableEntityError extends Error implements ApiError {
   readonly code: 422
-  readonly message: string | string[]
-  readonly name: 'UnprocessableEntityError'
+  override readonly message: string | string[]
+  override readonly name: 'UnprocessableEntityError'
 
   constructor(message: string | string[] = '422 Unprocessable Entity') {
+    super(Array.isArray(message) ? message.join(', ') : message)
     this.code = 422
     this.name = 'UnprocessableEntityError'
     this.message = message
@@ -56,12 +60,13 @@ export class UnprocessableEntityError implements ApiError {
   }
 }
 
-export class InternalServerError implements ApiError {
+export class InternalServerError extends Error implements ApiError {
   readonly code: 500
-  readonly message: string
-  readonly name: 'InternalServerError'
+  override readonly message: string
+  override readonly name: 'InternalServerError'
 
   constructor(message: string = '500 Internal Server Error') {
+    super(message)
     this.code = 500
     this.name = 'InternalServerError'
     this.message = message

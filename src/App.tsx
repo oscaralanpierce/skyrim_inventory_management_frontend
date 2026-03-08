@@ -3,7 +3,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import PageRoutes from './routing/pageRoutes'
 
 const App = () => (
-  <Router basename={import.meta.env.PUBLIC_URL}>
+  <Router basename={import.meta.env.PUBLIC_URL as string}>
     <HelmetProvider>
       <PageRoutes />
     </HelmetProvider>

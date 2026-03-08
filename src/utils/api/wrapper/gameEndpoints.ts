@@ -1,4 +1,8 @@
-import { type RequestGame } from '../../../types/apiData'
+import {
+  type RequestGame,
+  type ResponseGame,
+  type ErrorObject,
+} from '../../../types/apiData'
 import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
   type PostGamesResponse,
@@ -39,13 +43,15 @@ export const postGames = (
 
     if (response.status === 401) throw new AuthorizationError()
 
-    return response.json().then((json) => {
+    return response.json().then((json: ResponseGame | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 500)
-        throw new InternalServerError(json.errors.join(', '))
+        throw new InternalServerError(
+          (json as ErrorObject).errors.join(', ')
+        )
       if (returnValue.status === 422)
-        throw new UnprocessableEntityError(json.errors)
+        throw new UnprocessableEntityError((json as ErrorObject).errors)
 
       return returnValue
     })
@@ -69,11 +75,13 @@ export const getGames = (
 
     if (response.status === 401) throw new AuthorizationError()
 
-    return response.json().then((json) => {
+    return response.json().then((json: ResponseGame[] | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 500)
-        throw new InternalServerError(json.errors.join(', '))
+        throw new InternalServerError(
+          (json as ErrorObject).errors.join(', ')
+        )
 
       return returnValue
     })
@@ -104,13 +112,15 @@ export const patchGame = (
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
 
-    return response.json().then((json) => {
+    return response.json().then((json: ResponseGame | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 500)
-        throw new InternalServerError(json.errors.join(', '))
+        throw new InternalServerError(
+          (json as ErrorObject).errors.join(', ')
+        )
       if (returnValue.status === 422)
-        throw new UnprocessableEntityError(json.errors)
+        throw new UnprocessableEntityError((json as ErrorObject).errors)
 
       return returnValue
     })
@@ -137,7 +147,7 @@ export const deleteGame = (
     if (response.status === 404) throw new NotFoundError()
     if (response.status === 204) return { status: response.status }
 
-    return res.json().then((json) => {
+    return res.json().then((json: ErrorObject) => {
       throw new InternalServerError(json.errors.join(', '))
     })
   })
