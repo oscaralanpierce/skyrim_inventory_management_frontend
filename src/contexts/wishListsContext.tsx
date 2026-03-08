@@ -458,7 +458,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             if (status === 200 || status === 201) {
               const newWishLists = [...wishLists]
 
-              for (let list of json) {
+              for (const list of json) {
                 const index = newWishLists.findIndex(
                   ({ id }) => id === list.id
                 )
@@ -544,7 +544,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             if (status === 200) {
               const newWishLists = [...wishLists]
 
-              for (let item of json) {
+              for (const item of json) {
                 const list = newWishLists.find(
                   ({ id }) => id === item.list_id
                 )
