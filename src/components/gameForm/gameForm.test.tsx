@@ -77,7 +77,7 @@ describe('GameForm', () => {
   })
 
   describe('submitting the form', () => {
-    test('calls the submit function with the given attributes', () => {
+    test('calls the submit function with the given attributes', async () => {
       const submit = vitest.fn()
 
       const wrapper = render(
@@ -91,7 +91,7 @@ describe('GameForm', () => {
       fireEvent.change(nameField, { target: { value: 'Game Name' } })
       fireEvent.change(descField, { target: { value: 'New game description' } })
 
-      act(() => fireEvent.submit(form))
+      await act(() => fireEvent.submit(form))
 
       expect(submit).toHaveBeenCalledWith({
         name: 'Game Name',
@@ -99,7 +99,7 @@ describe('GameForm', () => {
       })
     })
 
-    test('trims strings', () => {
+    test('trims strings', async () => {
       const submit = vitest.fn()
 
       const wrapper = render(
@@ -115,7 +115,7 @@ describe('GameForm', () => {
         target: { value: ' New game description   ' },
       })
 
-      act(() => fireEvent.submit(form))
+      await act(() => fireEvent.submit(form))
 
       expect(submit).toHaveBeenCalledWith({
         name: 'Game Name',

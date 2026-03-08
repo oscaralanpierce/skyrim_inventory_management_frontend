@@ -113,7 +113,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
                 message: 'Success! Your game has been created.',
               })
               removeApiCall('games', 'post')
-              onSuccess && onSuccess(json)
+              if (onSuccess) onSuccess(json)
             }
           })
           .catch((e: ApiError) => {
@@ -133,7 +133,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
 
             removeApiCall('games', 'post')
             handleApiError(e)
-            onError && onError()
+            if (onError) onError()
           })
       }
     },
@@ -160,7 +160,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       .catch((e: ApiError) => {
         if (e.code === 401 && retries > 0) {
           return withTokenRefresh((newToken) => {
-            setGamesFromApi(newToken, retries - 1)
+            void setGamesFromApi(newToken, retries - 1)
           })
         } else {
           removeApiCall('games', 'get')
@@ -217,7 +217,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
                 type: 'success',
                 message: 'Success! Your game has been updated.',
               })
-              onSuccess && onSuccess()
+              if (onSuccess) onSuccess()
             }
           })
           .catch((e: ApiError) => {
@@ -239,7 +239,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
             removeApiCall('games', 'patch')
             handleApiError(e)
 
-            onError && onError()
+            if (onError) onError()
           })
       }
     },
@@ -276,7 +276,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
                 message: 'Success! Your game has been deleted.',
               })
 
-              onSuccess && onSuccess()
+              if (onSuccess) onSuccess()
             }
           })
           .catch((e: ApiError) => {
@@ -297,7 +297,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
             removeApiCall('games', 'delete')
             handleApiError(e)
 
-            onError && onError()
+            if (onError) onError()
           })
       }
     },

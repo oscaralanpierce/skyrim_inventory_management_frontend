@@ -182,7 +182,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: 'Success! Your wish list has been created.',
               })
 
-              onSuccess && onSuccess()
+              if (onSuccess) onSuccess()
             }
           })
           .catch((e: ApiError) => {
@@ -210,7 +210,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             }
 
             removeApiCall('wishLists', 'post')
-            onError && onError()
+            if (onError) onError()
           })
       }
     },
@@ -298,7 +298,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
 
               setWishLists(newWishLists)
               removeApiCall('wishLists', 'patch')
-              onSuccess && onSuccess()
+              if (onSuccess) onSuccess()
             } else {
               // This won't happen but TypeScript doesn't know that
               removeApiCall('wishLists', 'patch')
@@ -309,7 +309,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: UNEXPECTED_ERROR_MESSAGE,
               })
 
-              onError && onError()
+              if (onError) onError()
             }
           })
           .catch((e: ApiError) => {
@@ -338,7 +338,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             }
 
             removeApiCall('wishLists', 'patch')
-            onError && onError()
+            if (onError) onError()
           })
       }
     },
@@ -377,7 +377,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: UNEXPECTED_ERROR_MESSAGE,
               })
 
-              onError && onError()
+              if (onError) onError()
             } else {
               const newWishLists = wishLists
 
@@ -399,7 +399,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: 'Success! Your wish list has been deleted.',
               })
 
-              onSuccess && onSuccess()
+              if (onSuccess) onSuccess()
             }
           })
           .catch((e: ApiError) => {
@@ -427,7 +427,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             }
 
             removeApiCall('wishLists', 'delete')
-            onError && onError()
+            if (onError) onError()
           })
       }
     },
@@ -473,7 +473,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: 'Success! Your wish list item has been created.',
               })
 
-              onSuccess && onSuccess()
+              if (onSuccess) onSuccess()
             } else {
               setFlashProps({
                 hidden: false,
@@ -481,7 +481,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: UNEXPECTED_ERROR_MESSAGE,
               })
 
-              onError && onError()
+              if (onError) onError()
             }
 
             removeApiCall('wishListItems', 'post')
@@ -512,7 +512,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             }
 
             removeApiCall('wishListItems', 'post')
-            onError && onError()
+            if (onError) onError()
           })
       }
     },
@@ -557,7 +557,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
               }
 
               setWishLists(newWishLists)
-              onSuccess && onSuccess()
+              if (onSuccess) onSuccess()
             } else {
               setFlashProps({
                 hidden: false,
@@ -565,7 +565,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: UNEXPECTED_ERROR_MESSAGE,
               })
 
-              onError && onError()
+              if (onError) onError()
             }
 
             removeApiCall('wishListItems', 'patch')
@@ -596,7 +596,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             }
 
             removeApiCall('wishListItems', 'patch')
-            onError && onError()
+            if (onError) onError()
           })
       }
     },
@@ -643,7 +643,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: 'Success! Your wish list item has been deleted.',
               })
 
-              onSuccess && onSuccess()
+              if (onSuccess) onSuccess()
             } else {
               removeApiCall('wishListItems', 'delete')
 
@@ -653,7 +653,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 message: UNEXPECTED_ERROR_MESSAGE,
               })
 
-              onError && onError()
+              if (onError) onError()
             }
           })
           .catch((e: ApiError) => {
@@ -681,7 +681,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             }
 
             removeApiCall('wishListItems', 'delete')
-            onError && onError()
+            if (onError) onError()
           })
       }
     },

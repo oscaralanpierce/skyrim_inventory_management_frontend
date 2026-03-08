@@ -5,7 +5,7 @@ import {
   wishListsContextValue,
 } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { GamesContext, type GamesContextType } from '../../contexts/gamesContext'
 import { WishListsContext } from '../../contexts/wishListsContext'
 import WishListCreateForm from './wishListCreateForm'
 
@@ -17,7 +17,7 @@ const meta: Meta<typeof WishListCreateForm> = {
   decorators: [
     (Story, { parameters }) => (
       <PageProvider>
-        <GamesContext.Provider value={parameters.gamesContextValue}>
+        <GamesContext.Provider value={parameters['gamesContextValue'] as GamesContextType}>
           <WishListsContext.Provider value={wishListsContextValue}>
             <Story />
           </WishListsContext.Provider>

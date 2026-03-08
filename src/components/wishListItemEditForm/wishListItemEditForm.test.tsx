@@ -75,7 +75,7 @@ describe('WishListItemEditForm', () => {
     })
 
     describe('with valid attributes', () => {
-      test('updates the wish list item', () => {
+      test('updates the wish list item', async () => {
         const updateWishListItem = vitest.fn()
         contextValue = { ...wishListsContextValue, updateWishListItem }
 
@@ -100,7 +100,7 @@ describe('WishListItemEditForm', () => {
         fireEvent.change(weightInput, { target: { value: '0.1' } })
         fireEvent.change(notesInput, { target: { value: '  New notes    ' } })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         expect(updateWishListItem).toHaveBeenCalledWith(
           6,
@@ -140,7 +140,7 @@ describe('WishListItemEditForm', () => {
     })
 
     describe('with identical attributes', () => {
-      test("doesn't update the item", () => {
+      test("doesn't update the item", async () => {
         const updateWishListItem = vitest.fn()
         contextValue = { ...wishListsContextValue, updateWishListItem }
 
@@ -159,7 +159,7 @@ describe('WishListItemEditForm', () => {
         const form = wrapper.getByTestId('editWishListItem6Form')
 
         // Submit the form without updating any fields
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         expect(updateWishListItem).not.toHaveBeenCalled()
       })

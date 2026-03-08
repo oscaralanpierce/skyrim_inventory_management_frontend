@@ -51,7 +51,7 @@ describe('WishListItemCreateForm', () => {
   })
 
   describe('submitting the form', () => {
-    test('submits the form when attributes are valid', () => {
+    test('submits the form when attributes are valid', async () => {
       const createWishListItem = vitest.fn()
 
       const wrapper = renderAuthenticated(
@@ -75,7 +75,7 @@ describe('WishListItemCreateForm', () => {
       fireEvent.change(descField, { target: { value: '  Iron ingot    ' } })
       fireEvent.change(quantityField, { target: { value: '2' } })
 
-      act(() => fireEvent.submit(form))
+      await act(() => fireEvent.submit(form))
 
       expect(createWishListItem).toHaveBeenCalledWith(
         4,

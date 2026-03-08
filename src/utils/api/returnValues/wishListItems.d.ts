@@ -16,7 +16,7 @@ class PostWishListItemsSuccessResponse extends ApiResponse {
   status: 200 | 201
 
   constructor(
-    body,
+    body: BodyInit | null | undefined,
     options: { status: 200 | 201; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -38,7 +38,7 @@ class PostWishListItemsErrorResponse extends ApiResponse {
   status: 405 | 422 | 500
 
   constructor(
-    body,
+    body: BodyInit | null | undefined,
     options: {
       status: 405 | 422 | 500
       statusText?: string
@@ -69,7 +69,7 @@ class PatchWishListItemSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
-    body,
+    body: BodyInit | null | undefined,
     options: { status: 200; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -91,7 +91,7 @@ class PatchWishListItemErrorResponse extends ApiResponse {
   status: 405 | 422 | 500
 
   constructor(
-    body,
+    body: BodyInit | null | undefined,
     options: {
       status: 405 | 422 | 500
       statusText?: string
@@ -122,7 +122,7 @@ class DeleteWishListItemSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
-    body,
+    body: BodyInit | null | undefined,
     options: { status: 200; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
@@ -144,7 +144,7 @@ class DeleteWishListItemErrorResponse extends ApiResponse {
   status: 405 | 500
 
   constructor(
-    body,
+    body: BodyInit | null | undefined,
     options: { status: 405 | 500; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)

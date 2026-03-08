@@ -242,7 +242,7 @@ describe('WishListItem', () => {
         window.confirm = ogConfirm
       })
 
-      test("calls the context's destroyWishListItem function with its itemId", () => {
+      test("calls the context's destroyWishListItem function with its itemId", async () => {
         const destroyWishListItem = vitest.fn()
         listsContextValue = {
           ...wishListsContextValue,
@@ -265,9 +265,9 @@ describe('WishListItem', () => {
 
         const destroyIcon = wrapper.getByTestId('destroyWishListItem33')
 
-        act(() => fireEvent.click(destroyIcon))
+        await act(() => fireEvent.click(destroyIcon))
 
-        expect(window.confirm).toHaveBeenCalled
+        expect(window.confirm).toHaveBeenCalled()
         expect(destroyWishListItem).toHaveBeenCalledWith(33)
       })
     })
@@ -280,7 +280,7 @@ describe('WishListItem', () => {
         window.confirm = ogConfirm
       })
 
-      test("doesn't call the destroyWishListItem function", () => {
+      test("doesn't call the destroyWishListItem function", async () => {
         const destroyWishListItem = vitest.fn()
         listsContextValue = {
           ...wishListsContextValue,
@@ -303,7 +303,7 @@ describe('WishListItem', () => {
 
         const destroyIcon = wrapper.getByTestId('destroyWishListItem33')
 
-        act(() => fireEvent.click(destroyIcon))
+        await act(() => fireEvent.click(destroyIcon))
 
         expect(window.confirm).toHaveBeenCalledOnce()
         expect(destroyWishListItem).not.toHaveBeenCalled()
@@ -353,7 +353,7 @@ describe('WishListItem', () => {
     })
 
     describe('when the quantity is greater than 1', () => {
-      test('decrements the quantity at the API', () => {
+      test('decrements the quantity at the API', async () => {
         const updateWishListItem = vitest.fn()
         listsContextValue = { ...listsContextValue, updateWishListItem }
 
@@ -371,7 +371,7 @@ describe('WishListItem', () => {
 
         const decrementIcon = wrapper.getByTestId('decrementWishListItem33')
 
-        act(() => fireEvent.click(decrementIcon))
+        await act(() => fireEvent.click(decrementIcon))
 
         expect(updateWishListItem).toHaveBeenCalledWith(
           33,
@@ -390,7 +390,7 @@ describe('WishListItem', () => {
         window.confirm = ogConfirm
       })
 
-      test('prompts the user to destroy the item', () => {
+      test('prompts the user to destroy the item', async () => {
         const wrapper = renderInContexts(
           <WishListItem
             itemId={33}
@@ -407,12 +407,12 @@ describe('WishListItem', () => {
 
         const decrementIcon = wrapper.getByTestId('decrementWishListItem33')
 
-        act(() => fireEvent.click(decrementIcon))
+        await act(() => fireEvent.click(decrementIcon))
 
         expect(window.confirm).toHaveBeenCalledOnce()
       })
 
-      test('destroys the item if the user confirms', () => {
+      test('destroys the item if the user confirms', async () => {
         const destroyWishListItem = vitest.fn()
         listsContextValue = {
           ...wishListsContextValue,
@@ -435,7 +435,7 @@ describe('WishListItem', () => {
 
         const decrementIcon = wrapper.getByTestId('decrementWishListItem33')
 
-        act(() => fireEvent.click(decrementIcon))
+        await act(() => fireEvent.click(decrementIcon))
 
         expect(window.confirm).toHaveBeenCalledOnce()
         expect(destroyWishListItem).toHaveBeenCalledWith(

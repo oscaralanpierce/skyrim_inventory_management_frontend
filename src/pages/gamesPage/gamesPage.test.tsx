@@ -297,7 +297,7 @@ describe('<GamesPage />', () => {
     })
 
     describe('when the user cancels deletion', () => {
-      test("doesn't destroy the game", async () => {
+      test("doesn't destroy the game", () => {
         const contextValue = {
           ...gamesContextValue,
           destroyGame: vitest.fn().mockImplementation((_gameId: number) => {}),

@@ -5,7 +5,7 @@ import {
   loginContextValue,
   loadingLoginContextValue,
 } from '../../support/data/contextValues'
-import { LoginContext } from '../../contexts/loginContext'
+import { LoginContext, type LoginContextType } from '../../contexts/loginContext'
 import UserInfo from './userInfo'
 
 type UserInfoStory = StoryObj<typeof UserInfo>
@@ -16,7 +16,7 @@ const meta: Meta<typeof UserInfo> = {
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
-        <LoginContext.Provider value={parameters.loginContextValue}>
+        <LoginContext.Provider value={parameters['loginContextValue'] as LoginContextType}>
           <div style={{ height: '64px', display: 'flex' }}>
             <Story />
           </div>

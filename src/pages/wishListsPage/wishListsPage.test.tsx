@@ -8,12 +8,7 @@ import {
   afterEach,
   vitest,
 } from 'vitest'
-import {
-  waitFor,
-  act,
-  fireEvent,
-  waitForElementToBeRemoved,
-} from '@testing-library/react'
+import { waitFor, act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
@@ -359,7 +354,7 @@ describe('WishListsPage', () => {
 
         const link = await wrapper.findByText('Create a game')
 
-        act(() => fireEvent.click(link))
+        await act(() => fireEvent.click(link))
 
         expect(wrapper.getByTestId('gameForm')).toBeTruthy()
         expect(wrapper.getAllByText('Create Game').length).toBeTruthy()
@@ -379,7 +374,7 @@ describe('WishListsPage', () => {
 
         const link = await wrapper.findByText('Create a game')
 
-        act(() => fireEvent.click(link))
+        await act(() => fireEvent.click(link))
 
         const form = wrapper.getByTestId('gameForm')
         const nameInput = wrapper.getByLabelText('Name')
@@ -388,7 +383,7 @@ describe('WishListsPage', () => {
           target: { value: 'New Name for a New Game' },
         })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(wrapper.queryByTestId('gameForm')).toBeFalsy()
@@ -435,7 +430,7 @@ describe('WishListsPage', () => {
 
         const link = await wrapper.findByText('Create a game')
 
-        act(() => fireEvent.click(link))
+        await act(() => fireEvent.click(link))
 
         const form = wrapper.getByTestId('gameForm')
         const nameInput = wrapper.getByLabelText('Name')
@@ -444,7 +439,7 @@ describe('WishListsPage', () => {
           target: { value: 'New Name for a New Game' },
         })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(wrapper.getByTestId('gameForm')).toBeTruthy()
@@ -478,7 +473,7 @@ describe('WishListsPage', () => {
 
         const link = await wrapper.findByText('Create a game')
 
-        act(() => fireEvent.click(link))
+        await act(() => fireEvent.click(link))
 
         const form = wrapper.getByTestId('gameForm')
         const nameInput = wrapper.getByLabelText('Name')
@@ -487,7 +482,7 @@ describe('WishListsPage', () => {
           target: { value: 'New Name for a New Game' },
         })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(wrapper.getByTestId('gameForm')).toBeTruthy()
@@ -567,7 +562,7 @@ describe('WishListsPage', () => {
             fireEvent.change(input, { target: { value: 'Smithing Materials' } })
           })
 
-          act(() => fireEvent.click(button))
+          await act(() => fireEvent.click(button))
 
           await waitFor(() => {
             expect(
@@ -597,7 +592,7 @@ describe('WishListsPage', () => {
             fireEvent.change(input, { target: { value: 'Smithing Materials' } })
           })
 
-          act(() => fireEvent.click(button))
+          await act(() => fireEvent.click(button))
 
           await waitFor(() => {
             expect(
@@ -631,7 +626,7 @@ describe('WishListsPage', () => {
             fireEvent.change(input, { target: { value: 'Smithing Materials' } })
           })
 
-          act(() => fireEvent.click(button))
+          await act(() => fireEvent.click(button))
 
           await waitFor(() => {
             expect(
@@ -678,7 +673,7 @@ describe('WishListsPage', () => {
           fireEvent.change(input, { target: { value: 'Smithing Materials' } })
         })
 
-        act(() => fireEvent.click(button))
+        await act(() => fireEvent.click(button))
 
         await waitFor(() => {
           expect(
@@ -730,7 +725,7 @@ describe('WishListsPage', () => {
           fireEvent.change(input, { target: { value: 'Smithing Materials' } })
         })
 
-        act(() => fireEvent.click(button))
+        await act(() => fireEvent.click(button))
 
         await waitFor(() => {
           expect(
@@ -936,7 +931,7 @@ describe('WishListsPage', () => {
 
           const destroyIcon = await wrapper.findByTestId('destroyWishList2')
 
-          act(() => fireEvent.click(destroyIcon))
+          await act(() => fireEvent.click(destroyIcon))
 
           expect(window.confirm).toHaveBeenCalled()
 
@@ -961,7 +956,7 @@ describe('WishListsPage', () => {
 
           const destroyIcon = await wrapper.findByTestId('destroyWishList2')
 
-          act(() => fireEvent.click(destroyIcon))
+          await act(() => fireEvent.click(destroyIcon))
 
           expect(window.confirm).toHaveBeenCalled()
 
@@ -1007,7 +1002,7 @@ describe('WishListsPage', () => {
 
         const destroyIcon = await wrapper.findByTestId('destroyWishList2')
 
-        act(() => fireEvent.click(destroyIcon))
+        await act(() => fireEvent.click(destroyIcon))
 
         expect(window.confirm).toHaveBeenCalledWith(
           'Are you sure you want to delete the list "My Wish List 1"? You will also lose any list items on the list. This action cannot be undone.'
@@ -1052,7 +1047,7 @@ describe('WishListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editWishList6')
 
-        act(() => fireEvent.click(editIcon))
+        await act(() => fireEvent.click(editIcon))
 
         const titleInput = wrapper.getByTestId('editListTitle')
         const editForm = wrapper.getByLabelText('List title edit form')
@@ -1061,7 +1056,7 @@ describe('WishListsPage', () => {
           target: { value: ' Alchemy Ingredients  ' },
         })
 
-        act(() => fireEvent.submit(editForm))
+        await act(() => fireEvent.submit(editForm))
 
         await waitFor(() => {
           // Name should be changed and form hidden
@@ -1102,7 +1097,7 @@ describe('WishListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editWishList6')
 
-        act(() => fireEvent.click(editIcon))
+        await act(() => fireEvent.click(editIcon))
 
         const titleInput = wrapper.getByTestId('editListTitle')
         const editForm = wrapper.getByLabelText('List title edit form')
@@ -1111,7 +1106,7 @@ describe('WishListsPage', () => {
           target: { value: 'Alchemy Ingredients' },
         })
 
-        act(() => fireEvent.submit(editForm))
+        await act(() => fireEvent.submit(editForm))
 
         await waitFor(() => {
           // The form should not be hidden nor the name changed
@@ -1162,7 +1157,7 @@ describe('WishListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editWishList6')
 
-        act(() => fireEvent.click(editIcon))
+        await act(() => fireEvent.click(editIcon))
 
         const titleInput = wrapper.getByTestId('editListTitle')
         const editForm = wrapper.getByLabelText('List title edit form')
@@ -1171,7 +1166,7 @@ describe('WishListsPage', () => {
           target: { value: 'Alchemy Ingredients' },
         })
 
-        act(() => fireEvent.submit(editForm))
+        await act(() => fireEvent.submit(editForm))
 
         await waitFor(() => {
           // The form should not be hidden nor the name changed
@@ -1223,7 +1218,7 @@ describe('WishListsPage', () => {
         })
         fireEvent.change(quantityField, { target: { value: '3' } })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(wrapper.getAllByText('Dwarven metal ingots').length).toEqual(2)
@@ -1268,7 +1263,7 @@ describe('WishListsPage', () => {
         })
         fireEvent.change(quantityField, { target: { value: '3' } })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(
@@ -1289,7 +1284,7 @@ describe('WishListsPage', () => {
       })
     })
 
-    describe('when there is an internal server error', async () => {
+    describe('when there is an internal server error', () => {
       const mockServer = setupServer(
         getWishListsSuccess,
         postWishListItemsServerError
@@ -1321,7 +1316,7 @@ describe('WishListsPage', () => {
         })
         fireEvent.change(quantityField, { target: { value: '3' } })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(
@@ -1368,7 +1363,7 @@ describe('WishListsPage', () => {
           'destroyWishListItem3'
         )
 
-        act(() => fireEvent.click(destroyIcon))
+        await act(() => fireEvent.click(destroyIcon))
 
         await waitFor(() => {
           expect(window.confirm).toHaveBeenCalled()
@@ -1415,7 +1410,7 @@ describe('WishListsPage', () => {
           'destroyWishListItem3'
         )
 
-        act(() => fireEvent.click(destroyIcon))
+        await act(() => fireEvent.click(destroyIcon))
 
         await waitFor(() => {
           expect(window.confirm).toHaveBeenCalled()
@@ -1436,7 +1431,7 @@ describe('WishListsPage', () => {
       })
     })
 
-    describe('when there is an internal server error', async () => {
+    describe('when there is an internal server error', () => {
       const ogConfirm = window.confirm
       const mockServer = setupServer(
         getWishListsSuccess,
@@ -1469,7 +1464,7 @@ describe('WishListsPage', () => {
           'destroyWishListItem3'
         )
 
-        act(() => fireEvent.click(destroyIcon))
+        await act(() => fireEvent.click(destroyIcon))
 
         await waitFor(() => {
           expect(wrapper.getAllByText('Necklace').length).toEqual(2)
@@ -1509,7 +1504,7 @@ describe('WishListsPage', () => {
           'incrementWishListItem3'
         )
 
-        act(() => fireEvent.click(incrementIcon))
+        await act(() => fireEvent.click(incrementIcon))
 
         await waitFor(() => {
           expect(wrapper.getAllByText('2').length).toEqual(2)
@@ -1542,7 +1537,7 @@ describe('WishListsPage', () => {
           'incrementWishListItem3'
         )
 
-        act(() => fireEvent.click(incrementIcon))
+        await act(() => fireEvent.click(incrementIcon))
 
         await waitFor(() => {
           expect(wrapper.queryAllByText('2').length).toBeFalsy()
@@ -1583,7 +1578,7 @@ describe('WishListsPage', () => {
             'decrementWishListItem1'
           )
 
-          act(() => fireEvent.click(decrementIcon))
+          await act(() => fireEvent.click(decrementIcon))
 
           await waitFor(() => {
             expect(wrapper.getAllByText('2').length).toEqual(2)
@@ -1624,7 +1619,7 @@ describe('WishListsPage', () => {
               'decrementWishListItem3'
             )
 
-            act(() => fireEvent.click(decrementIcon))
+            await act(() => fireEvent.click(decrementIcon))
 
             await waitFor(() => {
               expect(window.confirm).toHaveBeenCalled()
@@ -1667,7 +1662,7 @@ describe('WishListsPage', () => {
               'decrementWishListItem3'
             )
 
-            act(() => fireEvent.click(decrementIcon))
+            await act(() => fireEvent.click(decrementIcon))
 
             await waitFor(() => {
               expect(window.confirm).toHaveBeenCalled()
@@ -1708,7 +1703,7 @@ describe('WishListsPage', () => {
           'decrementWishListItem1'
         )
 
-        act(() => fireEvent.click(decrementIcon))
+        await act(() => fireEvent.click(decrementIcon))
 
         await waitFor(() => {
           expect(wrapper.queryAllByText('2').length).toBeFalsy()
@@ -1746,7 +1741,7 @@ describe('WishListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editWishListItem3')
 
-        act(() => fireEvent.click(editIcon))
+        await act(() => fireEvent.click(editIcon))
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
@@ -1754,15 +1749,15 @@ describe('WishListsPage', () => {
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
-        await waitForElementToBeRemoved(form)
-
-        expect(
-          wrapper.getByText(
-            'Success! Your wish list item has been updated.'
-          )
-        ).toBeTruthy()
+        await waitFor(() => {
+          expect(
+            wrapper.getByText(
+              'Success! Your wish list item has been updated.'
+            )
+          ).toBeTruthy()
+        })
         expect(wrapper.getByText('Hello world')).toBeTruthy()
         expect(wrapper.queryByText(/hinges/)).toBeFalsy()
       })
@@ -1791,7 +1786,7 @@ describe('WishListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editWishListItem3')
 
-        act(() => fireEvent.click(editIcon))
+        await act(() => fireEvent.click(editIcon))
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
@@ -1799,7 +1794,7 @@ describe('WishListsPage', () => {
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(
@@ -1843,7 +1838,7 @@ describe('WishListsPage', () => {
 
         const editIcon = await wrapper.findByTestId('editWishListItem3')
 
-        act(() => fireEvent.click(editIcon))
+        await act(() => fireEvent.click(editIcon))
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
@@ -1851,7 +1846,7 @@ describe('WishListsPage', () => {
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 
-        act(() => fireEvent.submit(form))
+        await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
           expect(
