@@ -53,7 +53,7 @@ export const postGames = (
       if (returnValue.status === 422)
         throw new UnprocessableEntityError((json as ErrorObject).errors)
 
-      return returnValue
+      return returnValue as PostGamesReturnValue
     })
   })
 }
@@ -83,7 +83,7 @@ export const getGames = (
           (json as ErrorObject).errors.join(', ')
         )
 
-      return returnValue
+      return returnValue as GetGamesReturnValue
     })
   })
 }
@@ -122,7 +122,7 @@ export const patchGame = (
       if (returnValue.status === 422)
         throw new UnprocessableEntityError((json as ErrorObject).errors)
 
-      return returnValue
+      return returnValue as PatchGameReturnValue
     })
   })
 }

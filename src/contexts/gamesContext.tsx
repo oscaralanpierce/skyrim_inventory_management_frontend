@@ -67,12 +67,12 @@ export const GamesProvider = ({ children }: ProviderProps) => {
 
     if (e.code === 401) signOut()
 
-    if (Array.isArray(e.message)) {
+    if (Array.isArray(e.errors)) {
       setFlashProps({
         hidden: false,
         type: 'error',
-        header: `${e.message.length} error(s) prevented your game from being saved:`,
-        message: e.message,
+        header: `${e.errors.length} error(s) prevented your game from being saved:`,
+        message: e.errors,
       })
     } else {
       const message =

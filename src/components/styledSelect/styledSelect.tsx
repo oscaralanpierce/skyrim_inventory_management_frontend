@@ -73,7 +73,7 @@ const StyledSelect = ({
     setIsComponentVisible,
     componentRef,
     triggerRef,
-  } = useComponentVisible()
+  } = useComponentVisible<HTMLDivElement, HTMLDivElement>()
   const size = useSize(triggerRef)
   const inputRef = useRef<HTMLInputElement>(null)
 

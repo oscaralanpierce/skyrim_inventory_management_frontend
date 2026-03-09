@@ -115,10 +115,10 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
       setFlashProps({
         hidden: false,
         type: 'error',
-        header: `${e.message.length} error(s) prevented your wish ${
+        header: `${e.errors.length} error(s) prevented your wish ${
           resource || 'list'
         } from being saved:`,
-        message: e.message,
+        message: e.errors,
       })
     } else {
       const message =

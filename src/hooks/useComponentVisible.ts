@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from 'react'
 
-const useComponentVisible = () => {
+const useComponentVisible = <
+  C extends HTMLElement = HTMLElement,
+  T extends HTMLElement = HTMLElement,
+>() => {
   const [isComponentVisible, setIsComponentVisible] = useState(false)
-  const componentRef = useRef<HTMLElement>(null)
-  const triggerRef = useRef<HTMLElement>(null)
+  const componentRef = useRef<C>(null)
+  const triggerRef = useRef<T>(null)
 
   const componentRefContains = (element: Node) =>
     componentRef.current?.contains(element)
