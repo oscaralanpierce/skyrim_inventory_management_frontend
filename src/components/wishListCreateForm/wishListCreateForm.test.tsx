@@ -31,9 +31,9 @@ import WishListCreateForm from './wishListCreateForm'
 const renderWithContexts = (ui: ReactElement) => {
   return renderAuthenticated(
     <PageProvider>
-      <GamesContext.Provider value={gamesContextValue}>
+      <GamesContext value={gamesContextValue}>
         <WishListsProvider>{ui}</WishListsProvider>
-      </GamesContext.Provider>
+      </GamesContext>
     </PageProvider>
   )
 }
@@ -64,13 +64,13 @@ describe('WishListCreateForm', () => {
     test('is disabled when the wish lists are loading', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext
               value={wishListsContextValueLoading}
             >
               <WishListCreateForm />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -87,13 +87,13 @@ describe('WishListCreateForm', () => {
     test('is disabled when there is a wish list loading error', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext
               value={wishListsContextValueError}
             >
               <WishListCreateForm />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -110,11 +110,11 @@ describe('WishListCreateForm', () => {
     test('is disabled when games are loading', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValueLoading}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValueLoading}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListCreateForm />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -131,11 +131,11 @@ describe('WishListCreateForm', () => {
     test('is disabled when there is a game loading error', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValueError}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValueError}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListCreateForm />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -152,11 +152,11 @@ describe('WishListCreateForm', () => {
     test('is enabled when both games and wish lists have loaded', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListCreateForm />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -182,11 +182,11 @@ describe('WishListCreateForm', () => {
 
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
-              <WishListsContext.Provider value={contextValue}>
+            <GamesContext value={gamesContextValue}>
+              <WishListsContext value={contextValue}>
                 <WishListCreateForm />
-              </WishListsContext.Provider>
-            </GamesContext.Provider>
+              </WishListsContext>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -215,11 +215,11 @@ describe('WishListCreateForm', () => {
 
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
-              <WishListsContext.Provider value={contextValue}>
+            <GamesContext value={gamesContextValue}>
+              <WishListsContext value={contextValue}>
                 <WishListCreateForm />
-              </WishListsContext.Provider>
-            </GamesContext.Provider>
+              </WishListsContext>
+            </GamesContext>
           </PageProvider>
         )
 

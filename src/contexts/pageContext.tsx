@@ -85,7 +85,7 @@ const PageProvider = ({ children }: ProviderProps) => {
     }, 4000)
   }, [flashProps])
 
-  return <PageContext.Provider value={value}>{children}</PageContext.Provider>
+  return <PageContext value={value}>{children}</PageContext>
 }
 
 export { PageContext, PageProvider }

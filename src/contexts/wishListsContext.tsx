@@ -747,8 +747,8 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
   }, [requireLogin])
 
   return (
-    <WishListsContext.Provider value={value}>
+    <WishListsContext value={value}>
       {children}
-    </WishListsContext.Provider>
+    </WishListsContext>
   )
 }

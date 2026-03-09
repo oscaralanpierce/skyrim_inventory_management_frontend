@@ -1199,11 +1199,11 @@ describe('WishListsPage', () => {
       test('adds the new item to the list and aggregate list', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1244,11 +1244,11 @@ describe('WishListsPage', () => {
       test('displays a flash error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1297,11 +1297,11 @@ describe('WishListsPage', () => {
       test('displays a flash error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1349,11 +1349,11 @@ describe('WishListsPage', () => {
       test("doesn't remove the item", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1396,11 +1396,11 @@ describe('WishListsPage', () => {
       test('removes the item from the regular and aggregate list', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1450,11 +1450,11 @@ describe('WishListsPage', () => {
       test('displays a flash error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1492,11 +1492,11 @@ describe('WishListsPage', () => {
       test('increments quantity of affected items', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1525,11 +1525,11 @@ describe('WishListsPage', () => {
       test('displays a flash error', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1566,11 +1566,11 @@ describe('WishListsPage', () => {
         test('decrements quantity of affected items', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext.Provider value={gamesContextValue}>
+              <GamesContext value={gamesContextValue}>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesContext.Provider>
+              </GamesContext>
             </PageProvider>
           )
 
@@ -1606,11 +1606,11 @@ describe('WishListsPage', () => {
           test('deletes the item', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
-                <GamesContext.Provider value={gamesContextValue}>
+                <GamesContext value={gamesContextValue}>
                   <WishListsProvider>
                     <WishListsPage />
                   </WishListsProvider>
-                </GamesContext.Provider>
+                </GamesContext>
               </PageProvider>
             )
 
@@ -1649,11 +1649,11 @@ describe('WishListsPage', () => {
           test("doesn't delete the item", async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
-                <GamesContext.Provider value={gamesContextValue}>
+                <GamesContext value={gamesContextValue}>
                   <WishListsProvider>
                     <WishListsPage />
                   </WishListsProvider>
-                </GamesContext.Provider>
+                </GamesContext>
               </PageProvider>
             )
 
@@ -1691,11 +1691,11 @@ describe('WishListsPage', () => {
       test('displays a flash error', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1731,11 +1731,11 @@ describe('WishListsPage', () => {
       test('hides the form, shows the flash message and updates the items', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1776,11 +1776,11 @@ describe('WishListsPage', () => {
       test("shows the validation errors and doesn't hide the form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 
@@ -1828,11 +1828,11 @@ describe('WishListsPage', () => {
       test("shows an error message and doesn't hide the form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
+            <GamesContext value={gamesContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 

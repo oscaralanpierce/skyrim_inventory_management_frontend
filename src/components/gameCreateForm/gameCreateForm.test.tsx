@@ -12,9 +12,9 @@ describe('<GameCreateForm />', () => {
     test('displays the correct fields', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <GameCreateForm />
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -27,9 +27,9 @@ describe('<GameCreateForm />', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <GameCreateForm />
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -45,11 +45,11 @@ describe('<GameCreateForm />', () => {
 
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext.Provider
+              <GamesContext
                 value={{ ...gamesContextValue, createGame }}
               >
                 <GameCreateForm />
-              </GamesContext.Provider>
+              </GamesContext>
             </PageProvider>
           )
 
@@ -74,11 +74,11 @@ describe('<GameCreateForm />', () => {
 
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext.Provider
+              <GamesContext
                 value={{ ...gamesContextValue, createGame }}
               >
                 <GameCreateForm />
-              </GamesContext.Provider>
+              </GamesContext>
             </PageProvider>
           )
 
@@ -107,11 +107,11 @@ describe('<GameCreateForm />', () => {
 
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext.Provider
+              <GamesContext
                 value={{ ...gamesContextValue, createGame }}
               >
                 <GameCreateForm />
-              </GamesContext.Provider>
+              </GamesContext>
             </PageProvider>
           )
 
@@ -146,9 +146,9 @@ describe('<GameCreateForm />', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <GameCreateForm disabled />
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 

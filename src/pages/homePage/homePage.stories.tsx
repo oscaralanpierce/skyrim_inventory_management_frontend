@@ -15,9 +15,9 @@ const meta: Meta<typeof HomePage> = {
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
-        <LoginContext.Provider value={parameters['loginContextValue'] as LoginContextType}>
+        <LoginContext value={parameters['loginContextValue'] as LoginContextType}>
           <Story />
-        </LoginContext.Provider>
+        </LoginContext>
       </BrowserRouter>
     ),
   ],

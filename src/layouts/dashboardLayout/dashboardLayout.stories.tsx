@@ -19,13 +19,13 @@ const meta: Meta<typeof DashboardLayout> = {
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
-        <LoginContext.Provider value={loginContextValue}>
+        <LoginContext value={loginContextValue}>
           <PageProvider>
-            <GamesContext.Provider value={parameters['gamesContextValue'] as GamesContextType}>
+            <GamesContext value={parameters['gamesContextValue'] as GamesContextType}>
               <Story />
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
-        </LoginContext.Provider>
+        </LoginContext>
       </BrowserRouter>
     ),
   ],

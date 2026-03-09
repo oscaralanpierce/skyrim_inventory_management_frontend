@@ -19,10 +19,10 @@ const meta: Meta<typeof WishListItem> = {
   component: WishListItem,
   decorators: [
     (Story) => (
-      <LoginContext.Provider value={loginContextValue}>
+      <LoginContext value={loginContextValue}>
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <ColorProvider
                 colorScheme={
                   colorSchemes[Math.floor(Math.random() * colorSchemes.length)]
@@ -30,10 +30,10 @@ const meta: Meta<typeof WishListItem> = {
               >
                 <Story />
               </ColorProvider>
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
-      </LoginContext.Provider>
+      </LoginContext>
     ),
   ],
 }

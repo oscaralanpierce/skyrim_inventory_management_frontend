@@ -16,13 +16,13 @@ describe('WishListItemCreateForm', () => {
   test('displays correct fields', () => {
     const wrapper = renderAuthenticated(
       <PageProvider>
-        <GamesContext.Provider value={gamesContextValue}>
-          <WishListsContext.Provider value={wishListsContextValue}>
+        <GamesContext value={gamesContextValue}>
+          <WishListsContext value={wishListsContextValue}>
             <ColorProvider colorScheme={YELLOW}>
               <WishListItemCreateForm listId={4} />
             </ColorProvider>
-          </WishListsContext.Provider>
-        </GamesContext.Provider>
+          </WishListsContext>
+        </GamesContext>
       </PageProvider>
     )
 
@@ -37,13 +37,13 @@ describe('WishListItemCreateForm', () => {
   test('matches snapshot', () => {
     const wrapper = renderAuthenticated(
       <PageProvider>
-        <GamesContext.Provider value={gamesContextValue}>
-          <WishListsContext.Provider value={wishListsContextValue}>
+        <GamesContext value={gamesContextValue}>
+          <WishListsContext value={wishListsContextValue}>
             <ColorProvider colorScheme={YELLOW}>
               <WishListItemCreateForm listId={4} />
             </ColorProvider>
-          </WishListsContext.Provider>
-        </GamesContext.Provider>
+          </WishListsContext>
+        </GamesContext>
       </PageProvider>
     )
 
@@ -56,15 +56,15 @@ describe('WishListItemCreateForm', () => {
 
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext
               value={{ ...wishListsContextValue, createWishListItem }}
             >
               <ColorProvider colorScheme={YELLOW}>
                 <WishListItemCreateForm listId={4} />
               </ColorProvider>
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -93,15 +93,15 @@ describe('WishListItemCreateForm', () => {
 
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext
               value={{ ...wishListsContextValue, createWishListItem }}
             >
               <ColorProvider colorScheme={YELLOW}>
                 <WishListItemCreateForm listId={4} />
               </ColorProvider>
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 

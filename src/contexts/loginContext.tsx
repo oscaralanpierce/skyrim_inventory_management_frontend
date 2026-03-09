@@ -67,5 +67,5 @@ export const LoginProvider = ({ children }: ProviderProps) => {
     refreshToken()
   }, [user, authError])
 
-  return <LoginContext.Provider value={value}>{children}</LoginContext.Provider>
+  return <LoginContext value={value}>{children}</LoginContext>
 }

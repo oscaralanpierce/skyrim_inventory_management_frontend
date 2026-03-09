@@ -18,13 +18,13 @@ const meta: Meta<typeof WishListGrouping> = {
   decorators: [
     (Story, { parameters }) => (
       <PageProvider>
-        <GamesContext.Provider value={parameters['gamesContextValue'] as GamesContextType}>
-          <WishListsContext.Provider
+        <GamesContext value={parameters['gamesContextValue'] as GamesContextType}>
+          <WishListsContext
             value={parameters['wishListsContextValue'] as WishListsContextType}
           >
             <Story />
-          </WishListsContext.Provider>
-        </GamesContext.Provider>
+          </WishListsContext>
+        </GamesContext>
       </PageProvider>
     ),
   ],

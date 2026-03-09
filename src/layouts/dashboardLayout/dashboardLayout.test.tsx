@@ -17,9 +17,9 @@ describe('<DashboardLayout>', () => {
     test('renders the title and content', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <DashboardLayout title="Page Title">Hello World</DashboardLayout>
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -32,9 +32,9 @@ describe('<DashboardLayout>', () => {
     test('renders the DashboardHeader', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <DashboardLayout title="Page Title">Hello World</DashboardLayout>
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -49,9 +49,9 @@ describe('<DashboardLayout>', () => {
     test("doesn't display the StyledSelect", () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <DashboardLayout title="Page Title">Hello World</DashboardLayout>
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -61,9 +61,9 @@ describe('<DashboardLayout>', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <DashboardLayout title="Page Title">Hello World</DashboardLayout>
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -75,9 +75,9 @@ describe('<DashboardLayout>', () => {
     test('displays content but not an h2 or hr', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <DashboardLayout>Hello World</DashboardLayout>
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -93,9 +93,9 @@ describe('<DashboardLayout>', () => {
     test('renders the DashboardHeader', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <DashboardLayout>Hello World</DashboardLayout>
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -110,9 +110,9 @@ describe('<DashboardLayout>', () => {
     test("doesn't render the StyledSelect", () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <DashboardLayout>Hello World</DashboardLayout>
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -122,9 +122,9 @@ describe('<DashboardLayout>', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <DashboardLayout>Hello World</DashboardLayout>
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -261,11 +261,11 @@ describe('<DashboardLayout>', () => {
         test('matches snapshot', () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext.Provider value={gamesContextValue}>
+              <GamesContext value={gamesContextValue}>
                 <DashboardLayout includeGameSelector>
                   Hello World
                 </DashboardLayout>
-              </GamesContext.Provider>
+              </GamesContext>
             </PageProvider>,
             'http://localhost:5173/wish_lists?gameId=51'
           )
@@ -304,11 +304,11 @@ describe('<DashboardLayout>', () => {
         test('matches snapshot', () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext.Provider value={gamesContextValue}>
+              <GamesContext value={gamesContextValue}>
                 <DashboardLayout includeGameSelector>
                   Hello World
                 </DashboardLayout>
-              </GamesContext.Provider>
+              </GamesContext>
             </PageProvider>,
             'http://localhost:5173/wish_lists?gameId=67'
           )
