@@ -3075,3 +3075,2664 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
   "unmount": [Function],
 }
 `;
+
+exports[`WishListsPage > viewing wish lists > when the game is set in the query string > when the game has wish lists > matches snapshot 2`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="_root_78663b"
+      >
+        <section
+          class="_container_78663b"
+        >
+          <div
+            class="_titleContainer_78663b"
+          >
+            <h2
+              class="_title_78663b"
+            >
+              Your Wish Lists
+            </h2>
+            <div
+              class="_root_706192 _select_78663b"
+              data-testid="styledSelect"
+              style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
+            >
+              <div
+                aria-controls="selectListbox"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="selectListbox"
+                class="_header_706192"
+                role="combobox"
+              >
+                <input
+                  aria-label="Add or Select Option"
+                  class="_headerText_706192"
+                />
+                <button
+                  class="_trigger_706192"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-angle-down _fa_706192"
+                    data-icon="angle-down"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 384 512"
+                  >
+                    <path
+                      d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <ul
+                class="_dropdown_706192 _hidden_706192"
+                id="selectListbox"
+                role="listbox"
+              >
+                <li
+                  aria-selected="false"
+                  class="_root_6af4e6"
+                  data-option-value="32"
+                  role="option"
+                  tabindex="0"
+                />
+                <li
+                  aria-selected="false"
+                  class="_root_6af4e6"
+                  data-option-value="51"
+                  role="option"
+                  tabindex="0"
+                />
+                <li
+                  aria-selected="true"
+                  class="_root_6af4e6"
+                  data-option-value="77"
+                  role="option"
+                  tabindex="0"
+                />
+              </ul>
+            </div>
+          </div>
+          <hr
+            class="_hr_78663b"
+          />
+          <form
+            class="_root_f9e5f5"
+            style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
+          >
+            <fieldset
+              class="_fieldset_f9e5f5"
+            >
+              <input
+                aria-label="Title"
+                class="_input_f9e5f5"
+                name="title"
+                pattern="\\s*[A-Za-z0-9 \\-',]*\\s*"
+                placeholder="Title"
+                title="Title can only contain alphanumeric characters, spaces, commas, hyphens, and apostrophes"
+                type="text"
+              />
+              <button
+                class="_button_f9e5f5"
+                type="submit"
+              >
+                Create
+              </button>
+            </fieldset>
+          </form>
+          <div
+            class="_root_8bc9d7"
+          >
+            <div
+              class="_wishList_8bc9d7"
+            >
+              <div
+                class="_root_015e9f"
+                style="--scheme-color: #ffbf00; --border-color: #cc9800; --text-color-primary: #4c3900; --text-color-secondary: #4c3900; --hover-color: #e5ab00; --scheme-color-lighter: #ffcb32; --scheme-color-lightest: #fff2cc; --max-title-width: -32px;"
+              >
+                <div
+                  aria-controls="list3Details"
+                  aria-expanded="false"
+                  class="_trigger_015e9f"
+                  role="button"
+                >
+                  <h3
+                    class="_title_015e9f"
+                  >
+                    All Items
+                  </h3>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="list3Details"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <div
+                      class="_details_015e9f"
+                    >
+                      <div
+                        class="_root_8f9b4a"
+                        style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
+                      >
+                        <div
+                          aria-controls="wishListItem6Details"
+                          aria-expanded="false"
+                          class="_trigger_8f9b4a"
+                        >
+                          <span
+                            class="_descriptionContainer_8f9b4a"
+                          >
+                            <h3
+                              class="_description_8f9b4a"
+                            >
+                              Dwarven Cog
+                            </h3>
+                          </span>
+                          <span
+                            class="_quantity_8f9b4a"
+                          >
+                            <span
+                              class="_quantityContent_8f9b4a"
+                            >
+                              11
+                            </span>
+                          </span>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="rah-static rah-static--height-zero "
+                          id="wishListItem6Details"
+                          style="height: 0px; overflow: hidden;"
+                        >
+                          <div
+                            style="display: none;"
+                          >
+                            <div
+                              class="_details_8f9b4a"
+                            >
+                              <h4
+                                class="_label_8f9b4a"
+                              >
+                                Unit Weight:
+                              </h4>
+                              <p
+                                class="_value_8f9b4a"
+                              >
+                                10
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="_root_8f9b4a"
+                        style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
+                      >
+                        <div
+                          aria-controls="wishListItem9Details"
+                          aria-expanded="false"
+                          class="_trigger_8f9b4a"
+                        >
+                          <span
+                            class="_descriptionContainer_8f9b4a"
+                          >
+                            <h3
+                              class="_description_8f9b4a"
+                            >
+                              This item has a really really really really really long description for testing purposes
+                            </h3>
+                          </span>
+                          <span
+                            class="_quantity_8f9b4a"
+                          >
+                            <span
+                              class="_quantityContent_8f9b4a"
+                            >
+                              200000000000
+                            </span>
+                          </span>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="rah-static rah-static--height-zero "
+                          id="wishListItem9Details"
+                          style="height: 0px; overflow: hidden;"
+                        >
+                          <div
+                            style="display: none;"
+                          >
+                            <div
+                              class="_details_8f9b4a"
+                            >
+                              <h4
+                                class="_label_8f9b4a"
+                              >
+                                Unit Weight:
+                              </h4>
+                              <p
+                                class="_value_8f9b4a"
+                              >
+                                400000000000
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="_wishList_8bc9d7"
+            >
+              <div
+                class="_root_015e9f"
+                style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -16px;"
+              >
+                <div
+                  aria-controls="list4Details"
+                  aria-expanded="false"
+                  class="_trigger_015e9f"
+                  role="button"
+                >
+                  <span
+                    class="_icons_015e9f"
+                  >
+                    <button
+                      class="_icon_015e9f"
+                      data-testid="destroyWishList4"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-xmark _fa_015e9f"
+                        data-icon="xmark"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 384 512"
+                      >
+                        <path
+                          d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="_icon_015e9f"
+                      data-testid="editWishList4"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-pen-to-square _fa_015e9f"
+                        data-icon="pen-to-square"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </span>
+                  <h3
+                    class="_title_015e9f"
+                  >
+                    Honeyside
+                  </h3>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="list4Details"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <div
+                      class="_details_015e9f"
+                    >
+                      <div
+                        class="_root_1a276c _collapsed_1a276c"
+                        style="--base-color: #ec658b; --hover-color: #ea527d; --body-color: #fad8e2; --border-color: #b93258; --text-color-main: #fff; --text-color-secondary: #451221;"
+                      >
+                        <div
+                          class="_triggerContainer_1a276c"
+                        >
+                          <button
+                            aria-controls="addItemToWishList4"
+                            aria-expanded="false"
+                            class="_trigger_1a276c"
+                          >
+                            Add item to list...
+                          </button>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="rah-static rah-static--height-zero "
+                          id="addItemToWishList4"
+                          style="height: 0px; overflow: hidden;"
+                        >
+                          <div
+                            style="display: none;"
+                          >
+                            <form
+                              aria-label="Wish list item creation form"
+                              class="_form_1a276c"
+                            >
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Description
+                                <input
+                                  class="_input_1a276c"
+                                  name="description"
+                                  placeholder="Description"
+                                  required=""
+                                  type="text"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Quantity
+                                <input
+                                  class="_input_1a276c"
+                                  inputmode="numeric"
+                                  min="1"
+                                  name="quantity"
+                                  pattern="^[0-9]*$"
+                                  placeholder="Quantity"
+                                  required=""
+                                  step="1"
+                                  type="number"
+                                  value="1"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Unit Weight
+                                <input
+                                  class="_input_1a276c"
+                                  inputmode="decimal"
+                                  min="0"
+                                  name="unit_weight"
+                                  placeholder="Unit Weight"
+                                  step="0.1"
+                                  type="number"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Notes
+                                <input
+                                  class="_input_1a276c"
+                                  name="notes"
+                                  placeholder="Notes"
+                                  type="text"
+                                />
+                              </label>
+                              <button
+                                class="_submit_1a276c"
+                                type="submit"
+                              >
+                                Add to List
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="_root_8f9b4a"
+                        style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
+                      >
+                        <div
+                          aria-controls="wishListItem8Details"
+                          aria-expanded="false"
+                          class="_trigger_8f9b4a"
+                        >
+                          <span
+                            class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
+                          >
+                            <span
+                              class="_editIcons_8f9b4a"
+                            >
+                              <button
+                                class="_icon_8f9b4a"
+                                data-testid="destroyWishListItem8"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="svg-inline--fa fa-xmark _fa_8f9b4a"
+                                  data-icon="xmark"
+                                  data-prefix="fas"
+                                  role="img"
+                                  viewBox="0 0 384 512"
+                                >
+                                  <path
+                                    d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </button>
+                              <button
+                                class="_icon_8f9b4a"
+                                data-testid="editWishListItem8"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
+                                  data-icon="pen-to-square"
+                                  data-prefix="fas"
+                                  role="img"
+                                  viewBox="0 0 512 512"
+                                >
+                                  <path
+                                    d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </button>
+                            </span>
+                            <h3
+                              class="_description_8f9b4a"
+                            >
+                              This item has a really really really really really long description for testing purposes
+                            </h3>
+                          </span>
+                          <span
+                            class="_quantityEditable_8f9b4a"
+                          >
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="incrementWishListItem8"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
+                                data-icon="chevron-up"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 448 512"
+                              >
+                                <path
+                                  d="M201.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 173.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                            <span
+                              class="_quantityContent_8f9b4a"
+                            >
+                              200000000000
+                            </span>
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="decrementWishListItem8"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
+                                data-icon="chevron-down"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 448 512"
+                              >
+                                <path
+                                  d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                          </span>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="rah-static rah-static--height-zero "
+                          id="wishListItem8Details"
+                          style="height: 0px; overflow: hidden;"
+                        >
+                          <div
+                            style="display: none;"
+                          >
+                            <div
+                              class="_details_8f9b4a"
+                            >
+                              <h4
+                                class="_label_8f9b4a"
+                              >
+                                Unit Weight:
+                              </h4>
+                              <p
+                                class="_value_8f9b4a"
+                              >
+                                400000000000
+                              </p>
+                              <h4
+                                class="_label_8f9b4a"
+                              >
+                                Notes:
+                              </h4>
+                              <p
+                                class="_value_8f9b4a"
+                              >
+                                -
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="_root_8f9b4a"
+                        style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
+                      >
+                        <div
+                          aria-controls="wishListItem5Details"
+                          aria-expanded="false"
+                          class="_trigger_8f9b4a"
+                        >
+                          <span
+                            class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
+                          >
+                            <span
+                              class="_editIcons_8f9b4a"
+                            >
+                              <button
+                                class="_icon_8f9b4a"
+                                data-testid="destroyWishListItem5"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="svg-inline--fa fa-xmark _fa_8f9b4a"
+                                  data-icon="xmark"
+                                  data-prefix="fas"
+                                  role="img"
+                                  viewBox="0 0 384 512"
+                                >
+                                  <path
+                                    d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </button>
+                              <button
+                                class="_icon_8f9b4a"
+                                data-testid="editWishListItem5"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
+                                  data-icon="pen-to-square"
+                                  data-prefix="fas"
+                                  role="img"
+                                  viewBox="0 0 512 512"
+                                >
+                                  <path
+                                    d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </button>
+                            </span>
+                            <h3
+                              class="_description_8f9b4a"
+                            >
+                              Dwarven Cog
+                            </h3>
+                          </span>
+                          <span
+                            class="_quantityEditable_8f9b4a"
+                          >
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="incrementWishListItem5"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
+                                data-icon="chevron-up"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 448 512"
+                              >
+                                <path
+                                  d="M201.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 173.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                            <span
+                              class="_quantityContent_8f9b4a"
+                            >
+                              1
+                            </span>
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="decrementWishListItem5"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
+                                data-icon="chevron-down"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 448 512"
+                              >
+                                <path
+                                  d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                          </span>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="rah-static rah-static--height-zero "
+                          id="wishListItem5Details"
+                          style="height: 0px; overflow: hidden;"
+                        >
+                          <div
+                            style="display: none;"
+                          >
+                            <div
+                              class="_details_8f9b4a"
+                            >
+                              <h4
+                                class="_label_8f9b4a"
+                              >
+                                Unit Weight:
+                              </h4>
+                              <p
+                                class="_value_8f9b4a"
+                              >
+                                10
+                              </p>
+                              <h4
+                                class="_label_8f9b4a"
+                              >
+                                Notes:
+                              </h4>
+                              <p
+                                class="_value_8f9b4a"
+                              >
+                                For trophy room
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="_wishList_8bc9d7"
+            >
+              <div
+                class="_root_015e9f"
+                style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -16px;"
+              >
+                <div
+                  aria-controls="list5Details"
+                  aria-expanded="false"
+                  class="_trigger_015e9f"
+                  role="button"
+                >
+                  <span
+                    class="_icons_015e9f"
+                  >
+                    <button
+                      class="_icon_015e9f"
+                      data-testid="destroyWishList5"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-xmark _fa_015e9f"
+                        data-icon="xmark"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 384 512"
+                      >
+                        <path
+                          d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="_icon_015e9f"
+                      data-testid="editWishList5"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-pen-to-square _fa_015e9f"
+                        data-icon="pen-to-square"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </span>
+                  <h3
+                    class="_title_015e9f"
+                  >
+                    Breezehome
+                  </h3>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="list5Details"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <div
+                      class="_details_015e9f"
+                    >
+                      <div
+                        class="_root_1a276c _collapsed_1a276c"
+                        style="--base-color: #4e8fb7; --hover-color: #3881ae; --body-color: #d2e3ed; --border-color: #1b5c84; --text-color-main: #fff; --text-color-secondary: #0d2e42;"
+                      >
+                        <div
+                          class="_triggerContainer_1a276c"
+                        >
+                          <button
+                            aria-controls="addItemToWishList5"
+                            aria-expanded="false"
+                            class="_trigger_1a276c"
+                          >
+                            Add item to list...
+                          </button>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="rah-static rah-static--height-zero "
+                          id="addItemToWishList5"
+                          style="height: 0px; overflow: hidden;"
+                        >
+                          <div
+                            style="display: none;"
+                          >
+                            <form
+                              aria-label="Wish list item creation form"
+                              class="_form_1a276c"
+                            >
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Description
+                                <input
+                                  class="_input_1a276c"
+                                  name="description"
+                                  placeholder="Description"
+                                  required=""
+                                  type="text"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Quantity
+                                <input
+                                  class="_input_1a276c"
+                                  inputmode="numeric"
+                                  min="1"
+                                  name="quantity"
+                                  pattern="^[0-9]*$"
+                                  placeholder="Quantity"
+                                  required=""
+                                  step="1"
+                                  type="number"
+                                  value="1"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Unit Weight
+                                <input
+                                  class="_input_1a276c"
+                                  inputmode="decimal"
+                                  min="0"
+                                  name="unit_weight"
+                                  placeholder="Unit Weight"
+                                  step="0.1"
+                                  type="number"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Notes
+                                <input
+                                  class="_input_1a276c"
+                                  name="notes"
+                                  placeholder="Notes"
+                                  type="text"
+                                />
+                              </label>
+                              <button
+                                class="_submit_1a276c"
+                                type="submit"
+                              >
+                                Add to List
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="_root_8f9b4a"
+                        style="--main-color: #4e8fb7; --title-text-color: #fff; --border-color: #1b5c84; --body-background-color: #d2e3ed; --body-text-color: #0d2e42; --hover-color: #3881ae;"
+                      >
+                        <div
+                          aria-controls="wishListItem7Details"
+                          aria-expanded="false"
+                          class="_trigger_8f9b4a"
+                        >
+                          <span
+                            class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
+                          >
+                            <span
+                              class="_editIcons_8f9b4a"
+                            >
+                              <button
+                                class="_icon_8f9b4a"
+                                data-testid="destroyWishListItem7"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="svg-inline--fa fa-xmark _fa_8f9b4a"
+                                  data-icon="xmark"
+                                  data-prefix="fas"
+                                  role="img"
+                                  viewBox="0 0 384 512"
+                                >
+                                  <path
+                                    d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </button>
+                              <button
+                                class="_icon_8f9b4a"
+                                data-testid="editWishListItem7"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
+                                  data-icon="pen-to-square"
+                                  data-prefix="fas"
+                                  role="img"
+                                  viewBox="0 0 512 512"
+                                >
+                                  <path
+                                    d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </button>
+                            </span>
+                            <h3
+                              class="_description_8f9b4a"
+                            >
+                              Dwarven Cog
+                            </h3>
+                          </span>
+                          <span
+                            class="_quantityEditable_8f9b4a"
+                          >
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="incrementWishListItem7"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
+                                data-icon="chevron-up"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 448 512"
+                              >
+                                <path
+                                  d="M201.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 173.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                            <span
+                              class="_quantityContent_8f9b4a"
+                            >
+                              10
+                            </span>
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="decrementWishListItem7"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
+                                data-icon="chevron-down"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 448 512"
+                              >
+                                <path
+                                  d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                          </span>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="rah-static rah-static--height-zero "
+                          id="wishListItem7Details"
+                          style="height: 0px; overflow: hidden;"
+                        >
+                          <div
+                            style="display: none;"
+                          >
+                            <div
+                              class="_details_8f9b4a"
+                            >
+                              <h4
+                                class="_label_8f9b4a"
+                              >
+                                Unit Weight:
+                              </h4>
+                              <p
+                                class="_value_8f9b4a"
+                              >
+                                10
+                              </p>
+                              <h4
+                                class="_label_8f9b4a"
+                              >
+                                Notes:
+                              </h4>
+                              <p
+                                class="_value_8f9b4a"
+                              >
+                                For Arniel Gane
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="_wishList_8bc9d7"
+            >
+              <div
+                class="_root_015e9f"
+                style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
+              >
+                <div
+                  aria-controls="list6Details"
+                  aria-expanded="false"
+                  class="_trigger_015e9f"
+                  role="button"
+                >
+                  <span
+                    class="_icons_015e9f"
+                  >
+                    <button
+                      class="_icon_015e9f"
+                      data-testid="destroyWishList6"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-xmark _fa_015e9f"
+                        data-icon="xmark"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 384 512"
+                      >
+                        <path
+                          d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="_icon_015e9f"
+                      data-testid="editWishList6"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-pen-to-square _fa_015e9f"
+                        data-icon="pen-to-square"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </span>
+                  <h3
+                    class="_title_015e9f"
+                  >
+                    Hjerim
+                  </h3>
+                </div>
+                <div
+                  aria-hidden="true"
+                  class="rah-static rah-static--height-zero "
+                  id="list6Details"
+                  style="height: 0px; overflow: hidden;"
+                >
+                  <div
+                    style="display: none;"
+                  >
+                    <div
+                      class="_details_015e9f"
+                    >
+                      <div
+                        class="_root_1a276c _collapsed_1a276c"
+                        style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
+                      >
+                        <div
+                          class="_triggerContainer_1a276c"
+                        >
+                          <button
+                            aria-controls="addItemToWishList6"
+                            aria-expanded="false"
+                            class="_trigger_1a276c"
+                          >
+                            Add item to list...
+                          </button>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          class="rah-static rah-static--height-zero "
+                          id="addItemToWishList6"
+                          style="height: 0px; overflow: hidden;"
+                        >
+                          <div
+                            style="display: none;"
+                          >
+                            <form
+                              aria-label="Wish list item creation form"
+                              class="_form_1a276c"
+                            >
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Description
+                                <input
+                                  class="_input_1a276c"
+                                  name="description"
+                                  placeholder="Description"
+                                  required=""
+                                  type="text"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Quantity
+                                <input
+                                  class="_input_1a276c"
+                                  inputmode="numeric"
+                                  min="1"
+                                  name="quantity"
+                                  pattern="^[0-9]*$"
+                                  placeholder="Quantity"
+                                  required=""
+                                  step="1"
+                                  type="number"
+                                  value="1"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Unit Weight
+                                <input
+                                  class="_input_1a276c"
+                                  inputmode="decimal"
+                                  min="0"
+                                  name="unit_weight"
+                                  placeholder="Unit Weight"
+                                  step="0.1"
+                                  type="number"
+                                />
+                              </label>
+                              <label
+                                class="_label_1a276c"
+                              >
+                                Notes
+                                <input
+                                  class="_input_1a276c"
+                                  name="notes"
+                                  placeholder="Notes"
+                                  type="text"
+                                />
+                              </label>
+                              <button
+                                class="_submit_1a276c"
+                                type="submit"
+                              >
+                                Add to List
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <header
+          class="_root_faea2d"
+        >
+          <div
+            class="_bar_faea2d"
+          >
+            <span
+              class="_headerContainer_faea2d"
+            >
+              <h1
+                class="_header_faea2d"
+              >
+                <a
+                  class="_headerLinkLarge_faea2d"
+                  href="/dashboard"
+                >
+                  Skyrim Inventory
+                  <br
+                    class="_bp_faea2d"
+                  />
+                   Management
+                </a>
+                <a
+                  class="_headerLinkSmall_faea2d"
+                  href="/dashboard"
+                >
+                  S. I. M.
+                </a>
+              </h1>
+            </span>
+            <span
+              class="_root_658745"
+            >
+              <div
+                class="_main_658745"
+              >
+                <div
+                  class="_button_658745"
+                  role="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
+                    data-icon="bars"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span
+                    class="_info_658745"
+                  >
+                    <p
+                      class="_name_658745"
+                    >
+                      Edna St. Vincent Millay
+                    </p>
+                    <p
+                      class="_email_658745"
+                    >
+                      edna@gmail.com
+                    </p>
+                  </span>
+                  <img
+                    alt="User profile image"
+                    class="_img_658745"
+                    referrerpolicy="no-referrer"
+                    src="/src/support/testProfileImg.png"
+                  />
+                </div>
+              </div>
+              <menu
+                class="_dropdown_658745"
+              >
+                <div
+                  role="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-right-from-bracket"
+                    data-icon="right-from-bracket"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <p
+                    class="_signOutText_658745"
+                  >
+                    Sign Out
+                  </p>
+                </div>
+              </menu>
+            </span>
+          </div>
+        </header>
+        <div
+          class="_root_ca8db5 _hidden_ca8db5"
+          style="--text-color: #4e6d83;"
+        />
+        <div
+          class="_root_c33b14 _hidden_c33b14"
+          data-testid="modal"
+        >
+          <div
+            class="_container_c33b14"
+          >
+            <div
+              class="_content_c33b14"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="_root_78663b"
+    >
+      <section
+        class="_container_78663b"
+      >
+        <div
+          class="_titleContainer_78663b"
+        >
+          <h2
+            class="_title_78663b"
+          >
+            Your Wish Lists
+          </h2>
+          <div
+            class="_root_706192 _select_78663b"
+            data-testid="styledSelect"
+            style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
+          >
+            <div
+              aria-controls="selectListbox"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="selectListbox"
+              class="_header_706192"
+              role="combobox"
+            >
+              <input
+                aria-label="Add or Select Option"
+                class="_headerText_706192"
+              />
+              <button
+                class="_trigger_706192"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-angle-down _fa_706192"
+                  data-icon="angle-down"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <ul
+              class="_dropdown_706192 _hidden_706192"
+              id="selectListbox"
+              role="listbox"
+            >
+              <li
+                aria-selected="false"
+                class="_root_6af4e6"
+                data-option-value="32"
+                role="option"
+                tabindex="0"
+              />
+              <li
+                aria-selected="false"
+                class="_root_6af4e6"
+                data-option-value="51"
+                role="option"
+                tabindex="0"
+              />
+              <li
+                aria-selected="true"
+                class="_root_6af4e6"
+                data-option-value="77"
+                role="option"
+                tabindex="0"
+              />
+            </ul>
+          </div>
+        </div>
+        <hr
+          class="_hr_78663b"
+        />
+        <form
+          class="_root_f9e5f5"
+          style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
+        >
+          <fieldset
+            class="_fieldset_f9e5f5"
+          >
+            <input
+              aria-label="Title"
+              class="_input_f9e5f5"
+              name="title"
+              pattern="\\s*[A-Za-z0-9 \\-',]*\\s*"
+              placeholder="Title"
+              title="Title can only contain alphanumeric characters, spaces, commas, hyphens, and apostrophes"
+              type="text"
+            />
+            <button
+              class="_button_f9e5f5"
+              type="submit"
+            >
+              Create
+            </button>
+          </fieldset>
+        </form>
+        <div
+          class="_root_8bc9d7"
+        >
+          <div
+            class="_wishList_8bc9d7"
+          >
+            <div
+              class="_root_015e9f"
+              style="--scheme-color: #ffbf00; --border-color: #cc9800; --text-color-primary: #4c3900; --text-color-secondary: #4c3900; --hover-color: #e5ab00; --scheme-color-lighter: #ffcb32; --scheme-color-lightest: #fff2cc; --max-title-width: -32px;"
+            >
+              <div
+                aria-controls="list3Details"
+                aria-expanded="false"
+                class="_trigger_015e9f"
+                role="button"
+              >
+                <h3
+                  class="_title_015e9f"
+                >
+                  All Items
+                </h3>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="list3Details"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <div
+                    class="_details_015e9f"
+                  >
+                    <div
+                      class="_root_8f9b4a"
+                      style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
+                    >
+                      <div
+                        aria-controls="wishListItem6Details"
+                        aria-expanded="false"
+                        class="_trigger_8f9b4a"
+                      >
+                        <span
+                          class="_descriptionContainer_8f9b4a"
+                        >
+                          <h3
+                            class="_description_8f9b4a"
+                          >
+                            Dwarven Cog
+                          </h3>
+                        </span>
+                        <span
+                          class="_quantity_8f9b4a"
+                        >
+                          <span
+                            class="_quantityContent_8f9b4a"
+                          >
+                            11
+                          </span>
+                        </span>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="rah-static rah-static--height-zero "
+                        id="wishListItem6Details"
+                        style="height: 0px; overflow: hidden;"
+                      >
+                        <div
+                          style="display: none;"
+                        >
+                          <div
+                            class="_details_8f9b4a"
+                          >
+                            <h4
+                              class="_label_8f9b4a"
+                            >
+                              Unit Weight:
+                            </h4>
+                            <p
+                              class="_value_8f9b4a"
+                            >
+                              10
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="_root_8f9b4a"
+                      style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
+                    >
+                      <div
+                        aria-controls="wishListItem9Details"
+                        aria-expanded="false"
+                        class="_trigger_8f9b4a"
+                      >
+                        <span
+                          class="_descriptionContainer_8f9b4a"
+                        >
+                          <h3
+                            class="_description_8f9b4a"
+                          >
+                            This item has a really really really really really long description for testing purposes
+                          </h3>
+                        </span>
+                        <span
+                          class="_quantity_8f9b4a"
+                        >
+                          <span
+                            class="_quantityContent_8f9b4a"
+                          >
+                            200000000000
+                          </span>
+                        </span>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="rah-static rah-static--height-zero "
+                        id="wishListItem9Details"
+                        style="height: 0px; overflow: hidden;"
+                      >
+                        <div
+                          style="display: none;"
+                        >
+                          <div
+                            class="_details_8f9b4a"
+                          >
+                            <h4
+                              class="_label_8f9b4a"
+                            >
+                              Unit Weight:
+                            </h4>
+                            <p
+                              class="_value_8f9b4a"
+                            >
+                              400000000000
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="_wishList_8bc9d7"
+          >
+            <div
+              class="_root_015e9f"
+              style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -16px;"
+            >
+              <div
+                aria-controls="list4Details"
+                aria-expanded="false"
+                class="_trigger_015e9f"
+                role="button"
+              >
+                <span
+                  class="_icons_015e9f"
+                >
+                  <button
+                    class="_icon_015e9f"
+                    data-testid="destroyWishList4"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-xmark _fa_015e9f"
+                      data-icon="xmark"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 384 512"
+                    >
+                      <path
+                        d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="_icon_015e9f"
+                    data-testid="editWishList4"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-pen-to-square _fa_015e9f"
+                      data-icon="pen-to-square"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                <h3
+                  class="_title_015e9f"
+                >
+                  Honeyside
+                </h3>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="list4Details"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <div
+                    class="_details_015e9f"
+                  >
+                    <div
+                      class="_root_1a276c _collapsed_1a276c"
+                      style="--base-color: #ec658b; --hover-color: #ea527d; --body-color: #fad8e2; --border-color: #b93258; --text-color-main: #fff; --text-color-secondary: #451221;"
+                    >
+                      <div
+                        class="_triggerContainer_1a276c"
+                      >
+                        <button
+                          aria-controls="addItemToWishList4"
+                          aria-expanded="false"
+                          class="_trigger_1a276c"
+                        >
+                          Add item to list...
+                        </button>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="rah-static rah-static--height-zero "
+                        id="addItemToWishList4"
+                        style="height: 0px; overflow: hidden;"
+                      >
+                        <div
+                          style="display: none;"
+                        >
+                          <form
+                            aria-label="Wish list item creation form"
+                            class="_form_1a276c"
+                          >
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Description
+                              <input
+                                class="_input_1a276c"
+                                name="description"
+                                placeholder="Description"
+                                required=""
+                                type="text"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Quantity
+                              <input
+                                class="_input_1a276c"
+                                inputmode="numeric"
+                                min="1"
+                                name="quantity"
+                                pattern="^[0-9]*$"
+                                placeholder="Quantity"
+                                required=""
+                                step="1"
+                                type="number"
+                                value="1"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Unit Weight
+                              <input
+                                class="_input_1a276c"
+                                inputmode="decimal"
+                                min="0"
+                                name="unit_weight"
+                                placeholder="Unit Weight"
+                                step="0.1"
+                                type="number"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Notes
+                              <input
+                                class="_input_1a276c"
+                                name="notes"
+                                placeholder="Notes"
+                                type="text"
+                              />
+                            </label>
+                            <button
+                              class="_submit_1a276c"
+                              type="submit"
+                            >
+                              Add to List
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="_root_8f9b4a"
+                      style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
+                    >
+                      <div
+                        aria-controls="wishListItem8Details"
+                        aria-expanded="false"
+                        class="_trigger_8f9b4a"
+                      >
+                        <span
+                          class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
+                        >
+                          <span
+                            class="_editIcons_8f9b4a"
+                          >
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="destroyWishListItem8"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-xmark _fa_8f9b4a"
+                                data-icon="xmark"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 384 512"
+                              >
+                                <path
+                                  d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="editWishListItem8"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
+                                data-icon="pen-to-square"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 512 512"
+                              >
+                                <path
+                                  d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                          </span>
+                          <h3
+                            class="_description_8f9b4a"
+                          >
+                            This item has a really really really really really long description for testing purposes
+                          </h3>
+                        </span>
+                        <span
+                          class="_quantityEditable_8f9b4a"
+                        >
+                          <button
+                            class="_icon_8f9b4a"
+                            data-testid="incrementWishListItem8"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
+                              data-icon="chevron-up"
+                              data-prefix="fas"
+                              role="img"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M201.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 173.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                          <span
+                            class="_quantityContent_8f9b4a"
+                          >
+                            200000000000
+                          </span>
+                          <button
+                            class="_icon_8f9b4a"
+                            data-testid="decrementWishListItem8"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
+                              data-icon="chevron-down"
+                              data-prefix="fas"
+                              role="img"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                        </span>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="rah-static rah-static--height-zero "
+                        id="wishListItem8Details"
+                        style="height: 0px; overflow: hidden;"
+                      >
+                        <div
+                          style="display: none;"
+                        >
+                          <div
+                            class="_details_8f9b4a"
+                          >
+                            <h4
+                              class="_label_8f9b4a"
+                            >
+                              Unit Weight:
+                            </h4>
+                            <p
+                              class="_value_8f9b4a"
+                            >
+                              400000000000
+                            </p>
+                            <h4
+                              class="_label_8f9b4a"
+                            >
+                              Notes:
+                            </h4>
+                            <p
+                              class="_value_8f9b4a"
+                            >
+                              -
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="_root_8f9b4a"
+                      style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
+                    >
+                      <div
+                        aria-controls="wishListItem5Details"
+                        aria-expanded="false"
+                        class="_trigger_8f9b4a"
+                      >
+                        <span
+                          class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
+                        >
+                          <span
+                            class="_editIcons_8f9b4a"
+                          >
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="destroyWishListItem5"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-xmark _fa_8f9b4a"
+                                data-icon="xmark"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 384 512"
+                              >
+                                <path
+                                  d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="editWishListItem5"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
+                                data-icon="pen-to-square"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 512 512"
+                              >
+                                <path
+                                  d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                          </span>
+                          <h3
+                            class="_description_8f9b4a"
+                          >
+                            Dwarven Cog
+                          </h3>
+                        </span>
+                        <span
+                          class="_quantityEditable_8f9b4a"
+                        >
+                          <button
+                            class="_icon_8f9b4a"
+                            data-testid="incrementWishListItem5"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
+                              data-icon="chevron-up"
+                              data-prefix="fas"
+                              role="img"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M201.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 173.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                          <span
+                            class="_quantityContent_8f9b4a"
+                          >
+                            1
+                          </span>
+                          <button
+                            class="_icon_8f9b4a"
+                            data-testid="decrementWishListItem5"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
+                              data-icon="chevron-down"
+                              data-prefix="fas"
+                              role="img"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                        </span>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="rah-static rah-static--height-zero "
+                        id="wishListItem5Details"
+                        style="height: 0px; overflow: hidden;"
+                      >
+                        <div
+                          style="display: none;"
+                        >
+                          <div
+                            class="_details_8f9b4a"
+                          >
+                            <h4
+                              class="_label_8f9b4a"
+                            >
+                              Unit Weight:
+                            </h4>
+                            <p
+                              class="_value_8f9b4a"
+                            >
+                              10
+                            </p>
+                            <h4
+                              class="_label_8f9b4a"
+                            >
+                              Notes:
+                            </h4>
+                            <p
+                              class="_value_8f9b4a"
+                            >
+                              For trophy room
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="_wishList_8bc9d7"
+          >
+            <div
+              class="_root_015e9f"
+              style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -16px;"
+            >
+              <div
+                aria-controls="list5Details"
+                aria-expanded="false"
+                class="_trigger_015e9f"
+                role="button"
+              >
+                <span
+                  class="_icons_015e9f"
+                >
+                  <button
+                    class="_icon_015e9f"
+                    data-testid="destroyWishList5"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-xmark _fa_015e9f"
+                      data-icon="xmark"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 384 512"
+                    >
+                      <path
+                        d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="_icon_015e9f"
+                    data-testid="editWishList5"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-pen-to-square _fa_015e9f"
+                      data-icon="pen-to-square"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                <h3
+                  class="_title_015e9f"
+                >
+                  Breezehome
+                </h3>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="list5Details"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <div
+                    class="_details_015e9f"
+                  >
+                    <div
+                      class="_root_1a276c _collapsed_1a276c"
+                      style="--base-color: #4e8fb7; --hover-color: #3881ae; --body-color: #d2e3ed; --border-color: #1b5c84; --text-color-main: #fff; --text-color-secondary: #0d2e42;"
+                    >
+                      <div
+                        class="_triggerContainer_1a276c"
+                      >
+                        <button
+                          aria-controls="addItemToWishList5"
+                          aria-expanded="false"
+                          class="_trigger_1a276c"
+                        >
+                          Add item to list...
+                        </button>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="rah-static rah-static--height-zero "
+                        id="addItemToWishList5"
+                        style="height: 0px; overflow: hidden;"
+                      >
+                        <div
+                          style="display: none;"
+                        >
+                          <form
+                            aria-label="Wish list item creation form"
+                            class="_form_1a276c"
+                          >
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Description
+                              <input
+                                class="_input_1a276c"
+                                name="description"
+                                placeholder="Description"
+                                required=""
+                                type="text"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Quantity
+                              <input
+                                class="_input_1a276c"
+                                inputmode="numeric"
+                                min="1"
+                                name="quantity"
+                                pattern="^[0-9]*$"
+                                placeholder="Quantity"
+                                required=""
+                                step="1"
+                                type="number"
+                                value="1"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Unit Weight
+                              <input
+                                class="_input_1a276c"
+                                inputmode="decimal"
+                                min="0"
+                                name="unit_weight"
+                                placeholder="Unit Weight"
+                                step="0.1"
+                                type="number"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Notes
+                              <input
+                                class="_input_1a276c"
+                                name="notes"
+                                placeholder="Notes"
+                                type="text"
+                              />
+                            </label>
+                            <button
+                              class="_submit_1a276c"
+                              type="submit"
+                            >
+                              Add to List
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="_root_8f9b4a"
+                      style="--main-color: #4e8fb7; --title-text-color: #fff; --border-color: #1b5c84; --body-background-color: #d2e3ed; --body-text-color: #0d2e42; --hover-color: #3881ae;"
+                    >
+                      <div
+                        aria-controls="wishListItem7Details"
+                        aria-expanded="false"
+                        class="_trigger_8f9b4a"
+                      >
+                        <span
+                          class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
+                        >
+                          <span
+                            class="_editIcons_8f9b4a"
+                          >
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="destroyWishListItem7"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-xmark _fa_8f9b4a"
+                                data-icon="xmark"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 384 512"
+                              >
+                                <path
+                                  d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                            <button
+                              class="_icon_8f9b4a"
+                              data-testid="editWishListItem7"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
+                                data-icon="pen-to-square"
+                                data-prefix="fas"
+                                role="img"
+                                viewBox="0 0 512 512"
+                              >
+                                <path
+                                  d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                          </span>
+                          <h3
+                            class="_description_8f9b4a"
+                          >
+                            Dwarven Cog
+                          </h3>
+                        </span>
+                        <span
+                          class="_quantityEditable_8f9b4a"
+                        >
+                          <button
+                            class="_icon_8f9b4a"
+                            data-testid="incrementWishListItem7"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
+                              data-icon="chevron-up"
+                              data-prefix="fas"
+                              role="img"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M201.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 173.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                          <span
+                            class="_quantityContent_8f9b4a"
+                          >
+                            10
+                          </span>
+                          <button
+                            class="_icon_8f9b4a"
+                            data-testid="decrementWishListItem7"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
+                              data-icon="chevron-down"
+                              data-prefix="fas"
+                              role="img"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                        </span>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="rah-static rah-static--height-zero "
+                        id="wishListItem7Details"
+                        style="height: 0px; overflow: hidden;"
+                      >
+                        <div
+                          style="display: none;"
+                        >
+                          <div
+                            class="_details_8f9b4a"
+                          >
+                            <h4
+                              class="_label_8f9b4a"
+                            >
+                              Unit Weight:
+                            </h4>
+                            <p
+                              class="_value_8f9b4a"
+                            >
+                              10
+                            </p>
+                            <h4
+                              class="_label_8f9b4a"
+                            >
+                              Notes:
+                            </h4>
+                            <p
+                              class="_value_8f9b4a"
+                            >
+                              For Arniel Gane
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="_wishList_8bc9d7"
+          >
+            <div
+              class="_root_015e9f"
+              style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
+            >
+              <div
+                aria-controls="list6Details"
+                aria-expanded="false"
+                class="_trigger_015e9f"
+                role="button"
+              >
+                <span
+                  class="_icons_015e9f"
+                >
+                  <button
+                    class="_icon_015e9f"
+                    data-testid="destroyWishList6"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-xmark _fa_015e9f"
+                      data-icon="xmark"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 384 512"
+                    >
+                      <path
+                        d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="_icon_015e9f"
+                    data-testid="editWishList6"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-pen-to-square _fa_015e9f"
+                      data-icon="pen-to-square"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                <h3
+                  class="_title_015e9f"
+                >
+                  Hjerim
+                </h3>
+              </div>
+              <div
+                aria-hidden="true"
+                class="rah-static rah-static--height-zero "
+                id="list6Details"
+                style="height: 0px; overflow: hidden;"
+              >
+                <div
+                  style="display: none;"
+                >
+                  <div
+                    class="_details_015e9f"
+                  >
+                    <div
+                      class="_root_1a276c _collapsed_1a276c"
+                      style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
+                    >
+                      <div
+                        class="_triggerContainer_1a276c"
+                      >
+                        <button
+                          aria-controls="addItemToWishList6"
+                          aria-expanded="false"
+                          class="_trigger_1a276c"
+                        >
+                          Add item to list...
+                        </button>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="rah-static rah-static--height-zero "
+                        id="addItemToWishList6"
+                        style="height: 0px; overflow: hidden;"
+                      >
+                        <div
+                          style="display: none;"
+                        >
+                          <form
+                            aria-label="Wish list item creation form"
+                            class="_form_1a276c"
+                          >
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Description
+                              <input
+                                class="_input_1a276c"
+                                name="description"
+                                placeholder="Description"
+                                required=""
+                                type="text"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Quantity
+                              <input
+                                class="_input_1a276c"
+                                inputmode="numeric"
+                                min="1"
+                                name="quantity"
+                                pattern="^[0-9]*$"
+                                placeholder="Quantity"
+                                required=""
+                                step="1"
+                                type="number"
+                                value="1"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Unit Weight
+                              <input
+                                class="_input_1a276c"
+                                inputmode="decimal"
+                                min="0"
+                                name="unit_weight"
+                                placeholder="Unit Weight"
+                                step="0.1"
+                                type="number"
+                              />
+                            </label>
+                            <label
+                              class="_label_1a276c"
+                            >
+                              Notes
+                              <input
+                                class="_input_1a276c"
+                                name="notes"
+                                placeholder="Notes"
+                                type="text"
+                              />
+                            </label>
+                            <button
+                              class="_submit_1a276c"
+                              type="submit"
+                            >
+                              Add to List
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <header
+        class="_root_faea2d"
+      >
+        <div
+          class="_bar_faea2d"
+        >
+          <span
+            class="_headerContainer_faea2d"
+          >
+            <h1
+              class="_header_faea2d"
+            >
+              <a
+                class="_headerLinkLarge_faea2d"
+                href="/dashboard"
+              >
+                Skyrim Inventory
+                <br
+                  class="_bp_faea2d"
+                />
+                 Management
+              </a>
+              <a
+                class="_headerLinkSmall_faea2d"
+                href="/dashboard"
+              >
+                S. I. M.
+              </a>
+            </h1>
+          </span>
+          <span
+            class="_root_658745"
+          >
+            <div
+              class="_main_658745"
+            >
+              <div
+                class="_button_658745"
+                role="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
+                  data-icon="bars"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span
+                  class="_info_658745"
+                >
+                  <p
+                    class="_name_658745"
+                  >
+                    Edna St. Vincent Millay
+                  </p>
+                  <p
+                    class="_email_658745"
+                  >
+                    edna@gmail.com
+                  </p>
+                </span>
+                <img
+                  alt="User profile image"
+                  class="_img_658745"
+                  referrerpolicy="no-referrer"
+                  src="/src/support/testProfileImg.png"
+                />
+              </div>
+            </div>
+            <menu
+              class="_dropdown_658745"
+            >
+              <div
+                role="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-right-from-bracket"
+                  data-icon="right-from-bracket"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <p
+                  class="_signOutText_658745"
+                >
+                  Sign Out
+                </p>
+              </div>
+            </menu>
+          </span>
+        </div>
+      </header>
+      <div
+        class="_root_ca8db5 _hidden_ca8db5"
+        style="--text-color: #4e6d83;"
+      />
+      <div
+        class="_root_c33b14 _hidden_c33b14"
+        data-testid="modal"
+      >
+        <div
+          class="_container_c33b14"
+        >
+          <div
+            class="_content_c33b14"
+          />
+        </div>
+      </div>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
