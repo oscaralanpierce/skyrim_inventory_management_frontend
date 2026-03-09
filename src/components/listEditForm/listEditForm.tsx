@@ -17,7 +17,7 @@ import { measureText } from '../../utils/measureText'
 const FIXED_BUTTON_WIDTH = 72 // px
 
 interface EditFormProps {
-  formRef: RefObject<HTMLFormElement>
+  formRef: RefObject<HTMLFormElement | null>
   maxTotalWidth: number
   title: string
   onSubmit: FormEventHandler

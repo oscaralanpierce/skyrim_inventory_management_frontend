@@ -31,7 +31,6 @@ exports[`GameForm > create form matches snapshot 1`] = `
                 placeholder="Name"
                 title="Name can contain only alphanumeric characters, spaces, commas, hyphens, and apostrophes"
                 type="text"
-                value=""
               />
             </label>
           </fieldset>
@@ -46,7 +45,6 @@ exports[`GameForm > create form matches snapshot 1`] = `
                 class="_input_31bf4a"
                 name="description"
                 placeholder="Description"
-                value=""
               />
             </label>
           </fieldset>
@@ -88,7 +86,6 @@ exports[`GameForm > create form matches snapshot 1`] = `
               placeholder="Name"
               title="Name can contain only alphanumeric characters, spaces, commas, hyphens, and apostrophes"
               type="text"
-              value=""
             />
           </label>
         </fieldset>
@@ -103,7 +100,6 @@ exports[`GameForm > create form matches snapshot 1`] = `
               class="_input_31bf4a"
               name="description"
               placeholder="Description"
-              value=""
             />
           </label>
         </fieldset>

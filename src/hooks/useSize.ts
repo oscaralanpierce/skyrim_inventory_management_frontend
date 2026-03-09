@@ -8,7 +8,7 @@ const useSize = (target: RefObject<HTMLElement | null>) => {
     setSize(target.current?.getBoundingClientRect() || null)
   }, [target])
 
-  useResizeObserver(target, (entry) => setSize(entry.contentRect))
+  useResizeObserver(target as RefObject<HTMLElement>, (entry) => setSize(entry.contentRect))
 
   return size
 }

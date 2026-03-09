@@ -473,7 +473,29 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
                 class="_dropdown_0a8ecf _hidden_0a8ecf"
                 id="selectListbox"
                 role="listbox"
-              />
+              >
+                <li
+                  aria-selected="false"
+                  class="_root_b75fe4"
+                  data-option-value="32"
+                  role="option"
+                  tabindex="0"
+                />
+                <li
+                  aria-selected="false"
+                  class="_root_b75fe4"
+                  data-option-value="51"
+                  role="option"
+                  tabindex="0"
+                />
+                <li
+                  aria-selected="true"
+                  class="_root_b75fe4"
+                  data-option-value="77"
+                  role="option"
+                  tabindex="0"
+                />
+              </ul>
             </div>
           </div>
           <hr
@@ -489,7 +511,6 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
               <input
                 aria-label="Title"
                 class="_input_15ecd1"
-                disabled=""
                 name="title"
                 pattern="\\s*[A-Za-z0-9 \\-',]*\\s*"
                 placeholder="Title"
@@ -498,7 +519,6 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
               />
               <button
                 class="_button_15ecd1"
-                disabled=""
                 type="submit"
               >
                 Create
@@ -657,7 +677,7 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
             >
               <div
                 class="_root_ec6c68"
-                style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -32px;"
+                style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -16px;"
               >
                 <div
                   aria-controls="list4Details"
@@ -1105,7 +1125,7 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
             >
               <div
                 class="_root_ec6c68"
-                style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -32px;"
+                style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -16px;"
               >
                 <div
                   aria-controls="list5Details"
@@ -1413,7 +1433,7 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
             >
               <div
                 class="_root_ec6c68"
-                style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -32px;"
+                style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
               >
                 <div
                   aria-controls="list6Details"
@@ -1755,7 +1775,29 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
               class="_dropdown_0a8ecf _hidden_0a8ecf"
               id="selectListbox"
               role="listbox"
-            />
+            >
+              <li
+                aria-selected="false"
+                class="_root_b75fe4"
+                data-option-value="32"
+                role="option"
+                tabindex="0"
+              />
+              <li
+                aria-selected="false"
+                class="_root_b75fe4"
+                data-option-value="51"
+                role="option"
+                tabindex="0"
+              />
+              <li
+                aria-selected="true"
+                class="_root_b75fe4"
+                data-option-value="77"
+                role="option"
+                tabindex="0"
+              />
+            </ul>
           </div>
         </div>
         <hr
@@ -1771,7 +1813,6 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
             <input
               aria-label="Title"
               class="_input_15ecd1"
-              disabled=""
               name="title"
               pattern="\\s*[A-Za-z0-9 \\-',]*\\s*"
               placeholder="Title"
@@ -1780,7 +1821,6 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
             />
             <button
               class="_button_15ecd1"
-              disabled=""
               type="submit"
             >
               Create
@@ -1939,7 +1979,7 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
           >
             <div
               class="_root_ec6c68"
-              style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -32px;"
+              style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -16px;"
             >
               <div
                 aria-controls="list4Details"
@@ -2387,7 +2427,7 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
           >
             <div
               class="_root_ec6c68"
-              style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -32px;"
+              style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -16px;"
             >
               <div
                 aria-controls="list5Details"
@@ -2695,7 +2735,7 @@ exports[`WishListsPage > viewing wish lists > when the game is set in the query 
           >
             <div
               class="_root_ec6c68"
-              style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -32px;"
+              style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
             >
               <div
                 aria-controls="list6Details"
