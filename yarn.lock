@@ -2098,13 +2098,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@juggle/resize-observer@npm:^3.3.1":
-  version: 3.4.0
-  resolution: "@juggle/resize-observer@npm:3.4.0"
-  checksum: 2505028c05cc2e17639fcad06218b1c4b60f932a4ebb4b41ab546ef8c157031ae377e3f560903801f6d01706dbefd4943b6c4704bf19ed86dfa1c62f1473a570
-  languageName: node
-  linkType: hard
-
 "@mdx-js/react@npm:^3.0.0":
   version: 3.1.0
   resolution: "@mdx-js/react@npm:3.1.0"
@@ -2309,16 +2302,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-hook/resize-observer@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@react-hook/resize-observer@npm:1.2.6"
+"@react-hook/resize-observer@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@react-hook/resize-observer@npm:2.0.2"
   dependencies:
-    "@juggle/resize-observer": ^3.3.1
     "@react-hook/latest": ^1.0.2
     "@react-hook/passive-layout-effect": ^1.2.0
   peerDependencies:
-    react: ">=16.8"
-  checksum: d2ff6c50e847514acad774f2a4010fb1e6782a231ae00c9507c1a98028b3a26399e35f094170918f11b1eeafc581d60da7641bc178d496abf00c56eee8a6b36b
+    react: ">=18"
+  checksum: 30a8d423f94af26a868347d38281344fe92b8cd5ae1235d6cb8cc0e64e7e330c3fda345e7ce12e31e3c4753a4a8e3edfd3879d794e1b3f81736ae6b0c9e35a33
   languageName: node
   linkType: hard
 
@@ -6820,7 +6812,7 @@ __metadata:
     "@fortawesome/free-regular-svg-icons": ^7.2.0
     "@fortawesome/free-solid-svg-icons": ^7.2.0
     "@fortawesome/react-fontawesome": ^3.2.0
-    "@react-hook/resize-observer": ^1.2.6
+    "@react-hook/resize-observer": ^2.0.2
     "@storybook/addon-docs": 10.2.16
     "@storybook/addon-links": 10.2.16
     "@storybook/cli": 10.2.16
