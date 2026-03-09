@@ -21,13 +21,13 @@ const meta: Meta<typeof GamesPage> = {
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
-        <LoginContext.Provider value={parameters['loginContextValue'] as LoginContextType}>
+        <LoginContext value={parameters['loginContextValue'] as LoginContextType}>
           <PageProvider>
             <GamesProvider>
               <Story />
             </GamesProvider>
           </PageProvider>
-        </LoginContext.Provider>
+        </LoginContext>
       </BrowserRouter>
     ),
   ],

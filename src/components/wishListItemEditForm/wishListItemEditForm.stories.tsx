@@ -17,11 +17,11 @@ const meta: Meta<typeof WishListItemEditForm> = {
   decorators: [
     (Story) => (
       <PageProvider>
-        <GamesContext.Provider value={gamesContextValue}>
-          <WishListsContext.Provider value={wishListsContextValue}>
+        <GamesContext value={gamesContextValue}>
+          <WishListsContext value={wishListsContextValue}>
             <Story />
-          </WishListsContext.Provider>
-        </GamesContext.Provider>
+          </WishListsContext>
+        </GamesContext>
       </PageProvider>
     ),
   ],

@@ -65,9 +65,9 @@ const MyProvider = ({ children }: MyProviderProps) => {
   }
 
   return (
-    <MyContext.Provider value={{ fetchResource }}>
+    <MyContext value={{ fetchResource }}>
       {children}
-    </MyContext.Provider>
+    </MyContext>
   )
 }
 ```

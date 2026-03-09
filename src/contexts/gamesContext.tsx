@@ -331,5 +331,5 @@ export const GamesProvider = ({ children }: ProviderProps) => {
     previousTokenRef.current = token
   }, [authLoading, token])
 
-  return <GamesContext.Provider value={value}>{children}</GamesContext.Provider>
+  return <GamesContext value={value}>{children}</GamesContext>
 }

@@ -15,13 +15,13 @@ const meta: Meta<typeof GameLineItem> = {
   component: GameLineItem,
   decorators: [
     (Story) => (
-      <LoginContext.Provider value={loginContextValue}>
+      <LoginContext value={loginContextValue}>
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
+          <GamesContext value={gamesContextValue}>
             <Story />
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
-      </LoginContext.Provider>
+      </LoginContext>
     ),
   ],
 }

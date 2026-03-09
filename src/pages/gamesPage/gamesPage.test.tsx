@@ -305,9 +305,9 @@ describe('<GamesPage />', () => {
 
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext.Provider value={contextValue}>
+            <GamesContext value={contextValue}>
               <GamesPage />
-            </GamesContext.Provider>
+            </GamesContext>
           </PageProvider>
         )
 

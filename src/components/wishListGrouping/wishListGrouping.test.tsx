@@ -15,11 +15,11 @@ describe('WishListGrouping', () => {
     test('displays each list', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListGrouping />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -42,11 +42,11 @@ describe('WishListGrouping', () => {
     test('displays the destroy icon for editable lists only', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListGrouping />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -61,11 +61,11 @@ describe('WishListGrouping', () => {
     test('displays the destroy icon for editable list items only', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListGrouping />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -79,11 +79,11 @@ describe('WishListGrouping', () => {
     test('displays the edit icon for editable lists only', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListGrouping />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -98,11 +98,11 @@ describe('WishListGrouping', () => {
     test('displays the edit icon for editable list items only', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListGrouping />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -116,11 +116,11 @@ describe('WishListGrouping', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <WishListGrouping />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -132,13 +132,13 @@ describe('WishListGrouping', () => {
     test('displays a message that there are no lists for this game', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext
               value={wishListsContextValueEmpty}
             >
               <WishListGrouping />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -148,13 +148,13 @@ describe('WishListGrouping', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext
               value={wishListsContextValueEmpty}
             >
               <WishListGrouping />
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
       )
 

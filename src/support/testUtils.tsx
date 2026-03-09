@@ -45,24 +45,24 @@ export const renderWithRouter = (ui: ReactElement, url?: string) =>
 
 export const renderAuthenticated = (ui: ReactElement, url?: string) =>
   renderWithRouter(
-    <LoginContext.Provider value={loginContextValue}>
+    <LoginContext value={loginContextValue}>
       {ui}
-    </LoginContext.Provider>,
+    </LoginContext>,
     url
   )
 
 export const renderUnauthenticated = (ui: ReactElement, url?: string) =>
   renderWithRouter(
-    <LoginContext.Provider value={unauthenticatedLoginContextValue}>
+    <LoginContext value={unauthenticatedLoginContextValue}>
       {ui}
-    </LoginContext.Provider>,
+    </LoginContext>,
     url
   )
 
 export const renderAuthLoading = (ui: ReactElement, url?: string) =>
   renderWithRouter(
-    <LoginContext.Provider value={loadingLoginContextValue}>
+    <LoginContext value={loadingLoginContextValue}>
       {ui}
-    </LoginContext.Provider>,
+    </LoginContext>,
     url
   )

@@ -15,13 +15,13 @@ describe('GameLineItem', () => {
   test('matches snapshot', () => {
     const wrapper = renderAuthenticated(
       <PageProvider>
-        <GamesContext.Provider value={gamesContextValue}>
+        <GamesContext value={gamesContextValue}>
           <GameLineItem
             gameId={4}
             name="De finibus bonorum et malorum"
             description="This is my game"
           />
-        </GamesContext.Provider>
+        </GamesContext>
       </PageProvider>
     )
     expect(wrapper).toBeTruthy()
@@ -37,13 +37,13 @@ describe('GameLineItem', () => {
 
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={contextValue}>
+          <GamesContext value={contextValue}>
             <GameLineItem
               gameId={4}
               name="De finibus bonorum et malorum"
               description="This is my game"
             />
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 
@@ -63,13 +63,13 @@ describe('GameLineItem', () => {
 
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext.Provider value={contextValue}>
+          <GamesContext value={contextValue}>
             <GameLineItem
               gameId={4}
               name="De finibus bonorum et malorum"
               description="This is my game"
             />
-          </GamesContext.Provider>
+          </GamesContext>
         </PageProvider>
       )
 

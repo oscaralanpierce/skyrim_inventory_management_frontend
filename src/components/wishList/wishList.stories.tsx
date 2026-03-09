@@ -22,10 +22,10 @@ const meta: Meta<typeof WishList> = {
   decorators: [
     (Story) => (
       <BrowserRouter>
-        <LoginContext.Provider value={loginContextValue}>
+        <LoginContext value={loginContextValue}>
           <PageProvider>
-            <GamesContext.Provider value={gamesContextValue}>
-              <WishListsContext.Provider value={wishListsContextValue}>
+            <GamesContext value={gamesContextValue}>
+              <WishListsContext value={wishListsContextValue}>
                 <ColorProvider
                   colorScheme={
                     colorSchemes[
@@ -35,10 +35,10 @@ const meta: Meta<typeof WishList> = {
                 >
                   <Story />
                 </ColorProvider>
-              </WishListsContext.Provider>
-            </GamesContext.Provider>
+              </WishListsContext>
+            </GamesContext>
           </PageProvider>
-        </LoginContext.Provider>
+        </LoginContext>
       </BrowserRouter>
     ),
   ],

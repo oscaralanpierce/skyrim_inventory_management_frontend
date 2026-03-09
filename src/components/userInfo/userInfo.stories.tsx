@@ -16,11 +16,11 @@ const meta: Meta<typeof UserInfo> = {
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
-        <LoginContext.Provider value={parameters['loginContextValue'] as LoginContextType}>
+        <LoginContext value={parameters['loginContextValue'] as LoginContextType}>
           <div style={{ height: '64px', display: 'flex' }}>
             <Story />
           </div>
-        </LoginContext.Provider>
+        </LoginContext>
       </BrowserRouter>
     ),
   ],

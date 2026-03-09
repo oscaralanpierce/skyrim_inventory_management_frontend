@@ -18,11 +18,11 @@ let listsContextValue = wishListsContextValue
 const renderInContexts = (ui: ReactElement) =>
   renderAuthenticated(
     <PageProvider>
-      <GamesContext.Provider value={gamesContextValue}>
-        <WishListsContext.Provider value={listsContextValue}>
+      <GamesContext value={gamesContextValue}>
+        <WishListsContext value={listsContextValue}>
           <ColorProvider colorScheme={GREEN}>{ui}</ColorProvider>
-        </WishListsContext.Provider>
-      </GamesContext.Provider>
+        </WishListsContext>
+      </GamesContext>
     </PageProvider>
   )
 

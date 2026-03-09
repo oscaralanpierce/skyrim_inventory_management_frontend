@@ -19,17 +19,17 @@ const meta: Meta<typeof WishListItemCreateForm> = {
   component: WishListItemCreateForm,
   decorators: [
     (Story) => (
-      <LoginContext.Provider value={loginContextValue}>
+      <LoginContext value={loginContextValue}>
         <PageProvider>
-          <GamesContext.Provider value={gamesContextValue}>
-            <WishListsContext.Provider value={wishListsContextValue}>
+          <GamesContext value={gamesContextValue}>
+            <WishListsContext value={wishListsContextValue}>
               <ColorProvider colorScheme={BLUE}>
                 <Story />
               </ColorProvider>
-            </WishListsContext.Provider>
-          </GamesContext.Provider>
+            </WishListsContext>
+          </GamesContext>
         </PageProvider>
-      </LoginContext.Provider>
+      </LoginContext>
     ),
   ],
 }

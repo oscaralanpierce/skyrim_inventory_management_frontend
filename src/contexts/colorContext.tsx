@@ -9,7 +9,7 @@ interface ColorProviderProps extends ProviderProps {
 }
 
 const ColorProvider = ({ colorScheme, children }: ColorProviderProps) => (
-  <ColorContext.Provider value={colorScheme}>{children}</ColorContext.Provider>
+  <ColorContext value={colorScheme}>{children}</ColorContext>
 )
 
 export { ColorProvider, ColorContext }

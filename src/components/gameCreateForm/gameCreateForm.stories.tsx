@@ -12,9 +12,9 @@ const meta: Meta<typeof GameCreateForm> = {
   decorators: [
     (Story) => (
       <PageProvider>
-        <GamesContext.Provider value={gamesContextValue}>
+        <GamesContext value={gamesContextValue}>
           <Story />
-        </GamesContext.Provider>
+        </GamesContext>
       </PageProvider>
     ),
   ],
