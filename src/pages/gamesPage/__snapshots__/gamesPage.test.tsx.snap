@@ -54,6 +54,7 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
               >
                 <a
                   class="_headerLinkLarge_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   Skyrim Inventory
@@ -64,6 +65,7 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
                 </a>
                 <a
                   class="_headerLinkSmall_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -167,6 +169,7 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
             >
               <a
                 class="_headerLinkLarge_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 Skyrim Inventory
@@ -177,6 +180,7 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
               </a>
               <a
                 class="_headerLinkSmall_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 S. I. M.
@@ -337,6 +341,7 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
               >
                 <a
                   class="_headerLinkLarge_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   Skyrim Inventory
@@ -347,6 +352,7 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
                 </a>
                 <a
                   class="_headerLinkSmall_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -496,6 +502,7 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
             >
               <a
                 class="_headerLinkLarge_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 Skyrim Inventory
@@ -506,6 +513,7 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
               </a>
               <a
                 class="_headerLinkSmall_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 S. I. M.
@@ -712,6 +720,7 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
               >
                 <a
                   class="_headerLinkLarge_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   Skyrim Inventory
@@ -722,6 +731,7 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
                 </a>
                 <a
                   class="_headerLinkSmall_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -871,6 +881,7 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
             >
               <a
                 class="_headerLinkLarge_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 Skyrim Inventory
@@ -881,6 +892,7 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
               </a>
               <a
                 class="_headerLinkSmall_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 S. I. M.
@@ -1087,6 +1099,7 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
               >
                 <a
                   class="_headerLinkLarge_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   Skyrim Inventory
@@ -1097,6 +1110,7 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
                 </a>
                 <a
                   class="_headerLinkSmall_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -1246,6 +1260,7 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
             >
               <a
                 class="_headerLinkLarge_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 Skyrim Inventory
@@ -1256,6 +1271,7 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
               </a>
               <a
                 class="_headerLinkSmall_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 S. I. M.

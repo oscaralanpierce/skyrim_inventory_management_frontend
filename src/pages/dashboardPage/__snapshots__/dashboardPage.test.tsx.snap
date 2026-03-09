@@ -22,6 +22,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               >
                 <a
                   class="_root_c08070"
+                  data-discover="true"
                   href="/games"
                   style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
                 >
@@ -33,6 +34,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               >
                 <a
                   class="_root_c08070"
+                  data-discover="true"
                   href="/wish_lists"
                   style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
                 >
@@ -44,6 +46,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               >
                 <a
                   class="_root_c08070"
+                  data-discover="true"
                   href="/"
                   style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
                 >
@@ -55,6 +58,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               >
                 <a
                   class="_root_c08070"
+                  data-discover="true"
                   href="/"
                   style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
                 >
@@ -66,6 +70,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               >
                 <a
                   class="_root_c08070"
+                  data-discover="true"
                   href="/"
                   style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
                 >
@@ -89,6 +94,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               >
                 <a
                   class="_headerLinkLarge_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   Skyrim Inventory
@@ -99,6 +105,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
                 </a>
                 <a
                   class="_headerLinkSmall_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -216,6 +223,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
             >
               <a
                 class="_root_c08070"
+                data-discover="true"
                 href="/games"
                 style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
               >
@@ -227,6 +235,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
             >
               <a
                 class="_root_c08070"
+                data-discover="true"
                 href="/wish_lists"
                 style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
               >
@@ -238,6 +247,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
             >
               <a
                 class="_root_c08070"
+                data-discover="true"
                 href="/"
                 style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
               >
@@ -249,6 +259,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
             >
               <a
                 class="_root_c08070"
+                data-discover="true"
                 href="/"
                 style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
               >
@@ -260,6 +271,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
             >
               <a
                 class="_root_c08070"
+                data-discover="true"
                 href="/"
                 style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
               >
@@ -283,6 +295,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
             >
               <a
                 class="_headerLinkLarge_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 Skyrim Inventory
@@ -293,6 +306,7 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               </a>
               <a
                 class="_headerLinkSmall_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 S. I. M.
@@ -489,6 +503,7 @@ exports[`<DashboardPage /> > when auth is loading > matches snapshot 1`] = `
               >
                 <a
                   class="_headerLinkLarge_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   Skyrim Inventory
@@ -499,6 +514,7 @@ exports[`<DashboardPage /> > when auth is loading > matches snapshot 1`] = `
                 </a>
                 <a
                   class="_headerLinkSmall_faea2d"
+                  data-discover="true"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -592,6 +608,7 @@ exports[`<DashboardPage /> > when auth is loading > matches snapshot 1`] = `
             >
               <a
                 class="_headerLinkLarge_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 Skyrim Inventory
@@ -602,6 +619,7 @@ exports[`<DashboardPage /> > when auth is loading > matches snapshot 1`] = `
               </a>
               <a
                 class="_headerLinkSmall_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 S. I. M.

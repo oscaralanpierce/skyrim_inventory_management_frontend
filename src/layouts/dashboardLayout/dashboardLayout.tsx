@@ -45,7 +45,7 @@ const DashboardLayout = ({
 
   const setQueryString = (id: number | string) => {
     queryString.set('gameId', String(id))
-    navigate(`?${queryString.toString()}`)
+    void navigate(`?${queryString.toString()}`)
   }
 
   const onSubmitInput = (name: string) => {

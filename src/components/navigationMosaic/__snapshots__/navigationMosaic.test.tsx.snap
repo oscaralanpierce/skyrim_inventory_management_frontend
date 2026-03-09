@@ -13,6 +13,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         >
           <a
             class="_root_c08070"
+            data-discover="true"
             href="/yellow"
             style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
           >
@@ -24,6 +25,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         >
           <a
             class="_root_c08070"
+            data-discover="true"
             href="/pink"
             style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
           >
@@ -35,6 +37,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         >
           <a
             class="_root_c08070"
+            data-discover="true"
             href="/blue"
             style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
           >
@@ -46,6 +49,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         >
           <a
             class="_root_c08070"
+            data-discover="true"
             href="/green"
             style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
           >
@@ -57,6 +61,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         >
           <a
             class="_root_c08070"
+            data-discover="true"
             href="/aqua"
             style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
           >
@@ -75,6 +80,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
       >
         <a
           class="_root_c08070"
+          data-discover="true"
           href="/yellow"
           style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
         >
@@ -86,6 +92,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
       >
         <a
           class="_root_c08070"
+          data-discover="true"
           href="/pink"
           style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
         >
@@ -97,6 +104,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
       >
         <a
           class="_root_c08070"
+          data-discover="true"
           href="/blue"
           style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
         >
@@ -108,6 +116,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
       >
         <a
           class="_root_c08070"
+          data-discover="true"
           href="/green"
           style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
         >
@@ -119,6 +128,7 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
       >
         <a
           class="_root_c08070"
+          data-discover="true"
           href="/aqua"
           style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
         >
