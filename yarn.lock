@@ -2764,7 +2764,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^19.0.0":
+"@types/react-dom@npm:^19.2.3":
   version: 19.2.3
   resolution: "@types/react-dom@npm:19.2.3"
   peerDependencies:
@@ -2804,7 +2804,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19.0.0":
+"@types/react@npm:^19.2.14":
   version: 19.2.14
   resolution: "@types/react@npm:19.2.14"
   dependencies:
@@ -6074,18 +6074,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.1.5":
-  version: 19.1.5
-  resolution: "react-dom@npm:19.1.5"
-  dependencies:
-    scheduler: ^0.26.0
-  peerDependencies:
-    react: ^19.1.5
-  checksum: 213ecb5ca72ba56076c9cc1e66d7eb846d397f58baaf81482559183d40f6a25fa606c1f666daffc2928cee035cffcda6b1723514956fba29cb75768f41b382cd
-  languageName: node
-  linkType: hard
-
-"react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
+"react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0, react-dom@npm:^19.2.4":
   version: 19.2.4
   resolution: "react-dom@npm:19.2.4"
   dependencies:
@@ -6181,14 +6170,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.1.5":
-  version: 19.1.5
-  resolution: "react@npm:19.1.5"
-  checksum: 4b0335bed9bcbeaa6219ead10af69ceaea631dc167015a97f0f4ca143db893822749d38aa542a4c121b22e1bacc98188cce5ea3ddec59e762fbd9cf11a2b247d
-  languageName: node
-  linkType: hard
-
-"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
+"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0, react@npm:^19.2.4":
   version: 19.2.4
   resolution: "react@npm:19.2.4"
   checksum: edf2b96619fab3a8b11714f16a0994a92c6b473aecf3269b63e4fa317d3073d40513c1f19cf4415ebbad94d35b48ff76ad768480db663037e2d929e8d60596b8
@@ -6426,13 +6408,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.26.0":
-  version: 0.26.0
-  resolution: "scheduler@npm:0.26.0"
-  checksum: c63a9f1c0e5089b537231cff6c11f75455b5c8625ae09535c1d7cd0a1b0c77ceecdd9f1074e5e063da5d8dc11e73e8033dcac3361791088be08a6e60c0283ed9
-  languageName: node
-  linkType: hard
-
 "scheduler@npm:^0.27.0":
   version: 0.27.0
   resolution: "scheduler@npm:0.27.0"
@@ -6549,8 +6524,8 @@ __metadata:
     "@testing-library/react": ^16.0.1
     "@types/jsdom": ^21.1.7
     "@types/node": ^22.9.0
-    "@types/react": ^19.0.0
-    "@types/react-dom": ^19.0.0
+    "@types/react": ^19.2.14
+    "@types/react-dom": ^19.2.3
     "@types/react-router-dom": ^5.3.3
     "@vitejs/plugin-react": ^5.1.4
     babel-loader: ^10.1.0
@@ -6562,9 +6537,9 @@ __metadata:
     jsdom: ^25.0.0
     msw: ^2.6.6
     prettier: 3.3.3
-    react: 19.1.5
+    react: ^19.2.4
     react-animate-height: ^3.2.3
-    react-dom: 19.1.5
+    react-dom: ^19.2.4
     react-firebase-hooks: ^5.1.1
     react-helmet-async: ^2.0.5
     react-router-dom: ^6.28.0
