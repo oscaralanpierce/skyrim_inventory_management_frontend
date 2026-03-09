@@ -6,49 +6,49 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <h2
-              class="_title_03d657"
+              class="_title_78663b"
             >
               Page Title
             </h2>
           </div>
           <hr
-            class="_hr_03d657"
+            class="_hr_78663b"
           />
           Hello World
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -56,18 +56,18 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -79,29 +79,29 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -120,7 +120,7 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -130,18 +130,18 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -150,49 +150,49 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <h2
-            class="_title_03d657"
+            class="_title_78663b"
           >
             Page Title
           </h2>
         </div>
         <hr
-          class="_hr_03d657"
+          class="_hr_78663b"
         />
         Hello World
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -200,18 +200,18 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -223,29 +223,29 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -264,7 +264,7 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -274,18 +274,18 @@ exports[`<DashboardLayout> > when a title is given > matches snapshot 1`] = `
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>
@@ -351,16 +351,16 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <div
-              class="_root_0a8ecf _select_03d657"
+              class="_root_706192 _select_78663b"
               data-testid="styledSelect"
               style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
             >
@@ -369,19 +369,19 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-owns="selectListbox"
-                class="_header_0a8ecf"
+                class="_header_706192"
                 role="combobox"
               >
                 <input
                   aria-label="Add or Select Option"
-                  class="_headerText_0a8ecf"
+                  class="_headerText_706192"
                 />
                 <button
-                  class="_trigger_0a8ecf"
+                  class="_trigger_706192"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+                    class="svg-inline--fa fa-angle-down _fa_706192"
                     data-icon="angle-down"
                     data-prefix="fas"
                     role="img"
@@ -395,27 +395,27 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                 </button>
               </div>
               <ul
-                class="_dropdown_0a8ecf _hidden_0a8ecf"
+                class="_dropdown_706192 _hidden_706192"
                 id="selectListbox"
                 role="listbox"
               >
                 <li
                   aria-selected="false"
-                  class="_root_b75fe4"
+                  class="_root_6af4e6"
                   data-option-value="32"
                   role="option"
                   tabindex="0"
                 />
                 <li
                   aria-selected="true"
-                  class="_root_b75fe4"
+                  class="_root_6af4e6"
                   data-option-value="51"
                   role="option"
                   tabindex="0"
                 />
                 <li
                   aria-selected="false"
-                  class="_root_b75fe4"
+                  class="_root_6af4e6"
                   data-option-value="77"
                   role="option"
                   tabindex="0"
@@ -424,34 +424,34 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
             </div>
           </div>
           <hr
-            class="_hr_03d657 _hiddenDivider_03d657"
+            class="_hr_78663b _hiddenDivider_78663b"
           />
           Hello World
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -459,18 +459,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -482,29 +482,29 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -523,7 +523,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -533,18 +533,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -553,16 +553,16 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <div
-            class="_root_0a8ecf _select_03d657"
+            class="_root_706192 _select_78663b"
             data-testid="styledSelect"
             style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
           >
@@ -571,19 +571,19 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-owns="selectListbox"
-              class="_header_0a8ecf"
+              class="_header_706192"
               role="combobox"
             >
               <input
                 aria-label="Add or Select Option"
-                class="_headerText_0a8ecf"
+                class="_headerText_706192"
               />
               <button
-                class="_trigger_0a8ecf"
+                class="_trigger_706192"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+                  class="svg-inline--fa fa-angle-down _fa_706192"
                   data-icon="angle-down"
                   data-prefix="fas"
                   role="img"
@@ -597,27 +597,27 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
               </button>
             </div>
             <ul
-              class="_dropdown_0a8ecf _hidden_0a8ecf"
+              class="_dropdown_706192 _hidden_706192"
               id="selectListbox"
               role="listbox"
             >
               <li
                 aria-selected="false"
-                class="_root_b75fe4"
+                class="_root_6af4e6"
                 data-option-value="32"
                 role="option"
                 tabindex="0"
               />
               <li
                 aria-selected="true"
-                class="_root_b75fe4"
+                class="_root_6af4e6"
                 data-option-value="51"
                 role="option"
                 tabindex="0"
               />
               <li
                 aria-selected="false"
-                class="_root_b75fe4"
+                class="_root_6af4e6"
                 data-option-value="77"
                 role="option"
                 tabindex="0"
@@ -626,34 +626,34 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
           </div>
         </div>
         <hr
-          class="_hr_03d657 _hiddenDivider_03d657"
+          class="_hr_78663b _hiddenDivider_78663b"
         />
         Hello World
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -661,18 +661,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -684,29 +684,29 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -725,7 +725,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -735,18 +735,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>
@@ -812,16 +812,16 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <div
-              class="_root_0a8ecf _select_03d657"
+              class="_root_706192 _select_78663b"
               data-testid="styledSelect"
               style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
             >
@@ -830,19 +830,19 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-owns="selectListbox"
-                class="_header_0a8ecf"
+                class="_header_706192"
                 role="combobox"
               >
                 <input
                   aria-label="Add or Select Option"
-                  class="_headerText_0a8ecf"
+                  class="_headerText_706192"
                 />
                 <button
-                  class="_trigger_0a8ecf"
+                  class="_trigger_706192"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+                    class="svg-inline--fa fa-angle-down _fa_706192"
                     data-icon="angle-down"
                     data-prefix="fas"
                     role="img"
@@ -856,27 +856,27 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                 </button>
               </div>
               <ul
-                class="_dropdown_0a8ecf _hidden_0a8ecf"
+                class="_dropdown_706192 _hidden_706192"
                 id="selectListbox"
                 role="listbox"
               >
                 <li
                   aria-selected="false"
-                  class="_root_b75fe4"
+                  class="_root_6af4e6"
                   data-option-value="32"
                   role="option"
                   tabindex="0"
                 />
                 <li
                   aria-selected="false"
-                  class="_root_b75fe4"
+                  class="_root_6af4e6"
                   data-option-value="51"
                   role="option"
                   tabindex="0"
                 />
                 <li
                   aria-selected="false"
-                  class="_root_b75fe4"
+                  class="_root_6af4e6"
                   data-option-value="77"
                   role="option"
                   tabindex="0"
@@ -885,34 +885,34 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
             </div>
           </div>
           <hr
-            class="_hr_03d657 _hiddenDivider_03d657"
+            class="_hr_78663b _hiddenDivider_78663b"
           />
           Hello World
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -920,18 +920,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -943,29 +943,29 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -984,7 +984,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -994,18 +994,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -1014,16 +1014,16 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <div
-            class="_root_0a8ecf _select_03d657"
+            class="_root_706192 _select_78663b"
             data-testid="styledSelect"
             style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
           >
@@ -1032,19 +1032,19 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-owns="selectListbox"
-              class="_header_0a8ecf"
+              class="_header_706192"
               role="combobox"
             >
               <input
                 aria-label="Add or Select Option"
-                class="_headerText_0a8ecf"
+                class="_headerText_706192"
               />
               <button
-                class="_trigger_0a8ecf"
+                class="_trigger_706192"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+                  class="svg-inline--fa fa-angle-down _fa_706192"
                   data-icon="angle-down"
                   data-prefix="fas"
                   role="img"
@@ -1058,27 +1058,27 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
               </button>
             </div>
             <ul
-              class="_dropdown_0a8ecf _hidden_0a8ecf"
+              class="_dropdown_706192 _hidden_706192"
               id="selectListbox"
               role="listbox"
             >
               <li
                 aria-selected="false"
-                class="_root_b75fe4"
+                class="_root_6af4e6"
                 data-option-value="32"
                 role="option"
                 tabindex="0"
               />
               <li
                 aria-selected="false"
-                class="_root_b75fe4"
+                class="_root_6af4e6"
                 data-option-value="51"
                 role="option"
                 tabindex="0"
               />
               <li
                 aria-selected="false"
-                class="_root_b75fe4"
+                class="_root_6af4e6"
                 data-option-value="77"
                 role="option"
                 tabindex="0"
@@ -1087,34 +1087,34 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
           </div>
         </div>
         <hr
-          class="_hr_03d657 _hiddenDivider_03d657"
+          class="_hr_78663b _hiddenDivider_78663b"
         />
         Hello World
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -1122,18 +1122,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -1145,29 +1145,29 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -1186,7 +1186,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -1196,18 +1196,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when a ga
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>
@@ -1273,21 +1273,21 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <h2
-              class="_title_03d657"
+              class="_title_78663b"
             >
               Your Games
             </h2>
             <div
-              class="_root_0a8ecf _select_03d657 _disabled_0a8ecf"
+              class="_root_706192 _select_78663b _disabled_706192"
               data-testid="styledSelect"
               style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
             >
@@ -1296,20 +1296,20 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-owns="selectListbox"
-                class="_header_0a8ecf"
+                class="_header_706192"
                 role="combobox"
               >
                 <input
                   aria-label="Add or Select Option"
-                  class="_headerText_0a8ecf"
+                  class="_headerText_706192"
                 />
                 <button
-                  class="_trigger_0a8ecf"
+                  class="_trigger_706192"
                   disabled=""
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+                    class="svg-inline--fa fa-angle-down _fa_706192"
                     data-icon="angle-down"
                     data-prefix="fas"
                     role="img"
@@ -1323,41 +1323,41 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
                 </button>
               </div>
               <ul
-                class="_dropdown_0a8ecf _hidden_0a8ecf"
+                class="_dropdown_706192 _hidden_706192"
                 id="selectListbox"
                 role="listbox"
               />
             </div>
           </div>
           <hr
-            class="_hr_03d657"
+            class="_hr_78663b"
           />
           Hello World
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -1365,18 +1365,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -1388,29 +1388,29 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -1429,7 +1429,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -1439,18 +1439,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -1459,21 +1459,21 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <h2
-            class="_title_03d657"
+            class="_title_78663b"
           >
             Your Games
           </h2>
           <div
-            class="_root_0a8ecf _select_03d657 _disabled_0a8ecf"
+            class="_root_706192 _select_78663b _disabled_706192"
             data-testid="styledSelect"
             style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
           >
@@ -1482,20 +1482,20 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-owns="selectListbox"
-              class="_header_0a8ecf"
+              class="_header_706192"
               role="combobox"
             >
               <input
                 aria-label="Add or Select Option"
-                class="_headerText_0a8ecf"
+                class="_headerText_706192"
               />
               <button
-                class="_trigger_0a8ecf"
+                class="_trigger_706192"
                 disabled=""
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+                  class="svg-inline--fa fa-angle-down _fa_706192"
                   data-icon="angle-down"
                   data-prefix="fas"
                   role="img"
@@ -1509,41 +1509,41 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
               </button>
             </div>
             <ul
-              class="_dropdown_0a8ecf _hidden_0a8ecf"
+              class="_dropdown_706192 _hidden_706192"
               id="selectListbox"
               role="listbox"
             />
           </div>
         </div>
         <hr
-          class="_hr_03d657"
+          class="_hr_78663b"
         />
         Hello World
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -1551,18 +1551,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -1574,29 +1574,29 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -1615,7 +1615,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -1625,18 +1625,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when game
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>
@@ -1702,16 +1702,16 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <div
-              class="_root_0a8ecf _select_03d657 _disabled_0a8ecf"
+              class="_root_706192 _select_78663b _disabled_706192"
               data-testid="styledSelect"
               style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
             >
@@ -1720,20 +1720,20 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-owns="selectListbox"
-                class="_header_0a8ecf"
+                class="_header_706192"
                 role="combobox"
               >
                 <input
                   aria-label="Add or Select Option"
-                  class="_headerText_0a8ecf"
+                  class="_headerText_706192"
                 />
                 <button
-                  class="_trigger_0a8ecf"
+                  class="_trigger_706192"
                   disabled=""
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+                    class="svg-inline--fa fa-angle-down _fa_706192"
                     data-icon="angle-down"
                     data-prefix="fas"
                     role="img"
@@ -1747,41 +1747,41 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
                 </button>
               </div>
               <ul
-                class="_dropdown_0a8ecf _hidden_0a8ecf"
+                class="_dropdown_706192 _hidden_706192"
                 id="selectListbox"
                 role="listbox"
               />
             </div>
           </div>
           <hr
-            class="_hr_03d657 _hiddenDivider_03d657"
+            class="_hr_78663b _hiddenDivider_78663b"
           />
           Hello World
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -1789,18 +1789,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -1812,29 +1812,29 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -1853,7 +1853,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -1863,18 +1863,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -1883,16 +1883,16 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <div
-            class="_root_0a8ecf _select_03d657 _disabled_0a8ecf"
+            class="_root_706192 _select_78663b _disabled_706192"
             data-testid="styledSelect"
             style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
           >
@@ -1901,20 +1901,20 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-owns="selectListbox"
-              class="_header_0a8ecf"
+              class="_header_706192"
               role="combobox"
             >
               <input
                 aria-label="Add or Select Option"
-                class="_headerText_0a8ecf"
+                class="_headerText_706192"
               />
               <button
-                class="_trigger_0a8ecf"
+                class="_trigger_706192"
                 disabled=""
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+                  class="svg-inline--fa fa-angle-down _fa_706192"
                   data-icon="angle-down"
                   data-prefix="fas"
                   role="img"
@@ -1928,41 +1928,41 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
               </button>
             </div>
             <ul
-              class="_dropdown_0a8ecf _hidden_0a8ecf"
+              class="_dropdown_706192 _hidden_706192"
               id="selectListbox"
               role="listbox"
             />
           </div>
         </div>
         <hr
-          class="_hr_03d657 _hiddenDivider_03d657"
+          class="_hr_78663b _hiddenDivider_78663b"
         />
         Hello World
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -1970,18 +1970,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -1993,29 +1993,29 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -2034,7 +2034,7 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -2044,18 +2044,18 @@ exports[`<DashboardLayout> > when includeGameSelector is set to true > when ther
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>
@@ -2121,37 +2121,37 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           Hello World
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -2159,18 +2159,18 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -2182,29 +2182,29 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -2223,7 +2223,7 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -2233,18 +2233,18 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -2253,37 +2253,37 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         Hello World
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -2291,18 +2291,18 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -2314,29 +2314,29 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -2355,7 +2355,7 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -2365,18 +2365,18 @@ exports[`<DashboardLayout> > when no title is given > matches snapshot 1`] = `
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>

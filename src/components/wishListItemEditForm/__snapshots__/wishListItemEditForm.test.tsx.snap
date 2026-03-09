@@ -6,16 +6,16 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_33b39d"
+        class="_root_c7828a"
         style="--button-background-color: #2274a5; --button-text-color: #fff; --button-hover-color: #1e6894; --button-border-color: #1b5c84;"
       >
         <h3
-          class="_header_33b39d"
+          class="_header_c7828a"
         >
           Health potion ingredients
         </h3>
         <p
-          class="_subheader_33b39d"
+          class="_subheader_c7828a"
         >
           On list "Alchemy Ingredients"
         </p>
@@ -23,14 +23,14 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
           data-testid="editWishListItem6Form"
         >
           <fieldset
-            class="_fieldset_33b39d"
+            class="_fieldset_c7828a"
           >
             <label
-              class="_label_33b39d"
+              class="_label_c7828a"
             >
               Quantity
               <input
-                class="_input_33b39d"
+                class="_input_c7828a"
                 inputmode="numeric"
                 min="1"
                 name="quantity"
@@ -44,14 +44,14 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
             </label>
           </fieldset>
           <fieldset
-            class="_fieldset_33b39d"
+            class="_fieldset_c7828a"
           >
             <label
-              class="_label_33b39d"
+              class="_label_c7828a"
             >
               Unit Weight
               <input
-                class="_input_33b39d"
+                class="_input_c7828a"
                 inputmode="decimal"
                 min="0"
                 name="unit_weight"
@@ -63,14 +63,14 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
             </label>
           </fieldset>
           <fieldset
-            class="_fieldset_33b39d"
+            class="_fieldset_c7828a"
           >
             <label
-              class="_label_33b39d"
+              class="_label_c7828a"
             >
               Notes
               <input
-                class="_input_33b39d"
+                class="_input_c7828a"
                 name="notes"
                 placeholder="Notes"
                 type="text"
@@ -78,7 +78,7 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
             </label>
           </fieldset>
           <button
-            class="_submit_33b39d"
+            class="_submit_c7828a"
             type="submit"
           >
             Update Item
@@ -89,16 +89,16 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_33b39d"
+      class="_root_c7828a"
       style="--button-background-color: #2274a5; --button-text-color: #fff; --button-hover-color: #1e6894; --button-border-color: #1b5c84;"
     >
       <h3
-        class="_header_33b39d"
+        class="_header_c7828a"
       >
         Health potion ingredients
       </h3>
       <p
-        class="_subheader_33b39d"
+        class="_subheader_c7828a"
       >
         On list "Alchemy Ingredients"
       </p>
@@ -106,14 +106,14 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
         data-testid="editWishListItem6Form"
       >
         <fieldset
-          class="_fieldset_33b39d"
+          class="_fieldset_c7828a"
         >
           <label
-            class="_label_33b39d"
+            class="_label_c7828a"
           >
             Quantity
             <input
-              class="_input_33b39d"
+              class="_input_c7828a"
               inputmode="numeric"
               min="1"
               name="quantity"
@@ -127,14 +127,14 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
           </label>
         </fieldset>
         <fieldset
-          class="_fieldset_33b39d"
+          class="_fieldset_c7828a"
         >
           <label
-            class="_label_33b39d"
+            class="_label_c7828a"
           >
             Unit Weight
             <input
-              class="_input_33b39d"
+              class="_input_c7828a"
               inputmode="decimal"
               min="0"
               name="unit_weight"
@@ -146,14 +146,14 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
           </label>
         </fieldset>
         <fieldset
-          class="_fieldset_33b39d"
+          class="_fieldset_c7828a"
         >
           <label
-            class="_label_33b39d"
+            class="_label_c7828a"
           >
             Notes
             <input
-              class="_input_33b39d"
+              class="_input_c7828a"
               name="notes"
               placeholder="Notes"
               type="text"
@@ -161,7 +161,7 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
           </label>
         </fieldset>
         <button
-          class="_submit_33b39d"
+          class="_submit_c7828a"
           type="submit"
         >
           Update Item

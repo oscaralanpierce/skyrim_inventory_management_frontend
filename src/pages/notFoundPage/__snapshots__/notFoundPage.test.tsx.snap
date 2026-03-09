@@ -6,18 +6,18 @@ exports[`<NotFoundPage /> > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_5d635c"
+        class="_root_9c76bb"
       >
         <div
-          class="_container_5d635c"
+          class="_container_9c76bb"
         >
           <h1
-            class="_header_5d635c"
+            class="_header_9c76bb"
           >
             SIM: Page Not Found
           </h1>
           <a
-            class="_link_5d635c"
+            class="_link_9c76bb"
             href="/"
           >
             Go Back
@@ -28,18 +28,18 @@ exports[`<NotFoundPage /> > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_5d635c"
+      class="_root_9c76bb"
     >
       <div
-        class="_container_5d635c"
+        class="_container_9c76bb"
       >
         <h1
-          class="_header_5d635c"
+          class="_header_9c76bb"
         >
           SIM: Page Not Found
         </h1>
         <a
-          class="_link_5d635c"
+          class="_link_9c76bb"
           href="/"
         >
           Go Back

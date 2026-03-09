@@ -6,18 +6,18 @@ exports[`<UserInfo /> > UserInfo matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <span
-        class="_root_d263fb"
+        class="_root_658745"
       >
         <div
-          class="_main_d263fb"
+          class="_main_658745"
         >
           <div
-            class="_button_d263fb"
+            class="_button_658745"
             role="button"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-bars _hamburger_d263fb"
+              class="svg-inline--fa fa-bars _hamburger_658745"
               data-icon="bars"
               data-prefix="fas"
               role="img"
@@ -29,29 +29,29 @@ exports[`<UserInfo /> > UserInfo matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="_info_d263fb"
+              class="_info_658745"
             >
               <p
-                class="_name_d263fb"
+                class="_name_658745"
               >
                 Edna St. Vincent Millay
               </p>
               <p
-                class="_email_d263fb"
+                class="_email_658745"
               >
                 edna@gmail.com
               </p>
             </span>
             <img
               alt="User profile image"
-              class="_img_d263fb"
+              class="_img_658745"
               referrerpolicy="no-referrer"
               src="/src/support/testProfileImg.png"
             />
           </div>
         </div>
         <menu
-          class="_dropdown_d263fb"
+          class="_dropdown_658745"
         >
           <div
             role="button"
@@ -70,7 +70,7 @@ exports[`<UserInfo /> > UserInfo matches snapshot 1`] = `
               />
             </svg>
             <p
-              class="_signOutText_d263fb"
+              class="_signOutText_658745"
             >
               Sign Out
             </p>
@@ -81,18 +81,18 @@ exports[`<UserInfo /> > UserInfo matches snapshot 1`] = `
   </body>,
   "container": <div>
     <span
-      class="_root_d263fb"
+      class="_root_658745"
     >
       <div
-        class="_main_d263fb"
+        class="_main_658745"
       >
         <div
-          class="_button_d263fb"
+          class="_button_658745"
           role="button"
         >
           <svg
             aria-hidden="true"
-            class="svg-inline--fa fa-bars _hamburger_d263fb"
+            class="svg-inline--fa fa-bars _hamburger_658745"
             data-icon="bars"
             data-prefix="fas"
             role="img"
@@ -104,29 +104,29 @@ exports[`<UserInfo /> > UserInfo matches snapshot 1`] = `
             />
           </svg>
           <span
-            class="_info_d263fb"
+            class="_info_658745"
           >
             <p
-              class="_name_d263fb"
+              class="_name_658745"
             >
               Edna St. Vincent Millay
             </p>
             <p
-              class="_email_d263fb"
+              class="_email_658745"
             >
               edna@gmail.com
             </p>
           </span>
           <img
             alt="User profile image"
-            class="_img_d263fb"
+            class="_img_658745"
             referrerpolicy="no-referrer"
             src="/src/support/testProfileImg.png"
           />
         </div>
       </div>
       <menu
-        class="_dropdown_d263fb"
+        class="_dropdown_658745"
       >
         <div
           role="button"
@@ -145,7 +145,7 @@ exports[`<UserInfo /> > UserInfo matches snapshot 1`] = `
             />
           </svg>
           <p
-            class="_signOutText_d263fb"
+            class="_signOutText_658745"
           >
             Sign Out
           </p>

@@ -7,7 +7,7 @@ exports[`StyledSelectOption > displaying the option > when not selected > when t
     <div>
       <li
         aria-selected="false"
-        class="_root_b75fe4"
+        class="_root_6af4e6"
         data-option-value="De Finibus"
         role="option"
         tabindex="0"
@@ -17,7 +17,7 @@ exports[`StyledSelectOption > displaying the option > when not selected > when t
   "container": <div>
     <li
       aria-selected="false"
-      class="_root_b75fe4"
+      class="_root_6af4e6"
       data-option-value="De Finibus"
       role="option"
       tabindex="0"
@@ -84,7 +84,7 @@ exports[`StyledSelectOption > displaying the option > when not selected > when t
     <div>
       <li
         aria-selected="false"
-        class="_root_b75fe4"
+        class="_root_6af4e6"
         data-option-value="22"
         role="option"
         tabindex="0"
@@ -94,7 +94,7 @@ exports[`StyledSelectOption > displaying the option > when not selected > when t
   "container": <div>
     <li
       aria-selected="false"
-      class="_root_b75fe4"
+      class="_root_6af4e6"
       data-option-value="22"
       role="option"
       tabindex="0"
@@ -161,7 +161,7 @@ exports[`StyledSelectOption > displaying the option > when selected > matches sn
     <div>
       <li
         aria-selected="true"
-        class="_root_b75fe4"
+        class="_root_6af4e6"
         data-option-value="1"
         role="option"
         tabindex="0"
@@ -171,7 +171,7 @@ exports[`StyledSelectOption > displaying the option > when selected > matches sn
   "container": <div>
     <li
       aria-selected="true"
-      class="_root_b75fe4"
+      class="_root_6af4e6"
       data-option-value="1"
       role="option"
       tabindex="0"

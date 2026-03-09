@@ -6,25 +6,25 @@ exports[`<HomePage /> > when unauthenticated > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_d1e903"
+        class="_root_1d9dec"
       >
         <div
-          class="_container_d1e903"
+          class="_container_1d9dec"
         >
           <h1
-            class="_header_d1e903"
+            class="_header_1d9dec"
           >
             Skyrim Inventory Management
           </h1>
           <div
-            class="_login_d1e903"
+            class="_login_1d9dec"
           >
             <button
-              class="_root_7e43e6"
+              class="_root_913e3c"
               value="Sign in with Google"
             >
               <div
-                class="_background_7e43e6"
+                class="_background_913e3c"
               />
             </button>
           </div>
@@ -34,25 +34,25 @@ exports[`<HomePage /> > when unauthenticated > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_d1e903"
+      class="_root_1d9dec"
     >
       <div
-        class="_container_d1e903"
+        class="_container_1d9dec"
       >
         <h1
-          class="_header_d1e903"
+          class="_header_1d9dec"
         >
           Skyrim Inventory Management
         </h1>
         <div
-          class="_login_d1e903"
+          class="_login_1d9dec"
         >
           <button
-            class="_root_7e43e6"
+            class="_root_913e3c"
             value="Sign in with Google"
           >
             <div
-              class="_background_7e43e6"
+              class="_background_913e3c"
             />
           </button>
         </div>

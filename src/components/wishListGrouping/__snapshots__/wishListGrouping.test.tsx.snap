@@ -6,7 +6,7 @@ exports[`WishListGrouping > when there are no wish lists > matches snapshot 1`] 
   "baseElement": <body>
     <div>
       <p
-        class="_noLists_da4596"
+        class="_noLists_8bc9d7"
       >
         This game has no wish lists.
       </p>
@@ -14,7 +14,7 @@ exports[`WishListGrouping > when there are no wish lists > matches snapshot 1`] 
   </body>,
   "container": <div>
     <p
-      class="_noLists_da4596"
+      class="_noLists_8bc9d7"
     >
       This game has no wish lists.
     </p>
@@ -79,23 +79,23 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_da4596"
+        class="_root_8bc9d7"
       >
         <div
-          class="_wishList_da4596"
+          class="_wishList_8bc9d7"
         >
           <div
-            class="_root_ec6c68"
+            class="_root_015e9f"
             style="--scheme-color: #ffbf00; --border-color: #cc9800; --text-color-primary: #4c3900; --text-color-secondary: #4c3900; --hover-color: #e5ab00; --scheme-color-lighter: #ffcb32; --scheme-color-lightest: #fff2cc; --max-title-width: -32px;"
           >
             <div
               aria-controls="list3Details"
               aria-expanded="false"
-              class="_trigger_ec6c68"
+              class="_trigger_015e9f"
               role="button"
             >
               <h3
-                class="_title_ec6c68"
+                class="_title_015e9f"
               >
                 All Items
               </h3>
@@ -110,31 +110,31 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 style="display: none;"
               >
                 <div
-                  class="_details_ec6c68"
+                  class="_details_015e9f"
                 >
                   <div
-                    class="_root_54cfce"
+                    class="_root_8f9b4a"
                     style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
                   >
                     <div
                       aria-controls="wishListItem6Details"
                       aria-expanded="false"
-                      class="_trigger_54cfce"
+                      class="_trigger_8f9b4a"
                     >
                       <span
-                        class="_descriptionContainer_54cfce"
+                        class="_descriptionContainer_8f9b4a"
                       >
                         <h3
-                          class="_description_54cfce"
+                          class="_description_8f9b4a"
                         >
                           Dwarven Cog
                         </h3>
                       </span>
                       <span
-                        class="_quantity_54cfce"
+                        class="_quantity_8f9b4a"
                       >
                         <span
-                          class="_quantityContent_54cfce"
+                          class="_quantityContent_8f9b4a"
                         >
                           11
                         </span>
@@ -150,15 +150,15 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         style="display: none;"
                       >
                         <div
-                          class="_details_54cfce"
+                          class="_details_8f9b4a"
                         >
                           <h4
-                            class="_label_54cfce"
+                            class="_label_8f9b4a"
                           >
                             Unit Weight:
                           </h4>
                           <p
-                            class="_value_54cfce"
+                            class="_value_8f9b4a"
                           >
                             10
                           </p>
@@ -167,28 +167,28 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    class="_root_54cfce"
+                    class="_root_8f9b4a"
                     style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
                   >
                     <div
                       aria-controls="wishListItem9Details"
                       aria-expanded="false"
-                      class="_trigger_54cfce"
+                      class="_trigger_8f9b4a"
                     >
                       <span
-                        class="_descriptionContainer_54cfce"
+                        class="_descriptionContainer_8f9b4a"
                       >
                         <h3
-                          class="_description_54cfce"
+                          class="_description_8f9b4a"
                         >
                           This item has a really really really really really long description for testing purposes
                         </h3>
                       </span>
                       <span
-                        class="_quantity_54cfce"
+                        class="_quantity_8f9b4a"
                       >
                         <span
-                          class="_quantityContent_54cfce"
+                          class="_quantityContent_8f9b4a"
                         >
                           200000000000
                         </span>
@@ -204,15 +204,15 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         style="display: none;"
                       >
                         <div
-                          class="_details_54cfce"
+                          class="_details_8f9b4a"
                         >
                           <h4
-                            class="_label_54cfce"
+                            class="_label_8f9b4a"
                           >
                             Unit Weight:
                           </h4>
                           <p
-                            class="_value_54cfce"
+                            class="_value_8f9b4a"
                           >
                             400000000000
                           </p>
@@ -226,28 +226,28 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="_wishList_da4596"
+          class="_wishList_8bc9d7"
         >
           <div
-            class="_root_ec6c68"
+            class="_root_015e9f"
             style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -16px;"
           >
             <div
               aria-controls="list4Details"
               aria-expanded="false"
-              class="_trigger_ec6c68"
+              class="_trigger_015e9f"
               role="button"
             >
               <span
-                class="_icons_ec6c68"
+                class="_icons_015e9f"
               >
                 <button
-                  class="_icon_ec6c68"
+                  class="_icon_015e9f"
                   data-testid="destroyWishList4"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-xmark _fa_ec6c68"
+                    class="svg-inline--fa fa-xmark _fa_015e9f"
                     data-icon="xmark"
                     data-prefix="fas"
                     role="img"
@@ -260,12 +260,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="_icon_ec6c68"
+                  class="_icon_015e9f"
                   data-testid="editWishList4"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                    class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                     data-icon="pen-to-square"
                     data-prefix="fas"
                     role="img"
@@ -279,7 +279,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 </button>
               </span>
               <h3
-                class="_title_ec6c68"
+                class="_title_015e9f"
               >
                 Honeyside
               </h3>
@@ -294,19 +294,19 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 style="display: none;"
               >
                 <div
-                  class="_details_ec6c68"
+                  class="_details_015e9f"
                 >
                   <div
-                    class="_root_8112da _collapsed_8112da"
+                    class="_root_1a276c _collapsed_1a276c"
                     style="--base-color: #ec658b; --hover-color: #ea527d; --body-color: #fad8e2; --border-color: #b93258; --text-color-main: #fff; --text-color-secondary: #451221;"
                   >
                     <div
-                      class="_triggerContainer_8112da"
+                      class="_triggerContainer_1a276c"
                     >
                       <button
                         aria-controls="addItemToWishList4"
                         aria-expanded="false"
-                        class="_trigger_8112da"
+                        class="_trigger_1a276c"
                       >
                         Add item to list...
                       </button>
@@ -322,14 +322,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       >
                         <form
                           aria-label="Wish list item creation form"
-                          class="_form_8112da"
+                          class="_form_1a276c"
                         >
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Description
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               name="description"
                               placeholder="Description"
                               required=""
@@ -337,11 +337,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Quantity
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               inputmode="numeric"
                               min="1"
                               name="quantity"
@@ -354,11 +354,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Unit Weight
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               inputmode="decimal"
                               min="0"
                               name="unit_weight"
@@ -368,18 +368,18 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Notes
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               name="notes"
                               placeholder="Notes"
                               type="text"
                             />
                           </label>
                           <button
-                            class="_submit_8112da"
+                            class="_submit_1a276c"
                             type="submit"
                           >
                             Add to List
@@ -389,27 +389,27 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    class="_root_54cfce"
+                    class="_root_8f9b4a"
                     style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
                   >
                     <div
                       aria-controls="wishListItem8Details"
                       aria-expanded="false"
-                      class="_trigger_54cfce"
+                      class="_trigger_8f9b4a"
                     >
                       <span
-                        class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                        class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                       >
                         <span
-                          class="_editIcons_54cfce"
+                          class="_editIcons_8f9b4a"
                         >
                           <button
-                            class="_icon_54cfce"
+                            class="_icon_8f9b4a"
                             data-testid="destroyWishListItem8"
                           >
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-xmark _fa_54cfce"
+                              class="svg-inline--fa fa-xmark _fa_8f9b4a"
                               data-icon="xmark"
                               data-prefix="fas"
                               role="img"
@@ -422,12 +422,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             </svg>
                           </button>
                           <button
-                            class="_icon_54cfce"
+                            class="_icon_8f9b4a"
                             data-testid="editWishListItem8"
                           >
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                              class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                               data-icon="pen-to-square"
                               data-prefix="fas"
                               role="img"
@@ -441,21 +441,21 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </button>
                         </span>
                         <h3
-                          class="_description_54cfce"
+                          class="_description_8f9b4a"
                         >
                           This item has a really really really really really long description for testing purposes
                         </h3>
                       </span>
                       <span
-                        class="_quantityEditable_54cfce"
+                        class="_quantityEditable_8f9b4a"
                       >
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="incrementWishListItem8"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                            class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                             data-icon="chevron-up"
                             data-prefix="fas"
                             role="img"
@@ -468,17 +468,17 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </svg>
                         </button>
                         <span
-                          class="_quantityContent_54cfce"
+                          class="_quantityContent_8f9b4a"
                         >
                           200000000000
                         </span>
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="decrementWishListItem8"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                            class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                             data-icon="chevron-down"
                             data-prefix="fas"
                             role="img"
@@ -502,25 +502,25 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         style="display: none;"
                       >
                         <div
-                          class="_details_54cfce"
+                          class="_details_8f9b4a"
                         >
                           <h4
-                            class="_label_54cfce"
+                            class="_label_8f9b4a"
                           >
                             Unit Weight:
                           </h4>
                           <p
-                            class="_value_54cfce"
+                            class="_value_8f9b4a"
                           >
                             400000000000
                           </p>
                           <h4
-                            class="_label_54cfce"
+                            class="_label_8f9b4a"
                           >
                             Notes:
                           </h4>
                           <p
-                            class="_value_54cfce"
+                            class="_value_8f9b4a"
                           >
                             -
                           </p>
@@ -529,27 +529,27 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    class="_root_54cfce"
+                    class="_root_8f9b4a"
                     style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
                   >
                     <div
                       aria-controls="wishListItem5Details"
                       aria-expanded="false"
-                      class="_trigger_54cfce"
+                      class="_trigger_8f9b4a"
                     >
                       <span
-                        class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                        class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                       >
                         <span
-                          class="_editIcons_54cfce"
+                          class="_editIcons_8f9b4a"
                         >
                           <button
-                            class="_icon_54cfce"
+                            class="_icon_8f9b4a"
                             data-testid="destroyWishListItem5"
                           >
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-xmark _fa_54cfce"
+                              class="svg-inline--fa fa-xmark _fa_8f9b4a"
                               data-icon="xmark"
                               data-prefix="fas"
                               role="img"
@@ -562,12 +562,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             </svg>
                           </button>
                           <button
-                            class="_icon_54cfce"
+                            class="_icon_8f9b4a"
                             data-testid="editWishListItem5"
                           >
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                              class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                               data-icon="pen-to-square"
                               data-prefix="fas"
                               role="img"
@@ -581,21 +581,21 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </button>
                         </span>
                         <h3
-                          class="_description_54cfce"
+                          class="_description_8f9b4a"
                         >
                           Dwarven Cog
                         </h3>
                       </span>
                       <span
-                        class="_quantityEditable_54cfce"
+                        class="_quantityEditable_8f9b4a"
                       >
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="incrementWishListItem5"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                            class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                             data-icon="chevron-up"
                             data-prefix="fas"
                             role="img"
@@ -608,17 +608,17 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </svg>
                         </button>
                         <span
-                          class="_quantityContent_54cfce"
+                          class="_quantityContent_8f9b4a"
                         >
                           1
                         </span>
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="decrementWishListItem5"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                            class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                             data-icon="chevron-down"
                             data-prefix="fas"
                             role="img"
@@ -642,25 +642,25 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         style="display: none;"
                       >
                         <div
-                          class="_details_54cfce"
+                          class="_details_8f9b4a"
                         >
                           <h4
-                            class="_label_54cfce"
+                            class="_label_8f9b4a"
                           >
                             Unit Weight:
                           </h4>
                           <p
-                            class="_value_54cfce"
+                            class="_value_8f9b4a"
                           >
                             10
                           </p>
                           <h4
-                            class="_label_54cfce"
+                            class="_label_8f9b4a"
                           >
                             Notes:
                           </h4>
                           <p
-                            class="_value_54cfce"
+                            class="_value_8f9b4a"
                           >
                             For trophy room
                           </p>
@@ -674,28 +674,28 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="_wishList_da4596"
+          class="_wishList_8bc9d7"
         >
           <div
-            class="_root_ec6c68"
+            class="_root_015e9f"
             style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -16px;"
           >
             <div
               aria-controls="list5Details"
               aria-expanded="false"
-              class="_trigger_ec6c68"
+              class="_trigger_015e9f"
               role="button"
             >
               <span
-                class="_icons_ec6c68"
+                class="_icons_015e9f"
               >
                 <button
-                  class="_icon_ec6c68"
+                  class="_icon_015e9f"
                   data-testid="destroyWishList5"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-xmark _fa_ec6c68"
+                    class="svg-inline--fa fa-xmark _fa_015e9f"
                     data-icon="xmark"
                     data-prefix="fas"
                     role="img"
@@ -708,12 +708,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="_icon_ec6c68"
+                  class="_icon_015e9f"
                   data-testid="editWishList5"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                    class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                     data-icon="pen-to-square"
                     data-prefix="fas"
                     role="img"
@@ -727,7 +727,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 </button>
               </span>
               <h3
-                class="_title_ec6c68"
+                class="_title_015e9f"
               >
                 Breezehome
               </h3>
@@ -742,19 +742,19 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 style="display: none;"
               >
                 <div
-                  class="_details_ec6c68"
+                  class="_details_015e9f"
                 >
                   <div
-                    class="_root_8112da _collapsed_8112da"
+                    class="_root_1a276c _collapsed_1a276c"
                     style="--base-color: #4e8fb7; --hover-color: #3881ae; --body-color: #d2e3ed; --border-color: #1b5c84; --text-color-main: #fff; --text-color-secondary: #0d2e42;"
                   >
                     <div
-                      class="_triggerContainer_8112da"
+                      class="_triggerContainer_1a276c"
                     >
                       <button
                         aria-controls="addItemToWishList5"
                         aria-expanded="false"
-                        class="_trigger_8112da"
+                        class="_trigger_1a276c"
                       >
                         Add item to list...
                       </button>
@@ -770,14 +770,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       >
                         <form
                           aria-label="Wish list item creation form"
-                          class="_form_8112da"
+                          class="_form_1a276c"
                         >
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Description
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               name="description"
                               placeholder="Description"
                               required=""
@@ -785,11 +785,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Quantity
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               inputmode="numeric"
                               min="1"
                               name="quantity"
@@ -802,11 +802,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Unit Weight
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               inputmode="decimal"
                               min="0"
                               name="unit_weight"
@@ -816,18 +816,18 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Notes
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               name="notes"
                               placeholder="Notes"
                               type="text"
                             />
                           </label>
                           <button
-                            class="_submit_8112da"
+                            class="_submit_1a276c"
                             type="submit"
                           >
                             Add to List
@@ -837,27 +837,27 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    class="_root_54cfce"
+                    class="_root_8f9b4a"
                     style="--main-color: #4e8fb7; --title-text-color: #fff; --border-color: #1b5c84; --body-background-color: #d2e3ed; --body-text-color: #0d2e42; --hover-color: #3881ae;"
                   >
                     <div
                       aria-controls="wishListItem7Details"
                       aria-expanded="false"
-                      class="_trigger_54cfce"
+                      class="_trigger_8f9b4a"
                     >
                       <span
-                        class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                        class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                       >
                         <span
-                          class="_editIcons_54cfce"
+                          class="_editIcons_8f9b4a"
                         >
                           <button
-                            class="_icon_54cfce"
+                            class="_icon_8f9b4a"
                             data-testid="destroyWishListItem7"
                           >
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-xmark _fa_54cfce"
+                              class="svg-inline--fa fa-xmark _fa_8f9b4a"
                               data-icon="xmark"
                               data-prefix="fas"
                               role="img"
@@ -870,12 +870,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             </svg>
                           </button>
                           <button
-                            class="_icon_54cfce"
+                            class="_icon_8f9b4a"
                             data-testid="editWishListItem7"
                           >
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                              class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                               data-icon="pen-to-square"
                               data-prefix="fas"
                               role="img"
@@ -889,21 +889,21 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </button>
                         </span>
                         <h3
-                          class="_description_54cfce"
+                          class="_description_8f9b4a"
                         >
                           Dwarven Cog
                         </h3>
                       </span>
                       <span
-                        class="_quantityEditable_54cfce"
+                        class="_quantityEditable_8f9b4a"
                       >
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="incrementWishListItem7"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                            class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                             data-icon="chevron-up"
                             data-prefix="fas"
                             role="img"
@@ -916,17 +916,17 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </svg>
                         </button>
                         <span
-                          class="_quantityContent_54cfce"
+                          class="_quantityContent_8f9b4a"
                         >
                           10
                         </span>
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="decrementWishListItem7"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                            class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                             data-icon="chevron-down"
                             data-prefix="fas"
                             role="img"
@@ -950,25 +950,25 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         style="display: none;"
                       >
                         <div
-                          class="_details_54cfce"
+                          class="_details_8f9b4a"
                         >
                           <h4
-                            class="_label_54cfce"
+                            class="_label_8f9b4a"
                           >
                             Unit Weight:
                           </h4>
                           <p
-                            class="_value_54cfce"
+                            class="_value_8f9b4a"
                           >
                             10
                           </p>
                           <h4
-                            class="_label_54cfce"
+                            class="_label_8f9b4a"
                           >
                             Notes:
                           </h4>
                           <p
-                            class="_value_54cfce"
+                            class="_value_8f9b4a"
                           >
                             For Arniel Gane
                           </p>
@@ -982,28 +982,28 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="_wishList_da4596"
+          class="_wishList_8bc9d7"
         >
           <div
-            class="_root_ec6c68"
+            class="_root_015e9f"
             style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
           >
             <div
               aria-controls="list6Details"
               aria-expanded="false"
-              class="_trigger_ec6c68"
+              class="_trigger_015e9f"
               role="button"
             >
               <span
-                class="_icons_ec6c68"
+                class="_icons_015e9f"
               >
                 <button
-                  class="_icon_ec6c68"
+                  class="_icon_015e9f"
                   data-testid="destroyWishList6"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-xmark _fa_ec6c68"
+                    class="svg-inline--fa fa-xmark _fa_015e9f"
                     data-icon="xmark"
                     data-prefix="fas"
                     role="img"
@@ -1016,12 +1016,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   </svg>
                 </button>
                 <button
-                  class="_icon_ec6c68"
+                  class="_icon_015e9f"
                   data-testid="editWishList6"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                    class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                     data-icon="pen-to-square"
                     data-prefix="fas"
                     role="img"
@@ -1035,7 +1035,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 </button>
               </span>
               <h3
-                class="_title_ec6c68"
+                class="_title_015e9f"
               >
                 Hjerim
               </h3>
@@ -1050,19 +1050,19 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 style="display: none;"
               >
                 <div
-                  class="_details_ec6c68"
+                  class="_details_015e9f"
                 >
                   <div
-                    class="_root_8112da _collapsed_8112da"
+                    class="_root_1a276c _collapsed_1a276c"
                     style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
                   >
                     <div
-                      class="_triggerContainer_8112da"
+                      class="_triggerContainer_1a276c"
                     >
                       <button
                         aria-controls="addItemToWishList6"
                         aria-expanded="false"
-                        class="_trigger_8112da"
+                        class="_trigger_1a276c"
                       >
                         Add item to list...
                       </button>
@@ -1078,14 +1078,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       >
                         <form
                           aria-label="Wish list item creation form"
-                          class="_form_8112da"
+                          class="_form_1a276c"
                         >
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Description
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               name="description"
                               placeholder="Description"
                               required=""
@@ -1093,11 +1093,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Quantity
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               inputmode="numeric"
                               min="1"
                               name="quantity"
@@ -1110,11 +1110,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Unit Weight
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               inputmode="decimal"
                               min="0"
                               name="unit_weight"
@@ -1124,18 +1124,18 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_8112da"
+                            class="_label_1a276c"
                           >
                             Notes
                             <input
-                              class="_input_8112da"
+                              class="_input_1a276c"
                               name="notes"
                               placeholder="Notes"
                               type="text"
                             />
                           </label>
                           <button
-                            class="_submit_8112da"
+                            class="_submit_1a276c"
                             type="submit"
                           >
                             Add to List
@@ -1154,23 +1154,23 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_da4596"
+      class="_root_8bc9d7"
     >
       <div
-        class="_wishList_da4596"
+        class="_wishList_8bc9d7"
       >
         <div
-          class="_root_ec6c68"
+          class="_root_015e9f"
           style="--scheme-color: #ffbf00; --border-color: #cc9800; --text-color-primary: #4c3900; --text-color-secondary: #4c3900; --hover-color: #e5ab00; --scheme-color-lighter: #ffcb32; --scheme-color-lightest: #fff2cc; --max-title-width: -32px;"
         >
           <div
             aria-controls="list3Details"
             aria-expanded="false"
-            class="_trigger_ec6c68"
+            class="_trigger_015e9f"
             role="button"
           >
             <h3
-              class="_title_ec6c68"
+              class="_title_015e9f"
             >
               All Items
             </h3>
@@ -1185,31 +1185,31 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
               style="display: none;"
             >
               <div
-                class="_details_ec6c68"
+                class="_details_015e9f"
               >
                 <div
-                  class="_root_54cfce"
+                  class="_root_8f9b4a"
                   style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
                 >
                   <div
                     aria-controls="wishListItem6Details"
                     aria-expanded="false"
-                    class="_trigger_54cfce"
+                    class="_trigger_8f9b4a"
                   >
                     <span
-                      class="_descriptionContainer_54cfce"
+                      class="_descriptionContainer_8f9b4a"
                     >
                       <h3
-                        class="_description_54cfce"
+                        class="_description_8f9b4a"
                       >
                         Dwarven Cog
                       </h3>
                     </span>
                     <span
-                      class="_quantity_54cfce"
+                      class="_quantity_8f9b4a"
                     >
                       <span
-                        class="_quantityContent_54cfce"
+                        class="_quantityContent_8f9b4a"
                       >
                         11
                       </span>
@@ -1225,15 +1225,15 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       style="display: none;"
                     >
                       <div
-                        class="_details_54cfce"
+                        class="_details_8f9b4a"
                       >
                         <h4
-                          class="_label_54cfce"
+                          class="_label_8f9b4a"
                         >
                           Unit Weight:
                         </h4>
                         <p
-                          class="_value_54cfce"
+                          class="_value_8f9b4a"
                         >
                           10
                         </p>
@@ -1242,28 +1242,28 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="_root_54cfce"
+                  class="_root_8f9b4a"
                   style="--main-color: #ffcb32; --title-text-color: #4c3900; --border-color: #cc9800; --body-background-color: #fff2cc; --body-text-color: #7f5700; --hover-color: #ffc519;"
                 >
                   <div
                     aria-controls="wishListItem9Details"
                     aria-expanded="false"
-                    class="_trigger_54cfce"
+                    class="_trigger_8f9b4a"
                   >
                     <span
-                      class="_descriptionContainer_54cfce"
+                      class="_descriptionContainer_8f9b4a"
                     >
                       <h3
-                        class="_description_54cfce"
+                        class="_description_8f9b4a"
                       >
                         This item has a really really really really really long description for testing purposes
                       </h3>
                     </span>
                     <span
-                      class="_quantity_54cfce"
+                      class="_quantity_8f9b4a"
                     >
                       <span
-                        class="_quantityContent_54cfce"
+                        class="_quantityContent_8f9b4a"
                       >
                         200000000000
                       </span>
@@ -1279,15 +1279,15 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       style="display: none;"
                     >
                       <div
-                        class="_details_54cfce"
+                        class="_details_8f9b4a"
                       >
                         <h4
-                          class="_label_54cfce"
+                          class="_label_8f9b4a"
                         >
                           Unit Weight:
                         </h4>
                         <p
-                          class="_value_54cfce"
+                          class="_value_8f9b4a"
                         >
                           400000000000
                         </p>
@@ -1301,28 +1301,28 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="_wishList_da4596"
+        class="_wishList_8bc9d7"
       >
         <div
-          class="_root_ec6c68"
+          class="_root_015e9f"
           style="--scheme-color: #e83f6f; --border-color: #b93258; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #d03863; --scheme-color-lighter: #ec658b; --scheme-color-lightest: #fad8e2; --max-title-width: -16px;"
         >
           <div
             aria-controls="list4Details"
             aria-expanded="false"
-            class="_trigger_ec6c68"
+            class="_trigger_015e9f"
             role="button"
           >
             <span
-              class="_icons_ec6c68"
+              class="_icons_015e9f"
             >
               <button
-                class="_icon_ec6c68"
+                class="_icon_015e9f"
                 data-testid="destroyWishList4"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-xmark _fa_ec6c68"
+                  class="svg-inline--fa fa-xmark _fa_015e9f"
                   data-icon="xmark"
                   data-prefix="fas"
                   role="img"
@@ -1335,12 +1335,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 </svg>
               </button>
               <button
-                class="_icon_ec6c68"
+                class="_icon_015e9f"
                 data-testid="editWishList4"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                  class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                   data-icon="pen-to-square"
                   data-prefix="fas"
                   role="img"
@@ -1354,7 +1354,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
               </button>
             </span>
             <h3
-              class="_title_ec6c68"
+              class="_title_015e9f"
             >
               Honeyside
             </h3>
@@ -1369,19 +1369,19 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
               style="display: none;"
             >
               <div
-                class="_details_ec6c68"
+                class="_details_015e9f"
               >
                 <div
-                  class="_root_8112da _collapsed_8112da"
+                  class="_root_1a276c _collapsed_1a276c"
                   style="--base-color: #ec658b; --hover-color: #ea527d; --body-color: #fad8e2; --border-color: #b93258; --text-color-main: #fff; --text-color-secondary: #451221;"
                 >
                   <div
-                    class="_triggerContainer_8112da"
+                    class="_triggerContainer_1a276c"
                   >
                     <button
                       aria-controls="addItemToWishList4"
                       aria-expanded="false"
-                      class="_trigger_8112da"
+                      class="_trigger_1a276c"
                     >
                       Add item to list...
                     </button>
@@ -1397,14 +1397,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     >
                       <form
                         aria-label="Wish list item creation form"
-                        class="_form_8112da"
+                        class="_form_1a276c"
                       >
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Description
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             name="description"
                             placeholder="Description"
                             required=""
@@ -1412,11 +1412,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Quantity
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             inputmode="numeric"
                             min="1"
                             name="quantity"
@@ -1429,11 +1429,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Unit Weight
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             inputmode="decimal"
                             min="0"
                             name="unit_weight"
@@ -1443,18 +1443,18 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Notes
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             name="notes"
                             placeholder="Notes"
                             type="text"
                           />
                         </label>
                         <button
-                          class="_submit_8112da"
+                          class="_submit_1a276c"
                           type="submit"
                         >
                           Add to List
@@ -1464,27 +1464,27 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="_root_54cfce"
+                  class="_root_8f9b4a"
                   style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
                 >
                   <div
                     aria-controls="wishListItem8Details"
                     aria-expanded="false"
-                    class="_trigger_54cfce"
+                    class="_trigger_8f9b4a"
                   >
                     <span
-                      class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                      class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                     >
                       <span
-                        class="_editIcons_54cfce"
+                        class="_editIcons_8f9b4a"
                       >
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="destroyWishListItem8"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-xmark _fa_54cfce"
+                            class="svg-inline--fa fa-xmark _fa_8f9b4a"
                             data-icon="xmark"
                             data-prefix="fas"
                             role="img"
@@ -1497,12 +1497,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </svg>
                         </button>
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="editWishListItem8"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                            class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                             data-icon="pen-to-square"
                             data-prefix="fas"
                             role="img"
@@ -1516,21 +1516,21 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         </button>
                       </span>
                       <h3
-                        class="_description_54cfce"
+                        class="_description_8f9b4a"
                       >
                         This item has a really really really really really long description for testing purposes
                       </h3>
                     </span>
                     <span
-                      class="_quantityEditable_54cfce"
+                      class="_quantityEditable_8f9b4a"
                     >
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="incrementWishListItem8"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                          class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                           data-icon="chevron-up"
                           data-prefix="fas"
                           role="img"
@@ -1543,17 +1543,17 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         </svg>
                       </button>
                       <span
-                        class="_quantityContent_54cfce"
+                        class="_quantityContent_8f9b4a"
                       >
                         200000000000
                       </span>
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="decrementWishListItem8"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                          class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                           data-icon="chevron-down"
                           data-prefix="fas"
                           role="img"
@@ -1577,25 +1577,25 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       style="display: none;"
                     >
                       <div
-                        class="_details_54cfce"
+                        class="_details_8f9b4a"
                       >
                         <h4
-                          class="_label_54cfce"
+                          class="_label_8f9b4a"
                         >
                           Unit Weight:
                         </h4>
                         <p
-                          class="_value_54cfce"
+                          class="_value_8f9b4a"
                         >
                           400000000000
                         </p>
                         <h4
-                          class="_label_54cfce"
+                          class="_label_8f9b4a"
                         >
                           Notes:
                         </h4>
                         <p
-                          class="_value_54cfce"
+                          class="_value_8f9b4a"
                         >
                           -
                         </p>
@@ -1604,27 +1604,27 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="_root_54cfce"
+                  class="_root_8f9b4a"
                   style="--main-color: #ec658b; --title-text-color: #fff; --border-color: #b93258; --body-background-color: #fad8e2; --body-text-color: #451221; --hover-color: #ea527d;"
                 >
                   <div
                     aria-controls="wishListItem5Details"
                     aria-expanded="false"
-                    class="_trigger_54cfce"
+                    class="_trigger_8f9b4a"
                   >
                     <span
-                      class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                      class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                     >
                       <span
-                        class="_editIcons_54cfce"
+                        class="_editIcons_8f9b4a"
                       >
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="destroyWishListItem5"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-xmark _fa_54cfce"
+                            class="svg-inline--fa fa-xmark _fa_8f9b4a"
                             data-icon="xmark"
                             data-prefix="fas"
                             role="img"
@@ -1637,12 +1637,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </svg>
                         </button>
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="editWishListItem5"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                            class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                             data-icon="pen-to-square"
                             data-prefix="fas"
                             role="img"
@@ -1656,21 +1656,21 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         </button>
                       </span>
                       <h3
-                        class="_description_54cfce"
+                        class="_description_8f9b4a"
                       >
                         Dwarven Cog
                       </h3>
                     </span>
                     <span
-                      class="_quantityEditable_54cfce"
+                      class="_quantityEditable_8f9b4a"
                     >
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="incrementWishListItem5"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                          class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                           data-icon="chevron-up"
                           data-prefix="fas"
                           role="img"
@@ -1683,17 +1683,17 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         </svg>
                       </button>
                       <span
-                        class="_quantityContent_54cfce"
+                        class="_quantityContent_8f9b4a"
                       >
                         1
                       </span>
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="decrementWishListItem5"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                          class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                           data-icon="chevron-down"
                           data-prefix="fas"
                           role="img"
@@ -1717,25 +1717,25 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       style="display: none;"
                     >
                       <div
-                        class="_details_54cfce"
+                        class="_details_8f9b4a"
                       >
                         <h4
-                          class="_label_54cfce"
+                          class="_label_8f9b4a"
                         >
                           Unit Weight:
                         </h4>
                         <p
-                          class="_value_54cfce"
+                          class="_value_8f9b4a"
                         >
                           10
                         </p>
                         <h4
-                          class="_label_54cfce"
+                          class="_label_8f9b4a"
                         >
                           Notes:
                         </h4>
                         <p
-                          class="_value_54cfce"
+                          class="_value_8f9b4a"
                         >
                           For trophy room
                         </p>
@@ -1749,28 +1749,28 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="_wishList_da4596"
+        class="_wishList_8bc9d7"
       >
         <div
-          class="_root_ec6c68"
+          class="_root_015e9f"
           style="--scheme-color: #2274a5; --border-color: #1b5c84; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #1e6894; --scheme-color-lighter: #4e8fb7; --scheme-color-lightest: #d2e3ed; --max-title-width: -16px;"
         >
           <div
             aria-controls="list5Details"
             aria-expanded="false"
-            class="_trigger_ec6c68"
+            class="_trigger_015e9f"
             role="button"
           >
             <span
-              class="_icons_ec6c68"
+              class="_icons_015e9f"
             >
               <button
-                class="_icon_ec6c68"
+                class="_icon_015e9f"
                 data-testid="destroyWishList5"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-xmark _fa_ec6c68"
+                  class="svg-inline--fa fa-xmark _fa_015e9f"
                   data-icon="xmark"
                   data-prefix="fas"
                   role="img"
@@ -1783,12 +1783,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 </svg>
               </button>
               <button
-                class="_icon_ec6c68"
+                class="_icon_015e9f"
                 data-testid="editWishList5"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                  class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                   data-icon="pen-to-square"
                   data-prefix="fas"
                   role="img"
@@ -1802,7 +1802,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
               </button>
             </span>
             <h3
-              class="_title_ec6c68"
+              class="_title_015e9f"
             >
               Breezehome
             </h3>
@@ -1817,19 +1817,19 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
               style="display: none;"
             >
               <div
-                class="_details_ec6c68"
+                class="_details_015e9f"
               >
                 <div
-                  class="_root_8112da _collapsed_8112da"
+                  class="_root_1a276c _collapsed_1a276c"
                   style="--base-color: #4e8fb7; --hover-color: #3881ae; --body-color: #d2e3ed; --border-color: #1b5c84; --text-color-main: #fff; --text-color-secondary: #0d2e42;"
                 >
                   <div
-                    class="_triggerContainer_8112da"
+                    class="_triggerContainer_1a276c"
                   >
                     <button
                       aria-controls="addItemToWishList5"
                       aria-expanded="false"
-                      class="_trigger_8112da"
+                      class="_trigger_1a276c"
                     >
                       Add item to list...
                     </button>
@@ -1845,14 +1845,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     >
                       <form
                         aria-label="Wish list item creation form"
-                        class="_form_8112da"
+                        class="_form_1a276c"
                       >
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Description
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             name="description"
                             placeholder="Description"
                             required=""
@@ -1860,11 +1860,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Quantity
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             inputmode="numeric"
                             min="1"
                             name="quantity"
@@ -1877,11 +1877,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Unit Weight
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             inputmode="decimal"
                             min="0"
                             name="unit_weight"
@@ -1891,18 +1891,18 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Notes
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             name="notes"
                             placeholder="Notes"
                             type="text"
                           />
                         </label>
                         <button
-                          class="_submit_8112da"
+                          class="_submit_1a276c"
                           type="submit"
                         >
                           Add to List
@@ -1912,27 +1912,27 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="_root_54cfce"
+                  class="_root_8f9b4a"
                   style="--main-color: #4e8fb7; --title-text-color: #fff; --border-color: #1b5c84; --body-background-color: #d2e3ed; --body-text-color: #0d2e42; --hover-color: #3881ae;"
                 >
                   <div
                     aria-controls="wishListItem7Details"
                     aria-expanded="false"
-                    class="_trigger_54cfce"
+                    class="_trigger_8f9b4a"
                   >
                     <span
-                      class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                      class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                     >
                       <span
-                        class="_editIcons_54cfce"
+                        class="_editIcons_8f9b4a"
                       >
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="destroyWishListItem7"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-xmark _fa_54cfce"
+                            class="svg-inline--fa fa-xmark _fa_8f9b4a"
                             data-icon="xmark"
                             data-prefix="fas"
                             role="img"
@@ -1945,12 +1945,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           </svg>
                         </button>
                         <button
-                          class="_icon_54cfce"
+                          class="_icon_8f9b4a"
                           data-testid="editWishListItem7"
                         >
                           <svg
                             aria-hidden="true"
-                            class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                            class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                             data-icon="pen-to-square"
                             data-prefix="fas"
                             role="img"
@@ -1964,21 +1964,21 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         </button>
                       </span>
                       <h3
-                        class="_description_54cfce"
+                        class="_description_8f9b4a"
                       >
                         Dwarven Cog
                       </h3>
                     </span>
                     <span
-                      class="_quantityEditable_54cfce"
+                      class="_quantityEditable_8f9b4a"
                     >
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="incrementWishListItem7"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                          class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                           data-icon="chevron-up"
                           data-prefix="fas"
                           role="img"
@@ -1991,17 +1991,17 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                         </svg>
                       </button>
                       <span
-                        class="_quantityContent_54cfce"
+                        class="_quantityContent_8f9b4a"
                       >
                         10
                       </span>
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="decrementWishListItem7"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                          class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                           data-icon="chevron-down"
                           data-prefix="fas"
                           role="img"
@@ -2025,25 +2025,25 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       style="display: none;"
                     >
                       <div
-                        class="_details_54cfce"
+                        class="_details_8f9b4a"
                       >
                         <h4
-                          class="_label_54cfce"
+                          class="_label_8f9b4a"
                         >
                           Unit Weight:
                         </h4>
                         <p
-                          class="_value_54cfce"
+                          class="_value_8f9b4a"
                         >
                           10
                         </p>
                         <h4
-                          class="_label_54cfce"
+                          class="_label_8f9b4a"
                         >
                           Notes:
                         </h4>
                         <p
-                          class="_value_54cfce"
+                          class="_value_8f9b4a"
                         >
                           For Arniel Gane
                         </p>
@@ -2057,28 +2057,28 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="_wishList_da4596"
+        class="_wishList_8bc9d7"
       >
         <div
-          class="_root_ec6c68"
+          class="_root_015e9f"
           style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
         >
           <div
             aria-controls="list6Details"
             aria-expanded="false"
-            class="_trigger_ec6c68"
+            class="_trigger_015e9f"
             role="button"
           >
             <span
-              class="_icons_ec6c68"
+              class="_icons_015e9f"
             >
               <button
-                class="_icon_ec6c68"
+                class="_icon_015e9f"
                 data-testid="destroyWishList6"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-xmark _fa_ec6c68"
+                  class="svg-inline--fa fa-xmark _fa_015e9f"
                   data-icon="xmark"
                   data-prefix="fas"
                   role="img"
@@ -2091,12 +2091,12 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 </svg>
               </button>
               <button
-                class="_icon_ec6c68"
+                class="_icon_015e9f"
                 data-testid="editWishList6"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                  class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                   data-icon="pen-to-square"
                   data-prefix="fas"
                   role="img"
@@ -2110,7 +2110,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
               </button>
             </span>
             <h3
-              class="_title_ec6c68"
+              class="_title_015e9f"
             >
               Hjerim
             </h3>
@@ -2125,19 +2125,19 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
               style="display: none;"
             >
               <div
-                class="_details_ec6c68"
+                class="_details_015e9f"
               >
                 <div
-                  class="_root_8112da _collapsed_8112da"
+                  class="_root_1a276c _collapsed_1a276c"
                   style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
                 >
                   <div
-                    class="_triggerContainer_8112da"
+                    class="_triggerContainer_1a276c"
                   >
                     <button
                       aria-controls="addItemToWishList6"
                       aria-expanded="false"
-                      class="_trigger_8112da"
+                      class="_trigger_1a276c"
                     >
                       Add item to list...
                     </button>
@@ -2153,14 +2153,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     >
                       <form
                         aria-label="Wish list item creation form"
-                        class="_form_8112da"
+                        class="_form_1a276c"
                       >
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Description
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             name="description"
                             placeholder="Description"
                             required=""
@@ -2168,11 +2168,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Quantity
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             inputmode="numeric"
                             min="1"
                             name="quantity"
@@ -2185,11 +2185,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Unit Weight
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             inputmode="decimal"
                             min="0"
                             name="unit_weight"
@@ -2199,18 +2199,18 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_8112da"
+                          class="_label_1a276c"
                         >
                           Notes
                           <input
-                            class="_input_8112da"
+                            class="_input_1a276c"
                             name="notes"
                             placeholder="Notes"
                             type="text"
                           />
                         </label>
                         <button
-                          class="_submit_8112da"
+                          class="_submit_1a276c"
                           type="submit"
                         >
                           Add to List

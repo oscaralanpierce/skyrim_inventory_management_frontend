@@ -6,29 +6,29 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -36,18 +36,18 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -59,29 +59,29 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -100,7 +100,7 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -113,29 +113,29 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <header
-      class="_root_c29812"
+      class="_root_faea2d"
     >
       <div
-        class="_bar_c29812"
+        class="_bar_faea2d"
       >
         <span
-          class="_headerContainer_c29812"
+          class="_headerContainer_faea2d"
         >
           <h1
-            class="_header_c29812"
+            class="_header_faea2d"
           >
             <a
-              class="_headerLinkLarge_c29812"
+              class="_headerLinkLarge_faea2d"
               href="/dashboard"
             >
               Skyrim Inventory
               <br
-                class="_bp_c29812"
+                class="_bp_faea2d"
               />
                Management
             </a>
             <a
-              class="_headerLinkSmall_c29812"
+              class="_headerLinkSmall_faea2d"
               href="/dashboard"
             >
               S. I. M.
@@ -143,18 +143,18 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
           </h1>
         </span>
         <span
-          class="_root_d263fb"
+          class="_root_658745"
         >
           <div
-            class="_main_d263fb"
+            class="_main_658745"
           >
             <div
-              class="_button_d263fb"
+              class="_button_658745"
               role="button"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-bars _hamburger_d263fb"
+                class="svg-inline--fa fa-bars _hamburger_658745"
                 data-icon="bars"
                 data-prefix="fas"
                 role="img"
@@ -166,29 +166,29 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
                 />
               </svg>
               <span
-                class="_info_d263fb"
+                class="_info_658745"
               >
                 <p
-                  class="_name_d263fb"
+                  class="_name_658745"
                 >
                   Edna St. Vincent Millay
                 </p>
                 <p
-                  class="_email_d263fb"
+                  class="_email_658745"
                 >
                   edna@gmail.com
                 </p>
               </span>
               <img
                 alt="User profile image"
-                class="_img_d263fb"
+                class="_img_658745"
                 referrerpolicy="no-referrer"
                 src="/src/support/testProfileImg.png"
               />
             </div>
           </div>
           <menu
-            class="_dropdown_d263fb"
+            class="_dropdown_658745"
           >
             <div
               role="button"
@@ -207,7 +207,7 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
                 />
               </svg>
               <p
-                class="_signOutText_d263fb"
+                class="_signOutText_658745"
               >
                 Sign Out
               </p>
