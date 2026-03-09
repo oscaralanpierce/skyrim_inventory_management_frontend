@@ -6,7 +6,7 @@ exports[`FlashMessage > when there is a string message > matches snapshot 1`] = 
   "baseElement": <body>
     <div>
       <div
-        class="_root_91d025"
+        class="_root_ca8db5"
         style="--text-color: #4e6d83;"
       >
         Hello world.
@@ -15,7 +15,7 @@ exports[`FlashMessage > when there is a string message > matches snapshot 1`] = 
   </body>,
   "container": <div>
     <div
-      class="_root_91d025"
+      class="_root_ca8db5"
       style="--text-color: #4e6d83;"
     >
       Hello world.
@@ -81,11 +81,11 @@ exports[`FlashMessage > when there is a string message > when there is a header 
   "baseElement": <body>
     <div>
       <div
-        class="_root_91d025"
+        class="_root_ca8db5"
         style="--text-color: #4e6d83;"
       >
         <p
-          class="_header_91d025"
+          class="_header_ca8db5"
         >
           Greetings!
         </p>
@@ -95,11 +95,11 @@ exports[`FlashMessage > when there is a string message > when there is a header 
   </body>,
   "container": <div>
     <div
-      class="_root_91d025"
+      class="_root_ca8db5"
       style="--text-color: #4e6d83;"
     >
       <p
-        class="_header_91d025"
+        class="_header_ca8db5"
       >
         Greetings!
       </p>
@@ -166,24 +166,24 @@ exports[`FlashMessage > when there is an array message > matches snapshot 1`] = 
   "baseElement": <body>
     <div>
       <div
-        class="_root_91d025"
+        class="_root_ca8db5"
         style="--text-color: #4e6d83;"
       >
         <ul
-          class="_list_91d025"
+          class="_list_ca8db5"
         >
           <li
-            class="_msg_91d025"
+            class="_msg_ca8db5"
           >
             You will be assimilated.
           </li>
           <li
-            class="_msg_91d025"
+            class="_msg_ca8db5"
           >
             Your biological and technological distinctiveness will be added to our own.
           </li>
           <li
-            class="_msg_91d025"
+            class="_msg_ca8db5"
           >
             Resistance is futile.
           </li>
@@ -193,24 +193,24 @@ exports[`FlashMessage > when there is an array message > matches snapshot 1`] = 
   </body>,
   "container": <div>
     <div
-      class="_root_91d025"
+      class="_root_ca8db5"
       style="--text-color: #4e6d83;"
     >
       <ul
-        class="_list_91d025"
+        class="_list_ca8db5"
       >
         <li
-          class="_msg_91d025"
+          class="_msg_ca8db5"
         >
           You will be assimilated.
         </li>
         <li
-          class="_msg_91d025"
+          class="_msg_ca8db5"
         >
           Your biological and technological distinctiveness will be added to our own.
         </li>
         <li
-          class="_msg_91d025"
+          class="_msg_ca8db5"
         >
           Resistance is futile.
         </li>
@@ -277,29 +277,29 @@ exports[`FlashMessage > when there is an array message > when there is a header 
   "baseElement": <body>
     <div>
       <div
-        class="_root_91d025"
+        class="_root_ca8db5"
         style="--text-color: #4e6d83;"
       >
         <p
-          class="_header_91d025"
+          class="_header_ca8db5"
         >
           We are the Borg.
         </p>
         <ul
-          class="_list_91d025"
+          class="_list_ca8db5"
         >
           <li
-            class="_msg_91d025"
+            class="_msg_ca8db5"
           >
             You will be assimilated.
           </li>
           <li
-            class="_msg_91d025"
+            class="_msg_ca8db5"
           >
             Your biological and technological distinctiveness will be added to our own.
           </li>
           <li
-            class="_msg_91d025"
+            class="_msg_ca8db5"
           >
             Resistance is futile.
           </li>
@@ -309,29 +309,29 @@ exports[`FlashMessage > when there is an array message > when there is a header 
   </body>,
   "container": <div>
     <div
-      class="_root_91d025"
+      class="_root_ca8db5"
       style="--text-color: #4e6d83;"
     >
       <p
-        class="_header_91d025"
+        class="_header_ca8db5"
       >
         We are the Borg.
       </p>
       <ul
-        class="_list_91d025"
+        class="_list_ca8db5"
       >
         <li
-          class="_msg_91d025"
+          class="_msg_ca8db5"
         >
           You will be assimilated.
         </li>
         <li
-          class="_msg_91d025"
+          class="_msg_ca8db5"
         >
           Your biological and technological distinctiveness will be added to our own.
         </li>
         <li
-          class="_msg_91d025"
+          class="_msg_ca8db5"
         >
           Resistance is futile.
         </li>

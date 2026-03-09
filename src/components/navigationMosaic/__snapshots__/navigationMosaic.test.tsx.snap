@@ -6,13 +6,13 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_dcf87f"
+        class="_root_55a329"
       >
         <div
-          class="_card_dcf87f"
+          class="_card_55a329"
         >
           <a
-            class="_root_396ea1"
+            class="_root_c08070"
             href="/yellow"
             style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
           >
@@ -20,10 +20,10 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
           </a>
         </div>
         <div
-          class="_card_dcf87f"
+          class="_card_55a329"
         >
           <a
-            class="_root_396ea1"
+            class="_root_c08070"
             href="/pink"
             style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
           >
@@ -31,10 +31,10 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
           </a>
         </div>
         <div
-          class="_card_dcf87f"
+          class="_card_55a329"
         >
           <a
-            class="_root_396ea1"
+            class="_root_c08070"
             href="/blue"
             style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
           >
@@ -42,10 +42,10 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
           </a>
         </div>
         <div
-          class="_card_dcf87f"
+          class="_card_55a329"
         >
           <a
-            class="_root_396ea1"
+            class="_root_c08070"
             href="/green"
             style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
           >
@@ -53,10 +53,10 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
           </a>
         </div>
         <div
-          class="_card_dcf87f"
+          class="_card_55a329"
         >
           <a
-            class="_root_396ea1"
+            class="_root_c08070"
             href="/aqua"
             style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
           >
@@ -68,13 +68,13 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_dcf87f"
+      class="_root_55a329"
     >
       <div
-        class="_card_dcf87f"
+        class="_card_55a329"
       >
         <a
-          class="_root_396ea1"
+          class="_root_c08070"
           href="/yellow"
           style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
         >
@@ -82,10 +82,10 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         </a>
       </div>
       <div
-        class="_card_dcf87f"
+        class="_card_55a329"
       >
         <a
-          class="_root_396ea1"
+          class="_root_c08070"
           href="/pink"
           style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
         >
@@ -93,10 +93,10 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         </a>
       </div>
       <div
-        class="_card_dcf87f"
+        class="_card_55a329"
       >
         <a
-          class="_root_396ea1"
+          class="_root_c08070"
           href="/blue"
           style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
         >
@@ -104,10 +104,10 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         </a>
       </div>
       <div
-        class="_card_dcf87f"
+        class="_card_55a329"
       >
         <a
-          class="_root_396ea1"
+          class="_root_c08070"
           href="/green"
           style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
         >
@@ -115,10 +115,10 @@ exports[`NavigationMosaic component > matches snapshot 1`] = `
         </a>
       </div>
       <div
-        class="_card_dcf87f"
+        class="_card_55a329"
       >
         <a
-          class="_root_396ea1"
+          class="_root_c08070"
           href="/aqua"
           style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
         >

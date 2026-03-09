@@ -6,7 +6,7 @@ exports[`NavigationCard component > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <a
-        class="_root_396ea1"
+        class="_root_c08070"
         href="/"
         style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
       >
@@ -16,7 +16,7 @@ exports[`NavigationCard component > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <a
-      class="_root_396ea1"
+      class="_root_c08070"
       href="/"
       style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
     >

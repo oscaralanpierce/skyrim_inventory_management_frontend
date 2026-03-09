@@ -6,13 +6,13 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_83bedb"
+        class="_root_92a111"
         style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
       >
         <h3
           aria-controls="gameCreateForm"
           aria-expanded="false"
-          class="_toggle_83bedb"
+          class="_toggle_92a111"
           role="button"
         >
           Create Game...
@@ -27,15 +27,15 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
             style="display: none;"
           >
             <form
-              class="_form_83bedb"
+              class="_form_92a111"
               data-testid="gameCreateFormForm"
             >
               <fieldset
-                class="_fieldset_83bedb"
+                class="_fieldset_92a111"
               >
                 <input
                   aria-label="Name"
-                  class="_input_83bedb"
+                  class="_input_92a111"
                   data-testid="createNameField"
                   disabled=""
                   name="name"
@@ -46,11 +46,11 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
                 />
               </fieldset>
               <fieldset
-                class="_fieldset_83bedb"
+                class="_fieldset_92a111"
               >
                 <input
                   aria-label="Description"
-                  class="_input_83bedb"
+                  class="_input_92a111"
                   data-testid="createDescriptionField"
                   disabled=""
                   name="description"
@@ -59,7 +59,7 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
                 />
               </fieldset>
               <button
-                class="_button_83bedb"
+                class="_button_92a111"
                 data-testid="createGameSubmit"
                 disabled=""
                 type="submit"
@@ -74,13 +74,13 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_83bedb"
+      class="_root_92a111"
       style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
     >
       <h3
         aria-controls="gameCreateForm"
         aria-expanded="false"
-        class="_toggle_83bedb"
+        class="_toggle_92a111"
         role="button"
       >
         Create Game...
@@ -95,15 +95,15 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
           style="display: none;"
         >
           <form
-            class="_form_83bedb"
+            class="_form_92a111"
             data-testid="gameCreateFormForm"
           >
             <fieldset
-              class="_fieldset_83bedb"
+              class="_fieldset_92a111"
             >
               <input
                 aria-label="Name"
-                class="_input_83bedb"
+                class="_input_92a111"
                 data-testid="createNameField"
                 disabled=""
                 name="name"
@@ -114,11 +114,11 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
               />
             </fieldset>
             <fieldset
-              class="_fieldset_83bedb"
+              class="_fieldset_92a111"
             >
               <input
                 aria-label="Description"
-                class="_input_83bedb"
+                class="_input_92a111"
                 data-testid="createDescriptionField"
                 disabled=""
                 name="description"
@@ -127,7 +127,7 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
               />
             </fieldset>
             <button
-              class="_button_83bedb"
+              class="_button_92a111"
               data-testid="createGameSubmit"
               disabled=""
               type="submit"
@@ -199,13 +199,13 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_83bedb"
+        class="_root_92a111"
         style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
       >
         <h3
           aria-controls="gameCreateForm"
           aria-expanded="false"
-          class="_toggle_83bedb"
+          class="_toggle_92a111"
           role="button"
         >
           Create Game...
@@ -220,15 +220,15 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
             style="display: none;"
           >
             <form
-              class="_form_83bedb"
+              class="_form_92a111"
               data-testid="gameCreateFormForm"
             >
               <fieldset
-                class="_fieldset_83bedb"
+                class="_fieldset_92a111"
               >
                 <input
                   aria-label="Name"
-                  class="_input_83bedb"
+                  class="_input_92a111"
                   data-testid="createNameField"
                   name="name"
                   pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
@@ -238,11 +238,11 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
                 />
               </fieldset>
               <fieldset
-                class="_fieldset_83bedb"
+                class="_fieldset_92a111"
               >
                 <input
                   aria-label="Description"
-                  class="_input_83bedb"
+                  class="_input_92a111"
                   data-testid="createDescriptionField"
                   name="description"
                   placeholder="Description"
@@ -250,7 +250,7 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
                 />
               </fieldset>
               <button
-                class="_button_83bedb"
+                class="_button_92a111"
                 data-testid="createGameSubmit"
                 type="submit"
               >
@@ -264,13 +264,13 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_83bedb"
+      class="_root_92a111"
       style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
     >
       <h3
         aria-controls="gameCreateForm"
         aria-expanded="false"
-        class="_toggle_83bedb"
+        class="_toggle_92a111"
         role="button"
       >
         Create Game...
@@ -285,15 +285,15 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
           style="display: none;"
         >
           <form
-            class="_form_83bedb"
+            class="_form_92a111"
             data-testid="gameCreateFormForm"
           >
             <fieldset
-              class="_fieldset_83bedb"
+              class="_fieldset_92a111"
             >
               <input
                 aria-label="Name"
-                class="_input_83bedb"
+                class="_input_92a111"
                 data-testid="createNameField"
                 name="name"
                 pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
@@ -303,11 +303,11 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
               />
             </fieldset>
             <fieldset
-              class="_fieldset_83bedb"
+              class="_fieldset_92a111"
             >
               <input
                 aria-label="Description"
-                class="_input_83bedb"
+                class="_input_92a111"
                 data-testid="createDescriptionField"
                 name="description"
                 placeholder="Description"
@@ -315,7 +315,7 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
               />
             </fieldset>
             <button
-              class="_button_83bedb"
+              class="_button_92a111"
               data-testid="createGameSubmit"
               type="submit"
             >

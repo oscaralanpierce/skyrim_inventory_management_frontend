@@ -6,7 +6,7 @@ exports[`StyledSelect > when a default option is given > matches snapshot 1`] = 
   "baseElement": <body>
     <div>
       <div
-        class="_root_0a8ecf"
+        class="_root_706192"
         data-testid="styledSelect"
         style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
       >
@@ -15,19 +15,19 @@ exports[`StyledSelect > when a default option is given > matches snapshot 1`] = 
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-owns="selectListbox"
-          class="_header_0a8ecf"
+          class="_header_706192"
           role="combobox"
         >
           <input
             aria-label="Add or Select Option"
-            class="_headerText_0a8ecf"
+            class="_headerText_706192"
           />
           <button
-            class="_trigger_0a8ecf"
+            class="_trigger_706192"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+              class="svg-inline--fa fa-angle-down _fa_706192"
               data-icon="angle-down"
               data-prefix="fas"
               role="img"
@@ -41,27 +41,27 @@ exports[`StyledSelect > when a default option is given > matches snapshot 1`] = 
           </button>
         </div>
         <ul
-          class="_dropdown_0a8ecf _hidden_0a8ecf"
+          class="_dropdown_706192 _hidden_706192"
           id="selectListbox"
           role="listbox"
         >
           <li
             aria-selected="false"
-            class="_root_b75fe4"
+            class="_root_6af4e6"
             data-option-value="32"
             role="option"
             tabindex="0"
           />
           <li
             aria-selected="true"
-            class="_root_b75fe4"
+            class="_root_6af4e6"
             data-option-value="51"
             role="option"
             tabindex="0"
           />
           <li
             aria-selected="false"
-            class="_root_b75fe4"
+            class="_root_6af4e6"
             data-option-value="77"
             role="option"
             tabindex="0"
@@ -72,7 +72,7 @@ exports[`StyledSelect > when a default option is given > matches snapshot 1`] = 
   </body>,
   "container": <div>
     <div
-      class="_root_0a8ecf"
+      class="_root_706192"
       data-testid="styledSelect"
       style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
     >
@@ -81,19 +81,19 @@ exports[`StyledSelect > when a default option is given > matches snapshot 1`] = 
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="selectListbox"
-        class="_header_0a8ecf"
+        class="_header_706192"
         role="combobox"
       >
         <input
           aria-label="Add or Select Option"
-          class="_headerText_0a8ecf"
+          class="_headerText_706192"
         />
         <button
-          class="_trigger_0a8ecf"
+          class="_trigger_706192"
         >
           <svg
             aria-hidden="true"
-            class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+            class="svg-inline--fa fa-angle-down _fa_706192"
             data-icon="angle-down"
             data-prefix="fas"
             role="img"
@@ -107,27 +107,27 @@ exports[`StyledSelect > when a default option is given > matches snapshot 1`] = 
         </button>
       </div>
       <ul
-        class="_dropdown_0a8ecf _hidden_0a8ecf"
+        class="_dropdown_706192 _hidden_706192"
         id="selectListbox"
         role="listbox"
       >
         <li
           aria-selected="false"
-          class="_root_b75fe4"
+          class="_root_6af4e6"
           data-option-value="32"
           role="option"
           tabindex="0"
         />
         <li
           aria-selected="true"
-          class="_root_b75fe4"
+          class="_root_6af4e6"
           data-option-value="51"
           role="option"
           tabindex="0"
         />
         <li
           aria-selected="false"
-          class="_root_b75fe4"
+          class="_root_6af4e6"
           data-option-value="77"
           role="option"
           tabindex="0"
@@ -195,7 +195,7 @@ exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_0a8ecf"
+        class="_root_706192"
         data-testid="styledSelect"
         style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
       >
@@ -204,19 +204,19 @@ exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-owns="selectListbox"
-          class="_header_0a8ecf"
+          class="_header_706192"
           role="combobox"
         >
           <input
             aria-label="Add or Select Option"
-            class="_headerText_0a8ecf"
+            class="_headerText_706192"
           />
           <button
-            class="_trigger_0a8ecf"
+            class="_trigger_706192"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+              class="svg-inline--fa fa-angle-down _fa_706192"
               data-icon="angle-down"
               data-prefix="fas"
               role="img"
@@ -230,7 +230,7 @@ exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
           </button>
         </div>
         <ul
-          class="_dropdown_0a8ecf _hidden_0a8ecf"
+          class="_dropdown_706192 _hidden_706192"
           id="selectListbox"
           role="listbox"
         />
@@ -239,7 +239,7 @@ exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_0a8ecf"
+      class="_root_706192"
       data-testid="styledSelect"
       style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
     >
@@ -248,19 +248,19 @@ exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="selectListbox"
-        class="_header_0a8ecf"
+        class="_header_706192"
         role="combobox"
       >
         <input
           aria-label="Add or Select Option"
-          class="_headerText_0a8ecf"
+          class="_headerText_706192"
         />
         <button
-          class="_trigger_0a8ecf"
+          class="_trigger_706192"
         >
           <svg
             aria-hidden="true"
-            class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+            class="svg-inline--fa fa-angle-down _fa_706192"
             data-icon="angle-down"
             data-prefix="fas"
             role="img"
@@ -274,7 +274,7 @@ exports[`StyledSelect > when there are no options > matches snapshot 1`] = `
         </button>
       </div>
       <ul
-        class="_dropdown_0a8ecf _hidden_0a8ecf"
+        class="_dropdown_706192 _hidden_706192"
         id="selectListbox"
         role="listbox"
       />
@@ -340,7 +340,7 @@ exports[`StyledSelect > when there are options > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_0a8ecf"
+        class="_root_706192"
         data-testid="styledSelect"
         style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
       >
@@ -349,19 +349,19 @@ exports[`StyledSelect > when there are options > matches snapshot 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-owns="selectListbox"
-          class="_header_0a8ecf"
+          class="_header_706192"
           role="combobox"
         >
           <input
             aria-label="Add or Select Option"
-            class="_headerText_0a8ecf"
+            class="_headerText_706192"
           />
           <button
-            class="_trigger_0a8ecf"
+            class="_trigger_706192"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+              class="svg-inline--fa fa-angle-down _fa_706192"
               data-icon="angle-down"
               data-prefix="fas"
               role="img"
@@ -375,27 +375,27 @@ exports[`StyledSelect > when there are options > matches snapshot 1`] = `
           </button>
         </div>
         <ul
-          class="_dropdown_0a8ecf _hidden_0a8ecf"
+          class="_dropdown_706192 _hidden_706192"
           id="selectListbox"
           role="listbox"
         >
           <li
             aria-selected="false"
-            class="_root_b75fe4"
+            class="_root_6af4e6"
             data-option-value="32"
             role="option"
             tabindex="0"
           />
           <li
             aria-selected="false"
-            class="_root_b75fe4"
+            class="_root_6af4e6"
             data-option-value="51"
             role="option"
             tabindex="0"
           />
           <li
             aria-selected="false"
-            class="_root_b75fe4"
+            class="_root_6af4e6"
             data-option-value="77"
             role="option"
             tabindex="0"
@@ -406,7 +406,7 @@ exports[`StyledSelect > when there are options > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_0a8ecf"
+      class="_root_706192"
       data-testid="styledSelect"
       style="--button-background-color: #2274a5; --button-hover-color: #1e6894; --button-text-color: #fff; --button-border-color: #1b5c84;"
     >
@@ -415,19 +415,19 @@ exports[`StyledSelect > when there are options > matches snapshot 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="selectListbox"
-        class="_header_0a8ecf"
+        class="_header_706192"
         role="combobox"
       >
         <input
           aria-label="Add or Select Option"
-          class="_headerText_0a8ecf"
+          class="_headerText_706192"
         />
         <button
-          class="_trigger_0a8ecf"
+          class="_trigger_706192"
         >
           <svg
             aria-hidden="true"
-            class="svg-inline--fa fa-angle-down _fa_0a8ecf"
+            class="svg-inline--fa fa-angle-down _fa_706192"
             data-icon="angle-down"
             data-prefix="fas"
             role="img"
@@ -441,27 +441,27 @@ exports[`StyledSelect > when there are options > matches snapshot 1`] = `
         </button>
       </div>
       <ul
-        class="_dropdown_0a8ecf _hidden_0a8ecf"
+        class="_dropdown_706192 _hidden_706192"
         id="selectListbox"
         role="listbox"
       >
         <li
           aria-selected="false"
-          class="_root_b75fe4"
+          class="_root_6af4e6"
           data-option-value="32"
           role="option"
           tabindex="0"
         />
         <li
           aria-selected="false"
-          class="_root_b75fe4"
+          class="_root_6af4e6"
           data-option-value="51"
           role="option"
           tabindex="0"
         />
         <li
           aria-selected="false"
-          class="_root_b75fe4"
+          class="_root_6af4e6"
           data-option-value="77"
           role="option"
           tabindex="0"

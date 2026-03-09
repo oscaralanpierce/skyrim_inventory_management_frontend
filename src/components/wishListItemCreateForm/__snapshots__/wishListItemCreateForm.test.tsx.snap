@@ -6,16 +6,16 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_8112da _collapsed_8112da"
+        class="_root_1a276c _collapsed_1a276c"
         style="--base-color: #ffcb32; --hover-color: #ffc519; --body-color: #fff2cc; --border-color: #cc9800; --text-color-main: #4c3900; --text-color-secondary: #7f5700;"
       >
         <div
-          class="_triggerContainer_8112da"
+          class="_triggerContainer_1a276c"
         >
           <button
             aria-controls="addItemToWishList4"
             aria-expanded="false"
-            class="_trigger_8112da"
+            class="_trigger_1a276c"
           >
             Add item to list...
           </button>
@@ -31,14 +31,14 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
           >
             <form
               aria-label="Wish list item creation form"
-              class="_form_8112da"
+              class="_form_1a276c"
             >
               <label
-                class="_label_8112da"
+                class="_label_1a276c"
               >
                 Description
                 <input
-                  class="_input_8112da"
+                  class="_input_1a276c"
                   name="description"
                   placeholder="Description"
                   required=""
@@ -46,11 +46,11 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
                 />
               </label>
               <label
-                class="_label_8112da"
+                class="_label_1a276c"
               >
                 Quantity
                 <input
-                  class="_input_8112da"
+                  class="_input_1a276c"
                   inputmode="numeric"
                   min="1"
                   name="quantity"
@@ -63,11 +63,11 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
                 />
               </label>
               <label
-                class="_label_8112da"
+                class="_label_1a276c"
               >
                 Unit Weight
                 <input
-                  class="_input_8112da"
+                  class="_input_1a276c"
                   inputmode="decimal"
                   min="0"
                   name="unit_weight"
@@ -77,18 +77,18 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
                 />
               </label>
               <label
-                class="_label_8112da"
+                class="_label_1a276c"
               >
                 Notes
                 <input
-                  class="_input_8112da"
+                  class="_input_1a276c"
                   name="notes"
                   placeholder="Notes"
                   type="text"
                 />
               </label>
               <button
-                class="_submit_8112da"
+                class="_submit_1a276c"
                 type="submit"
               >
                 Add to List
@@ -101,16 +101,16 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_8112da _collapsed_8112da"
+      class="_root_1a276c _collapsed_1a276c"
       style="--base-color: #ffcb32; --hover-color: #ffc519; --body-color: #fff2cc; --border-color: #cc9800; --text-color-main: #4c3900; --text-color-secondary: #7f5700;"
     >
       <div
-        class="_triggerContainer_8112da"
+        class="_triggerContainer_1a276c"
       >
         <button
           aria-controls="addItemToWishList4"
           aria-expanded="false"
-          class="_trigger_8112da"
+          class="_trigger_1a276c"
         >
           Add item to list...
         </button>
@@ -126,14 +126,14 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
         >
           <form
             aria-label="Wish list item creation form"
-            class="_form_8112da"
+            class="_form_1a276c"
           >
             <label
-              class="_label_8112da"
+              class="_label_1a276c"
             >
               Description
               <input
-                class="_input_8112da"
+                class="_input_1a276c"
                 name="description"
                 placeholder="Description"
                 required=""
@@ -141,11 +141,11 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
               />
             </label>
             <label
-              class="_label_8112da"
+              class="_label_1a276c"
             >
               Quantity
               <input
-                class="_input_8112da"
+                class="_input_1a276c"
                 inputmode="numeric"
                 min="1"
                 name="quantity"
@@ -158,11 +158,11 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
               />
             </label>
             <label
-              class="_label_8112da"
+              class="_label_1a276c"
             >
               Unit Weight
               <input
-                class="_input_8112da"
+                class="_input_1a276c"
                 inputmode="decimal"
                 min="0"
                 name="unit_weight"
@@ -172,18 +172,18 @@ exports[`WishListItemCreateForm > matches snapshot 1`] = `
               />
             </label>
             <label
-              class="_label_8112da"
+              class="_label_1a276c"
             >
               Notes
               <input
-                class="_input_8112da"
+                class="_input_1a276c"
                 name="notes"
                 placeholder="Notes"
                 type="text"
               />
             </label>
             <button
-              class="_submit_8112da"
+              class="_submit_1a276c"
               type="submit"
             >
               Add to List

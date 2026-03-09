@@ -6,15 +6,15 @@ exports[`WishListCreateForm > displaying the form > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <form
-        class="_root_15ecd1"
+        class="_root_f9e5f5"
         style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
       >
         <fieldset
-          class="_fieldset_15ecd1"
+          class="_fieldset_f9e5f5"
         >
           <input
             aria-label="Title"
-            class="_input_15ecd1"
+            class="_input_f9e5f5"
             disabled=""
             name="title"
             pattern="\\s*[A-Za-z0-9 \\-',]*\\s*"
@@ -23,7 +23,7 @@ exports[`WishListCreateForm > displaying the form > matches snapshot 1`] = `
             type="text"
           />
           <button
-            class="_button_15ecd1"
+            class="_button_f9e5f5"
             disabled=""
             type="submit"
           >
@@ -35,15 +35,15 @@ exports[`WishListCreateForm > displaying the form > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <form
-      class="_root_15ecd1"
+      class="_root_f9e5f5"
       style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
     >
       <fieldset
-        class="_fieldset_15ecd1"
+        class="_fieldset_f9e5f5"
       >
         <input
           aria-label="Title"
-          class="_input_15ecd1"
+          class="_input_f9e5f5"
           disabled=""
           name="title"
           pattern="\\s*[A-Za-z0-9 \\-',]*\\s*"
@@ -52,7 +52,7 @@ exports[`WishListCreateForm > displaying the form > matches snapshot 1`] = `
           type="text"
         />
         <button
-          class="_button_15ecd1"
+          class="_button_f9e5f5"
           disabled=""
           type="submit"
         >

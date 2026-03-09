@@ -6,20 +6,20 @@ exports[`Modal > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_753dd0"
+        class="_root_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           >
             <div
-              class="_root_31bf4a"
+              class="_root_4fb064"
             >
               <h3
-                class="_header_31bf4a"
+                class="_header_4fb064"
               >
                 Create Game
               </h3>
@@ -28,14 +28,14 @@ exports[`Modal > matches snapshot 1`] = `
                 style="--button-background-color: #ffbf00; --button-text-color: #4c3900; --button-hover-color: #e5ab00; --button-border-color: #cc9800;"
               >
                 <fieldset
-                  class="_fieldset_31bf4a"
+                  class="_fieldset_4fb064"
                 >
                   <label
-                    class="_label_31bf4a"
+                    class="_label_4fb064"
                   >
                     Name
                     <input
-                      class="_input_31bf4a"
+                      class="_input_4fb064"
                       name="name"
                       pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
                       placeholder="Name"
@@ -45,21 +45,21 @@ exports[`Modal > matches snapshot 1`] = `
                   </label>
                 </fieldset>
                 <fieldset
-                  class="_fieldset_31bf4a"
+                  class="_fieldset_4fb064"
                 >
                   <label
-                    class="_label_31bf4a"
+                    class="_label_4fb064"
                   >
                     Description
                     <input
-                      class="_input_31bf4a"
+                      class="_input_4fb064"
                       name="description"
                       placeholder="Description"
                     />
                   </label>
                 </fieldset>
                 <button
-                  class="_submit_31bf4a"
+                  class="_submit_4fb064"
                   data-testid="gameFormSubmit"
                   type="submit"
                 >
@@ -74,20 +74,20 @@ exports[`Modal > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_753dd0"
+      class="_root_c33b14"
       data-testid="modal"
     >
       <div
-        class="_container_753dd0"
+        class="_container_c33b14"
       >
         <div
-          class="_content_753dd0"
+          class="_content_c33b14"
         >
           <div
-            class="_root_31bf4a"
+            class="_root_4fb064"
           >
             <h3
-              class="_header_31bf4a"
+              class="_header_4fb064"
             >
               Create Game
             </h3>
@@ -96,14 +96,14 @@ exports[`Modal > matches snapshot 1`] = `
               style="--button-background-color: #ffbf00; --button-text-color: #4c3900; --button-hover-color: #e5ab00; --button-border-color: #cc9800;"
             >
               <fieldset
-                class="_fieldset_31bf4a"
+                class="_fieldset_4fb064"
               >
                 <label
-                  class="_label_31bf4a"
+                  class="_label_4fb064"
                 >
                   Name
                   <input
-                    class="_input_31bf4a"
+                    class="_input_4fb064"
                     name="name"
                     pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
                     placeholder="Name"
@@ -113,21 +113,21 @@ exports[`Modal > matches snapshot 1`] = `
                 </label>
               </fieldset>
               <fieldset
-                class="_fieldset_31bf4a"
+                class="_fieldset_4fb064"
               >
                 <label
-                  class="_label_31bf4a"
+                  class="_label_4fb064"
                 >
                   Description
                   <input
-                    class="_input_31bf4a"
+                    class="_input_4fb064"
                     name="description"
                     placeholder="Description"
                   />
                 </label>
               </fieldset>
               <button
-                class="_submit_31bf4a"
+                class="_submit_4fb064"
                 data-testid="gameFormSubmit"
                 type="submit"
               >

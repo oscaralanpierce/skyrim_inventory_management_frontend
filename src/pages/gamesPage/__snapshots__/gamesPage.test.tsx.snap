@@ -6,22 +6,22 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <h2
-              class="_title_03d657"
+              class="_title_78663b"
             >
               Your Games
             </h2>
           </div>
           <hr
-            class="_hr_03d657"
+            class="_hr_78663b"
           />
           <div>
             <span
@@ -41,29 +41,29 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
           </div>
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -71,14 +71,14 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
               </h1>
             </span>
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -91,7 +91,7 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
                 </svg>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   src="/src/components/userInfo/anonymousAvatar.jpg"
                 />
               </div>
@@ -99,18 +99,18 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -119,22 +119,22 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <h2
-            class="_title_03d657"
+            class="_title_78663b"
           >
             Your Games
           </h2>
         </div>
         <hr
-          class="_hr_03d657"
+          class="_hr_78663b"
         />
         <div>
           <span
@@ -154,29 +154,29 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
         </div>
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -184,14 +184,14 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
             </h1>
           </span>
           <div
-            class="_main_d263fb"
+            class="_main_658745"
           >
             <div
-              class="_button_d263fb"
+              class="_button_658745"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-bars _hamburger_d263fb"
+                class="svg-inline--fa fa-bars _hamburger_658745"
                 data-icon="bars"
                 data-prefix="fas"
                 role="img"
@@ -204,7 +204,7 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
               </svg>
               <img
                 alt="User profile image"
-                class="_img_d263fb"
+                class="_img_658745"
                 src="/src/components/userInfo/anonymousAvatar.jpg"
               />
             </div>
@@ -212,18 +212,18 @@ exports[`<GamesPage /> > viewing games > when loading > matches snapshot 1`] = `
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>
@@ -289,22 +289,22 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <h2
-              class="_title_03d657"
+              class="_title_78663b"
             >
               Your Games
             </h2>
           </div>
           <hr
-            class="_hr_03d657"
+            class="_hr_78663b"
           />
           <div>
             <span
@@ -324,29 +324,29 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
           </div>
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -354,18 +354,18 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -377,29 +377,29 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -418,7 +418,7 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -428,18 +428,18 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -448,22 +448,22 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <h2
-            class="_title_03d657"
+            class="_title_78663b"
           >
             Your Games
           </h2>
         </div>
         <hr
-          class="_hr_03d657"
+          class="_hr_78663b"
         />
         <div>
           <span
@@ -483,29 +483,29 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
         </div>
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -513,18 +513,18 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -536,29 +536,29 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -577,7 +577,7 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -587,18 +587,18 @@ exports[`<GamesPage /> > viewing games > when the server returns an error > matc
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>
@@ -664,22 +664,22 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <h2
-              class="_title_03d657"
+              class="_title_78663b"
             >
               Your Games
             </h2>
           </div>
           <hr
-            class="_hr_03d657"
+            class="_hr_78663b"
           />
           <div>
             <span
@@ -699,29 +699,29 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
           </div>
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -729,18 +729,18 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -752,29 +752,29 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -793,7 +793,7 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -803,18 +803,18 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -823,22 +823,22 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <h2
-            class="_title_03d657"
+            class="_title_78663b"
           >
             Your Games
           </h2>
         </div>
         <hr
-          class="_hr_03d657"
+          class="_hr_78663b"
         />
         <div>
           <span
@@ -858,29 +858,29 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
         </div>
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -888,18 +888,18 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -911,29 +911,29 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -952,7 +952,7 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -962,18 +962,18 @@ exports[`<GamesPage /> > viewing games > when there are multiple games > matches
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>
@@ -1039,22 +1039,22 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
   "baseElement": <body>
     <div>
       <main
-        class="_root_03d657"
+        class="_root_78663b"
       >
         <section
-          class="_container_03d657"
+          class="_container_78663b"
         >
           <div
-            class="_titleContainer_03d657"
+            class="_titleContainer_78663b"
           >
             <h2
-              class="_title_03d657"
+              class="_title_78663b"
             >
               Your Games
             </h2>
           </div>
           <hr
-            class="_hr_03d657"
+            class="_hr_78663b"
           />
           <div>
             <span
@@ -1074,29 +1074,29 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
           </div>
         </section>
         <header
-          class="_root_c29812"
+          class="_root_faea2d"
         >
           <div
-            class="_bar_c29812"
+            class="_bar_faea2d"
           >
             <span
-              class="_headerContainer_c29812"
+              class="_headerContainer_faea2d"
             >
               <h1
-                class="_header_c29812"
+                class="_header_faea2d"
               >
                 <a
-                  class="_headerLinkLarge_c29812"
+                  class="_headerLinkLarge_faea2d"
                   href="/dashboard"
                 >
                   Skyrim Inventory
                   <br
-                    class="_bp_c29812"
+                    class="_bp_faea2d"
                   />
                    Management
                 </a>
                 <a
-                  class="_headerLinkSmall_c29812"
+                  class="_headerLinkSmall_faea2d"
                   href="/dashboard"
                 >
                   S. I. M.
@@ -1104,18 +1104,18 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
               </h1>
             </span>
             <span
-              class="_root_d263fb"
+              class="_root_658745"
             >
               <div
-                class="_main_d263fb"
+                class="_main_658745"
               >
                 <div
-                  class="_button_d263fb"
+                  class="_button_658745"
                   role="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-bars _hamburger_d263fb"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
                     data-icon="bars"
                     data-prefix="fas"
                     role="img"
@@ -1127,29 +1127,29 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
                     />
                   </svg>
                   <span
-                    class="_info_d263fb"
+                    class="_info_658745"
                   >
                     <p
-                      class="_name_d263fb"
+                      class="_name_658745"
                     >
                       Edna St. Vincent Millay
                     </p>
                     <p
-                      class="_email_d263fb"
+                      class="_email_658745"
                     >
                       edna@gmail.com
                     </p>
                   </span>
                   <img
                     alt="User profile image"
-                    class="_img_d263fb"
+                    class="_img_658745"
                     referrerpolicy="no-referrer"
                     src="/src/support/testProfileImg.png"
                   />
                 </div>
               </div>
               <menu
-                class="_dropdown_d263fb"
+                class="_dropdown_658745"
               >
                 <div
                   role="button"
@@ -1168,7 +1168,7 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
                     />
                   </svg>
                   <p
-                    class="_signOutText_d263fb"
+                    class="_signOutText_658745"
                   >
                     Sign Out
                   </p>
@@ -1178,18 +1178,18 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
           </div>
         </header>
         <div
-          class="_root_91d025 _hidden_91d025"
+          class="_root_ca8db5 _hidden_ca8db5"
           style="--text-color: #4e6d83;"
         />
         <div
-          class="_root_753dd0 _hidden_753dd0"
+          class="_root_c33b14 _hidden_c33b14"
           data-testid="modal"
         >
           <div
-            class="_container_753dd0"
+            class="_container_c33b14"
           >
             <div
-              class="_content_753dd0"
+              class="_content_c33b14"
             />
           </div>
         </div>
@@ -1198,22 +1198,22 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
   </body>,
   "container": <div>
     <main
-      class="_root_03d657"
+      class="_root_78663b"
     >
       <section
-        class="_container_03d657"
+        class="_container_78663b"
       >
         <div
-          class="_titleContainer_03d657"
+          class="_titleContainer_78663b"
         >
           <h2
-            class="_title_03d657"
+            class="_title_78663b"
           >
             Your Games
           </h2>
         </div>
         <hr
-          class="_hr_03d657"
+          class="_hr_78663b"
         />
         <div>
           <span
@@ -1233,29 +1233,29 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
         </div>
       </section>
       <header
-        class="_root_c29812"
+        class="_root_faea2d"
       >
         <div
-          class="_bar_c29812"
+          class="_bar_faea2d"
         >
           <span
-            class="_headerContainer_c29812"
+            class="_headerContainer_faea2d"
           >
             <h1
-              class="_header_c29812"
+              class="_header_faea2d"
             >
               <a
-                class="_headerLinkLarge_c29812"
+                class="_headerLinkLarge_faea2d"
                 href="/dashboard"
               >
                 Skyrim Inventory
                 <br
-                  class="_bp_c29812"
+                  class="_bp_faea2d"
                 />
                  Management
               </a>
               <a
-                class="_headerLinkSmall_c29812"
+                class="_headerLinkSmall_faea2d"
                 href="/dashboard"
               >
                 S. I. M.
@@ -1263,18 +1263,18 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
             </h1>
           </span>
           <span
-            class="_root_d263fb"
+            class="_root_658745"
           >
             <div
-              class="_main_d263fb"
+              class="_main_658745"
             >
               <div
-                class="_button_d263fb"
+                class="_button_658745"
                 role="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-bars _hamburger_d263fb"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
                   data-icon="bars"
                   data-prefix="fas"
                   role="img"
@@ -1286,29 +1286,29 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
                   />
                 </svg>
                 <span
-                  class="_info_d263fb"
+                  class="_info_658745"
                 >
                   <p
-                    class="_name_d263fb"
+                    class="_name_658745"
                   >
                     Edna St. Vincent Millay
                   </p>
                   <p
-                    class="_email_d263fb"
+                    class="_email_658745"
                   >
                     edna@gmail.com
                   </p>
                 </span>
                 <img
                   alt="User profile image"
-                  class="_img_d263fb"
+                  class="_img_658745"
                   referrerpolicy="no-referrer"
                   src="/src/support/testProfileImg.png"
                 />
               </div>
             </div>
             <menu
-              class="_dropdown_d263fb"
+              class="_dropdown_658745"
             >
               <div
                 role="button"
@@ -1327,7 +1327,7 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
                   />
                 </svg>
                 <p
-                  class="_signOutText_d263fb"
+                  class="_signOutText_658745"
                 >
                   Sign Out
                 </p>
@@ -1337,18 +1337,18 @@ exports[`<GamesPage /> > viewing games > when there are no games > matches snaps
         </div>
       </header>
       <div
-        class="_root_91d025 _hidden_91d025"
+        class="_root_ca8db5 _hidden_ca8db5"
         style="--text-color: #4e6d83;"
       />
       <div
-        class="_root_753dd0 _hidden_753dd0"
+        class="_root_c33b14 _hidden_c33b14"
         data-testid="modal"
       >
         <div
-          class="_container_753dd0"
+          class="_container_c33b14"
         >
           <div
-            class="_content_753dd0"
+            class="_content_c33b14"
           />
         </div>
       </div>

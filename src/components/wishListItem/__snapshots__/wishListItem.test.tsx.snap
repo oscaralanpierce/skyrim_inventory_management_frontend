@@ -6,27 +6,27 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
   "baseElement": <body>
     <div>
       <div
-        class="_root_54cfce"
+        class="_root_8f9b4a"
         style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
       >
         <div
           aria-controls="wishListItem2Details"
           aria-expanded="false"
-          class="_trigger_54cfce"
+          class="_trigger_8f9b4a"
         >
           <span
-            class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+            class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
           >
             <span
-              class="_editIcons_54cfce"
+              class="_editIcons_8f9b4a"
             >
               <button
-                class="_icon_54cfce"
+                class="_icon_8f9b4a"
                 data-testid="destroyWishListItem2"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-xmark _fa_54cfce"
+                  class="svg-inline--fa fa-xmark _fa_8f9b4a"
                   data-icon="xmark"
                   data-prefix="fas"
                   role="img"
@@ -39,12 +39,12 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
                 </svg>
               </button>
               <button
-                class="_icon_54cfce"
+                class="_icon_8f9b4a"
                 data-testid="editWishListItem2"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                  class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                   data-icon="pen-to-square"
                   data-prefix="fas"
                   role="img"
@@ -58,21 +58,21 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
               </button>
             </span>
             <h3
-              class="_description_54cfce"
+              class="_description_8f9b4a"
             >
               Silver Necklace
             </h3>
           </span>
           <span
-            class="_quantityEditable_54cfce"
+            class="_quantityEditable_8f9b4a"
           >
             <button
-              class="_icon_54cfce"
+              class="_icon_8f9b4a"
               data-testid="incrementWishListItem2"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                 data-icon="chevron-up"
                 data-prefix="fas"
                 role="img"
@@ -85,17 +85,17 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
               </svg>
             </button>
             <span
-              class="_quantityContent_54cfce"
+              class="_quantityContent_8f9b4a"
             >
               2
             </span>
             <button
-              class="_icon_54cfce"
+              class="_icon_8f9b4a"
               data-testid="decrementWishListItem2"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                 data-icon="chevron-down"
                 data-prefix="fas"
                 role="img"
@@ -119,25 +119,25 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
             style="display: none;"
           >
             <div
-              class="_details_54cfce"
+              class="_details_8f9b4a"
             >
               <h4
-                class="_label_54cfce"
+                class="_label_8f9b4a"
               >
                 Unit Weight:
               </h4>
               <p
-                class="_value_54cfce"
+                class="_value_8f9b4a"
               >
                 0.3
               </p>
               <h4
-                class="_label_54cfce"
+                class="_label_8f9b4a"
               >
                 Notes:
               </h4>
               <p
-                class="_value_54cfce"
+                class="_value_8f9b4a"
               >
                 To enchant
               </p>
@@ -149,27 +149,27 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
   </body>,
   "container": <div>
     <div
-      class="_root_54cfce"
+      class="_root_8f9b4a"
       style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
     >
       <div
         aria-controls="wishListItem2Details"
         aria-expanded="false"
-        class="_trigger_54cfce"
+        class="_trigger_8f9b4a"
       >
         <span
-          class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+          class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
         >
           <span
-            class="_editIcons_54cfce"
+            class="_editIcons_8f9b4a"
           >
             <button
-              class="_icon_54cfce"
+              class="_icon_8f9b4a"
               data-testid="destroyWishListItem2"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-xmark _fa_54cfce"
+                class="svg-inline--fa fa-xmark _fa_8f9b4a"
                 data-icon="xmark"
                 data-prefix="fas"
                 role="img"
@@ -182,12 +182,12 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
               </svg>
             </button>
             <button
-              class="_icon_54cfce"
+              class="_icon_8f9b4a"
               data-testid="editWishListItem2"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                 data-icon="pen-to-square"
                 data-prefix="fas"
                 role="img"
@@ -201,21 +201,21 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
             </button>
           </span>
           <h3
-            class="_description_54cfce"
+            class="_description_8f9b4a"
           >
             Silver Necklace
           </h3>
         </span>
         <span
-          class="_quantityEditable_54cfce"
+          class="_quantityEditable_8f9b4a"
         >
           <button
-            class="_icon_54cfce"
+            class="_icon_8f9b4a"
             data-testid="incrementWishListItem2"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-chevron-up _fa_54cfce"
+              class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
               data-icon="chevron-up"
               data-prefix="fas"
               role="img"
@@ -228,17 +228,17 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
             </svg>
           </button>
           <span
-            class="_quantityContent_54cfce"
+            class="_quantityContent_8f9b4a"
           >
             2
           </span>
           <button
-            class="_icon_54cfce"
+            class="_icon_8f9b4a"
             data-testid="decrementWishListItem2"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-chevron-down _fa_54cfce"
+              class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
               data-icon="chevron-down"
               data-prefix="fas"
               role="img"
@@ -262,25 +262,25 @@ exports[`WishListItem > displaying the list item > when the list item is editabl
           style="display: none;"
         >
           <div
-            class="_details_54cfce"
+            class="_details_8f9b4a"
           >
             <h4
-              class="_label_54cfce"
+              class="_label_8f9b4a"
             >
               Unit Weight:
             </h4>
             <p
-              class="_value_54cfce"
+              class="_value_8f9b4a"
             >
               0.3
             </p>
             <h4
-              class="_label_54cfce"
+              class="_label_8f9b4a"
             >
               Notes:
             </h4>
             <p
-              class="_value_54cfce"
+              class="_value_8f9b4a"
             >
               To enchant
             </p>
@@ -349,28 +349,28 @@ exports[`WishListItem > displaying the list item > when the list item is not edi
   "baseElement": <body>
     <div>
       <div
-        class="_root_54cfce"
+        class="_root_8f9b4a"
         style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
       >
         <div
           aria-controls="wishListItem2Details"
           aria-expanded="false"
-          class="_trigger_54cfce"
+          class="_trigger_8f9b4a"
         >
           <span
-            class="_descriptionContainer_54cfce"
+            class="_descriptionContainer_8f9b4a"
           >
             <h3
-              class="_description_54cfce"
+              class="_description_8f9b4a"
             >
               Silver Necklace
             </h3>
           </span>
           <span
-            class="_quantity_54cfce"
+            class="_quantity_8f9b4a"
           >
             <span
-              class="_quantityContent_54cfce"
+              class="_quantityContent_8f9b4a"
             >
               2
             </span>
@@ -386,15 +386,15 @@ exports[`WishListItem > displaying the list item > when the list item is not edi
             style="display: none;"
           >
             <div
-              class="_details_54cfce"
+              class="_details_8f9b4a"
             >
               <h4
-                class="_label_54cfce"
+                class="_label_8f9b4a"
               >
                 Unit Weight:
               </h4>
               <p
-                class="_value_54cfce"
+                class="_value_8f9b4a"
               >
                 0.3
               </p>
@@ -406,28 +406,28 @@ exports[`WishListItem > displaying the list item > when the list item is not edi
   </body>,
   "container": <div>
     <div
-      class="_root_54cfce"
+      class="_root_8f9b4a"
       style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
     >
       <div
         aria-controls="wishListItem2Details"
         aria-expanded="false"
-        class="_trigger_54cfce"
+        class="_trigger_8f9b4a"
       >
         <span
-          class="_descriptionContainer_54cfce"
+          class="_descriptionContainer_8f9b4a"
         >
           <h3
-            class="_description_54cfce"
+            class="_description_8f9b4a"
           >
             Silver Necklace
           </h3>
         </span>
         <span
-          class="_quantity_54cfce"
+          class="_quantity_8f9b4a"
         >
           <span
-            class="_quantityContent_54cfce"
+            class="_quantityContent_8f9b4a"
           >
             2
           </span>
@@ -443,15 +443,15 @@ exports[`WishListItem > displaying the list item > when the list item is not edi
           style="display: none;"
         >
           <div
-            class="_details_54cfce"
+            class="_details_8f9b4a"
           >
             <h4
-              class="_label_54cfce"
+              class="_label_8f9b4a"
             >
               Unit Weight:
             </h4>
             <p
-              class="_value_54cfce"
+              class="_value_8f9b4a"
             >
               0.3
             </p>

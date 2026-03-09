@@ -6,25 +6,25 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
   "baseElement": <body>
     <div>
       <div
-        class="_root_ec6c68"
+        class="_root_015e9f"
         style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
       >
         <div
           aria-controls="list3Details"
           aria-expanded="false"
-          class="_trigger_ec6c68"
+          class="_trigger_015e9f"
           role="button"
         >
           <span
-            class="_icons_ec6c68"
+            class="_icons_015e9f"
           >
             <button
-              class="_icon_ec6c68"
+              class="_icon_015e9f"
               data-testid="destroyWishList3"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-xmark _fa_ec6c68"
+                class="svg-inline--fa fa-xmark _fa_015e9f"
                 data-icon="xmark"
                 data-prefix="fas"
                 role="img"
@@ -37,12 +37,12 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
               </svg>
             </button>
             <button
-              class="_icon_ec6c68"
+              class="_icon_015e9f"
               data-testid="editWishList3"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                 data-icon="pen-to-square"
                 data-prefix="fas"
                 role="img"
@@ -56,7 +56,7 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
             </button>
           </span>
           <h3
-            class="_title_ec6c68"
+            class="_title_015e9f"
           >
             My Wish List
           </h3>
@@ -71,19 +71,19 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
             style="display: none;"
           >
             <div
-              class="_details_ec6c68"
+              class="_details_015e9f"
             >
               <div
-                class="_root_8112da _collapsed_8112da"
+                class="_root_1a276c _collapsed_1a276c"
                 style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
                 <div
-                  class="_triggerContainer_8112da"
+                  class="_triggerContainer_1a276c"
                 >
                   <button
                     aria-controls="addItemToWishList3"
                     aria-expanded="false"
-                    class="_trigger_8112da"
+                    class="_trigger_1a276c"
                   >
                     Add item to list...
                   </button>
@@ -99,14 +99,14 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                   >
                     <form
                       aria-label="Wish list item creation form"
-                      class="_form_8112da"
+                      class="_form_1a276c"
                     >
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Description
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           name="description"
                           placeholder="Description"
                           required=""
@@ -114,11 +114,11 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Quantity
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           inputmode="numeric"
                           min="1"
                           name="quantity"
@@ -131,11 +131,11 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Unit Weight
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           inputmode="decimal"
                           min="0"
                           name="unit_weight"
@@ -145,18 +145,18 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Notes
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           name="notes"
                           placeholder="Notes"
                           type="text"
                         />
                       </label>
                       <button
-                        class="_submit_8112da"
+                        class="_submit_1a276c"
                         type="submit"
                       >
                         Add to List
@@ -173,25 +173,25 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
   </body>,
   "container": <div>
     <div
-      class="_root_ec6c68"
+      class="_root_015e9f"
       style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
     >
       <div
         aria-controls="list3Details"
         aria-expanded="false"
-        class="_trigger_ec6c68"
+        class="_trigger_015e9f"
         role="button"
       >
         <span
-          class="_icons_ec6c68"
+          class="_icons_015e9f"
         >
           <button
-            class="_icon_ec6c68"
+            class="_icon_015e9f"
             data-testid="destroyWishList3"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-xmark _fa_ec6c68"
+              class="svg-inline--fa fa-xmark _fa_015e9f"
               data-icon="xmark"
               data-prefix="fas"
               role="img"
@@ -204,12 +204,12 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
             </svg>
           </button>
           <button
-            class="_icon_ec6c68"
+            class="_icon_015e9f"
             data-testid="editWishList3"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+              class="svg-inline--fa fa-pen-to-square _fa_015e9f"
               data-icon="pen-to-square"
               data-prefix="fas"
               role="img"
@@ -223,7 +223,7 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
           </button>
         </span>
         <h3
-          class="_title_ec6c68"
+          class="_title_015e9f"
         >
           My Wish List
         </h3>
@@ -238,19 +238,19 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
           style="display: none;"
         >
           <div
-            class="_details_ec6c68"
+            class="_details_015e9f"
           >
             <div
-              class="_root_8112da _collapsed_8112da"
+              class="_root_1a276c _collapsed_1a276c"
               style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
               <div
-                class="_triggerContainer_8112da"
+                class="_triggerContainer_1a276c"
               >
                 <button
                   aria-controls="addItemToWishList3"
                   aria-expanded="false"
-                  class="_trigger_8112da"
+                  class="_trigger_1a276c"
                 >
                   Add item to list...
                 </button>
@@ -266,14 +266,14 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                 >
                   <form
                     aria-label="Wish list item creation form"
-                    class="_form_8112da"
+                    class="_form_1a276c"
                   >
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Description
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         name="description"
                         placeholder="Description"
                         required=""
@@ -281,11 +281,11 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Quantity
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         inputmode="numeric"
                         min="1"
                         name="quantity"
@@ -298,11 +298,11 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Unit Weight
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         inputmode="decimal"
                         min="0"
                         name="unit_weight"
@@ -312,18 +312,18 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Notes
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         name="notes"
                         placeholder="Notes"
                         type="text"
                       />
                     </label>
                     <button
-                      class="_submit_8112da"
+                      class="_submit_1a276c"
                       type="submit"
                     >
                       Add to List
@@ -397,25 +397,25 @@ exports[`WishList > displaying a list > when there are list items > matches snap
   "baseElement": <body>
     <div>
       <div
-        class="_root_ec6c68"
+        class="_root_015e9f"
         style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
       >
         <div
           aria-controls="list4Details"
           aria-expanded="false"
-          class="_trigger_ec6c68"
+          class="_trigger_015e9f"
           role="button"
         >
           <span
-            class="_icons_ec6c68"
+            class="_icons_015e9f"
           >
             <button
-              class="_icon_ec6c68"
+              class="_icon_015e9f"
               data-testid="destroyWishList4"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-xmark _fa_ec6c68"
+                class="svg-inline--fa fa-xmark _fa_015e9f"
                 data-icon="xmark"
                 data-prefix="fas"
                 role="img"
@@ -428,12 +428,12 @@ exports[`WishList > displaying a list > when there are list items > matches snap
               </svg>
             </button>
             <button
-              class="_icon_ec6c68"
+              class="_icon_015e9f"
               data-testid="editWishList4"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                 data-icon="pen-to-square"
                 data-prefix="fas"
                 role="img"
@@ -447,7 +447,7 @@ exports[`WishList > displaying a list > when there are list items > matches snap
             </button>
           </span>
           <h3
-            class="_title_ec6c68"
+            class="_title_015e9f"
           >
             My Wish List
           </h3>
@@ -462,19 +462,19 @@ exports[`WishList > displaying a list > when there are list items > matches snap
             style="display: none;"
           >
             <div
-              class="_details_ec6c68"
+              class="_details_015e9f"
             >
               <div
-                class="_root_8112da _collapsed_8112da"
+                class="_root_1a276c _collapsed_1a276c"
                 style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
                 <div
-                  class="_triggerContainer_8112da"
+                  class="_triggerContainer_1a276c"
                 >
                   <button
                     aria-controls="addItemToWishList4"
                     aria-expanded="false"
-                    class="_trigger_8112da"
+                    class="_trigger_1a276c"
                   >
                     Add item to list...
                   </button>
@@ -490,14 +490,14 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                   >
                     <form
                       aria-label="Wish list item creation form"
-                      class="_form_8112da"
+                      class="_form_1a276c"
                     >
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Description
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           name="description"
                           placeholder="Description"
                           required=""
@@ -505,11 +505,11 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Quantity
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           inputmode="numeric"
                           min="1"
                           name="quantity"
@@ -522,11 +522,11 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Unit Weight
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           inputmode="decimal"
                           min="0"
                           name="unit_weight"
@@ -536,18 +536,18 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Notes
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           name="notes"
                           placeholder="Notes"
                           type="text"
                         />
                       </label>
                       <button
-                        class="_submit_8112da"
+                        class="_submit_1a276c"
                         type="submit"
                       >
                         Add to List
@@ -557,27 +557,27 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                 </div>
               </div>
               <div
-                class="_root_54cfce"
+                class="_root_8f9b4a"
                 style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
               >
                 <div
                   aria-controls="wishListItem1Details"
                   aria-expanded="false"
-                  class="_trigger_54cfce"
+                  class="_trigger_8f9b4a"
                 >
                   <span
-                    class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                    class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                   >
                     <span
-                      class="_editIcons_54cfce"
+                      class="_editIcons_8f9b4a"
                     >
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="destroyWishListItem1"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-xmark _fa_54cfce"
+                          class="svg-inline--fa fa-xmark _fa_8f9b4a"
                           data-icon="xmark"
                           data-prefix="fas"
                           role="img"
@@ -590,12 +590,12 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                         </svg>
                       </button>
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="editWishListItem1"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                          class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                           data-icon="pen-to-square"
                           data-prefix="fas"
                           role="img"
@@ -609,21 +609,21 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       </button>
                     </span>
                     <h3
-                      class="_description_54cfce"
+                      class="_description_8f9b4a"
                     >
                       List Item 1
                     </h3>
                   </span>
                   <span
-                    class="_quantityEditable_54cfce"
+                    class="_quantityEditable_8f9b4a"
                   >
                     <button
-                      class="_icon_54cfce"
+                      class="_icon_8f9b4a"
                       data-testid="incrementWishListItem1"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                        class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                         data-icon="chevron-up"
                         data-prefix="fas"
                         role="img"
@@ -636,17 +636,17 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       </svg>
                     </button>
                     <span
-                      class="_quantityContent_54cfce"
+                      class="_quantityContent_8f9b4a"
                     >
                       4
                     </span>
                     <button
-                      class="_icon_54cfce"
+                      class="_icon_8f9b4a"
                       data-testid="decrementWishListItem1"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                        class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                         data-icon="chevron-down"
                         data-prefix="fas"
                         role="img"
@@ -670,25 +670,25 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                     style="display: none;"
                   >
                     <div
-                      class="_details_54cfce"
+                      class="_details_8f9b4a"
                     >
                       <h4
-                        class="_label_54cfce"
+                        class="_label_8f9b4a"
                       >
                         Unit Weight:
                       </h4>
                       <p
-                        class="_value_54cfce"
+                        class="_value_8f9b4a"
                       >
                         -
                       </p>
                       <h4
-                        class="_label_54cfce"
+                        class="_label_8f9b4a"
                       >
                         Notes:
                       </h4>
                       <p
-                        class="_value_54cfce"
+                        class="_value_8f9b4a"
                       >
                         -
                       </p>
@@ -697,27 +697,27 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                 </div>
               </div>
               <div
-                class="_root_54cfce"
+                class="_root_8f9b4a"
                 style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
               >
                 <div
                   aria-controls="wishListItem2Details"
                   aria-expanded="false"
-                  class="_trigger_54cfce"
+                  class="_trigger_8f9b4a"
                 >
                   <span
-                    class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                    class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                   >
                     <span
-                      class="_editIcons_54cfce"
+                      class="_editIcons_8f9b4a"
                     >
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="destroyWishListItem2"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-xmark _fa_54cfce"
+                          class="svg-inline--fa fa-xmark _fa_8f9b4a"
                           data-icon="xmark"
                           data-prefix="fas"
                           role="img"
@@ -730,12 +730,12 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                         </svg>
                       </button>
                       <button
-                        class="_icon_54cfce"
+                        class="_icon_8f9b4a"
                         data-testid="editWishListItem2"
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                          class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                           data-icon="pen-to-square"
                           data-prefix="fas"
                           role="img"
@@ -749,21 +749,21 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       </button>
                     </span>
                     <h3
-                      class="_description_54cfce"
+                      class="_description_8f9b4a"
                     >
                       List Item 2
                     </h3>
                   </span>
                   <span
-                    class="_quantityEditable_54cfce"
+                    class="_quantityEditable_8f9b4a"
                   >
                     <button
-                      class="_icon_54cfce"
+                      class="_icon_8f9b4a"
                       data-testid="incrementWishListItem2"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                        class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                         data-icon="chevron-up"
                         data-prefix="fas"
                         role="img"
@@ -776,17 +776,17 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       </svg>
                     </button>
                     <span
-                      class="_quantityContent_54cfce"
+                      class="_quantityContent_8f9b4a"
                     >
                       1
                     </span>
                     <button
-                      class="_icon_54cfce"
+                      class="_icon_8f9b4a"
                       data-testid="decrementWishListItem2"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                        class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                         data-icon="chevron-down"
                         data-prefix="fas"
                         role="img"
@@ -810,25 +810,25 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                     style="display: none;"
                   >
                     <div
-                      class="_details_54cfce"
+                      class="_details_8f9b4a"
                     >
                       <h4
-                        class="_label_54cfce"
+                        class="_label_8f9b4a"
                       >
                         Unit Weight:
                       </h4>
                       <p
-                        class="_value_54cfce"
+                        class="_value_8f9b4a"
                       >
                         -
                       </p>
                       <h4
-                        class="_label_54cfce"
+                        class="_label_8f9b4a"
                       >
                         Notes:
                       </h4>
                       <p
-                        class="_value_54cfce"
+                        class="_value_8f9b4a"
                       >
                         -
                       </p>
@@ -844,25 +844,25 @@ exports[`WishList > displaying a list > when there are list items > matches snap
   </body>,
   "container": <div>
     <div
-      class="_root_ec6c68"
+      class="_root_015e9f"
       style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
     >
       <div
         aria-controls="list4Details"
         aria-expanded="false"
-        class="_trigger_ec6c68"
+        class="_trigger_015e9f"
         role="button"
       >
         <span
-          class="_icons_ec6c68"
+          class="_icons_015e9f"
         >
           <button
-            class="_icon_ec6c68"
+            class="_icon_015e9f"
             data-testid="destroyWishList4"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-xmark _fa_ec6c68"
+              class="svg-inline--fa fa-xmark _fa_015e9f"
               data-icon="xmark"
               data-prefix="fas"
               role="img"
@@ -875,12 +875,12 @@ exports[`WishList > displaying a list > when there are list items > matches snap
             </svg>
           </button>
           <button
-            class="_icon_ec6c68"
+            class="_icon_015e9f"
             data-testid="editWishList4"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+              class="svg-inline--fa fa-pen-to-square _fa_015e9f"
               data-icon="pen-to-square"
               data-prefix="fas"
               role="img"
@@ -894,7 +894,7 @@ exports[`WishList > displaying a list > when there are list items > matches snap
           </button>
         </span>
         <h3
-          class="_title_ec6c68"
+          class="_title_015e9f"
         >
           My Wish List
         </h3>
@@ -909,19 +909,19 @@ exports[`WishList > displaying a list > when there are list items > matches snap
           style="display: none;"
         >
           <div
-            class="_details_ec6c68"
+            class="_details_015e9f"
           >
             <div
-              class="_root_8112da _collapsed_8112da"
+              class="_root_1a276c _collapsed_1a276c"
               style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
               <div
-                class="_triggerContainer_8112da"
+                class="_triggerContainer_1a276c"
               >
                 <button
                   aria-controls="addItemToWishList4"
                   aria-expanded="false"
-                  class="_trigger_8112da"
+                  class="_trigger_1a276c"
                 >
                   Add item to list...
                 </button>
@@ -937,14 +937,14 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                 >
                   <form
                     aria-label="Wish list item creation form"
-                    class="_form_8112da"
+                    class="_form_1a276c"
                   >
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Description
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         name="description"
                         placeholder="Description"
                         required=""
@@ -952,11 +952,11 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Quantity
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         inputmode="numeric"
                         min="1"
                         name="quantity"
@@ -969,11 +969,11 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Unit Weight
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         inputmode="decimal"
                         min="0"
                         name="unit_weight"
@@ -983,18 +983,18 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Notes
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         name="notes"
                         placeholder="Notes"
                         type="text"
                       />
                     </label>
                     <button
-                      class="_submit_8112da"
+                      class="_submit_1a276c"
                       type="submit"
                     >
                       Add to List
@@ -1004,27 +1004,27 @@ exports[`WishList > displaying a list > when there are list items > matches snap
               </div>
             </div>
             <div
-              class="_root_54cfce"
+              class="_root_8f9b4a"
               style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
             >
               <div
                 aria-controls="wishListItem1Details"
                 aria-expanded="false"
-                class="_trigger_54cfce"
+                class="_trigger_8f9b4a"
               >
                 <span
-                  class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                  class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                 >
                   <span
-                    class="_editIcons_54cfce"
+                    class="_editIcons_8f9b4a"
                   >
                     <button
-                      class="_icon_54cfce"
+                      class="_icon_8f9b4a"
                       data-testid="destroyWishListItem1"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-xmark _fa_54cfce"
+                        class="svg-inline--fa fa-xmark _fa_8f9b4a"
                         data-icon="xmark"
                         data-prefix="fas"
                         role="img"
@@ -1037,12 +1037,12 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       </svg>
                     </button>
                     <button
-                      class="_icon_54cfce"
+                      class="_icon_8f9b4a"
                       data-testid="editWishListItem1"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                        class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                         data-icon="pen-to-square"
                         data-prefix="fas"
                         role="img"
@@ -1056,21 +1056,21 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                     </button>
                   </span>
                   <h3
-                    class="_description_54cfce"
+                    class="_description_8f9b4a"
                   >
                     List Item 1
                   </h3>
                 </span>
                 <span
-                  class="_quantityEditable_54cfce"
+                  class="_quantityEditable_8f9b4a"
                 >
                   <button
-                    class="_icon_54cfce"
+                    class="_icon_8f9b4a"
                     data-testid="incrementWishListItem1"
                   >
                     <svg
                       aria-hidden="true"
-                      class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                      class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                       data-icon="chevron-up"
                       data-prefix="fas"
                       role="img"
@@ -1083,17 +1083,17 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                     </svg>
                   </button>
                   <span
-                    class="_quantityContent_54cfce"
+                    class="_quantityContent_8f9b4a"
                   >
                     4
                   </span>
                   <button
-                    class="_icon_54cfce"
+                    class="_icon_8f9b4a"
                     data-testid="decrementWishListItem1"
                   >
                     <svg
                       aria-hidden="true"
-                      class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                      class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                       data-icon="chevron-down"
                       data-prefix="fas"
                       role="img"
@@ -1117,25 +1117,25 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                   style="display: none;"
                 >
                   <div
-                    class="_details_54cfce"
+                    class="_details_8f9b4a"
                   >
                     <h4
-                      class="_label_54cfce"
+                      class="_label_8f9b4a"
                     >
                       Unit Weight:
                     </h4>
                     <p
-                      class="_value_54cfce"
+                      class="_value_8f9b4a"
                     >
                       -
                     </p>
                     <h4
-                      class="_label_54cfce"
+                      class="_label_8f9b4a"
                     >
                       Notes:
                     </h4>
                     <p
-                      class="_value_54cfce"
+                      class="_value_8f9b4a"
                     >
                       -
                     </p>
@@ -1144,27 +1144,27 @@ exports[`WishList > displaying a list > when there are list items > matches snap
               </div>
             </div>
             <div
-              class="_root_54cfce"
+              class="_root_8f9b4a"
               style="--main-color: #32b54e; --title-text-color: #fff; --border-color: #00821c; --body-background-color: #ccecd3; --body-text-color: #00410e; --hover-color: #19ac38;"
             >
               <div
                 aria-controls="wishListItem2Details"
                 aria-expanded="false"
-                class="_trigger_54cfce"
+                class="_trigger_8f9b4a"
               >
                 <span
-                  class="_descriptionContainer_54cfce _descriptionContainerEditable_54cfce"
+                  class="_descriptionContainer_8f9b4a _descriptionContainerEditable_8f9b4a"
                 >
                   <span
-                    class="_editIcons_54cfce"
+                    class="_editIcons_8f9b4a"
                   >
                     <button
-                      class="_icon_54cfce"
+                      class="_icon_8f9b4a"
                       data-testid="destroyWishListItem2"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-xmark _fa_54cfce"
+                        class="svg-inline--fa fa-xmark _fa_8f9b4a"
                         data-icon="xmark"
                         data-prefix="fas"
                         role="img"
@@ -1177,12 +1177,12 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       </svg>
                     </button>
                     <button
-                      class="_icon_54cfce"
+                      class="_icon_8f9b4a"
                       data-testid="editWishListItem2"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-pen-to-square _fa_54cfce"
+                        class="svg-inline--fa fa-pen-to-square _fa_8f9b4a"
                         data-icon="pen-to-square"
                         data-prefix="fas"
                         role="img"
@@ -1196,21 +1196,21 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                     </button>
                   </span>
                   <h3
-                    class="_description_54cfce"
+                    class="_description_8f9b4a"
                   >
                     List Item 2
                   </h3>
                 </span>
                 <span
-                  class="_quantityEditable_54cfce"
+                  class="_quantityEditable_8f9b4a"
                 >
                   <button
-                    class="_icon_54cfce"
+                    class="_icon_8f9b4a"
                     data-testid="incrementWishListItem2"
                   >
                     <svg
                       aria-hidden="true"
-                      class="svg-inline--fa fa-chevron-up _fa_54cfce"
+                      class="svg-inline--fa fa-chevron-up _fa_8f9b4a"
                       data-icon="chevron-up"
                       data-prefix="fas"
                       role="img"
@@ -1223,17 +1223,17 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                     </svg>
                   </button>
                   <span
-                    class="_quantityContent_54cfce"
+                    class="_quantityContent_8f9b4a"
                   >
                     1
                   </span>
                   <button
-                    class="_icon_54cfce"
+                    class="_icon_8f9b4a"
                     data-testid="decrementWishListItem2"
                   >
                     <svg
                       aria-hidden="true"
-                      class="svg-inline--fa fa-chevron-down _fa_54cfce"
+                      class="svg-inline--fa fa-chevron-down _fa_8f9b4a"
                       data-icon="chevron-down"
                       data-prefix="fas"
                       role="img"
@@ -1257,25 +1257,25 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                   style="display: none;"
                 >
                   <div
-                    class="_details_54cfce"
+                    class="_details_8f9b4a"
                   >
                     <h4
-                      class="_label_54cfce"
+                      class="_label_8f9b4a"
                     >
                       Unit Weight:
                     </h4>
                     <p
-                      class="_value_54cfce"
+                      class="_value_8f9b4a"
                     >
                       -
                     </p>
                     <h4
-                      class="_label_54cfce"
+                      class="_label_8f9b4a"
                     >
                       Notes:
                     </h4>
                     <p
-                      class="_value_54cfce"
+                      class="_value_8f9b4a"
                     >
                       -
                     </p>
@@ -1348,25 +1348,25 @@ exports[`WishList > displaying a list > when there are no list items > matches s
   "baseElement": <body>
     <div>
       <div
-        class="_root_ec6c68"
+        class="_root_015e9f"
         style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
       >
         <div
           aria-controls="list4Details"
           aria-expanded="false"
-          class="_trigger_ec6c68"
+          class="_trigger_015e9f"
           role="button"
         >
           <span
-            class="_icons_ec6c68"
+            class="_icons_015e9f"
           >
             <button
-              class="_icon_ec6c68"
+              class="_icon_015e9f"
               data-testid="destroyWishList4"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-xmark _fa_ec6c68"
+                class="svg-inline--fa fa-xmark _fa_015e9f"
                 data-icon="xmark"
                 data-prefix="fas"
                 role="img"
@@ -1379,12 +1379,12 @@ exports[`WishList > displaying a list > when there are no list items > matches s
               </svg>
             </button>
             <button
-              class="_icon_ec6c68"
+              class="_icon_015e9f"
               data-testid="editWishList4"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                 data-icon="pen-to-square"
                 data-prefix="fas"
                 role="img"
@@ -1398,7 +1398,7 @@ exports[`WishList > displaying a list > when there are no list items > matches s
             </button>
           </span>
           <h3
-            class="_title_ec6c68"
+            class="_title_015e9f"
           >
             My Wish List
           </h3>
@@ -1413,19 +1413,19 @@ exports[`WishList > displaying a list > when there are no list items > matches s
             style="display: none;"
           >
             <div
-              class="_details_ec6c68"
+              class="_details_015e9f"
             >
               <div
-                class="_root_8112da _collapsed_8112da"
+                class="_root_1a276c _collapsed_1a276c"
                 style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
                 <div
-                  class="_triggerContainer_8112da"
+                  class="_triggerContainer_1a276c"
                 >
                   <button
                     aria-controls="addItemToWishList4"
                     aria-expanded="false"
-                    class="_trigger_8112da"
+                    class="_trigger_1a276c"
                   >
                     Add item to list...
                   </button>
@@ -1441,14 +1441,14 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                   >
                     <form
                       aria-label="Wish list item creation form"
-                      class="_form_8112da"
+                      class="_form_1a276c"
                     >
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Description
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           name="description"
                           placeholder="Description"
                           required=""
@@ -1456,11 +1456,11 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Quantity
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           inputmode="numeric"
                           min="1"
                           name="quantity"
@@ -1473,11 +1473,11 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Unit Weight
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           inputmode="decimal"
                           min="0"
                           name="unit_weight"
@@ -1487,18 +1487,18 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Notes
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           name="notes"
                           placeholder="Notes"
                           type="text"
                         />
                       </label>
                       <button
-                        class="_submit_8112da"
+                        class="_submit_1a276c"
                         type="submit"
                       >
                         Add to List
@@ -1515,25 +1515,25 @@ exports[`WishList > displaying a list > when there are no list items > matches s
   </body>,
   "container": <div>
     <div
-      class="_root_ec6c68"
+      class="_root_015e9f"
       style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
     >
       <div
         aria-controls="list4Details"
         aria-expanded="false"
-        class="_trigger_ec6c68"
+        class="_trigger_015e9f"
         role="button"
       >
         <span
-          class="_icons_ec6c68"
+          class="_icons_015e9f"
         >
           <button
-            class="_icon_ec6c68"
+            class="_icon_015e9f"
             data-testid="destroyWishList4"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-xmark _fa_ec6c68"
+              class="svg-inline--fa fa-xmark _fa_015e9f"
               data-icon="xmark"
               data-prefix="fas"
               role="img"
@@ -1546,12 +1546,12 @@ exports[`WishList > displaying a list > when there are no list items > matches s
             </svg>
           </button>
           <button
-            class="_icon_ec6c68"
+            class="_icon_015e9f"
             data-testid="editWishList4"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+              class="svg-inline--fa fa-pen-to-square _fa_015e9f"
               data-icon="pen-to-square"
               data-prefix="fas"
               role="img"
@@ -1565,7 +1565,7 @@ exports[`WishList > displaying a list > when there are no list items > matches s
           </button>
         </span>
         <h3
-          class="_title_ec6c68"
+          class="_title_015e9f"
         >
           My Wish List
         </h3>
@@ -1580,19 +1580,19 @@ exports[`WishList > displaying a list > when there are no list items > matches s
           style="display: none;"
         >
           <div
-            class="_details_ec6c68"
+            class="_details_015e9f"
           >
             <div
-              class="_root_8112da _collapsed_8112da"
+              class="_root_1a276c _collapsed_1a276c"
               style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
               <div
-                class="_triggerContainer_8112da"
+                class="_triggerContainer_1a276c"
               >
                 <button
                   aria-controls="addItemToWishList4"
                   aria-expanded="false"
-                  class="_trigger_8112da"
+                  class="_trigger_1a276c"
                 >
                   Add item to list...
                 </button>
@@ -1608,14 +1608,14 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                 >
                   <form
                     aria-label="Wish list item creation form"
-                    class="_form_8112da"
+                    class="_form_1a276c"
                   >
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Description
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         name="description"
                         placeholder="Description"
                         required=""
@@ -1623,11 +1623,11 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Quantity
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         inputmode="numeric"
                         min="1"
                         name="quantity"
@@ -1640,11 +1640,11 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Unit Weight
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         inputmode="decimal"
                         min="0"
                         name="unit_weight"
@@ -1654,18 +1654,18 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Notes
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         name="notes"
                         placeholder="Notes"
                         type="text"
                       />
                     </label>
                     <button
-                      class="_submit_8112da"
+                      class="_submit_1a276c"
                       type="submit"
                     >
                       Add to List
@@ -1739,25 +1739,25 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_root_ec6c68"
+        class="_root_015e9f"
         style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
       >
         <div
           aria-controls="list3Details"
           aria-expanded="false"
-          class="_trigger_ec6c68"
+          class="_trigger_015e9f"
           role="button"
         >
           <span
-            class="_icons_ec6c68"
+            class="_icons_015e9f"
           >
             <button
-              class="_icon_ec6c68"
+              class="_icon_015e9f"
               data-testid="destroyWishList3"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-xmark _fa_ec6c68"
+                class="svg-inline--fa fa-xmark _fa_015e9f"
                 data-icon="xmark"
                 data-prefix="fas"
                 role="img"
@@ -1770,12 +1770,12 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
               </svg>
             </button>
             <button
-              class="_icon_ec6c68"
+              class="_icon_015e9f"
               data-testid="editWishList3"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+                class="svg-inline--fa fa-pen-to-square _fa_015e9f"
                 data-icon="pen-to-square"
                 data-prefix="fas"
                 role="img"
@@ -1790,12 +1790,12 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
           </span>
           <form
             aria-label="List title edit form"
-            class="_form_ec6c68 _root_8f85e1"
+            class="_form_015e9f _root_ed6063"
             style="--scheme-color: #00a323; --text-color: #fff; --border-color: #00821c; --icon-hover-color: #ccecd3; --max-width: 16px;"
           >
             <input
               aria-label="title"
-              class="_input_8f85e1"
+              class="_input_ed6063"
               data-testid="editListTitle"
               name="title"
               pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
@@ -1805,13 +1805,13 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
               value="My Wish List"
             />
             <button
-              class="_submit_8f85e1"
+              class="_submit_ed6063"
               name="submit"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-square-check _fa_8f85e1"
+                class="svg-inline--fa fa-square-check _fa_ed6063"
                 data-icon="square-check"
                 data-prefix="far"
                 role="img"
@@ -1835,19 +1835,19 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
             style="display: none;"
           >
             <div
-              class="_details_ec6c68"
+              class="_details_015e9f"
             >
               <div
-                class="_root_8112da _collapsed_8112da"
+                class="_root_1a276c _collapsed_1a276c"
                 style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
                 <div
-                  class="_triggerContainer_8112da"
+                  class="_triggerContainer_1a276c"
                 >
                   <button
                     aria-controls="addItemToWishList3"
                     aria-expanded="false"
-                    class="_trigger_8112da"
+                    class="_trigger_1a276c"
                   >
                     Add item to list...
                   </button>
@@ -1863,14 +1863,14 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                   >
                     <form
                       aria-label="Wish list item creation form"
-                      class="_form_8112da"
+                      class="_form_1a276c"
                     >
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Description
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           name="description"
                           placeholder="Description"
                           required=""
@@ -1878,11 +1878,11 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Quantity
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           inputmode="numeric"
                           min="1"
                           name="quantity"
@@ -1895,11 +1895,11 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Unit Weight
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           inputmode="decimal"
                           min="0"
                           name="unit_weight"
@@ -1909,18 +1909,18 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                         />
                       </label>
                       <label
-                        class="_label_8112da"
+                        class="_label_1a276c"
                       >
                         Notes
                         <input
-                          class="_input_8112da"
+                          class="_input_1a276c"
                           name="notes"
                           placeholder="Notes"
                           type="text"
                         />
                       </label>
                       <button
-                        class="_submit_8112da"
+                        class="_submit_1a276c"
                         type="submit"
                       >
                         Add to List
@@ -1937,25 +1937,25 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_ec6c68"
+      class="_root_015e9f"
       style="--scheme-color: #00a323; --border-color: #00821c; --text-color-primary: #fff; --text-color-secondary: #fff; --hover-color: #00921f; --scheme-color-lighter: #32b54e; --scheme-color-lightest: #ccecd3; --max-title-width: -16px;"
     >
       <div
         aria-controls="list3Details"
         aria-expanded="false"
-        class="_trigger_ec6c68"
+        class="_trigger_015e9f"
         role="button"
       >
         <span
-          class="_icons_ec6c68"
+          class="_icons_015e9f"
         >
           <button
-            class="_icon_ec6c68"
+            class="_icon_015e9f"
             data-testid="destroyWishList3"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-xmark _fa_ec6c68"
+              class="svg-inline--fa fa-xmark _fa_015e9f"
               data-icon="xmark"
               data-prefix="fas"
               role="img"
@@ -1968,12 +1968,12 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
             </svg>
           </button>
           <button
-            class="_icon_ec6c68"
+            class="_icon_015e9f"
             data-testid="editWishList3"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-pen-to-square _fa_ec6c68"
+              class="svg-inline--fa fa-pen-to-square _fa_015e9f"
               data-icon="pen-to-square"
               data-prefix="fas"
               role="img"
@@ -1988,12 +1988,12 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
         </span>
         <form
           aria-label="List title edit form"
-          class="_form_ec6c68 _root_8f85e1"
+          class="_form_015e9f _root_ed6063"
           style="--scheme-color: #00a323; --text-color: #fff; --border-color: #00821c; --icon-hover-color: #ccecd3; --max-width: 16px;"
         >
           <input
             aria-label="title"
-            class="_input_8f85e1"
+            class="_input_ed6063"
             data-testid="editListTitle"
             name="title"
             pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
@@ -2003,13 +2003,13 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
             value="My Wish List"
           />
           <button
-            class="_submit_8f85e1"
+            class="_submit_ed6063"
             name="submit"
             type="submit"
           >
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-square-check _fa_8f85e1"
+              class="svg-inline--fa fa-square-check _fa_ed6063"
               data-icon="square-check"
               data-prefix="far"
               role="img"
@@ -2033,19 +2033,19 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
           style="display: none;"
         >
           <div
-            class="_details_ec6c68"
+            class="_details_015e9f"
           >
             <div
-              class="_root_8112da _collapsed_8112da"
+              class="_root_1a276c _collapsed_1a276c"
               style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
               <div
-                class="_triggerContainer_8112da"
+                class="_triggerContainer_1a276c"
               >
                 <button
                   aria-controls="addItemToWishList3"
                   aria-expanded="false"
-                  class="_trigger_8112da"
+                  class="_trigger_1a276c"
                 >
                   Add item to list...
                 </button>
@@ -2061,14 +2061,14 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                 >
                   <form
                     aria-label="Wish list item creation form"
-                    class="_form_8112da"
+                    class="_form_1a276c"
                   >
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Description
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         name="description"
                         placeholder="Description"
                         required=""
@@ -2076,11 +2076,11 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Quantity
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         inputmode="numeric"
                         min="1"
                         name="quantity"
@@ -2093,11 +2093,11 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Unit Weight
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         inputmode="decimal"
                         min="0"
                         name="unit_weight"
@@ -2107,18 +2107,18 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                       />
                     </label>
                     <label
-                      class="_label_8112da"
+                      class="_label_1a276c"
                     >
                       Notes
                       <input
-                        class="_input_8112da"
+                        class="_input_1a276c"
                         name="notes"
                         placeholder="Notes"
                         type="text"
                       />
                     </label>
                     <button
-                      class="_submit_8112da"
+                      class="_submit_1a276c"
                       type="submit"
                     >
                       Add to List
