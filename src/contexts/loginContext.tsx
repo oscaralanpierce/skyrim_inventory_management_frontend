@@ -31,7 +31,7 @@ export const LoginProvider = ({ children }: ProviderProps) => {
 
   const requireLogin = useCallback(() => {
     if (!user && !authLoading) {
-      navigate(paths.home)
+      void navigate(paths.home)
     }
   }, [user, authLoading])
 

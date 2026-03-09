@@ -19,6 +19,7 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
             >
               <a
                 class="_headerLinkLarge_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 Skyrim Inventory
@@ -29,6 +30,7 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
               </a>
               <a
                 class="_headerLinkSmall_faea2d"
+                data-discover="true"
                 href="/dashboard"
               >
                 S. I. M.
@@ -126,6 +128,7 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
           >
             <a
               class="_headerLinkLarge_faea2d"
+              data-discover="true"
               href="/dashboard"
             >
               Skyrim Inventory
@@ -136,6 +139,7 @@ exports[`<DashboardHeader /> > matches snapshot 1`] = `
             </a>
             <a
               class="_headerLinkSmall_faea2d"
+              data-discover="true"
               href="/dashboard"
             >
               S. I. M.

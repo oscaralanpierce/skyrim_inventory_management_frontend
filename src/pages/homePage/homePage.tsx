@@ -21,7 +21,7 @@ const HomePage = () => {
   }
 
   useEffect(() => {
-    if (user) navigate(paths.dashboard.main)
+    if (user) void navigate(paths.dashboard.main)
   }, [user])
 
   return (
