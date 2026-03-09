@@ -6102,16 +6102,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-helmet-async@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "react-helmet-async@npm:2.0.5"
+"react-helmet-async@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "react-helmet-async@npm:3.0.0"
   dependencies:
     invariant: ^2.2.4
     react-fast-compare: ^3.2.2
     shallowequal: ^1.1.0
   peerDependencies:
-    react: ^16.6.0 || ^17.0.0 || ^18.0.0
-  checksum: cc2d13496f6fdee6b5f9472d3f7369db3e70e4fc1a55793708c2bbd90d48b0dedc725fd066f987c7a3d74b03a29bd5e65b9f40fa29bd8239e7cfb526aff4d4b6
+    react: ^16.6.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 78273903cbdbbf4ed555b38ec95e9080d7526e4194845f664c0374146fcdeb6ab4e02aee70b3b852b88272a3992c8c1dae2bf3fed188ccfa2d19b8e5e2432545
   languageName: node
   linkType: hard
 
@@ -6541,7 +6541,7 @@ __metadata:
     react-animate-height: ^3.2.3
     react-dom: ^19.2.4
     react-firebase-hooks: ^5.1.1
-    react-helmet-async: ^2.0.5
+    react-helmet-async: ^3.0.0
     react-router-dom: ^6.28.0
     react-spinners: ^0.17.0
     storybook: 10.2.16
