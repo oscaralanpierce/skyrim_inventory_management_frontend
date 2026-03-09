@@ -57,7 +57,7 @@
     "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",
     "jsdom": "^25.0.0",
-    "msw": "^2.6.6",
+    "msw": "^2.12.10",
     "prettier": "3.3.3",
     "storybook": "10.2.16",
     "storybook-addon-mock": "^6.0.1",
