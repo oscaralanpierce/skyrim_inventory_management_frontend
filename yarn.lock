@@ -2126,13 +2126,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.21.0":
-  version: 1.21.0
-  resolution: "@remix-run/router@npm:1.21.0"
-  checksum: d9477a7772053ad0ffcf03385cfb1a54e56f8a56d1f9f5062de3b1dfcbd019dd73282a00a5a72aa55c120771110982448c165c1405d64540aaef13051a8e45cc
-  languageName: node
-  linkType: hard
-
 "@rolldown/pluginutils@npm:1.0.0-rc.3":
   version: 1.0.0-rc.3
   resolution: "@rolldown/pluginutils@npm:1.0.0-rc.3"
@@ -3608,7 +3601,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie@npm:^1.0.2":
+"cookie@npm:^1.0.1, cookie@npm:^1.0.2":
   version: 1.1.1
   resolution: "cookie@npm:1.1.1"
   checksum: e40c4ff817a73ec0a41413654ca9a71e6207bd6e511151bb1d307aef2903eb59771127a85474afe0e12a8982804f7b03cce0bda798b55c306aca9608b4b9acab
@@ -6087,27 +6080,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^6.28.0":
-  version: 6.28.0
-  resolution: "react-router-dom@npm:6.28.0"
+"react-router-dom@npm:^7.13.1":
+  version: 7.13.1
+  resolution: "react-router-dom@npm:7.13.1"
   dependencies:
-    "@remix-run/router": 1.21.0
-    react-router: 6.28.0
+    react-router: 7.13.1
   peerDependencies:
-    react: ">=16.8"
-    react-dom: ">=16.8"
-  checksum: 0cf4658a92bc66f50ec9d8518c36aa5a402bcadce71fb624ed6f900d73a29ea87ff904a4f2c42279107e75e80cc08c6192563fadcc5d4e642e6d476e38e83b21
+    react: ">=18"
+    react-dom: ">=18"
+  checksum: b8377b8d77caa381dcfdb5a158351a226fe573ace6c6a40b3a3dd1ef1af67c92d01e35f5cee26a11f4866a65183aa3fc0a2c2d18cafa7c8ccb6293d879062a00
   languageName: node
   linkType: hard
 
-"react-router@npm:6.28.0":
-  version: 6.28.0
-  resolution: "react-router@npm:6.28.0"
+"react-router@npm:7.13.1":
+  version: 7.13.1
+  resolution: "react-router@npm:7.13.1"
   dependencies:
-    "@remix-run/router": 1.21.0
+    cookie: ^1.0.1
+    set-cookie-parser: ^2.6.0
   peerDependencies:
-    react: ">=16.8"
-  checksum: 23246ca957b5c2bc8d6f9a81fee2df2ce4fc3feca3ec27c2fd85999568fc1299a4e8273e4ab70b6f3acd43a1fb45e0c93cb01ef77e68c9f9e1f7e4f42a1419ea
+    react: ">=18"
+    react-dom: ">=18"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+  checksum: 159e7fa3fbec7fc0273064bb54fd4d395e21f84ae5cb21d57fb6c53bfc274d9879918001ceb4f4a1f28f0e4dd41865b82366b88f027ba17243ee592a676c9ef2
   languageName: node
   linkType: hard
 
@@ -6402,6 +6399,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"set-cookie-parser@npm:^2.6.0":
+  version: 2.7.2
+  resolution: "set-cookie-parser@npm:2.7.2"
+  checksum: 9e1b09e7184079c81f9ba4d2db3222854adf4e6e4fe73982388367649386a93e7f9b979333ddeba22610706def93c2478f34c3324fe223528cb2c4c879a2c2d3
+  languageName: node
+  linkType: hard
+
 "shallow-clone@npm:^3.0.0":
   version: 3.0.1
   resolution: "shallow-clone@npm:3.0.1"
@@ -6493,7 +6497,7 @@ __metadata:
     react-dom: ^19.2.4
     react-firebase-hooks: ^5.1.1
     react-helmet-async: ^3.0.0
-    react-router-dom: ^6.28.0
+    react-router-dom: ^7.13.1
     react-spinners: ^0.17.0
     storybook: 10.2.16
     storybook-addon-mock: ^6.0.1
