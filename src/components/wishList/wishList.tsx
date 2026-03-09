@@ -50,7 +50,7 @@ const WishList = ({
     triggerRef,
     isComponentVisible,
     setIsComponentVisible,
-  } = useComponentVisible()
+  } = useComponentVisible<HTMLFormElement, HTMLButtonElement>()
 
   const {
     schemeColorDarkest,

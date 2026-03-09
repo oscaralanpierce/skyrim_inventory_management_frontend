@@ -59,7 +59,7 @@ export const postWishListItems = (
           (json as ErrorObject).errors.join(', ')
         )
 
-      return returnValue
+      return returnValue as PostWishListItemsReturnValue
     })
   })
 }
@@ -104,7 +104,7 @@ export const patchWishListItem = (
             (json as ErrorObject).errors.join(', ')
           )
 
-        return returnValue
+        return returnValue as PatchWishListItemReturnValue
       })
   })
 }
@@ -140,7 +140,7 @@ export const deleteWishListItem = (
           (json as ErrorObject).errors.join(', ')
         )
 
-      return returnValue
+      return returnValue as DeleteWishListItemReturnValue
     })
   })
 }
