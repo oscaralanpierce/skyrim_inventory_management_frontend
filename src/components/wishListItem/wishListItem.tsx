@@ -88,7 +88,7 @@ const WishListItem = ({
     '--hover-color': hoverColorLight,
   } as CSSProperties
 
-  const refContains = (ref: RefObject<HTMLElement>, el: Node) =>
+  const refContains = (ref: RefObject<HTMLElement | null>, el: Node) =>
     ref.current && (ref.current === el || ref.current.contains(el))
 
   const iconRefContains = (el: Node) =>

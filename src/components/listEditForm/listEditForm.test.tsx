@@ -11,7 +11,7 @@ interface WrapperProps {
 }
 
 const WrapperComponent = ({ onSubmit }: WrapperProps) => {
-  const formRef = useRef(null)
+  const formRef = useRef<HTMLFormElement>(null)
 
   return (
     <div>
