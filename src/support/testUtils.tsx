@@ -16,6 +16,14 @@ const setDom = (url?: string) => {
     url: url || 'http://localhost:5173',
   })
 
+  // jsdom doesn't implement ResizeObserver; mock it so hooks that use
+  // @react-hook/resize-observer don't throw during tests.
+  dom.window.ResizeObserver = class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  }
+
   global.window = dom.window as unknown as Window & typeof globalThis
   global.document = dom.window.document
 }
