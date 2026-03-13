@@ -4215,15 +4215,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:10.2.17":
-  version: 10.2.17
-  resolution: "eslint-plugin-storybook@npm:10.2.17"
+"eslint-plugin-storybook@npm:10.2.18":
+  version: 10.2.18
+  resolution: "eslint-plugin-storybook@npm:10.2.18"
   dependencies:
     "@typescript-eslint/utils": ^8.48.0
   peerDependencies:
     eslint: ">=8"
-    storybook: ^10.2.17
-  checksum: 8eb24c0d3c666f1928ec13a658c4cb57070389fc1bb938b313d8793e932a19540adc66152a4d4f17b6f996c23ac6f1b57909a302fd00c81a2830df7a91c0f126
+    storybook: ^10.2.18
+  checksum: 04efe82b7aece37f05e9be70338303d9304ad85fa9a3821c9d7aea39581b6ec2d763e89b428534e72a741c70f11ffaa8e2541132041d0cbbb9ba7c06de0a63b0
   languageName: node
   linkType: hard
 
@@ -6503,7 +6503,7 @@ __metadata:
     classnames: ^2.5.1
     eslint: ^10.0.3
     eslint-config-prettier: ^10.1.8
-    eslint-plugin-storybook: 10.2.17
+    eslint-plugin-storybook: 10.2.18
     firebase: ^12.10.0
     jsdom: ^28.1.0
     msw: ^2.12.10
