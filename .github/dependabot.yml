@@ -23,6 +23,7 @@ updates:
       # are issued very frequently so this should be done once a week or so.
       - dependency-name: "storybook"
       - dependency-name: "@storybook/addon-actions"
+      - dependency-name: "@storybook/addon-docs"
       - dependency-name: "@storybook/addon-essentials"
       - dependency-name: "@storybook/addon-interactions"
       - dependency-name: "@storybook/addon-links"
@@ -31,6 +32,7 @@ updates:
       - dependency-name: "@storybook/react"
       - dependency-name: "@storybook/react-vite"
       - dependency-name: "@chromatic-com/storybook"
+      - dependency-name: "eslint-plugin-storybook"
 
       # All Fontawesome packages also need to be updated together.
       - dependency-name: "@fortawesome/fontawesome-svg-core"
