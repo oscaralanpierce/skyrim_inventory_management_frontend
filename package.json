@@ -40,7 +40,7 @@
     "@babel/core": "^7.29.0",
     "@chromatic-com/storybook": "^5.0.1",
     "@eslint/js": "^10.0.1",
-    "@storybook/addon-docs": "10.2.17",
+    "@storybook/addon-docs": "10.2.18",
     "@storybook/addon-links": "10.2.17",
     "@storybook/cli": "10.2.17",
     "@storybook/react-vite": "10.2.17",
