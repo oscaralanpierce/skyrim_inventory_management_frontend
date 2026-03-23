@@ -2645,15 +2645,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsdom@npm:^28.0.0":
-  version: 28.0.0
-  resolution: "@types/jsdom@npm:28.0.0"
+"@types/jsdom@npm:^28.0.1":
+  version: 28.0.1
+  resolution: "@types/jsdom@npm:28.0.1"
   dependencies:
     "@types/node": "*"
     "@types/tough-cookie": "*"
     parse5: ^7.0.0
     undici-types: ^7.21.0
-  checksum: 8edad277d9785cac10ab346961a0b0dae254f33d8f3a2e3ea4264b910c426458c44362e883637df7a2647e85eb5bd280a963a55eed84af9285d44fa24651ce18
+  checksum: 8ba717c1d3a7f2033324784bf61f1ca89c5aea84076f3c01af41e438c540ff969959436d31bad31cb7c9c3932f1ce6a985663292505f14940b6f3c2fec05d5f1
   languageName: node
   linkType: hard
 
@@ -6417,7 +6417,7 @@ __metadata:
     "@storybook/react-vite": 10.2.19
     "@testing-library/dom": ^10.4.1
     "@testing-library/react": ^16.3.2
-    "@types/jsdom": ^28.0.0
+    "@types/jsdom": ^28.0.1
     "@types/node": ^25.5.0
     "@types/react": ^19.2.14
     "@types/react-dom": ^19.2.3
