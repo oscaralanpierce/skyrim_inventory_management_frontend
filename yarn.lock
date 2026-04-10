@@ -3525,9 +3525,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^16.1.0":
-  version: 16.1.0
-  resolution: "chromatic@npm:16.1.0"
+"chromatic@npm:^16.2.0":
+  version: 16.2.0
+  resolution: "chromatic@npm:16.2.0"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
@@ -3540,7 +3540,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: e35b85980e218fd4140727ce30016530086e9a49831f5f7ca4cccd628642a2666fd16e723736b6233868bfd82ee5711b0d18833dc0dc3637f428b9409db02c2b
+  checksum: 69e6198b0b4a4628f35adcf5022e27c6f7ea2dc6224913e1597056f075b5d4887c6e78572e120a5f6ded113f1dac96019e96fb069981cef383e2af13b2d367dd
   languageName: node
   linkType: hard
 
@@ -6546,7 +6546,7 @@ __metadata:
     "@types/react-router-dom": ^5.3.3
     "@vitejs/plugin-react": ^6.0.1
     babel-loader: ^10.1.1
-    chromatic: ^16.1.0
+    chromatic: ^16.2.0
     classnames: ^2.5.1
     eslint: ^10.2.0
     eslint-config-prettier: ^10.1.8
