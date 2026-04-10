@@ -5944,7 +5944,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.8.1, prettier@npm:^3.7.1":
+"prettier@npm:3.8.2":
+  version: 3.8.2
+  resolution: "prettier@npm:3.8.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: f415107b70d175983f8141cd78a99d38fbd4241c99b293ed182d76a96081d00db8918b1c76b32e597101d8ed8d3ab37389057b9ff1ba330a6a0e561c873cd22f
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.7.1":
   version: 3.8.1
   resolution: "prettier@npm:3.8.1"
   bin:
@@ -6556,7 +6565,7 @@ __metadata:
     firebase: ^12.12.0
     jsdom: ^29.0.2
     msw: ^2.12.14
-    prettier: 3.8.1
+    prettier: 3.8.2
     react: ^19.2.4
     react-animate-height: ^3.2.3
     react-dom: ^19.2.4
