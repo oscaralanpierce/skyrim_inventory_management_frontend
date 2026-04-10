@@ -54,7 +54,7 @@
     "@vitejs/plugin-react": "^6.0.1",
     "babel-loader": "^10.1.1",
     "chromatic": "^16.1.0",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-storybook": "10.2.19",
     "jsdom": "^29.0.1",
