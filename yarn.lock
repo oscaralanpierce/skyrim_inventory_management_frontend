@@ -5525,9 +5525,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^2.12.14":
-  version: 2.12.14
-  resolution: "msw@npm:2.12.14"
+"msw@npm:^2.13.3":
+  version: 2.13.3
+  resolution: "msw@npm:2.13.3"
   dependencies:
     "@inquirer/confirm": ^5.0.0
     "@mswjs/interceptors": ^0.41.2
@@ -5540,7 +5540,7 @@ __metadata:
     outvariant: ^1.4.3
     path-to-regexp: ^6.3.0
     picocolors: ^1.1.1
-    rettime: ^0.10.1
+    rettime: ^0.11.7
     statuses: ^2.0.2
     strict-event-emitter: ^0.5.1
     tough-cookie: ^6.0.0
@@ -5554,7 +5554,7 @@ __metadata:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: 0679ee4b41aad61217bf45ce007b3a83fbc8bc2b312a87e149d5dcb696976e40ac44ad3f427b75717a6ef0ee5ec9934fe61b6edf885042681da0ee06977aeded
+  checksum: c41c257186082398835e6267b7918e58bed015ca8ec17e646c83d9950eddb016c9c6dcd04455baee6c5d0f49a931c91d500576c09e7c8e236d9eceaacc9319ad
   languageName: node
   linkType: hard
 
@@ -6258,10 +6258,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rettime@npm:^0.10.1":
-  version: 0.10.1
-  resolution: "rettime@npm:0.10.1"
-  checksum: c804d5847f5d1189055fa6c46ecbe9a06832e5776b9a1352b7349aa84e09ee96373404748770ad0e3c4e69c688a9df5eff9bcd84224b6384d1aa93bc2947ee21
+"rettime@npm:^0.11.7":
+  version: 0.11.7
+  resolution: "rettime@npm:0.11.7"
+  checksum: 68b87492685800889ddbf96ae7c902bac74ba626fd2fa80c71992a38f9b89258e120646d1cc89e4e27846467ab8b7902ea9e69fc420f39d1ccf0d9619183468a
   languageName: node
   linkType: hard
 
@@ -6564,7 +6564,7 @@ __metadata:
     eslint-plugin-storybook: 10.2.19
     firebase: ^12.12.0
     jsdom: ^29.0.2
-    msw: ^2.12.14
+    msw: ^2.13.3
     prettier: 3.8.2
     react: ^19.2.4
     react-animate-height: ^3.2.3
