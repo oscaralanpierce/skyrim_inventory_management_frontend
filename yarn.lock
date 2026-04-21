@@ -1076,9 +1076,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@firebase/ai@npm:2.11.0":
-  version: 2.11.0
-  resolution: "@firebase/ai@npm:2.11.0"
+"@firebase/ai@npm:2.11.1":
+  version: 2.11.1
+  resolution: "@firebase/ai@npm:2.11.1"
   dependencies:
     "@firebase/app-check-interop-types": 0.3.3
     "@firebase/component": 0.7.2
@@ -1088,7 +1088,7 @@ __metadata:
   peerDependencies:
     "@firebase/app": 0.x
     "@firebase/app-types": 0.x
-  checksum: 0d76c394be61519810cdf1e0e86438f4599d387e5409298341ba55842a145ef4bdc6106a1cd177d6657fb7c484b87a5031302fd3d7c3f338a49cb66b79f5f8b4
+  checksum: f2029c1fdf5b0490cb1737b052c503573ea0f8bf64544c4485dcf0727f153c02ff2592941d7a7a39e4fb17f6792a90846b273ee45ad16ded01b4361506f7bc05
   languageName: node
   linkType: hard
 
@@ -4395,11 +4395,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"firebase@npm:^12.12.0":
-  version: 12.12.0
-  resolution: "firebase@npm:12.12.0"
+"firebase@npm:^12.12.1":
+  version: 12.12.1
+  resolution: "firebase@npm:12.12.1"
   dependencies:
-    "@firebase/ai": 2.11.0
+    "@firebase/ai": 2.11.1
     "@firebase/analytics": 0.10.21
     "@firebase/analytics-compat": 0.2.27
     "@firebase/app": 0.14.11
@@ -4427,7 +4427,7 @@ __metadata:
     "@firebase/storage": 0.14.2
     "@firebase/storage-compat": 0.4.2
     "@firebase/util": 1.15.0
-  checksum: db8eb6e893ea0dceca2779f5e3f7645456ee1e53128b2dd9ee7663a71561560df1608ca7677355dd860ef57627c72f64ed561dff1f308a9bcf645eda9c8b1a09
+  checksum: 1409deecb6fc876970b6e0688ea2c29e0c354040e49c9b1a45eacc12ee3d7da5eaa88fd11ff26f142d987bf296622ea6b2a9b2e88345fb4dd045a4e91d6f8b78
   languageName: node
   linkType: hard
 
@@ -6573,7 +6573,7 @@ __metadata:
     eslint: ^10.2.0
     eslint-config-prettier: ^10.1.8
     eslint-plugin-storybook: 10.2.19
-    firebase: ^12.12.0
+    firebase: ^12.12.1
     jsdom: ^29.0.2
     msw: ^2.12.14
     prettier: 3.8.2
