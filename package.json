@@ -62,7 +62,7 @@
     "prettier": "3.8.2",
     "storybook": "10.2.19",
     "storybook-addon-mock": "^6.0.1",
-    "typescript": "^6.0.2",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.58.2",
     "unplugin-fonts": "^2.0.0",
     "vite": "^8.0.9",
