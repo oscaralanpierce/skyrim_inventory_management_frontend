@@ -6128,13 +6128,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-animate-height@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "react-animate-height@npm:3.2.3"
+"react-animate-height@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "react-animate-height@npm:3.2.4"
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 2289dd7df284d6323a1d06adea112ec3e0d43025ee7029eeccee6dbb05d058fcd6cc4fc9907729ca83466db7d191f68008df409f59cd3e21582846b056b5c8ec
+  checksum: bd2ab66cc7143c41dbccfc7a5313e56cb3b2f15b99a904ca1bb806364ecadf53aa9833efe969b23bc0823cd3bada070db6e84e5f18d917cd9e2c25587e04693a
   languageName: node
   linkType: hard
 
@@ -6667,7 +6667,7 @@ __metadata:
     msw: ^2.14.3
     prettier: 3.8.3
     react: ^19.2.4
-    react-animate-height: ^3.2.3
+    react-animate-height: ^3.2.4
     react-dom: ^19.2.4
     react-firebase-hooks: ^5.1.1
     react-helmet-async: ^3.0.0
