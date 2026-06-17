@@ -2923,12 +2923,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.9.2":
-  version: 25.9.2
-  resolution: "@types/node@npm:25.9.2"
+"@types/node@npm:^25.9.3":
+  version: 25.9.3
+  resolution: "@types/node@npm:25.9.3"
   dependencies:
     undici-types: ">=7.24.0 <7.24.7"
-  checksum: 0999b013a15194608f60a6246ab7fc552bd7aa3f02c063d39d3003972aa5d5cfacf02447c7f2a821e038c9049b338c41318454d5aaa224e32ef9aa6f8359db7c
+  checksum: 78b30ba6812d330062ddff63e3f0b20ec4cadfc6f96380dc87988b5d67efc99a6ffbf117e638574bba5397527279c8f6b754784fae907a5b76bd69e315631f00
   languageName: node
   linkType: hard
 
@@ -6808,7 +6808,7 @@ __metadata:
     "@testing-library/dom": ^10.4.1
     "@testing-library/react": ^16.3.2
     "@types/jsdom": ^28.0.3
-    "@types/node": ^25.9.2
+    "@types/node": ^25.9.3
     "@types/react": ^19.2.14
     "@types/react-dom": ^19.2.3
     "@types/react-router-dom": ^5.3.3
