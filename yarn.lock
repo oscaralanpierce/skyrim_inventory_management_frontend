@@ -2909,12 +2909,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^26.0.0":
-  version: 26.0.0
-  resolution: "@types/node@npm:26.0.0"
+"@types/node@npm:^26.1.0":
+  version: 26.1.0
+  resolution: "@types/node@npm:26.1.0"
   dependencies:
     undici-types: ~8.3.0
-  checksum: 8dadab10bbbcf4e4d6547800e6babc889d9d90ef854754cc42b6010b9ede0c1d4cace39cc4c457edd764eac7a8130518c10187b8fc482a2b1582b03644363dc5
+  checksum: bbced3378635cb48e739e384e53ff4c7d3e18194a2e003fb5240fc4f6c18fdc9f2452539a9f6fa608ca7b510a40f844d483c23f5d8bd2cf2c245b16d43ce4236
   languageName: node
   linkType: hard
 
@@ -6821,7 +6821,7 @@ __metadata:
     "@testing-library/dom": ^10.4.1
     "@testing-library/react": ^16.3.2
     "@types/jsdom": ^28.0.3
-    "@types/node": ^26.0.0
+    "@types/node": ^26.1.0
     "@types/react": ^19.2.14
     "@types/react-dom": ^19.2.3
     "@types/react-router-dom": ^5.3.3
