@@ -59,7 +59,7 @@
     "eslint-plugin-storybook": "10.2.19",
     "jsdom": "^29.1.1",
     "msw": "^2.14.6",
-    "prettier": "3.8.4",
+    "prettier": "3.9.5",
     "storybook": "10.2.19",
     "storybook-addon-mock": "^6.0.1",
     "typescript": "^6.0.3",
