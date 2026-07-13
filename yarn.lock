@@ -5771,9 +5771,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^2.14.6":
-  version: 2.14.6
-  resolution: "msw@npm:2.14.6"
+"msw@npm:^2.15.0":
+  version: 2.15.0
+  resolution: "msw@npm:2.15.0"
   dependencies:
     "@inquirer/confirm": ^6.0.11
     "@mswjs/interceptors": ^0.41.3
@@ -5800,7 +5800,7 @@ __metadata:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: dc7b5b2cfb8338b666295c1cee0822dd28fffb06bbcbabfa61dffa2665907f587607ce9982582f82c62430287e7f2c3a32ca35e190ef7157845090b1203398c5
+  checksum: b7df7928dc51749594bc854d290db50301d36695588b25566be53cfe405578785804a348e2110dc871e0675b3164a819f0db1a89957b08ef44d7b58385b7fa34
   languageName: node
   linkType: hard
 
@@ -6834,7 +6834,7 @@ __metadata:
     eslint-plugin-storybook: 10.2.19
     firebase: ^12.16.0
     jsdom: ^29.1.1
-    msw: ^2.14.6
+    msw: ^2.15.0
     prettier: 3.9.5
     react: ^19.2.4
     react-animate-height: ^3.2.4
