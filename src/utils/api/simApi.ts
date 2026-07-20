@@ -1,9 +1,9 @@
 import {
-  postGames,
-  getGames,
-  patchGame,
-  deleteGame,
-} from './wrapper/gameEndpoints'
+  postPlaythroughs,
+  getPlaythroughs,
+  patchPlaythrough,
+  deletePlaythrough,
+} from './wrapper/playthroughEndpoints'
 import {
   postWishLists,
   getWishLists,
@@ -17,10 +17,10 @@ import {
 } from './wrapper/wishListItemEndpoints'
 
 export {
-  postGames,
-  getGames,
-  patchGame,
-  deleteGame,
+  postPlaythroughs,
+  getPlaythroughs,
+  patchPlaythrough,
+  deletePlaythrough,
   postWishLists,
   getWishLists,
   patchWishList,

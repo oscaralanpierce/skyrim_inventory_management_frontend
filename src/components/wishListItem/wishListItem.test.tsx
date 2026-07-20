@@ -3,12 +3,12 @@ import { describe, test, expect, vitest, afterEach } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { renderAuthenticated } from '../../support/testUtils'
 import {
-  gamesContextValue,
+  playthroughsContextValue,
   wishListsContextValue,
 } from '../../support/data/contextValues'
 import { GREEN } from '../../utils/colorSchemes'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { PlaythroughsContext } from '../../contexts/playthroughsContext'
 import { WishListsContext } from '../../contexts/wishListsContext'
 import { ColorProvider } from '../../contexts/colorContext'
 import WishListItem from './wishListItem'
@@ -18,11 +18,11 @@ let listsContextValue = wishListsContextValue
 const renderInContexts = (ui: ReactElement) =>
   renderAuthenticated(
     <PageProvider>
-      <GamesContext value={gamesContextValue}>
+      <PlaythroughsContext value={playthroughsContextValue}>
         <WishListsContext value={listsContextValue}>
           <ColorProvider colorScheme={GREEN}>{ui}</ColorProvider>
         </WishListsContext>
-      </GamesContext>
+      </PlaythroughsContext>
     </PageProvider>
   )
 

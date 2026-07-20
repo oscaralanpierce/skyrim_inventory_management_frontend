@@ -1,31 +1,31 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`GameForm > create form matches snapshot 1`] = `
+exports[`PlaythroughForm > create form matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="_root_4fb064"
+        class="_root_834674"
       >
         <h3
-          class="_header_4fb064"
+          class="_header_834674"
         >
-          Create Game
+          Create Playthrough
         </h3>
         <form
-          data-testid="gameForm"
+          data-testid="playthroughForm"
           style="--button-background-color: #00a323; --button-text-color: #fff; --button-hover-color: #00921f; --button-border-color: #00821c;"
         >
           <fieldset
-            class="_fieldset_4fb064"
+            class="_fieldset_834674"
           >
             <label
-              class="_label_4fb064"
+              class="_label_834674"
             >
               Name
               <input
-                class="_input_4fb064"
+                class="_input_834674"
                 name="name"
                 pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
                 placeholder="Name"
@@ -35,25 +35,25 @@ exports[`GameForm > create form matches snapshot 1`] = `
             </label>
           </fieldset>
           <fieldset
-            class="_fieldset_4fb064"
+            class="_fieldset_834674"
           >
             <label
-              class="_label_4fb064"
+              class="_label_834674"
             >
               Description
               <input
-                class="_input_4fb064"
+                class="_input_834674"
                 name="description"
                 placeholder="Description"
               />
             </label>
           </fieldset>
           <button
-            class="_submit_4fb064"
-            data-testid="gameFormSubmit"
+            class="_submit_834674"
+            data-testid="playthroughFormSubmit"
             type="submit"
           >
-            Create Game
+            Create Playthrough
           </button>
         </form>
       </div>
@@ -61,26 +61,26 @@ exports[`GameForm > create form matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_4fb064"
+      class="_root_834674"
     >
       <h3
-        class="_header_4fb064"
+        class="_header_834674"
       >
-        Create Game
+        Create Playthrough
       </h3>
       <form
-        data-testid="gameForm"
+        data-testid="playthroughForm"
         style="--button-background-color: #00a323; --button-text-color: #fff; --button-hover-color: #00921f; --button-border-color: #00821c;"
       >
         <fieldset
-          class="_fieldset_4fb064"
+          class="_fieldset_834674"
         >
           <label
-            class="_label_4fb064"
+            class="_label_834674"
           >
             Name
             <input
-              class="_input_4fb064"
+              class="_input_834674"
               name="name"
               pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
               placeholder="Name"
@@ -90,25 +90,25 @@ exports[`GameForm > create form matches snapshot 1`] = `
           </label>
         </fieldset>
         <fieldset
-          class="_fieldset_4fb064"
+          class="_fieldset_834674"
         >
           <label
-            class="_label_4fb064"
+            class="_label_834674"
           >
             Description
             <input
-              class="_input_4fb064"
+              class="_input_834674"
               name="description"
               placeholder="Description"
             />
           </label>
         </fieldset>
         <button
-          class="_submit_4fb064"
-          data-testid="gameFormSubmit"
+          class="_submit_834674"
+          data-testid="playthroughFormSubmit"
           type="submit"
         >
-          Create Game
+          Create Playthrough
         </button>
       </form>
     </div>
@@ -167,62 +167,62 @@ exports[`GameForm > create form matches snapshot 1`] = `
 }
 `;
 
-exports[`GameForm > edit form matches snapshot 1`] = `
+exports[`PlaythroughForm > edit form matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="_root_4fb064"
+        class="_root_834674"
       >
         <h3
-          class="_header_4fb064"
+          class="_header_834674"
         >
-          Update Game
+          Update Playthrough
         </h3>
         <form
-          data-testid="gameForm"
+          data-testid="playthroughForm"
           style="--button-background-color: #00a323; --button-text-color: #fff; --button-hover-color: #00921f; --button-border-color: #00821c;"
         >
           <fieldset
-            class="_fieldset_4fb064"
+            class="_fieldset_834674"
           >
             <label
-              class="_label_4fb064"
+              class="_label_834674"
             >
               Name
               <input
-                class="_input_4fb064"
+                class="_input_834674"
                 name="name"
                 pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
                 placeholder="Name"
                 title="Name can contain only alphanumeric characters, spaces, commas, hyphens, and apostrophes"
                 type="text"
-                value="My Game 1"
+                value="My Playthrough 1"
               />
             </label>
           </fieldset>
           <fieldset
-            class="_fieldset_4fb064"
+            class="_fieldset_834674"
           >
             <label
-              class="_label_4fb064"
+              class="_label_834674"
             >
               Description
               <input
-                class="_input_4fb064"
+                class="_input_834674"
                 name="description"
                 placeholder="Description"
-                value="This game has a description"
+                value="This playthrough has a description"
               />
             </label>
           </fieldset>
           <button
-            class="_submit_4fb064"
-            data-testid="gameFormSubmit"
+            class="_submit_834674"
+            data-testid="playthroughFormSubmit"
             type="submit"
           >
-            Update Game
+            Update Playthrough
           </button>
         </form>
       </div>
@@ -230,56 +230,56 @@ exports[`GameForm > edit form matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_4fb064"
+      class="_root_834674"
     >
       <h3
-        class="_header_4fb064"
+        class="_header_834674"
       >
-        Update Game
+        Update Playthrough
       </h3>
       <form
-        data-testid="gameForm"
+        data-testid="playthroughForm"
         style="--button-background-color: #00a323; --button-text-color: #fff; --button-hover-color: #00921f; --button-border-color: #00821c;"
       >
         <fieldset
-          class="_fieldset_4fb064"
+          class="_fieldset_834674"
         >
           <label
-            class="_label_4fb064"
+            class="_label_834674"
           >
             Name
             <input
-              class="_input_4fb064"
+              class="_input_834674"
               name="name"
               pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
               placeholder="Name"
               title="Name can contain only alphanumeric characters, spaces, commas, hyphens, and apostrophes"
               type="text"
-              value="My Game 1"
+              value="My Playthrough 1"
             />
           </label>
         </fieldset>
         <fieldset
-          class="_fieldset_4fb064"
+          class="_fieldset_834674"
         >
           <label
-            class="_label_4fb064"
+            class="_label_834674"
           >
             Description
             <input
-              class="_input_4fb064"
+              class="_input_834674"
               name="description"
               placeholder="Description"
-              value="This game has a description"
+              value="This playthrough has a description"
             />
           </label>
         </fieldset>
         <button
-          class="_submit_4fb064"
-          data-testid="gameFormSubmit"
+          class="_submit_834674"
+          data-testid="playthroughFormSubmit"
           type="submit"
         >
-          Update Game
+          Update Playthrough
         </button>
       </form>
     </div>

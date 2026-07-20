@@ -1,11 +1,11 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import {
-  gamesContextValue,
-  gamesContextValueLoading,
+  playthroughsContextValue,
+  playthroughsContextValueLoading,
   wishListsContextValue,
 } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext, type GamesContextType } from '../../contexts/gamesContext'
+import { PlaythroughsContext, type PlaythroughsContextType } from '../../contexts/playthroughsContext'
 import { WishListsContext } from '../../contexts/wishListsContext'
 import WishListCreateForm from './wishListCreateForm'
 
@@ -17,11 +17,11 @@ const meta: Meta<typeof WishListCreateForm> = {
   decorators: [
     (Story, { parameters }) => (
       <PageProvider>
-        <GamesContext value={parameters['gamesContextValue'] as GamesContextType}>
+        <PlaythroughsContext value={parameters['playthroughsContextValue'] as PlaythroughsContextType}>
           <WishListsContext value={wishListsContextValue}>
             <Story />
           </WishListsContext>
-        </GamesContext>
+        </PlaythroughsContext>
       </PageProvider>
     ),
   ],
@@ -31,12 +31,12 @@ export default meta
 
 export const Enabled: CreateFormStory = {
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
   },
 }
 
 export const Disabled: CreateFormStory = {
   parameters: {
-    gamesContextValue: gamesContextValueLoading,
+    playthroughsContextValue: playthroughsContextValueLoading,
   },
 }

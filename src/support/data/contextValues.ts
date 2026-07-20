@@ -1,10 +1,10 @@
-import { type GamesContextType } from '../../contexts/gamesContext'
+import { type PlaythroughsContextType } from '../../contexts/playthroughsContext'
 import { type LoginContextType } from '../../contexts/loginContext'
 import { type WishListsContextType } from '../../contexts/wishListsContext'
 import { DONE, ERROR, LOADING } from '../../utils/loadingStates'
 import { testUser } from './users'
-import { allGames, emptyGames } from './games'
-import { emptyWishLists, wishListsForGame } from './wishLists'
+import { allPlaythroughs, emptyPlaythroughs } from './playthroughs'
+import { emptyWishLists, wishListsForPlaythrough } from './wishLists'
 
 const noop = () => {}
 
@@ -43,40 +43,40 @@ export const unauthenticatedLoginContextValue: LoginContextType = {
 
 /**
  *
- * Default value for Games context
+ * Default value for Playthroughs context
  *
  */
 
-export const gamesContextValueEmpty: GamesContextType = {
-  games: emptyGames,
-  gamesLoadingState: DONE,
-  createGame: noop,
-  updateGame: noop,
-  destroyGame: noop,
+export const playthroughsContextValueEmpty: PlaythroughsContextType = {
+  playthroughs: emptyPlaythroughs,
+  playthroughsLoadingState: DONE,
+  createPlaythrough: noop,
+  updatePlaythrough: noop,
+  destroyPlaythrough: noop,
 }
 
-export const gamesContextValue: GamesContextType = {
-  games: allGames,
-  gamesLoadingState: DONE,
-  createGame: noop,
-  updateGame: noop,
-  destroyGame: noop,
+export const playthroughsContextValue: PlaythroughsContextType = {
+  playthroughs: allPlaythroughs,
+  playthroughsLoadingState: DONE,
+  createPlaythrough: noop,
+  updatePlaythrough: noop,
+  destroyPlaythrough: noop,
 }
 
-export const gamesContextValueLoading: GamesContextType = {
-  games: [],
-  gamesLoadingState: LOADING,
-  createGame: noop,
-  updateGame: noop,
-  destroyGame: noop,
+export const playthroughsContextValueLoading: PlaythroughsContextType = {
+  playthroughs: [],
+  playthroughsLoadingState: LOADING,
+  createPlaythrough: noop,
+  updatePlaythrough: noop,
+  destroyPlaythrough: noop,
 }
 
-export const gamesContextValueError: GamesContextType = {
-  games: [],
-  gamesLoadingState: ERROR,
-  createGame: noop,
-  updateGame: noop,
-  destroyGame: noop,
+export const playthroughsContextValueError: PlaythroughsContextType = {
+  playthroughs: [],
+  playthroughsLoadingState: ERROR,
+  createPlaythrough: noop,
+  updatePlaythrough: noop,
+  destroyPlaythrough: noop,
 }
 
 /**
@@ -97,7 +97,7 @@ export const wishListsContextValueEmpty: WishListsContextType = {
 }
 
 export const wishListsContextValue: WishListsContextType = {
-  wishLists: wishListsForGame(77),
+  wishLists: wishListsForPlaythrough(77),
   wishListsLoadingState: DONE,
   createWishList: noop,
   updateWishList: noop,

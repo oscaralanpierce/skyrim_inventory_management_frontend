@@ -13,7 +13,7 @@ const paths: Paths = {
   login: '/login',
   dashboard: {
     main: '/dashboard',
-    games: '/games',
+    playthroughs: '/playthroughs',
     wishLists: '/wish_lists',
   },
 }

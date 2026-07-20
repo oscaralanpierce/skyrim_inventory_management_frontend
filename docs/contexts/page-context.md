@@ -43,8 +43,8 @@ The `PageProvider` exposes seven values to its consumers:
 - `modalProps` (an object of type `ModalProps`)
 - `setModalProps` (a function taking a `ModalProps` object as an argument)
 - `apiCallsInProgress` (an [`ApiCalls`](/src/types/apiCalls.d.ts) object indicating which API calls are in progress)
-- `addApiCall` (a function that takes a resource name (currently "games", "wishLists", and "wishListItems") and HTTP verb ("get", "patch", "post", "delete") as arguments and adds the specified API call to the `apiCallsInProgress` object)
-- `removeApiCall` (a function that takes a resource name (currently "games", "wishLists", and "wishListItems") and HTTP verb ("get", "patch", "post", "delete") as arguments and removes the specified API call, if present, from the `apiCallsInProgress` object)
+- `addApiCall` (a function that takes a resource name (currently "playthroughs", "wishLists", and "wishListItems") and HTTP verb ("get", "patch", "post", "delete") as arguments and adds the specified API call to the `apiCallsInProgress` object)
+- `removeApiCall` (a function that takes a resource name (currently "playthroughs", "wishLists", and "wishListItems") and HTTP verb ("get", "patch", "post", "delete") as arguments and removes the specified API call, if present, from the `apiCallsInProgress` object)
 
 Of these, the first five are implemented as state variables within the context provider. Because of required values in the `FlashMessageProps` type, there is a default value of `flashProps` that includes an empty string as the message, a type of `'info'`, and, most importantly, `hidden: true`. Likewise, the default value of `modalProps` has `hidden` set to `true` and `children` set to an empty fragment, `<></>`.
 
@@ -54,7 +54,7 @@ With the flash message, the `PageProvider` ensures that it is hidden after a per
 
 ### In-progress API Calls
 
-Sometimes, to avoid race conditions between API calls, it is best to disable a component when an API call is in progress. For that purpose, we can use the `apiCallsInProgress` object from the `PageProvider`. This object has a key for each resource type ("games", "wishLists", and "wishListItems"). Each key corresponds to an array of lower-case HTTP verbs indicating which API calls are in progress for that resource type. We found it advantageous to have a separate array for each resource type, since many components should be disabled when, for example, any request is made for a `wishList` resource, but requests made for other resources don't matter.
+Sometimes, to avoid race conditions between API calls, it is best to disable a component when an API call is in progress. For that purpose, we can use the `apiCallsInProgress` object from the `PageProvider`. This object has a key for each resource type ("playthroughs", "wishLists", and "wishListItems"). Each key corresponds to an array of lower-case HTTP verbs indicating which API calls are in progress for that resource type. We found it advantageous to have a separate array for each resource type, since many components should be disabled when, for example, any request is made for a `wishList` resource, but requests made for other resources don't matter.
 
 The `apiCallsInProgress` object can be updated using the `addApiCall` and `removeApiCall` functions. Remember that, when you add an API call, it must be removed when the API call completes. This will not happen automatically.
 
@@ -90,25 +90,25 @@ export default Parent
  */
 
 import { useState, useEffect } from 'react'
-import { type ResponseGame as Game } from '../../types/apiData'
+import { type ResponsePlaythrough as Playthrough } from '../../types/apiData'
 import { type ApiError } from '../../types/errors'
 import { useGoogleLogin, usePageContext } from '../../hooks/contexts'
-import { getGames } from '../../utils/api/simApi'
+import { getPlaythroughs } from '../../utils/api/simApi'
 import DashboardLayout from '../../layouts/dashboardLayout/dashboardLayout'
 import styles from './child.module.css'
 
 const Child = () => {
   const { user, token, authLoading, signOut } = useGoogleLogin()
   const { setFlashProps } = usePageContext()
-  const [games, setGames] = useState<Game[]>([])
+  const [playthroughs, setPlaythroughs] = useState<Playthrough[]>([])
 
   useEffect(() => {
     if (authLoading) return
 
     if (user && token) {
-      getGames(token)
+      getPlaythroughs(token)
         .then(({ json }) => {
-          setGames(json)
+          setPlaythroughs(json)
         })
         .catch((e: ApiError) => {
           if (e.status === 401) signOut()
@@ -123,8 +123,8 @@ const Child = () => {
   }, [user, token, authLoading])
 
   return (
-    <DashboardLayout title="Games">
-      /* TSX to display retrieved games */
+    <DashboardLayout title="Playthroughs">
+      /* TSX to display retrieved playthroughs */
     </DashboardLayout>
   )
 }
@@ -152,7 +152,7 @@ const Parent = () => (
   <LoginProvider>
     <PageProvider>
       <DashboardLayout>
-        <Child gameId={4} />
+        <Child playthroughId={4} />
       </DashboardLayout>
     </PageProvider>
   </LoginProvider>
@@ -167,28 +167,28 @@ export default Parent
  */
 
 import { type MouseEventHandler } from 'react'
-import { RequestGame as Game } from '../../types/apiData'
+import { RequestPlaythrough as Playthrough } from '../../types/apiData'
 import { usePageContext } from '../../hooks/contexts'
 import DashboardLayout from '../../layouts/dashboardLayout/dashboardLayout'
-import GameForm from '../../components/gameForm/gameForm'
+import PlaythroughForm from '../../components/playthroughForm/playthroughForm'
 import styles from './child.module.css'
 
 interface ChildProps {
-  gameId: number
+  playthroughId: number
 }
 
-const Child = ({ gameId }: ChildProps) => {
+const Child = ({ playthroughId }: ChildProps) => {
   const { setModalProps } = usePageContext()
 
   const showForm: MouseEventHandler = (e) => {
-    const submit = (attributes: Game) => {
+    const submit = (attributes: Playthrough) => {
       /* do something */
     }
 
     setModalProps({
       hidden: false,
       children: (
-        <GameForm
+        <PlaythroughForm
           submitForm={submit}
           type="edit"
           defaultName="foo"
@@ -202,7 +202,7 @@ const Child = ({ gameId }: ChildProps) => {
     <button
       className={styles.button}
       onClick={showForm}
-    >{`Edit Game ${gameId}`}</button>
+    >{`Edit Playthrough ${playthroughId}`}</button>
   )
 }
 ```
@@ -213,7 +213,7 @@ In this case, note that the component does not render the `DashboardLayout` comp
 
 ```tsx
 import { type MouseEventHandler } from 'react'
-import { postGames } from '../../utils/api/simApi'
+import { postPlaythroughs } from '../../utils/api/simApi'
 import { usePageContext } from '../../hooks/contexts'
 
 const MyComponent = () => {
@@ -222,19 +222,19 @@ const MyComponent = () => {
   const makeApiCall: MouseEventHandler = (e) => {
     e.preventDefault()
 
-    addApiCall('games', 'post')
-    postGames({ name: 'My Game' })
+    addApiCall('playthroughs', 'post')
+    postPlaythroughs({ name: 'My Playthrough' })
       .then(({ status, json }) => {
         // do something
 
-        removeApiCall('games', 'post')
+        removeApiCall('playthroughs', 'post')
       })
       .catch((e: Error) => {
-        removeApiCall('games', 'post')
+        removeApiCall('playthroughs', 'post')
       })
   }
 
-  return <button onClick={makeApiCall}>Create Game</button>
+  return <button onClick={makeApiCall}>Create Playthrough</button>
 }
 
 export default MyComponent
@@ -251,7 +251,7 @@ import { usePageContext } from '../../hooks/contexts'
 const MyComponent = () => {
   const { apiCallsInProgress } = usePageContext()
 
-  const [disabled, setDisabled] = useState(!!apiCallsInProgress.games.length)
+  const [disabled, setDisabled] = useState(!!apiCallsInProgress.playthroughs.length)
 
   const onClick: MouseEventHandler = (e) => {
     e.preventDefault()
@@ -260,7 +260,7 @@ const MyComponent = () => {
   }
 
   useEffect(() => {
-    if (apiCallsInProgress.games.length) {
+    if (apiCallsInProgress.playthroughs.length) {
       setDisabled(true)
     } else {
       setDisabled(false)
@@ -280,7 +280,7 @@ export default MyComponent
 Note that you could also use more specific checks if you want the button disabled for some API calls but not others:
 
 ```ts
-if ('post' in apiCallsInProgress.games) {
+if ('post' in apiCallsInProgress.playthroughs) {
   setDisabled(true)
 } else {
   setDisabled(false)

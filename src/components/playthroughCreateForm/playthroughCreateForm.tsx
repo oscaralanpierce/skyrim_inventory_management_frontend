@@ -5,17 +5,17 @@ import {
   type FormEventHandler,
 } from 'react'
 import AnimateHeight from 'react-animate-height'
-import { type RequestGame as Game } from '../../types/apiData'
+import { type RequestPlaythrough as Playthrough } from '../../types/apiData'
 import { BLUE } from '../../utils/colorSchemes'
-import { useGamesContext } from '../../hooks/contexts'
-import styles from './gameCreateForm.module.css'
+import { usePlaythroughsContext } from '../../hooks/contexts'
+import styles from './playthroughCreateForm.module.css'
 
-interface GameCreateFormProps {
+interface PlaythroughCreateFormProps {
   disabled?: boolean
 }
 
-const GameCreateForm = ({ disabled }: GameCreateFormProps) => {
-  const { createGame } = useGamesContext()
+const PlaythroughCreateForm = ({ disabled }: PlaythroughCreateFormProps) => {
+  const { createPlaythrough } = usePlaythroughsContext()
   const [formExpanded, setFormExpanded] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -35,7 +35,7 @@ const GameCreateForm = ({ disabled }: GameCreateFormProps) => {
     }
   }
 
-  const extractGame = (formData: FormData): Game => {
+  const extractPlaythrough = (formData: FormData): Playthrough => {
     const values = Object.fromEntries(Array.from(formData.entries())) as Record<
       string,
       string
@@ -52,9 +52,9 @@ const GameCreateForm = ({ disabled }: GameCreateFormProps) => {
     if (!formRef.current) return
 
     const formData = new FormData(formRef.current)
-    const game = extractGame(formData)
+    const playthrough = extractPlaythrough(formData)
 
-    createGame(game, () => {
+    createPlaythrough(playthrough, () => {
       formRef.current?.reset()
       formRef.current?.blur()
       setFormExpanded(false)
@@ -66,14 +66,14 @@ const GameCreateForm = ({ disabled }: GameCreateFormProps) => {
       <h3
         role="button"
         aria-expanded={formExpanded}
-        aria-controls="gameCreateForm"
+        aria-controls="playthroughCreateForm"
         className={styles.toggle}
         onClick={() => setFormExpanded(!formExpanded)}
       >
-        Create Game...
+        Create Playthrough...
       </h3>
       <AnimateHeight
-        id="gameCreateForm"
+        id="playthroughCreateForm"
         duration={200}
         height={formExpanded ? 'auto' : 0}
         onHeightAnimationEnd={focusInputIfExpanded}
@@ -81,7 +81,7 @@ const GameCreateForm = ({ disabled }: GameCreateFormProps) => {
         <form
           ref={formRef}
           className={styles.form}
-          data-testid="gameCreateFormForm"
+          data-testid="playthroughCreateFormForm"
           onSubmit={submitForm}
         >
           <fieldset className={styles.fieldset}>
@@ -112,7 +112,7 @@ const GameCreateForm = ({ disabled }: GameCreateFormProps) => {
           <button
             className={styles.button}
             type="submit"
-            data-testid="createGameSubmit"
+            data-testid="createPlaythroughSubmit"
             disabled={disabled}
           >
             Create
@@ -123,4 +123,4 @@ const GameCreateForm = ({ disabled }: GameCreateFormProps) => {
   )
 }
 
-export default GameCreateForm
+export default PlaythroughCreateForm

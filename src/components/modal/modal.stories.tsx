@@ -1,5 +1,5 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
-import GameForm from '../gameForm/gameForm'
+import PlaythroughForm from '../playthroughForm/playthroughForm'
 import Modal from './modal'
 
 type Story = StoryObj<typeof Modal>
@@ -14,7 +14,7 @@ export default meta
 export const Default: Story = {
   render: () => (
     <Modal hidden={false}>
-      <GameForm submitForm={() => {}} type="edit" />
+      <PlaythroughForm submitForm={() => {}} type="edit" />
     </Modal>
   ),
 }

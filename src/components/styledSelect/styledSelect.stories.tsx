@@ -1,5 +1,5 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
-import { allGames } from '../../support/data/games'
+import { allPlaythroughs } from '../../support/data/playthroughs'
 import StyledSelect from './styledSelect'
 
 type Story = StoryObj<typeof StyledSelect>
@@ -11,7 +11,7 @@ const meta: Meta<typeof StyledSelect> = {
 
 export default meta
 
-const options = allGames.map(({ name, id }) => ({
+const options = allPlaythroughs.map(({ name, id }) => ({
   optionName: name,
   optionValue: id,
 }))

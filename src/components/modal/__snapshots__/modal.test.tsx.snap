@@ -16,26 +16,26 @@ exports[`Modal > matches snapshot 1`] = `
             class="_content_c33b14"
           >
             <div
-              class="_root_4fb064"
+              class="_root_834674"
             >
               <h3
-                class="_header_4fb064"
+                class="_header_834674"
               >
-                Create Game
+                Create Playthrough
               </h3>
               <form
-                data-testid="gameForm"
+                data-testid="playthroughForm"
                 style="--button-background-color: #ffbf00; --button-text-color: #4c3900; --button-hover-color: #e5ab00; --button-border-color: #cc9800;"
               >
                 <fieldset
-                  class="_fieldset_4fb064"
+                  class="_fieldset_834674"
                 >
                   <label
-                    class="_label_4fb064"
+                    class="_label_834674"
                   >
                     Name
                     <input
-                      class="_input_4fb064"
+                      class="_input_834674"
                       name="name"
                       pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
                       placeholder="Name"
@@ -45,25 +45,25 @@ exports[`Modal > matches snapshot 1`] = `
                   </label>
                 </fieldset>
                 <fieldset
-                  class="_fieldset_4fb064"
+                  class="_fieldset_834674"
                 >
                   <label
-                    class="_label_4fb064"
+                    class="_label_834674"
                   >
                     Description
                     <input
-                      class="_input_4fb064"
+                      class="_input_834674"
                       name="description"
                       placeholder="Description"
                     />
                   </label>
                 </fieldset>
                 <button
-                  class="_submit_4fb064"
-                  data-testid="gameFormSubmit"
+                  class="_submit_834674"
+                  data-testid="playthroughFormSubmit"
                   type="submit"
                 >
-                  Create Game
+                  Create Playthrough
                 </button>
               </form>
             </div>
@@ -84,26 +84,26 @@ exports[`Modal > matches snapshot 1`] = `
           class="_content_c33b14"
         >
           <div
-            class="_root_4fb064"
+            class="_root_834674"
           >
             <h3
-              class="_header_4fb064"
+              class="_header_834674"
             >
-              Create Game
+              Create Playthrough
             </h3>
             <form
-              data-testid="gameForm"
+              data-testid="playthroughForm"
               style="--button-background-color: #ffbf00; --button-text-color: #4c3900; --button-hover-color: #e5ab00; --button-border-color: #cc9800;"
             >
               <fieldset
-                class="_fieldset_4fb064"
+                class="_fieldset_834674"
               >
                 <label
-                  class="_label_4fb064"
+                  class="_label_834674"
                 >
                   Name
                   <input
-                    class="_input_4fb064"
+                    class="_input_834674"
                     name="name"
                     pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
                     placeholder="Name"
@@ -113,25 +113,25 @@ exports[`Modal > matches snapshot 1`] = `
                 </label>
               </fieldset>
               <fieldset
-                class="_fieldset_4fb064"
+                class="_fieldset_834674"
               >
                 <label
-                  class="_label_4fb064"
+                  class="_label_834674"
                 >
                   Description
                   <input
-                    class="_input_4fb064"
+                    class="_input_834674"
                     name="description"
                     placeholder="Description"
                   />
                 </label>
               </fieldset>
               <button
-                class="_submit_4fb064"
-                data-testid="gameFormSubmit"
+                class="_submit_834674"
+                data-testid="playthroughFormSubmit"
                 type="submit"
               >
-                Create Game
+                Create Playthrough
               </button>
             </form>
           </div>

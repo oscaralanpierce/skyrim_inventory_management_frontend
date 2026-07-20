@@ -2,23 +2,23 @@ import { useState, type MouseEventHandler } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import AnimateHeight from 'react-animate-height'
-import { RequestGame as Game } from '../../types/apiData'
-import { useGamesContext, usePageContext } from '../../hooks/contexts'
-import GameForm from '../gameForm/gameForm'
-import styles from './gameLineItem.module.css'
+import { RequestPlaythrough as Playthrough } from '../../types/apiData'
+import { usePlaythroughsContext, usePageContext } from '../../hooks/contexts'
+import PlaythroughForm from '../playthroughForm/playthroughForm'
+import styles from './playthroughLineItem.module.css'
 
-const DEFAULT_DESCRIPTION = 'This game has no description.'
+const DEFAULT_DESCRIPTION = 'This playthrough has no description.'
 const DESTROY_CONFIRMATION =
-  'Are you sure you want to delete this game? This cannot be undone. You will lose all data associated with the game you delete.'
+  'Are you sure you want to delete this playthrough? This cannot be undone. You will lose all data associated with the playthrough you delete.'
 
-interface GameLineItemProps {
-  gameId: number
+interface PlaythroughLineItemProps {
+  playthroughId: number
   name: string
   description: string | null
 }
 
-const GameLineItem = ({ gameId, name, description }: GameLineItemProps) => {
-  const { updateGame, destroyGame } = useGamesContext()
+const PlaythroughLineItem = ({ playthroughId, name, description }: PlaythroughLineItemProps) => {
+  const { updatePlaythrough, destroyPlaythrough } = usePlaythroughsContext()
   const { setFlashProps, setModalProps } = usePageContext()
   const [descriptionExpanded, setDescriptionExpanded] = useState(false)
 
@@ -34,12 +34,12 @@ const GameLineItem = ({ gameId, name, description }: GameLineItemProps) => {
     const confirm = window.confirm(DESTROY_CONFIRMATION)
 
     if (confirm) {
-      destroyGame(gameId)
+      destroyPlaythrough(playthroughId)
     } else {
       setFlashProps({
         hidden: false,
         type: 'info',
-        message: 'OK, your game will not be destroyed.',
+        message: 'OK, your playthrough will not be destroyed.',
       })
     }
   }
@@ -47,21 +47,21 @@ const GameLineItem = ({ gameId, name, description }: GameLineItemProps) => {
   const showEditForm: MouseEventHandler = (e) => {
     e.preventDefault()
 
-    const submit = (attributes: Game) => {
+    const submit = (attributes: Playthrough) => {
       if (attributes.name === name && attributes.description === description) {
         setModalProps({
           hidden: true,
           children: <></>,
         })
       } else {
-        updateGame(gameId, attributes)
+        updatePlaythrough(playthroughId, attributes)
       }
     }
 
     setModalProps({
       hidden: false,
       children: (
-        <GameForm
+        <PlaythroughForm
           submitForm={submit}
           type="edit"
           defaultName={name}
@@ -78,14 +78,14 @@ const GameLineItem = ({ gameId, name, description }: GameLineItemProps) => {
           <button
             className={styles.icon}
             onClick={destroy}
-            data-testid={`destroyGame${gameId}`}
+            data-testid={`destroyPlaythrough${playthroughId}`}
           >
             <FontAwesomeIcon icon={faXmark} />
           </button>
           <button
             className={styles.icon}
             onClick={showEditForm}
-            data-testid={`editGame${gameId}`}
+            data-testid={`editPlaythrough${playthroughId}`}
           >
             <FontAwesomeIcon icon={faPenToSquare} />
           </button>
@@ -93,7 +93,7 @@ const GameLineItem = ({ gameId, name, description }: GameLineItemProps) => {
         <h3
           role="button"
           aria-expanded={descriptionExpanded}
-          aria-controls={`game${gameId}Details`}
+          aria-controls={`playthrough${playthroughId}Details`}
           className={styles.header}
           onClick={toggleDescription}
         >
@@ -101,7 +101,7 @@ const GameLineItem = ({ gameId, name, description }: GameLineItemProps) => {
         </h3>
       </div>
       <AnimateHeight
-        id={`game${gameId}Details`}
+        id={`playthrough${playthroughId}Details`}
         duration={200}
         height={descriptionExpanded ? 'auto' : 0}
       >
@@ -113,4 +113,4 @@ const GameLineItem = ({ gameId, name, description }: GameLineItemProps) => {
   )
 }
 
-export default GameLineItem
+export default PlaythroughLineItem

@@ -6,9 +6,9 @@ import {
 } from 'react'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
-import { ResponseGame } from '../../types/apiData'
+import { ResponsePlaythrough } from '../../types/apiData'
 import { DONE } from '../../utils/loadingStates'
-import { usePageContext, useGamesContext } from '../../hooks/contexts'
+import { usePageContext, usePlaythroughsContext } from '../../hooks/contexts'
 import { useQueryString } from '../../hooks/useQueryString'
 import DashboardHeader from '../../components/dashboardHeader/dashboardHeader'
 import FlashMessage from '../../components/flashMessage/flashMessage'
@@ -20,42 +20,42 @@ import styles from './dashboardLayout.module.css'
 
 interface DashboardLayoutProps {
   title?: string
-  includeGameSelector?: boolean
+  includePlaythroughSelector?: boolean
   children: ReactElement | string
 }
 
 const DashboardLayout = ({
   title,
-  includeGameSelector,
+  includePlaythroughSelector,
   children,
 }: DashboardLayoutProps) => {
   const { flashProps, modalProps, setModalProps } = usePageContext()
-  const { games, createGame, gamesLoadingState } = useGamesContext()
+  const { playthroughs, createPlaythrough, playthroughsLoadingState } = usePlaythroughsContext()
 
   const queryString = useQueryString()
   const navigate = useNavigate()
 
   const [selectOptions, setSelectOptions] = useState<SelectOption[]>([])
   const [defaultOption, setDefaultOption] = useState<SelectOption | null>(null)
-  const [selectPlaceholder, setSelectPlaceholder] = useState('Games loading...')
+  const [selectPlaceholder, setSelectPlaceholder] = useState('Playthroughs loading...')
 
   const onOptionSelected = (optionValue: number | string) => {
     setQueryString(optionValue)
   }
 
   const setQueryString = (id: number | string) => {
-    queryString.set('gameId', String(id))
+    queryString.set('playthroughId', String(id))
     void navigate(`?${queryString.toString()}`)
   }
 
   const onSubmitInput = (name: string) => {
-    createGame(
+    createPlaythrough(
       { name },
-      ({ id }: ResponseGame) => setQueryString(id),
+      ({ id }: ResponsePlaythrough) => setQueryString(id),
       () =>
         setDefaultOption({
-          optionName: games[0].name,
-          optionValue: games[0].id,
+          optionName: playthroughs[0].name,
+          optionValue: playthroughs[0].id,
         })
     )
   }
@@ -67,35 +67,35 @@ const DashboardLayout = ({
   }
 
   useEffect(() => {
-    if (includeGameSelector && gamesLoadingState === DONE) {
-      const options: SelectOption[] = games.map(({ name, id }) => ({
+    if (includePlaythroughSelector && playthroughsLoadingState === DONE) {
+      const options: SelectOption[] = playthroughs.map(({ name, id }) => ({
         optionName: name,
         optionValue: id,
       }))
       setSelectOptions(options)
-      setSelectPlaceholder(options.length ? '' : 'No games available')
+      setSelectPlaceholder(options.length ? '' : 'No playthroughs available')
 
-      const gameId = Number(queryString.get('gameId'))
+      const playthroughId = Number(queryString.get('playthroughId'))
 
-      if (gameId) {
+      if (playthroughId) {
         const defOption = options.find(
-          ({ optionValue }) => optionValue === gameId
+          ({ optionValue }) => optionValue === playthroughId
         )
         setDefaultOption(defOption || null)
       } else {
         setDefaultOption(options[0])
       }
     }
-  }, [includeGameSelector, gamesLoadingState, games, queryString])
+  }, [includePlaythroughSelector, playthroughsLoadingState, playthroughs, queryString])
 
   return (
     <main className={styles.root} onKeyUp={hideModalIfEsc}>
       <section className={styles.container}>
-        {title || includeGameSelector ? (
+        {title || includePlaythroughSelector ? (
           <>
             <div className={styles.titleContainer}>
               {title && <h2 className={styles.title}>{title}</h2>}
-              {includeGameSelector && (
+              {includePlaythroughSelector && (
                 <StyledSelect
                   options={selectOptions}
                   placeholder={selectPlaceholder}
@@ -103,13 +103,13 @@ const DashboardLayout = ({
                   onSubmitInput={onSubmitInput}
                   defaultOption={defaultOption}
                   className={styles.select}
-                  disabled={gamesLoadingState !== DONE}
+                  disabled={playthroughsLoadingState !== DONE}
                 />
               )}
             </div>
             <hr
               className={classNames(styles.hr, {
-                [styles.hiddenDivider]: includeGameSelector && !title,
+                [styles.hiddenDivider]: includePlaythroughSelector && !title,
               })}
             />
           </>

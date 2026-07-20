@@ -11,16 +11,16 @@ export interface ErrorObject {
 
 /**
  *
- * Games
+ * Playthrough
  *
  */
 
-export interface RequestGame {
+export interface RequestPlaythrough {
   name?: string | null
   description?: string | null
 }
 
-export interface ResponseGame {
+export interface ResponsePlaythrough {
   id: number
   user_id: number
   name: string
@@ -41,7 +41,7 @@ export interface RequestWishList {
 
 export interface ResponseWishList {
   id: number
-  game_id: number
+  playthrough_id: number
   aggregate_list_id: number | null
   aggregate: boolean
   title: string

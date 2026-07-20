@@ -6,10 +6,11 @@ import { wishListItemsOnList } from './wishListItems'
 
 /**
  *
- * Wish lists are related to games in that each wish list belongs to a
- * particular game. Wish lists in this file have a `game_id` corresponding
- * to one of the games in the `allGames` array exported from /src/support/data/games.ts.
- * The empty wish lists array could hypothetically belong to any of the games.
+ * Wish lists are related to playthroughs in that each wish list belongs to a
+ * particular playthrough. Wish lists in this file have a `playthrough_id`
+ * corresponding to one of the playthroughs in the `allPlaythroughs` array exported
+ * from /src/support/data/playthroughs.ts. The empty wish lists array could
+ * hypothetically belong to any of the playthroughs.
  *
  */
 
@@ -20,7 +21,7 @@ export const emptyWishLists: WishList[] = []
 export const allWishLists: WishList[] = [
   {
     id: 1,
-    game_id: 32,
+    playthrough_id: 32,
     aggregate_list_id: null,
     aggregate: true,
     title: 'All Items',
@@ -30,7 +31,7 @@ export const allWishLists: WishList[] = [
   },
   {
     id: 2,
-    game_id: 32,
+    playthrough_id: 32,
     aggregate_list_id: 1,
     aggregate: false,
     title: 'My Wish List 1',
@@ -40,7 +41,7 @@ export const allWishLists: WishList[] = [
   },
   {
     id: 3,
-    game_id: 77,
+    playthrough_id: 77,
     aggregate_list_id: null,
     aggregate: true,
     title: 'All Items',
@@ -50,7 +51,7 @@ export const allWishLists: WishList[] = [
   },
   {
     id: 4,
-    game_id: 77,
+    playthrough_id: 77,
     aggregate_list_id: 3,
     aggregate: false,
     title: 'Honeyside',
@@ -60,7 +61,7 @@ export const allWishLists: WishList[] = [
   },
   {
     id: 5,
-    game_id: 77,
+    playthrough_id: 77,
     aggregate_list_id: 3,
     aggregate: false,
     title: 'Breezehome',
@@ -70,7 +71,7 @@ export const allWishLists: WishList[] = [
   },
   {
     id: 6,
-    game_id: 77,
+    playthrough_id: 77,
     aggregate_list_id: 3,
     aggregate: false,
     title: 'Hjerim',
@@ -80,5 +81,5 @@ export const allWishLists: WishList[] = [
   },
 ]
 
-export const wishListsForGame = (gameId: number) =>
-  allWishLists.filter(({ game_id }) => game_id === gameId)
+export const wishListsForPlaythrough = (playthroughId: number) =>
+  allWishLists.filter(({ playthrough_id }) => playthrough_id === playthroughId)

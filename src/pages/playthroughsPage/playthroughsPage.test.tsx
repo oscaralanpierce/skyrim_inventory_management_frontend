@@ -8,34 +8,34 @@ import {
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
-  postGamesSuccess,
-  postGamesUnprocessable,
-  postGamesServerError,
-  getGamesEmptySuccess,
-  getGamesAllSuccess,
-  getGamesServerError,
-  patchGameSuccess,
-  patchGameUnprocessableEntity,
-  patchGameNotFound,
-  patchGameServerError,
-  deleteGameSuccess,
-  deleteGameNotFound,
-  deleteGameServerError,
+  postPlaythroughsSuccess,
+  postPlaythroughsUnprocessable,
+  postPlaythroughsServerError,
+  getPlaythroughsEmptySuccess,
+  getPlaythroughsAllSuccess,
+  getPlaythroughsServerError,
+  patchPlaythroughSuccess,
+  patchPlaythroughUnprocessableEntity,
+  patchPlaythroughNotFound,
+  patchPlaythroughServerError,
+  deletePlaythroughSuccess,
+  deletePlaythroughNotFound,
+  deletePlaythroughServerError,
 } from '../../support/msw/handlers'
-import { gamesContextValue } from '../../support/data/contextValues'
+import { playthroughsContextValue } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext, GamesProvider } from '../../contexts/gamesContext'
-import GamesPage from './gamesPage'
+import { PlaythroughsContext, PlaythroughsProvider } from '../../contexts/playthroughsContext'
+import PlaythroughsPage from './playthroughsPage'
 
-describe('<GamesPage />', () => {
-  describe('viewing games', () => {
+describe('<PlaythroughsPage />', () => {
+  describe('viewing playthroughs', () => {
     describe('when loading', () => {
       test('displays the loader', () => {
         const wrapper = renderAuthLoading(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
         expect(wrapper).toBeTruthy()
@@ -46,9 +46,9 @@ describe('<GamesPage />', () => {
       test('matches snapshot', () => {
         const wrapper = renderAuthLoading(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -56,73 +56,73 @@ describe('<GamesPage />', () => {
       })
     })
 
-    describe('when there are no games', () => {
-      const mockServer = setupServer(getGamesEmptySuccess)
+    describe('when there are no playthroughs', () => {
+      const mockServer = setupServer(getPlaythroughsEmptySuccess)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test('games page displays a message that there are no games', async () => {
+      test('playthroughs page displays a message that there are no playthroughs', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
         expect(wrapper).toBeTruthy()
 
         await waitFor(() => {
-          expect(wrapper.getByText('Create Game...')).toBeTruthy()
-          expect(wrapper.getByTestId('gameCreateFormForm')).toBeTruthy()
+          expect(wrapper.getByText('Create Playthrough...')).toBeTruthy()
+          expect(wrapper.getByTestId('playthroughCreateFormForm')).toBeTruthy()
         })
       })
 
       test('matches snapshot', () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
         expect(wrapper).toMatchSnapshot()
       })
     })
 
-    describe('when there are multiple games', () => {
-      const mockServer = setupServer(getGamesAllSuccess)
+    describe('when there are multiple playthroughs', () => {
+      const mockServer = setupServer(getPlaythroughsAllSuccess)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
       // Descriptions should be hidden by default but Vitest has no way of knowing
-      // that, as noted in the test file for the GameLineItem component.
-      test('displays the title and description of each game', async () => {
+      // that, as noted in the test file for the PlaythroughLineItem component.
+      test('displays the title and description of each playthrough', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         await waitFor(() => {
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
           expect(
-            wrapper.getByText('This is a game with a description')
+            wrapper.getByText('This is a playthrough with a description')
           ).toBeTruthy()
 
-          expect(wrapper.getByText('My Game 2')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
           expect(
-            wrapper.getByText('This game has no description.')
+            wrapper.getByText('This playthrough has no description.')
           ).toBeTruthy()
 
           expect(
             wrapper.getByText(
-              'Game with a really really really really really long name'
+              'Playthrough with a really really really really really long name'
             )
           ).toBeTruthy()
           expect(
@@ -138,9 +138,9 @@ describe('<GamesPage />', () => {
       test('matches snapshot', () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
         expect(wrapper).toMatchSnapshot()
@@ -148,7 +148,7 @@ describe('<GamesPage />', () => {
     })
 
     describe('when the server returns an error', () => {
-      const mockServer = setupServer(getGamesServerError)
+      const mockServer = setupServer(getPlaythroughsServerError)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
@@ -157,9 +157,9 @@ describe('<GamesPage />', () => {
       test('displays error content', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -175,21 +175,21 @@ describe('<GamesPage />', () => {
       test("doesn't break the dashboard", () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
-        expect(wrapper.getByText('Your Games')).toBeTruthy()
+        expect(wrapper.getByText('Your Playthroughs')).toBeTruthy()
       })
 
       test('matches snapshot', () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -198,65 +198,65 @@ describe('<GamesPage />', () => {
     })
   })
 
-  describe('destroying a game', () => {
+  describe('destroying a playthrough', () => {
     describe('when the user confirms deletion', () => {
-      const mockServer = setupServer(getGamesAllSuccess, deleteGameSuccess)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, deletePlaythroughSuccess)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test('destroys the game and removes it from the DOM', async () => {
+      test('destroys the playthrough and removes it from the DOM', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         window.confirm = vitest.fn().mockImplementation(() => true)
 
-        const game51 = await wrapper.findByText('My Game 2')
-        const deleteButton = await wrapper.findByTestId('destroyGame51')
+        const playthrough51 = await wrapper.findByText('My Playthrough 2')
+        const deleteButton = await wrapper.findByTestId('destroyPlaythrough51')
 
         act(() => deleteButton.click())
 
-        await waitForElementToBeRemoved(game51)
-        const flash = await wrapper.findByText(/game has been deleted/)
+        await waitForElementToBeRemoved(playthrough51)
+        const flash = await wrapper.findByText(/playthrough has been deleted/)
 
-        expect(wrapper.queryByText('My Game 2')).toBeFalsy()
+        expect(wrapper.queryByText('My Playthrough 2')).toBeFalsy()
         expect(flash).toBeTruthy()
       })
     })
 
     describe('when the back end returns a 404 error', () => {
-      const mockServer = setupServer(getGamesAllSuccess, deleteGameNotFound)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, deletePlaythroughNotFound)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test('leaves the game in the DOM and displays error message', async () => {
+      test('leaves the playthrough in the DOM and displays error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         window.confirm = vitest.fn().mockImplementation(() => true)
 
-        const deleteButton = await wrapper.findByTestId('destroyGame51')
+        const deleteButton = await wrapper.findByTestId('destroyPlaythrough51')
 
         act(() => deleteButton.click())
 
         await waitFor(() => {
-          expect(wrapper.getByText('My Game 2')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
           expect(
             wrapper.getByText(
-              "Oops! We couldn't find the game you're looking for. Please refresh and try again."
+              "Oops! We couldn't find the playthrough you're looking for. Please refresh and try again."
             )
           ).toBeTruthy()
         })
@@ -264,29 +264,29 @@ describe('<GamesPage />', () => {
     })
 
     describe('when the back end returns a 500 error', () => {
-      const mockServer = setupServer(getGamesAllSuccess, deleteGameServerError)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, deletePlaythroughServerError)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test('leaves the game in the DOM and displays error message', async () => {
+      test('leaves the playthrough in the DOM and displays error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         window.confirm = vitest.fn().mockImplementation(() => true)
 
-        const deleteButton = await wrapper.findByTestId('destroyGame51')
+        const deleteButton = await wrapper.findByTestId('destroyPlaythrough51')
 
         act(() => deleteButton.click())
 
         await waitFor(() => {
-          expect(wrapper.getByText('My Game 2')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
           expect(
             wrapper.getByText(
               "Oops! Something unexpected went wrong. We're sorry! Please try again later."
@@ -297,60 +297,60 @@ describe('<GamesPage />', () => {
     })
 
     describe('when the user cancels deletion', () => {
-      test("doesn't destroy the game", () => {
+      test("doesn't destroy the playthrough", () => {
         const contextValue = {
-          ...gamesContextValue,
-          destroyGame: vitest.fn().mockImplementation((_gameId: number) => {}),
+          ...playthroughsContextValue,
+          destroyPlaythrough: vitest.fn().mockImplementation((_playthroughId: number) => {}),
         }
 
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={contextValue}>
-              <GamesPage />
-            </GamesContext>
+            <PlaythroughsContext value={contextValue}>
+              <PlaythroughsPage />
+            </PlaythroughsContext>
           </PageProvider>
         )
 
         window.confirm = vitest.fn().mockImplementation(() => false)
 
-        const button = wrapper.getByTestId('destroyGame51')
+        const button = wrapper.getByTestId('destroyPlaythrough51')
 
         act(() => button.click())
 
-        expect(contextValue.destroyGame).not.toHaveBeenCalled()
-        expect(wrapper.getByText('My Game 2')).toBeTruthy()
+        expect(contextValue.destroyPlaythrough).not.toHaveBeenCalled()
+        expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
 
         // The flash info message should be displayed
         expect(
-          wrapper.getByText('OK, your game will not be destroyed.')
+          wrapper.getByText('OK, your playthrough will not be destroyed.')
         ).toBeTruthy()
       })
     })
   })
 
-  describe('creating a game', () => {
+  describe('creating a playthrough', () => {
     describe('when successful', () => {
-      const mockServer = setupServer(getGamesAllSuccess, postGamesSuccess)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, postPlaythroughsSuccess)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test('adds the game to the list', async () => {
+      test('adds the playthrough to the list', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         await waitFor(() => {
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
         })
 
         const button = (await wrapper.findByTestId(
-          'createGameSubmit'
+          'createPlaythroughSubmit'
         )) as HTMLButtonElement
 
         act(() => button.click())
@@ -358,21 +358,21 @@ describe('<GamesPage />', () => {
         await waitFor(() => {
           // There should be a success message
           expect(
-            wrapper.getByText('Success! Your game has been created.')
+            wrapper.getByText('Success! Your playthrough has been created.')
           ).toBeTruthy()
 
-          // The new game should be present in the DOM
-          expect(wrapper.getByText('My Game 3')).toBeTruthy()
+          // The new playthrough should be present in the DOM
+          expect(wrapper.getByText('My Playthrough 3')).toBeTruthy()
           expect(
             wrapper.getByText('This description is just for illustration.')
           ).toBeTruthy()
 
-          // All the other games should still be there too
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
-          expect(wrapper.getByText('My Game 2')).toBeTruthy()
+          // All the other playthroughs should still be there too
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
           expect(
             wrapper.getByText(
-              'Game with a really really really really really long name'
+              'Playthrough with a really really really really really long name'
             )
           ).toBeTruthy()
         })
@@ -380,7 +380,7 @@ describe('<GamesPage />', () => {
     })
 
     describe('when the server returns an Unprocessable Entity response', () => {
-      const mockServer = setupServer(getGamesAllSuccess, postGamesUnprocessable)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, postPlaythroughsUnprocessable)
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -389,18 +389,18 @@ describe('<GamesPage />', () => {
       test('displays an error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         await waitFor(() => {
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
         })
 
         const button = (await wrapper.findByTestId(
-          'createGameSubmit'
+          'createPlaythroughSubmit'
         )) as HTMLButtonElement
 
         act(() => button.click())
@@ -411,12 +411,12 @@ describe('<GamesPage />', () => {
             wrapper.getByText(/Name can only contain alphanumeric characters/)
           ).toBeTruthy()
 
-          // All the other games should still be there
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
-          expect(wrapper.getByText('My Game 2')).toBeTruthy()
+          // All the other playthroughs should still be there
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
           expect(
             wrapper.getByText(
-              'Game with a really really really really really long name'
+              'Playthrough with a really really really really really long name'
             )
           ).toBeTruthy()
         })
@@ -424,7 +424,7 @@ describe('<GamesPage />', () => {
     })
 
     describe('when the server returns a 500 error response', () => {
-      const mockServer = setupServer(getGamesAllSuccess, postGamesServerError)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, postPlaythroughsServerError)
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -433,18 +433,18 @@ describe('<GamesPage />', () => {
       test('displays an error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         await waitFor(() => {
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
         })
 
         const button = (await wrapper.findByTestId(
-          'createGameSubmit'
+          'createPlaythroughSubmit'
         )) as HTMLButtonElement
 
         act(() => button.click())
@@ -455,12 +455,12 @@ describe('<GamesPage />', () => {
             wrapper.getByText(/Something unexpected went wrong/)
           ).toBeTruthy()
 
-          // All the other games should still be there
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
-          expect(wrapper.getByText('My Game 2')).toBeTruthy()
+          // All the other playthroughs should still be there
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
           expect(
             wrapper.getByText(
-              'Game with a really really really really really long name'
+              'Playthrough with a really really really really really long name'
             )
           ).toBeTruthy()
         })
@@ -468,9 +468,9 @@ describe('<GamesPage />', () => {
     })
   })
 
-  describe('editing a game', () => {
+  describe('editing a playthrough', () => {
     describe('when successful', () => {
-      const mockServer = setupServer(getGamesAllSuccess, patchGameSuccess)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, patchPlaythroughSuccess)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
@@ -479,37 +479,37 @@ describe('<GamesPage />', () => {
       test('displays the edit form', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
-        expect(wrapper.getAllByText('Update Game').length).toEqual(2)
+        expect(wrapper.getAllByText('Update Playthrough').length).toEqual(2)
       })
 
       test('hides the modal and form when clicking outside the form', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
-        const form = wrapper.getAllByText('Update Game')[0]
+        const form = wrapper.getAllByText('Update Playthrough')[0]
         expect(form).toBeTruthy()
 
         const modal = wrapper.getByTestId('modal') as HTMLDivElement
@@ -518,51 +518,51 @@ describe('<GamesPage />', () => {
           fireEvent.mouseDown(modal)
         })
 
-        expect(wrapper.queryByText('Update Game')).toBeFalsy()
+        expect(wrapper.queryByText('Update Playthrough')).toBeFalsy()
       })
 
       test("doesn't hide the modal and form when clicking inside the form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
-        expect(wrapper.getAllByText('Update Game').length).toEqual(2)
+        expect(wrapper.getAllByText('Update Playthrough').length).toEqual(2)
 
-        const form = wrapper.getByTestId('gameForm') as HTMLFormElement
+        const form = wrapper.getByTestId('playthroughForm') as HTMLFormElement
 
         act(() => {
           fireEvent.mouseDown(form)
         })
 
-        expect(wrapper.getAllByText('Update Game').length).toEqual(2)
+        expect(wrapper.getAllByText('Update Playthrough').length).toEqual(2)
       })
 
       test('hides the modal and form when pressing the Escape key', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
-        expect(wrapper.getAllByText('Update Game').length).toEqual(2)
+        expect(wrapper.getAllByText('Update Playthrough').length).toEqual(2)
 
         const modal = wrapper.getByTestId('modal') as HTMLDivElement
 
@@ -570,27 +570,27 @@ describe('<GamesPage />', () => {
           fireEvent.keyUp(modal, { key: 'Escape' })
         })
 
-        expect(wrapper.queryByText('Update Game')).toBeFalsy()
+        expect(wrapper.queryByText('Update Playthrough')).toBeFalsy()
       })
 
       test('updates the item on the list and hides the modal', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
         fireEvent.change(nameInput, {
@@ -600,34 +600,34 @@ describe('<GamesPage />', () => {
         act(() => button.click())
 
         await waitFor(() => {
-          expect(wrapper.queryByText('My Game 1')).toBeFalsy()
+          expect(wrapper.queryByText('My Playthrough 1')).toBeFalsy()
           expect(wrapper.getByText('Distinctive New Name')).toBeTruthy()
           expect(
-            wrapper.getByText('This is a game with a description')
+            wrapper.getByText('This is a playthrough with a description')
           ).toBeTruthy()
-          expect(wrapper.queryByTestId('gameForm')).toBeFalsy()
+          expect(wrapper.queryByTestId('playthroughForm')).toBeFalsy()
         })
       })
     })
 
     describe('when setting a field to null', () => {
-      const mockServer = setupServer(getGamesAllSuccess, patchGameSuccess)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, patchPlaythroughSuccess)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test('updates the game on the list and hides the modal', async () => {
+      test('updates the playthrough on the list and hides the modal', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
@@ -635,7 +635,7 @@ describe('<GamesPage />', () => {
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const descInput = wrapper.getAllByLabelText('Description')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
         fireEvent.change(nameInput, {
@@ -649,20 +649,20 @@ describe('<GamesPage />', () => {
         act(() => button.click())
 
         await waitFor(() => {
-          expect(wrapper.queryByText('My Game 1')).toBeFalsy()
+          expect(wrapper.queryByText('My Playthrough 1')).toBeFalsy()
           expect(wrapper.getByText('Distinctive New Name')).toBeTruthy()
           expect(
-            wrapper.getAllByText('This game has no description.').length
+            wrapper.getAllByText('This playthrough has no description.').length
           ).toEqual(2)
-          expect(wrapper.queryByTestId('gameForm')).toBeFalsy()
+          expect(wrapper.queryByTestId('playthroughForm')).toBeFalsy()
         })
       })
     })
 
     describe('when the server returns an Unprocessable Entity response', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
-        patchGameUnprocessableEntity
+        getPlaythroughsAllSuccess,
+        patchPlaythroughUnprocessableEntity
       )
 
       beforeAll(() => mockServer.listen())
@@ -672,54 +672,54 @@ describe('<GamesPage />', () => {
       test("doesn't hide the modal form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
-        fireEvent.change(nameInput, { target: { value: 'My Game 2' } })
+        fireEvent.change(nameInput, { target: { value: 'My Playthrough 2' } })
 
         act(() => button.click())
 
         await waitFor(() => {
           // The modal should not be hidden
-          expect(wrapper.getByTestId('gameForm')).toBeTruthy()
+          expect(wrapper.getByTestId('playthroughForm')).toBeTruthy()
         })
       })
 
       test('shows the flash message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
-        fireEvent.change(nameInput, { target: { value: 'My Game 2' } })
+        fireEvent.change(nameInput, { target: { value: 'My Playthrough 2' } })
 
         act(() => button.click())
 
@@ -727,47 +727,47 @@ describe('<GamesPage />', () => {
           // The flash error message should be displayed
           expect(
             wrapper.getByText(
-              '1 error(s) prevented your game from being saved:'
+              '1 error(s) prevented your playthrough from being saved:'
             )
           ).toBeTruthy()
           expect(wrapper.getByText('Name must be unique')).toBeTruthy()
         })
       })
 
-      test("doesn't update the game name on the list", async () => {
+      test("doesn't update the playthrough name on the list", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
-        fireEvent.change(nameInput, { target: { value: 'My Game 2' } })
+        fireEvent.change(nameInput, { target: { value: 'My Playthrough 2' } })
 
         act(() => button.click())
 
         await waitFor(() => {
           // The name should not be changed
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
-          expect(wrapper.getAllByText('My Game 2').length).toEqual(1)
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
+          expect(wrapper.getAllByText('My Playthrough 2').length).toEqual(1)
         })
       })
     })
 
     describe('when the server returns a 404 response', () => {
-      const mockServer = setupServer(getGamesAllSuccess, patchGameNotFound)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, patchPlaythroughNotFound)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
@@ -776,21 +776,21 @@ describe('<GamesPage />', () => {
       test("doesn't hide the modal form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
         fireEvent.change(nameInput, { target: { value: 'New Name' } })
@@ -799,28 +799,28 @@ describe('<GamesPage />', () => {
 
         await waitFor(() => {
           // The modal should not be hidden
-          expect(wrapper.getByTestId('gameForm')).toBeTruthy()
+          expect(wrapper.getByTestId('playthroughForm')).toBeTruthy()
         })
       })
 
       test('displays the flash error', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
         fireEvent.change(nameInput, { target: { value: 'New Name' } })
@@ -831,7 +831,7 @@ describe('<GamesPage />', () => {
           // The flash error message should be displayed
           expect(
             wrapper.getByText(
-              "Oops! We couldn't find the game you're looking for. Please refresh and try again."
+              "Oops! We couldn't find the playthrough you're looking for. Please refresh and try again."
             )
           ).toBeTruthy()
         })
@@ -840,21 +840,21 @@ describe('<GamesPage />', () => {
       test("doesn't update the name on the list", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
         fireEvent.change(nameInput, { target: { value: 'New Name' } })
@@ -863,14 +863,14 @@ describe('<GamesPage />', () => {
 
         await waitFor(() => {
           // The name should not be changed
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
           expect(wrapper.queryByText('New Name')).toBeFalsy()
         })
       })
     })
 
     describe('when the server returns a 500 response', () => {
-      const mockServer = setupServer(getGamesAllSuccess, patchGameServerError)
+      const mockServer = setupServer(getPlaythroughsAllSuccess, patchPlaythroughServerError)
 
       beforeAll(() => mockServer.listen())
       afterEach(() => mockServer.resetHandlers())
@@ -879,21 +879,21 @@ describe('<GamesPage />', () => {
       test("doesn't hide the modal form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
         fireEvent.change(nameInput, { target: { value: 'New Name' } })
@@ -902,28 +902,28 @@ describe('<GamesPage />', () => {
 
         await waitFor(() => {
           // The modal should not be hidden
-          expect(wrapper.getByTestId('gameForm')).toBeTruthy()
+          expect(wrapper.getByTestId('playthroughForm')).toBeTruthy()
         })
       })
 
       test('displays the flash error', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
         fireEvent.change(nameInput, { target: { value: 'New Name' } })
@@ -943,21 +943,21 @@ describe('<GamesPage />', () => {
       test("doesn't update the name on the list", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <GamesPage />
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <PlaythroughsPage />
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const editButton = (await wrapper.findByTestId(
-          'editGame32'
+          'editPlaythrough32'
         )) as HTMLButtonElement
 
         act(() => editButton.click())
 
         const nameInput = wrapper.getAllByLabelText('Name')[0]
         const button = wrapper.getByTestId(
-          'gameFormSubmit'
+          'playthroughFormSubmit'
         ) as HTMLButtonElement
 
         fireEvent.change(nameInput, { target: { value: 'New Name' } })
@@ -966,7 +966,7 @@ describe('<GamesPage />', () => {
 
         await waitFor(() => {
           // The name should not be changed
-          expect(wrapper.getByText('My Game 1')).toBeTruthy()
+          expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
           expect(wrapper.queryByText('New Name')).toBeFalsy()
         })
       })

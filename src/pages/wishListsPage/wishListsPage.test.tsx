@@ -12,13 +12,13 @@ import { waitFor, act, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 import { renderAuthenticated, renderAuthLoading } from '../../support/testUtils'
 import {
-  postGamesSuccess,
-  postGamesUnprocessable,
-  postGamesServerError,
+  postPlaythroughsSuccess,
+  postPlaythroughsUnprocessable,
+  postPlaythroughsServerError,
   postWishListsSuccess,
   postWishListsServerError,
   postWishListsUnprocessable,
-  getGamesAllSuccess,
+  getPlaythroughsAllSuccess,
   getWishListsSuccess,
   getWishListsEmptySuccess,
   patchWishListSuccess,
@@ -36,11 +36,11 @@ import {
   postWishListItemsServerError,
   deleteWishListItemSuccess,
   deleteWishListItemServerError,
-  getGamesEmptySuccess,
+  getPlaythroughsEmptySuccess,
 } from '../../support/msw/handlers'
-import { gamesContextValue } from '../../support/data/contextValues'
+import { playthroughsContextValue } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesProvider, GamesContext } from '../../contexts/gamesContext'
+import { PlaythroughsProvider, PlaythroughsContext } from '../../contexts/playthroughsContext'
 import { WishListsProvider } from '../../contexts/wishListsContext'
 import WishListsPage from './wishListsPage'
 
@@ -49,8 +49,8 @@ import WishListsPage from './wishListsPage'
  * Not able to be tested:
  * - 404 responses when creating a wish list
  *   - This would be a difficult state to arrive at. You would have to have multiple tabs open
- *     and delete a game from the games page in one tab and then create a wish list in
- *     another tab while it is set to that game without refreshing. In the test environment, these
+ *     and delete a playthrough from the playthroughs page in one tab and then create a wish list in
+ *     another tab while it is set to that playthrough without refreshing. In the test environment, these
  *     conditions are hard to create since there would first be a 404 error when fetching the
  *     wish lists in the first place.
  * - 404 response when editing/destroying a wish list or managing its items
@@ -61,7 +61,7 @@ import WishListsPage from './wishListsPage'
  *     intercept the request, change the list ID, and send it on to the server.
  * - That the create form input is cleared after request completion or not
  * - Flash warning being shown and no request made if, somehow, the user submits the create form
- *   before an active game has been set
+ *   before an active playthrough has been set
  * - New list items get added to the correct list
  *
  */
@@ -72,11 +72,11 @@ describe('WishListsPage', () => {
       test('displays the loading component', () => {
         const wrapper = renderAuthLoading(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -86,11 +86,11 @@ describe('WishListsPage', () => {
       test('matches snapshot', () => {
         const wrapper = renderAuthLoading(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -98,9 +98,9 @@ describe('WishListsPage', () => {
       })
     })
 
-    describe('when the game is set in the query string', () => {
+    describe('when the playthrough is set in the query string', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess
       )
 
@@ -108,17 +108,17 @@ describe('WishListsPage', () => {
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      describe('when the game has wish lists', () => {
+      describe('when the playthrough has wish lists', () => {
         test('displays the wish lists', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
+              <PlaythroughsProvider>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=77'
+            'http://localhost:5173/wish_lists?playthroughId=77'
           )
 
           await waitFor(() => {
@@ -140,16 +140,16 @@ describe('WishListsPage', () => {
         test('matches snapshot', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
+              <PlaythroughsProvider>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=77'
+            'http://localhost:5173/wish_lists?playthroughId=77'
           )
 
-          // Wait for games/wish lists to load
+          // Wait for playthroughs/wish lists to load
           await waitFor(() => {
             expect(wrapper.getByText('Honeyside')).toBeTruthy()
             expect(wrapper).toMatchSnapshot()
@@ -157,31 +157,31 @@ describe('WishListsPage', () => {
         })
       })
 
-      describe('when the game has no wish lists', () => {
-        test('renders a message that the game has no wish lists', async () => {
+      describe('when the playthrough has no wish lists', () => {
+        test('renders a message that the playthrough has no wish lists', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
+              <PlaythroughsProvider>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=51'
+            'http://localhost:5173/wish_lists?playthroughId=51'
           )
 
           await waitFor(() => {
             expect(
-              wrapper.getByText('This game has no wish lists.')
+              wrapper.getByText('This playthrough has no wish lists.')
             ).toBeTruthy()
           })
         })
       })
     })
 
-    describe('when no game is set in the query string', () => {
+    describe('when no playthrough is set in the query string', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess
       )
 
@@ -189,14 +189,14 @@ describe('WishListsPage', () => {
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test.skip('uses the first game by default', async () => {
+      test.skip('uses the first playthrough by default', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -204,7 +204,7 @@ describe('WishListsPage', () => {
           expect(wrapper.getByText('All Items')).toBeTruthy()
           expect(wrapper.getByText('My Wish List 1')).toBeTruthy()
           expect(wrapper.getByTestId('selectedOption').textContent).toEqual(
-            'My Game 1'
+            'My Playthrough 1'
           )
         })
       })
@@ -212,7 +212,7 @@ describe('WishListsPage', () => {
 
     describe('when an invalid value is set in the query string', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess
       )
 
@@ -220,31 +220,31 @@ describe('WishListsPage', () => {
       beforeEach(() => mockServer.resetHandlers())
       afterAll(() => mockServer.close())
 
-      test.skip('uses the first game by default', async () => {
+      test.skip('uses the first playthrough by default', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
-          'http://localhost:5173/wish_lists?gameId=uhoh'
+          'http://localhost:5173/wish_lists?playthroughId=uhoh'
         )
 
         await waitFor(() => {
           expect(wrapper.getByText('All Items')).toBeTruthy()
           expect(wrapper.getByText('My Wish List 1')).toBeTruthy()
           expect(wrapper.getByTestId('selectedOption').textContent).toEqual(
-            'My Game 1'
+            'My Playthrough 1'
           )
         })
       })
     })
 
-    describe('when the game does not exist', () => {
+    describe('when the playthrough does not exist', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess
       )
 
@@ -255,27 +255,27 @@ describe('WishListsPage', () => {
       test('displays a 404 error', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
-          'http://localhost:5173/wish_lists?gameId=23'
+          'http://localhost:5173/wish_lists?playthroughId=23'
         )
 
         await waitFor(() => {
           expect(
             wrapper.getByText(
-              "The game you've selected doesn't exist, or doesn't belong to you. Please select another game and try again."
+              "The playthrough you've selected doesn't exist, or doesn't belong to you. Please select another playthrough and try again."
             )
           ).toBeTruthy()
         })
       })
     })
 
-    describe('when there are no games', () => {
-      const mockServer = setupServer(getGamesEmptySuccess)
+    describe('when there are no playthroughs', () => {
+      const mockServer = setupServer(getPlaythroughsEmptySuccess)
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -284,11 +284,11 @@ describe('WishListsPage', () => {
       test('hides the loading component', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
           'http://localhost:5173/wish_lists'
         )
@@ -297,21 +297,21 @@ describe('WishListsPage', () => {
           expect(wrapper.queryByTestId('pulseLoader')).toBeFalsy()
           expect(
             wrapper.getByText(
-              /You need a game to use the wish lists feature\./
+              /You need a playthrough to use the wish lists feature\./
             )
           ).toBeTruthy()
-          expect(wrapper.getByText('Create a game')).toBeTruthy()
+          expect(wrapper.getByText('Create a playthrough')).toBeTruthy()
         })
       })
 
-      test('shows a message that you need a game', async () => {
+      test('shows a message that you need a playthrough', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
           'http://localhost:5173/wish_lists'
         )
@@ -319,20 +319,20 @@ describe('WishListsPage', () => {
         await waitFor(() => {
           expect(
             wrapper.getByText(
-              /You need a game to use the wish lists feature\./
+              /You need a playthrough to use the wish lists feature\./
             )
           ).toBeTruthy()
-          expect(wrapper.getByText('Create a game')).toBeTruthy()
+          expect(wrapper.getByText('Create a playthrough')).toBeTruthy()
         })
       })
     })
   })
 
-  describe('creating a game from the wish lists page', () => {
+  describe('creating a playthrough from the wish lists page', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
-        getGamesEmptySuccess,
-        postGamesSuccess,
+        getPlaythroughsEmptySuccess,
+        postPlaythroughsSuccess,
         getWishListsEmptySuccess
       )
 
@@ -343,64 +343,64 @@ describe('WishListsPage', () => {
       test('displays the form', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
           'http://localhost:5173/wish_lists'
         )
 
-        const link = await wrapper.findByText('Create a game')
+        const link = await wrapper.findByText('Create a playthrough')
 
         await act(() => fireEvent.click(link))
 
-        expect(wrapper.getByTestId('gameForm')).toBeTruthy()
-        expect(wrapper.getAllByText('Create Game').length).toBeTruthy()
+        expect(wrapper.getByTestId('playthroughForm')).toBeTruthy()
+        expect(wrapper.getAllByText('Create Playthrough').length).toBeTruthy()
       })
 
-      test('creates a game and shows the flash message', async () => {
+      test('creates a playthrough and shows the flash message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
           'http://localhost:5173/wish_lists'
         )
 
-        const link = await wrapper.findByText('Create a game')
+        const link = await wrapper.findByText('Create a playthrough')
 
         await act(() => fireEvent.click(link))
 
-        const form = wrapper.getByTestId('gameForm')
+        const form = wrapper.getByTestId('playthroughForm')
         const nameInput = wrapper.getByLabelText('Name')
 
         fireEvent.change(nameInput, {
-          target: { value: 'New Name for a New Game' },
+          target: { value: 'New Name for a New Playthrough' },
         })
 
         await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
-          expect(wrapper.queryByTestId('gameForm')).toBeFalsy()
+          expect(wrapper.queryByTestId('playthroughForm')).toBeFalsy()
           // TODO: Uncomment this expectation when we've got the node-canvas foolishness
           //       worked out
           //
           // expect(wrapper.getByText(/New Name/)).toBeTruthy()
           expect(
             wrapper.queryByText(
-              /You need a game to use the wish lists feature\./
+              /You need a playthrough to use the wish lists feature\./
             )
           ).toBeFalsy()
           expect(
-            wrapper.getByText('This game has no wish lists.')
+            wrapper.getByText('This playthrough has no wish lists.')
           ).toBeTruthy()
           expect(
-            wrapper.getByText('Success! Your game has been created.')
+            wrapper.getByText('Success! Your playthrough has been created.')
           ).toBeTruthy()
         })
       })
@@ -408,8 +408,8 @@ describe('WishListsPage', () => {
 
     describe('when there is a validation error', () => {
       const mockServer = setupServer(
-        getGamesEmptySuccess,
-        postGamesUnprocessable
+        getPlaythroughsEmptySuccess,
+        postPlaythroughsUnprocessable
       )
 
       beforeAll(() => mockServer.listen())
@@ -419,33 +419,33 @@ describe('WishListsPage', () => {
       test("shows the flash error and doesn't hide the form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
           'http://localhost:5173/wish_lists'
         )
 
-        const link = await wrapper.findByText('Create a game')
+        const link = await wrapper.findByText('Create a playthrough')
 
         await act(() => fireEvent.click(link))
 
-        const form = wrapper.getByTestId('gameForm')
+        const form = wrapper.getByTestId('playthroughForm')
         const nameInput = wrapper.getByLabelText('Name')
 
         fireEvent.change(nameInput, {
-          target: { value: 'New Name for a New Game' },
+          target: { value: 'New Name for a New Playthrough' },
         })
 
         await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
-          expect(wrapper.getByTestId('gameForm')).toBeTruthy()
+          expect(wrapper.getByTestId('playthroughForm')).toBeTruthy()
           expect(
             wrapper.getByText(
-              '1 error(s) prevented your game from being saved:'
+              '1 error(s) prevented your playthrough from being saved:'
             )
           ).toBeTruthy()
         })
@@ -453,7 +453,7 @@ describe('WishListsPage', () => {
     })
 
     describe('when there is an internal server error', () => {
-      const mockServer = setupServer(getGamesEmptySuccess, postGamesServerError)
+      const mockServer = setupServer(getPlaythroughsEmptySuccess, postPlaythroughsServerError)
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -462,30 +462,30 @@ describe('WishListsPage', () => {
       test("shows the flash error and doesn't hide the form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
           'http://localhost:5173/wish_lists'
         )
 
-        const link = await wrapper.findByText('Create a game')
+        const link = await wrapper.findByText('Create a playthrough')
 
         await act(() => fireEvent.click(link))
 
-        const form = wrapper.getByTestId('gameForm')
+        const form = wrapper.getByTestId('playthroughForm')
         const nameInput = wrapper.getByLabelText('Name')
 
         fireEvent.change(nameInput, {
-          target: { value: 'New Name for a New Game' },
+          target: { value: 'New Name for a New Playthrough' },
         })
 
         await act(() => fireEvent.submit(form))
 
         await waitFor(() => {
-          expect(wrapper.getByTestId('gameForm')).toBeTruthy()
+          expect(wrapper.getByTestId('playthroughForm')).toBeTruthy()
           expect(
             wrapper.getByText(
               "Oops! Something unexpected went wrong. We're sorry! Please try again later."
@@ -496,31 +496,31 @@ describe('WishListsPage', () => {
     })
   })
 
-  describe('changing games', () => {
-    const mockServer = setupServer(getGamesAllSuccess, getWishListsSuccess)
+  describe('changing playthroughs', () => {
+    const mockServer = setupServer(getPlaythroughsAllSuccess, getWishListsSuccess)
 
     beforeAll(() => mockServer.listen())
     beforeEach(() => mockServer.resetHandlers())
     afterAll(() => mockServer.close())
 
-    test.skip("displays the new game's wish lists", async () => {
+    test.skip("displays the new playthrough's wish lists", async () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesProvider>
+          <PlaythroughsProvider>
             <WishListsProvider>
               <WishListsPage />
             </WishListsProvider>
-          </GamesProvider>
+          </PlaythroughsProvider>
         </PageProvider>
       )
 
-      const option = await wrapper.findByText('Game with a really real...')
+      const option = await wrapper.findByText('Playthrough with a really real...')
 
       act(() => option.click())
 
       await waitFor(() => {
         expect(wrapper.getByTestId('selectedOption').textContent).toEqual(
-          'Game with a really real...'
+          'Playthrough with a really real...'
         )
         expect(wrapper.getByText('All Items')).toBeTruthy()
         expect(wrapper.getByText('Honeyside')).toBeTruthy()
@@ -532,7 +532,7 @@ describe('WishListsPage', () => {
   describe('creating a wish list', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess,
         postWishListsSuccess
       )
@@ -545,11 +545,11 @@ describe('WishListsPage', () => {
         test('adds the new list to the page', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
+              <PlaythroughsProvider>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>
           )
 
@@ -575,11 +575,11 @@ describe('WishListsPage', () => {
         test("doesn't remove existing lists", async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
+              <PlaythroughsProvider>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>
           )
 
@@ -608,13 +608,13 @@ describe('WishListsPage', () => {
         test('adds the new list and aggregate list to the page', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
+              <PlaythroughsProvider>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=51'
+            'http://localhost:5173/wish_lists?playthroughId=51'
           )
 
           const input = wrapper.getByPlaceholderText('Title')
@@ -635,7 +635,7 @@ describe('WishListsPage', () => {
             expect(wrapper.getByText('All Items')).toBeTruthy()
             expect(wrapper.getByText('Smithing Materials')).toBeTruthy()
             expect(
-              wrapper.queryByText('This game has no wish lists.')
+              wrapper.queryByText('This playthrough has no wish lists.')
             ).toBeFalsy()
           })
         })
@@ -644,7 +644,7 @@ describe('WishListsPage', () => {
 
     describe('when the response is a 422', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess,
         postWishListsUnprocessable
       )
@@ -656,11 +656,11 @@ describe('WishListsPage', () => {
       test('displays the validation errors', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -682,7 +682,7 @@ describe('WishListsPage', () => {
             )
           ).toBeTruthy()
           expect(
-            wrapper.getByText('Title must be unique per game')
+            wrapper.getByText('Title must be unique per playthrough')
           ).toBeTruthy()
           expect(
             wrapper.getByText(
@@ -696,7 +696,7 @@ describe('WishListsPage', () => {
 
     describe('when the response is a 500 error', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess,
         postWishListsServerError
       )
@@ -708,11 +708,11 @@ describe('WishListsPage', () => {
       test('displays a user-friendly message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -742,7 +742,7 @@ describe('WishListsPage', () => {
   describe('destroying a wish list', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess,
         deleteWishListSuccess
       )
@@ -752,7 +752,7 @@ describe('WishListsPage', () => {
       afterAll(() => mockServer.close())
 
       describe('when the user confirms deletion', () => {
-        describe('when the game has no other regular wish lists', () => {
+        describe('when the playthrough has no other regular wish lists', () => {
           const ogConfirm = window.confirm
 
           afterEach(() => {
@@ -762,13 +762,13 @@ describe('WishListsPage', () => {
           test('removes the aggregate list too', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
-                <GamesProvider>
+                <PlaythroughsProvider>
                   <WishListsProvider>
                     <WishListsPage />
                   </WishListsProvider>
-                </GamesProvider>
+                </PlaythroughsProvider>
               </PageProvider>,
-              'http://localhost:5173/wish_lists?gameId=32'
+              'http://localhost:5173/wish_lists?playthroughId=32'
             )
 
             window.confirm = vitest.fn().mockImplementation(() => true)
@@ -789,7 +789,7 @@ describe('WishListsPage', () => {
               expect(wrapper.queryByText('All Items')).toBeFalsy()
               expect(wrapper.queryByText('My Wish List 1')).toBeFalsy()
               expect(
-                wrapper.getByText('This game has no wish lists.')
+                wrapper.getByText('This playthrough has no wish lists.')
               ).toBeTruthy()
             })
           })
@@ -797,13 +797,13 @@ describe('WishListsPage', () => {
           test('displays a flash success message', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
-                <GamesProvider>
+                <PlaythroughsProvider>
                   <WishListsProvider>
                     <WishListsPage />
                   </WishListsProvider>
-                </GamesProvider>
+                </PlaythroughsProvider>
               </PageProvider>,
-              'http://localhost:5173/wish_lists?gameId=32'
+              'http://localhost:5173/wish_lists?playthroughId=32'
             )
 
             window.confirm = vitest.fn().mockImplementation(() => true)
@@ -830,7 +830,7 @@ describe('WishListsPage', () => {
           })
         })
 
-        describe('when the game has other regular wish lists', () => {
+        describe('when the playthrough has other regular wish lists', () => {
           const ogConfirm = window.confirm
 
           afterEach(() => {
@@ -840,13 +840,13 @@ describe('WishListsPage', () => {
           test('removes the deleted list', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
-                <GamesProvider>
+                <PlaythroughsProvider>
                   <WishListsProvider>
                     <WishListsPage />
                   </WishListsProvider>
-                </GamesProvider>
+                </PlaythroughsProvider>
               </PageProvider>,
-              'http://localhost:5173/wish_lists?gameId=77'
+              'http://localhost:5173/wish_lists?playthroughId=77'
             )
 
             window.confirm = vitest.fn().mockImplementation(() => true)
@@ -874,13 +874,13 @@ describe('WishListsPage', () => {
           test('displays a flash success message', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
-                <GamesProvider>
+                <PlaythroughsProvider>
                   <WishListsProvider>
                     <WishListsPage />
                   </WishListsProvider>
-                </GamesProvider>
+                </PlaythroughsProvider>
               </PageProvider>,
-              'http://localhost:5173/wish_lists?gameId=77'
+              'http://localhost:5173/wish_lists?playthroughId=77'
             )
 
             window.confirm = vitest.fn().mockImplementation(() => true)
@@ -918,13 +918,13 @@ describe('WishListsPage', () => {
         test("doesn't remove the lists", async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
+              <PlaythroughsProvider>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=32'
+            'http://localhost:5173/wish_lists?playthroughId=32'
           )
 
           window.confirm = vitest.fn().mockImplementation(() => false)
@@ -943,13 +943,13 @@ describe('WishListsPage', () => {
         test('displays a flash info message', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
+              <PlaythroughsProvider>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=32'
+            'http://localhost:5173/wish_lists?playthroughId=32'
           )
 
           window.confirm = vitest.fn().mockImplementation(() => false)
@@ -972,7 +972,7 @@ describe('WishListsPage', () => {
     describe('when unsuccessful', () => {
       const ogConfirm = window.confirm
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess,
         deleteWishListServerError
       )
@@ -989,13 +989,13 @@ describe('WishListsPage', () => {
       test("doesn't remove the list and displays a flash error", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
-          'http://localhost:5173/wish_lists?gameId=32'
+          'http://localhost:5173/wish_lists?playthroughId=32'
         )
 
         window.confirm = vitest.fn().mockImplementation(() => true)
@@ -1024,7 +1024,7 @@ describe('WishListsPage', () => {
   describe('editing a wish list', () => {
     describe('when successful', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess,
         patchWishListSuccess
       )
@@ -1036,13 +1036,13 @@ describe('WishListsPage', () => {
       test('trims and updates the title', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
-          'http://localhost:5173/wish_lists?gameId=77'
+          'http://localhost:5173/wish_lists?playthroughId=77'
         )
 
         const editIcon = await wrapper.findByTestId('editWishList6')
@@ -1074,7 +1074,7 @@ describe('WishListsPage', () => {
 
     describe('when there is an Unprocessable Entity response', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess,
         patchWishListUnprocessable
       )
@@ -1086,13 +1086,13 @@ describe('WishListsPage', () => {
       test('displays the flash message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
-          'http://localhost:5173/wish_lists?gameId=77'
+          'http://localhost:5173/wish_lists?playthroughId=77'
         )
 
         const editIcon = await wrapper.findByTestId('editWishList6')
@@ -1121,7 +1121,7 @@ describe('WishListsPage', () => {
             )
           ).toBeTruthy()
           expect(
-            wrapper.getByText('Title must be unique per game')
+            wrapper.getByText('Title must be unique per playthrough')
           ).toBeTruthy()
           expect(
             wrapper.getByText(
@@ -1134,7 +1134,7 @@ describe('WishListsPage', () => {
 
     describe('when there is an internal server error response', () => {
       const mockServer = setupServer(
-        getGamesAllSuccess,
+        getPlaythroughsAllSuccess,
         getWishListsSuccess,
         patchWishListServerError
       )
@@ -1146,13 +1146,13 @@ describe('WishListsPage', () => {
       test('displays the flash message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>,
-          'http://localhost:5173/wish_lists?gameId=77'
+          'http://localhost:5173/wish_lists?playthroughId=77'
         )
 
         const editIcon = await wrapper.findByTestId('editWishList6')
@@ -1199,11 +1199,11 @@ describe('WishListsPage', () => {
       test('adds the new item to the list and aggregate list', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1244,11 +1244,11 @@ describe('WishListsPage', () => {
       test('displays a flash error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1297,11 +1297,11 @@ describe('WishListsPage', () => {
       test('displays a flash error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1349,11 +1349,11 @@ describe('WishListsPage', () => {
       test("doesn't remove the item", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1396,11 +1396,11 @@ describe('WishListsPage', () => {
       test('removes the item from the regular and aggregate list', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1450,11 +1450,11 @@ describe('WishListsPage', () => {
       test('displays a flash error message', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1492,11 +1492,11 @@ describe('WishListsPage', () => {
       test('increments quantity of affected items', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1525,11 +1525,11 @@ describe('WishListsPage', () => {
       test('displays a flash error', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1566,11 +1566,11 @@ describe('WishListsPage', () => {
         test('decrements quantity of affected items', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext value={gamesContextValue}>
+              <PlaythroughsContext value={playthroughsContextValue}>
                 <WishListsProvider>
                   <WishListsPage />
                 </WishListsProvider>
-              </GamesContext>
+              </PlaythroughsContext>
             </PageProvider>
           )
 
@@ -1606,11 +1606,11 @@ describe('WishListsPage', () => {
           test('deletes the item', async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
-                <GamesContext value={gamesContextValue}>
+                <PlaythroughsContext value={playthroughsContextValue}>
                   <WishListsProvider>
                     <WishListsPage />
                   </WishListsProvider>
-                </GamesContext>
+                </PlaythroughsContext>
               </PageProvider>
             )
 
@@ -1649,11 +1649,11 @@ describe('WishListsPage', () => {
           test("doesn't delete the item", async () => {
             const wrapper = renderAuthenticated(
               <PageProvider>
-                <GamesContext value={gamesContextValue}>
+                <PlaythroughsContext value={playthroughsContextValue}>
                   <WishListsProvider>
                     <WishListsPage />
                   </WishListsProvider>
-                </GamesContext>
+                </PlaythroughsContext>
               </PageProvider>
             )
 
@@ -1691,11 +1691,11 @@ describe('WishListsPage', () => {
       test('displays a flash error', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1731,11 +1731,11 @@ describe('WishListsPage', () => {
       test('hides the form, shows the flash message and updates the items', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1776,11 +1776,11 @@ describe('WishListsPage', () => {
       test("shows the validation errors and doesn't hide the form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -1828,11 +1828,11 @@ describe('WishListsPage', () => {
       test("shows an error message and doesn't hide the form", async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsProvider>
                 <WishListsPage />
               </WishListsProvider>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 

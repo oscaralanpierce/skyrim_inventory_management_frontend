@@ -8,7 +8,7 @@ exports[`WishListGrouping > when there are no wish lists > matches snapshot 1`] 
       <p
         class="_noLists_8bc9d7"
       >
-        This game has no wish lists.
+        This playthrough has no wish lists.
       </p>
     </div>
   </body>,
@@ -16,7 +16,7 @@ exports[`WishListGrouping > when there are no wish lists > matches snapshot 1`] 
     <p
       class="_noLists_8bc9d7"
     >
-      This game has no wish lists.
+      This playthrough has no wish lists.
     </p>
   </div>,
   "debug": [Function],

@@ -1,5 +1,5 @@
 import { http } from 'msw'
-import { allWishLists, wishListsForGame } from '../data/wishLists'
+import { allWishLists, wishListsForPlaythrough } from '../data/wishLists'
 import { allWishListItems } from '../data/wishListItems'
 import { newWishListItem } from './helpers/data'
 import { type RequestWishListItem } from '../../types/apiData'
@@ -74,7 +74,7 @@ export const incrementWishListItemSuccess = http.patch(
 
     if (!item || !list) return new Response(null, { status: 404 })
 
-    const allItems = wishListsForGame(list.game_id).flatMap(
+    const allItems = wishListsForPlaythrough(list.playthrough_id).flatMap(
       ({ list_items }) =>
         list_items.filter(({ description }) => description === item.description)
     )
@@ -95,7 +95,7 @@ export const decrementWishListItemSuccess = http.patch(
 
     if (!item || !list) return new Response(null, { status: 404 })
 
-    const allItems = wishListsForGame(list.game_id).flatMap(
+    const allItems = wishListsForPlaythrough(list.playthrough_id).flatMap(
       ({ list_items }) =>
         list_items.filter(({ description }) => description === item.description)
     )
@@ -128,7 +128,7 @@ export const updateWishListItemSuccess = http.patch(
 
     const json = await request.json() as RequestWishListItem
 
-    const allItems = wishListsForGame(list.game_id).flatMap(
+    const allItems = wishListsForPlaythrough(list.playthrough_id).flatMap(
       ({ list_items }) =>
         list_items.filter(({ description }) => description === item.description)
     )

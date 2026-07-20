@@ -1,13 +1,13 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import {
-  gamesContextValue,
+  playthroughsContextValue,
   loginContextValue,
   wishListsContextValue,
 } from '../../support/data/contextValues'
 import { BLUE } from '../../utils/colorSchemes'
 import { LoginContext } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { PlaythroughsContext } from '../../contexts/playthroughsContext'
 import { WishListsContext } from '../../contexts/wishListsContext'
 import { ColorProvider } from '../../contexts/colorContext'
 import WishListItemCreateForm from './wishListItemCreateForm'
@@ -21,13 +21,13 @@ const meta: Meta<typeof WishListItemCreateForm> = {
     (Story) => (
       <LoginContext value={loginContextValue}>
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <WishListsContext value={wishListsContextValue}>
               <ColorProvider colorScheme={BLUE}>
                 <Story />
               </ColorProvider>
             </WishListsContext>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       </LoginContext>
     ),

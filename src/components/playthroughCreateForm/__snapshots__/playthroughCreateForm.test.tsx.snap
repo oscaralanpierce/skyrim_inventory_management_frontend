@@ -1,41 +1,41 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
+exports[`<PlaythroughCreateForm /> > when disabled > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="_root_92a111"
+        class="_root_dce1cf"
         style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
       >
         <h3
-          aria-controls="gameCreateForm"
+          aria-controls="playthroughCreateForm"
           aria-expanded="false"
-          class="_toggle_92a111"
+          class="_toggle_dce1cf"
           role="button"
         >
-          Create Game...
+          Create Playthrough...
         </h3>
         <div
           aria-hidden="true"
           class="rah-static rah-static--height-zero "
-          id="gameCreateForm"
+          id="playthroughCreateForm"
           style="height: 0px; overflow: hidden;"
         >
           <div
             style="display: none;"
           >
             <form
-              class="_form_92a111"
-              data-testid="gameCreateFormForm"
+              class="_form_dce1cf"
+              data-testid="playthroughCreateFormForm"
             >
               <fieldset
-                class="_fieldset_92a111"
+                class="_fieldset_dce1cf"
               >
                 <input
                   aria-label="Name"
-                  class="_input_92a111"
+                  class="_input_dce1cf"
                   data-testid="createNameField"
                   disabled=""
                   name="name"
@@ -46,11 +46,11 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
                 />
               </fieldset>
               <fieldset
-                class="_fieldset_92a111"
+                class="_fieldset_dce1cf"
               >
                 <input
                   aria-label="Description"
-                  class="_input_92a111"
+                  class="_input_dce1cf"
                   data-testid="createDescriptionField"
                   disabled=""
                   name="description"
@@ -59,8 +59,8 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
                 />
               </fieldset>
               <button
-                class="_button_92a111"
-                data-testid="createGameSubmit"
+                class="_button_dce1cf"
+                data-testid="createPlaythroughSubmit"
                 disabled=""
                 type="submit"
               >
@@ -74,36 +74,36 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_92a111"
+      class="_root_dce1cf"
       style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
     >
       <h3
-        aria-controls="gameCreateForm"
+        aria-controls="playthroughCreateForm"
         aria-expanded="false"
-        class="_toggle_92a111"
+        class="_toggle_dce1cf"
         role="button"
       >
-        Create Game...
+        Create Playthrough...
       </h3>
       <div
         aria-hidden="true"
         class="rah-static rah-static--height-zero "
-        id="gameCreateForm"
+        id="playthroughCreateForm"
         style="height: 0px; overflow: hidden;"
       >
         <div
           style="display: none;"
         >
           <form
-            class="_form_92a111"
-            data-testid="gameCreateFormForm"
+            class="_form_dce1cf"
+            data-testid="playthroughCreateFormForm"
           >
             <fieldset
-              class="_fieldset_92a111"
+              class="_fieldset_dce1cf"
             >
               <input
                 aria-label="Name"
-                class="_input_92a111"
+                class="_input_dce1cf"
                 data-testid="createNameField"
                 disabled=""
                 name="name"
@@ -114,11 +114,11 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
               />
             </fieldset>
             <fieldset
-              class="_fieldset_92a111"
+              class="_fieldset_dce1cf"
             >
               <input
                 aria-label="Description"
-                class="_input_92a111"
+                class="_input_dce1cf"
                 data-testid="createDescriptionField"
                 disabled=""
                 name="description"
@@ -127,8 +127,8 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
               />
             </fieldset>
             <button
-              class="_button_92a111"
-              data-testid="createGameSubmit"
+              class="_button_dce1cf"
+              data-testid="createPlaythroughSubmit"
               disabled=""
               type="submit"
             >
@@ -193,42 +193,42 @@ exports[`<GameCreateForm /> > when disabled > matches snapshot 1`] = `
 }
 `;
 
-exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
+exports[`<PlaythroughCreateForm /> > when enabled > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="_root_92a111"
+        class="_root_dce1cf"
         style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
       >
         <h3
-          aria-controls="gameCreateForm"
+          aria-controls="playthroughCreateForm"
           aria-expanded="false"
-          class="_toggle_92a111"
+          class="_toggle_dce1cf"
           role="button"
         >
-          Create Game...
+          Create Playthrough...
         </h3>
         <div
           aria-hidden="true"
           class="rah-static rah-static--height-zero "
-          id="gameCreateForm"
+          id="playthroughCreateForm"
           style="height: 0px; overflow: hidden;"
         >
           <div
             style="display: none;"
           >
             <form
-              class="_form_92a111"
-              data-testid="gameCreateFormForm"
+              class="_form_dce1cf"
+              data-testid="playthroughCreateFormForm"
             >
               <fieldset
-                class="_fieldset_92a111"
+                class="_fieldset_dce1cf"
               >
                 <input
                   aria-label="Name"
-                  class="_input_92a111"
+                  class="_input_dce1cf"
                   data-testid="createNameField"
                   name="name"
                   pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
@@ -238,11 +238,11 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
                 />
               </fieldset>
               <fieldset
-                class="_fieldset_92a111"
+                class="_fieldset_dce1cf"
               >
                 <input
                   aria-label="Description"
-                  class="_input_92a111"
+                  class="_input_dce1cf"
                   data-testid="createDescriptionField"
                   name="description"
                   placeholder="Description"
@@ -250,8 +250,8 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
                 />
               </fieldset>
               <button
-                class="_button_92a111"
-                data-testid="createGameSubmit"
+                class="_button_dce1cf"
+                data-testid="createPlaythroughSubmit"
                 type="submit"
               >
                 Create
@@ -264,36 +264,36 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_92a111"
+      class="_root_dce1cf"
       style="--button-color: #4e8fb7; --button-text-color: #fff; --button-border-color: #1b5c84; --button-hover-color: #3881ae;"
     >
       <h3
-        aria-controls="gameCreateForm"
+        aria-controls="playthroughCreateForm"
         aria-expanded="false"
-        class="_toggle_92a111"
+        class="_toggle_dce1cf"
         role="button"
       >
-        Create Game...
+        Create Playthrough...
       </h3>
       <div
         aria-hidden="true"
         class="rah-static rah-static--height-zero "
-        id="gameCreateForm"
+        id="playthroughCreateForm"
         style="height: 0px; overflow: hidden;"
       >
         <div
           style="display: none;"
         >
           <form
-            class="_form_92a111"
-            data-testid="gameCreateFormForm"
+            class="_form_dce1cf"
+            data-testid="playthroughCreateFormForm"
           >
             <fieldset
-              class="_fieldset_92a111"
+              class="_fieldset_dce1cf"
             >
               <input
                 aria-label="Name"
-                class="_input_92a111"
+                class="_input_dce1cf"
                 data-testid="createNameField"
                 name="name"
                 pattern="^\\s*[A-Za-z0-9 \\-',]*\\s*$"
@@ -303,11 +303,11 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
               />
             </fieldset>
             <fieldset
-              class="_fieldset_92a111"
+              class="_fieldset_dce1cf"
             >
               <input
                 aria-label="Description"
-                class="_input_92a111"
+                class="_input_dce1cf"
                 data-testid="createDescriptionField"
                 name="description"
                 placeholder="Description"
@@ -315,8 +315,8 @@ exports[`<GameCreateForm /> > when enabled > matches snapshot 1`] = `
               />
             </fieldset>
             <button
-              class="_button_92a111"
-              data-testid="createGameSubmit"
+              class="_button_dce1cf"
+              data-testid="createPlaythroughSubmit"
               type="submit"
             >
               Create

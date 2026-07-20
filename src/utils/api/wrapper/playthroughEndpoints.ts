@@ -1,19 +1,19 @@
 import {
-  type RequestGame,
-  type ResponseGame,
+  type RequestPlaythrough,
+  type ResponsePlaythrough,
   type ErrorObject,
 } from '../../../types/apiData'
 import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
-  type PostGamesResponse,
-  type PostGamesReturnValue,
-  type GetGamesResponse,
-  type GetGamesReturnValue,
-  type PatchGameResponse,
-  type PatchGameReturnValue,
-  type DeleteGameResponse,
-  type DeleteGameReturnValue,
-} from '../returnValues/games'
+  type PostPlaythroughsResponse,
+  type PostPlaythroughsReturnValue,
+  type GetPlaythroughsResponse,
+  type GetPlaythroughsReturnValue,
+  type PatchPlaythroughResponse,
+  type PatchPlaythroughReturnValue,
+  type DeletePlaythroughResponse,
+  type DeletePlaythroughReturnValue,
+} from '../returnValues/playthroughs'
 import {
   AuthorizationError,
   InternalServerError,
@@ -23,15 +23,15 @@ import {
 
 /**
  *
- * POST /games endpoint
+ * POST /playthroughs endpoint
  *
  */
 
-export const postGames = (
-  body: RequestGame,
+export const postPlaythroughs = (
+  body: RequestPlaythrough,
   token: string
-): Promise<PostGamesReturnValue> | never => {
-  const uri = `${BASE_URI}/games`
+): Promise<PostPlaythroughsReturnValue> | never => {
+  const uri = `${BASE_URI}/playthroughs`
   const headers = combinedHeaders(token)
 
   return fetch(uri, {
@@ -39,11 +39,11 @@ export const postGames = (
     body: JSON.stringify(body),
     headers,
   }).then((res) => {
-    const response = res as PostGamesResponse
+    const response = res as PostPlaythroughsResponse
 
     if (response.status === 401) throw new AuthorizationError()
 
-    return response.json().then((json: ResponseGame | ErrorObject) => {
+    return response.json().then((json: ResponsePlaythrough | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 500)
@@ -53,29 +53,29 @@ export const postGames = (
       if (returnValue.status === 422)
         throw new UnprocessableEntityError((json as ErrorObject).errors)
 
-      return returnValue as PostGamesReturnValue
+      return returnValue as PostPlaythroughsReturnValue
     })
   })
 }
 
 /**
  *
- * GET /games endpoint
+ * GET /playthroughs endpoint
  *
  */
 
-export const getGames = (
+export const getPlaythroughs = (
   token: string
-): Promise<GetGamesReturnValue> | never => {
-  const uri = `${BASE_URI}/games`
+): Promise<GetPlaythroughsReturnValue> | never => {
+  const uri = `${BASE_URI}/playthroughs`
   const headers = combinedHeaders(token)
 
   return fetch(uri, { headers }).then((res) => {
-    const response = res as GetGamesResponse
+    const response = res as GetPlaythroughsResponse
 
     if (response.status === 401) throw new AuthorizationError()
 
-    return response.json().then((json: ResponseGame[] | ErrorObject) => {
+    return response.json().then((json: ResponsePlaythrough[] | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 500)
@@ -83,23 +83,23 @@ export const getGames = (
           (json as ErrorObject).errors.join(', ')
         )
 
-      return returnValue as GetGamesReturnValue
+      return returnValue as GetPlaythroughsReturnValue
     })
   })
 }
 
 /**
  *
- * PATCH /games/:id endpoint
+ * PATCH /playthroughs/:id endpoint
  *
  */
 
-export const patchGame = (
-  gameId: number,
-  body: RequestGame,
+export const patchPlaythrough = (
+  playthroughId: number,
+  body: RequestPlaythrough,
   token: string
-): Promise<PatchGameReturnValue> | never => {
-  const uri = `${BASE_URI}/games/${gameId}`
+): Promise<PatchPlaythroughReturnValue> | never => {
+  const uri = `${BASE_URI}/playthroughs/${playthroughId}`
   const headers = combinedHeaders(token)
 
   return fetch(uri, {
@@ -107,12 +107,12 @@ export const patchGame = (
     body: JSON.stringify(body),
     headers,
   }).then((res) => {
-    const response = res as PatchGameResponse
+    const response = res as PatchPlaythroughResponse
 
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
 
-    return response.json().then((json: ResponseGame | ErrorObject) => {
+    return response.json().then((json: ResponsePlaythrough | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 500)
@@ -122,26 +122,26 @@ export const patchGame = (
       if (returnValue.status === 422)
         throw new UnprocessableEntityError((json as ErrorObject).errors)
 
-      return returnValue as PatchGameReturnValue
+      return returnValue as PatchPlaythroughReturnValue
     })
   })
 }
 
 /**
  *
- * DELETE /games/:id endpoint
+ * DELETE /playthroughs/:id endpoint
  *
  */
 
-export const deleteGame = (
-  gameId: number,
+export const deletePlaythrough = (
+  playthroughId: number,
   token: string
-): Promise<DeleteGameReturnValue> | never => {
-  const uri = `${BASE_URI}/games/${gameId}`
+): Promise<DeletePlaythroughReturnValue> | never => {
+  const uri = `${BASE_URI}/playthroughs/${playthroughId}`
   const headers = combinedHeaders(token)
 
   return fetch(uri, { method: 'DELETE', headers }).then((res) => {
-    const response = res as DeleteGameResponse
+    const response = res as DeletePlaythroughResponse
 
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()

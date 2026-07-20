@@ -7,7 +7,7 @@ import { UnauthorizedResponse } from './shared'
 
 /**
  *
- * Types used for POST /games/:game_id/wish_lists endpoint
+ * Types used for POST /playthroughs/:playthrough_id/wish_lists endpoint
  *
  */
 
@@ -56,7 +56,7 @@ export type PostWishListsReturnValue =
 
 /**
  *
- * Types used for GET /games/:game_id/wish_lists endpoint
+ * Types used for GET /playthroughs/:playthrough_id/wish_lists endpoint
  *
  */
 

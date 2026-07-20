@@ -13,9 +13,9 @@ const PLACEHOLDER_HREF: RelativePath = '#'
 const navigationCards = [
   {
     colorScheme: YELLOW,
-    href: paths.dashboard.games,
-    children: 'Your Games',
-    key: 'games',
+    href: paths.dashboard.playthroughs,
+    children: 'Your Playthroughs',
+    key: 'playthroughs',
   },
   {
     colorScheme: PINK,

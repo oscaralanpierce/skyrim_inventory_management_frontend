@@ -4,11 +4,11 @@ import { act, fireEvent } from '@testing-library/react'
 import { renderAuthenticated } from '../../support/testUtils'
 import { BLUE } from '../../utils/colorSchemes'
 import {
-  gamesContextValue,
+  playthroughsContextValue,
   wishListsContextValue,
 } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { PlaythroughsContext } from '../../contexts/playthroughsContext'
 import { WishListsContext } from '../../contexts/wishListsContext'
 import WishListItemEditForm from './wishListItemEditForm'
 
@@ -17,11 +17,11 @@ let contextValue = wishListsContextValue
 const renderWithContexts = (ui: ReactElement) =>
   renderAuthenticated(
     <PageProvider>
-      <GamesContext value={gamesContextValue}>
+      <PlaythroughsContext value={playthroughsContextValue}>
         <WishListsContext value={contextValue}>
           {ui}
         </WishListsContext>
-      </GamesContext>
+      </PlaythroughsContext>
     </PageProvider>
   )
 

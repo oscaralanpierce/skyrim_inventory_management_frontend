@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { ColorContext } from '../contexts/colorContext'
-import { GamesContext } from '../contexts/gamesContext'
+import { PlaythroughsContext } from '../contexts/playthroughsContext'
 import { LoginContext } from '../contexts/loginContext'
 import { PageContext } from '../contexts/pageContext'
 import { WishListsContext } from '../contexts/wishListsContext'
@@ -25,10 +25,10 @@ export const useGoogleLogin = () =>
     'useGoogleLogin must be used within a LoginProvider'
   )
 
-export const useGamesContext = () =>
+export const usePlaythroughsContext = () =>
   useCustomContext(
-    GamesContext,
-    'useGamesContext must be used within a GamesProvider'
+    PlaythroughsContext,
+    'usePlaythroughsContext must be used within a PlaythroughsProvider'
   )
 
 export const useWishListsContext = () =>

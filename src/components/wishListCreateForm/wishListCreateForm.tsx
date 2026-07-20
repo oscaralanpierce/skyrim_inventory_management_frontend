@@ -10,19 +10,19 @@ import { DONE } from '../../utils/loadingStates'
 import { BLUE } from '../../utils/colorSchemes'
 import {
   usePageContext,
-  useGamesContext,
+  usePlaythroughsContext,
   useWishListsContext,
 } from '../../hooks/contexts'
 import styles from './wishListCreateForm.module.css'
 
 const WishListCreateForm = () => {
   const { apiCallsInProgress } = usePageContext()
-  const { gamesLoadingState } = useGamesContext()
+  const { playthroughsLoadingState } = usePlaythroughsContext()
   const { wishListsLoadingState, createWishList } =
     useWishListsContext()
 
   const [disabled, setDisabled] = useState(
-    gamesLoadingState !== DONE ||
+    playthroughsLoadingState !== DONE ||
       wishListsLoadingState !== DONE ||
       !!apiCallsInProgress.wishLists.length
   )
@@ -71,7 +71,7 @@ const WishListCreateForm = () => {
 
   useEffect(() => {
     if (
-      gamesLoadingState === DONE &&
+      playthroughsLoadingState === DONE &&
       wishListsLoadingState === DONE &&
       !apiCallsInProgress.wishLists.length
     ) {
@@ -79,7 +79,7 @@ const WishListCreateForm = () => {
     } else {
       setDisabled(true)
     }
-  }, [gamesLoadingState, wishListsLoadingState, apiCallsInProgress])
+  }, [playthroughsLoadingState, wishListsLoadingState, apiCallsInProgress])
 
   return (
     <form

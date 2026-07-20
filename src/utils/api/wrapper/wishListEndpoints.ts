@@ -24,16 +24,16 @@ import {
 
 /**
  *
- * POST /games/:game_id/wish_lists endpoint
+ * POST /playthroughs/:playthrough_id/wish_lists endpoint
  *
  */
 
 export const postWishLists = (
-  gameId: number,
+  playthroughId: number,
   attributes: RequestWishList,
   token: string
 ): Promise<PostWishListsReturnValue> | never => {
-  const uri = `${BASE_URI}/games/${gameId}/wish_lists`
+  const uri = `${BASE_URI}/playthroughs/${playthroughId}/wish_lists`
   const headers = combinedHeaders(token)
 
   return fetch(uri, {
@@ -63,15 +63,15 @@ export const postWishLists = (
 
 /**
  *
- * GET /games/:game_id/wish_lists endpoint
+ * GET /playthroughs/:playthrough_id/wish_lists endpoint
  *
  */
 
 export const getWishLists = (
-  gameId: number,
+  playthroughId: number,
   token: string
 ): Promise<GetWishListsReturnValue> | never => {
-  const uri = `${BASE_URI}/games/${gameId}/wish_lists`
+  const uri = `${BASE_URI}/playthroughs/${playthroughId}/wish_lists`
   const headers = combinedHeaders(token)
 
   return fetch(uri, { headers }).then((res) => {

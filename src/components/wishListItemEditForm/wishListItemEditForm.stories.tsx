@@ -1,11 +1,11 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import {
-  gamesContextValue,
+  playthroughsContextValue,
   wishListsContextValue,
 } from '../../support/data/contextValues'
 import { GREEN, YELLOW } from '../../utils/colorSchemes'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { PlaythroughsContext } from '../../contexts/playthroughsContext'
 import { WishListsContext } from '../../contexts/wishListsContext'
 import WishListItemEditForm from './wishListItemEditForm'
 
@@ -17,11 +17,11 @@ const meta: Meta<typeof WishListItemEditForm> = {
   decorators: [
     (Story) => (
       <PageProvider>
-        <GamesContext value={gamesContextValue}>
+        <PlaythroughsContext value={playthroughsContextValue}>
           <WishListsContext value={wishListsContextValue}>
             <Story />
           </WishListsContext>
-        </GamesContext>
+        </PlaythroughsContext>
       </PageProvider>
     ),
   ],
