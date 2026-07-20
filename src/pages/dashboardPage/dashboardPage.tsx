@@ -25,7 +25,7 @@ const navigationCards = [
   },
   {
     colorScheme: BLUE,
-    href: PLACEHOLDER_HREF,
+    href: paths.dashboard.inventory,
     children: 'Your Inventory',
     key: 'inventory',
   },
