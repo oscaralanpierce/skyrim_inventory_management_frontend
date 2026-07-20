@@ -46,7 +46,7 @@ describe('<DashboardPage />', () => {
       </PageProvider>
     )
 
-    expect(wrapper.getByText('Your Games')).toBeTruthy()
+    expect(wrapper.getByText('Your Playthroughs')).toBeTruthy()
     expect(wrapper.getByText('Your Wish Lists')).toBeTruthy()
     expect(wrapper.getByText('Your Inventory')).toBeTruthy()
     expect(wrapper.getByText('Nav Link 4')).toBeTruthy()

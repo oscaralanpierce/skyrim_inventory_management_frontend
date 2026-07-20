@@ -2,12 +2,12 @@ import { describe, test, expect, beforeAll, beforeEach, afterAll } from 'vitest'
 import { setupServer } from 'msw/node'
 import { waitFor } from '@testing-library/react'
 import { BASE_APP_URI, renderAuthenticated } from '../../support/testUtils'
-import { gamesContextValue } from '../../support/data/contextValues'
+import { playthroughsContextValue } from '../../support/data/contextValues'
 import {
-  getGamesAllSuccess,
-  getGamesEmptySuccess,
-} from '../../support/msw/games'
-import { GamesContext, GamesProvider } from '../../contexts/gamesContext'
+  getPlaythroughsAllSuccess,
+  getPlaythroughsEmptySuccess,
+} from '../../support/msw/playthroughs'
+import { PlaythroughsContext, PlaythroughsProvider } from '../../contexts/playthroughsContext'
 import { PageProvider } from '../../contexts/pageContext'
 import DashboardLayout from './dashboardLayout'
 import paths from '../../routing/paths'
@@ -17,9 +17,9 @@ describe('<DashboardLayout>', () => {
     test('renders the title and content', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <DashboardLayout title="Page Title">Hello World</DashboardLayout>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -32,9 +32,9 @@ describe('<DashboardLayout>', () => {
     test('renders the DashboardHeader', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <DashboardLayout title="Page Title">Hello World</DashboardLayout>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -49,9 +49,9 @@ describe('<DashboardLayout>', () => {
     test("doesn't display the StyledSelect", () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <DashboardLayout title="Page Title">Hello World</DashboardLayout>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -61,9 +61,9 @@ describe('<DashboardLayout>', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <DashboardLayout title="Page Title">Hello World</DashboardLayout>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -75,9 +75,9 @@ describe('<DashboardLayout>', () => {
     test('displays content but not an h2 or hr', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <DashboardLayout>Hello World</DashboardLayout>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -93,9 +93,9 @@ describe('<DashboardLayout>', () => {
     test('renders the DashboardHeader', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <DashboardLayout>Hello World</DashboardLayout>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -110,9 +110,9 @@ describe('<DashboardLayout>', () => {
     test("doesn't render the StyledSelect", () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <DashboardLayout>Hello World</DashboardLayout>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -122,9 +122,9 @@ describe('<DashboardLayout>', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <DashboardLayout>Hello World</DashboardLayout>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -132,9 +132,9 @@ describe('<DashboardLayout>', () => {
     })
   })
 
-  describe('when includeGameSelector is set to true', () => {
-    describe('when games are returned from the API', () => {
-      const mockServer = setupServer(getGamesAllSuccess)
+  describe('when includePlaythroughSelector is set to true', () => {
+    describe('when playthroughs are returned from the API', () => {
+      const mockServer = setupServer(getPlaythroughsAllSuccess)
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -143,49 +143,49 @@ describe('<DashboardLayout>', () => {
       test('renders the select box', () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <DashboardLayout title="Your Games" includeGameSelector>
+            <PlaythroughsProvider>
+              <DashboardLayout title="Your Playthroughs" includePlaythroughSelector>
                 Hello World
               </DashboardLayout>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         expect(wrapper.getByTestId('styledSelect')).toBeTruthy()
       })
 
-      test.skip('includes all the games on the list', async () => {
+      test.skip('includes all the playthroughs on the list', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <DashboardLayout title="Your Games" includeGameSelector>
+            <PlaythroughsProvider>
+              <DashboardLayout title="Your Playthroughs" includePlaythroughSelector>
                 Hello World
               </DashboardLayout>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const selectedOption = wrapper.getByTestId('selectedOption')
 
         // Initial loading value
-        expect(selectedOption.textContent).toEqual('Games loading...')
+        expect(selectedOption.textContent).toEqual('Playthroughs loading...')
 
         await waitFor(() => {
-          expect(selectedOption.textContent).toEqual('My Game 1')
-          expect(wrapper.getAllByText('My Game 1').length).toEqual(2)
-          expect(wrapper.getByText('My Game 2')).toBeTruthy()
-          expect(wrapper.getByText('Game with a really real...')).toBeTruthy()
+          expect(selectedOption.textContent).toEqual('My Playthrough 1')
+          expect(wrapper.getAllByText('My Playthrough 1').length).toEqual(2)
+          expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
+          expect(wrapper.getByText('Playthrough with a really real...')).toBeTruthy()
         })
       })
 
       test('matches snapshot', () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <DashboardLayout title="Your Games" includeGameSelector>
+            <PlaythroughsProvider>
+              <DashboardLayout title="Your Playthroughs" includePlaythroughSelector>
                 Hello World
               </DashboardLayout>
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -193,8 +193,8 @@ describe('<DashboardLayout>', () => {
       })
     })
 
-    describe('when there are no games available', () => {
-      const mockServer = setupServer(getGamesEmptySuccess)
+    describe('when there are no playthroughs available', () => {
+      const mockServer = setupServer(getPlaythroughsEmptySuccess)
 
       beforeAll(() => mockServer.listen())
       beforeEach(() => mockServer.resetHandlers())
@@ -203,26 +203,26 @@ describe('<DashboardLayout>', () => {
       test.skip('displays a placeholder', async () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <DashboardLayout includeGameSelector>Hello World</DashboardLayout>
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <DashboardLayout includePlaythroughSelector>Hello World</DashboardLayout>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
         const selectedOption = wrapper.getByTestId('selectedOption')
-        expect(selectedOption.textContent).toEqual('Games loading...')
+        expect(selectedOption.textContent).toEqual('Playthroughs loading...')
 
         await waitFor(() => {
-          expect(selectedOption.textContent).toEqual('No games available')
+          expect(selectedOption.textContent).toEqual('No playthroughs available')
         })
       })
 
       test('matches snapshot', () => {
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesProvider>
-              <DashboardLayout includeGameSelector>Hello World</DashboardLayout>
-            </GamesProvider>
+            <PlaythroughsProvider>
+              <DashboardLayout includePlaythroughSelector>Hello World</DashboardLayout>
+            </PlaythroughsProvider>
           </PageProvider>
         )
 
@@ -230,71 +230,71 @@ describe('<DashboardLayout>', () => {
       })
     })
 
-    describe('when a game is selected in the query string', () => {
-      describe('when the selected game corresponds to a game in the games array', () => {
-        const mockServer = setupServer(getGamesAllSuccess)
+    describe('when a playthrough is selected in the query string', () => {
+      describe('when the selected playthrough corresponds to a playthrough in the playthroughs array', () => {
+        const mockServer = setupServer(getPlaythroughsAllSuccess)
 
         beforeAll(() => mockServer.listen())
         beforeEach(() => mockServer.resetHandlers())
         afterAll(() => mockServer.close())
 
-        test.skip('sets the selected game as the default option', async () => {
+        test.skip('sets the selected playthrough as the default option', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
-                <DashboardLayout includeGameSelector>
+              <PlaythroughsProvider>
+                <DashboardLayout includePlaythroughSelector>
                   Hello World
                 </DashboardLayout>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=51'
+            'http://localhost:5173/wish_lists?playthroughId=51'
           )
 
           const selectedOption = wrapper.getByTestId('selectedOption')
-          expect(selectedOption.textContent).toEqual('Games loading...')
+          expect(selectedOption.textContent).toEqual('Playthroughs loading...')
 
           await waitFor(() => {
-            expect(selectedOption.textContent).toEqual('My Game 2')
+            expect(selectedOption.textContent).toEqual('My Playthrough 2')
           })
         })
 
         test('matches snapshot', () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext value={gamesContextValue}>
-                <DashboardLayout includeGameSelector>
+              <PlaythroughsContext value={playthroughsContextValue}>
+                <DashboardLayout includePlaythroughSelector>
                   Hello World
                 </DashboardLayout>
-              </GamesContext>
+              </PlaythroughsContext>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=51'
+            'http://localhost:5173/wish_lists?playthroughId=51'
           )
 
           expect(wrapper).toMatchSnapshot()
         })
       })
 
-      describe('when the selected game does not correspond to a game in the games array', () => {
-        const mockServer = setupServer(getGamesAllSuccess)
+      describe('when the selected playthrough does not correspond to a playthrough in the playthroughs array', () => {
+        const mockServer = setupServer(getPlaythroughsAllSuccess)
 
         beforeAll(() => mockServer.listen())
         beforeEach(() => mockServer.resetHandlers())
         afterAll(() => mockServer.close())
 
-        test.skip('sets the selected game as the default option', async () => {
+        test.skip('sets the selected playthrough as the default option', async () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesProvider>
-                <DashboardLayout includeGameSelector>
+              <PlaythroughsProvider>
+                <DashboardLayout includePlaythroughSelector>
                   Hello World
                 </DashboardLayout>
-              </GamesProvider>
+              </PlaythroughsProvider>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=67'
+            'http://localhost:5173/wish_lists?playthroughId=67'
           )
 
           const selectedOption = wrapper.getByTestId('selectedOption')
-          expect(selectedOption.textContent).toEqual('Games loading...')
+          expect(selectedOption.textContent).toEqual('Playthroughs loading...')
 
           await waitFor(() => {
             expect(selectedOption.textContent).toEqual('')
@@ -304,13 +304,13 @@ describe('<DashboardLayout>', () => {
         test('matches snapshot', () => {
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext value={gamesContextValue}>
-                <DashboardLayout includeGameSelector>
+              <PlaythroughsContext value={playthroughsContextValue}>
+                <DashboardLayout includePlaythroughSelector>
                   Hello World
                 </DashboardLayout>
-              </GamesContext>
+              </PlaythroughsContext>
             </PageProvider>,
-            'http://localhost:5173/wish_lists?gameId=67'
+            'http://localhost:5173/wish_lists?playthroughId=67'
           )
 
           expect(wrapper).toMatchSnapshot()

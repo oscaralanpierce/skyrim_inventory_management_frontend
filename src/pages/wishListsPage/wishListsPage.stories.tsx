@@ -1,17 +1,17 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { BrowserRouter } from 'react-router-dom'
 import {
-  gamesContextValue,
-  gamesContextValueLoading,
+  playthroughsContextValue,
+  playthroughsContextValueLoading,
   wishListsContextValue,
   wishListsContextValueLoading,
   wishListsContextValueEmpty,
   loginContextValue,
-  gamesContextValueEmpty,
+  playthroughsContextValueEmpty,
 } from '../../support/data/contextValues'
 import { WishListsContext, type WishListsContextType } from '../../contexts/wishListsContext'
 import { LoginContext } from '../../contexts/loginContext'
-import { GamesContext, type GamesContextType } from '../../contexts/gamesContext'
+import { PlaythroughsContext, type PlaythroughsContextType } from '../../contexts/playthroughsContext'
 import { PageProvider } from '../../contexts/pageContext'
 import WishListsPage from './wishListsPage'
 
@@ -25,13 +25,13 @@ const meta: Meta<typeof WishListsPage> = {
       <BrowserRouter>
         <LoginContext value={loginContextValue}>
           <PageProvider>
-            <GamesContext value={parameters['gamesContextValue'] as GamesContextType}>
+            <PlaythroughsContext value={parameters['playthroughsContextValue'] as PlaythroughsContextType}>
               <WishListsContext
                 value={parameters['wishListsContextValue'] as WishListsContextType}
               >
                 <Story />
               </WishListsContext>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         </LoginContext>
       </BrowserRouter>
@@ -41,37 +41,37 @@ const meta: Meta<typeof WishListsPage> = {
 
 export default meta
 
-export const GamesLoading: WishListsPageStory = {
+export const PlaythroughsLoading: WishListsPageStory = {
   parameters: {
-    gamesContextValue: gamesContextValueLoading,
+    playthroughsContextValue: playthroughsContextValueLoading,
     wishListsContextValue,
   },
 }
 
-export const NoGames: WishListsPageStory = {
+export const NoPlaythroughs: WishListsPageStory = {
   parameters: {
-    gamesContextValue: gamesContextValueEmpty,
+    playthroughsContextValue: playthroughsContextValueEmpty,
     wishListsContextValue: wishListsContextValueEmpty,
   },
 }
 
 export const WishListsLoading: WishListsPageStory = {
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
     wishListsContextValue: wishListsContextValueLoading,
   },
 }
 
 export const WithWishLists: WishListsPageStory = {
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
     wishListsContextValue,
   },
 }
 
 export const NoWishLists: WishListsPageStory = {
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
     wishListsContextValue: wishListsContextValueEmpty,
   },
 }

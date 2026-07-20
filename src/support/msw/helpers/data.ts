@@ -4,13 +4,13 @@ import {
   type ResponseWishListItem,
   type ResponseWishList,
 } from '../../../types/apiData'
-import { allGames } from '../../data/games'
+import { allPlaythroughs } from '../../data/playthroughs'
 import {
   allWishLists,
-  wishListsForGame,
+  wishListsForPlaythrough,
 } from '../../data/wishLists'
 
-const gameIds = allGames.map(({ id }) => id)
+const playthroughIds = allPlaythroughs.map(({ id }) => id)
 
 /**
  *
@@ -20,24 +20,24 @@ const gameIds = allGames.map(({ id }) => id)
 
 export const newWishList = (
   attributes: RequestWishList,
-  gameId: number
+  playthroughId: number
 ): ResponseWishList[] => {
-  if (gameIds.indexOf(gameId) < 0)
+  if (playthroughIds.indexOf(playthroughId) < 0)
     throw new Error(
-      'Cannot generate wish list for game that does not exist in test data'
+      'Cannot generate wish list for playthrough that does not exist in test data'
     )
 
-  const existingLists = wishListsForGame(gameId)
+  const existingLists = wishListsForPlaythrough(playthroughId)
 
   if (!existingLists.length)
     throw new Error(
-      'Cannot generate single list for game without existing aggregate'
+      'Cannot generate single list for playthrough without existing aggregate'
     )
 
   return [
     {
       id: 93,
-      game_id: gameId,
+      playthrough_id: playthroughId,
       aggregate: false,
       aggregate_list_id: existingLists[0].id,
       title: attributes.title || 'New Wish List',
@@ -50,24 +50,24 @@ export const newWishList = (
 
 export const newWishListWithAggregate = (
   attributes: RequestWishList,
-  gameId: number
+  playthroughId: number
 ): ResponseWishList[] => {
-  if (gameIds.indexOf(gameId) < 0)
+  if (playthroughIds.indexOf(playthroughId) < 0)
     throw new Error(
-      'Cannot generate wish list for game that does not exist in test data'
+      'Cannot generate wish list for playthrough that does not exist in test data'
     )
 
-  const existingLists = wishListsForGame(gameId)
+  const existingLists = wishListsForPlaythrough(playthroughId)
 
   if (existingLists.length)
     throw new Error(
-      'Cannot generate new aggregate list for game that already has one'
+      'Cannot generate new aggregate list for playthrough that already has one'
     )
 
   return [
     {
       id: 93,
-      game_id: gameId,
+      playthrough_id: playthroughId,
       aggregate: true,
       aggregate_list_id: null,
       title: 'All Items',
@@ -77,7 +77,7 @@ export const newWishListWithAggregate = (
     },
     {
       id: 94,
-      game_id: gameId,
+      playthrough_id: playthroughId,
       aggregate: false,
       aggregate_list_id: 93,
       title: attributes.title || 'My Wish List 1',
@@ -104,7 +104,7 @@ export const newWishListItem = (
     throw new Error(`No wish list with ID ${listId} in the test data`)
 
   const wishList = { ...list }
-  const allLists = wishListsForGame(wishList.game_id)
+  const allLists = wishListsForPlaythrough(wishList.playthrough_id)
   const aggregateList = { ...allLists[0] }
 
   const newItem: ResponseWishListItem = {

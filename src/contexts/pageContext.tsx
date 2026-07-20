@@ -25,7 +25,7 @@ const defaultModalProps: ModalProps = {
 }
 
 const defaultApiCallStatus: ApiCalls = {
-  games: [],
+  playthroughs: [],
   wishLists: [],
   wishListItems: [],
 }

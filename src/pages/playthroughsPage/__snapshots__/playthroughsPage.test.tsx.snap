@@ -1,0 +1,1425 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<PlaythroughsPage /> > viewing playthroughs > when loading > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="_root_78663b"
+      >
+        <section
+          class="_container_78663b"
+        >
+          <div
+            class="_titleContainer_78663b"
+          >
+            <h2
+              class="_title_78663b"
+            >
+              Your Playthroughs
+            </h2>
+          </div>
+          <hr
+            class="_hr_78663b"
+          />
+          <div>
+            <span
+              data-testid="pulseLoader"
+              style="display: inherit; text-align: center;"
+            >
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+            </span>
+          </div>
+        </section>
+        <header
+          class="_root_faea2d"
+        >
+          <div
+            class="_bar_faea2d"
+          >
+            <span
+              class="_headerContainer_faea2d"
+            >
+              <h1
+                class="_header_faea2d"
+              >
+                <a
+                  class="_headerLinkLarge_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  Skyrim Inventory
+                  <br
+                    class="_bp_faea2d"
+                  />
+                   Management
+                </a>
+                <a
+                  class="_headerLinkSmall_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  S. I. M.
+                </a>
+              </h1>
+            </span>
+            <div
+              class="_main_658745"
+            >
+              <div
+                class="_button_658745"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
+                  data-icon="bars"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <img
+                  alt="User profile image"
+                  class="_img_658745"
+                  src="/src/components/userInfo/anonymousAvatar.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </header>
+        <div
+          class="_root_ca8db5 _hidden_ca8db5"
+          style="--text-color: #4e6d83;"
+        />
+        <div
+          class="_root_c33b14 _hidden_c33b14"
+          data-testid="modal"
+        >
+          <div
+            class="_container_c33b14"
+          >
+            <div
+              class="_content_c33b14"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="_root_78663b"
+    >
+      <section
+        class="_container_78663b"
+      >
+        <div
+          class="_titleContainer_78663b"
+        >
+          <h2
+            class="_title_78663b"
+          >
+            Your Playthroughs
+          </h2>
+        </div>
+        <hr
+          class="_hr_78663b"
+        />
+        <div>
+          <span
+            data-testid="pulseLoader"
+            style="display: inherit; text-align: center;"
+          >
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+          </span>
+        </div>
+      </section>
+      <header
+        class="_root_faea2d"
+      >
+        <div
+          class="_bar_faea2d"
+        >
+          <span
+            class="_headerContainer_faea2d"
+          >
+            <h1
+              class="_header_faea2d"
+            >
+              <a
+                class="_headerLinkLarge_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                Skyrim Inventory
+                <br
+                  class="_bp_faea2d"
+                />
+                 Management
+              </a>
+              <a
+                class="_headerLinkSmall_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                S. I. M.
+              </a>
+            </h1>
+          </span>
+          <div
+            class="_main_658745"
+          >
+            <div
+              class="_button_658745"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-bars _hamburger_658745"
+                data-icon="bars"
+                data-prefix="fas"
+                role="img"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                  fill="currentColor"
+                />
+              </svg>
+              <img
+                alt="User profile image"
+                class="_img_658745"
+                src="/src/components/userInfo/anonymousAvatar.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        class="_root_ca8db5 _hidden_ca8db5"
+        style="--text-color: #4e6d83;"
+      />
+      <div
+        class="_root_c33b14 _hidden_c33b14"
+        data-testid="modal"
+      >
+        <div
+          class="_container_c33b14"
+        >
+          <div
+            class="_content_c33b14"
+          />
+        </div>
+      </div>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`<PlaythroughsPage /> > viewing playthroughs > when the server returns an error > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="_root_78663b"
+      >
+        <section
+          class="_container_78663b"
+        >
+          <div
+            class="_titleContainer_78663b"
+          >
+            <h2
+              class="_title_78663b"
+            >
+              Your Playthroughs
+            </h2>
+          </div>
+          <hr
+            class="_hr_78663b"
+          />
+          <div>
+            <span
+              data-testid="pulseLoader"
+              style="display: inherit; text-align: center;"
+            >
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+            </span>
+          </div>
+        </section>
+        <header
+          class="_root_faea2d"
+        >
+          <div
+            class="_bar_faea2d"
+          >
+            <span
+              class="_headerContainer_faea2d"
+            >
+              <h1
+                class="_header_faea2d"
+              >
+                <a
+                  class="_headerLinkLarge_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  Skyrim Inventory
+                  <br
+                    class="_bp_faea2d"
+                  />
+                   Management
+                </a>
+                <a
+                  class="_headerLinkSmall_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  S. I. M.
+                </a>
+              </h1>
+            </span>
+            <span
+              class="_root_658745"
+            >
+              <div
+                class="_main_658745"
+              >
+                <div
+                  class="_button_658745"
+                  role="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
+                    data-icon="bars"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span
+                    class="_info_658745"
+                  >
+                    <p
+                      class="_name_658745"
+                    >
+                      Edna St. Vincent Millay
+                    </p>
+                    <p
+                      class="_email_658745"
+                    >
+                      edna@gmail.com
+                    </p>
+                  </span>
+                  <img
+                    alt="User profile image"
+                    class="_img_658745"
+                    referrerpolicy="no-referrer"
+                    src="/src/support/testProfileImg.png"
+                  />
+                </div>
+              </div>
+              <menu
+                class="_dropdown_658745"
+              >
+                <div
+                  role="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-right-from-bracket"
+                    data-icon="right-from-bracket"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <p
+                    class="_signOutText_658745"
+                  >
+                    Sign Out
+                  </p>
+                </div>
+              </menu>
+            </span>
+          </div>
+        </header>
+        <div
+          class="_root_ca8db5 _hidden_ca8db5"
+          style="--text-color: #4e6d83;"
+        />
+        <div
+          class="_root_c33b14 _hidden_c33b14"
+          data-testid="modal"
+        >
+          <div
+            class="_container_c33b14"
+          >
+            <div
+              class="_content_c33b14"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="_root_78663b"
+    >
+      <section
+        class="_container_78663b"
+      >
+        <div
+          class="_titleContainer_78663b"
+        >
+          <h2
+            class="_title_78663b"
+          >
+            Your Playthroughs
+          </h2>
+        </div>
+        <hr
+          class="_hr_78663b"
+        />
+        <div>
+          <span
+            data-testid="pulseLoader"
+            style="display: inherit; text-align: center;"
+          >
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+          </span>
+        </div>
+      </section>
+      <header
+        class="_root_faea2d"
+      >
+        <div
+          class="_bar_faea2d"
+        >
+          <span
+            class="_headerContainer_faea2d"
+          >
+            <h1
+              class="_header_faea2d"
+            >
+              <a
+                class="_headerLinkLarge_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                Skyrim Inventory
+                <br
+                  class="_bp_faea2d"
+                />
+                 Management
+              </a>
+              <a
+                class="_headerLinkSmall_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                S. I. M.
+              </a>
+            </h1>
+          </span>
+          <span
+            class="_root_658745"
+          >
+            <div
+              class="_main_658745"
+            >
+              <div
+                class="_button_658745"
+                role="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
+                  data-icon="bars"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span
+                  class="_info_658745"
+                >
+                  <p
+                    class="_name_658745"
+                  >
+                    Edna St. Vincent Millay
+                  </p>
+                  <p
+                    class="_email_658745"
+                  >
+                    edna@gmail.com
+                  </p>
+                </span>
+                <img
+                  alt="User profile image"
+                  class="_img_658745"
+                  referrerpolicy="no-referrer"
+                  src="/src/support/testProfileImg.png"
+                />
+              </div>
+            </div>
+            <menu
+              class="_dropdown_658745"
+            >
+              <div
+                role="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-right-from-bracket"
+                  data-icon="right-from-bracket"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <p
+                  class="_signOutText_658745"
+                >
+                  Sign Out
+                </p>
+              </div>
+            </menu>
+          </span>
+        </div>
+      </header>
+      <div
+        class="_root_ca8db5 _hidden_ca8db5"
+        style="--text-color: #4e6d83;"
+      />
+      <div
+        class="_root_c33b14 _hidden_c33b14"
+        data-testid="modal"
+      >
+        <div
+          class="_container_c33b14"
+        >
+          <div
+            class="_content_c33b14"
+          />
+        </div>
+      </div>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`<PlaythroughsPage /> > viewing playthroughs > when there are multiple playthroughs > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="_root_78663b"
+      >
+        <section
+          class="_container_78663b"
+        >
+          <div
+            class="_titleContainer_78663b"
+          >
+            <h2
+              class="_title_78663b"
+            >
+              Your Playthroughs
+            </h2>
+          </div>
+          <hr
+            class="_hr_78663b"
+          />
+          <div>
+            <span
+              data-testid="pulseLoader"
+              style="display: inherit; text-align: center;"
+            >
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+            </span>
+          </div>
+        </section>
+        <header
+          class="_root_faea2d"
+        >
+          <div
+            class="_bar_faea2d"
+          >
+            <span
+              class="_headerContainer_faea2d"
+            >
+              <h1
+                class="_header_faea2d"
+              >
+                <a
+                  class="_headerLinkLarge_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  Skyrim Inventory
+                  <br
+                    class="_bp_faea2d"
+                  />
+                   Management
+                </a>
+                <a
+                  class="_headerLinkSmall_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  S. I. M.
+                </a>
+              </h1>
+            </span>
+            <span
+              class="_root_658745"
+            >
+              <div
+                class="_main_658745"
+              >
+                <div
+                  class="_button_658745"
+                  role="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
+                    data-icon="bars"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span
+                    class="_info_658745"
+                  >
+                    <p
+                      class="_name_658745"
+                    >
+                      Edna St. Vincent Millay
+                    </p>
+                    <p
+                      class="_email_658745"
+                    >
+                      edna@gmail.com
+                    </p>
+                  </span>
+                  <img
+                    alt="User profile image"
+                    class="_img_658745"
+                    referrerpolicy="no-referrer"
+                    src="/src/support/testProfileImg.png"
+                  />
+                </div>
+              </div>
+              <menu
+                class="_dropdown_658745"
+              >
+                <div
+                  role="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-right-from-bracket"
+                    data-icon="right-from-bracket"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <p
+                    class="_signOutText_658745"
+                  >
+                    Sign Out
+                  </p>
+                </div>
+              </menu>
+            </span>
+          </div>
+        </header>
+        <div
+          class="_root_ca8db5 _hidden_ca8db5"
+          style="--text-color: #4e6d83;"
+        />
+        <div
+          class="_root_c33b14 _hidden_c33b14"
+          data-testid="modal"
+        >
+          <div
+            class="_container_c33b14"
+          >
+            <div
+              class="_content_c33b14"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="_root_78663b"
+    >
+      <section
+        class="_container_78663b"
+      >
+        <div
+          class="_titleContainer_78663b"
+        >
+          <h2
+            class="_title_78663b"
+          >
+            Your Playthroughs
+          </h2>
+        </div>
+        <hr
+          class="_hr_78663b"
+        />
+        <div>
+          <span
+            data-testid="pulseLoader"
+            style="display: inherit; text-align: center;"
+          >
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+          </span>
+        </div>
+      </section>
+      <header
+        class="_root_faea2d"
+      >
+        <div
+          class="_bar_faea2d"
+        >
+          <span
+            class="_headerContainer_faea2d"
+          >
+            <h1
+              class="_header_faea2d"
+            >
+              <a
+                class="_headerLinkLarge_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                Skyrim Inventory
+                <br
+                  class="_bp_faea2d"
+                />
+                 Management
+              </a>
+              <a
+                class="_headerLinkSmall_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                S. I. M.
+              </a>
+            </h1>
+          </span>
+          <span
+            class="_root_658745"
+          >
+            <div
+              class="_main_658745"
+            >
+              <div
+                class="_button_658745"
+                role="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
+                  data-icon="bars"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span
+                  class="_info_658745"
+                >
+                  <p
+                    class="_name_658745"
+                  >
+                    Edna St. Vincent Millay
+                  </p>
+                  <p
+                    class="_email_658745"
+                  >
+                    edna@gmail.com
+                  </p>
+                </span>
+                <img
+                  alt="User profile image"
+                  class="_img_658745"
+                  referrerpolicy="no-referrer"
+                  src="/src/support/testProfileImg.png"
+                />
+              </div>
+            </div>
+            <menu
+              class="_dropdown_658745"
+            >
+              <div
+                role="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-right-from-bracket"
+                  data-icon="right-from-bracket"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <p
+                  class="_signOutText_658745"
+                >
+                  Sign Out
+                </p>
+              </div>
+            </menu>
+          </span>
+        </div>
+      </header>
+      <div
+        class="_root_ca8db5 _hidden_ca8db5"
+        style="--text-color: #4e6d83;"
+      />
+      <div
+        class="_root_c33b14 _hidden_c33b14"
+        data-testid="modal"
+      >
+        <div
+          class="_container_c33b14"
+        >
+          <div
+            class="_content_c33b14"
+          />
+        </div>
+      </div>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`<PlaythroughsPage /> > viewing playthroughs > when there are no playthroughs > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="_root_78663b"
+      >
+        <section
+          class="_container_78663b"
+        >
+          <div
+            class="_titleContainer_78663b"
+          >
+            <h2
+              class="_title_78663b"
+            >
+              Your Playthroughs
+            </h2>
+          </div>
+          <hr
+            class="_hr_78663b"
+          />
+          <div>
+            <span
+              data-testid="pulseLoader"
+              style="display: inherit; text-align: center;"
+            >
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+              <span
+                style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+              />
+            </span>
+          </div>
+        </section>
+        <header
+          class="_root_faea2d"
+        >
+          <div
+            class="_bar_faea2d"
+          >
+            <span
+              class="_headerContainer_faea2d"
+            >
+              <h1
+                class="_header_faea2d"
+              >
+                <a
+                  class="_headerLinkLarge_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  Skyrim Inventory
+                  <br
+                    class="_bp_faea2d"
+                  />
+                   Management
+                </a>
+                <a
+                  class="_headerLinkSmall_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  S. I. M.
+                </a>
+              </h1>
+            </span>
+            <span
+              class="_root_658745"
+            >
+              <div
+                class="_main_658745"
+              >
+                <div
+                  class="_button_658745"
+                  role="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-bars _hamburger_658745"
+                    data-icon="bars"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span
+                    class="_info_658745"
+                  >
+                    <p
+                      class="_name_658745"
+                    >
+                      Edna St. Vincent Millay
+                    </p>
+                    <p
+                      class="_email_658745"
+                    >
+                      edna@gmail.com
+                    </p>
+                  </span>
+                  <img
+                    alt="User profile image"
+                    class="_img_658745"
+                    referrerpolicy="no-referrer"
+                    src="/src/support/testProfileImg.png"
+                  />
+                </div>
+              </div>
+              <menu
+                class="_dropdown_658745"
+              >
+                <div
+                  role="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-right-from-bracket"
+                    data-icon="right-from-bracket"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <p
+                    class="_signOutText_658745"
+                  >
+                    Sign Out
+                  </p>
+                </div>
+              </menu>
+            </span>
+          </div>
+        </header>
+        <div
+          class="_root_ca8db5 _hidden_ca8db5"
+          style="--text-color: #4e6d83;"
+        />
+        <div
+          class="_root_c33b14 _hidden_c33b14"
+          data-testid="modal"
+        >
+          <div
+            class="_container_c33b14"
+          >
+            <div
+              class="_content_c33b14"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="_root_78663b"
+    >
+      <section
+        class="_container_78663b"
+      >
+        <div
+          class="_titleContainer_78663b"
+        >
+          <h2
+            class="_title_78663b"
+          >
+            Your Playthroughs
+          </h2>
+        </div>
+        <hr
+          class="_hr_78663b"
+        />
+        <div>
+          <span
+            data-testid="pulseLoader"
+            style="display: inherit; text-align: center;"
+          >
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+            <span
+              style="background-color: rgb(255, 203, 50); width: 15px; height: 15px; margin: 2px; border-radius: 100%; display: inline-block; animation: react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-fill-mode: both;"
+            />
+          </span>
+        </div>
+      </section>
+      <header
+        class="_root_faea2d"
+      >
+        <div
+          class="_bar_faea2d"
+        >
+          <span
+            class="_headerContainer_faea2d"
+          >
+            <h1
+              class="_header_faea2d"
+            >
+              <a
+                class="_headerLinkLarge_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                Skyrim Inventory
+                <br
+                  class="_bp_faea2d"
+                />
+                 Management
+              </a>
+              <a
+                class="_headerLinkSmall_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                S. I. M.
+              </a>
+            </h1>
+          </span>
+          <span
+            class="_root_658745"
+          >
+            <div
+              class="_main_658745"
+            >
+              <div
+                class="_button_658745"
+                role="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-bars _hamburger_658745"
+                  data-icon="bars"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span
+                  class="_info_658745"
+                >
+                  <p
+                    class="_name_658745"
+                  >
+                    Edna St. Vincent Millay
+                  </p>
+                  <p
+                    class="_email_658745"
+                  >
+                    edna@gmail.com
+                  </p>
+                </span>
+                <img
+                  alt="User profile image"
+                  class="_img_658745"
+                  referrerpolicy="no-referrer"
+                  src="/src/support/testProfileImg.png"
+                />
+              </div>
+            </div>
+            <menu
+              class="_dropdown_658745"
+            >
+              <div
+                role="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-right-from-bracket"
+                  data-icon="right-from-bracket"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <p
+                  class="_signOutText_658745"
+                >
+                  Sign Out
+                </p>
+              </div>
+            </menu>
+          </span>
+        </div>
+      </header>
+      <div
+        class="_root_ca8db5 _hidden_ca8db5"
+        style="--text-color: #4e6d83;"
+      />
+      <div
+        class="_root_c33b14 _hidden_c33b14"
+        data-testid="modal"
+      >
+        <div
+          class="_container_c33b14"
+        >
+          <div
+            class="_content_c33b14"
+          />
+        </div>
+      </div>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

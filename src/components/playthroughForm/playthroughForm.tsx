@@ -4,25 +4,25 @@ import {
   type CSSProperties,
   type FormEventHandler,
 } from 'react'
-import { RequestGame as Game } from '../../types/apiData'
+import { RequestPlaythrough as Playthrough } from '../../types/apiData'
 import colorSchemes, { type ColorScheme } from '../../utils/colorSchemes'
-import styles from './gameForm.module.css'
+import styles from './playthroughForm.module.css'
 
-interface GameFormProps {
-  submitForm: (attributes: Game) => void
+interface PlaythroughFormProps {
+  submitForm: (attributes: Playthrough) => void
   type?: 'create' | 'edit'
   defaultName?: string
   defaultDescription?: string | null
   buttonColor?: ColorScheme
 }
 
-const GameForm = ({
+const PlaythroughForm = ({
   submitForm,
   type = 'create',
   defaultName,
   defaultDescription,
   buttonColor,
-}: GameFormProps) => {
+}: PlaythroughFormProps) => {
   const formRef = useRef<HTMLFormElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -38,7 +38,7 @@ const GameForm = ({
     '--button-border-color': colorRef.current.borderColor,
   } as CSSProperties
 
-  const extractAttributes = (formData: FormData): Game => {
+  const extractAttributes = (formData: FormData): Playthrough => {
     const values = Object.fromEntries(Array.from(formData.entries())) as Record<
       string,
       string
@@ -68,13 +68,13 @@ const GameForm = ({
   return (
     <div className={styles.root}>
       <h3 className={styles.header}>
-        {type === 'create' ? 'Create Game' : 'Update Game'}
+        {type === 'create' ? 'Create Playthrough' : 'Update Playthrough'}
       </h3>
       <form
         ref={formRef}
         style={colorVars}
         onSubmit={onSubmit}
-        data-testid="gameForm"
+        data-testid="playthroughForm"
       >
         <fieldset className={styles.fieldset}>
           <label className={styles.label}>
@@ -105,13 +105,13 @@ const GameForm = ({
         <button
           className={styles.submit}
           type="submit"
-          data-testid="gameFormSubmit"
+          data-testid="playthroughFormSubmit"
         >
-          {type === 'create' ? 'Create Game' : 'Update Game'}
+          {type === 'create' ? 'Create Playthrough' : 'Update Playthrough'}
         </button>
       </form>
     </div>
   )
 }
 
-export default GameForm
+export default PlaythroughForm

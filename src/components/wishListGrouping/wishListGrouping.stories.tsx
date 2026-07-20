@@ -1,12 +1,12 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import {
-  gamesContextValue,
-  gamesContextValueEmpty,
+  playthroughsContextValue,
+  playthroughsContextValueEmpty,
   wishListsContextValue,
   wishListsContextValueEmpty,
 } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext, type GamesContextType } from '../../contexts/gamesContext'
+import { PlaythroughsContext, type PlaythroughsContextType } from '../../contexts/playthroughsContext'
 import { WishListsContext, type WishListsContextType } from '../../contexts/wishListsContext'
 import WishListGrouping from './wishListGrouping'
 
@@ -18,13 +18,13 @@ const meta: Meta<typeof WishListGrouping> = {
   decorators: [
     (Story, { parameters }) => (
       <PageProvider>
-        <GamesContext value={parameters['gamesContextValue'] as GamesContextType}>
+        <PlaythroughsContext value={parameters['playthroughsContextValue'] as PlaythroughsContextType}>
           <WishListsContext
             value={parameters['wishListsContextValue'] as WishListsContextType}
           >
             <Story />
           </WishListsContext>
-        </GamesContext>
+        </PlaythroughsContext>
       </PageProvider>
     ),
   ],
@@ -34,21 +34,21 @@ export default meta
 
 export const WithWishLists: GroupingStory = {
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
     wishListsContextValue,
   },
 }
 
 export const WithoutWishLists: GroupingStory = {
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
     wishListsContextValue: wishListsContextValueEmpty,
   },
 }
 
-export const NoGames: GroupingStory = {
+export const NoPlaythroughs: GroupingStory = {
   parameters: {
-    gamesContextValue: gamesContextValueEmpty,
+    playthroughsContextValue: playthroughsContextValueEmpty,
     wishListsContextValue,
   },
 }

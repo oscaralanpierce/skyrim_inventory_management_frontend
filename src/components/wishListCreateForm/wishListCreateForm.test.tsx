@@ -13,15 +13,15 @@ import { setupServer } from 'msw/node'
 import { renderAuthenticated } from '../../support/testUtils'
 import { getWishListsSuccess } from '../../support/msw/handlers'
 import {
-  gamesContextValue,
-  gamesContextValueError,
-  gamesContextValueLoading,
+  playthroughsContextValue,
+  playthroughsContextValueError,
+  playthroughsContextValueLoading,
   wishListsContextValue,
   wishListsContextValueError,
   wishListsContextValueLoading,
 } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { PlaythroughsContext } from '../../contexts/playthroughsContext'
 import {
   WishListsContext,
   WishListsProvider,
@@ -31,9 +31,9 @@ import WishListCreateForm from './wishListCreateForm'
 const renderWithContexts = (ui: ReactElement) => {
   return renderAuthenticated(
     <PageProvider>
-      <GamesContext value={gamesContextValue}>
+      <PlaythroughsContext value={playthroughsContextValue}>
         <WishListsProvider>{ui}</WishListsProvider>
-      </GamesContext>
+      </PlaythroughsContext>
     </PageProvider>
   )
 }
@@ -64,13 +64,13 @@ describe('WishListCreateForm', () => {
     test('is disabled when the wish lists are loading', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <WishListsContext
               value={wishListsContextValueLoading}
             >
               <WishListCreateForm />
             </WishListsContext>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -87,13 +87,13 @@ describe('WishListCreateForm', () => {
     test('is disabled when there is a wish list loading error', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <WishListsContext
               value={wishListsContextValueError}
             >
               <WishListCreateForm />
             </WishListsContext>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -107,14 +107,14 @@ describe('WishListCreateForm', () => {
       ).toBeTruthy()
     })
 
-    test('is disabled when games are loading', () => {
+    test('is disabled when playthroughs are loading', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValueLoading}>
+          <PlaythroughsContext value={playthroughsContextValueLoading}>
             <WishListsContext value={wishListsContextValue}>
               <WishListCreateForm />
             </WishListsContext>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -128,14 +128,14 @@ describe('WishListCreateForm', () => {
       ).toBeTruthy()
     })
 
-    test('is disabled when there is a game loading error', () => {
+    test('is disabled when there is a playthrough loading error', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValueError}>
+          <PlaythroughsContext value={playthroughsContextValueError}>
             <WishListsContext value={wishListsContextValue}>
               <WishListCreateForm />
             </WishListsContext>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -149,14 +149,14 @@ describe('WishListCreateForm', () => {
       ).toBeTruthy()
     })
 
-    test('is enabled when both games and wish lists have loaded', () => {
+    test('is enabled when both playthroughs and wish lists have loaded', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <WishListsContext value={wishListsContextValue}>
               <WishListCreateForm />
             </WishListsContext>
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       )
 
@@ -182,11 +182,11 @@ describe('WishListCreateForm', () => {
 
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsContext value={contextValue}>
                 <WishListCreateForm />
               </WishListsContext>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 
@@ -215,11 +215,11 @@ describe('WishListCreateForm', () => {
 
         const wrapper = renderAuthenticated(
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsContext value={contextValue}>
                 <WishListCreateForm />
               </WishListsContext>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         )
 

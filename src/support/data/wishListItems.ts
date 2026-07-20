@@ -3,9 +3,9 @@ import { type ResponseWishListItem as ListItem } from '../../types/apiData'
 /**
  *
  * Wish list items are related to individual wish lists. They are also
- * transitively related to games, belonging to the game that owns the wish
- * list they are on. The `list_id` attribute found on wish list items in this
- * file corresponds to the `id` attributes of the wish lists under
+ * transitively related to playthroughs, belonging to the playthrough that owns
+ * the wish list they are on. The `list_id` attribute found on wish list items
+ * in this file corresponds to the `id` attributes of the wish lists under
  * /src/support/data/wishLists.ts.
  *
  */

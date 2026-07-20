@@ -3,13 +3,13 @@ import { Routes, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { type RelativePath } from '../types/navigation'
 import { LoginProvider } from '../contexts/loginContext'
-import { GamesProvider } from '../contexts/gamesContext'
+import { PlaythroughsProvider } from '../contexts/playthroughsContext'
 import { PageProvider } from '../contexts/pageContext'
 import { WishListsProvider } from '../contexts/wishListsContext'
 import HomePage from '../pages/homePage/homePage'
 import NotFoundPage from '../pages/notFoundPage/notFoundPage'
 import DashboardPage from '../pages/dashboardPage/dashboardPage'
-import GamesPage from '../pages/gamesPage/gamesPage'
+import PlaythroughsPage from '../pages/playthroughsPage/playthroughsPage'
 import WishListsPage from '../pages/wishListsPage/wishListsPage'
 import paths from './paths'
 
@@ -46,25 +46,25 @@ const pages: Page[] = [
     description: 'Skyrim Inventory Management User Dashboard',
     jsx: (
       <PageProvider>
-        <GamesProvider>
+        <PlaythroughsProvider>
           <DashboardPage />
-        </GamesProvider>
+        </PlaythroughsProvider>
       </PageProvider>
     ),
     path: paths.dashboard.main,
   },
   {
-    pageId: 'dashboard-games',
-    title: `${siteTitle} Your Games`,
-    description: 'Manage Skyrim Games',
+    pageId: 'dashboard-playthroughs',
+    title: `${siteTitle} Your Playthroughs`,
+    description: 'Manage Skyrim Playthroughs',
     jsx: (
       <PageProvider>
-        <GamesProvider>
-          <GamesPage />
-        </GamesProvider>
+        <PlaythroughsProvider>
+          <PlaythroughsPage />
+        </PlaythroughsProvider>
       </PageProvider>
     ),
-    path: paths.dashboard.games,
+    path: paths.dashboard.playthroughs,
   },
   {
     pageId: 'dashboard-wish-lists',
@@ -72,11 +72,11 @@ const pages: Page[] = [
     description: 'Manage your wish lists',
     jsx: (
       <PageProvider>
-        <GamesProvider>
+        <PlaythroughsProvider>
           <WishListsProvider>
             <WishListsPage />
           </WishListsProvider>
-        </GamesProvider>
+        </PlaythroughsProvider>
       </PageProvider>
     ),
     path: paths.dashboard.wishLists,

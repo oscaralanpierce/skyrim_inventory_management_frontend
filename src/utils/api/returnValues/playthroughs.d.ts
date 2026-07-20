@@ -1,14 +1,14 @@
 import { ApiResponse, type HTTPBody, type HTTPHeaders } from '../http'
-import { type ErrorObject, type ResponseGame } from '../../../types/apiData'
+import { type ErrorObject, type ResponsePlaythrough } from '../../../types/apiData'
 import { UnauthorizedResponse } from './shared'
 
 /**
  *
- * Types used for POST /games endpoint
+ * Types used for POST /playthroughs endpoint
  *
  */
 
-class PostGamesSuccessResponse extends ApiResponse {
+class PostPlaythroughsSuccessResponse extends ApiResponse {
   status: 201
 
   constructor(
@@ -19,7 +19,7 @@ class PostGamesSuccessResponse extends ApiResponse {
   }
 }
 
-class PostGamesErrorResponse extends ApiResponse {
+class PostPlaythroughsErrorResponse extends ApiResponse {
   status: 422 | 500
 
   constructor(
@@ -30,21 +30,21 @@ class PostGamesErrorResponse extends ApiResponse {
   }
 }
 
-export type PostGamesResponse =
+export type PostPlaythroughsResponse =
   | UnauthorizedResponse
-  | PostGamesSuccessResponse
-  | PostGamesErrorResponse
-export type PostGamesReturnValue =
+  | PostPlaythroughsSuccessResponse
+  | PostPlaythroughsErrorResponse
+export type PostPlaythroughsReturnValue =
   | { status: 422 | 500; json: ErrorObject }
-  | { status: 201; json: ResponseGame }
+  | { status: 201; json: ResponsePlaythrough }
 
 /**
  *
- * Types used for GET /games endpoint
+ * Types used for GET /playthroughs endpoint
  *
  */
 
-class GetGamesSuccessResponse extends ApiResponse {
+class GetPlaythroughsSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
@@ -55,7 +55,7 @@ class GetGamesSuccessResponse extends ApiResponse {
   }
 }
 
-class GetGamesErrorResponse extends ApiResponse {
+class GetPlaythroughsErrorResponse extends ApiResponse {
   status: 500
 
   constructor(
@@ -66,22 +66,22 @@ class GetGamesErrorResponse extends ApiResponse {
   }
 }
 
-export type GetGamesResponse =
+export type GetPlaythroughsResponse =
   | UnauthorizedResponse
-  | GetGamesErrorResponse
-  | GetGamesSuccessResponse
+  | GetPlaythroughsErrorResponse
+  | GetPlaythroughsSuccessResponse
 
-export type GetGamesReturnValue =
-  | { status: 200; json: ResponseGame[] }
+export type GetPlaythroughsReturnValue =
+  | { status: 200; json: ResponsePlaythrough[] }
   | { status: 500; json: ErrorObject }
 
 /**
  *
- * Types used for PUT|PATCH /games/:id endpoint
+ * Types used for PUT|PATCH /playthroughs/:id endpoint
  *
  */
 
-class PatchGameSuccessResponse extends ApiResponse {
+class PatchPlaythroughSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
@@ -92,7 +92,7 @@ class PatchGameSuccessResponse extends ApiResponse {
   }
 }
 
-class PatchGameErrorResponse extends ApiResponse {
+class PatchPlaythroughErrorResponse extends ApiResponse {
   status: 422 | 500
 
   constructor(
@@ -107,7 +107,7 @@ class PatchGameErrorResponse extends ApiResponse {
   }
 }
 
-class PatchGameNotFoundResponse extends ApiResponse {
+class PatchPlaythroughNotFoundResponse extends ApiResponse {
   status: 404
 
   constructor(
@@ -118,23 +118,23 @@ class PatchGameNotFoundResponse extends ApiResponse {
   }
 }
 
-export type PatchGameResponse =
+export type PatchPlaythroughResponse =
   | UnauthorizedResponse
-  | PatchGameSuccessResponse
-  | PatchGameErrorResponse
-  | PatchGameNotFoundResponse
+  | PatchPlaythroughSuccessResponse
+  | PatchPlaythroughErrorResponse
+  | PatchPlaythroughNotFoundResponse
 
-export type PatchGameReturnValue =
-  | { status: 200; json: ResponseGame }
+export type PatchPlaythroughReturnValue =
+  | { status: 200; json: ResponsePlaythrough }
   | { status: 422 | 500; json: ErrorObject }
 
 /**
  *
- * Types used for DELETE /games/:id endpoint
+ * Types used for DELETE /playthroughs/:id endpoint
  *
  */
 
-class DeleteGameSuccessResponse extends ApiResponse {
+class DeletePlaythroughSuccessResponse extends ApiResponse {
   status: 204
 
   constructor(
@@ -145,7 +145,7 @@ class DeleteGameSuccessResponse extends ApiResponse {
   }
 }
 
-class DeleteGameErrorResponse extends ApiResponse {
+class DeletePlaythroughErrorResponse extends ApiResponse {
   status: 404 | 500
 
   constructor(
@@ -156,11 +156,11 @@ class DeleteGameErrorResponse extends ApiResponse {
   }
 }
 
-export type DeleteGameResponse =
+export type DeletePlaythroughResponse =
   | UnauthorizedResponse
-  | DeleteGameSuccessResponse
-  | DeleteGameErrorResponse
+  | DeletePlaythroughSuccessResponse
+  | DeletePlaythroughErrorResponse
 
-export type DeleteGameReturnValue =
+export type DeletePlaythroughReturnValue =
   | { status: 204 }
   | { status: 500; json: ErrorObject }

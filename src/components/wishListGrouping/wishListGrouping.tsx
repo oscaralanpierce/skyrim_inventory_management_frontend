@@ -1,51 +1,51 @@
 import { type MouseEventHandler } from 'react'
-import { type RequestGame as Game } from '../../types/apiData'
+import { type RequestPlaythrough as Playthrough } from '../../types/apiData'
 import colorSchemes from '../../utils/colorSchemes'
 import { ColorProvider } from '../../contexts/colorContext'
 import { DONE } from '../../utils/loadingStates'
 import {
   usePageContext,
-  useGamesContext,
+  usePlaythroughsContext,
   useWishListsContext,
 } from '../../hooks/contexts'
-import GameForm from '../gameForm/gameForm'
+import PlaythroughForm from '../playthroughForm/playthroughForm'
 import WishListItem from '../wishListItem/wishListItem'
 import WishList from '../wishList/wishList'
 import styles from './wishListGrouping.module.css'
 
 const WishListGrouping = () => {
   const { setModalProps } = usePageContext()
-  const { games, gamesLoadingState, createGame } = useGamesContext()
+  const { playthroughs, playthroughsLoadingState, createPlaythrough } = usePlaythroughsContext()
   const { wishLists } = useWishListsContext()
 
-  const showGameForm: MouseEventHandler = (e) => {
+  const showPlaythroughForm: MouseEventHandler = (e) => {
     e.preventDefault()
 
-    const submit = (attributes: Game) => {
-      createGame(attributes, () => {
+    const submit = (attributes: Playthrough) => {
+      createPlaythrough(attributes, () => {
         setModalProps({ hidden: true, children: <></> })
       })
     }
 
     setModalProps({
       hidden: false,
-      children: <GameForm submitForm={submit} type="create" />,
+      children: <PlaythroughForm submitForm={submit} type="create" />,
     })
   }
 
-  if (gamesLoadingState === DONE && !games.length)
+  if (playthroughsLoadingState === DONE && !playthroughs.length)
     return (
       <p className={styles.noLists}>
-        You need a game to use the wish lists feature.{' '}
-        <button className={styles.link} onClick={showGameForm}>
-          Create a game
+        You need a playthrough to use the wish lists feature.{' '}
+        <button className={styles.link} onClick={showPlaythroughForm}>
+          Create a playthrough
         </button>{' '}
         to get started.
       </p>
     )
 
   if (!wishLists.length)
-    return <p className={styles.noLists}>This game has no wish lists.</p>
+    return <p className={styles.noLists}>This playthrough has no wish lists.</p>
 
   return (
     <div className={styles.root}>

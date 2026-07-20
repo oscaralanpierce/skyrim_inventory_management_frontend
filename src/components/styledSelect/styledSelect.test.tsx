@@ -1,7 +1,7 @@
 import { describe, test, expect, vitest } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { render } from '../../support/testUtils'
-import { allGames } from '../../support/data/games'
+import { allPlaythroughs } from '../../support/data/playthroughs'
 import StyledSelect from './styledSelect'
 
 /**
@@ -12,7 +12,7 @@ import StyledSelect from './styledSelect'
 
 describe('StyledSelect', () => {
   describe('when there are options', () => {
-    const options = allGames.map(({ name, id }) => ({
+    const options = allPlaythroughs.map(({ name, id }) => ({
       optionName: name,
       optionValue: id,
     }))
@@ -39,9 +39,9 @@ describe('StyledSelect', () => {
       expect(wrapper.queryByRole('option', { selected: true })).toBeFalsy()
 
       // All the option names should be present in the DOM
-      expect(wrapper.getByText('My Game 1')).toBeTruthy()
-      expect(wrapper.getByText('My Game 2')).toBeTruthy()
-      expect(wrapper.getByText('Game with a really real...')).toBeTruthy()
+      expect(wrapper.getByText('My Playthrough 1')).toBeTruthy()
+      expect(wrapper.getByText('My Playthrough 2')).toBeTruthy()
+      expect(wrapper.getByText('Playthrough with a really real...')).toBeTruthy()
     })
 
     test('matches snapshot', () => {
@@ -95,7 +95,7 @@ describe('StyledSelect', () => {
 
           const input = wrapper.getByLabelText('Add or Select Option')
 
-          fireEvent.change(input, { target: { value: 'my game 2' } })
+          fireEvent.change(input, { target: { value: 'my playthrough 2' } })
 
           await act(() => fireEvent.keyDown(input, { target: { key: 'Enter' } }))
 
@@ -119,11 +119,11 @@ describe('StyledSelect', () => {
 
           const input = wrapper.getByLabelText('Add or Select Option')
 
-          fireEvent.change(input, { target: { value: 'New Game New Name' } })
+          fireEvent.change(input, { target: { value: 'New Playthrough New Name' } })
 
           await act(() => fireEvent.keyDown(input, { target: { key: 'Enter' } }))
 
-          expect(onSubmitInput).toHaveBeenCalledWith('New Game New Name')
+          expect(onSubmitInput).toHaveBeenCalledWith('New Playthrough New Name')
         })
       })
     })
@@ -173,7 +173,7 @@ describe('StyledSelect', () => {
   })
 
   describe('when a default option is given', () => {
-    const options = allGames.map(({ name, id }) => ({
+    const options = allPlaythroughs.map(({ name, id }) => ({
       optionName: name,
       optionValue: id,
     }))
@@ -217,7 +217,7 @@ describe('StyledSelect', () => {
       // The header text should be the option name
       expect(
         wrapper.getByLabelText('Add or Select Option').textContent
-      ).toEqual('Game with a really real...')
+      ).toEqual('Playthrough with a really...')
     })
 
     test('matches snapshot', () => {

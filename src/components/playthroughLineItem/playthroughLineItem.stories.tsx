@@ -1,25 +1,25 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import {
   loginContextValue,
-  gamesContextValue,
+  playthroughsContextValue,
 } from '../../support/data/contextValues'
-import { GamesContext } from '../../contexts/gamesContext'
+import { PlaythroughsContext } from '../../contexts/playthroughsContext'
 import { PageProvider } from '../../contexts/pageContext'
 import { LoginContext } from '../../contexts/loginContext'
-import GameLineItem from './gameLineItem'
+import PlaythroughLineItem from './playthroughLineItem'
 
-type LineItemStory = StoryObj<typeof GameLineItem>
+type LineItemStory = StoryObj<typeof PlaythroughLineItem>
 
-const meta: Meta<typeof GameLineItem> = {
-  title: 'GameLineItem',
-  component: GameLineItem,
+const meta: Meta<typeof PlaythroughLineItem> = {
+  title: 'PlaythroughLineItem',
+  component: PlaythroughLineItem,
   decorators: [
     (Story) => (
       <LoginContext value={loginContextValue}>
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
+          <PlaythroughsContext value={playthroughsContextValue}>
             <Story />
-          </GamesContext>
+          </PlaythroughsContext>
         </PageProvider>
       </LoginContext>
     ),
@@ -30,15 +30,15 @@ export default meta
 
 export const WithDescription: LineItemStory = {
   args: {
-    gameId: 4,
-    name: 'My Game 1',
+    playthroughId: 4,
+    name: 'My Playthrough 1',
     description: 'This is a custom description created by the user.',
   },
 }
 
 export const WithLongDescription: LineItemStory = {
   args: {
-    gameId: 4,
+    playthroughId: 4,
     name: 'De finibus bonorum et malorum',
     description:
       'Cum audissem Antiochum, Brute, ut solebam, cum M. Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q. frater et T. Pomponius postmeridianam conficeremus in Academia',
@@ -47,8 +47,8 @@ export const WithLongDescription: LineItemStory = {
 
 export const NoDescription: LineItemStory = {
   args: {
-    gameId: 4,
-    name: 'This game has a really really really really really long name for testing purposes',
+    playthroughId: 4,
+    name: 'This playthrough has a really really really really really long name for testing purposes',
     description: null,
   },
 }

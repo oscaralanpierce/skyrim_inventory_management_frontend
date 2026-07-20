@@ -21,7 +21,7 @@ import { useQueryString } from '../hooks/useQueryString'
 import {
   useGoogleLogin,
   usePageContext,
-  useGamesContext,
+  usePlaythroughsContext,
 } from '../hooks/contexts'
 
 const UNEXPECTED_ERROR_MESSAGE =
@@ -92,9 +92,9 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
   const { token, authLoading, requireLogin, withTokenRefresh, signOut } =
     useGoogleLogin()
   const { setFlashProps, addApiCall, removeApiCall } = usePageContext()
-  const { gamesLoadingState, games } = useGamesContext()
+  const { playthroughsLoadingState, playthroughs } = usePlaythroughsContext()
   const queryString = useQueryString()
-  const [activeGame, setActiveGame] = useState<number | null>(null)
+  const [activePlaythrough, setActivePlaythrough] = useState<number | null>(null)
   const [wishListsLoadingState, setWishListsLoadingState] =
     useState(LOADING)
   const [wishLists, setWishLists] = useState<ResponseWishList[]>([])
@@ -136,7 +136,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
 
   /**
    *
-   * Create wish list for the active game
+   * Create wish list for the active playthrough
    *
    */
 
@@ -148,12 +148,12 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
       idToken?: string | null,
       retries?: number
     ) => {
-      if (!activeGame) {
+      if (!activePlaythrough) {
         setFlashProps({
           hidden: false,
           type: 'warning',
           message:
-            'You must select a game from the dropdown before creating a wish list.',
+            'You must select a playthrough from the dropdown before creating a wish list.',
         })
 
         return
@@ -163,7 +163,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
 
       if (idToken) {
         addApiCall('wishLists', 'post')
-        postWishLists(activeGame, attributes, idToken)
+        postWishLists(activePlaythrough, attributes, idToken)
           .then(({ json }) => {
             if (Array.isArray(json)) {
               if (json.length == 2) {
@@ -203,7 +203,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
                 hidden: false,
                 type: 'error',
                 message:
-                  "The game you've selected doesn't exist, or doesn't belong to you. Please select another game and try again.",
+                  "The playthrough you've selected doesn't exist, or doesn't belong to you. Please select another playthrough and try again.",
               })
             } else {
               handleApiError(e)
@@ -214,12 +214,12 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
           })
       }
     },
-    [token, activeGame, wishLists]
+    [token, activePlaythrough, wishLists]
   )
 
   /**
    *
-   * Fetch wish lists for the active game and set
+   * Fetch wish lists for the active playthrough and set
    * them as the wishLists array
    *
    */
@@ -228,10 +228,10 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
     idToken: string | null = token,
     retries: number = 1
   ) => {
-    if (!activeGame || !idToken) return
+    if (!activePlaythrough || !idToken) return
 
     addApiCall('wishLists', 'get')
-    getWishLists(activeGame, idToken)
+    getWishLists(activePlaythrough, idToken)
       .then(({ json }) => {
         if (Array.isArray(json)) {
           setWishLists(json)
@@ -249,7 +249,7 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
             hidden: false,
             type: 'error',
             message:
-              "The game you've selected doesn't exist, or doesn't belong to you. Please select another game and try again.",
+              "The playthrough you've selected doesn't exist, or doesn't belong to you. Please select another playthrough and try again.",
           })
         } else {
           handleApiError(e)
@@ -262,11 +262,11 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
   }
 
   const fetchWishLists = useCallback(() => {
-    if (token && activeGame) {
+    if (token && activePlaythrough) {
       setWishListsLoadingState(LOADING)
       setWishListsFromApi()
     }
-  }, [token, activeGame])
+  }, [token, activePlaythrough])
 
   /**
    *
@@ -707,20 +707,20 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
 
   /**
    *
-   * Set the active game automatically from the query string
-   * or, failing that, from the games themselves when they load
+   * Set the active playthrough automatically from the query string
+   * or, failing that, from the playthroughs themselves when they load
    *
    */
 
   useEffect(() => {
-    const gameId: number = Number(queryString.get('gameId'))
+    const playthroughId: number = Number(queryString.get('playthroughId'))
 
-    if (gameId > 0) {
-      setActiveGame(gameId)
-    } else if (gamesLoadingState === DONE && games.length) {
-      setActiveGame(games[0].id)
+    if (playthroughId > 0) {
+      setActivePlaythrough(playthroughId)
+    } else if (playthroughsLoadingState === DONE && playthroughs.length) {
+      setActivePlaythrough(playthroughs[0].id)
     }
-  }, [queryString, gamesLoadingState, games])
+  }, [queryString, playthroughsLoadingState, playthroughs])
 
   useEffect(() => {
     if (authLoading) return
@@ -735,12 +735,12 @@ export const WishListsProvider = ({ children }: ProviderProps) => {
       fetchWishLists()
 
     previousTokenRef.current = token
-  }, [authLoading, activeGame, token])
+  }, [authLoading, activePlaythrough, token])
 
   useEffect(() => {
-    if (gamesLoadingState === DONE && !games.length)
+    if (playthroughsLoadingState === DONE && !playthroughs.length)
       setWishListsLoadingState(DONE)
-  }, [gamesLoadingState, games])
+  }, [playthroughsLoadingState, playthroughs])
 
   useEffect(() => {
     requireLogin()

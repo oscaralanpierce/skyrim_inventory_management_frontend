@@ -2,13 +2,13 @@ import { type Meta, type StoryObj } from '@storybook/react-vite'
 import colorSchemes from '../../utils/colorSchemes'
 import { BrowserRouter } from 'react-router-dom'
 import {
-  gamesContextValue,
+  playthroughsContextValue,
   loginContextValue,
   wishListsContextValue,
 } from '../../support/data/contextValues'
 import { LoginContext } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
+import { PlaythroughsContext } from '../../contexts/playthroughsContext'
 import { WishListsContext } from '../../contexts/wishListsContext'
 import { ColorProvider } from '../../contexts/colorContext'
 import WishListItem from '../wishListItem/wishListItem'
@@ -24,7 +24,7 @@ const meta: Meta<typeof WishList> = {
       <BrowserRouter>
         <LoginContext value={loginContextValue}>
           <PageProvider>
-            <GamesContext value={gamesContextValue}>
+            <PlaythroughsContext value={playthroughsContextValue}>
               <WishListsContext value={wishListsContextValue}>
                 <ColorProvider
                   colorScheme={
@@ -36,7 +36,7 @@ const meta: Meta<typeof WishList> = {
                   <Story />
                 </ColorProvider>
               </WishListsContext>
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         </LoginContext>
       </BrowserRouter>

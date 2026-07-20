@@ -1,14 +1,14 @@
 # Wish Lists Context
 
-The `WishListsContext` keeps track of the active game and its wish lists. (Note that the naming scheme "wish list" is being replaced with "wish list" but has not yet been replaced in the front end code or API endpoints/request bodies.) The `WishListsProvider` makes the following values available to consumers:
+The `WishListsContext` keeps track of the active playthrough and its wish lists. The `WishListsProvider` makes the following values available to consumers:
 
-- `wishLists`: array of [`ResponseWishList`](/src/types/apiData.d.ts), the wish lists returned from the API for the current active game
+- `wishLists`: array of [`ResponseWishList`](/src/types/apiData.d.ts), the wish lists returned from the API for the current active playthrough
 - `wishListsLoadingStatus`: string of either `'LOADING'`, `'ERROR'`, or `'DONE'`, indicating whether wish lists have loaded successfully from the API initialised as `'LOADING'`
-- `createWishList`: a function that creates a wish list for the current active game at the API, taking the following arguments:
+- `createWishList`: a function that creates a wish list for the current active playthrough at the API, taking the following arguments:
   - `attributes`: an object containing an optional `title` key with a string value, the attributes of the wish list to create
   - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
   - `onError` (optional): a callback called on an unsuccessful response; no arguments are passed in and its return value, if any, is not used
-- `updateWishList`: a function that creates a wish list for the current active game at the API, taking the following arguments:
+- `updateWishList`: a function that creates a wish list for the current active playthrough at the API, taking the following arguments:
   - `listId`: the ID of the wish list to be updated
   - `attributes`: an object containing an optional `title` key with a string value, the attributes of the wish list to create
   - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
@@ -32,9 +32,9 @@ The `WishListsContext` keeps track of the active game and its wish lists. (Note 
   - `onSuccess` (optional): a callback called on a successful response; no arguments are passed in and its return value, if any, is not used
   - `onError` (optional): a callback called on an unsuccessful response; no arguments are passed in and its return value, if any, is not used
 
-Note that, while the context tracks the active game, this information is internal to the context. The active game is identified using the `gameId` query string parameter, which is typically set using the games dropdown component found on the `DashboardLayout`.
+Note that, while the context tracks the active playthrough, this information is internal to the context. The active playthrough is identified using the `playthroughId` query string parameter, which is typically set using the playthroughs dropdown component found on the `DashboardLayout`.
 
-The `WishListsContext` is a consumer of the `GamesContext` and, as such, must be nested inside a `GamesProvider` and the other context providers it requires, namely the `LoginProvider` and the `PageProvider`.
+The `WishListsContext` is a consumer of the `PlaythroughsContext` and, as such, must be nested inside a `PlaythroughsProvider` and the other context providers it requires, namely the `LoginProvider` and the `PageProvider`.
 
 ## Example
 
@@ -47,18 +47,18 @@ The `WishListsContext` is a consumer of the `GamesContext` and, as such, must be
 
 import { LoginProvider } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesProvider } from '../../contexts/gamesContext'
+import { PlaythroughsProvider } from '../../contexts/playthroughsContext'
 import { WishListsProvider } from '../../contexts/wishListsContext'
 import Child from '../child/child'
 
 const Parent = () => (
   <LoginProvider>
     <PageProvider>
-      <GamesProvider>
+      <PlaythroughsProvider>
         <WishListsProvider>
           <Child />
         </WishListsProvider>
-      </GamesProvider>
+      </PlaythroughsProvider>
     </PageProvider>
   </LoginProvider>
 )

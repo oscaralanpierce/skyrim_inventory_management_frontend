@@ -1,14 +1,14 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { BrowserRouter } from 'react-router-dom'
 import {
-  gamesContextValue,
-  gamesContextValueError,
-  gamesContextValueLoading,
+  playthroughsContextValue,
+  playthroughsContextValueError,
+  playthroughsContextValueLoading,
   loginContextValue,
 } from '../../support/data/contextValues'
 import { LoginContext } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext, type GamesContextType } from '../../contexts/gamesContext'
+import { PlaythroughsContext, type PlaythroughsContextType } from '../../contexts/playthroughsContext'
 import DashboardLayout from './dashboardLayout'
 
 type LayoutStory = StoryObj<typeof DashboardLayout>
@@ -21,9 +21,9 @@ const meta: Meta<typeof DashboardLayout> = {
       <BrowserRouter>
         <LoginContext value={loginContextValue}>
           <PageProvider>
-            <GamesContext value={parameters['gamesContextValue'] as GamesContextType}>
+            <PlaythroughsContext value={parameters['playthroughsContextValue'] as PlaythroughsContextType}>
               <Story />
-            </GamesContext>
+            </PlaythroughsContext>
           </PageProvider>
         </LoginContext>
       </BrowserRouter>
@@ -38,51 +38,51 @@ export const WithTitle: LayoutStory = {
     title: 'Page Title',
   },
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
   },
 }
 
 export const WithoutTitle: LayoutStory = {
   args: {},
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
   },
 }
 
 export const WithTitleAndDropdown: LayoutStory = {
   args: {
     title: 'Page Title',
-    includeGameSelector: true,
+    includePlaythroughSelector: true,
   },
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
   },
 }
 
 export const WithTitleAndDisabledDropdown: LayoutStory = {
   args: {
     title: 'Page Title',
-    includeGameSelector: true,
+    includePlaythroughSelector: true,
   },
   parameters: {
-    gamesContextValue: gamesContextValueLoading,
+    playthroughsContextValue: playthroughsContextValueLoading,
   },
 }
 
 export const WithDropownOnly: LayoutStory = {
   args: {
-    includeGameSelector: true,
+    includePlaythroughSelector: true,
   },
   parameters: {
-    gamesContextValue,
+    playthroughsContextValue,
   },
 }
 
 export const WithDisabledDropdownOnly: LayoutStory = {
   args: {
-    includeGameSelector: true,
+    includePlaythroughSelector: true,
   },
   parameters: {
-    gamesContextValue: gamesContextValueError,
+    playthroughsContextValue: playthroughsContextValueError,
   },
 }

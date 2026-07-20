@@ -1,37 +1,37 @@
 import { createContext, useCallback, useEffect, useState, useRef } from 'react'
-import { type RequestGame, type ResponseGame as Game } from '../types/apiData'
+import { type RequestPlaythrough, type ResponsePlaythrough as Playthrough } from '../types/apiData'
 import { type ProviderProps } from '../types/contexts'
 import { type CallbackFunction } from '../types/functions'
 import { useGoogleLogin, usePageContext } from '../hooks/contexts'
 import { ApiError } from '../types/errors'
 import { LOADING, DONE, ERROR, type LoadingState } from '../utils/loadingStates'
-import { postGames, getGames, deleteGame, patchGame } from '../utils/api/simApi'
+import { postPlaythroughs, getPlaythroughs, deletePlaythrough, patchPlaythrough } from '../utils/api/simApi'
 
 const NOT_FOUND_MESSAGE =
-  "Oops! We couldn't find the game you're looking for. Please refresh and try again."
+  "Oops! We couldn't find the playthrough you're looking for. Please refresh and try again."
 const UNEXPECTED_ERROR_MESSAGE =
   "Oops! Something unexpected went wrong. We're sorry! Please try again later."
 
-export interface GamesContextType {
-  games: Game[]
-  gamesLoadingState: LoadingState
-  createGame: (
-    game: RequestGame,
-    onSuccess?: (game: Game) => void,
+export interface PlaythroughsContextType {
+  playthroughs: Playthrough[]
+  playthroughsLoadingState: LoadingState
+  createPlaythrough: (
+    playthrough: RequestPlaythrough,
+    onSuccess?: (playthrough: Playthrough) => void,
     onError?: CallbackFunction,
     idToken?: string | null,
     retries?: number
   ) => void
-  updateGame: (
-    gameId: number,
-    attributes: RequestGame,
+  updatePlaythrough: (
+    playthroughId: number,
+    attributes: RequestPlaythrough,
     onSuccess?: CallbackFunction,
     onError?: CallbackFunction,
     idToken?: string | null,
     retries?: number
   ) => void
-  destroyGame: (
-    gameId: number,
+  destroyPlaythrough: (
+    playthroughId: number,
     onSuccess?: CallbackFunction,
     onError?: CallbackFunction,
     idToken?: string | null,
@@ -39,19 +39,19 @@ export interface GamesContextType {
   ) => void
 }
 
-export const GamesContext = createContext<GamesContextType>({
-  games: [],
-  gamesLoadingState: LOADING,
-  createGame: () => {},
-  updateGame: () => {},
-  destroyGame: () => {},
+export const PlaythroughsContext = createContext<PlaythroughsContextType>({
+  playthroughs: [],
+  playthroughsLoadingState: LOADING,
+  createPlaythrough: () => {},
+  updatePlaythrough: () => {},
+  destroyPlaythrough: () => {},
 })
 
-export const GamesProvider = ({ children }: ProviderProps) => {
+export const PlaythroughsProvider = ({ children }: ProviderProps) => {
   const { token, authLoading, requireLogin, withTokenRefresh, signOut } =
     useGoogleLogin()
-  const [gamesLoadingState, setGamesLoadingState] = useState(LOADING)
-  const [games, setGames] = useState<Game[]>([])
+  const [playthroughsLoadingState, setPlaythroughsLoadingState] = useState(LOADING)
+  const [playthroughs, setPlaythroughs] = useState<Playthrough[]>([])
   const { setFlashProps, setModalProps, addApiCall, removeApiCall } =
     usePageContext()
   const previousTokenRef = useRef(token)
@@ -71,7 +71,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       setFlashProps({
         hidden: false,
         type: 'error',
-        header: `${e.errors.length} error(s) prevented your game from being saved:`,
+        header: `${e.errors.length} error(s) prevented your playthrough from being saved:`,
         message: e.errors,
       })
     } else {
@@ -87,14 +87,14 @@ export const GamesProvider = ({ children }: ProviderProps) => {
 
   /**
    *
-   * Create a new game at the API and update the `games` array
+   * Create a new playthrough at the API and update the `playthroughs` array
    *
    */
 
-  const createGame = useCallback(
+  const createPlaythrough = useCallback(
     (
-      body: RequestGame,
-      onSuccess?: (game: Game) => void,
+      body: RequestPlaythrough,
+      onSuccess?: (playthrough: Playthrough) => void,
       onError?: CallbackFunction,
       idToken?: string | null,
       retries?: number
@@ -102,17 +102,17 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       idToken ??= token
 
       if (idToken) {
-        addApiCall('games', 'post')
-        postGames(body, idToken)
+        addApiCall('playthroughs', 'post')
+        postPlaythroughs(body, idToken)
           .then(({ json }) => {
             if ('name' in json) {
-              setGames([json, ...games])
+              setPlaythroughs([json, ...playthroughs])
               setFlashProps({
                 hidden: false,
                 type: 'success',
-                message: 'Success! Your game has been created.',
+                message: 'Success! Your playthrough has been created.',
               })
-              removeApiCall('games', 'post')
+              removeApiCall('playthroughs', 'post')
               if (onSuccess) onSuccess(json)
             }
           })
@@ -121,7 +121,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
 
             if (e.code === 401 && retries > 0) {
               return withTokenRefresh((newToken) => {
-                createGame(
+                createPlaythrough(
                   body,
                   onSuccess,
                   onError,
@@ -131,66 +131,66 @@ export const GamesProvider = ({ children }: ProviderProps) => {
               })
             }
 
-            removeApiCall('games', 'post')
+            removeApiCall('playthroughs', 'post')
             handleApiError(e)
             if (onError) onError()
           })
       }
     },
-    [token, games]
+    [token, playthroughs]
   )
 
   /**
    *
-   * Retrieve all the current user's games from the API
-   * and set them as the games array
+   * Retrieve all the current user's playthroughs from the API
+   * and set them as the playthroughs array
    *
    */
 
-  const setGamesFromApi = (idToken: string, retries: number = 1) => {
-    addApiCall('games', 'get')
-    return getGames(idToken)
+  const setPlaythroughsFromApi = (idToken: string, retries: number = 1) => {
+    addApiCall('playthroughs', 'get')
+    return getPlaythroughs(idToken)
       .then(({ json }) => {
         if (Array.isArray(json)) {
-          setGames(json)
-          setGamesLoadingState(DONE)
-          removeApiCall('games', 'get')
+          setPlaythroughs(json)
+          setPlaythroughsLoadingState(DONE)
+          removeApiCall('playthroughs', 'get')
         }
       })
       .catch((e: ApiError) => {
         if (e.code === 401 && retries > 0) {
           return withTokenRefresh((newToken) => {
-            void setGamesFromApi(newToken, retries - 1)
+            void setPlaythroughsFromApi(newToken, retries - 1)
           })
         } else {
-          removeApiCall('games', 'get')
+          removeApiCall('playthroughs', 'get')
           throw e
         }
       })
   }
 
-  const fetchGames = useCallback(() => {
+  const fetchPlaythroughs = useCallback(() => {
     if (token) {
-      setGamesLoadingState(LOADING)
+      setPlaythroughsLoadingState(LOADING)
 
-      setGamesFromApi(token).catch((e: ApiError) => {
+      setPlaythroughsFromApi(token).catch((e: ApiError) => {
         handleApiError(e)
-        setGames([])
-        setGamesLoadingState(ERROR)
+        setPlaythroughs([])
+        setPlaythroughsLoadingState(ERROR)
       })
     }
   }, [token])
 
   /**
    *
-   * Update the requested game at the API and in the `games` array
+   * Update the requested playthrough at the API and in the `playthroughs` array
    *
    */
 
-  const updateGame = useCallback(
+  const updatePlaythrough = useCallback(
     (
-      gameId: number,
-      attributes: RequestGame,
+      playthroughId: number,
+      attributes: RequestPlaythrough,
       onSuccess?: CallbackFunction,
       onError?: CallbackFunction,
       idToken?: string | null,
@@ -199,15 +199,15 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       idToken ??= token
 
       if (idToken) {
-        addApiCall('games', 'patch')
-        patchGame(gameId, attributes, idToken)
+        addApiCall('playthroughs', 'patch')
+        patchPlaythrough(playthroughId, attributes, idToken)
           .then(({ status, json }) => {
             if (status === 200) {
-              const newGames = games
-              const index = newGames.findIndex((el) => el.id === gameId)
-              newGames[index] = json
-              setGames(newGames)
-              removeApiCall('games', 'patch')
+              const newPlaythroughs = playthroughs
+              const index = newPlaythroughs.findIndex((el) => el.id === playthroughId)
+              newPlaythroughs[index] = json
+              setPlaythroughs(newPlaythroughs)
+              removeApiCall('playthroughs', 'patch')
               setModalProps({
                 hidden: true,
                 children: <></>,
@@ -215,7 +215,7 @@ export const GamesProvider = ({ children }: ProviderProps) => {
               setFlashProps({
                 hidden: false,
                 type: 'success',
-                message: 'Success! Your game has been updated.',
+                message: 'Success! Your playthrough has been updated.',
               })
               if (onSuccess) onSuccess()
             }
@@ -225,8 +225,8 @@ export const GamesProvider = ({ children }: ProviderProps) => {
 
             if (e.code === 401 && retries > 0) {
               return withTokenRefresh((newToken) => {
-                updateGame(
-                  gameId,
+                updatePlaythrough(
+                  playthroughId,
                   attributes,
                   onSuccess,
                   onError,
@@ -236,25 +236,25 @@ export const GamesProvider = ({ children }: ProviderProps) => {
               })
             }
 
-            removeApiCall('games', 'patch')
+            removeApiCall('playthroughs', 'patch')
             handleApiError(e)
 
             if (onError) onError()
           })
       }
     },
-    [token, games]
+    [token, playthroughs]
   )
 
   /**
    *
-   * Destroy the requested game and update the `games` array
+   * Destroy the requested playthrough and update the `playthroughs` array
    *
    */
 
-  const destroyGame = useCallback(
+  const destroyPlaythrough = useCallback(
     (
-      gameId: number,
+      playthroughId: number,
       onSuccess?: CallbackFunction,
       onError?: CallbackFunction,
       idToken?: string | null,
@@ -263,17 +263,17 @@ export const GamesProvider = ({ children }: ProviderProps) => {
       idToken ??= token
 
       if (idToken) {
-        addApiCall('games', 'delete')
-        deleteGame(gameId, idToken)
+        addApiCall('playthroughs', 'delete')
+        deletePlaythrough(playthroughId, idToken)
           .then(({ status }) => {
             if (status === 204) {
-              const newGames = games.filter(({ id }) => id !== gameId)
-              setGames(newGames)
-              removeApiCall('games', 'delete')
+              const newPlaythroughs = playthroughs.filter(({ id }) => id !== playthroughId)
+              setPlaythroughs(newPlaythroughs)
+              removeApiCall('playthroughs', 'delete')
               setFlashProps({
                 hidden: false,
                 type: 'success',
-                message: 'Success! Your game has been deleted.',
+                message: 'Success! Your playthrough has been deleted.',
               })
 
               if (onSuccess) onSuccess()
@@ -284,8 +284,8 @@ export const GamesProvider = ({ children }: ProviderProps) => {
 
             if (e.code === 401 && retries > 0) {
               return withTokenRefresh((newToken) => {
-                destroyGame(
-                  gameId,
+                destroyPlaythrough(
+                  playthroughId,
                   onSuccess,
                   onError,
                   newToken,
@@ -294,22 +294,22 @@ export const GamesProvider = ({ children }: ProviderProps) => {
               })
             }
 
-            removeApiCall('games', 'delete')
+            removeApiCall('playthroughs', 'delete')
             handleApiError(e)
 
             if (onError) onError()
           })
       }
     },
-    [token, games]
+    [token, playthroughs]
   )
 
   const value = {
-    games,
-    gamesLoadingState,
-    createGame,
-    updateGame,
-    destroyGame,
+    playthroughs,
+    playthroughsLoadingState,
+    createPlaythrough,
+    updatePlaythrough,
+    destroyPlaythrough,
   }
 
   useEffect(() => {
@@ -319,17 +319,17 @@ export const GamesProvider = ({ children }: ProviderProps) => {
   useEffect(() => {
     if (authLoading) return
 
-    // Only fetch games if token is present and
+    // Only fetch playthroughs if token is present and
     // (a) the token just changed from null to a string value or
     // (b) the token is already set and it is the initial render
     if (
       token &&
       (!previousTokenRef.current || previousTokenRef.current === token)
     )
-      fetchGames()
+      fetchPlaythroughs()
 
     previousTokenRef.current = token
   }, [authLoading, token])
 
-  return <GamesContext value={value}>{children}</GamesContext>
+  return <PlaythroughsContext value={value}>{children}</PlaythroughsContext>
 }

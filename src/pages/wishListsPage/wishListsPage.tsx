@@ -15,7 +15,7 @@ const WishListsPage = () => {
   const { wishListsLoadingState } = useWishListsContext()
 
   return (
-    <DashboardLayout title="Your Wish Lists" includeGameSelector>
+    <DashboardLayout title="Your Wish Lists" includePlaythroughSelector>
       <>
         <WishListCreateForm />
         {wishListsLoadingState === LOADING && (

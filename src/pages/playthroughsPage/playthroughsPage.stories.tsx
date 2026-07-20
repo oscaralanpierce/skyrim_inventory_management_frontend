@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { BrowserRouter } from 'react-router-dom'
-import { allGames, emptyGames } from '../../support/data/games'
+import { allPlaythroughs, emptyPlaythroughs } from '../../support/data/playthroughs'
 import {
   loadingLoginContextValue,
   loginContextValue,
@@ -8,24 +8,24 @@ import {
 import { internalServerErrorResponse } from '../../support/data/errors'
 import { LoginContext, type LoginContextType } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesProvider } from '../../contexts/gamesContext'
-import GamesPage from './gamesPage'
+import { PlaythroughsProvider } from '../../contexts/playthroughsContext'
+import PlaythroughsPage from './playthroughsPage'
 
-type GamesPageStory = StoryObj<typeof GamesPage>
+type PlaythroughsPageStory = StoryObj<typeof PlaythroughsPage>
 
-const GAMES_URI = '/api/games'
+const PLAYTHROUGHS_URI = '/api/playthroughs'
 
-const meta: Meta<typeof GamesPage> = {
-  title: 'GamesPage',
-  component: GamesPage,
+const meta: Meta<typeof PlaythroughsPage> = {
+  title: 'PlaythroughsPage',
+  component: PlaythroughsPage,
   decorators: [
     (Story, { parameters }) => (
       <BrowserRouter>
         <LoginContext value={parameters['loginContextValue'] as LoginContextType}>
           <PageProvider>
-            <GamesProvider>
+            <PlaythroughsProvider>
               <Story />
-            </GamesProvider>
+            </PlaythroughsProvider>
           </PageProvider>
         </LoginContext>
       </BrowserRouter>
@@ -35,44 +35,44 @@ const meta: Meta<typeof GamesPage> = {
 
 export default meta
 
-export const NoGames: GamesPageStory = {
+export const NoPlaythroughs: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
     mockData: [
       {
-        url: GAMES_URI,
+        url: PLAYTHROUGHS_URI,
         method: 'GET',
         status: 200,
-        response: emptyGames,
+        response: emptyPlaythroughs,
       },
     ],
   },
 }
 
-export const WithGamesHappy: GamesPageStory = {
+export const WithPlaythroughsHappy: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
     mockData: [
       {
-        url: GAMES_URI,
+        url: PLAYTHROUGHS_URI,
         method: 'GET',
         status: 200,
-        response: allGames,
+        response: allPlaythroughs,
       },
       {
-        url: '/api/games/32',
+        url: '/api/playthroughs/32',
         method: 'DELETE',
         status: 204,
         response: {},
       },
       {
-        url: '/api/games/51',
+        url: '/api/playthroughs/51',
         method: 'DELETE',
         status: 204,
         response: {},
       },
       {
-        url: '/api/games/77',
+        url: '/api/playthroughs/77',
         method: 'DELETE',
         status: 204,
         response: {},
@@ -81,18 +81,18 @@ export const WithGamesHappy: GamesPageStory = {
   },
 }
 
-export const AuthLoading: GamesPageStory = {
+export const AuthLoading: PlaythroughsPageStory = {
   parameters: {
     loginContextValue: loadingLoginContextValue,
   },
 }
 
-export const ServerError: GamesPageStory = {
+export const ServerError: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
     mockData: [
       {
-        url: GAMES_URI,
+        url: PLAYTHROUGHS_URI,
         method: 'GET',
         status: 500,
         response: internalServerErrorResponse,

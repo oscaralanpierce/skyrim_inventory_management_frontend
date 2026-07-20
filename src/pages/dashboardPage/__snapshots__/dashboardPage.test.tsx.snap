@@ -23,10 +23,10 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
                 <a
                   class="_root_c08070"
                   data-discover="true"
-                  href="/games"
+                  href="/playthroughs"
                   style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
                 >
-                  Your Games
+                  Your Playthroughs
                 </a>
               </div>
               <div
@@ -224,10 +224,10 @@ exports[`<DashboardPage /> > matches snapshot 1`] = `
               <a
                 class="_root_c08070"
                 data-discover="true"
-                href="/games"
+                href="/playthroughs"
                 style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
               >
-                Your Games
+                Your Playthroughs
               </a>
             </div>
             <div

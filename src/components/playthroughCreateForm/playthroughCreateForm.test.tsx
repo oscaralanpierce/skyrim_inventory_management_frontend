@@ -1,65 +1,65 @@
 import { describe, test, expect, vitest } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
-import { RequestGame } from '../../types/apiData'
+import { RequestPlaythrough } from '../../types/apiData'
 import { renderAuthenticated } from '../../support/testUtils'
-import { gamesContextValue } from '../../support/data/contextValues'
+import { playthroughsContextValue } from '../../support/data/contextValues'
 import { PageProvider } from '../../contexts/pageContext'
-import { GamesContext } from '../../contexts/gamesContext'
-import GameCreateForm from './gameCreateForm'
+import { PlaythroughsContext } from '../../contexts/playthroughsContext'
+import PlaythroughCreateForm from './playthroughCreateForm'
 
-describe('<GameCreateForm />', () => {
+describe('<PlaythroughCreateForm />', () => {
   describe('when enabled', () => {
     test('displays the correct fields', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
-            <GameCreateForm />
-          </GamesContext>
+          <PlaythroughsContext value={playthroughsContextValue}>
+            <PlaythroughCreateForm />
+          </PlaythroughsContext>
         </PageProvider>
       )
 
       expect(wrapper).toBeTruthy()
 
-      expect(wrapper.getByText('Create Game...')).toBeTruthy()
-      expect(wrapper.getByTestId('gameCreateFormForm')).toBeTruthy()
+      expect(wrapper.getByText('Create Playthrough...')).toBeTruthy()
+      expect(wrapper.getByTestId('playthroughCreateFormForm')).toBeTruthy()
     })
 
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
-            <GameCreateForm />
-          </GamesContext>
+          <PlaythroughsContext value={playthroughsContextValue}>
+            <PlaythroughCreateForm />
+          </PlaythroughsContext>
         </PageProvider>
       )
 
       expect(wrapper).toMatchSnapshot()
     })
 
-    describe('creating a game', () => {
+    describe('creating a playthrough', () => {
       describe('when the form has no values', () => {
-        test('calls the createGame function on the Games provider', () => {
-          const createGame = vitest
+        test('calls the createPlaythrough function on the Playthroughs provider', () => {
+          const createPlaythrough = vitest
             .fn()
-            .mockImplementation((_game: RequestGame) => {})
+            .mockImplementation((_playthrough: RequestPlaythrough) => {})
 
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext
-                value={{ ...gamesContextValue, createGame }}
+              <PlaythroughsContext
+                value={{ ...playthroughsContextValue, createPlaythrough }}
               >
-                <GameCreateForm />
-              </GamesContext>
+                <PlaythroughCreateForm />
+              </PlaythroughsContext>
             </PageProvider>
           )
 
-          const form = wrapper.getByTestId('gameCreateFormForm')
+          const form = wrapper.getByTestId('playthroughCreateFormForm')
 
           act(() => {
             fireEvent.submit(form)
           })
 
-          expect(createGame).toHaveBeenCalledWith(
+          expect(createPlaythrough).toHaveBeenCalledWith(
             { name: null, description: null },
             expect.any(Function)
           )
@@ -67,24 +67,24 @@ describe('<GameCreateForm />', () => {
       })
 
       describe('when the form has been filled out', () => {
-        test('calls the createGame function on the Games provider', () => {
-          const createGame = vitest
+        test('calls the createPlaythrough function on the Playthroughs provider', () => {
+          const createPlaythrough = vitest
             .fn()
-            .mockImplementation((_game: RequestGame) => {})
+            .mockImplementation((_playthrough: RequestPlaythrough) => {})
 
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext
-                value={{ ...gamesContextValue, createGame }}
+              <PlaythroughsContext
+                value={{ ...playthroughsContextValue, createPlaythrough }}
               >
-                <GameCreateForm />
-              </GamesContext>
+                <PlaythroughCreateForm />
+              </PlaythroughsContext>
             </PageProvider>
           )
 
           const nameInput = wrapper.getByTestId('createNameField')
           const descInput = wrapper.getByTestId('createDescriptionField')
-          const form = wrapper.getByTestId('gameCreateFormForm')
+          const form = wrapper.getByTestId('playthroughCreateFormForm')
 
           act(() => {
             fireEvent.change(nameInput, { target: { value: 'Skyrim' } })
@@ -94,30 +94,30 @@ describe('<GameCreateForm />', () => {
             fireEvent.submit(form)
           })
 
-          expect(createGame).toHaveBeenCalledWith(
+          expect(createPlaythrough).toHaveBeenCalledWith(
             { name: 'Skyrim', description: 'Custom description' },
             expect.any(Function)
           )
         })
 
         test('trims strings', () => {
-          const createGame = vitest
+          const createPlaythrough = vitest
             .fn()
-            .mockImplementation((_game: RequestGame) => {})
+            .mockImplementation((_playthrough: RequestPlaythrough) => {})
 
           const wrapper = renderAuthenticated(
             <PageProvider>
-              <GamesContext
-                value={{ ...gamesContextValue, createGame }}
+              <PlaythroughsContext
+                value={{ ...playthroughsContextValue, createPlaythrough }}
               >
-                <GameCreateForm />
-              </GamesContext>
+                <PlaythroughCreateForm />
+              </PlaythroughsContext>
             </PageProvider>
           )
 
           const nameInput = wrapper.getByTestId('createNameField')
           const descInput = wrapper.getByTestId('createDescriptionField')
-          const form = wrapper.getByTestId('gameCreateFormForm')
+          const form = wrapper.getByTestId('playthroughCreateFormForm')
 
           act(() => {
             fireEvent.change(nameInput, { target: { value: '   Skyrim  ' } })
@@ -127,7 +127,7 @@ describe('<GameCreateForm />', () => {
             fireEvent.submit(form)
           })
 
-          expect(createGame).toHaveBeenCalledWith(
+          expect(createPlaythrough).toHaveBeenCalledWith(
             { name: 'Skyrim', description: 'Custom description' },
             expect.any(Function)
           )
@@ -146,9 +146,9 @@ describe('<GameCreateForm />', () => {
     test('matches snapshot', () => {
       const wrapper = renderAuthenticated(
         <PageProvider>
-          <GamesContext value={gamesContextValue}>
-            <GameCreateForm disabled />
-          </GamesContext>
+          <PlaythroughsContext value={playthroughsContextValue}>
+            <PlaythroughCreateForm disabled />
+          </PlaythroughsContext>
         </PageProvider>
       )
 
