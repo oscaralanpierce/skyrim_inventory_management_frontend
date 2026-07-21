@@ -15,6 +15,9 @@ import {
   patchWishListItem,
   deleteWishListItem,
 } from './wrapper/wishListItemEndpoints'
+import {
+  postInventoryLists,
+} from './wrapper/inventoryListEndpoints'
 
 export {
   postPlaythroughs,
@@ -28,4 +31,5 @@ export {
   postWishListItems,
   patchWishListItem,
   deleteWishListItem,
+  postInventoryLists,
 }
