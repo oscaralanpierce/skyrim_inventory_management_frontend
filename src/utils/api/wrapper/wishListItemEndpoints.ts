@@ -23,7 +23,7 @@ import {
 
 /**
  *
- * POST /wish_lists/:list_id/list_items endpoint
+ * POST /wish_lists/:list_id/wish_list_items endpoint
  *
  */
 

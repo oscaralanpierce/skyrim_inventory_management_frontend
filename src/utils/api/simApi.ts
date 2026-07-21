@@ -20,6 +20,9 @@ import {
   getInventoryLists,
   patchInventoryList
 } from './wrapper/inventoryListEndpoints'
+import {
+  postInventoryItems,
+} from './wrapper/inventoryItemEndpoints'
 
 export {
   postPlaythroughs,
@@ -35,5 +38,6 @@ export {
   deleteWishListItem,
   postInventoryLists,
   getInventoryLists,
-  patchInventoryList
+  patchInventoryList,
+  postInventoryItems,
 }
