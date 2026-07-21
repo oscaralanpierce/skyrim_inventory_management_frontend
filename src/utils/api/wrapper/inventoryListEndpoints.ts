@@ -1,53 +1,53 @@
 import {
-  type RequestWishList,
-  type ResponseWishList,
+  type RequestInventoryList,
+  type ResponseInventoryList,
   type ErrorObject,
 } from '../../../types/apiData'
 import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
-  type PostWishListsResponse,
-  type PostWishListsReturnValue,
-  type GetWishListsResponse,
-  type GetWishListsReturnValue,
-  type PatchWishListResponse,
-  type PatchWishListReturnValue,
-  type DeleteWishListResponse,
-  type DeleteWishListReturnValue,
-  type DeleteWishListSuccessResponseBody
-} from '../returnValues/wishLists'
+  type PostInventoryListsResponse,
+  type PostInventoryListsReturnValue,
+  type GetInventoryListsResponse,
+  type GetInventoryListsReturnValue,
+  type PatchInventoryListResponse,
+  type PatchInventoryListReturnValue,
+  type DeleteInventoryListResponse,
+  type DeleteInventoryListReturnValue,
+  type DeleteInventoryListSuccessResponseBody,
+} from '../returnValues/inventoryLists'
 import {
   AuthorizationError,
   NotFoundError,
-  MethodNotAllowedError,
   UnprocessableEntityError,
   InternalServerError,
+  MethodNotAllowedError
 } from '../apiErrors'
 
 /**
- *
- * POST /playthroughs/:playthrough_id/wish_lists endpoint
- *
+ * 
+ * POST /playthroughs/:playthrough_id/inventory_lists endpoint
+ * 
  */
 
-export const postWishLists = (
+export const postInventoryLists = (
   playthroughId: number,
-  attributes: RequestWishList,
+  attributes: RequestInventoryList,
   token: string
-): Promise<PostWishListsReturnValue> | never => {
-  const uri = `${BASE_URI}/playthroughs/${playthroughId}/wish_lists`
+): Promise<PostInventoryListsReturnValue> | never => {
+  const uri = `${BASE_URI}/playthroughs/${playthroughId}/inventory_lists`
   const headers = combinedHeaders(token)
 
   return fetch(uri, {
     method: 'POST',
     body: JSON.stringify(attributes),
-    headers,
+    headers
   }).then((res) => {
-    const response = res as PostWishListsResponse
+    const response = res as PostInventoryListsResponse
 
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
 
-    return response.json().then((json: ResponseWishList[] | ErrorObject) => {
+    return response.json().then((json: ResponseInventoryList[] | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 422)
@@ -56,56 +56,56 @@ export const postWishLists = (
         throw new InternalServerError(
           (json as ErrorObject).errors.join(', ')
         )
-
-      return returnValue as PostWishListsReturnValue
+      
+      return returnValue as PostInventoryListsReturnValue
     })
   })
 }
 
 /**
- *
- * GET /playthroughs/:playthrough_id/wish_lists endpoint
- *
+ * 
+ * GET /playthroughs/:playthrough_id/inventory_lists endpoint
+ * 
  */
 
-export const getWishLists = (
+export const getInventoryLists = (
   playthroughId: number,
   token: string
-): Promise<GetWishListsReturnValue> | never => {
-  const uri = `${BASE_URI}/playthroughs/${playthroughId}/wish_lists`
+): Promise<GetInventoryListsReturnValue> | never => {
+  const uri = `${BASE_URI}/playthroughs/${playthroughId}/inventory_lists`
   const headers = combinedHeaders(token)
 
   return fetch(uri, { headers }).then((res) => {
-    const response = res as GetWishListsResponse
+    const response = res as GetInventoryListsResponse
 
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
-
-    return response.json().then((json: ResponseWishList[] | ErrorObject) => {
+    
+    return response.json().then((json: ResponseInventoryList[] | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 500)
         throw new InternalServerError(
           (json as ErrorObject).errors.join(', ')
         )
-
-      return returnValue as GetWishListsReturnValue
+      
+      return returnValue as GetInventoryListsReturnValue
     })
   })
 }
 
 /**
- *
- * PATCH /wish_lists/:id endpoint
- *
+ * 
+ * PATCH /inventory_lists/:id endpoint
+ * 
  */
 
-export const patchWishList = (
+export const patchInventoryList = (
   listId: number,
-  attributes: RequestWishList,
+  attributes: RequestInventoryList,
   token: string
-): Promise<PatchWishListReturnValue> | never => {
-  const uri = `${BASE_URI}/wish_lists/${listId}`
+): Promise<PatchInventoryListReturnValue> | never => {
+  const uri = `${BASE_URI}/inventory_lists/${listId}`
   const headers = combinedHeaders(token)
 
   return fetch(uri, {
@@ -113,12 +113,12 @@ export const patchWishList = (
     body: JSON.stringify(attributes),
     headers,
   }).then((res) => {
-    const response = res as PatchWishListResponse
-
+    const response = res as PatchInventoryListResponse
+    
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
-
-    return response.json().then((json: ResponseWishList | ErrorObject) => {
+    
+    return response.json().then((json: ResponseInventoryList | ErrorObject) => {
       const returnValue = { status: response.status, json }
 
       if (returnValue.status === 405)
@@ -131,34 +131,34 @@ export const patchWishList = (
         throw new InternalServerError(
           (json as ErrorObject).errors.join(', ')
         )
-
-      return returnValue as PatchWishListReturnValue
+      
+      return returnValue as PatchInventoryListReturnValue
     })
   })
 }
 
 /**
- *
- * DELETE /wish_lists/:id endpoint
- *
+ * 
+ * DELETE /inventory_lists/:id endpoint
+ * 
  */
 
-export const deleteWishList = (
+export const deleteInventoryList = (
   listId: number,
   token: string
-): Promise<DeleteWishListReturnValue> | never => {
-  const uri = `${BASE_URI}/wish_lists/${listId}`
+): Promise<DeleteInventoryListReturnValue> | never => {
+  const uri = `${BASE_URI}/inventory_lists/${listId}`
   const headers = combinedHeaders(token)
-
+  
   return fetch(uri, { method: 'DELETE', headers }).then((res) => {
-    const response = res as DeleteWishListResponse
+    const response = res as DeleteInventoryListResponse
 
     if (response.status === 401) throw new AuthorizationError()
     if (response.status === 404) throw new NotFoundError()
-
+    
     return response
       .json()
-      .then((json: DeleteWishListSuccessResponseBody | ErrorObject) => {
+      .then((json: DeleteInventoryListSuccessResponseBody | ErrorObject) => {
         const returnValue = { status: response.status, json }
 
         if (returnValue.status === 405)
@@ -169,8 +169,8 @@ export const deleteWishList = (
           throw new InternalServerError(
             (json as ErrorObject).errors.join(', ')
           )
-
-        return returnValue as DeleteWishListReturnValue
+        
+        return returnValue as DeleteInventoryListReturnValue
       })
   })
 }

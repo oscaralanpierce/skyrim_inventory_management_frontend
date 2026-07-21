@@ -1,17 +1,17 @@
 import { ApiResponse, type HTTPBody, type HTTPHeaders } from '../http'
 import {
   type ErrorObject,
-  type ResponseWishList,
+  type ResponseInventoryList
 } from '../../../types/apiData'
 import { UnauthorizedResponse } from './shared'
 
 /**
- *
- * Types used for POST /playthroughs/:playthrough_id/wish_lists endpoint
- *
+ * 
+ * Types used for POST /playthroughs/:playthrough_id/inventory_lists endpoint
+ * 
  */
 
-class PostWishListsSuccessResponse extends ApiResponse {
+class PostInventoryListsSuccessResponse extends ApiResponse {
   status: 201
 
   constructor(
@@ -22,7 +22,7 @@ class PostWishListsSuccessResponse extends ApiResponse {
   }
 }
 
-class PostWishListsNotFoundResponse extends ApiResponse {
+class PostInventoryListsNotFoundResponse extends ApiResponse {
   status: 404
 
   constructor(
@@ -33,7 +33,7 @@ class PostWishListsNotFoundResponse extends ApiResponse {
   }
 }
 
-class PostWishListsErrorResponse extends ApiResponse {
+class PostInventoryListsErrorResponse extends ApiResponse {
   status: 422 | 500
 
   constructor(
@@ -44,23 +44,23 @@ class PostWishListsErrorResponse extends ApiResponse {
   }
 }
 
-export type PostWishListsResponse =
+export type PostInventoryListsResponse =
   | UnauthorizedResponse
-  | PostWishListsSuccessResponse
-  | PostWishListsNotFoundResponse
-  | PostWishListsErrorResponse
+  | PostInventoryListsSuccessResponse
+  | PostInventoryListsNotFoundResponse
+  | PostInventoryListsErrorResponse
 
-export type PostWishListsReturnValue =
-  | { status: 201; json: ResponseWishList[] }
+export type PostInventoryListsReturnValue =
+  | { status: 201; json: ResponseInventoryList[] }
   | { status: 422 | 500; json: ErrorObject }
 
 /**
- *
- * Types used for GET /playthroughs/:playthrough_id/wish_lists endpoint
- *
+ * 
+ * Types used for GET /playthroughs/:playthrough_id/inventory_lists endpoint
+ * 
  */
 
-class GetWishListsSuccessResponse extends ApiResponse {
+class GetInventoryListsSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
@@ -71,7 +71,7 @@ class GetWishListsSuccessResponse extends ApiResponse {
   }
 }
 
-class GetWishListsNotFoundResponse extends ApiResponse {
+class GetInventoryListsNotFoundResponse extends ApiResponse {
   status: 404
 
   constructor(
@@ -82,7 +82,7 @@ class GetWishListsNotFoundResponse extends ApiResponse {
   }
 }
 
-class GetWishListsServerErrorResponse extends ApiResponse {
+class GetInventoryListsServerErrorResponse extends ApiResponse {
   status: 500
 
   constructor(
@@ -93,23 +93,23 @@ class GetWishListsServerErrorResponse extends ApiResponse {
   }
 }
 
-export type GetWishListsResponse =
+export type GetInventoryListsResponse =
   | UnauthorizedResponse
-  | GetWishListsSuccessResponse
-  | GetWishListsNotFoundResponse
-  | GetWishListsServerErrorResponse
+  | GetInventoryListsSuccessResponse
+  | GetInventoryListsNotFoundResponse
+  | GetInventoryListsServerErrorResponse
 
-export type GetWishListsReturnValue =
-  | { status: 200; json: ResponseWishList[] }
+export type GetInventoryListsReturnValue =
+  | { status: 200; json: ResponseInventoryList[] }
   | { status: 500; json: ErrorObject }
 
 /**
- *
- * Types used for PATCH /wish_lists/:id endpoint
- *
+ * 
+ * Types used for PATCH /inventory_lists/:id endpoint
+ * 
  */
 
-class PatchWishListSuccessResponse extends ApiResponse {
+class PatchInventoryListSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
@@ -120,18 +120,18 @@ class PatchWishListSuccessResponse extends ApiResponse {
   }
 }
 
-class PatchWishListNotFoundResponse extends ApiResponse {
+class PatchInventoryListNotFoundResponse extends ApiResponse {
   status: 404
 
   constructor(
-    body?: null,
+    body: HTTPBody | undefined,
     options: { status: 404; statusText?: string; headers?: HTTPHeaders }
   ) {
     super(body, options)
   }
 }
 
-class PatchWishListErrorResponse extends ApiResponse {
+class PatchInventoryListErrorResponse extends ApiResponse {
   status: 405 | 422 | 500
 
   constructor(
@@ -146,23 +146,23 @@ class PatchWishListErrorResponse extends ApiResponse {
   }
 }
 
-export type PatchWishListResponse =
+export type PatchInventoryListResponse =
   | UnauthorizedResponse
-  | PatchWishListSuccessResponse
-  | PatchWishListNotFoundResponse
-  | PatchWishListErrorResponse
+  | PatchInventoryListSuccessResponse
+  | PatchInventoryListNotFoundResponse
+  | PatchInventoryListErrorResponse
 
-export type PatchWishListReturnValue =
-  | { status: 200; json: ResponseWishList }
+export type PatchInventoryListReturnValue =
+  | { status: 200; json: ResponseInventoryList }
   | { status: 405 | 422 | 500; json: ErrorObject }
 
 /**
- *
- * Types used for DELETE /wish_lists/:id endpoint
+ * 
+ * Types used for DELETE /inventory_lists/:id endpoint
  *
  */
 
-class DeleteWishListSuccessResponse extends ApiResponse {
+class DeleteInventoryListSuccessResponse extends ApiResponse {
   status: 200
 
   constructor(
@@ -173,7 +173,7 @@ class DeleteWishListSuccessResponse extends ApiResponse {
   }
 }
 
-class DeleteWishListNotFoundResponse extends ApiResponse {
+class DeleteInventoryListNotFoundResponse extends ApiResponse {
   status: 404
 
   constructor(
@@ -184,7 +184,7 @@ class DeleteWishListNotFoundResponse extends ApiResponse {
   }
 }
 
-class DeleteWishListErrorResponse extends ApiResponse {
+class DeleteInventoryListErrorResponse extends ApiResponse {
   status: 405 | 500
 
   constructor(
@@ -195,17 +195,17 @@ class DeleteWishListErrorResponse extends ApiResponse {
   }
 }
 
-export type DeleteWishListSuccessResponseBody = {
+export type DeleteInventoryListSuccessResponseBody = {
   deleted: number[]
-  aggregate?: ResponseWishList
+  aggregate?: ResponseInventoryList
 }
 
-export type DeleteWishListResponse =
+export type DeleteInventoryListResponse =
   | UnauthorizedResponse
-  | DeleteWishListSuccessResponse
-  | DeleteWishListNotFoundResponse
-  | DeleteWishListErrorResponse
+  | DeleteInventoryListSuccessResponse
+  | DeleteInventoryListNotFoundResponse
+  | DeleteInventoryListErrorResponse
 
-export type DeleteWishListReturnValue =
-  | { status: 200; json: DeleteWishListSuccessResponseBody }
+export type DeleteInventoryListReturnValue =
+  | { status: 200; json: DeleteInventoryListSuccessResponseBody }
   | { status: 405 | 500; json: ErrorObject }
