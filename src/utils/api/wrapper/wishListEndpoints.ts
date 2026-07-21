@@ -13,6 +13,7 @@ import {
   type PatchWishListReturnValue,
   type DeleteWishListResponse,
   type DeleteWishListReturnValue,
+  type DeleteWishListSuccessResponseBody
 } from '../returnValues/wishLists'
 import {
   AuthorizationError,
@@ -142,11 +143,6 @@ export const patchWishList = (
  *
  */
 
-interface DeleteWishListSuccessBody {
-  deleted: number[]
-  aggregate?: ResponseWishList
-}
-
 export const deleteWishList = (
   listId: number,
   token: string
@@ -162,7 +158,7 @@ export const deleteWishList = (
 
     return response
       .json()
-      .then((json: DeleteWishListSuccessBody | ErrorObject) => {
+      .then((json: DeleteWishListSuccessResponseBody | ErrorObject) => {
         const returnValue = { status: response.status, json }
 
         if (returnValue.status === 405)

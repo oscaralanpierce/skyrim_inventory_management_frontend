@@ -11,6 +11,9 @@ import {
   type GetInventoryListsReturnValue,
   type PatchInventoryListResponse,
   type PatchInventoryListReturnValue,
+  type DeleteInventoryListResponse,
+  type DeleteInventoryListReturnValue,
+  type DeleteInventoryListSuccessResponseBody,
 } from '../returnValues/inventoryLists'
 import {
   AuthorizationError,
@@ -131,5 +134,43 @@ export const patchInventoryList = (
       
       return returnValue as PatchInventoryListReturnValue
     })
+  })
+}
+
+/**
+ * 
+ * DELETE /inventory_lists/:id endpoint
+ * 
+ */
+
+export const deleteInventoryList = (
+  listId: number,
+  token: string
+): Promise<DeleteInventoryListReturnValue> | never => {
+  const uri = `${BASE_URI}/inventory_lists/${listId}`
+  const headers = combinedHeaders(token)
+  
+  return fetch(uri, { method: 'DELETE', headers }).then((res) => {
+    const response = res as DeleteInventoryListResponse
+
+    if (response.status === 401) throw new AuthorizationError()
+    if (response.status === 404) throw new NotFoundError()
+    
+    return response
+      .json()
+      .then((json: DeleteInventoryListSuccessResponseBody | ErrorObject) => {
+        const returnValue = { status: response.status, json }
+
+        if (returnValue.status === 405)
+          throw new MethodNotAllowedError(
+            (json as ErrorObject).errors.join(', ')
+          )
+        if (returnValue.status === 500)
+          throw new InternalServerError(
+            (json as ErrorObject).errors.join(', ')
+          )
+        
+        return returnValue as DeleteInventoryListReturnValue
+      })
   })
 }

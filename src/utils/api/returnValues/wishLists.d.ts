@@ -195,7 +195,7 @@ class DeleteWishListErrorResponse extends ApiResponse {
   }
 }
 
-interface DeleteWishListSuccessResponseBody {
+export type DeleteWishListSuccessResponseBody = {
   deleted: number[]
   aggregate?: ResponseWishList
 }
