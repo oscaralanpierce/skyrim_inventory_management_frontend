@@ -28,6 +28,8 @@ const defaultApiCallStatus: ApiCalls = {
   playthroughs: [],
   wishLists: [],
   wishListItems: [],
+  inventoryLists: [],
+  inventoryItems: [],
 }
 
 const PageContext = createContext<PageContextType>({

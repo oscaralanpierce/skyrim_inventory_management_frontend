@@ -37,7 +37,7 @@ class PostInventoryItemsNotFoundResponse extends ApiResponse {
 class PostInventoryItemsErrorResponse extends ApiResponse {
   status: 405 | 422 | 500
 
-  construtor(
+  constructor(
     body: HTTPBody | undefined,
     options: {
       status: 405 | 422 | 500

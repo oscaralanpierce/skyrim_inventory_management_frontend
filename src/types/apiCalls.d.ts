@@ -6,4 +6,6 @@ export interface ApiCalls {
   playthroughs: HttpVerb[]
   wishLists: HttpVerb[]
   wishListItems: HttpVerb[]
+  inventoryLists: HttpVerb[]
+  inventoryItems: HttpVerb[]
 }
