@@ -6,7 +6,9 @@ import {
 import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
   type PostInventoryListsResponse,
-  type PostInventoryListsReturnValue
+  type PostInventoryListsReturnValue,
+  type GetInventoryListsResponse,
+  type GetInventoryListsReturnValue,
 } from '../returnValues/inventoryLists'
 import {
   AuthorizationError,
@@ -50,6 +52,38 @@ export const postInventoryLists = (
         )
       
       return returnValue as PostInventoryListsReturnValue
+    })
+  })
+}
+
+/**
+ * 
+ * GET /playthroughs/:playthrough_id/inventory_lists endpoint
+ * 
+ */
+
+export const getInventoryLists = (
+  playthroughId: number,
+  token: string
+): Promise<GetInventoryListsReturnValue> | never => {
+  const uri = `${BASE_URI}/playthroughs/${playthroughId}/inventory_lists`
+  const headers = combinedHeaders(token)
+
+  return fetch(uri, { headers }).then((res) => {
+    const response = res as GetInventoryListsResponse
+
+    if (response.status === 401) throw new AuthorizationError()
+    if (response.status === 404) throw new NotFoundError()
+    
+    return response.json().then((json: ResponseInventoryList[] | ErrorObject) => {
+      const returnValue = { status: response.status, json }
+
+      if (returnValue.status === 500)
+        throw new InternalServerError(
+          (json as ErrorObject).errors.join(', ')
+        )
+      
+      return returnValue as GetInventoryListsReturnValue
     })
   })
 }
