@@ -73,3 +73,48 @@ export interface ResponseWishListItem {
   created_at: Date
   updated_at: Date
 }
+
+/**
+ * 
+ * Inventory Lists
+ * 
+ */
+
+export interface RequestInventoryList {
+  title?: string
+}
+
+export interface ResponseInventoryList {
+  id: number
+  playthrough_id: number
+  aggregate_list_id: number | null
+  aggregate: boolean
+  title: string
+  list_items: ResponseInventoryItem[]
+  created_at: Date
+  updated_at: Date
+}
+
+/**
+ * 
+ * Inventory Items
+ * 
+ */
+
+export interface RequestInventoryItem {
+  quantity?: number
+  description?: string
+  unit_weight?: number | null
+  notes?: string | null
+}
+
+export interface ResponseInventoryItem {
+  id: number
+  list_id: number
+  description: string
+  quantity: number
+  unit_weight: number | null
+  notes: string | null
+  created_at: Date
+  updated_at: Date
+}
