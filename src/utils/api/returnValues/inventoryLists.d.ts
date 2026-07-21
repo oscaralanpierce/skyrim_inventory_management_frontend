@@ -102,3 +102,57 @@ export type GetInventoryListsResponse =
 export type GetInventoryListsReturnValue =
   | { status: 200; json: ResponseInventoryList[] }
   | { status: 500; json: ErrorObject }
+
+/**
+ * 
+ * Types used for PATCH /inventory_lists/:id endpoint
+ * 
+ */
+
+class PatchInventoryListSuccessResponse extends ApiResponse {
+  status: 200
+
+  constructor(
+    body: HTTPBody | undefined,
+    options: { status: 200; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class PatchInventoryListNotFoundResponse extends ApiResponse {
+  status: 404
+
+  constructor(
+    body: HTTPBody | undefined,
+    options: { status: 404; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class PatchInventoryListErrorResponse extends ApiResponse {
+  status: 405 | 422 | 500
+
+  construtor(
+    body: HTTPBody | undefined,
+    options: {
+      status: 405 | 422 | 500
+      statusText?: string
+      headers?: HTTPHeaders
+    }
+  ) {
+    super(body, options)
+  }
+}
+
+export type PatchInventoryListResponse =
+  | UnauthorizedResponse
+  | PatchInventoryListSuccessResponse
+  | PatchInventoryListNotFoundResponse
+  | PatchInventoryListErrorResponse
+
+export type PatchInventoryListReturnValue =
+  | { status: 200; json: ResponseInventoryList }
+  | { status: 405 | 422 | 500; json: ErrorObject }
+  

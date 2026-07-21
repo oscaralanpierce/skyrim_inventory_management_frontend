@@ -9,12 +9,15 @@ import {
   type PostInventoryListsReturnValue,
   type GetInventoryListsResponse,
   type GetInventoryListsReturnValue,
+  type PatchInventoryListResponse,
+  type PatchInventoryListReturnValue,
 } from '../returnValues/inventoryLists'
 import {
   AuthorizationError,
   NotFoundError,
   UnprocessableEntityError,
-  InternalServerError
+  InternalServerError,
+  MethodNotAllowedError
 } from '../apiErrors'
 
 /**
@@ -84,6 +87,49 @@ export const getInventoryLists = (
         )
       
       return returnValue as GetInventoryListsReturnValue
+    })
+  })
+}
+
+/**
+ * 
+ * PATCH /inventory_lists/:id endpoint
+ * 
+ */
+
+export const patchInventoryList = (
+  listId: number,
+  attributes: RequestInventoryList,
+  token: string
+): Promise<PatchInventoryListReturnValue> | never => {
+  const uri = `${BASE_URI}/inventory_lists/${listId}`
+  const headers = combinedHeaders(token)
+
+  return fetch(uri, {
+    method: 'PATCH',
+    body: JSON.stringify(attributes),
+    headers,
+  }).then((res) => {
+    const response = res as PatchInventoryListResponse
+    
+    if (response.status === 401) throw new AuthorizationError()
+    if (response.status === 404) throw new NotFoundError()
+    
+    return response.json().then((json: ResponseInventoryList | ErrorObject) => {
+      const returnValue = { status: response.status, json }
+
+      if (returnValue.status === 405)
+        throw new MethodNotAllowedError(
+          (json as ErrorObject).errors.join(', ')
+        )
+      if (returnValue.status === 422)
+        throw new UnprocessableEntityError((json as ErrorObject).errors)
+      if (returnValue.status === 500)
+        throw new InternalServerError(
+          (json as ErrorObject).errors.join(', ')
+        )
+      
+      return returnValue as PatchInventoryListReturnValue
     })
   })
 }
