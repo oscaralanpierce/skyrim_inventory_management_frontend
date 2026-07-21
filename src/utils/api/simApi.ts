@@ -23,6 +23,7 @@ import {
 import {
   postInventoryItems,
   patchInventoryItem,
+  deleteInventoryItem,
 } from './wrapper/inventoryItemEndpoints'
 
 export {
@@ -42,4 +43,5 @@ export {
   patchInventoryList,
   postInventoryItems,
   patchInventoryItem,
+  deleteInventoryItem,
 }

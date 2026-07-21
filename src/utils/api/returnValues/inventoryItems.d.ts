@@ -111,3 +111,52 @@ export type PatchInventoryItemResponse =
 export type PatchInventoryItemReturnValue =
   | { status: 200; json: ResponseInventoryItem[] }
   | { status: 405 | 422 | 500; json: ErrorObject }
+
+/**
+ * 
+ * Types used for DELETE /inventory_items/:id endpoint
+ * 
+ */
+
+class DeleteInventoryItemSuccessResponse extends ApiResponse {
+  status: 200
+
+  constructor(
+    body: HTTPBody | undefined,
+    options: { status: 200; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class DeleteInventoryItemNotFoundResponse extends ApiResponse {
+  status: 404
+
+  constructor(
+    body?: null,
+    options: { status: 404; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+class DeleteInventoryItemErrorResponse extends ApiResponse {
+  status: 405 | 500
+
+  constructor(
+    body: HTTPBody | undefined,
+    options: { status: 405 | 500; statusText?: string; headers?: HTTPHeaders }
+  ) {
+    super(body, options)
+  }
+}
+
+export type DeleteInventoryItemResponse =
+  | UnauthorizedResponse
+  | DeleteInventoryItemSuccessResponse
+  | DeleteInventoryItemNotFoundResponse
+  | DeleteInventoryItemErrorResponse
+
+export type DeleteInventoryItemReturnValue =
+  | { status: 200; json: ResponseInventoryList[] }
+  | { status: 405 | 500; json: ErrorObject }
