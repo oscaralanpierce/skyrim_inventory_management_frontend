@@ -8,6 +8,8 @@ import { BASE_URI, combinedHeaders } from '../sharedUtils'
 import {
   type PostInventoryItemsResponse,
   type PostInventoryItemsReturnValue,
+  type PatchInventoryItemResponse,
+  type PatchInventoryItemReturnValue,
 } from '../returnValues/inventoryItems'
 import {
   AuthorizationError,
@@ -57,5 +59,50 @@ export const postInventoryItems = (
       
       return returnValue as PostInventoryItemsReturnValue
     })
+  })
+}
+
+/**
+ * 
+ * PATCH /inventory_items/:id endpoint
+ * 
+ */
+
+export const patchInventoryItem = (
+  itemId: number,
+  attributes: RequestInventoryItem,
+  token: string
+): Promise<PatchInventoryItemReturnValue> | never => {
+  const uri = `${BASE_URI}/inventory_items/${itemId}`
+  const headers = combinedHeaders(token)
+
+  return fetch(uri, {
+    method: 'PATCH',
+    body: JSON.stringify(attributes),
+    headers,
+  }).then((res) => {
+    const response = res as PatchInventoryItemResponse
+
+    if (response.status === 401) throw new AuthorizationError()
+    if (response.status === 404) throw new NotFoundError()
+    
+    return response
+      .json()
+      .then((json: ResponseInventoryItem[] | ErrorObject) => {
+        const returnValue = { status: response.status, json }
+
+        if (returnValue.status === 405)
+          throw new MethodNotAllowedError(
+            (json as ErrorObject).errors.join(', ')
+          )
+        if (returnValue.status === 422)
+          throw new UnprocessableEntityError((json as ErrorObject).errors)
+        if (returnValue.status === 500)
+          throw new InternalServerError(
+            (json as ErrorObject).errors.join(', ')
+          )
+        
+        return returnValue as PatchInventoryItemReturnValue
+      })
   })
 }

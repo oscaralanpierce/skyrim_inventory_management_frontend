@@ -22,6 +22,7 @@ import {
 } from './wrapper/inventoryListEndpoints'
 import {
   postInventoryItems,
+  patchInventoryItem,
 } from './wrapper/inventoryItemEndpoints'
 
 export {
@@ -40,4 +41,5 @@ export {
   getInventoryLists,
   patchInventoryList,
   postInventoryItems,
+  patchInventoryItem,
 }
