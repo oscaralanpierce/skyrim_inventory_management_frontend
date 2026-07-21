@@ -8,7 +8,7 @@ import { UnauthorizedResponse } from './shared'
 
 /**
  * 
- * Types used for POST /inventory_lists/:list_id/list_items endpoint
+ * Types used for POST /inventory_lists/:inventory_list_id/inventory_items endpoint
  * 
  */
 
