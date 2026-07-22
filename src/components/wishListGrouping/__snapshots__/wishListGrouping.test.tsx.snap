@@ -297,16 +297,16 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   class="_details_015e9f"
                 >
                   <div
-                    class="_root_1a276c _collapsed_1a276c"
+                    class="_root_bec918 _collapsed_bec918"
                     style="--base-color: #ec658b; --hover-color: #ea527d; --body-color: #fad8e2; --border-color: #b93258; --text-color-main: #fff; --text-color-secondary: #451221;"
                   >
                     <div
-                      class="_triggerContainer_1a276c"
+                      class="_triggerContainer_bec918"
                     >
                       <button
-                        aria-controls="addItemToWishList4"
+                        aria-controls="addItemToList4"
                         aria-expanded="false"
-                        class="_trigger_1a276c"
+                        class="_trigger_bec918"
                       >
                         Add item to list...
                       </button>
@@ -314,7 +314,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     <div
                       aria-hidden="true"
                       class="rah-static rah-static--height-zero "
-                      id="addItemToWishList4"
+                      id="addItemToList4"
                       style="height: 0px; overflow: hidden;"
                     >
                       <div
@@ -322,14 +322,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       >
                         <form
                           aria-label="Wish list item creation form"
-                          class="_form_1a276c"
+                          class="_form_bec918"
                         >
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Description
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               name="description"
                               placeholder="Description"
                               required=""
@@ -337,11 +337,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Quantity
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               inputmode="numeric"
                               min="1"
                               name="quantity"
@@ -354,32 +354,32 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Unit Weight
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               inputmode="decimal"
                               min="0"
-                              name="unit_weight"
+                              name="unitWeight"
                               placeholder="Unit Weight"
                               step="0.1"
                               type="number"
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Notes
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               name="notes"
                               placeholder="Notes"
                               type="text"
                             />
                           </label>
                           <button
-                            class="_submit_1a276c"
+                            class="_submit_bec918"
                             type="submit"
                           >
                             Add to List
@@ -745,16 +745,16 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   class="_details_015e9f"
                 >
                   <div
-                    class="_root_1a276c _collapsed_1a276c"
+                    class="_root_bec918 _collapsed_bec918"
                     style="--base-color: #4e8fb7; --hover-color: #3881ae; --body-color: #d2e3ed; --border-color: #1b5c84; --text-color-main: #fff; --text-color-secondary: #0d2e42;"
                   >
                     <div
-                      class="_triggerContainer_1a276c"
+                      class="_triggerContainer_bec918"
                     >
                       <button
-                        aria-controls="addItemToWishList5"
+                        aria-controls="addItemToList5"
                         aria-expanded="false"
-                        class="_trigger_1a276c"
+                        class="_trigger_bec918"
                       >
                         Add item to list...
                       </button>
@@ -762,7 +762,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     <div
                       aria-hidden="true"
                       class="rah-static rah-static--height-zero "
-                      id="addItemToWishList5"
+                      id="addItemToList5"
                       style="height: 0px; overflow: hidden;"
                     >
                       <div
@@ -770,14 +770,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       >
                         <form
                           aria-label="Wish list item creation form"
-                          class="_form_1a276c"
+                          class="_form_bec918"
                         >
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Description
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               name="description"
                               placeholder="Description"
                               required=""
@@ -785,11 +785,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Quantity
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               inputmode="numeric"
                               min="1"
                               name="quantity"
@@ -802,32 +802,32 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Unit Weight
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               inputmode="decimal"
                               min="0"
-                              name="unit_weight"
+                              name="unitWeight"
                               placeholder="Unit Weight"
                               step="0.1"
                               type="number"
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Notes
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               name="notes"
                               placeholder="Notes"
                               type="text"
                             />
                           </label>
                           <button
-                            class="_submit_1a276c"
+                            class="_submit_bec918"
                             type="submit"
                           >
                             Add to List
@@ -1053,16 +1053,16 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   class="_details_015e9f"
                 >
                   <div
-                    class="_root_1a276c _collapsed_1a276c"
+                    class="_root_bec918 _collapsed_bec918"
                     style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
                   >
                     <div
-                      class="_triggerContainer_1a276c"
+                      class="_triggerContainer_bec918"
                     >
                       <button
-                        aria-controls="addItemToWishList6"
+                        aria-controls="addItemToList6"
                         aria-expanded="false"
-                        class="_trigger_1a276c"
+                        class="_trigger_bec918"
                       >
                         Add item to list...
                       </button>
@@ -1070,7 +1070,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     <div
                       aria-hidden="true"
                       class="rah-static rah-static--height-zero "
-                      id="addItemToWishList6"
+                      id="addItemToList6"
                       style="height: 0px; overflow: hidden;"
                     >
                       <div
@@ -1078,14 +1078,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                       >
                         <form
                           aria-label="Wish list item creation form"
-                          class="_form_1a276c"
+                          class="_form_bec918"
                         >
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Description
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               name="description"
                               placeholder="Description"
                               required=""
@@ -1093,11 +1093,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Quantity
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               inputmode="numeric"
                               min="1"
                               name="quantity"
@@ -1110,32 +1110,32 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Unit Weight
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               inputmode="decimal"
                               min="0"
-                              name="unit_weight"
+                              name="unitWeight"
                               placeholder="Unit Weight"
                               step="0.1"
                               type="number"
                             />
                           </label>
                           <label
-                            class="_label_1a276c"
+                            class="_label_bec918"
                           >
                             Notes
                             <input
-                              class="_input_1a276c"
+                              class="_input_bec918"
                               name="notes"
                               placeholder="Notes"
                               type="text"
                             />
                           </label>
                           <button
-                            class="_submit_1a276c"
+                            class="_submit_bec918"
                             type="submit"
                           >
                             Add to List
@@ -1372,16 +1372,16 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 class="_details_015e9f"
               >
                 <div
-                  class="_root_1a276c _collapsed_1a276c"
+                  class="_root_bec918 _collapsed_bec918"
                   style="--base-color: #ec658b; --hover-color: #ea527d; --body-color: #fad8e2; --border-color: #b93258; --text-color-main: #fff; --text-color-secondary: #451221;"
                 >
                   <div
-                    class="_triggerContainer_1a276c"
+                    class="_triggerContainer_bec918"
                   >
                     <button
-                      aria-controls="addItemToWishList4"
+                      aria-controls="addItemToList4"
                       aria-expanded="false"
-                      class="_trigger_1a276c"
+                      class="_trigger_bec918"
                     >
                       Add item to list...
                     </button>
@@ -1389,7 +1389,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   <div
                     aria-hidden="true"
                     class="rah-static rah-static--height-zero "
-                    id="addItemToWishList4"
+                    id="addItemToList4"
                     style="height: 0px; overflow: hidden;"
                   >
                     <div
@@ -1397,14 +1397,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     >
                       <form
                         aria-label="Wish list item creation form"
-                        class="_form_1a276c"
+                        class="_form_bec918"
                       >
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Description
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             name="description"
                             placeholder="Description"
                             required=""
@@ -1412,11 +1412,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Quantity
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             inputmode="numeric"
                             min="1"
                             name="quantity"
@@ -1429,32 +1429,32 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Unit Weight
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             inputmode="decimal"
                             min="0"
-                            name="unit_weight"
+                            name="unitWeight"
                             placeholder="Unit Weight"
                             step="0.1"
                             type="number"
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Notes
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             name="notes"
                             placeholder="Notes"
                             type="text"
                           />
                         </label>
                         <button
-                          class="_submit_1a276c"
+                          class="_submit_bec918"
                           type="submit"
                         >
                           Add to List
@@ -1820,16 +1820,16 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 class="_details_015e9f"
               >
                 <div
-                  class="_root_1a276c _collapsed_1a276c"
+                  class="_root_bec918 _collapsed_bec918"
                   style="--base-color: #4e8fb7; --hover-color: #3881ae; --body-color: #d2e3ed; --border-color: #1b5c84; --text-color-main: #fff; --text-color-secondary: #0d2e42;"
                 >
                   <div
-                    class="_triggerContainer_1a276c"
+                    class="_triggerContainer_bec918"
                   >
                     <button
-                      aria-controls="addItemToWishList5"
+                      aria-controls="addItemToList5"
                       aria-expanded="false"
-                      class="_trigger_1a276c"
+                      class="_trigger_bec918"
                     >
                       Add item to list...
                     </button>
@@ -1837,7 +1837,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   <div
                     aria-hidden="true"
                     class="rah-static rah-static--height-zero "
-                    id="addItemToWishList5"
+                    id="addItemToList5"
                     style="height: 0px; overflow: hidden;"
                   >
                     <div
@@ -1845,14 +1845,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     >
                       <form
                         aria-label="Wish list item creation form"
-                        class="_form_1a276c"
+                        class="_form_bec918"
                       >
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Description
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             name="description"
                             placeholder="Description"
                             required=""
@@ -1860,11 +1860,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Quantity
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             inputmode="numeric"
                             min="1"
                             name="quantity"
@@ -1877,32 +1877,32 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Unit Weight
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             inputmode="decimal"
                             min="0"
-                            name="unit_weight"
+                            name="unitWeight"
                             placeholder="Unit Weight"
                             step="0.1"
                             type="number"
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Notes
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             name="notes"
                             placeholder="Notes"
                             type="text"
                           />
                         </label>
                         <button
-                          class="_submit_1a276c"
+                          class="_submit_bec918"
                           type="submit"
                         >
                           Add to List
@@ -2128,16 +2128,16 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                 class="_details_015e9f"
               >
                 <div
-                  class="_root_1a276c _collapsed_1a276c"
+                  class="_root_bec918 _collapsed_bec918"
                   style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
                 >
                   <div
-                    class="_triggerContainer_1a276c"
+                    class="_triggerContainer_bec918"
                   >
                     <button
-                      aria-controls="addItemToWishList6"
+                      aria-controls="addItemToList6"
                       aria-expanded="false"
-                      class="_trigger_1a276c"
+                      class="_trigger_bec918"
                     >
                       Add item to list...
                     </button>
@@ -2145,7 +2145,7 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                   <div
                     aria-hidden="true"
                     class="rah-static rah-static--height-zero "
-                    id="addItemToWishList6"
+                    id="addItemToList6"
                     style="height: 0px; overflow: hidden;"
                   >
                     <div
@@ -2153,14 +2153,14 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                     >
                       <form
                         aria-label="Wish list item creation form"
-                        class="_form_1a276c"
+                        class="_form_bec918"
                       >
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Description
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             name="description"
                             placeholder="Description"
                             required=""
@@ -2168,11 +2168,11 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Quantity
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             inputmode="numeric"
                             min="1"
                             name="quantity"
@@ -2185,32 +2185,32 @@ exports[`WishListGrouping > when there are wish lists > matches snapshot 1`] = `
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Unit Weight
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             inputmode="decimal"
                             min="0"
-                            name="unit_weight"
+                            name="unitWeight"
                             placeholder="Unit Weight"
                             step="0.1"
                             type="number"
                           />
                         </label>
                         <label
-                          class="_label_1a276c"
+                          class="_label_bec918"
                         >
                           Notes
                           <input
-                            class="_input_1a276c"
+                            class="_input_bec918"
                             name="notes"
                             placeholder="Notes"
                             type="text"
                           />
                         </label>
                         <button
-                          class="_submit_1a276c"
+                          class="_submit_bec918"
                           type="submit"
                         >
                           Add to List

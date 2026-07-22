@@ -27,6 +27,7 @@ describe('WishListItemCreateForm', () => {
     )
 
     expect(wrapper.getByText('Add item to list...')).toBeTruthy()
+    expect(wrapper.getByLabelText('Wish list item creation form')).toBeTruthy() // ARIA label on form element
     expect(wrapper.getByLabelText('Description')).toBeTruthy()
     expect(wrapper.getByLabelText('Quantity')).toBeTruthy()
     expect(wrapper.getByLabelText('Unit Weight')).toBeTruthy()
@@ -51,7 +52,7 @@ describe('WishListItemCreateForm', () => {
   })
 
   describe('submitting the form', () => {
-    test('submits the form when attributes are valid', async () => {
+    test('calls the callback function when attributes are valid', async () => {
       const createWishListItem = vitest.fn()
 
       const wrapper = renderAuthenticated(
@@ -88,7 +89,7 @@ describe('WishListItemCreateForm', () => {
       )
     })
 
-    test("doesn't submit the form if there are invalid values", () => {
+    test("doesn't call the callback if there are invalid values", () => {
       const createWishListItem = vitest.fn()
 
       const wrapper = renderAuthenticated(

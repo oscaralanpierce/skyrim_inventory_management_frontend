@@ -14,8 +14,8 @@ import AnimateHeight from 'react-animate-height'
 import styles from './listItemCreateForm.module.css'
 
 export type SubmitHandlerType =
-  | ((listId: number, attributes: RequestWishListItem, onSuccess: CallbackFunction, onError: CallbackFunction) => void)
-  | ((listId: number, attributes: RequestInventoryItem, onSuccess: CallbackFunction, onError: CallbackFunction) => void)
+  | ((attributes: RequestWishListItem, onSuccess: CallbackFunction, onError: CallbackFunction) => void)
+  | ((attributes: RequestInventoryItem, onSuccess: CallbackFunction, onError: CallbackFunction) => void)
 
 interface ListItemCreateFormProps {
   listId: number
@@ -77,7 +77,7 @@ const ListItemCreateForm = ({ listId, resource, onSubmit }: ListItemCreateFormPr
 
     const collapseForm = () => setExpanded(false)
 
-    onSubmit(listId, attributes, collapseForm, collapseForm)
+    onSubmit(attributes, collapseForm, collapseForm)
   }
 
   useEffect(() => {

@@ -1,15 +1,7 @@
-import {
-  useRef,
-  useState,
-  useEffect,
-  type FormEventHandler,
-  type CSSProperties,
-} from 'react'
-import classNames from 'classnames'
-import AnimateHeight from 'react-animate-height'
-import { RequestWishListItem } from '../../types/apiData'
-import { useWishListsContext, useColorScheme } from '../../hooks/contexts'
-import styles from './wishListItemCreateForm.module.css'
+import { type RequestWishListItem } from '../../types/apiData'
+import { useWishListsContext } from '../../hooks/contexts'
+import ListItemCreateForm, { type SubmitHandlerType } from '../listItemCreateForm/listItemCreateForm';
+import { type CallbackFunction } from '../../types/functions'
 
 interface CreateFormProps {
   listId: number
@@ -17,155 +9,16 @@ interface CreateFormProps {
 
 const WishListItemCreateForm = ({ listId }: CreateFormProps) => {
   const { createWishListItem } = useWishListsContext()
-  const [expanded, setExpanded] = useState(false)
-  const formRef = useRef<HTMLFormElement>(null)
-  const inputRef = useRef<HTMLInputElement>(null)
 
-  const {
-    schemeColorDark,
-    hoverColorLight,
-    schemeColorLightest,
-    borderColor,
-    textColorSecondary,
-    textColorTertiary,
-  } = useColorScheme()
-
-  const colorVars = {
-    '--base-color': schemeColorDark,
-    '--hover-color': hoverColorLight,
-    '--body-color': schemeColorLightest,
-    '--border-color': borderColor,
-    '--text-color-main': textColorSecondary,
-    '--text-color-secondary': textColorTertiary,
-  } as CSSProperties
-
-  const toggleForm = () => {
-    setExpanded(!expanded)
+  const onSubmit: SubmitHandlerType = (
+    attributes: RequestWishListItem,
+    onSuccess: CallbackFunction,
+    onError: CallbackFunction
+  ) => {
+    createWishListItem(listId, attributes, onSuccess, onError)
   }
 
-  const extractItem = (formData: FormData): RequestWishListItem => {
-    const attributes = Object.fromEntries(
-      Array.from(formData.entries()).filter(([_, value]) => !!value)
-    ) as Record<string, string>
-
-    const returnValue: RequestWishListItem = {
-      description: attributes.description?.trim(),
-      quantity: Number(attributes.quantity),
-    }
-
-    if (attributes.unit_weight)
-      returnValue.unit_weight = Number(attributes.unit_weight)
-    if (attributes.notes) returnValue.notes = attributes.notes.trim()
-
-    return returnValue
-  }
-
-  const createItem: FormEventHandler = (e) => {
-    e.preventDefault()
-
-    if (!formRef.current) return
-
-    const formData = new FormData(formRef.current)
-    const attributes = extractItem(formData)
-
-    const collapseForm = () => setExpanded(false)
-
-    createWishListItem(listId, attributes, collapseForm, collapseForm)
-  }
-
-  useEffect(() => {
-    if (expanded) {
-      inputRef.current?.focus()
-    } else {
-      formRef.current?.reset()
-      inputRef.current?.blur()
-    }
-  }, [expanded])
-
-  return (
-    <div
-      className={classNames(styles.root, { [styles.collapsed]: !expanded })}
-      style={colorVars}
-    >
-      <div className={styles.triggerContainer}>
-        <button
-          className={styles.trigger}
-          aria-expanded={expanded}
-          aria-controls={`addItemToWishList${listId}`}
-          onClick={toggleForm}
-        >
-          Add item to list...
-        </button>
-      </div>
-      <AnimateHeight
-        id={`addItemToWishList${listId}`}
-        duration={200}
-        height={expanded ? 'auto' : 0}
-      >
-        <form
-          className={styles.form}
-          ref={formRef}
-          onSubmit={createItem}
-          aria-label="Wish list item creation form"
-        >
-          <label className={styles.label}>
-            Description
-            <input
-              className={styles.input}
-              ref={inputRef}
-              type="text"
-              name="description"
-              placeholder="Description"
-              required
-            />
-          </label>
-
-          <label className={styles.label}>
-            Quantity
-            <input
-              className={styles.input}
-              type="number"
-              inputMode="numeric"
-              min={1}
-              step={1}
-              pattern="^[0-9]*$"
-              name="quantity"
-              placeholder="Quantity"
-              defaultValue={1}
-              required
-            />
-          </label>
-
-          <label className={styles.label}>
-            Unit Weight
-            <input
-              className={styles.input}
-              type="number"
-              inputMode="decimal"
-              name="unit_weight"
-              min={0}
-              step={0.1}
-              placeholder="Unit Weight"
-            />
-          </label>
-
-          <label className={styles.label}>
-            Notes
-            <input
-              className={styles.input}
-              type="text"
-              name="notes"
-              placeholder="Notes"
-            />
-          </label>
-
-          <button className={styles.submit} type="submit">
-            Add to List
-          </button>
-        </form>
-      </AnimateHeight>
-    </div>
-  )
+  return <ListItemCreateForm listId={listId} resource='Wish list' onSubmit={onSubmit} />
 }
 
 export default WishListItemCreateForm

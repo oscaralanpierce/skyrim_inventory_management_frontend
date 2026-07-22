@@ -10,7 +10,7 @@ import { CallbackFunction } from '../../types/functions';
 describe('ListItemCreateForm', () => {
   describe('for wish list item', () => {
     test('displays correct fields and ARIA label', () => {
-      const onSubmit = (_listId: number, _attributes: RequestWishListItem, _onSuccess: CallbackFunction, _onError: CallbackFunction) => {}
+      const onSubmit = (_attributes: RequestWishListItem, _onSuccess: CallbackFunction, _onError: CallbackFunction) => {}
       const wrapper = render(
         <ColorProvider colorScheme={YELLOW}>
           <ListItemCreateForm
@@ -65,7 +65,6 @@ describe('ListItemCreateForm', () => {
         await act(() => fireEvent.submit(form))
 
         expect(onSubmit).toHaveBeenCalledExactlyOnceWith(
-          4,
           {
             description: 'Iron ingot',
             quantity: 2
@@ -76,7 +75,7 @@ describe('ListItemCreateForm', () => {
       })
 
       test('submits the form when all attributes are valid', async () => {
-                const onSubmit = vitest.fn()
+        const onSubmit = vitest.fn()
         const wrapper = render(
           <ColorProvider colorScheme={YELLOW}>
             <ListItemCreateForm listId={4} resource='Wish list' onSubmit={onSubmit} />
@@ -97,7 +96,6 @@ describe('ListItemCreateForm', () => {
         await act(() => fireEvent.submit(form))
 
         expect(onSubmit).toHaveBeenCalledExactlyOnceWith(
-          4,
           {
             description: 'Iron Mace of Sapping',
             quantity: 3,
@@ -138,7 +136,7 @@ describe('ListItemCreateForm', () => {
 
   describe('for inventory item', () => {
     test('displays correct fields and ARIA label', () => {
-      const onSubmit = (_listId: number, _attributes: RequestInventoryItem, _onSuccess: CallbackFunction, _onError: CallbackFunction) => {}
+      const onSubmit = (_attributes: RequestInventoryItem, _onSuccess: CallbackFunction, _onError: CallbackFunction) => {}
       const wrapper = render(
         <ColorProvider colorScheme={YELLOW}>
           <ListItemCreateForm
@@ -193,7 +191,6 @@ describe('ListItemCreateForm', () => {
         await act(() => fireEvent.submit(form))
 
         expect(onSubmit).toHaveBeenCalledExactlyOnceWith(
-          4,
           {
             description: 'Iron ingot',
             quantity: 2
@@ -204,7 +201,7 @@ describe('ListItemCreateForm', () => {
       })
 
       test('submits the form when all attributes are valid', async () => {
-                const onSubmit = vitest.fn()
+        const onSubmit = vitest.fn()
         const wrapper = render(
           <ColorProvider colorScheme={YELLOW}>
             <ListItemCreateForm listId={4} resource='Inventory' onSubmit={onSubmit} />
@@ -225,7 +222,6 @@ describe('ListItemCreateForm', () => {
         await act(() => fireEvent.submit(form))
 
         expect(onSubmit).toHaveBeenCalledExactlyOnceWith(
-          4,
           {
             description: 'Iron Mace of Sapping',
             quantity: 3,
