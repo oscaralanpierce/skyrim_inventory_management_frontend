@@ -21,6 +21,12 @@ describe('ListCreateForm', () => {
       expect(wrapper.getByPlaceholderText('Title')).toBeTruthy()
       expect(wrapper.getByText('Create')).toBeTruthy()
     })
+
+    test('matches snapshot', () => {
+      const wrapper = render(<ListCreateForm onSubmit={onSubmit} disabled={false} />)
+
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 
   describe('displaying the form for inventory lists', () => {
@@ -35,6 +41,12 @@ describe('ListCreateForm', () => {
 
       expect(wrapper.getByPlaceholderText('Title')).toBeTruthy()
       expect(wrapper.getByText('Create')).toBeTruthy()
+    })
+
+    test('matches snapshot', () => {
+      const wrapper = render(<ListCreateForm onSubmit={onSubmit} disabled={false} />)
+
+      expect(wrapper).toMatchSnapshot()
     })
   })
 
@@ -60,6 +72,12 @@ describe('ListCreateForm', () => {
           .attributes
           .getNamedItem('disabled')
       ).toBeTruthy()
+    })
+
+    test('matches snapshot when disabled', () => {
+      const wrapper = render(<ListCreateForm onSubmit={onSubmit} disabled />)
+      
+      expect(wrapper).toMatchSnapshot()
     })
 
     test('is enabled when disabled is false', () => {
