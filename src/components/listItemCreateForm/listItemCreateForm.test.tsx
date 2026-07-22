@@ -4,8 +4,8 @@ import { render } from '../../support/testUtils'
 import { YELLOW } from '../../utils/colorSchemes'
 import { ColorProvider } from '../../contexts/colorContext'
 import { type RequestWishListItem, type RequestInventoryItem } from '../../types/apiData'
+import { CallbackFunction } from '../../types/functions'
 import ListItemCreateForm from './listItemCreateForm'
-import { CallbackFunction } from '../../types/functions';
 
 describe('ListItemCreateForm', () => {
   describe('for wish list item', () => {
