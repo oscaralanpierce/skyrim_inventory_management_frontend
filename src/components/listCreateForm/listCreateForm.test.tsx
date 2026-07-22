@@ -74,12 +74,6 @@ describe('ListCreateForm', () => {
       ).toBeTruthy()
     })
 
-    test('matches snapshot when disabled', () => {
-      const wrapper = render(<ListCreateForm onSubmit={onSubmit} disabled />)
-      
-      expect(wrapper).toMatchSnapshot()
-    })
-
     test('is enabled when disabled is false', () => {
       const wrapper = render(<ListCreateForm onSubmit={onSubmit} disabled={false} />)
 
@@ -132,6 +126,12 @@ describe('ListCreateForm', () => {
         })
 
         expect(onSubmit).not.toHaveBeenCalled()
+      })
+
+      test('matches snapshot', () => {
+        const wrapper = render(<ListCreateForm onSubmit={vitest.fn()} disabled />)
+        
+        expect(wrapper).toMatchSnapshot()
       })
     })
   })
