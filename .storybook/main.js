@@ -3,7 +3,6 @@ export default {
 
   addons: [
     '@storybook/addon-links',
-    'storybook-addon-mock',
     '@chromatic-com/storybook',
     '@storybook/addon-docs'
   ],
@@ -15,7 +14,15 @@ export default {
 
   docs: {},
 
+  staticDirs: ['../public'],
+
   typescript: {
     reactDocgen: 'react-docgen-typescript'
+  },
+
+  async viteFinal(config) {
+    config.resolve = config.resolve || {}
+    config.resolve.dedupe = [...(config.resolve.dedupe || []), 'msw']
+    return config
   }
 }

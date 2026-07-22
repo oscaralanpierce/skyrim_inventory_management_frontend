@@ -1,9 +1,9 @@
+import { initialize, mswLoader } from 'msw-storybook-addon'
+
+// Initialize MSW
+initialize()
+
 export const parameters = {
-  actions: {
-    argTypes: {
-      onClick: { action: 'clicked' }
-    }
-  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -11,4 +11,7 @@ export const parameters = {
     },
   },
 }
-export const tags = ['autodocs'];
+
+export const loaders = [mswLoader]
+
+export const tags = ['autodocs']

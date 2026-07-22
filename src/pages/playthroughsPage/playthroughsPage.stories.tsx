@@ -1,11 +1,14 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { BrowserRouter } from 'react-router-dom'
-import { allPlaythroughs, emptyPlaythroughs } from '../../support/data/playthroughs'
 import {
   loadingLoginContextValue,
   loginContextValue,
 } from '../../support/data/contextValues'
-import { internalServerErrorResponse } from '../../support/data/errors'
+import {
+  getPlaythroughsEmptySuccess,
+  getPlaythroughsAllSuccess,
+  getPlaythroughsServerError,
+} from '../../support/msw/handlers'
 import { LoginContext, type LoginContextType } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
 import { PlaythroughsProvider } from '../../contexts/playthroughsContext'
@@ -38,46 +41,18 @@ export default meta
 export const NoPlaythroughs: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
-    mockData: [
-      {
-        url: PLAYTHROUGHS_URI,
-        method: 'GET',
-        status: 200,
-        response: emptyPlaythroughs,
-      },
-    ],
+    msw: {
+      handlers: [getPlaythroughsEmptySuccess]
+    }
   },
 }
 
 export const WithPlaythroughsHappy: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
-    mockData: [
-      {
-        url: PLAYTHROUGHS_URI,
-        method: 'GET',
-        status: 200,
-        response: allPlaythroughs,
-      },
-      {
-        url: '/api/playthroughs/32',
-        method: 'DELETE',
-        status: 204,
-        response: {},
-      },
-      {
-        url: '/api/playthroughs/51',
-        method: 'DELETE',
-        status: 204,
-        response: {},
-      },
-      {
-        url: '/api/playthroughs/77',
-        method: 'DELETE',
-        status: 204,
-        response: {},
-      },
-    ],
+    msw: {
+      handlers: [getPlaythroughsAllSuccess]
+    }
   },
 }
 
@@ -90,13 +65,8 @@ export const AuthLoading: PlaythroughsPageStory = {
 export const ServerError: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
-    mockData: [
-      {
-        url: PLAYTHROUGHS_URI,
-        method: 'GET',
-        status: 500,
-        response: internalServerErrorResponse,
-      },
-    ],
+    msw: {
+      handlers: [getPlaythroughsServerError]
+    }
   },
 }
