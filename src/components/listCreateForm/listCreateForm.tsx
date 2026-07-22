@@ -1,6 +1,6 @@
-import { CSSProperties, SubmitEvent, useRef, type SubmitEventHandler } from 'react'
+import { type CSSProperties, type SubmitEvent, useRef, type SubmitEventHandler } from 'react'
 import { type RequestInventoryList, type RequestWishList } from '../../types/apiData'
-import { CallbackFunction } from '../../types/functions'
+import { type CallbackFunction } from '../../types/functions'
 import { BLUE } from '../../utils/colorSchemes'
 import styles from './listCreateForm.module.css'
 

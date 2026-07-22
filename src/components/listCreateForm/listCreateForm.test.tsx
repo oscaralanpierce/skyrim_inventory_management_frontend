@@ -3,9 +3,9 @@ import {
 } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { render } from '../../support/testUtils'
-import { RequestInventoryList, RequestWishList } from '../../types/apiData'
-import { CallbackFunction } from '../../types/functions'
-import ListCreateForm, { SubmitHandlerType } from './listCreateForm'
+import { type RequestInventoryList, type RequestWishList } from '../../types/apiData'
+import { type CallbackFunction } from '../../types/functions'
+import ListCreateForm, { type SubmitHandlerType } from './listCreateForm'
 
 describe('ListCreateForm', () => {
   describe('displaying the form for wish lists', () => {

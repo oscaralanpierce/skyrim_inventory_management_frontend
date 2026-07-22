@@ -1,7 +1,7 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import ListCreateForm, { type SubmitHandlerType } from './listCreateForm'
-import { RequestWishList } from '../../types/apiData'
-import { CallbackFunction } from '../../types/functions'
+import { type RequestWishList } from '../../types/apiData'
+import { type CallbackFunction } from '../../types/functions'
 
 type ListCreateFormStory = StoryObj<typeof ListCreateForm>
 
