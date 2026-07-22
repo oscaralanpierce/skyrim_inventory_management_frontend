@@ -1,5 +1,9 @@
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: {
+    argTypes: {
+      onClick: { action: 'clicked' }
+    }
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
