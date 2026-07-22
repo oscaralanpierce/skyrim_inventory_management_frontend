@@ -74,16 +74,16 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
               class="_details_015e9f"
             >
               <div
-                class="_root_1a276c _collapsed_1a276c"
+                class="_root_bec918 _collapsed_bec918"
                 style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
                 <div
-                  class="_triggerContainer_1a276c"
+                  class="_triggerContainer_bec918"
                 >
                   <button
-                    aria-controls="addItemToWishList3"
+                    aria-controls="addItemToList3"
                     aria-expanded="false"
-                    class="_trigger_1a276c"
+                    class="_trigger_bec918"
                   >
                     Add item to list...
                   </button>
@@ -91,7 +91,7 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                 <div
                   aria-hidden="true"
                   class="rah-static rah-static--height-zero "
-                  id="addItemToWishList3"
+                  id="addItemToList3"
                   style="height: 0px; overflow: hidden;"
                 >
                   <div
@@ -99,14 +99,14 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                   >
                     <form
                       aria-label="Wish list item creation form"
-                      class="_form_1a276c"
+                      class="_form_bec918"
                     >
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Description
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           name="description"
                           placeholder="Description"
                           required=""
@@ -114,11 +114,11 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Quantity
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           inputmode="numeric"
                           min="1"
                           name="quantity"
@@ -131,32 +131,32 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Unit Weight
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           inputmode="decimal"
                           min="0"
-                          name="unit_weight"
+                          name="unitWeight"
                           placeholder="Unit Weight"
                           step="0.1"
                           type="number"
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Notes
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           name="notes"
                           placeholder="Notes"
                           type="text"
                         />
                       </label>
                       <button
-                        class="_submit_1a276c"
+                        class="_submit_bec918"
                         type="submit"
                       >
                         Add to List
@@ -241,16 +241,16 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
             class="_details_015e9f"
           >
             <div
-              class="_root_1a276c _collapsed_1a276c"
+              class="_root_bec918 _collapsed_bec918"
               style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
               <div
-                class="_triggerContainer_1a276c"
+                class="_triggerContainer_bec918"
               >
                 <button
-                  aria-controls="addItemToWishList3"
+                  aria-controls="addItemToList3"
                   aria-expanded="false"
-                  class="_trigger_1a276c"
+                  class="_trigger_bec918"
                 >
                   Add item to list...
                 </button>
@@ -258,7 +258,7 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
               <div
                 aria-hidden="true"
                 class="rah-static rah-static--height-zero "
-                id="addItemToWishList3"
+                id="addItemToList3"
                 style="height: 0px; overflow: hidden;"
               >
                 <div
@@ -266,14 +266,14 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                 >
                   <form
                     aria-label="Wish list item creation form"
-                    class="_form_1a276c"
+                    class="_form_bec918"
                   >
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Description
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         name="description"
                         placeholder="Description"
                         required=""
@@ -281,11 +281,11 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Quantity
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         inputmode="numeric"
                         min="1"
                         name="quantity"
@@ -298,32 +298,32 @@ exports[`WishList > displaying a list > when the list is not editable > matches 
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Unit Weight
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         inputmode="decimal"
                         min="0"
-                        name="unit_weight"
+                        name="unitWeight"
                         placeholder="Unit Weight"
                         step="0.1"
                         type="number"
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Notes
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         name="notes"
                         placeholder="Notes"
                         type="text"
                       />
                     </label>
                     <button
-                      class="_submit_1a276c"
+                      class="_submit_bec918"
                       type="submit"
                     >
                       Add to List
@@ -465,16 +465,16 @@ exports[`WishList > displaying a list > when there are list items > matches snap
               class="_details_015e9f"
             >
               <div
-                class="_root_1a276c _collapsed_1a276c"
+                class="_root_bec918 _collapsed_bec918"
                 style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
                 <div
-                  class="_triggerContainer_1a276c"
+                  class="_triggerContainer_bec918"
                 >
                   <button
-                    aria-controls="addItemToWishList4"
+                    aria-controls="addItemToList4"
                     aria-expanded="false"
-                    class="_trigger_1a276c"
+                    class="_trigger_bec918"
                   >
                     Add item to list...
                   </button>
@@ -482,7 +482,7 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                 <div
                   aria-hidden="true"
                   class="rah-static rah-static--height-zero "
-                  id="addItemToWishList4"
+                  id="addItemToList4"
                   style="height: 0px; overflow: hidden;"
                 >
                   <div
@@ -490,14 +490,14 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                   >
                     <form
                       aria-label="Wish list item creation form"
-                      class="_form_1a276c"
+                      class="_form_bec918"
                     >
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Description
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           name="description"
                           placeholder="Description"
                           required=""
@@ -505,11 +505,11 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Quantity
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           inputmode="numeric"
                           min="1"
                           name="quantity"
@@ -522,32 +522,32 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Unit Weight
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           inputmode="decimal"
                           min="0"
-                          name="unit_weight"
+                          name="unitWeight"
                           placeholder="Unit Weight"
                           step="0.1"
                           type="number"
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Notes
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           name="notes"
                           placeholder="Notes"
                           type="text"
                         />
                       </label>
                       <button
-                        class="_submit_1a276c"
+                        class="_submit_bec918"
                         type="submit"
                       >
                         Add to List
@@ -912,16 +912,16 @@ exports[`WishList > displaying a list > when there are list items > matches snap
             class="_details_015e9f"
           >
             <div
-              class="_root_1a276c _collapsed_1a276c"
+              class="_root_bec918 _collapsed_bec918"
               style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
               <div
-                class="_triggerContainer_1a276c"
+                class="_triggerContainer_bec918"
               >
                 <button
-                  aria-controls="addItemToWishList4"
+                  aria-controls="addItemToList4"
                   aria-expanded="false"
-                  class="_trigger_1a276c"
+                  class="_trigger_bec918"
                 >
                   Add item to list...
                 </button>
@@ -929,7 +929,7 @@ exports[`WishList > displaying a list > when there are list items > matches snap
               <div
                 aria-hidden="true"
                 class="rah-static rah-static--height-zero "
-                id="addItemToWishList4"
+                id="addItemToList4"
                 style="height: 0px; overflow: hidden;"
               >
                 <div
@@ -937,14 +937,14 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                 >
                   <form
                     aria-label="Wish list item creation form"
-                    class="_form_1a276c"
+                    class="_form_bec918"
                   >
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Description
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         name="description"
                         placeholder="Description"
                         required=""
@@ -952,11 +952,11 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Quantity
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         inputmode="numeric"
                         min="1"
                         name="quantity"
@@ -969,32 +969,32 @@ exports[`WishList > displaying a list > when there are list items > matches snap
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Unit Weight
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         inputmode="decimal"
                         min="0"
-                        name="unit_weight"
+                        name="unitWeight"
                         placeholder="Unit Weight"
                         step="0.1"
                         type="number"
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Notes
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         name="notes"
                         placeholder="Notes"
                         type="text"
                       />
                     </label>
                     <button
-                      class="_submit_1a276c"
+                      class="_submit_bec918"
                       type="submit"
                     >
                       Add to List
@@ -1416,16 +1416,16 @@ exports[`WishList > displaying a list > when there are no list items > matches s
               class="_details_015e9f"
             >
               <div
-                class="_root_1a276c _collapsed_1a276c"
+                class="_root_bec918 _collapsed_bec918"
                 style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
                 <div
-                  class="_triggerContainer_1a276c"
+                  class="_triggerContainer_bec918"
                 >
                   <button
-                    aria-controls="addItemToWishList4"
+                    aria-controls="addItemToList4"
                     aria-expanded="false"
-                    class="_trigger_1a276c"
+                    class="_trigger_bec918"
                   >
                     Add item to list...
                   </button>
@@ -1433,7 +1433,7 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                 <div
                   aria-hidden="true"
                   class="rah-static rah-static--height-zero "
-                  id="addItemToWishList4"
+                  id="addItemToList4"
                   style="height: 0px; overflow: hidden;"
                 >
                   <div
@@ -1441,14 +1441,14 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                   >
                     <form
                       aria-label="Wish list item creation form"
-                      class="_form_1a276c"
+                      class="_form_bec918"
                     >
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Description
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           name="description"
                           placeholder="Description"
                           required=""
@@ -1456,11 +1456,11 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Quantity
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           inputmode="numeric"
                           min="1"
                           name="quantity"
@@ -1473,32 +1473,32 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Unit Weight
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           inputmode="decimal"
                           min="0"
-                          name="unit_weight"
+                          name="unitWeight"
                           placeholder="Unit Weight"
                           step="0.1"
                           type="number"
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Notes
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           name="notes"
                           placeholder="Notes"
                           type="text"
                         />
                       </label>
                       <button
-                        class="_submit_1a276c"
+                        class="_submit_bec918"
                         type="submit"
                       >
                         Add to List
@@ -1583,16 +1583,16 @@ exports[`WishList > displaying a list > when there are no list items > matches s
             class="_details_015e9f"
           >
             <div
-              class="_root_1a276c _collapsed_1a276c"
+              class="_root_bec918 _collapsed_bec918"
               style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
               <div
-                class="_triggerContainer_1a276c"
+                class="_triggerContainer_bec918"
               >
                 <button
-                  aria-controls="addItemToWishList4"
+                  aria-controls="addItemToList4"
                   aria-expanded="false"
-                  class="_trigger_1a276c"
+                  class="_trigger_bec918"
                 >
                   Add item to list...
                 </button>
@@ -1600,7 +1600,7 @@ exports[`WishList > displaying a list > when there are no list items > matches s
               <div
                 aria-hidden="true"
                 class="rah-static rah-static--height-zero "
-                id="addItemToWishList4"
+                id="addItemToList4"
                 style="height: 0px; overflow: hidden;"
               >
                 <div
@@ -1608,14 +1608,14 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                 >
                   <form
                     aria-label="Wish list item creation form"
-                    class="_form_1a276c"
+                    class="_form_bec918"
                   >
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Description
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         name="description"
                         placeholder="Description"
                         required=""
@@ -1623,11 +1623,11 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Quantity
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         inputmode="numeric"
                         min="1"
                         name="quantity"
@@ -1640,32 +1640,32 @@ exports[`WishList > displaying a list > when there are no list items > matches s
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Unit Weight
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         inputmode="decimal"
                         min="0"
-                        name="unit_weight"
+                        name="unitWeight"
                         placeholder="Unit Weight"
                         step="0.1"
                         type="number"
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Notes
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         name="notes"
                         placeholder="Notes"
                         type="text"
                       />
                     </label>
                     <button
-                      class="_submit_1a276c"
+                      class="_submit_bec918"
                       type="submit"
                     >
                       Add to List
@@ -1837,16 +1837,16 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
               class="_details_015e9f"
             >
               <div
-                class="_root_1a276c _collapsed_1a276c"
+                class="_root_bec918 _collapsed_bec918"
                 style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
               >
                 <div
-                  class="_triggerContainer_1a276c"
+                  class="_triggerContainer_bec918"
                 >
                   <button
-                    aria-controls="addItemToWishList3"
+                    aria-controls="addItemToList3"
                     aria-expanded="false"
-                    class="_trigger_1a276c"
+                    class="_trigger_bec918"
                   >
                     Add item to list...
                   </button>
@@ -1854,7 +1854,7 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                 <div
                   aria-hidden="true"
                   class="rah-static rah-static--height-zero "
-                  id="addItemToWishList3"
+                  id="addItemToList3"
                   style="height: 0px; overflow: hidden;"
                 >
                   <div
@@ -1862,14 +1862,14 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                   >
                     <form
                       aria-label="Wish list item creation form"
-                      class="_form_1a276c"
+                      class="_form_bec918"
                     >
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Description
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           name="description"
                           placeholder="Description"
                           required=""
@@ -1877,11 +1877,11 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Quantity
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           inputmode="numeric"
                           min="1"
                           name="quantity"
@@ -1894,32 +1894,32 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Unit Weight
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           inputmode="decimal"
                           min="0"
-                          name="unit_weight"
+                          name="unitWeight"
                           placeholder="Unit Weight"
                           step="0.1"
                           type="number"
                         />
                       </label>
                       <label
-                        class="_label_1a276c"
+                        class="_label_bec918"
                       >
                         Notes
                         <input
-                          class="_input_1a276c"
+                          class="_input_bec918"
                           name="notes"
                           placeholder="Notes"
                           type="text"
                         />
                       </label>
                       <button
-                        class="_submit_1a276c"
+                        class="_submit_bec918"
                         type="submit"
                       >
                         Add to List
@@ -2034,16 +2034,16 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
             class="_details_015e9f"
           >
             <div
-              class="_root_1a276c _collapsed_1a276c"
+              class="_root_bec918 _collapsed_bec918"
               style="--base-color: #32b54e; --hover-color: #19ac38; --body-color: #ccecd3; --border-color: #00821c; --text-color-main: #fff; --text-color-secondary: #00410e;"
             >
               <div
-                class="_triggerContainer_1a276c"
+                class="_triggerContainer_bec918"
               >
                 <button
-                  aria-controls="addItemToWishList3"
+                  aria-controls="addItemToList3"
                   aria-expanded="false"
-                  class="_trigger_1a276c"
+                  class="_trigger_bec918"
                 >
                   Add item to list...
                 </button>
@@ -2051,7 +2051,7 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
               <div
                 aria-hidden="true"
                 class="rah-static rah-static--height-zero "
-                id="addItemToWishList3"
+                id="addItemToList3"
                 style="height: 0px; overflow: hidden;"
               >
                 <div
@@ -2059,14 +2059,14 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                 >
                   <form
                     aria-label="Wish list item creation form"
-                    class="_form_1a276c"
+                    class="_form_bec918"
                   >
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Description
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         name="description"
                         placeholder="Description"
                         required=""
@@ -2074,11 +2074,11 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Quantity
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         inputmode="numeric"
                         min="1"
                         name="quantity"
@@ -2091,32 +2091,32 @@ exports[`WishList > displaying the edit form > matches snapshot 1`] = `
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Unit Weight
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         inputmode="decimal"
                         min="0"
-                        name="unit_weight"
+                        name="unitWeight"
                         placeholder="Unit Weight"
                         step="0.1"
                         type="number"
                       />
                     </label>
                     <label
-                      class="_label_1a276c"
+                      class="_label_bec918"
                     >
                       Notes
                       <input
-                        class="_input_1a276c"
+                        class="_input_bec918"
                         name="notes"
                         placeholder="Notes"
                         type="text"
                       />
                     </label>
                     <button
-                      class="_submit_1a276c"
+                      class="_submit_bec918"
                       type="submit"
                     >
                       Add to List
