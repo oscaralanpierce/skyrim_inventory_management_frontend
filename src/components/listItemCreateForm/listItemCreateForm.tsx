@@ -6,11 +6,11 @@ import {
   useRef,
   useState
 } from 'react'
+import classNames from 'classnames'
+import AnimateHeight from 'react-animate-height'
 import { type RequestWishListItem, type RequestInventoryItem } from '../../types/apiData'
 import { type CallbackFunction } from '../../types/functions'
 import { useColorScheme } from '../../hooks/contexts'
-import classNames from 'classnames'
-import AnimateHeight from 'react-animate-height'
 import styles from './listItemCreateForm.module.css'
 
 export type SubmitHandlerType =
