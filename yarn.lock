@@ -3397,9 +3397,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "@vitejs/plugin-react@npm:6.0.3"
+"@vitejs/plugin-react@npm:^6.0.4":
+  version: 6.0.4
+  resolution: "@vitejs/plugin-react@npm:6.0.4"
   dependencies:
     "@rolldown/pluginutils": ^1.0.1
   peerDependencies:
@@ -3411,7 +3411,7 @@ __metadata:
       optional: true
     babel-plugin-react-compiler:
       optional: true
-  checksum: 740f64ce2af8aec67bb601f3a0f1d6fe6f548c71160fd4b5eaa9d0a2e373a16d18691059b881d8d35f0831c109dd8d9232566a96ed44728279472316c6838035
+  checksum: d05328985c1a1ccda413b39b3ff94ca1c78cb982386ca803546c673c92d83c388c383234f58b3d341eff15e139ce1f0eb1c3e934aa564775f5652b27aa2cb6e2
   languageName: node
   linkType: hard
 
@@ -6947,7 +6947,7 @@ __metadata:
     "@types/react": ^19.2.14
     "@types/react-dom": ^19.2.3
     "@types/react-router-dom": ^5.3.3
-    "@vitejs/plugin-react": ^6.0.3
+    "@vitejs/plugin-react": ^6.0.4
     babel-loader: ^10.1.1
     chromatic: ^18.0.1
     classnames: ^2.5.1
