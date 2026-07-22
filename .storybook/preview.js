@@ -1,9 +1,4 @@
 export const parameters = {
-  actions: {
-    argTypes: {
-      onClick: { action: 'clicked' }
-    }
-  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -11,4 +6,5 @@ export const parameters = {
     },
   },
 }
-export const tags = ['autodocs'];
+
+export const tags = ['autodocs']

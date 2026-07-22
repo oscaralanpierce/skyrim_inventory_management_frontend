@@ -3,7 +3,6 @@ export default {
 
   addons: [
     '@storybook/addon-links',
-    'storybook-addon-mock',
     '@chromatic-com/storybook',
     '@storybook/addon-docs'
   ],
@@ -17,5 +16,5 @@ export default {
 
   typescript: {
     reactDocgen: 'react-docgen-typescript'
-  }
+  },
 }
