@@ -108,6 +108,7 @@ const ListItemCreateForm = ({ listId, resource, onSubmit }: ListItemCreateFormPr
         id={`addItemToList${listId}`}
         duration={200}
         height={expanded ? 'auto' : 0}
+        aria-hidden={!expanded}
       >
         <form
           className={styles.form}

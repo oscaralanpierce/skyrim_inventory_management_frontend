@@ -35,6 +35,21 @@ describe('ListItemCreateForm', () => {
       expect(wrapper.getByText('Add to List')).toBeTruthy()
     })
 
+    test('expands when trigger is clicked', async () => {
+      const onSubmit = vitest.fn()
+      const wrapper = render(
+        <ColorProvider colorScheme={YELLOW}>
+          <ListItemCreateForm listId={2} resource='Wish list' onSubmit={onSubmit} />
+        </ColorProvider>
+      )
+
+      const trigger = wrapper.getByRole('button', { name: 'Add item to list...', expanded: false })
+
+      await act(() => fireEvent.click(trigger))
+
+      expect(trigger.getAttribute('aria-expanded')).toEqual('true')
+    })
+
     test('matches snapshot', () => {
       const onSubmit = vitest.fn()
       const wrapper = render(
@@ -159,6 +174,21 @@ describe('ListItemCreateForm', () => {
       expect(wrapper.getByLabelText('Unit Weight')).toBeTruthy()
       expect(wrapper.getByLabelText('Notes')).toBeTruthy()
       expect(wrapper.getByText('Add to List')).toBeTruthy()
+    })
+
+    test('expands when trigger is clicked', async () => {
+      const onSubmit = vitest.fn()
+      const wrapper = render(
+        <ColorProvider colorScheme={YELLOW}>
+          <ListItemCreateForm listId={2} resource='Inventory' onSubmit={onSubmit} />
+        </ColorProvider>
+      )
+
+      const trigger = wrapper.getByRole('button', { name: 'Add item to list...', expanded: false })
+
+      await act(() => fireEvent.click(trigger))
+
+      expect(trigger.getAttribute('aria-expanded')).toEqual('true')
     })
 
     test('matches snapshot', () => {
