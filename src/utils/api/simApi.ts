@@ -18,7 +18,8 @@ import {
 import {
   postInventoryLists,
   getInventoryLists,
-  patchInventoryList
+  patchInventoryList,
+  deleteInventoryList,
 } from './wrapper/inventoryListEndpoints'
 import {
   postInventoryItems,
@@ -41,6 +42,7 @@ export {
   postInventoryLists,
   getInventoryLists,
   patchInventoryList,
+  deleteInventoryList,
   postInventoryItems,
   patchInventoryItem,
   deleteInventoryItem,

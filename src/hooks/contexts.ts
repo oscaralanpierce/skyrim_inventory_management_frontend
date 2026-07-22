@@ -4,6 +4,7 @@ import { PlaythroughsContext } from '../contexts/playthroughsContext'
 import { LoginContext } from '../contexts/loginContext'
 import { PageContext } from '../contexts/pageContext'
 import { WishListsContext } from '../contexts/wishListsContext'
+import { InventoryListsContext } from '../contexts/inventoryListsContext'
 
 const useCustomContext = <T>(cxt: React.Context<T>, msg: string) => {
   const context = useContext(cxt)
@@ -35,6 +36,12 @@ export const useWishListsContext = () =>
   useCustomContext(
     WishListsContext,
     'useWishListsContext must be used within a WishListsProvider'
+  )
+
+export const useInventoryListsContext = () =>
+  useCustomContext(
+    InventoryListsContext,
+    'useInventoryListsContext must be used within an InventoryListsProvider'
   )
 
 export const usePageContext = () =>
