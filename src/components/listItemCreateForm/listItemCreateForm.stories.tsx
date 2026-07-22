@@ -32,7 +32,7 @@ export const InventoryItemCreateForm: CreateFormStory = {
   args: {
     listId: 4,
     resource: 'Inventory',
-    onSubmit: (_listId: number, _attributes: RequestInventoryItem, _onSuccess: CallbackFunction, _onError: CallbackFunction) => {}
+    onSubmit:(_attributes: RequestInventoryItem, _onSuccess: CallbackFunction, _onError: CallbackFunction) => {}
   }
 }
 
@@ -40,6 +40,6 @@ export const WishListItemCreateForm: CreateFormStory = {
   args: {
     listId: 4,
     resource: 'Wish list',
-    onSubmit: (_listId: number, _attributes: RequestWishListItem, _onSuccess: CallbackFunction, _onError: CallbackFunction) => {}
+    onSubmit: (_attributes: RequestWishListItem, _onSuccess: CallbackFunction, _onError: CallbackFunction) => {}
   }
 }
