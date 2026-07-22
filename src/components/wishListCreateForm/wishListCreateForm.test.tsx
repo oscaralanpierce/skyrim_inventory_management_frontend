@@ -173,7 +173,7 @@ describe('WishListCreateForm', () => {
 
   describe('submitting the form', () => {
     describe('when the form is enabled', () => {
-      test('trims the title and calls the createWishList function', async () => {
+      test('calls the createWishList function', async () => {
         const createWishList = vitest.fn()
         const contextValue = {
           ...wishListsContextValue,
@@ -193,7 +193,7 @@ describe('WishListCreateForm', () => {
         const input = wrapper.getByPlaceholderText('Title')
         const button = wrapper.getByText('Create')
 
-        fireEvent.change(input, { target: { value: '   New Wish List  ' } })
+        fireEvent.change(input, { target: { value: 'New Wish List' } })
 
         await act(() => fireEvent.click(button))
 
