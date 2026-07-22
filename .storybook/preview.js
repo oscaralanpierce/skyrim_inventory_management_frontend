@@ -1,8 +1,3 @@
-import { initialize, mswLoader } from 'msw-storybook-addon'
-
-// Initialize MSW
-initialize()
-
 export const parameters = {
   controls: {
     matchers: {
@@ -11,7 +6,5 @@ export const parameters = {
     },
   },
 }
-
-export const loaders = [mswLoader]
 
 export const tags = ['autodocs']

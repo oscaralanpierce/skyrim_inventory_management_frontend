@@ -3,20 +3,17 @@ import { BrowserRouter } from 'react-router-dom'
 import {
   loadingLoginContextValue,
   loginContextValue,
+  playthroughsContextValue,
+  playthroughsContextValueEmpty,
+  playthroughsContextValueError,
+  playthroughsContextValueLoading,
 } from '../../support/data/contextValues'
-import {
-  getPlaythroughsEmptySuccess,
-  getPlaythroughsAllSuccess,
-  getPlaythroughsServerError,
-} from '../../support/msw/handlers'
 import { LoginContext, type LoginContextType } from '../../contexts/loginContext'
 import { PageProvider } from '../../contexts/pageContext'
-import { PlaythroughsProvider } from '../../contexts/playthroughsContext'
+import { PlaythroughsContextType, PlaythroughsContext } from '../../contexts/playthroughsContext'
 import PlaythroughsPage from './playthroughsPage'
 
 type PlaythroughsPageStory = StoryObj<typeof PlaythroughsPage>
-
-const PLAYTHROUGHS_URI = '/api/playthroughs'
 
 const meta: Meta<typeof PlaythroughsPage> = {
   title: 'PlaythroughsPage',
@@ -26,9 +23,9 @@ const meta: Meta<typeof PlaythroughsPage> = {
       <BrowserRouter>
         <LoginContext value={parameters['loginContextValue'] as LoginContextType}>
           <PageProvider>
-            <PlaythroughsProvider>
+            <PlaythroughsContext value={parameters['playthroughsContextValue'] as PlaythroughsContextType}>
               <Story />
-            </PlaythroughsProvider>
+            </PlaythroughsContext>
           </PageProvider>
         </LoginContext>
       </BrowserRouter>
@@ -41,32 +38,27 @@ export default meta
 export const NoPlaythroughs: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
-    msw: {
-      handlers: [getPlaythroughsEmptySuccess]
-    }
+    playthroughsContextValue: playthroughsContextValueEmpty,
   },
 }
 
 export const WithPlaythroughsHappy: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
-    msw: {
-      handlers: [getPlaythroughsAllSuccess]
-    }
+    playthroughsContextValue,
   },
 }
 
 export const AuthLoading: PlaythroughsPageStory = {
   parameters: {
     loginContextValue: loadingLoginContextValue,
+    playthroughsContextValue: playthroughsContextValueLoading,
   },
 }
 
 export const ServerError: PlaythroughsPageStory = {
   parameters: {
     loginContextValue,
-    msw: {
-      handlers: [getPlaythroughsServerError]
-    }
+    playthroughsContextValue: playthroughsContextValueError,
   },
 }

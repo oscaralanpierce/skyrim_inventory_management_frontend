@@ -2,7 +2,7 @@ import { http } from 'msw'
 import { type RequestPlaythrough, type ResponsePlaythrough } from '../../types/apiData'
 import { emptyPlaythroughs, allPlaythroughs } from '../data/playthroughs'
 
-const BASE_URI = import.meta.env.STORYBOOK_MSW ? 'http://localhost:6006/api' : 'http://localhost:3000'
+const BASE_URI = 'http://localhost:3000'
 
 /**
  *
