@@ -61,12 +61,12 @@
    *
    */
 
-  .root {
+   .root {
     --button-width: 72px;
     margin: unset;
     margin-bottom: 16px;
     width: 228px;
-  }
+   }
 
   /**
    *
@@ -77,13 +77,13 @@
    *
    */
 
-  .input {
+   .input {
     width: calc(228px - 24px - 12px - var(--button-width));
-  }
+   }
 
-  .button {
+   .button {
     width: var(--button-width);
-  }
+   }
 }
 
 @media (min-width: 601px) {
