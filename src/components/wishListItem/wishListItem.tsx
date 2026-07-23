@@ -19,7 +19,8 @@ import {
   usePageContext,
   useWishListsContext,
 } from '../../hooks/contexts'
-import WishListItemEditForm from '../wishListItemEditForm/wishListItemEditForm'
+import { type RequestWishListItem } from '../../types/apiData';
+import ListItemEditForm from '../listItemEditForm/listItemEditForm'
 import styles from './wishListItem.module.css'
 
 interface WishListItemProps {
@@ -105,17 +106,37 @@ const WishListItem = ({
   const displayEditForm: MouseEventHandler = (e) => {
     e.preventDefault()
 
+    const onSubmitSuccess = () => {
+      setModalProps({
+        hidden: true,
+        children: <></>
+      })
+      setFlashProps({
+        hidden: false,
+        type: 'success',
+        message: 'Success! Your wish list item has been updated.'
+      })
+    }
+
+    const onSubmit = (attributes: RequestWishListItem | null) => {
+      if (attributes === null) {
+        onSubmitSuccess()
+        return
+      }
+
+      updateWishListItem(itemId, attributes, onSubmitSuccess)
+    }
+
+    const itemAttributes = { itemId, description, quantity, unitWeight, notes }
+
     setModalProps({
       hidden: false,
       children: (
-        <WishListItemEditForm
-          itemId={itemId}
-          description={description}
+        <ListItemEditForm
           listTitle={listTitle}
-          quantity={quantity}
-          unitWeight={unitWeight}
-          notes={notes}
           buttonColor={colorScheme}
+          itemAttributes={itemAttributes}
+          onSubmit={onSubmit}
         />
       ),
     })

@@ -1745,7 +1745,7 @@ describe('WishListsPage', () => {
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
-        const form = wrapper.getByTestId('editWishListItem3Form')
+        const form = wrapper.getByTestId('editListItem3Form')
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 
@@ -1790,7 +1790,7 @@ describe('WishListsPage', () => {
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
-        const form = wrapper.getByTestId('editWishListItem3Form')
+        const form = wrapper.getByTestId('editListItem3Form')
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 
@@ -1842,7 +1842,7 @@ describe('WishListsPage', () => {
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
-        const form = wrapper.getByTestId('editWishListItem3Form')
+        const form = wrapper.getByTestId('editListItem3Form')
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 
