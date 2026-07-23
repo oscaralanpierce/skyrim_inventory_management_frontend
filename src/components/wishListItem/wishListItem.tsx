@@ -120,7 +120,8 @@ const WishListItem = ({
 
     const onSubmit = (attributes: RequestWishListItem | null) => {
       if (attributes === null) {
-        onSubmitSuccess()
+        setModalProps({ hidden: true, children: <></> })
+        setFlashProps({ hidden: false, type: 'info', message: 'You updated your item, but no values were changed.' })
         return
       }
 
