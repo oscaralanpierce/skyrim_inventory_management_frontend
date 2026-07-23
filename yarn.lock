@@ -3881,9 +3881,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^18.0.1":
-  version: 18.0.1
-  resolution: "chromatic@npm:18.0.1"
+"chromatic@npm:^18.1.0":
+  version: 18.1.0
+  resolution: "chromatic@npm:18.1.0"
   dependencies:
     semver: ^7.3.5
   peerDependencies:
@@ -3901,7 +3901,7 @@ __metadata:
     chroma: dist/bin.cjs
     chromatic: dist/bin.cjs
     chromatic-cli: dist/bin.cjs
-  checksum: 454e2115421cb335e5a9a9b6c5d30e483479a36fac0cecc261c6d219272ac85d1d2a5eb6acfa0ad8a2877e884cacde8f0bdbca83f722ecd81726550568ad9de9
+  checksum: 9ddcb08aa41d3a52a59e1c7d3e8681d61de143ba0f4d45cbb7a660feb87ea1cbdaea784753c3ba5e9cf1e616f6430778e6474de87131ac86e20b98697427e9b8
   languageName: node
   linkType: hard
 
@@ -6949,7 +6949,7 @@ __metadata:
     "@types/react-router-dom": ^5.3.3
     "@vitejs/plugin-react": ^6.0.4
     babel-loader: ^10.1.1
-    chromatic: ^18.0.1
+    chromatic: ^18.1.0
     classnames: ^2.5.1
     eslint: ^10.7.0
     eslint-config-prettier: ^10.1.8
