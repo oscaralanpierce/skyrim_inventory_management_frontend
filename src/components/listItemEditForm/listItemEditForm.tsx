@@ -49,13 +49,19 @@ const ListItemEditForm = ({
     const values = Object.fromEntries(Array.from(formData.entries())) as Record<string, string>
     const attributes: RequestWishListItem | RequestInventoryItem = {}
 
+    // For some reason, on line 64, unitWeight was being evaluated as
+    // a string, resulting in the value never being equal and an API
+    // call being made when unit weight was actually unchanged. We have
+    // to cast the unitWeight as a number before making the comparison.
+    const currentUnitWeight = unitWeight === null ? null : Number(unitWeight)
+
     const newQuantity = values.quantity ? Number(values.quantity) : null
     const newWeight = values.unitWeight ? Number(values.unitWeight) : null
     const newNotes = values.notes?.trim() || null
 
     if (typeof newQuantity === 'number' && newQuantity !== quantity)
       attributes.quantity = newQuantity
-    if (newWeight !== unitWeight) attributes.unit_weight = newWeight
+    if (newWeight !== currentUnitWeight) attributes.unit_weight = newWeight
     if (newNotes !== notes) attributes.notes = newNotes
 
     if (!Object.keys(attributes).length) return null
