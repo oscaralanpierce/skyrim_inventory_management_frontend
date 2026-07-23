@@ -1745,7 +1745,7 @@ describe('WishListsPage', () => {
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
-        const form = wrapper.getByTestId('editWishListItem3Form')
+        const form = wrapper.getByTestId('editListItem3Form')
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 
@@ -1760,6 +1760,45 @@ describe('WishListsPage', () => {
         })
         expect(wrapper.getByText('Hello world')).toBeTruthy()
         expect(wrapper.queryByText(/hinges/)).toBeFalsy()
+      })
+    })
+
+    describe('when no attributes are changed', () => {
+      const mockServer = setupServer(
+        getWishListsSuccess,
+        updateWishListItemSuccess
+      )
+
+      beforeAll(() => mockServer.listen())
+      beforeEach(() => mockServer.resetHandlers())
+      afterAll(() => mockServer.close())
+
+      test('hides the form and shows flash info message', async () => {
+        const wrapper = renderAuthenticated(
+          <PageProvider>
+            <PlaythroughsContext value={playthroughsContextValue}>
+              <WishListsProvider>
+                <WishListsPage />
+              </WishListsProvider>
+            </PlaythroughsContext>
+          </PageProvider>
+        )
+
+        const editIcon = await wrapper.findByTestId('editWishListItem3')
+
+        await act(() => fireEvent.click(editIcon))
+
+        const form = wrapper.getByTestId('editListItem3Form')
+
+        await act(() => fireEvent.submit(form))
+
+        await waitFor(() => {
+          expect(
+            wrapper.getByText(
+              'You updated your item, but no values were changed.'
+            )
+          ).toBeTruthy()
+        })
       })
     })
 
@@ -1790,7 +1829,7 @@ describe('WishListsPage', () => {
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
-        const form = wrapper.getByTestId('editWishListItem3Form')
+        const form = wrapper.getByTestId('editListItem3Form')
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 
@@ -1842,7 +1881,7 @@ describe('WishListsPage', () => {
 
         const notesFields = wrapper.getAllByLabelText('Notes')
         const editNotesField = notesFields[notesFields.length - 1] // the modal is below all the new item forms
-        const form = wrapper.getByTestId('editWishListItem3Form')
+        const form = wrapper.getByTestId('editListItem3Form')
 
         fireEvent.change(editNotesField, { target: { value: 'Hello world' } })
 

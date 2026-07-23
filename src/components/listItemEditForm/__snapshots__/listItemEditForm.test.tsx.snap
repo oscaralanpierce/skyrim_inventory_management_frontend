@@ -1,36 +1,36 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
+exports[`ListItemEditForm > displaying the form > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="_root_c7828a"
-        style="--button-background-color: #2274a5; --button-text-color: #fff; --button-hover-color: #1e6894; --button-border-color: #1b5c84;"
+        class="_root_fbeb9a"
+        style="--button-background-color: #e83f6f; --button-text-color: #fff; --button-hover-color: #d03863; --button-border-color: #b93258;"
       >
         <h3
-          class="_header_c7828a"
+          class="_header_fbeb9a"
         >
-          Health potion ingredients
+          Blue Mountain Flower
         </h3>
         <p
-          class="_subheader_c7828a"
+          class="_subheader_fbeb9a"
         >
           On list "Alchemy Ingredients"
         </p>
         <form
-          data-testid="editWishListItem6Form"
+          data-testid="editListItem2Form"
         >
           <fieldset
-            class="_fieldset_c7828a"
+            class="_fieldset_fbeb9a"
           >
             <label
-              class="_label_c7828a"
+              class="_label_fbeb9a"
             >
               Quantity
               <input
-                class="_input_c7828a"
+                class="_input_fbeb9a"
                 inputmode="numeric"
                 min="1"
                 name="quantity"
@@ -39,46 +39,47 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
                 required=""
                 title="Quantity must be an integer greater than 0"
                 type="number"
-                value="2"
+                value="12"
               />
             </label>
           </fieldset>
           <fieldset
-            class="_fieldset_c7828a"
+            class="_fieldset_fbeb9a"
           >
             <label
-              class="_label_c7828a"
+              class="_label_fbeb9a"
             >
               Unit Weight
               <input
-                class="_input_c7828a"
+                class="_input_fbeb9a"
                 inputmode="decimal"
                 min="0"
-                name="unit_weight"
+                name="unitWeight"
                 placeholder="Unit Weight"
                 step="0.1"
                 type="number"
-                value="3"
+                value="0.1"
               />
             </label>
           </fieldset>
           <fieldset
-            class="_fieldset_c7828a"
+            class="_fieldset_fbeb9a"
           >
             <label
-              class="_label_c7828a"
+              class="_label_fbeb9a"
             >
               Notes
               <input
-                class="_input_c7828a"
+                class="_input_fbeb9a"
                 name="notes"
                 placeholder="Notes"
                 type="text"
+                value="For Restore Health and Fortify Health potions"
               />
             </label>
           </fieldset>
           <button
-            class="_submit_c7828a"
+            class="_submit_fbeb9a"
             type="submit"
           >
             Update Item
@@ -89,31 +90,31 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_root_c7828a"
-      style="--button-background-color: #2274a5; --button-text-color: #fff; --button-hover-color: #1e6894; --button-border-color: #1b5c84;"
+      class="_root_fbeb9a"
+      style="--button-background-color: #e83f6f; --button-text-color: #fff; --button-hover-color: #d03863; --button-border-color: #b93258;"
     >
       <h3
-        class="_header_c7828a"
+        class="_header_fbeb9a"
       >
-        Health potion ingredients
+        Blue Mountain Flower
       </h3>
       <p
-        class="_subheader_c7828a"
+        class="_subheader_fbeb9a"
       >
         On list "Alchemy Ingredients"
       </p>
       <form
-        data-testid="editWishListItem6Form"
+        data-testid="editListItem2Form"
       >
         <fieldset
-          class="_fieldset_c7828a"
+          class="_fieldset_fbeb9a"
         >
           <label
-            class="_label_c7828a"
+            class="_label_fbeb9a"
           >
             Quantity
             <input
-              class="_input_c7828a"
+              class="_input_fbeb9a"
               inputmode="numeric"
               min="1"
               name="quantity"
@@ -122,46 +123,47 @@ exports[`WishListItemEditForm > displaying the form > matches snapshot 1`] = `
               required=""
               title="Quantity must be an integer greater than 0"
               type="number"
-              value="2"
+              value="12"
             />
           </label>
         </fieldset>
         <fieldset
-          class="_fieldset_c7828a"
+          class="_fieldset_fbeb9a"
         >
           <label
-            class="_label_c7828a"
+            class="_label_fbeb9a"
           >
             Unit Weight
             <input
-              class="_input_c7828a"
+              class="_input_fbeb9a"
               inputmode="decimal"
               min="0"
-              name="unit_weight"
+              name="unitWeight"
               placeholder="Unit Weight"
               step="0.1"
               type="number"
-              value="3"
+              value="0.1"
             />
           </label>
         </fieldset>
         <fieldset
-          class="_fieldset_c7828a"
+          class="_fieldset_fbeb9a"
         >
           <label
-            class="_label_c7828a"
+            class="_label_fbeb9a"
           >
             Notes
             <input
-              class="_input_c7828a"
+              class="_input_fbeb9a"
               name="notes"
               placeholder="Notes"
               type="text"
+              value="For Restore Health and Fortify Health potions"
             />
           </label>
         </fieldset>
         <button
-          class="_submit_c7828a"
+          class="_submit_fbeb9a"
           type="submit"
         >
           Update Item
