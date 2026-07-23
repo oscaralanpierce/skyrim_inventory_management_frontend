@@ -52,7 +52,7 @@ export const InventoryItemEditForm: ListItemEditFormStory = {
       description:
         'This item has a really really really really really long description for testing purposes',
       quantity: 12,
-      unitWeight: 1000000000000000000001,
+      unitWeight: 1000000000001,
       notes:
         'The notes on this item are really really really really really really long for testing purposes',
     }

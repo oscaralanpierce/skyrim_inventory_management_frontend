@@ -1,4 +1,4 @@
-import { describe, expect, test, afterEach, vitest } from 'vitest'
+import { describe, expect, test, vitest } from 'vitest'
 import { act, fireEvent } from '@testing-library/react'
 import { render } from '../../support/testUtils'
 import { PINK } from '../../utils/colorSchemes'
@@ -16,7 +16,7 @@ const itemAttributes = {
 describe('ListItemEditForm', () => {
   describe('displaying the form', () => {
     test('has the correct fields', () => {
-      const onSubmit: SubmitHandlerType = (attributes: RequestInventoryItem | null) => {}
+      const onSubmit: SubmitHandlerType = (_attributes: RequestInventoryItem | null) => {}
       const wrapper = render(
         <ListItemEditForm
           listTitle='Alchemy Ingredients'
@@ -91,8 +91,6 @@ describe('ListItemEditForm', () => {
           />
         )
   
-        const quantityInput = wrapper.getByLabelText('Quantity')
-        const weightInput = wrapper.getByLabelText('Unit Weight')
         const notesInput = wrapper.getByLabelText('Notes')
         const form = wrapper.getByTestId(`editListItem${itemAttributes.itemId}Form`)
 
