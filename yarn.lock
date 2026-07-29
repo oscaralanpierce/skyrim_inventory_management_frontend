@@ -25,7 +25,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@asamuzakjp/dom-selector@npm:^8.2.5":
+"@asamuzakjp/dom-selector@npm:^8.3.0":
   version: 8.3.0
   resolution: "@asamuzakjp/dom-selector@npm:8.3.0"
   dependencies:
@@ -695,7 +695,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/css-syntax-patches-for-csstree@npm:^1.1.6":
+"@csstools/css-syntax-patches-for-csstree@npm:^1.1.7":
   version: 1.1.7
   resolution: "@csstools/css-syntax-patches-for-csstree@npm:1.1.7"
   peerDependencies:
@@ -5243,14 +5243,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^30.0.0":
-  version: 30.0.0
-  resolution: "jsdom@npm:30.0.0"
+"jsdom@npm:^30.0.1":
+  version: 30.0.1
+  resolution: "jsdom@npm:30.0.1"
   dependencies:
     "@asamuzakjp/css-color": ^6.0.5
-    "@asamuzakjp/dom-selector": ^8.2.5
+    "@asamuzakjp/dom-selector": ^8.3.0
     "@bramus/specificity": ^2.4.2
-    "@csstools/css-syntax-patches-for-csstree": ^1.1.6
+    "@csstools/css-syntax-patches-for-csstree": ^1.1.7
     "@exodus/bytes": ^1.15.1
     css-tree: ^3.2.1
     data-urls: ^7.0.0
@@ -5262,7 +5262,7 @@ __metadata:
     saxes: ^6.0.0
     symbol-tree: ^3.2.4
     tough-cookie: ^6.0.2
-    undici: ^8.7.0
+    undici: ^8.9.0
     w3c-xmlserializer: ^5.0.0
     webidl-conversions: ^8.0.1
     whatwg-mimetype: ^5.0.0
@@ -5273,7 +5273,7 @@ __metadata:
   peerDependenciesMeta:
     canvas:
       optional: true
-  checksum: 71d364ceae3145b3da2c506e17f8646c2f2fce74c5033d32edac1d11b0f6f6133382b2d7e333152d6612cb47337a20bceb8a7b30d66d25376f681b36975de88a
+  checksum: ee0b9f4a79f988f347cf855d4af646a0a3e62d609e5c836904eb56baa83af74a84d770e98b28e72355a68c8727de6f4b68ef841f22085a5bc04539c6cd86c011
   languageName: node
   linkType: hard
 
@@ -6950,7 +6950,7 @@ __metadata:
     eslint-config-prettier: ^10.1.8
     eslint-plugin-storybook: 10.5.3
     firebase: ^12.16.0
-    jsdom: ^30.0.0
+    jsdom: ^30.0.1
     msw: ^2.15.0
     prettier: 3.9.6
     react: ^19.2.4
@@ -7466,7 +7466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^8.7.0":
+"undici@npm:^8.9.0":
   version: 8.9.0
   resolution: "undici@npm:8.9.0"
   checksum: 71ce29ec2426519e2aa56df2eeffffcc633d7d121aa65c206dc3cc764f36528df20fadd519a2e0603e7b51e087920ebca392b509f48c618e652e460a8ea89541
