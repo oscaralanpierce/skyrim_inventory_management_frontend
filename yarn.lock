@@ -1294,9 +1294,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@firebase/data-connect@npm:0.7.2":
-  version: 0.7.2
-  resolution: "@firebase/data-connect@npm:0.7.2"
+"@firebase/data-connect@npm:0.7.3":
+  version: 0.7.3
+  resolution: "@firebase/data-connect@npm:0.7.3"
   dependencies:
     "@firebase/auth-interop-types": 0.2.5
     "@firebase/component": 0.7.4
@@ -1305,13 +1305,13 @@ __metadata:
     tslib: ^2.1.0
   peerDependencies:
     "@firebase/app": 0.x
-  checksum: 1af62478184c4da0d6b3070b0bd59d844e46c7dfb7ec404e771747be62355955552aa530177ed8448cdfe1671e7dfe0ba528f90875a421f54d19f1918321b410
+  checksum: ba51fd94ab23e21752eabbd178c36f6d3d0e98736c2d771b271af3dee08076c2657a7f800c6aff19b9debecb7c0bf026fadfcc90cbd00d16128c35529af499c5
   languageName: node
   linkType: hard
 
-"@firebase/database-compat@npm:2.1.5":
-  version: 2.1.5
-  resolution: "@firebase/database-compat@npm:2.1.5"
+"@firebase/database-compat@npm:2.1.6":
+  version: 2.1.6
+  resolution: "@firebase/database-compat@npm:2.1.6"
   dependencies:
     "@firebase/component": 0.7.4
     "@firebase/database": 1.1.4
@@ -1327,7 +1327,7 @@ __metadata:
       optional: true
     "@firebase/app-compat":
       optional: true
-  checksum: 16e7f56da0b7aa2fb10a041f2008f33162b8499757f0910c86ccd5f5b2f0b8be7e3e44c20909cab2401376a566b840bb7dbfbf7f007d9d4b3fe790a8c959d147
+  checksum: 51d2b2663fc12924127502290ed7d8b088580e1aff9777797978de14c6a90ab414480ece54c5af9bb4e310f112f5e7bb005b8f744e127ebe64e4aa081fb77052
   languageName: node
   linkType: hard
 
@@ -4685,9 +4685,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"firebase@npm:^12.17.0":
-  version: 12.17.0
-  resolution: "firebase@npm:12.17.0"
+"firebase@npm:^12.17.1":
+  version: 12.17.1
+  resolution: "firebase@npm:12.17.1"
   dependencies:
     "@firebase/ai": 2.14.0
     "@firebase/analytics": 0.10.23
@@ -4699,9 +4699,9 @@ __metadata:
     "@firebase/app-types": 0.9.5
     "@firebase/auth": 1.13.4
     "@firebase/auth-compat": 0.6.9
-    "@firebase/data-connect": 0.7.2
+    "@firebase/data-connect": 0.7.3
     "@firebase/database": 1.1.4
-    "@firebase/database-compat": 2.1.5
+    "@firebase/database-compat": 2.1.6
     "@firebase/firestore": 4.17.0
     "@firebase/firestore-compat": 0.4.12
     "@firebase/functions": 0.13.6
@@ -4717,7 +4717,7 @@ __metadata:
     "@firebase/storage": 0.14.4
     "@firebase/storage-compat": 0.4.4
     "@firebase/util": 1.15.2
-  checksum: fbca19890d6b673fa0cd5da9b9557539eadef25c60071a99e468492e5882e9adf216a9392b38784c713a24c259abc9edd271b7c421fe76164ba2657a9e28f09e
+  checksum: 49ab4d5434f446827f76e6853875ca7ef31d25fbabb751210cbdc5e32f19d8694b831f8ec328447e9c6b1e00871f9c66438579c76ee4f55728c9b0f9d20ee0b9
   languageName: node
   linkType: hard
 
@@ -6967,7 +6967,7 @@ __metadata:
     eslint: ^10.8.0
     eslint-config-prettier: ^10.1.8
     eslint-plugin-storybook: 10.5.3
-    firebase: ^12.17.0
+    firebase: ^12.17.1
     jsdom: ^30.0.1
     msw: ^2.15.0
     prettier: 3.9.6
