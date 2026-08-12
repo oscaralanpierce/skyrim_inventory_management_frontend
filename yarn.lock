@@ -3037,15 +3037,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsdom@npm:^28.0.3":
-  version: 28.0.3
-  resolution: "@types/jsdom@npm:28.0.3"
+"@types/jsdom@npm:^30.0.0":
+  version: 30.0.0
+  resolution: "@types/jsdom@npm:30.0.0"
   dependencies:
     "@types/node": "*"
     "@types/tough-cookie": "*"
     parse5: ^8.0.0
-    undici-types: ^7.21.0
-  checksum: 0a9e1c81f0acb2f6b909e0870d0029f26ed0cbe95000d7a9c9d01ae6674acc17811fc5b8331786966651dd6649b4290604f82d301c52e029eb6c8a616ea8afeb
+    undici-types: ^8.9.0
+  checksum: 41b66f9122d9580d1331de27243ee90934016e76160ce976d879a691653520813eac704e593fe380f14d1396729f4aee790c8f7e238dd41de5c8c73165f5b759
   languageName: node
   linkType: hard
 
@@ -7062,7 +7062,7 @@ __metadata:
     "@storybook/react-vite": 10.5.3
     "@testing-library/dom": ^10.4.1
     "@testing-library/react": ^16.3.2
-    "@types/jsdom": ^28.0.3
+    "@types/jsdom": ^30.0.0
     "@types/node": ^26.2.0
     "@types/react": ^19.2.14
     "@types/react-dom": ^19.2.3
@@ -7570,10 +7570,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:^7.21.0":
-  version: 7.22.0
-  resolution: "undici-types@npm:7.22.0"
-  checksum: d7f7f2a4d5e4f99118de71bbd33543d86269ae0afb68091f10c4b32d50983ba64d8850ee37770e61e1de29d6a26ca3eb8995e39a7e3720a2ad868a064bf13a2f
+"undici-types@npm:^8.9.0":
+  version: 8.10.0
+  resolution: "undici-types@npm:8.10.0"
+  checksum: af038b4ef59bc0217e52e0a1de2eb0713bf01b9e58466f6e7bed799176f216e01eae25af1742a1b3d9d94d77dbeb7c04d6347bdb1f1a75e9a0117311eca7d48c
   languageName: node
   linkType: hard
 
